@@ -216,6 +216,10 @@ version(Windows) {
 					_context.activate();
 					platform.windows.UpdateWindow(cast(void*)_window);
 					platform.windows.SwapBuffers(platform.windows.GetDC(cast(void*)_window));
+
+					foreach(child; _children) {
+						child.redraw(this);
+					}
 				}
 			}
 
