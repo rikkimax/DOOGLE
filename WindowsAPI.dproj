@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{127D7D60-C554-4FC7-A7F8-9A55BCEA2503}</ProjectGuid>
+    <UseDefaultCompiler>true</UseDefaultCompiler>
+    <IncrementalLinking>true</IncrementalLinking>
+    <BaseDirectory>Build</BaseDirectory>
+    <PreferOneStepBuild>true</PreferOneStepBuild>
+    <Compiler>DMD2</Compiler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug</OutputPath>
+    <UnittestMode>false</UnittestMode>
+    <ObjectsDirectory>obj\Debug</ObjectsDirectory>
+    <DebugLevel>0</DebugLevel>
+    <Externalconsole>true</Externalconsole>
+    <Target>StaticLibrary</Target>
+    <OutputName>WindowsAPI</OutputName>
+    <VersionIds>
+      <VersionIds>
+        <String>WindowsXP</String>
+        <String>Unicode</String>
+      </VersionIds>
+    </VersionIds>
+    <ExtraCompilerArguments>-m64</ExtraCompilerArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <UnittestMode>false</UnittestMode>
+    <ObjectsDirectory>obj\Release</ObjectsDirectory>
+    <DebugLevel>0</DebugLevel>
+    <Externalconsole>true</Externalconsole>
+    <Target>Executable</Target>
+    <OutputName>WindowsAPI</OutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Unittest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Unittest</OutputPath>
+    <UnittestMode>true</UnittestMode>
+    <ObjectsDirectory>obj\Unittest</ObjectsDirectory>
+    <DebugLevel>0</DebugLevel>
+    <Externalconsole>true</Externalconsole>
+    <Target>Executable</Target>
+    <OutputName>WindowsAPI</OutputName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Build\WindowsAPI\win32\accctrl.d" />
+    <Compile Include="Build\WindowsAPI\win32\aclapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\aclui.d" />
+    <Compile Include="Build\WindowsAPI\win32\basetsd.d" />
+    <Compile Include="Build\WindowsAPI\win32\basetyps.d" />
+    <Compile Include="Build\WindowsAPI\win32\cderr.d" />
+    <Compile Include="Build\WindowsAPI\win32\cguid.d" />
+    <Compile Include="Build\WindowsAPI\win32\comcat.d" />
+    <Compile Include="Build\WindowsAPI\win32\commctrl.d" />
+    <Compile Include="Build\WindowsAPI\win32\commdlg.d" />
+    <Compile Include="Build\WindowsAPI\win32\core.d" />
+    <Compile Include="Build\WindowsAPI\win32\cpl.d" />
+    <Compile Include="Build\WindowsAPI\win32\cplext.d" />
+    <Compile Include="Build\WindowsAPI\win32\custcntl.d" />
+    <Compile Include="Build\WindowsAPI\win32\dbt.d" />
+    <Compile Include="Build\WindowsAPI\win32\dde.d" />
+    <Compile Include="Build\WindowsAPI\win32\ddeml.d" />
+    <Compile Include="Build\WindowsAPI\win32\dhcpcsdk.d" />
+    <Compile Include="Build\WindowsAPI\win32\dlgs.d" />
+    <Compile Include="Build\WindowsAPI\win32\docobj.d" />
+    <Compile Include="Build\WindowsAPI\win32\errorrep.d" />
+    <Compile Include="Build\WindowsAPI\win32\exdisp.d" />
+    <Compile Include="Build\WindowsAPI\win32\exdispid.d" />
+    <Compile Include="Build\WindowsAPI\win32\httpext.d" />
+    <Compile Include="Build\WindowsAPI\win32\idispids.d" />
+    <Compile Include="Build\WindowsAPI\win32\imagehlp.d" />
+    <Compile Include="Build\WindowsAPI\win32\imm.d" />
+    <Compile Include="Build\WindowsAPI\win32\intshcut.d" />
+    <Compile Include="Build\WindowsAPI\win32\ipexport.d" />
+    <Compile Include="Build\WindowsAPI\win32\iphlpapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\ipifcons.d" />
+    <Compile Include="Build\WindowsAPI\win32\iprtrmib.d" />
+    <Compile Include="Build\WindowsAPI\win32\iptypes.d" />
+    <Compile Include="Build\WindowsAPI\win32\isguids.d" />
+    <Compile Include="Build\WindowsAPI\win32\lm.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmaccess.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmalert.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmapibuf.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmat.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmaudit.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmbrowsr.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmchdev.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmconfig.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmcons.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmerr.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmerrlog.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmmsg.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmremutl.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmrepl.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmserver.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmshare.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmsname.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmstats.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmsvc.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmuse.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmuseflg.d" />
+    <Compile Include="Build\WindowsAPI\win32\lmwksta.d" />
+    <Compile Include="Build\WindowsAPI\win32\lzexpand.d" />
+    <Compile Include="Build\WindowsAPI\win32\mapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\mciavi.d" />
+    <Compile Include="Build\WindowsAPI\win32\mcx.d" />
+    <Compile Include="Build\WindowsAPI\win32\mgmtapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\mmsystem.d" />
+    <Compile Include="Build\WindowsAPI\win32\msacm.d" />
+    <Compile Include="Build\WindowsAPI\win32\mshtml.d" />
+    <Compile Include="Build\WindowsAPI\win32\mswsock.d" />
+    <Compile Include="Build\WindowsAPI\win32\nb30.d" />
+    <Compile Include="Build\WindowsAPI\win32\nddeapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\nspapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\ntdef.d" />
+    <Compile Include="Build\WindowsAPI\win32\ntdll.d" />
+    <Compile Include="Build\WindowsAPI\win32\ntldap.d" />
+    <Compile Include="Build\WindowsAPI\win32\ntsecapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\ntsecpkg.d" />
+    <Compile Include="Build\WindowsAPI\win32\oaidl.d" />
+    <Compile Include="Build\WindowsAPI\win32\objbase.d" />
+    <Compile Include="Build\WindowsAPI\win32\objfwd.d" />
+    <Compile Include="Build\WindowsAPI\win32\objidl.d" />
+    <Compile Include="Build\WindowsAPI\win32\objsafe.d" />
+    <Compile Include="Build\WindowsAPI\win32\ocidl.d" />
+    <Compile Include="Build\WindowsAPI\win32\odbcinst.d" />
+    <Compile Include="Build\WindowsAPI\win32\ole.d" />
+    <Compile Include="Build\WindowsAPI\win32\ole2.d" />
+    <Compile Include="Build\WindowsAPI\win32\ole2ver.d" />
+    <Compile Include="Build\WindowsAPI\win32\oleacc.d" />
+    <Compile Include="Build\WindowsAPI\win32\oleauto.d" />
+    <Compile Include="Build\WindowsAPI\win32\olectl.d" />
+    <Compile Include="Build\WindowsAPI\win32\olectlid.d" />
+    <Compile Include="Build\WindowsAPI\win32\oledlg.d" />
+    <Compile Include="Build\WindowsAPI\win32\oleidl.d" />
+    <Compile Include="Build\WindowsAPI\win32\pbt.d" />
+    <Compile Include="Build\WindowsAPI\win32\powrprof.d" />
+    <Compile Include="Build\WindowsAPI\win32\prsht.d" />
+    <Compile Include="Build\WindowsAPI\win32\psapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\rapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\ras.d" />
+    <Compile Include="Build\WindowsAPI\win32\rasdlg.d" />
+    <Compile Include="Build\WindowsAPI\win32\raserror.d" />
+    <Compile Include="Build\WindowsAPI\win32\rassapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\reason.d" />
+    <Compile Include="Build\WindowsAPI\win32\regstr.d" />
+    <Compile Include="Build\WindowsAPI\win32\richedit.d" />
+    <Compile Include="Build\WindowsAPI\win32\richole.d" />
+    <Compile Include="Build\WindowsAPI\win32\rpc.d" />
+    <Compile Include="Build\WindowsAPI\win32\rpcdce.d" />
+    <Compile Include="Build\WindowsAPI\win32\rpcdce2.d" />
+    <Compile Include="Build\WindowsAPI\win32\rpcdcep.d" />
+    <Compile Include="Build\WindowsAPI\win32\rpcndr.d" />
+    <Compile Include="Build\WindowsAPI\win32\rpcnsi.d" />
+    <Compile Include="Build\WindowsAPI\win32\rpcnsip.d" />
+    <Compile Include="Build\WindowsAPI\win32\rpcnterr.d" />
+    <Compile Include="Build\WindowsAPI\win32\schannel.d" />
+    <Compile Include="Build\WindowsAPI\win32\secext.d" />
+    <Compile Include="Build\WindowsAPI\win32\security.d" />
+    <Compile Include="Build\WindowsAPI\win32\servprov.d" />
+    <Compile Include="Build\WindowsAPI\win32\setupapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\shellapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\shldisp.d" />
+    <Compile Include="Build\WindowsAPI\win32\shlguid.d" />
+    <Compile Include="Build\WindowsAPI\win32\shlobj.d" />
+    <Compile Include="Build\WindowsAPI\win32\shlwapi.d" />
+    <Compile Include="Build\WindowsAPI\win32\snmp.d" />
+    <Compile Include="Build\WindowsAPI\win32\sql.d" />
+    <Compile Include="Build\WindowsAPI\win32\sqlext.d" />
+    <Compile Include="Build\WindowsAPI\win32\sqltypes.d" />
+    <Compile Include="Build\WindowsAPI\win32\sqlucode.d" />
+    <Compile Include="Build\WindowsAPI\win32\sspi.d" />
+    <Compile Include="Build\WindowsAPI\win32\subauth.d" />
+    <Compile Include="Build\WindowsAPI\win32\tlhelp32.d" />
+    <Compile Include="Build\WindowsAPI\win32\tmschema.d" />
+    <Compile Include="Build\WindowsAPI\win32\unknwn.d" />
+    <Compile Include="Build\WindowsAPI\win32\usp10.d" />
+    <Compile Include="Build\WindowsAPI\win32\uuid.d" />
+    <Compile Include="Build\WindowsAPI\win32\vfw.d" />
+    <Compile Include="Build\WindowsAPI\win32\w32api.d" />
+    <Compile Include="Build\WindowsAPI\win32\winbase.d" />
+    <Compile Include="Build\WindowsAPI\win32\winber.d" />
+    <Compile Include="Build\WindowsAPI\win32\wincon.d" />
+    <Compile Include="Build\WindowsAPI\win32\wincrypt.d" />
+    <Compile Include="Build\WindowsAPI\win32\windef.d" />
+    <Compile Include="Build\WindowsAPI\win32\windows.d" />
+    <Compile Include="Build\WindowsAPI\win32\winerror.d" />
+    <Compile Include="Build\WindowsAPI\win32\wingdi.d" />
+    <Compile Include="Build\WindowsAPI\win32\wininet.d" />
+    <Compile Include="Build\WindowsAPI\win32\winioctl.d" />
+    <Compile Include="Build\WindowsAPI\win32\winldap.d" />
+    <Compile Include="Build\WindowsAPI\win32\winnetwk.d" />
+    <Compile Include="Build\WindowsAPI\win32\winnls.d" />
+    <Compile Include="Build\WindowsAPI\win32\winnt.d" />
+    <Compile Include="Build\WindowsAPI\win32\winperf.d" />
+    <Compile Include="Build\WindowsAPI\win32\winreg.d" />
+    <Compile Include="Build\WindowsAPI\win32\winsock2.d" />
+    <Compile Include="Build\WindowsAPI\win32\winspool.d" />
+    <Compile Include="Build\WindowsAPI\win32\winsvc.d" />
+    <Compile Include="Build\WindowsAPI\win32\winuser.d" />
+    <Compile Include="Build\WindowsAPI\win32\winver.d" />
+    <Compile Include="Build\WindowsAPI\win32\ws2tcpip.d" />
+    <Compile Include="Build\WindowsAPI\win32\wtsapi32.d" />
+    <Compile Include="Build\WindowsAPI\win32\wtypes.d" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Build\WindowsAPI\win32\" />
+  </ItemGroup>
+</Project>

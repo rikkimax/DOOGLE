@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6DAA285D-B358-4149-A19C-2660BD1D61EF}</ProjectGuid>
+    <UseDefaultCompiler>true</UseDefaultCompiler>
+    <PreferOneStepBuild>true</PreferOneStepBuild>
+    <Compiler>DMD2</Compiler>
+    <BaseDirectory>Build</BaseDirectory>
+    <IncrementalLinking>true</IncrementalLinking>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\Debug</OutputPath>
+    <ObjectsDirectory>../obj/Debug</ObjectsDirectory>
+    <UnittestMode>false</UnittestMode>
+    <OutputName>Build</OutputName>
+    <Target>Executable</Target>
+    <Externalconsole>true</Externalconsole>
+    <DebugLevel>0</DebugLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Release</OutputPath>
+    <Externalconsole>true</Externalconsole>
+    <Target>Executable</Target>
+    <OutputName>Build</OutputName>
+    <UnittestMode>false</UnittestMode>
+    <ObjectsDirectory>../obj/Release</ObjectsDirectory>
+    <DebugLevel>0</DebugLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Unittest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\Unittest</OutputPath>
+    <ObjectsDirectory>../obj/Unittest</ObjectsDirectory>
+    <UnittestMode>true</UnittestMode>
+    <OutputName>Build</OutputName>
+    <Target>Executable</Target>
+    <Externalconsole>true</Externalconsole>
+    <DebugLevel>0</DebugLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\arb.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\cgl.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\constants.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\deprecatedConstants.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\deprecatedFunctions.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\ext.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\functions.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\gl.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\gl3.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\glx.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\glxext.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\internal.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\types.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\wgl.d" />
+    <Compile Include="Build\Derelict3\import\derelict\opengl3\wglext.d" />
+    <Compile Include="Build\Derelict3\import\derelict\util\exception.d" />
+    <Compile Include="Build\Derelict3\import\derelict\util\loader.d" />
+    <Compile Include="Build\Derelict3\import\derelict\util\sharedlib.d" />
+    <Compile Include="Build\Derelict3\import\derelict\util\system.d" />
+    <Compile Include="Build\Derelict3\import\derelict\util\wintypes.d" />
+    <Compile Include="Build\Derelict3\import\derelict\util\xtypes.d" />
+    <Compile Include="Build\libX11\deimos\X11\extensions\randr.d" />
+    <Compile Include="Build\libX11\deimos\X11\extensions\render.d" />
+    <Compile Include="Build\libX11\deimos\X11\extensions\Xge.d" />
+    <Compile Include="Build\libX11\deimos\X11\extensions\XI.d" />
+    <Compile Include="Build\libX11\deimos\X11\extensions\XI2.d" />
+    <Compile Include="Build\libX11\deimos\X11\extensions\XInput2.d" />
+    <Compile Include="Build\libX11\deimos\X11\extensions\Xrandr.d" />
+    <Compile Include="Build\libX11\deimos\X11\extensions\Xrender.d" />
+    <Compile Include="Build\libX11\deimos\X11\keysym.d" />
+    <Compile Include="Build\libX11\deimos\X11\keysymdef.d" />
+    <Compile Include="Build\libX11\deimos\X11\X.d" />
+    <Compile Include="Build\libX11\deimos\X11\Xlib.d" />
+    <Compile Include="Build\libX11\deimos\X11\XlibConf.d" />
+    <Compile Include="Build\libX11\deimos\X11\Xlibint.d" />
+    <Compile Include="Build\libX11\deimos\X11\Xmd.d" />
+    <Compile Include="Build\libX11\deimos\X11\Xproto.d" />
+    <Compile Include="Build\libX11\deimos\X11\Xprotostr.d" />
+    <Compile Include="Build\libX11\deimos\X11\Xregion.d" />
+    <Compile Include="Build\libX11\deimos\X11\Xresource.d" />
+    <Compile Include="Build\libX11\deimos\X11\Xtos.d" />
+    <Compile Include="Build\libX11\deimos\X11\Xutil.d" />
+  </ItemGroup>
+</Project>
