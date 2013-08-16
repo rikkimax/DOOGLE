@@ -22,3 +22,8 @@ Planned:
 * Opengl OOP wrapper.
 * Supporting controls to be made an expanded upon the window creation and enventing system.
 * Full manipulation of a GUI using a socket connection (optional).
+
+Aims:
+* Be able to make majority of applications with it.
+* Produce an IDE using the standard controls.
+* Completely written in D. Only bindings are acceptable to system libraries (no ones not installed by default).
