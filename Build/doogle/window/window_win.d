@@ -33,7 +33,7 @@ version(Windows) {
 				windowCount++;
 				windows[_windowId] = this;
 				
-				string appName = "DOOGLE_WINDOW";
+				string appName = "DOOGLE_WINDOW" ~ cast(char)_windowId ~ "\0";
 				_wndclass.style         = platform.windows.CS_HREDRAW | platform.windows.CS_VREDRAW;
 				_wndclass.lpfnWndProc   = &windowEventHandler;
 				_wndclass.cbClsExtra    = 0;
@@ -115,9 +115,10 @@ version(Windows) {
 
 		~this() {
 			synchronized {
-				if (!_isOpen) return;
-				platform.windows.DestroyWindow(cast(void*)_window);
-				platform.windows.UnregisterClass("DOOGLE_WINDOW", platform.windows.GetModuleHandle(null));
+				if (_isOpen) {
+					platform.windows.DestroyWindow(cast(void*)_window);
+					//platform.windows.UnregisterClass(("DOOGLE_WINDOW" ~ cast(char)_windowId ~ "\0").ptr, platform.windows.GetModuleHandle(null));
+				}
 			}
 			synchronized(rwmWindows) {
 				windows[_windowId] = null;
@@ -227,7 +228,6 @@ version(Windows) {
 				synchronized {
 					platform.windows.ShowWindow(cast(void*)_window, mode ? platform.windows.SW_SHOW : platform.windows.SW_HIDE);
 					platform.windows.UpdateWindow(cast(void*)_window);
-					_isOpen = mode;
 				}
 			}
 

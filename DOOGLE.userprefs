@@ -6,7 +6,11 @@
         <State expanded="True">
           <Option id="ShowAllFiles" value="True" />
           <Node name="Build_Posix" expanded="True" />
-          <Node name="Build_Windows" expanded="True" selected="True" />
+          <Node name="Build_Windows" expanded="True" selected="True">
+            <Node name="doogle" expanded="True">
+              <Node name="window" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
