@@ -20,7 +20,7 @@ Requires:
 Planned:
 * Full support for Windows, Mac OSX and Linux under x86 32 and 64 bit.
 * Opengl OOP wrapper.
-* Supporting controls to be made an expanded upon the window creation and enventing system.
+* Supporting controls to be made an expanded upon the window creation and eventing system.
 * Full manipulation of a GUI using a socket connection (optional).
 
 Aims:
