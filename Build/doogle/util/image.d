@@ -1,5 +1,6 @@
 module doogle.util.image;
 import doogle.util.color;
+import doogle.util.misc;
 
 interface Image{
 	@property {
@@ -76,12 +77,8 @@ unittest {
 		Color(5, 6, 7, 8)];
 
 	assert(image.data == [1, 2, 3, 4, 5, 6, 7, 8]);
-	try {
-		image.values = [
-			Color(1, 2, 3, 4),
-			Color(5, 6, 7, 8),
-			Color(9, 10, 11, 12)];
-		assert(0);
-	} catch(Error) {
-	}
+	assertFailed({image.values = [
+		Color(1, 2, 3, 4),
+		Color(5, 6, 7, 8),
+		Color(9, 10, 11, 12)];});
 }
