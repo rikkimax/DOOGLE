@@ -45,8 +45,15 @@
     <ObjectsDirectory>obj\Unittest</ObjectsDirectory>
     <DebugLevel>0</DebugLevel>
     <Externalconsole>true</Externalconsole>
-    <Target>Executable</Target>
+    <Target>StaticLibrary</Target>
     <OutputName>WindowsAPI</OutputName>
+    <ExtraCompilerArguments>-m64</ExtraCompilerArguments>
+    <VersionIds>
+      <VersionIds>
+        <String>WindowsXP</String>
+        <String>Unicode</String>
+      </VersionIds>
+    </VersionIds>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Build\WindowsAPI\win32\accctrl.d" />

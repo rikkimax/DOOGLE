@@ -1,6 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Unittest" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Build\doogle\math\mat4.d">
+    <Files>
+      <File FileName="Build\doogle\math\mat4.d" Line="159" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
@@ -8,6 +11,7 @@
           <Node name="Build_Posix" expanded="True" />
           <Node name="Build_Windows" expanded="True" selected="True">
             <Node name="doogle" expanded="True">
+              <Node name="math" expanded="True" />
               <Node name="window" expanded="True" />
             </Node>
           </Node>

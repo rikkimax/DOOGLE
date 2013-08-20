@@ -51,6 +51,12 @@
     <Target>Executable</Target>
     <Externalconsole>true</Externalconsole>
     <DebugLevel>0</DebugLevel>
+    <ExtraCompilerArguments>-m64</ExtraCompilerArguments>
+    <Libs>
+      <Libs>
+        <Lib>../bin/Debug/WindowsAPI.lib</Lib>
+      </Libs>
+    </Libs>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Build\Derelict3\import\derelict\opengl3\arb.d" />
@@ -77,17 +83,25 @@
     <Compile Include="Build\doogle\window\window.d" />
     <Compile Include="Build\doogle\events\event.d" />
     <Compile Include="Build\doogle\events\types.d" />
-    <Compile Include="Build\test.d" />
     <Compile Include="Build\doogle\window\component.d" />
     <Compile Include="Build\doogle\platform.d" />
     <Compile Include="Build\doogle\window\context.d" />
     <Compile Include="Build\doogle\window\types.d" />
     <Compile Include="Build\doogle\window\window_win.d" />
     <Compile Include="Build\doogle\window\context_win.d" />
+    <Compile Include="Build\test2.d" />
+    <Compile Include="Build\doogle\math\vec2.d" />
+    <Compile Include="Build\doogle\math\vec3.d" />
+    <Compile Include="Build\doogle\math\vec4.d" />
+    <Compile Include="Build\doogle\math\mat2.d" />
+    <Compile Include="Build\doogle\math\mat3.d" />
+    <Compile Include="Build\doogle\math\mat4.d" />
+    <Compile Include="Build\doogle\math\all.d" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Build\doogle\" />
     <Folder Include="Build\doogle\window\" />
     <Folder Include="Build\doogle\events\" />
+    <Folder Include="Build\doogle\math\" />
   </ItemGroup>
 </Project>
