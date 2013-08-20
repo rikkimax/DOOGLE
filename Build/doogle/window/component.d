@@ -53,9 +53,16 @@ abstract shared class ComponentChild : Component {
 		}
 
 		/**
-		 * Only call this from a Window.
+		 * Only call this from a ComponentChildable.
+		 * Remember to super.redraw(window) call as last thing.
 		 */
-		void redraw(shared(Window) window);
+		void redraw(shared(Window) window) {
+			static if (__traits(compiles, children.length)) {
+				foreach (child; children) {
+					child.redraw();
+				}
+			}
+		}
 	}
 }
 

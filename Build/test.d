@@ -39,7 +39,7 @@ L1: while(window.isOpen && w2.isOpen) {
 }
 
 class TestChild : ComponentChild {
-	override void redraw(shared(Window) window) {/* writeln("redraw called"); */ }
+	override void redraw(shared(Window) window) {/* writeln("redraw called"); */super.redraw(window);}
 
 	@property {
 		override void resize() {/*writeln("resize called");*/}
