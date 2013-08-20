@@ -18,12 +18,39 @@ shared interface ComponentChildable {
 abstract shared class ComponentChild : Component {
 	public {
 		/**
+		 * Don't worry about extending this.
+		 * 
 		 * Only call this from a ComponentChildable.
 		 * 
 		 * If the implementor also implements ComponentChildable then make it
 		 * Forward the events to its children.
+		 * 
+		 * Don't forget to call the apropriete event upon _eventHandlers.
 		 */
-		void childEvent(shared(Window) window, shared(Event) event);
+		void childEvent(shared(Window) window, shared(Event) event) {
+			foreach(k; _eventHandlers.keys) {
+				import std.stdio;
+				writeln(k, " == ", event.type);
+				if (k == event.type) {
+					foreach(handler; _eventHandlers[k]) {
+						if (handler(event, this)) break;
+					}
+				}
+			}
+			static if (__traits(compiles, children.length)) {
+				foreach (child; children) {
+					if (isEventCatagory(EventCatagories.Mouse, ev.type)) {
+						if (event.mouse.x >= child.x && event.mouse.y >= child.y && event.mouse.x <= child.x + child.width && event.mouse.y <= child.y + child.height) {
+							child.childEvent(this, event);
+						}
+					} else if (isEventCatagory(EventCatagories.Keyboard, event.type)) {
+						if (child == _selectedChild) {
+							child.childEvent(this, event);
+						}
+					}
+				}
+			}
+		}
 
 		/**
 		 * Only call this from a Window.
@@ -32,7 +59,7 @@ abstract shared class ComponentChild : Component {
 	}
 }
 
-alias bool function(shared(Event) event, shared(Component) component) EventFunc;
+alias bool delegate(shared(Event) event, shared(Component) component) EventFunc;
 
 abstract shared class Component {
 	protected {
