@@ -41,7 +41,7 @@ version(Windows) {
 				_wndclass.hInstance     = cast(shared)platform.windows.GetModuleHandleA(null);//hInstance;
 				_wndclass.hIcon         = cast(shared)platform.windows.LoadIconA(null, cast(char*)platform.windows.IDI_APPLICATION);
 				_wndclass.hCursor       = cast(shared)platform.windows.LoadCursorA(null, cast(char*)platform.windows.IDC_ARROW);
-				_wndclass.hbrBackground = cast(shared(platform.windows.HBRUSH))platform.windows.GetStockObject(platform.windows.WHITE_BRUSH);
+				_wndclass.hbrBackground = cast(shared(platform.windows.HBRUSH))platform.windows.GetStockObject(platform.windows.BLACK_BRUSH);
 				_wndclass.lpszMenuName  = null;
 				_wndclass.lpszClassName = appName.ptr;
 
