@@ -135,3 +135,107 @@ void glTexSubImage3D(SubTextureTargets target, gl3.GLint level, gl3.GLint xoffse
 void glCopyTexSubImage3D(SubTextureTargets target, gl3.GLint level, gl3.GLint xoffset, gl3.GLint yoffset, gl3.GLint zoffset, gl3.GLint x, gl3.GLint y, gl3.GLsizei width, gl3.GLsizei height) {
 	gl3.glCopyTexSubImage3D(cast(gl3.GLenum)target, level, xoffset, yoffset, zoffset, x, y, width, height);
 }
+
+/*
+ * OpenGL 1.3
+ */
+
+enum TextureTargets2D {
+	Texture2D = gl3.GL_TEXTURE_2D,
+	ProxyTexture2D = gl3.GL_PROXY_TEXTURE_2D,
+	Texture1DArray = gl3.GL_TEXTURE_1D_ARRAY,
+	ProxyTexture1DArray = gl3.GL_PROXY_TEXTURE_1D_ARRAY,
+	TextureCubeMapPositiveX = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_X,
+	TextureCubeMapNegativeX = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_X,
+	TextureCubeMapPositiveY = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Y,
+	TextureCubeMapNegativeY = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Y,
+	TextureCubeMapPositiveZ = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Z,
+	TextureCubeMapNegativeZ = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Z,
+	ProxyTextureCubeMap = gl3.GL_PROXY_TEXTURE_CUBE_MAP
+}
+
+enum CompressedTextureTargets2D {
+	Texture2D = gl3.GL_TEXTURE_2D,
+	TextureCubeMapPositiveX = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_X,
+	TextureCubeMapNegativeX = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_X,
+	TextureCubeMapPositiveY = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Y,
+	TextureCubeMapNegativeY = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Y,
+	TextureCubeMapPositiveZ = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Z,
+	TextureCubeMapNegativeZ = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
+}
+
+enum TextureTargets1D {
+	Texture1D = gl3.GL_TEXTURE_1D,
+	ProxyTexture1D = gl3.GL_PROXY_TEXTURE_1D
+}
+
+enum CompressedTextureTargets {
+	Texture1D = gl3.GL_TEXTURE_1D,
+	Texture2D = gl3.GL_TEXTURE_2D,
+	Texture3D = gl3.GL_TEXTURE_3D,
+	TextureCubeMapPositiveX = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_X,
+	TextureCubeMapNegativeX = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_X,
+	TextureCubeMapPositiveY = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Y,
+	TextureCubeMapnegativeY = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Y,
+	TextureCubeMapPositiveZ = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Z,
+	TextureCubeMapNegativeZ = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
+}
+
+void glActiveTexture(gl3.GLenum texture) {
+	gl3.glActiveTexture(texture);
+}
+
+void glSampleCoverage(gl3.GLfloat value, bool invert)
+in {
+	assert(value <= 1);
+	assert(value >= 0);
+} body {
+	gl3.glSampleCoverage(value, cast(gl3.GLboolean)invert);
+}
+
+void glCompressedTexImage3D(TextureTargets target, gl3.GLint level, InternalFormat internalFormat, gl3.GLsizei width, gl3.GLsizei height, gl3.GLsizei depth, void[] data)
+in {
+	assert(level >= 0);
+} body {
+	gl3.glCompressedTexImage3D(cast(gl3.GLenum)target, level, cast(gl3.GLenum)internalFormat, width, height, depth, 0, cast(uint)data.length, data.ptr);
+}
+
+void glCompressedTexImage2D(TextureTargets2D target, gl3.GLint level, InternalFormat internalFormat, gl3.GLsizei width, gl3.GLsizei height, void[] data)
+in {
+	assert(level >= 0);
+} body {
+	gl3.glCompressedTexImage2D(cast(gl3.GLenum)target, level, cast(gl3.GLenum)internalFormat, width, height, 0, cast(uint)data.length, data.ptr);
+}
+
+void glCompressedTexImage1D(TextureTargets1D target, gl3.GLint level, InternalFormat internalFormat, gl3.GLsizei width, void[] data)
+in {
+	assert(level >= 0);
+} body {
+	gl3.glCompressedTexImage1D(cast(gl3.GLenum)target, level, cast(gl3.GLenum)internalFormat, width, 0, cast(uint)data.length, data.ptr);
+}
+
+void glCompressedTexSubImage3D(gl3.GLint level, gl3.GLint xoffset, gl3.GLint yoffset, gl3.GLint zoffset, gl3.GLsizei width, gl3.GLsizei height, gl3.GLsizei depth, InternalFormat internalFormat, void[] data)
+in {
+	assert(level >= 0);
+} body {
+	gl3.glCompressedTexSubImage3D(gl3.GL_TEXTURE_3D, level, xoffset, yoffset, zoffset, width, height, depth, internalFormat, cast(uint)data.length, data.ptr);
+}
+
+void glCompressedTexSubImage2D(CompressedTextureTargets2D target, gl3.GLint level, gl3.GLint xoffset, gl3.GLint yoffset, gl3.GLsizei width, gl3.GLsizei height, InternalFormat internalFormat, void[] data)
+in {
+	assert(level >= 0);
+} body {
+	gl3.glCompressedTexSubImage2D(cast(gl3.GLenum)target, level, xoffset, yoffset, width, height, internalFormat, cast(uint)data.length, data.ptr);
+}
+
+void glCompressedTexSubImage1D(gl3.GLint level, gl3.GLint xoffset, gl3.GLsizei width, InternalFormat internalFormat, void[] data)
+in {
+	assert(level >= 0);
+} body {
+	gl3.glCompressedTexSubImage1D(gl3.GL_TEXTURE_1D, level, xoffset, width, internalFormat, cast(uint)data.length, data.ptr);
+}
+
+void glGetCompressedTexImage(CompressedTextureTargets target, gl3.GLint lod, out void[] image) {
+	gl3.glGetCompressedTexImage(cast(gl3.GLenum)target, lod, image.ptr);
+}
+
