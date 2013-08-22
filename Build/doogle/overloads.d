@@ -108,10 +108,6 @@ void glBlendEquation(BlendMode mode) {
 	gl3.glBlendEquation(cast(gl3.GLenum)mode);
 }
 
-void glBlendEquationi(gl3.GLuint buf, BlendMode mode) {
-	gl3.glBlendEquationi(buf, cast(gl3.GLenum)mode);
-}
-
 void glDrawRangeElements(Primitives mode, gl3.GLuint start, gl3.GLuint end, ubyte[] data) {
 	gl3.glDrawRangeElements(cast(gl3.GLenum)mode, start, end, cast(uint)data.length, gl3.GL_UNSIGNED_BYTE, data.ptr);
 }
@@ -239,3 +235,69 @@ void glGetCompressedTexImage(CompressedTextureTargets target, gl3.GLint lod, out
 	gl3.glGetCompressedTexImage(cast(gl3.GLenum)target, lod, image.ptr);
 }
 
+/**
+ * Opengl 1.4
+ */
+
+enum BlendFactors {
+	Zero = gl3.GL_ZERO,
+	One = gl3.GL_ONE,
+	SrcColor = gl3.GL_SRC_COLOR,
+	OneMinusSrcColor = gl3.GL_ONE_MINUS_SRC_COLOR,
+	DstColor = gl3.GL_DST_COLOR,
+	OneMinusDstColor = gl3.GL_ONE_MINUS_DST_COLOR,
+	SrcAlpha = gl3.GL_SRC_ALPHA,
+	OneMinusSrcAlpha = gl3.GL_ONE_MINUS_SRC_ALPHA,
+	DstAlpha = gl3.GL_DST_ALPHA,
+	OneMinusDstAlpha = gl3.GL_ONE_MINUS_DST_ALPHA,
+	ConstantColor = gl3.GL_CONSTANT_COLOR,
+	OneMinusConstantColor = gl3.GL_ONE_MINUS_CONSTANT_COLOR,
+	ConstantAlpha = gl3.GL_CONSTANT_ALPHA,
+	OneMinusConstantAlpha = gl3.GL_ONE_MINUS_CONSTANT_ALPHA,
+	SrcAlphaSaturate = gl3.GL_SRC_ALPHA_SATURATE,
+	Src2Color = gl3.GL_SRC1_COLOR
+}
+
+enum PointParamaterNames {
+	FadeThresholdSize = gl3.GL_POINT_FADE_THRESHOLD_SIZE,
+	SpriteCoordOrigin = gl3.GL_POINT_SPRITE_COORD_ORIGIN
+}
+
+void glBlendFuncSeparate(BlendFactors srcRGB, BlendFactors dstRGB, BlendFactors srcAlpha, BlendFactors dstAlpha) {
+	gl3.glBlendFuncSeparate(cast(gl3.GLenum)srcRGB, cast(gl3.GLenum)dstRGB, cast(gl3.GLenum)srcAlpha, cast(gl3.GLenum)dstAlpha);
+}
+
+void glMultiDrawArrays(Primitives mode, gl3.GLint[] first, gl3.GLsizei[] count)
+in {
+	assert(first.length == count.length);
+} body {
+	gl3.glMultiDrawArrays(cast(gl3.GLenum)mode, first.ptr, count.ptr, cast(uint)first.length);
+}
+
+void glMultiDrawElements(Primitives mode, gl3.GLsizei[] count, ubyte[] indices) {
+	gl3.glMultiDrawElements(cast(gl3.GLenum)mode, count.ptr, gl3.GL_UNSIGNED_BYTE, indices.ptr, cast(uint)indices.length);
+}
+
+void glMultiDrawElements(Primitives mode, gl3.GLsizei[] count, ushort[] indices) {
+	gl3.glMultiDrawElements(cast(gl3.GLenum)mode, count.ptr, gl3.GL_UNSIGNED_SHORT, indices.ptr, cast(uint)indices.length);
+}
+
+void glMultiDrawElements(Primitives mode, gl3.GLsizei[] count, uint[] indices) {
+	gl3.glMultiDrawElements(cast(gl3.GLenum)mode, count.ptr, gl3.GL_UNSIGNED_INT, indices.ptr, cast(uint)indices.length);
+}
+
+void glPointParameterf(PointParamaterNames pname, gl3.GLfloat param) {
+	gl3.glPointParameterf(cast(gl3.GLenum)pname, param);
+}
+
+void glPointParameterfv(PointParamaterNames pname, gl3.GLfloat[] params) {
+	gl3.glPointParameterf(cast(gl3.GLenum)pname, param.ptr);
+}
+
+void glPointParameteri(PointParamaterNames pname, gl3.GLint param) {
+	gl3.glPointParameterf(cast(gl3.GLenum)pname, param);
+}
+
+void glPointParameteriv(PointParamaterNames pname, gl3.GLint[] params) {
+	gl3.glPointParameterf(cast(gl3.GLenum)pname, params.ptr);
+}
