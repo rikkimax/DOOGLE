@@ -291,7 +291,7 @@ void glPointParameterf(PointParamaterNames pname, gl3.GLfloat param) {
 }
 
 void glPointParameterfv(PointParamaterNames pname, gl3.GLfloat[] params) {
-	gl3.glPointParameterf(cast(gl3.GLenum)pname, param.ptr);
+	gl3.glPointParameterfv(cast(gl3.GLenum)pname, params.ptr);
 }
 
 void glPointParameteri(PointParamaterNames pname, gl3.GLint param) {
@@ -299,5 +299,172 @@ void glPointParameteri(PointParamaterNames pname, gl3.GLint param) {
 }
 
 void glPointParameteriv(PointParamaterNames pname, gl3.GLint[] params) {
-	gl3.glPointParameterf(cast(gl3.GLenum)pname, params.ptr);
+	gl3.glPointParameteriv(cast(gl3.GLenum)pname, params.ptr);
+}
+
+/**
+ * Opengl 1.5
+ */
+
+enum QueryTargets {
+	SamplesPassed = gl3.GL_SAMPLES_PASSED,
+	AnySamplesPassed = gl3.GL_ANY_SAMPLES_PASSED,
+	AnySamplesPassedConservative = gl3.GL_ANY_SAMPLES_PASSED_CONSERVATIVE,
+	PrimitivesGenerated = gl3.GL_PRIMITIVES_GENERATED,
+	TransformFeedbackPrimitivesWritten = gl3.GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN,
+	TimeElapsed = gl3.GL_TIME_ELAPSED
+}
+
+enum QueryTarget {
+	SamplesPassed = gl3.GL_SAMPLES_PASSED,
+	AnySamplesPassed = gl3.GL_ANY_SAMPLES_PASSED,
+	AnySamplesPassedConservative = gl3.GL_ANY_SAMPLES_PASSED_CONSERVATIVE,
+	PrimitivesGenerated = gl3.GL_PRIMITIVES_GENERATED,
+	TransformFeedbackPrimitivesWritten = gl3.GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN,
+	TimeElapsed = gl3.GL_TIME_ELAPSED,
+	TimeStamp = gl3.GL_TIMESTAMP
+}
+
+enum QueryNames {
+	CurrentQuery = gl3.GL_CURRENT_QUERY,
+	QueryCounterBits = gl3.GL_QUERY_COUNTER_BITS
+}
+
+enum QueryResultNames {
+	Result = gl3.GL_QUERY_RESULT,
+	ResultAvailable = gl3.GL_QUERY_RESULT_AVAILABLE
+}
+
+enum BindBufferTargets {
+	ArrayBuffer = gl3.GL_ARRAY_BUFFER,
+	AtomicCounterBuffer = gl3.GL_ATOMIC_COUNTER_BUFFER,
+	CopyReadBuffer = gl3.GL_COPY_READ_BUFFER,
+	CopyWriteBuffer = gl3.GL_COPY_WRITE_BUFFER,
+	DrawIndirectBuffer = gl3.GL_DRAW_INDIRECT_BUFFER,
+	DispatchIndirectBuffer = gl3.GL_DISPATCH_INDIRECT_BUFFER,
+	ElementArrayBuffer = gl3.GL_ELEMENT_ARRAY_BUFFER,
+	PixelPackBuffer = gl3.GL_PIXEL_PACK_BUFFER,
+	PixelUnpackBuffer = gl3.GL_PIXEL_UNPACK_BUFFER,
+	// NOT SUPPORTED QueryBuffer = gl3.GL_QUERY_BUFFER,
+	ShaderStorageBuffer = gl3.GL_SHADER_STORAGE_BUFFER,
+	TextureBuffer = gl3.GL_TEXTURE_BUFFER,
+	TransformFeedbackBuffer = gl3.GL_TRANSFORM_FEEDBACK_BUFFER,
+	UniformBuffer = gl3.GL_UNIFORM_BUFFER
+}
+
+enum BufferUsages {
+	StreamDraw = gl3.GL_STREAM_DRAW,
+	StreamRead = gl3.GL_STREAM_READ,
+	StreamCopy = gl3.GL_STREAM_COPY,
+	StaticDraw = gl3.GL_STATIC_DRAW,
+	StaticRead = gl3.GL_STATIC_READ,
+	StaticCopy = gl3.GL_STATIC_COPY,
+	DynamicDraw = gl3.GL_DYNAMIC_DRAW,
+	DynamicRead = gl3.GL_DYNAMIC_READ,
+	DynamicCopy = gl3.GL_DYNAMIC_COPY
+}
+
+enum BufferAccess {
+	ReadOnly = gl3.GL_READ_ONLY,
+	WriteOnly = gl3.GL_WRITE_ONLY,
+	ReadWrite = gl3.GL_READ_WRITE
+}
+
+enum GetBufferTargets {
+	ArrayBuffer = gl3.GL_ARRAY_BUFFER,
+	ElementArrayBuffer = gl3.GL_ELEMENT_ARRAY_BUFFER
+}
+
+enum GetBufferValues {
+	BufferSize = gl3.GL_BUFFER_SIZE,
+	BufferUsage = gl3.GL_BUFFER_USAGE
+}
+
+void glGenQueries(gl3.GLsizei n, out gl3.GLuint[] ids) {
+	gl3.glGenQueries(n, ids.ptr);
+}
+
+void glGenQueries(out gl3.GLuint id) {
+	gl3.glGenQueries(1, &id);
+}
+
+void glDeleteQueries(gl3.GLsizei n, out gl3.GLuint[] ids) {
+	gl3.glDeleteQueries(n, ids.ptr);
+}
+
+void glDeleteQueries(out gl3.GLuint id) {
+	gl3.glDeleteQueries(1, &id);
+}
+
+gl3.GLboolean glIsQuery(gl3.GLuint id) {
+	return gl3.glIsQuery(id);
+}
+
+void glBeginQuery(QueryTargets target, gl3.GLuint id) {
+	gl3.glBeginQuery(cast(gl3.GLenum)target, id);
+}
+
+void glEndQuery(QueryTargets target) {
+	gl3.glEndQuery(cast(gl3.GLenum)target);
+}
+
+void glGetQueryiv(QueryTarget target, QueryNames pname, gl3.GLint[] params) {
+	gl3.glGetQueryiv(cast(gl3.GLenum)target, cast(gl3.GLenum)pname, params.ptr);
+}
+
+
+void glGetQueryObjectiv(gl3.GLuint id, QueryResultNames pname, out gl3.GLint[] params) {
+	gl3.glGetQueryObjectiv(id, cast(gl3.GLenum)pname, params.ptr);
+}
+
+void glGetQueryObjectuiv(gl3.GLuint id, QueryResultNames pname, out gl3.GLuint[] params) {
+	gl3.glGetQueryObjectuiv(id, cast(gl3.GLenum)pname, params.ptr);
+}
+
+//NOT SUPPORTED glGetQueryObjecti64v
+//NOT SUPPORTED glGetQueryObjectui64v
+
+void glBindBuffer(BindBufferTargets target, gl3.GLuint buffer) {
+	gl3.glBindBuffer(cast(gl3.GLenum)target, buffer);
+}
+
+void glDeleteBuffers(gl3.GLuint[] buffers) {
+	gl3.glDeleteBuffers(cast(int)buffers.length, buffers.ptr);
+}
+
+void glGenBuffers(gl3.GLsizei n, out gl3.GLuint[] buffers) {
+	gl3.glGenBuffers(n, buffers.ptr);
+}
+
+bool glIsBuffer(gl3.GLuint buffer) {
+	return cast(bool)gl3.glIsBuffer(buffer);
+}
+
+void glBufferData(BindBufferTargets target, void[] data, BufferUsages usage) {
+	gl3.glBufferData(cast(gl3.GLenum)target, cast(gl3.GLsizeiptr)data.length, data.ptr, cast(gl3.GLenum)usage);
+}
+
+void glBufferSubData(BindBufferTargets target, int offset, void[] data) {
+	gl3.glBufferSubData(cast(gl3.GLenum)target, cast(gl3.GLintptr)offset, cast(gl3.GLsizeiptr)data.length, data.ptr);
+}
+
+void glGetBufferSubData(BindBufferTargets target, int offset, void[] data) {
+	gl3.glGetBufferSubData(cast(gl3.GLenum)target, cast(gl3.GLintptr)offset, cast(gl3.GLsizeiptr)data.length, data.ptr);
+}
+
+void* glMapBuffer(BindBufferTargets target, BufferAccess access) {
+	return gl3.glMapBuffer(cast(gl3.GLenum)target, cast(gl3.GLenum)access);
+}
+
+bool glUnmapBuffer(BindBufferTargets target) {
+	return cast(bool)gl3.glUnmapBuffer(cast(gl3.GLenum)target);
+}
+
+
+void glGetBufferPointerv(BindBufferTargets target, void[] params) {
+	gl3.glGetBufferPointerv(cast(gl3.GLenum)target, gl3.GL_BUFFER_MAP_POINTER, params.ptr);
+}
+
+void glGetBufferParameteriv(GetBufferTargets target, GetBufferValues value, out gl3.GLint[] data) {
+	gl3.glGetBufferParameteriv(cast(gl3.GLenum)target, value, data.ptr);
 }
