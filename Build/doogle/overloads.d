@@ -1,6 +1,7 @@
 module doogle.overloads;
 import doogle.util.color;
 import gl3 = derelict.opengl3.gl3;
+import arb = derelict.opengl3.arb;
 
 /*
  * OpenGL 1.2
@@ -421,8 +422,13 @@ void glGetQueryObjectuiv(gl3.GLuint id, QueryResultNames pname, out gl3.GLuint[]
 	gl3.glGetQueryObjectuiv(id, cast(gl3.GLenum)pname, params.ptr);
 }
 
-//NOT SUPPORTED glGetQueryObjecti64v
-//NOT SUPPORTED glGetQueryObjectui64v
+void glGetQueryObjecti64v(gl3.GLuint id, QueryResultNames pname, out long[] params) {
+	arb.glGetQueryObjecti64v(id, cast(gl3.GLenum)pname, cast(gl3.GLint64*)params.ptr);
+}
+
+void glGetQueryObjectui64v(gl3.GLuint id, QueryResultNames pname, out ulong[] params) {
+	arb.glGetQueryObjectui64v(id, cast(gl3.GLenum)pname, cast(gl3.GLuint64*)params.ptr);
+}
 
 void glBindBuffer(BindBufferTargets target, gl3.GLuint buffer) {
 	gl3.glBindBuffer(cast(gl3.GLenum)target, buffer);
@@ -460,11 +466,512 @@ bool glUnmapBuffer(BindBufferTargets target) {
 	return cast(bool)gl3.glUnmapBuffer(cast(gl3.GLenum)target);
 }
 
-
 void glGetBufferPointerv(BindBufferTargets target, void[] params) {
 	gl3.glGetBufferPointerv(cast(gl3.GLenum)target, gl3.GL_BUFFER_MAP_POINTER, params.ptr);
 }
 
 void glGetBufferParameteriv(GetBufferTargets target, GetBufferValues value, out gl3.GLint[] data) {
 	gl3.glGetBufferParameteriv(cast(gl3.GLenum)target, value, data.ptr);
+}
+
+/**
+ * Opengl 2.0
+ */
+
+enum DrawBuffers {
+	None = gl3.GL_NONE,
+	FrontLeft = gl3.GL_FRONT_LEFT,
+	FrontRight = gl3.GL_FRONT_RIGHT,
+	BackLeft = gl3.GL_BACK_LEFT,
+	BackRight = gl3.GL_BACK_RIGHT,
+	ColorAttachment0 = gl3.GL_COLOR_ATTACHMENT0
+}
+
+enum Faces {
+	Front = gl3.GL_FRONT,
+	Back = gl3.GL_BACK,
+	FrontAndBack = gl3.GL_FRONT_AND_BACK
+}
+
+enum FaceStencilAction {
+	Keep = gl3.GL_KEEP,
+	Zero = gl3.GL_ZERO,
+	Replace = gl3.GL_REPLACE,
+	Incr = gl3.GL_INCR,
+	IncrWrap = gl3.GL_INCR_WRAP,
+	Decr = gl3.GL_DECR,
+	DecrWrap = gl3.GL_DECR_WRAP,
+	Invert = gl3.GL_INVERT
+}
+
+enum TestFunctions {
+	Never = gl3.GL_NEVER,
+	Less = gl3.GL_LESS,
+	LEqual = gl3.GL_LEQUAL,
+	Greater = gl3.GL_GREATER,
+	GEqual = gl3.GL_GEQUAL,
+	Equal = gl3.GL_EQUAL,
+	NotEqual = gl3.GL_NOTEQUAL,
+	Always = gl3.GL_ALWAYS
+}
+
+enum ShaderTypes {
+	ComputeShader = gl3.GL_COMPUTE_SHADER,
+	VertexShader = gl3.GL_VERTEX_SHADER,
+	TessControlShader = gl3.GL_TESS_CONTROL_SHADER,
+	TessEvaluationShader = gl3.GL_TESS_EVALUATION_SHADER,
+	GeometryShader = gl3.GL_GEOMETRY_SHADER,
+	FragmentShader = gl3.GL_FRAGMENT_SHADER
+}
+
+enum AttribDataTypes {
+	Float = gl3.GL_FLOAT,
+	FloatVec2 = gl3.GL_FLOAT_VEC2,
+	FloatVec3 = gl3.GL_FLOAT_VEC3,
+	FloatVec4 = gl3.GL_FLOAT_VEC4,
+	FloatMat2 = gl3.GL_FLOAT_MAT2,
+	FloatMat3 = gl3.GL_FLOAT_MAT3,
+	FloatMat4 = gl3.GL_FLOAT_MAT4,
+	FloatMat2x3 = gl3.GL_FLOAT_MAT2x3,
+	FloatMat2x4 = gl3.GL_FLOAT_MAT2x4,
+	FloatMat3x2 = gl3.GL_FLOAT_MAT3x2,
+	FloatMat3x4 = gl3.GL_FLOAT_MAT3x4,
+	FloatMat4x2 = gl3.GL_FLOAT_MAT4x2,
+	FloatMat4x3 = gl3.GL_FLOAT_MAT4x3,
+	Int = gl3.GL_INT,
+	IntVec2 = gl3.GL_INT_VEC2,
+	IntVec3 = gl3.GL_INT_VEC3,
+	IntVec4 = gl3.GL_INT_VEC4,
+	UInt = gl3.GL_UNSIGNED_INT,
+	UIntVec2 = gl3.GL_UNSIGNED_INT_VEC2,
+	UIntVec3 = gl3.GL_UNSIGNED_INT_VEC3,
+	UIntVec4 = gl3.GL_UNSIGNED_INT_VEC4,
+	Double = gl3.GL_DOUBLE,
+	DoubleVec2 = gl3.GL_DOUBLE_VEC2,
+	DoubleVec3 = gl3.GL_DOUBLE_VEC3,
+	DoubleVec4 = gl3.GL_DOUBLE_VEC4,
+	DoubleMat2 = gl3.GL_DOUBLE_MAT2,
+	DoubleMat3 = gl3.GL_DOUBLE_MAT3,
+	DoubleMat4 = gl3.GL_DOUBLE_MAT4,
+	DoubleMat2x3 = gl3.GL_DOUBLE_MAT2x3,
+	DoubleMat2x4 = gl3.GL_DOUBLE_MAT2x4,
+	DoubleMat3x2 = gl3.GL_DOUBLE_MAT3x2,
+	DoubleMat3x4 = gl3.GL_DOUBLE_MAT3x4,
+	DoubleMat4x2 = gl3.GL_DOUBLE_MAT4x2,
+	DoubleMat4x3 = gl3.GL_DOUBLE_MAT4x3
+}
+
+enum ProgramObjects {
+	DeleteStatus = gl3.GL_DELETE_STATUS,
+	LinkStatus = gl3.GL_LINK_STATUS,
+	ValidateStatus = gl3.GL_VALIDATE_STATUS,
+	InfoLogStatus = gl3.GL_INFO_LOG_LENGTH,
+	AttachedShaders = gl3.GL_ATTACHED_SHADERS,
+	ActiveAttributes = gl3.GL_ACTIVE_ATTRIBUTES,
+	ActiveAttributeMaxLength = gl3.GL_ACTIVE_ATTRIBUTE_MAX_LENGTH,
+	ActiveUniforms = gl3.GL_ACTIVE_UNIFORMS,
+	ActiveUniformMaxLength = gl3.GL_ACTIVE_UNIFORM_MAX_LENGTH
+}
+
+enum ShaderObjects {
+	ShaderType = gl3.GL_SHADER_TYPE,
+	DeleteStatus = gl3.GL_DELETE_STATUS,
+	CompileStatus = gl3.GL_COMPILE_STATUS,
+	InfoLogLength = gl3.GL_INFO_LOG_LENGTH,
+	ShaderSourceLength = gl3.GL_SHADER_SOURCE_LENGTH
+}
+
+enum VertexAttributeNames {
+	ArrayBufferBindings = gl3.GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING,
+	ArrayEnabled = gl3.GL_VERTEX_ATTRIB_ARRAY_ENABLED,
+	ArraySize = gl3.GL_VERTEX_ATTRIB_ARRAY_SIZE,
+	ArrayStride = gl3.GL_VERTEX_ATTRIB_ARRAY_STRIDE,
+	ArrayType = gl3.GL_VERTEX_ATTRIB_ARRAY_TYPE,
+	ArrayNormalized = gl3.GL_VERTEX_ATTRIB_ARRAY_NORMALIZED,
+	ArrayInteger = gl3.GL_VERTEX_ATTRIB_ARRAY_INTEGER,
+	ArrayDivisor = gl3.GL_VERTEX_ATTRIB_ARRAY_DIVISOR,
+	Current = gl3.GL_CURRENT_VERTEX_ATTRIB
+}
+
+enum AttribPointerSize {
+	One = 1,
+	Two = 2,
+	Three = 3,
+	Four = 4,
+	BGRA = gl3.GL_BGRA
+}
+
+enum AttribPointerType {
+	Byte = gl3.GL_BYTE,
+	UByte = gl3.GL_UNSIGNED_BYTE,
+	Short = gl3.GL_SHORT,
+	UShort = gl3.GL_UNSIGNED_SHORT,
+	Int = gl3.GL_INT,
+	UInt = gl3.GL_UNSIGNED_INT,
+	HalfFloat = gl3.GL_HALF_FLOAT,
+	Float = gl3.GL_FLOAT,
+	Double = gl3.GL_DOUBLE,
+	Fixed = gl3.GL_FIXED,
+	Int2101010REV = gl3.GL_INT_2_10_10_10_REV, 
+	UInt2101010Rev = gl3.GL_UNSIGNED_INT_2_10_10_10_REV,
+	UInt10F11F11FRev = gl3.GL_UNSIGNED_INT_10F_11F_11F_REV 
+}
+
+void glBlendEquationSeparate(BlendMode modeRGB, BlendMode modeAlpha) {
+	gl3.glBlendEquationSeparate(cast(gl3.GLenum)modeRGB, cast(gl3.GLenum)modeAlpha);
+}
+
+void glDrawBuffers(gl3.GLsizei n, DrawBuffers[] bufs) {
+	gl3.glDrawBuffers(n, cast(gl3.GLenum*)bufs.ptr);
+}
+
+void glStencilOpSeparate(Faces face, FaceStencilAction sfail, FaceStencilAction dpfail, FaceStencilAction dppass) {
+	gl3.glStencilOpSeparate(cast(gl3.GLenum)face, cast(gl3.GLenum)sfail, cast(gl3.GLenum)dpfail, cast(gl3.GLenum)dppass);
+}
+
+void glStencilFuncSeparate(Faces face, TestFunctions func, gl3.GLint ref_, gl3.GLuint mask) {
+	gl3.glStencilFuncSeparate(cast(gl3.GLenum)face, cast(gl3.GLenum)func, ref_, mask);
+}
+
+void glStencilMaskSeparate(Faces face, gl3.GLuint mask) {
+	gl3.glStencilMaskSeparate(cast(gl3.GLenum)face, mask);
+}
+
+void glAttachShader(gl3.GLuint program, gl3.GLuint shader) {
+	gl3.glAttachShader(program, shader);
+}
+
+void glBindAttribLocation(gl3.GLuint program, gl3.GLuint index, string name) {
+	gl3.glBindAttribLocation(program, index, (name ~ 0).ptr);
+}
+
+void glCompileShader(gl3.GLuint shader) {
+	gl3.glCompileShader(shader);
+}
+
+gl3.GLuint glCreateProgram() {
+	return gl3.glCreateProgram();
+}
+
+gl3.GLuint glCreateShader(ShaderTypes shaderType) {
+	return gl3.glCreateShader(cast(gl3.GLenum)shaderType);
+}
+
+void glDeleteProgram(gl3.GLuint program) {
+	gl3.glDeleteProgram(program);
+}
+
+void glDeleteShader(gl3.GLuint shader) {
+	gl3.glDeleteShader(shader);
+}
+
+void glDetachShader(gl3.GLuint program, gl3.GLuint shader) {
+	gl3.glDetachShader(program, shader);
+}
+
+void glDisableVertexAttribArray(gl3.GLuint index) {
+	gl3.glDisableVertexAttribArray(index);
+}
+
+void glEnableVertexAttribArray(gl3.GLuint index) {
+	gl3.glEnableVertexAttribArray(index);
+}
+
+void glGetActiveAttrib(gl3.GLuint program, gl3.GLuint index, out gl3.GLint* size, out AttribDataTypes type, out string name) {
+	gl3.glGetActiveAttrib(program, index, int.max,  cast(int*)null, size, cast(gl3.GLenum*)&type, cast(char*)name.ptr);
+	name = name[0 .. $-1];
+}
+
+void glGetActiveUniform(gl3.GLuint program, gl3.GLuint index, out gl3.GLint size, out AttribDataTypes type, out string name) {
+	gl3.glGetActiveUniform(program, index, int.max,  cast(int*)null, &size, cast(gl3.GLenum*)&type, cast(char*)name.ptr);
+	name = name[0 .. $-1];
+}
+
+void glGetAttachedShaders(gl3.GLuint program, gl3.GLuint[] shaders) {
+	gl3.GLsizei* count;
+	gl3.glGetAttachedShaders(program, int.max, count, shaders.ptr);
+}
+
+gl3.GLint glGetAttribLocation(gl3.GLuint program, string name) {
+	return gl3.glGetAttribLocation(program, (name ~ 0).ptr);
+}
+
+void glGetProgramiv(gl3.GLuint program, ProgramObjects pname, out gl3.GLint[] params) {
+	gl3.glGetProgramiv(program, cast(gl3.GLenum)pname, params.ptr);
+}
+
+void glGetProgramInfoLog(gl3.GLuint program, out string infoLog) {
+	gl3.GLsizei* length;
+	gl3.glGetProgramInfoLog(program, int.max, length, cast(char*)infoLog.ptr);
+	infoLog = infoLog[0 .. $-1];
+}
+
+void glGetShaderiv(gl3.GLuint shader, ShaderObjects pname, out gl3.GLint[] params) {
+	gl3.glGetShaderiv(shader, cast(gl3.GLenum)pname, params.ptr);
+}
+
+void glGetShaderInfoLog(gl3.GLuint shader, string infoLog) {
+	gl3.GLsizei* length;
+	gl3.glGetShaderInfoLog(shader, int.max, length, cast(char*)infoLog.ptr);
+	infoLog = infoLog[0 .. $-1];
+}
+
+void glGetShaderSource(gl3.GLuint shader, out string source) {
+	gl3.GLsizei* length;
+	gl3.glGetShaderInfoLog(shader, int.max, length, cast(char*)source.ptr);
+	source = source[0 .. $-1];
+}
+
+gl3.GLint glGetUniformLocation(gl3.GLuint program, string name) {
+	return gl3.glGetUniformLocation(program, cast(char*)(name ~ 0).ptr);
+}
+
+void glGetUniformfv(gl3.GLuint program, gl3.GLint location, gl3.GLfloat[] params) {
+	gl3.glGetUniformfv(program, location, params.ptr);
+}
+
+void glGetUniformiv(gl3.GLuint program, gl3.GLint location, gl3.GLint[] params) {
+	gl3.glGetUniformiv(program, location, params.ptr);
+}
+
+void glGetVertexAttribdv(gl3.GLuint index, VertexAttributeNames pname, gl3.GLdouble[] params) {
+	gl3.glGetVertexAttribdv(index, cast(gl3.GLenum)pname, params.ptr);
+}
+
+void glGetVertexAttribfv(gl3.GLuint index, VertexAttributeNames pname, gl3.GLfloat[] params) {
+	gl3.glGetVertexAttribfv(index, cast(gl3.GLenum)pname, params.ptr);
+}
+
+void glGetVertexAttribiv(gl3.GLuint index, VertexAttributeNames pname, gl3.GLint[] params) {
+	gl3.glGetVertexAttribiv(index, cast(gl3.GLenum)pname, params.ptr);
+}
+
+void glGetVertexAttribPointerv(gl3.GLuint index, out gl3.GLvoid*[] pointer) {
+	gl3.glGetVertexAttribPointerv(index, gl3.GL_VERTEX_ATTRIB_ARRAY_POINTER, pointer.ptr);
+}
+
+bool glIsProgram(gl3.GLuint program) {
+	return cast(bool)gl3.glIsProgram(program);
+}
+
+bool glIsShader(gl3.GLuint program) {
+	return cast(bool)gl3.glIsShader(program);
+}
+
+void glLinkProgram(gl3.GLuint program) {
+	gl3.glLinkProgram(program);
+}
+
+void glShaderSource(gl3.GLuint shader, string[][] _string) {
+	gl3.GLint[] length;
+	string*[] strings;
+	foreach(s; _string) {
+		length ~= cast(gl3.GLint)s.length;
+		strings ~= s.ptr;
+	}
+	gl3.glShaderSource(shader, cast(gl3.GLsizei)_string.length, cast(const(gl3.GLchar*)*)strings.ptr, cast(const(gl3.GLint)*) length.ptr);
+}
+
+void glUseProgram(gl3.GLuint program) {
+	gl3.glUseProgram(program);
+}
+
+void glUniform1f(gl3.GLint location, gl3.GLfloat v0) {
+	gl3.glUniform1f(location, v0);
+}
+
+void glUniform2f(gl3.GLint location, gl3.GLfloat v0, gl3.GLfloat v1) {
+	gl3.glUniform2f(location, v0, v1);
+}
+
+void glUniform3f(gl3.GLint location, gl3.GLfloat v0, gl3.GLfloat v1, gl3.GLfloat v2) {
+	gl3.glUniform3f(location, v0, v1, v2);
+}
+
+void glUniform4f(gl3.GLint location, gl3.GLfloat v0, gl3.GLfloat v1, gl3.GLfloat v2, gl3.GLfloat v3) {
+	gl3.glUniform4f(location, v0, v1, v2, v3);
+}
+
+void glUniform1i(gl3.GLint location, gl3.GLint v0) {
+	gl3.glUniform1i(location, v0);
+}
+
+void glUniform2i(gl3.GLint location, gl3.GLint v0, gl3.GLint v1) {
+	gl3.glUniform2i(location, v0, v1);
+}
+
+void glUniform3i(gl3.GLint location, gl3.GLint v0, gl3.GLint v1, gl3.GLint v2) {
+	gl3.glUniform3i(location, v0, v1, v2);
+}
+
+void glUniform4i(gl3.GLint location, gl3.GLint v0, gl3.GLint v1, gl3.GLint v2, gl3.GLint v3) {
+	gl3.glUniform4i(location, v0, v1, v2, v3);
+}
+
+void glUniform1fv(gl3.GLint location, gl3.GLfloat[] value) {
+	gl3.glUniform1fv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform2fv(gl3.GLint location, gl3.GLfloat[] value) {
+	gl3.glUniform2fv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform3fv(gl3.GLint location, gl3.GLfloat[] value) {
+	gl3.glUniform3fv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform4fv(gl3.GLint location, gl3.GLfloat[] value) {
+	gl3.glUniform4fv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform1iv(gl3.GLint location, gl3.GLint[] value) {
+	gl3.glUniform1iv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform2iv(gl3.GLint location, gl3.GLint[] value) {
+	gl3.glUniform2iv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform3iv(gl3.GLint location, gl3.GLint[] value) {
+	gl3.glUniform3iv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform4iv(gl3.GLint location, gl3.GLint[] value) {
+	gl3.glUniform4iv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform1uiv(gl3.GLint location, gl3.GLuint[] value) {
+	gl3.glUniform1uiv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform2uiv(gl3.GLint location, gl3.GLuint[] value) {
+	gl3.glUniform2uiv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform3uiv(gl3.GLint location, gl3.GLuint[] value) {
+	gl3.glUniform3uiv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniform4uiv(gl3.GLint location, gl3.GLuint[] value) {
+	gl3.glUniform4uiv(location, cast(gl3.GLsizei)value.length, value.ptr);
+}
+
+void glUniformMatrix2fv(gl3.GLint location, bool transpose, gl3.GLfloat[] value) {
+	gl3.glUniformMatrix2fv(location, cast(gl3.GLint)(value.length / 4), cast(ubyte)(transpose ? gl3.GL_TRUE : gl3.GL_FALSE), value.ptr);
+}
+
+void glUniformMatrix3fv(gl3.GLint location, bool transpose, gl3.GLfloat[] value) {
+	gl3.glUniformMatrix3fv(location, cast(gl3.GLint)(value.length / 9), cast(ubyte)(transpose ? gl3.GL_TRUE : gl3.GL_FALSE), value.ptr);
+}
+
+void glUniformMatrix4fv(gl3.GLint location, bool transpose, gl3.GLfloat[] value) {
+	gl3.glUniformMatrix4fv(location, cast(gl3.GLint)(value.length / 16), cast(ubyte)(transpose ? gl3.GL_TRUE : gl3.GL_FALSE), value.ptr);
+}
+
+void glValidateProgram(gl3.GLuint program) {
+	gl3.glValidateProgram(program);
+}
+
+void glVertexAttrib1d(gl3.GLuint index, gl3.GLdouble v0) {
+	gl3.glVertexAttrib1d(index, v0);
+}
+
+void glVertexAttrib1dv(gl3.GLuint index, gl3.GLdouble v) {
+	gl3.glVertexAttrib1dv(index, &v);
+}
+
+void glVertexAttrib1f(gl3.GLuint index, gl3.GLfloat v) {
+	gl3.glVertexAttrib1f(index, v);
+}
+
+void glVertexAttrib1fv(gl3.GLuint index, gl3.GLfloat v) {
+	gl3.glVertexAttrib1fv(index, &v);
+}
+
+void glVertexAttrib1s(gl3.GLuint index, gl3.GLshort v0) {
+	gl3.glVertexAttrib1s(index, v0);
+}
+
+void glVertexAttrib1sv(gl3.GLuint index, gl3.GLshort v0) {
+	gl3.glVertexAttrib1sv(index, &v0);
+}
+
+void glVertexAttrib2d(gl3.GLuint index, gl3.GLdouble v0, gl3.GLdouble v1) {
+	gl3.glVertexAttrib2d(index, v0, v1);
+}
+
+void glVertexAttrib2dv(gl3.GLuint index, gl3.GLdouble[2] v) {
+	gl3.glVertexAttrib2dv(index, v.ptr);
+}
+
+void glVertexAttrib2f(gl3.GLuint index, gl3.GLfloat v0, gl3.GLfloat v1) {
+	gl3.glVertexAttrib2f(index, v0, v1);
+}
+
+void glVertexAttrib2fv(gl3.GLuint index, gl3.GLfloat[2] v) {
+	gl3.glVertexAttrib2fv(index, v.ptr);
+}
+
+void glVertexAttrib2s(gl3.GLuint index, gl3.GLshort v0, gl3.GLshort v1) {
+	gl3.glVertexAttrib2s(index, v0, v1);
+}
+
+void glVertexAttrib2sv(gl3.GLuint index, gl3.GLshort[2] v) {
+	gl3.glVertexAttrib2sv(index, v.ptr);
+}
+
+void glVertexAttrib3d(gl3.GLuint index, gl3.GLdouble v0, gl3.GLdouble v1, gl3.GLdouble v2) {
+	gl3.glVertexAttrib3d(index, v0, v1, v2);
+}
+
+void glVertexAttrib3dv(gl3.GLuint index, gl3.GLdouble[3] v) {
+	gl3.glVertexAttrib3dv(index, v.ptr);
+}
+
+void glVertexAttrib3f(gl3.GLuint index, gl3.GLfloat v0, gl3.GLfloat v1, gl3.GLfloat v2) {
+	gl3.glVertexAttrib3f(index, v0, v1, v2);
+}
+
+void glVertexAttrib3fv(gl3.GLuint index, gl3.GLfloat[3] v) {
+	gl3.glVertexAttrib3fv(index, v.ptr);
+}
+
+void glVertexAttrib3s(gl3.GLuint index, gl3.GLshort v0, gl3.GLshort v1, gl3.GLshort v2) {
+	gl3.glVertexAttrib3s(index, v0, v1, v2);
+}
+
+void glVertexAttrib3sv(gl3.GLuint index, gl3.GLshort[3] v) {
+	gl3.glVertexAttrib3sv(index, v.ptr);
+}
+
+/*
+bindGLFunc(cast(void**)&glVertexAttrib4Nbv, "glVertexAttrib4Nbv");
+bindGLFunc(cast(void**)&glVertexAttrib4Niv, "glVertexAttrib4Niv");
+bindGLFunc(cast(void**)&glVertexAttrib4Nsv, "glVertexAttrib4Nsv");
+bindGLFunc(cast(void**)&glVertexAttrib4Nub, "glVertexAttrib4Nub");
+bindGLFunc(cast(void**)&glVertexAttrib4Nubv, "glVertexAttrib4Nubv");
+bindGLFunc(cast(void**)&glVertexAttrib4Nuiv, "glVertexAttrib4Nuiv");
+bindGLFunc(cast(void**)&glVertexAttrib4Nusv, "glVertexAttrib4Nusv");
+bindGLFunc(cast(void**)&glVertexAttrib4bv, "glVertexAttrib4bv");
+bindGLFunc(cast(void**)&glVertexAttrib4d, "glVertexAttrib4d");
+bindGLFunc(cast(void**)&glVertexAttrib4dv, "glVertexAttrib4dv");*/
+
+void glVertexAttrib4f(gl3.GLuint index, gl3.GLfloat v0, gl3.GLfloat v1, gl3.GLfloat v2, gl3.GLfloat v3) {
+	gl3.glVertexAttrib4f(index, v0, v1, v2, v3);
+}
+
+void glVertexAttrib4fv(gl3.GLuint index, gl3.GLfloat[] v) {
+	gl3.glVertexAttrib4fv(index, v.ptr);
+}
+
+/*
+bindGLFunc(cast(void**)&glVertexAttrib4iv, "glVertexAttrib4iv");
+bindGLFunc(cast(void**)&glVertexAttrib4s, "glVertexAttrib4s");
+bindGLFunc(cast(void**)&glVertexAttrib4sv, "glVertexAttrib4sv");
+bindGLFunc(cast(void**)&glVertexAttrib4ubv, "glVertexAttrib4ubv");
+bindGLFunc(cast(void**)&glVertexAttrib4uiv, "glVertexAttrib4uiv");
+bindGLFunc(cast(void**)&glVertexAttrib4usv, "glVertexAttrib4usv");*/
+
+void glVertexAttribPointer(gl3.GLuint index, AttribPointerSize size, AttribPointerType type, bool normalized, gl3.GLsizei stride, gl3.GLvoid* pointer) {
+	gl3.glVertexAttribPointer(index, size, type, normalized ? gl3.GL_TRUE : gl3.GL_FALSE, stride, pointer);
 }
