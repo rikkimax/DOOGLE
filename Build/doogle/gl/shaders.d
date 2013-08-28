@@ -66,7 +66,7 @@ shared class Shader {
 	}
 
 	this(string source, ShaderTypes type) {
-		if (source is null) {
+		if (source !is null) {
 			// create
 			opAssign(source);
 			this.type = type;
