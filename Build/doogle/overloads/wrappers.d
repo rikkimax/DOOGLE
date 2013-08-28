@@ -1,4 +1,4 @@
-module doogle.overloads;
+module doogle.overloads.wrappers;
 import doogle.util.color;
 import gl3 = derelict.opengl3.gl3;
 import arb = derelict.opengl3.arb;
@@ -975,3 +975,15 @@ bindGLFunc(cast(void**)&glVertexAttrib4usv, "glVertexAttrib4usv");*/
 void glVertexAttribPointer(gl3.GLuint index, AttribPointerSize size, AttribPointerType type, bool normalized, gl3.GLsizei stride, gl3.GLvoid* pointer) {
 	gl3.glVertexAttribPointer(index, size, type, normalized ? gl3.GL_TRUE : gl3.GL_FALSE, stride, pointer);
 }
+
+/**
+ * Opengl 2.1
+ */
+
+/*
+bindGLFunc(cast(void**)&glUniformMatrix2x3fv, "glUniformMatrix2x3fv");
+bindGLFunc(cast(void**)&glUniformMatrix3x2fv, "glUniformMatrix3x2fv");
+bindGLFunc(cast(void**)&glUniformMatrix2x4fv, "glUniformMatrix2x4fv");
+bindGLFunc(cast(void**)&glUniformMatrix4x2fv, "glUniformMatrix4x2fv");
+bindGLFunc(cast(void**)&glUniformMatrix3x4fv, "glUniformMatrix3x4fv");
+bindGLFunc(cast(void**)&glUniformMatrix4x3fv, "glUniformMatrix4x3fv");*/
