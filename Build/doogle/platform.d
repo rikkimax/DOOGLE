@@ -1,5 +1,6 @@
 module doogle.platform;
 public import derelict.opengl3.gl3;
+import doogle.util.shaderstorage;
 
 struct PlatformVersions {
 
@@ -11,7 +12,6 @@ struct PlatformVersions {
 		public import glx = derelict.opengl3.glx;
 		public import glxext = derelict.opengl3.glxext;
 		public import core.sys.posix.sys.time;
-
 	} else version(Windows) {
 		pragma(lib, "gdi32.lib");
 		pragma(lib, "user32.lib");
@@ -32,4 +32,5 @@ __gshared PlatformVersions platform;
 
 static this() {
 	DerelictGL3.load();
+	shaderStorage.init();
 }
