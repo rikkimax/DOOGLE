@@ -120,12 +120,12 @@ void glDrawRangeElements(Primitives mode, gl3.GLuint start, gl3.GLuint end, uint
 	gl3.glDrawRangeElements(cast(gl3.GLenum)mode, start, end, cast(uint)data.length, gl3.GL_UNSIGNED_INT, data.ptr);
 }
 
-void glTexImage3D(TextureTargets target, gl3.GLint level, InternalFormat internalFormat, gl3.GLsizei width, gl3.GLsizei height, gl3.GLsizei depth, PixelFormat format, PixelDataType type, void* data) {
-	gl3.glTexImage3D(cast(gl3.GLenum)target, level, cast(gl3.GLenum)internalFormat, width, height, depth, 0, cast(gl3.GLenum)format, cast(gl3.GLenum)type, data);
+void glTexImage3D(TextureTargets target, gl3.GLint level, InternalFormat internalFormat, gl3.GLsizei width, gl3.GLsizei height, gl3.GLsizei depth, PixelFormat format, PixelDataType type, void[] data) {
+	gl3.glTexImage3D(cast(gl3.GLenum)target, level, cast(gl3.GLenum)internalFormat, width, height, depth, 0, cast(gl3.GLenum)format, cast(gl3.GLenum)type, data.ptr);
 }
 
-void glTexSubImage3D(SubTextureTargets target, gl3.GLint level, gl3.GLint xoffset, gl3.GLint yoffset, gl3.GLint zoffset, gl3.GLsizei width, gl3.GLsizei height, gl3.GLsizei depth, PixelSubTextureFormat format, PixelDataType type, void* data) {
-	gl3.glTexSubImage3D(cast(gl3.GLenum)target, level, xoffset, yoffset, zoffset, width, height, depth, cast(gl3.GLenum)format, cast(gl3.GLenum)type, data);
+void glTexSubImage3D(SubTextureTargets target, gl3.GLint level, gl3.GLint xoffset, gl3.GLint yoffset, gl3.GLint zoffset, gl3.GLsizei width, gl3.GLsizei height, gl3.GLsizei depth, PixelSubTextureFormat format, PixelDataType type, void[] data) {
+	gl3.glTexSubImage3D(cast(gl3.GLenum)target, level, xoffset, yoffset, zoffset, width, height, depth, cast(gl3.GLenum)format, cast(gl3.GLenum)type, data.ptr);
 }
 
 void glCopyTexSubImage3D(SubTextureTargets target, gl3.GLint level, gl3.GLint xoffset, gl3.GLint yoffset, gl3.GLint zoffset, gl3.GLint x, gl3.GLint y, gl3.GLsizei width, gl3.GLsizei height) {
@@ -412,7 +412,6 @@ void glGetQueryiv(QueryTarget target, QueryNames pname, gl3.GLint[] params) {
 	gl3.glGetQueryiv(cast(gl3.GLenum)target, cast(gl3.GLenum)pname, params.ptr);
 }
 
-
 void glGetQueryObjectiv(gl3.GLuint id, QueryResultNames pname, out gl3.GLint[] params) {
 	gl3.glGetQueryObjectiv(id, cast(gl3.GLenum)pname, params.ptr);
 }
@@ -686,7 +685,7 @@ void glGetActiveUniform(gl3.GLuint program, gl3.GLuint index, out gl3.GLint size
 	name = name[0 .. $-1];
 }
 
-void glGetAttachedShaders(gl3.GLuint program, gl3.GLuint[] shaders) {
+void glGetAttachedShaders(gl3.GLuint program, out gl3.GLuint[] shaders) {
 	gl3.GLsizei* count;
 	gl3.glGetAttachedShaders(program, int.max, count, shaders.ptr);
 }
@@ -753,8 +752,8 @@ bool glIsProgram(gl3.GLuint program) {
 	return cast(bool)gl3.glIsProgram(program);
 }
 
-bool glIsShader(gl3.GLuint program) {
-	return cast(bool)gl3.glIsShader(program);
+bool glIsShader(gl3.GLuint shader) {
+	return cast(bool)gl3.glIsShader(shader);
 }
 
 void glLinkProgram(gl3.GLuint program) {
