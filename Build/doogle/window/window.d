@@ -98,6 +98,11 @@ abstract shared class Window_Def : Component, ComponentChildable {
 		void close();
 
 		bool event();
+
+		override bool getEvent(out shared(Event) ev) {
+			event();
+			return super.getEvent(ev);
+		}
 	}
 }
 

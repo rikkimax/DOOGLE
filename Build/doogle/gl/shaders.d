@@ -73,6 +73,10 @@ shared class ShaderProgram {
 			}
 		}
 	}
+
+	/**
+	 * Add uniform infromation get/set
+	 */
 }
 
 shared class Shader {
