@@ -33,6 +33,10 @@ shared class ShaderProgram {
 		// destroy the program
 	}
 
+	ProgramObj opCast(T : ProgramObj)() {
+		return ProgramObj(id);
+	}
+
 	void attach(shared(Shader) shader, bool linkCall = true) {
 		shaders ~= shader;
 		// attach the shader
