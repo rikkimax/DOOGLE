@@ -78,17 +78,21 @@ shared class ShaderProgram {
 shared class Shader {
 	protected {
 		ShaderObj id;
-		string source;
+		string source = null;
 		ShaderTypes type;
 	}
 
 	this(string source, ShaderTypes type) {
-		if (source !is null) {
-			// create
-			glCreateShader(type, id);
-			opAssign(source);
-			this.type = type;
-			compile();
+		// create
+		glCreateShader(type, id);
+		opAssign(source);
+		this.type = type;
+		compile();
+	}
+
+	~this() {
+		synchronized {
+			glDeleteShader(id);
 		}
 	}
 
@@ -127,12 +131,6 @@ shared class Shader {
 			}
 		}
 	}
-}
-
-unittest {
-	shared Shader s = new shared Shader(null, ShaderTypes.ComputeShader);
-	s = "hi";
-	assert(cast(string)s == "hi");
 }
 
 /*
