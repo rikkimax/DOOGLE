@@ -1,5 +1,4 @@
 module doogle.overloads.wrappers;
-import doogle.util.color;
 import gl3 = derelict.opengl3.gl3;
 import arb = derelict.opengl3.arb;
 
@@ -101,8 +100,8 @@ enum PixelDataType {
 	UINT2101010REV = gl3.GL_UNSIGNED_INT_2_10_10_10_REV
 }
 
-void glBlendColor(Color c) {
-	gl3.glBlendColor(c.r / 255f, c.g / 255f, c.b / 255f, c.a / 255f);
+void glBlendColor(ubyte r, ubyte g, ubyte b, ubyte a) {
+	gl3.glBlendColor(r / 255f, g / 255f, b / 255f, a / 255f);
 }
 
 void glBlendEquation(BlendMode mode) {
