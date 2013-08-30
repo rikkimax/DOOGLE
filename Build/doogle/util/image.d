@@ -1,21 +1,38 @@
 module doogle.util.image;
 import doogle.util.color;
 import doogle.util.misc;
+import doogle.overloads.structify;
+public import doogle.overloads.wrappers : InternalFormat;
+
+struct RawImage {
+	size_t width;
+	size_t height;
+	size_t depth;
+	InternalFormat format;
+	union {
+		ubyte[] data;
+		Color[] colors;
+	}
+}
 
 interface Image{
 	@property {
 		size_t width();
 		size_t height();
+		size_t depth();
 		Color[][] colors();
 		Color[] values();
 		ubyte[] data();
+		InternalFormat format();
 		void colors(Color[][]);
 		void values(Color[]);
 		void data(ubyte[]);
+		void format(InternalFormat);
+		RawImage opCast(T : RawImage)();
 	}
 }
 
-class ImageData(size_t _width, size_t _height) : Image {
+class ImageData(size_t _width, size_t _height = 1, size_t _depth = 1) : Image {
 	union {
 		Color[_width][_height] colors_;
 		Color[_height * _width] values_;
@@ -23,6 +40,12 @@ class ImageData(size_t _width, size_t _height) : Image {
 	}
 	size_t height_ = _height;
 	size_t width_ = _width;
+	size_t depth_ = _depth;
+	InternalFormat format_;
+
+	RawImage opCast(T : RawImage)() {
+		return RawImage(width, height, format_, values_);
+	}
 
 	@property {
 		size_t width() {
@@ -31,6 +54,10 @@ class ImageData(size_t _width, size_t _height) : Image {
 
 		size_t height() {
 			return height_;
+		}
+
+		size_t depth() {
+			return depth_;
 		}
 
 		Color[][] colors() {
@@ -43,6 +70,14 @@ class ImageData(size_t _width, size_t _height) : Image {
 
 		ubyte[] data() {
 			return cast(ubyte[])data_;
+		}
+
+		InternalFormat format() {
+			return format_;
+		}
+
+		void format(InternalFormat format) {
+			format_ = format;
 		}
 
 		void colors(Color[][] v)
