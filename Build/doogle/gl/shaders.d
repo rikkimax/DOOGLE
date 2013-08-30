@@ -20,6 +20,7 @@ shared class ShaderProgram {
 
 	this(shared(Shader) vert=null, shared(Shader) frag=null, shared(Shader) geom=null) {
 		// allocate the program
+		glCreateProgram(id);
 		if (vert !is null)
 			attach(vert, false);
 		if (frag !is null)
@@ -30,34 +31,46 @@ shared class ShaderProgram {
 	}
 
 	~this() {
-		// destroy the program
+		synchronized {
+			// destroy the program
+			glDeleteProgram(id);
+		}
 	}
 
-	ProgramObj opCast(T : ProgramObj)() {
-		return ProgramObj(id);
+	shared(ProgramObj) opCast(T : ProgramObj)() {
+		synchronized {
+			return id;
+		}
 	}
 
 	void attach(shared(Shader) shader, bool linkCall = true) {
-		shaders ~= shader;
-		// attach the shader
-		if (linkCall)
-			link();
+		synchronized {
+			shaders ~= shader;
+			// attach the shader
+			glAttachShader(id, shader.id);
+			if (linkCall)
+				link();
+		}
 	}
 
 	void detach(shared(Shader) shader) {
-		shared(Shader)[] ret;
-		foreach (s; shaders) {
-			if (s != shader)
-				ret ~= s;
+		synchronized {
+			shared(Shader)[] ret;
+			foreach (s; shaders) {
+				if (s != shader)
+					ret ~= s;
+			}
+			shaders = ret;
+			glDetachShader(id, shader.id);
+			link();
 		}
-		shaders = ret;
-
-		link();
 	}
 
 	protected {
 		void link() {
-
+			synchronized {
+				glLinkProgram(id);
+			}
 		}
 	}
 }
@@ -72,6 +85,7 @@ shared class Shader {
 	this(string source, ShaderTypes type) {
 		if (source !is null) {
 			// create
+			glCreateShader(type, id);
 			opAssign(source);
 			this.type = type;
 			compile();
@@ -79,26 +93,38 @@ shared class Shader {
 	}
 
 	void opAssign()(string source) {
-		this.source = source;
-		// assign
-		compile();
+		synchronized {
+			this.source = source;
+			// assign
+			glShaderSource(id, source);
+			compile();
+		}
 	}
 
 	shared(ShaderObj) opCast(T : ShaderObj)() {
-		return id;
+		synchronized {
+			return id;
+		}
 	}
 
 	string opCast(T : string)() {
-		return source;
+		synchronized {
+			return source;
+		}
 	}
 
 	ShaderTypes opCast(T : ShaderTypes)() {
-		return type;
+		synchronized {
+			return type;
+		}
 	}
 
 	protected {
 		void compile() {
-			// compile
+			synchronized {
+				// compile
+				glCompileShader(id);
+			}
 		}
 	}
 }

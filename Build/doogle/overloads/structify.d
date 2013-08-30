@@ -120,12 +120,12 @@ void glCompileShader(ShaderObj shader) {
 	gl3.glCompileShader(shader.id);
 }
 
-gl3.GLuint glCreateProgram() {
-	return gl3.glCreateProgram();
+void glCreateProgram(out ProgramObj ret) {
+	ret = ProgramObj(gl3.glCreateProgram());
 }
 
-gl3.GLuint glCreateShader(ShaderTypes shaderType) {
-	return gl3.glCreateShader(cast(gl3.GLenum)shaderType);
+void glCreateShader(ShaderTypes shaderType, out ShaderObj ret) {
+	ret = ShaderObj(gl3.glCreateShader(cast(gl3.GLenum)shaderType));
 }
 
 void glDeleteProgram(ProgramObj program) {
@@ -209,14 +209,9 @@ void glLinkProgram(ProgramObj program) {
 	gl3.glLinkProgram(program.id);
 }
 
-void glShaderSource(ShaderObj shader, string[][] _string) {
-	gl3.GLint[] length;
-	string*[] strings;
-	foreach(s; _string) {
-		length ~= cast(gl3.GLint)s.length;
-		strings ~= s.ptr;
-	}
-	gl3.glShaderSource(shader.id, cast(gl3.GLsizei)_string.length, cast(const(gl3.GLchar*)*)strings.ptr, cast(const(gl3.GLint)*) length.ptr);
+void glShaderSource(ShaderObj shader, string _string) {
+	size_t length = _string.length;
+	gl3.glShaderSource(shader.id, 1, cast(const(gl3.GLchar*)*)_string.ptr, cast(const(gl3.GLint)*)&length);
 }
 
 void glUseProgram(ProgramObj program) {

@@ -760,14 +760,9 @@ void glLinkProgram(gl3.GLuint program) {
 	gl3.glLinkProgram(program);
 }
 
-void glShaderSource(gl3.GLuint shader, string[][] _string) {
-	gl3.GLint[] length;
-	string*[] strings;
-	foreach(s; _string) {
-		length ~= cast(gl3.GLint)s.length;
-		strings ~= s.ptr;
-	}
-	gl3.glShaderSource(shader, cast(gl3.GLsizei)_string.length, cast(const(gl3.GLchar*)*)strings.ptr, cast(const(gl3.GLint)*) length.ptr);
+void glShaderSource(gl3.GLuint shader, string _string) {
+	size_t length = _string.length;
+	gl3.glShaderSource(shader, 1, cast(const(gl3.GLchar*)*)_string.ptr, cast(const(gl3.GLint)*)&length);
 }
 
 void glUseProgram(gl3.GLuint program) {
