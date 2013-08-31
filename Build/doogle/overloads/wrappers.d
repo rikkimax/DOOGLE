@@ -59,32 +59,6 @@ bindFunc(cast(void**)&glViewport, "glViewport");*/
  * OpenGL 1.1
  */
 
-/*bindFunc(cast(void**)&glDrawArrays, "glDrawArrays");
-bindFunc(cast(void**)&glDrawElements, "glDrawElements");
-bindFunc(cast(void**)&glPolygonOffset, "glPolygonOffset");
-bindFunc(cast(void**)&glCopyTexImage1D, "glCopyTexImage1D");
-bindFunc(cast(void**)&glCopyTexImage2D, "glCopyTexImage2D");
-bindFunc(cast(void**)&glCopyTexSubImage1D, "glCopyTexSubImage1D");
-bindFunc(cast(void**)&glCopyTexSubImage2D, "glCopyTexSubImage2D");
-bindFunc(cast(void**)&glTexSubImage1D, "glTexSubImage1D");
-bindFunc(cast(void**)&glTexSubImage2D, "glTexSubImage2D");
-bindFunc(cast(void**)&glBindTexture, "glBindTexture");
-bindFunc(cast(void**)&glDeleteTextures, "glDeleteTextures");
-bindFunc(cast(void**)&glGenTextures, "glGenTextures");
-bindFunc(cast(void**)&glIsTexture, "glIsTexture");*/
-
-/*
- * OpenGL 1.2
- */
-
-enum BlendMode {
-	FuncAdd = gl3.GL_FUNC_ADD,
-	FuncSubtract = gl3.GL_FUNC_SUBTRACT,
-	FuncReverseSubtract = gl3.GL_FUNC_REVERSE_SUBTRACT,
-	Min = gl3.GL_MIN,
-	Max = gl3.GL_MAX
-}
-
 enum Primitives {
 	Points = gl3.GL_POINTS,
 	LineStrip = gl3.GL_LINE_STRIP,
@@ -100,6 +74,111 @@ enum Primitives {
 	Patches = gl3.GL_PATCHES
 }
 
+enum InternalFormat {
+	DepthComponent = gl3.GL_DEPTH_COMPONENT,
+	DepthStencil = gl3.GL_DEPTH_STENCIL,
+	Red = gl3.GL_RED,
+	RG = gl3.GL_RG,
+	RGB = gl3.GL_RGB,
+	RGBA = gl3.GL_RGBA
+}
+
+enum CompressedTextureTargets2D {
+	Texture2D = gl3.GL_TEXTURE_2D,
+	TextureCubeMapPositiveX = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_X,
+	TextureCubeMapNegativeX = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_X,
+	TextureCubeMapPositiveY = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Y,
+	TextureCubeMapNegativeY = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Y,
+	TextureCubeMapPositiveZ = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Z,
+	TextureCubeMapNegativeZ = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
+}
+
+enum BindTextureTarget {
+	Texture1D = gl3.GL_TEXTURE_1D,
+	Texture2D = gl3.GL_TEXTURE_2D,
+	Texture3D = gl3.GL_TEXTURE_3D,
+	Texture1DArray = gl3.GL_TEXTURE_1D_ARRAY,
+	Texture2DArray = gl3.GL_TEXTURE_2D_ARRAY,
+	TextureRectangle = gl3.GL_TEXTURE_RECTANGLE,
+	TextureCubeMap = gl3.GL_TEXTURE_CUBE_MAP,
+	TextureCubeMapArray = gl3.GL_TEXTURE_CUBE_MAP_ARRAY,
+	TextureBuffer = gl3.GL_TEXTURE_BUFFER,
+	Texture2DMultiSample = gl3.GL_TEXTURE_2D_MULTISAMPLE,
+	Texture2DMultiSampleArray = gl3.GL_TEXTURE_2D_MULTISAMPLE_ARRAY
+}
+
+void glDrawArrays(Primitives mode, gl3.GLint first, gl3.GLint count) {
+	gl3.glDrawArrays(cast(gl3.GLenum)mode, first, count);
+}
+
+void glDrawElements(Primitives mode, ubyte[] indices) {
+	gl3.glDrawElements(cast(gl3.GLenum)mode, cast(uint)indices.length, gl3.GL_UNSIGNED_BYTE, cast(void*)indices.ptr);
+}
+
+void glDrawElements(Primitives mode, ushort[] indices) {
+	gl3.glDrawElements(cast(gl3.GLenum)mode, cast(uint)indices.length, gl3.GL_UNSIGNED_SHORT, cast(void*)indices.ptr);
+}
+
+void glDrawElements(Primitives mode, uint[] indices) {
+	gl3.glDrawElements(cast(gl3.GLenum)mode, cast(uint)indices.length, gl3.GL_UNSIGNED_INT, cast(void*)indices.ptr);
+}
+
+void glPolygonOffset(gl3.GLfloat factor, gl3.GLfloat units) {
+	gl3.glPolygonOffset(factor, units);
+}
+
+void glCopyTexImage1D(gl3.GLint level, InternalFormat internalFormat, gl3.GLint x, gl3.GLint y, gl3.GLsizei width) {
+	gl3.glCopyTexImage1D(gl3.GL_TEXTURE_1D, level, cast(gl3.GLenum)internalFormat, x, y, width, 0);
+}
+
+void glCopyTexImage2D(CompressedTextureTargets2D target, gl3.GLint level, InternalFormat internalFormat, gl3.GLint x, gl3.GLint y, gl3.GLsizei width, gl3.GLsizei height) {
+	gl3.glCopyTexImage2D(cast(gl3.GLenum)target, level, cast(gl3.GLenum)internalFormat, x, y, width, height, 0);
+}
+
+void glCopyTexSubImage1D(gl3.GLint level, gl3.GLint xoffset, gl3.GLint x, gl3.GLint y, gl3.GLsizei width) {
+	gl3.glCopyTexSubImage1D(gl3.GL_TEXTURE_1D, level, xoffset, x, y, width);
+}
+
+void glCopyTexSubImage2D(CompressedTextureTargets2D target, gl3.GLint level, gl3.GLint xoffset, gl3.GLint yoffset, gl3.GLint x, gl3.GLint y, gl3.GLsizei width, gl3.GLsizei height) {
+	gl3.glCopyTexSubImage2D(cast(gl3.GLenum)target, level, xoffset, yoffset, x, y, width, height);
+}
+
+void glBindTexture(BindTextureTarget target, gl3.GLuint texture) {
+	gl3.glBindTexture(cast(gl3.GLenum)target, texture);
+}
+
+void glDeleteTextures(gl3.GLuint[] textures) {
+	gl3.glDeleteTextures(cast(uint)textures.length, textures.ptr);
+}
+
+void glDeleteTextures(gl3.GLuint texture) {
+	gl3.glDeleteTextures(1, &texture);
+}
+
+void glGenTextures(out gl3.GLuint texture) {
+	gl3.glGenTextures(1, &texture);
+}
+
+void glGenTextures(gl3.GLsizei n, out gl3.GLuint[] textures) {
+	gl3.glGenTextures(n, textures.ptr);
+}
+
+bool glIsTexture(gl3.GLuint texture) {
+	return cast(bool)gl3.glIsTexture(texture);
+}
+
+/*
+ * OpenGL 1.2
+ */
+
+enum BlendMode {
+	FuncAdd = gl3.GL_FUNC_ADD,
+	FuncSubtract = gl3.GL_FUNC_SUBTRACT,
+	FuncReverseSubtract = gl3.GL_FUNC_REVERSE_SUBTRACT,
+	Min = gl3.GL_MIN,
+	Max = gl3.GL_MAX
+}
+
 enum TextureTargets {
 	Texture3D = gl3.GL_TEXTURE_3D,
 	ProxyTexture3D = gl3.GL_PROXY_TEXTURE_3D,
@@ -110,15 +189,6 @@ enum TextureTargets {
 enum SubTextureTargets {
 	Texture3D = gl3.GL_TEXTURE_3D,
 	Texture2DArray = gl3.GL_TEXTURE_2D_ARRAY,
-}
-
-enum InternalFormat {
-	DepthComponent = gl3.GL_DEPTH_COMPONENT,
-	DepthStencil = gl3.GL_DEPTH_STENCIL,
-	Red = gl3.GL_RED,
-	RG = gl3.GL_RG,
-	RGB = gl3.GL_RGB,
-	RGBA = gl3.GL_RGBA
 }
 
 enum PixelFormat {
@@ -219,16 +289,6 @@ enum TextureTargets2D {
 	TextureCubeMapPositiveZ = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Z,
 	TextureCubeMapNegativeZ = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Z,
 	ProxyTextureCubeMap = gl3.GL_PROXY_TEXTURE_CUBE_MAP
-}
-
-enum CompressedTextureTargets2D {
-	Texture2D = gl3.GL_TEXTURE_2D,
-	TextureCubeMapPositiveX = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_X,
-	TextureCubeMapNegativeX = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_X,
-	TextureCubeMapPositiveY = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Y,
-	TextureCubeMapNegativeY = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Y,
-	TextureCubeMapPositiveZ = gl3.GL_TEXTURE_CUBE_MAP_POSITIVE_Z,
-	TextureCubeMapNegativeZ = gl3.GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
 }
 
 enum TextureTargets1D {
