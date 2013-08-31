@@ -3,6 +3,7 @@ import doogle.util.image;
 import doogle.util.color;
 import doogle.util.misc;
 public import doogle.overloads.wrappers : InternalFormat;
+import doogle.overloads.structify;
 public import doogle.overloads.structify : TextureObj;
 
 shared interface Texture {
@@ -45,12 +46,13 @@ shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8) : 
 		assert(colors.length == values_.length);
 	} body {
 		values_ = colors;
-		glGenTextures(1, &id_);
+		glGenTextures(id_);
 	}
 
 	~this() {
 		synchronized {
 			// destroy obj
+			glDeleteTextures(id_);
 		}
 	}
 	
