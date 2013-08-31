@@ -1,12 +1,48 @@
 module doogle.overloads.structify;
 public import doogle.overloads.wrappers :
-	TextureTargets, SubTextureTargets, // 1.1
+	TextureTargets, SubTextureTargets, BindTextureTarget, // 1.1
 	TextureTargets2D, TextureTargets1D, CompressedTextureTargets, CompressedTextureTargets2D, // 1.2
 	ShaderTypes, AttribDataTypes, ProgramObjects, ShaderObjects //2.0
 	;
 import gl3 = derelict.opengl3.gl3;
 import doogle.util.color;
 import doogle.util.image;
+
+/**
+ * OpenGL 1.1
+ */
+
+struct TextureObj {
+	gl3.GLuint id;
+
+	gl3.GLuint opCast(T : gl3.GLuint)() {
+		return id;
+	}
+}
+
+void glBindTexture(BindTextureTarget target, TextureObj texture) {
+	gl3.glBindTexture(cast(gl3.GLenum)target, cast(uint)texture);
+}
+
+void glDeleteTextures(TextureObj[] textures) {
+	gl3.glDeleteTextures(cast(uint)textures.length, cast(gl3.GLuint*)textures.ptr);
+}
+
+void glDeleteTextures(TextureObj texture) {
+	gl3.glDeleteTextures(1, cast(gl3.GLuint*)&texture);
+}
+
+void glGenTextures(out TextureObj texture) {
+	gl3.glGenTextures(1, cast(gl3.GLuint*)&texture);
+}
+
+void glGenTextures(gl3.GLsizei n, out TextureObj[] textures) {
+	gl3.glGenTextures(n, cast(gl3.GLuint*)textures.ptr);
+}
+
+bool glIsTexture(TextureObj texture) {
+	return cast(bool)gl3.glIsTexture(cast(gl3.GLuint)texture);
+}
 
 /*
  * OpenGL 1.2
