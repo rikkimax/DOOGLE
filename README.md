@@ -30,3 +30,5 @@ Aims:
 * Be able to make majority of applications with it.
 * Produce an IDE using the standard controls.
 * Completely written in D. Only bindings are acceptable to system libraries (no ones not installed by default).
+* Will not add any more dependencies e.g. a font rasterizer.
+  This is meant to be a minimal lib without the controls.
