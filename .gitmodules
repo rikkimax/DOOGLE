@@ -1,6 +1,6 @@
 [submodule "source/WindowsAPI"]
-	path = Build/WindowsAPI
+	path = source/WindowsAPI
 	url = https://github.com/AndrejMitrovic/WindowsAPI.git
 [submodule "source/libX11"]
-	path = Build/libX11
+	path = source/libX11
 	url = https://github.com/D-Programming-Deimos/libX11.git
