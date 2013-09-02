@@ -1,10 +1,10 @@
 {
 	"name": "doogle",
-	"description": "An example project skeleton",
-	"homepage": "http://example.org",
-	"copyright": "Copyright © 2000, Your Name",
+	"description": "DOOGLE is a cross platform gui toolkit built in D.",
+	"homepage": "http://github.com/rikkimax/DOOGLE",
+	"copyright": "Copyright © 2013, Richard Andrew Cattermole",
 	"authors": [
-		"Your Name"
+		"Richard Andrew Cattermole"
 	],
 	"dependencies": {
 		"derelict-gl3" : "~master",
