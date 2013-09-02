@@ -96,13 +96,19 @@
 		{
 			"name": "main",
 			"targetType": "library",
-			"platforms": ["windows-x86_64"]
+			"platforms": ["windows-x86_64"],
+			"excludedSourceFiles-windows" : [
+				"source/doogle/test.d"
+			]
 		},
 		{
 			"name": "libtest",
 			"targetType": "executable",
 			"dflags": ["-main"],
 			"platforms": ["windows-x86_64"],
+			"excludedSourceFiles-windows" : [
+				"source/doogle/test.d"
+			]
 		},
 		{
 			"name": "test",
