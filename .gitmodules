@@ -1,9 +1,6 @@
-[submodule "Build/WindowsAPI"]
+[submodule "source/WindowsAPI"]
 	path = Build/WindowsAPI
 	url = https://github.com/AndrejMitrovic/WindowsAPI.git
-[submodule "Build/libX11"]
+[submodule "source/libX11"]
 	path = Build/libX11
 	url = https://github.com/D-Programming-Deimos/libX11.git
-[submodule "Build/Derelict3"]
-	path = Build/Derelict3
-	url = https://github.com/aldacron/Derelict3.git
