@@ -21,6 +21,7 @@
 	"preBuildCommands": [
 		"git submodule update --init"
 	],
+	
 	"subPackages": [
 		{
 			"name": "opengl",
@@ -37,22 +38,16 @@
 			
 			"sourcePaths-windows": ["source/WindowsAPI/win32"],
 			"versions-windows": ["WindowsXP", "Unicode"],
+			
+			"libs-windows-x86": [
+				"win32/shlwapi",
+				"win32/msvfw32"
+			],
+			
 			"excludedSourceFiles-windows" : [
 				"source/WindowsAPI/win32/winsock.d",
 				"source/WindowsAPI/win32/testall.d",
-				
-				"source/WindowsAPI/win32/lm.d",
-				"source/WindowsAPI/win32/lmaccess.d",
-				"source/WindowsAPI/win32/lmalert.d",
-				"source/WindowsAPI/win32/lmapibuf.d",
-				"source/WindowsAPI/win32/lmmat.d",
-				"source/WindowsAPI/win32/lmmsg.d",
-				"source/WindowsAPI/win32/lmremutl.d",
-				"source/WindowsAPI/win32/lmshare.d",
-				"source/WindowsAPI/win32/lmstats.d",
-				"source/WindowsAPI/win32/lmuse.d",
-				"source/WindowsAPI/win32/lmwksta.d",
-				
+
 				"source/WindowsAPI/win32/directx/d3d9.d",
 				"source/WindowsAPI/win32/directx/d3d9caps.d",
 				"source/WindowsAPI/win32/directx/d3d9types.d",
@@ -96,7 +91,7 @@
 		{
 			"name": "main",
 			"targetType": "library",
-			"platforms": ["windows-x86_64"],
+			"platforms": ["windows"],
 			"excludedSourceFiles-windows" : [
 				"source/doogle/test.d"
 			]
@@ -105,7 +100,7 @@
 			"name": "libtest",
 			"targetType": "executable",
 			"dflags": ["-main"],
-			"platforms": ["windows-x86_64"],
+			"platforms": ["windows"],
 			"excludedSourceFiles-windows" : [
 				"source/doogle/test.d"
 			]
@@ -113,7 +108,7 @@
 		{
 			"name": "test",
 			"targetType": "executable",
-			"platforms": ["windows-x86_64"],
+			"platforms": ["windows"],
 		}
 	]
 }
