@@ -1,0 +1,104 @@
+{
+	"name": "doogle",
+	"description": "An example project skeleton",
+	"homepage": "http://example.org",
+	"copyright": "Copyright © 2000, Your Name",
+	"authors": [
+		"Your Name"
+	],
+	"dependencies": {
+		"derelict-gl3" : "~master",
+		"doogle:opengl" : "~master",
+		"doogle:standardplatformwindow" : "~master"
+	},
+	"sourcePaths": [
+		"source/doogle"
+	],
+	"buildRequirements": [
+		"allowWarnings"
+	],
+	"subPackages": [
+		{
+			"name": "opengl",
+			"targetType": "library",
+			"sourcePaths": ["source/OpenGL"]
+		},
+		{
+			"name": "standardplatformwindow",
+			"targetType": "staticLibrary",
+			"dependencies": {
+				"doogle:windowmanagment" : "~master"
+			},
+			"sourcePaths": ["source/StandardPlatformWindow"],
+			
+			"sourcePaths-windows": ["source/WindowsAPI/win32"],
+			"versions-windows": ["WindowsXP", "Unicode"],
+			"excludedSourceFiles-windows" : [
+				"source/WindowsAPI/win32/winsock.d",
+				"source/WindowsAPI/win32/testall.d",
+				
+				"source/WindowsAPI/win32/lm.d",
+				"source/WindowsAPI/win32/lmaccess.d",
+				"source/WindowsAPI/win32/lmalert.d",
+				"source/WindowsAPI/win32/lmapibuf.d",
+				"source/WindowsAPI/win32/lmmat.d",
+				"source/WindowsAPI/win32/lmmsg.d",
+				"source/WindowsAPI/win32/lmremutl.d",
+				"source/WindowsAPI/win32/lmshare.d",
+				"source/WindowsAPI/win32/lmstats.d",
+				"source/WindowsAPI/win32/lmuse.d",
+				"source/WindowsAPI/win32/lmwksta.d",
+				
+				"source/WindowsAPI/win32/directx/d3d9.d",
+				"source/WindowsAPI/win32/directx/d3d9caps.d",
+				"source/WindowsAPI/win32/directx/d3d9types.d",
+				
+				"source/WindowsAPI/win32/directx/d3d10.d",
+				"source/WindowsAPI/win32/directx/d3d10effect.d",
+				"source/WindowsAPI/win32/directx/d3d10misc.d",
+				"source/WindowsAPI/win32/directx/d3d10shader.d",
+				
+				"source/WindowsAPI/win32/directx/d3dx9.d",
+				"source/WindowsAPI/win32/directx/d3dx10.d",
+				
+				"source/WindowsAPI/win32/directx/d3dx10.d",
+				"source/WindowsAPI/win32/directx/d3dx10async.d",
+				"source/WindowsAPI/win32/directx/d3dx10core.d",
+				"source/WindowsAPI/win32/directx/d3dx10math.d",
+				"source/WindowsAPI/win32/directx/d3dx10mesh.d",
+				"source/WindowsAPI/win32/directx/d3dx10tex.d",
+				
+				"source/WindowsAPI/win32/directx/dinput8.d",
+				"source/WindowsAPI/win32/directx/dsound8.d",
+				
+				"source/WindowsAPI/win32/directx/dxerr.d",
+				
+				"source/WindowsAPI/win32/directx/dxerr8.d",
+				"source/WindowsAPI/win32/directx/dxerr9.d",
+				
+				"source/WindowsAPI/win32/directx/dxgi.d",
+				"source/WindowsAPI/win32/directx/dxgitype.d"
+				],
+			
+			"sourcePaths-posix": ["source/libX11"]
+		},
+		{
+			"name": "windowmanagment",
+			"targetType": "library",
+			"sourcePaths": ["source/WindowManagment"]
+		}
+	],
+	"configurations": [
+		{
+			"name": "main",
+			"targetType": "library",
+			"platforms": ["windows-x86_64"]
+		},
+		{
+			"name": "test",
+			"targetType": "executable",
+			"dflags": ["-main"],
+			"platforms": ["windows-x86_64"],
+		}
+	]
+}
