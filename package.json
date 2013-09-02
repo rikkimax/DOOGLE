@@ -18,6 +18,9 @@
 	"buildRequirements": [
 		"allowWarnings"
 	],
+	"preBuildCommands": [
+		"git submodule update --init"
+	],
 	"subPackages": [
 		{
 			"name": "opengl",
