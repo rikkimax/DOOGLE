@@ -9,7 +9,8 @@
 	"dependencies": {
 		"derelict-gl3" : "~master",
 		"doogle:opengl" : "~master",
-		"doogle:standardplatformwindow" : "~master"
+		"doogle:standardplatformwindow" : "~master",
+		"doogle:windowmanagment" : "~master"
 	},
 	"sourcePaths": [
 		"source/doogle"
@@ -95,9 +96,14 @@
 			"platforms": ["windows-x86_64"]
 		},
 		{
-			"name": "test",
+			"name": "libtest",
 			"targetType": "executable",
 			"dflags": ["-main"],
+			"platforms": ["windows-x86_64"],
+		},
+		{
+			"name": "test",
+			"targetType": "executable",
 			"platforms": ["windows-x86_64"],
 		}
 	]
