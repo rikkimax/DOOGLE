@@ -42,3 +42,5 @@ Posix hasn't been added yet but should be both 32 and 64bit.
 There is three configurations main(builds as a library), libtest(builds as an executable with -main) and test(executable with test script added).
 
 Requires git to be on PATH before execution. This is because of hack to grab WindowAPI and libX11 as git submodules.
+
+Does not include a math library. gl3n is a dependency which does provide this however. Switched over because previous was not complete enough.
