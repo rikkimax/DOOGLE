@@ -10,7 +10,8 @@
 		"derelict-gl3" : "~master",
 		"doogle:opengl" : "~master",
 		"doogle:standardplatformwindow" : "~master",
-		"doogle:windowmanagment" : "~master"
+		"doogle:windowmanagment" : "~master",
+		"gl3n" : "~master"
 	},
 	"sourcePaths": [
 		"source/doogle"
