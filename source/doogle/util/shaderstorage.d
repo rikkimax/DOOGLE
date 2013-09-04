@@ -1,11 +1,19 @@
 module doogle.util.shaderstorage;
 import std.algorithm : canFind;
+import std.file : exists, mkdirRecurse, isDir, dirEntries, SpanMode, read, FileException;
+import std.process : environment;
+import std.path : buildPath, baseName;
+import std.stdio : writeln;
 
 protected {
-	string[string] shaderDefaults;
-	string[string] shaderApps;
-	string[string] shaderSystems;
-	string[string] shaderUsers;
+	/*
+	 * Once app start this should be read only ;)
+     */
+
+	__gshared string[string] shaderDefaults;
+	__gshared string[string] shaderApps;
+	__gshared string[string] shaderSystems;
+	__gshared string[string] shaderUsers;
 }
 
 struct ShaderStorage {
@@ -31,6 +39,18 @@ struct ShaderStorage {
 	void init() {
 		// TODO detect the different locations
 		// load the shaders up from it
+		string dir;
+		version(Windows) {
+			// detect users
+			dir = buildPath(environment["LOCALAPPDATA"], "doogle", "shaders");
+			shaderUsers = getShaderFromFileSystem(dir);
+			// detect systems
+			dir = buildPath(environment["PROGRAMFILES"], "doogle", "shaders");
+			shaderSystems = getShaderFromFileSystem(dir);
+		} else version(Posix) {
+			pragma(msg, "Have not implemented Posix shader storage locations and loading yet.");
+			static assert(0);
+		}
 	}
 }
 
@@ -43,4 +63,42 @@ test hi :)
 	assert(shaderStorage.get(__MODULE__) == """
 test hi :)
 """);
+}
+
+private {
+	string[string] getShaderFromFileSystem(string dir)
+	in {
+		if (exists(dir)) {
+			if (isDir(dir)) {
+				// directory exists.
+			} else {
+				// not a directory
+				try {
+					mkdirRecurse(dir);
+				} catch (Error e) {
+				} catch (Exception e) {
+				}
+			}
+		} else {
+			try {
+				// does not exist
+				mkdirRecurse(dir);
+			} catch (Error e) {
+			} catch (Exception e) {
+			}
+		}
+	} body {
+		// once we get here we already _know_ the directory exists
+		string[string] ret;
+		try {
+			foreach(entry; dirEntries(dir, SpanMode.shallow)) {
+				ret[baseName(entry)] = cast(string)read(entry);
+			}
+		} catch (Error e) {
+			writeln("Error: Could not use directory ", dir, " for shader loading");
+		} catch (Exception e) {
+			writeln("Error: Could not use directory ", dir, " for shader loading");
+		}
+		return ret;
+	}
 }
