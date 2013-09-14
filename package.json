@@ -37,49 +37,7 @@
 			},
 			"sourcePaths": ["source/StandardPlatformWindow"],
 			
-			"sourcePaths-windows": ["source/WindowsAPI/win32"],
-			"versions-windows": ["WindowsXP", "Unicode"],
-			
-			"libs-windows-x86": [
-				"win32/shlwapi",
-				"win32/msvfw32"
-			],
-			
-			"excludedSourceFiles-windows" : [
-				"source/WindowsAPI/win32/winsock.d",
-				"source/WindowsAPI/win32/testall.d",
-
-				"source/WindowsAPI/win32/directx/d3d9.d",
-				"source/WindowsAPI/win32/directx/d3d9caps.d",
-				"source/WindowsAPI/win32/directx/d3d9types.d",
-				
-				"source/WindowsAPI/win32/directx/d3d10.d",
-				"source/WindowsAPI/win32/directx/d3d10effect.d",
-				"source/WindowsAPI/win32/directx/d3d10misc.d",
-				"source/WindowsAPI/win32/directx/d3d10shader.d",
-				
-				"source/WindowsAPI/win32/directx/d3dx9.d",
-				"source/WindowsAPI/win32/directx/d3dx10.d",
-				
-				"source/WindowsAPI/win32/directx/d3dx10.d",
-				"source/WindowsAPI/win32/directx/d3dx10async.d",
-				"source/WindowsAPI/win32/directx/d3dx10core.d",
-				"source/WindowsAPI/win32/directx/d3dx10math.d",
-				"source/WindowsAPI/win32/directx/d3dx10mesh.d",
-				"source/WindowsAPI/win32/directx/d3dx10tex.d",
-				
-				"source/WindowsAPI/win32/directx/dinput8.d",
-				"source/WindowsAPI/win32/directx/dsound8.d",
-				
-				"source/WindowsAPI/win32/directx/dxerr.d",
-				
-				"source/WindowsAPI/win32/directx/dxerr8.d",
-				"source/WindowsAPI/win32/directx/dxerr9.d",
-				
-				"source/WindowsAPI/win32/directx/dxgi.d",
-				"source/WindowsAPI/win32/directx/dxgitype.d"
-				],
-			
+			"sourcePaths-windows": ["source/WindowsAPI"],
 			"sourcePaths-posix": ["source/libX11"]
 		},
 		{
