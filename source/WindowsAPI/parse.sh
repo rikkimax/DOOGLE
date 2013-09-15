@@ -14,17 +14,13 @@ rm temp
 echo "Using module $module"
 
 echo "Output file $1"
-cp $1 $1.orig
 
-grep -v "#pragma.*" $1.orig > $1
-cp $1 $1.temp
-grep -v "__dllimport__" $1.temp > $1
-cp $1 $1.temp
-grep -v "__gnuc" $1.temp > $1
-cp $1 $1.temp
-grep -v "vector_size__" $1.temp > $1
-cp $1 $1.temp
-grep -v "__m128" $1.temp > $1
+cat $1 |
+grep -v "#pragma.*" |
+grep -v "__dllimport__" |
+grep -v "__gnuc" |
+grep -v "vector_size__" |
+grep -v "__m128" > $1
 
 sed -i 's/, /,/g' $1
 
@@ -102,12 +98,30 @@ grep -v '__bitfield1 = (__bitfield1' $1.temp > $1.d
 cp $1.d $1.temp
 grep -v '(DWORD value) { ( 0x[a-fA-F0-9]*) | ' $1.temp > $1.d
 
-gcc test.c -E -P -dM > $1.temp
-cat $1.temp | awk '/__MSABI_LONG\(.*\)/{gsub(/\/\/ C[ ]*/, "");gsub(/#define/, "const");gsub(/__MSABI_LONG\(/, "=");gsub(/\)$/, ";");print;}' >> $1.d
+gcc main.c -E -P -dM > $1.temp
+cat $1.temp | awk '
+function rindex(str,c) {
+  return match(str,"\\" c "[^" c "]*$")? RSTART : 0
+}
 
-cp $1.d $1.temp
-grep -v "^[ ]*const.*(.*)" $1.temp > $1.d
-cp $1.d $1.temp
-grep -v "const =x)" $1.temp > $1.d
+/^.*#define.* [xA-F><0-9]+$/{
+$line = substr($0, index($0, "#define"));
+$n = split($line, vals, " ");
+val="";
+for(i=3;i<=$n;i++)
+	val=val" "vals[i];
+print "const", vals[2], "="val";";
+for(i in vals)
+	delete vals[i];
+};
+
+/^.* [A-Za-z_0-9]+\([xA-F><0-9]+\)$/{
+line = substr($0, index($0, "#define"));
+n = split(line, vals, " ");
+start = rindex(line, "(") + 1;
+end = index($line, ")") - start
+val = substr(line, start, end);
+print "const",vals[2],"=",val";";
+};' >> $1.d
 
 rm $1.temp
