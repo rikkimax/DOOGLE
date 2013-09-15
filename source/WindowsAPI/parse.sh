@@ -1,4 +1,4 @@
-gcc windows.c -E -P > $1
+gcc main.c -E -P > $1
 
 echo $1 > temp
 sed -i 's/.[a-zA-Z]$//g' temp
@@ -15,7 +15,8 @@ echo "Using module $module"
 
 echo "Output file $1"
 
-cat $1 |
+cp $1 $1.temp
+cat $1.temp |
 grep -v "#pragma.*" |
 grep -v "__dllimport__" |
 grep -v "__gnuc" |
@@ -110,7 +111,8 @@ $n = split($line, vals, " ");
 val="";
 for(i=3;i<=$n;i++)
 	val=val" "vals[i];
-print "const", vals[2], "="val";";
+if (val != "" && index(vals[2], "(") == 0)
+	print "const", vals[2], "="val";";
 for(i in vals)
 	delete vals[i];
 };
@@ -121,7 +123,8 @@ n = split(line, vals, " ");
 start = rindex(line, "(") + 1;
 end = index($line, ")") - start
 val = substr(line, start, end);
-print "const",vals[2],"=",val";";
+if (val != "" && index(vals[2], "(") == 0)
+	print "const",vals[2],"=",val";";
 };' >> $1.d
 
 rm $1.temp

@@ -1,5 +1,5 @@
 /* Converted to D from windows/windows.h by htod */
-module windows;
+module windows.windows;
 //C      typedef unsigned long long size_t;
 extern (System):
 alias ulong size_t;
@@ -43961,6 +43961,14592 @@ void  IXMLDOMDocument_put_resolveExternals_Stub(IRpcStubBuffer *This, IRpcChanne
 HRESULT  IXMLDOMDocument_get_preserveWhiteSpace_Proxy(IXMLDOMDocument *This, VARIANT_BOOL *isPreserving);
 //C       void IXMLDOMDocument_get_preserveWhiteSpace_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
 void  IXMLDOMDocument_get_preserveWhiteSpace_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMDocument_put_preserveWhiteSpace_Proxy(IXMLDOMDocument *This,VARIANT_BOOL isPreserving);
+HRESULT  IXMLDOMDocument_put_preserveWhiteSpace_Proxy(IXMLDOMDocument *This, VARIANT_BOOL isPreserving);
+//C       void IXMLDOMDocument_put_preserveWhiteSpace_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMDocument_put_preserveWhiteSpace_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMDocument_put_onreadystatechange_Proxy(IXMLDOMDocument *This,VARIANT readystatechangeSink);
+HRESULT  IXMLDOMDocument_put_onreadystatechange_Proxy(IXMLDOMDocument *This, VARIANT readystatechangeSink);
+//C       void IXMLDOMDocument_put_onreadystatechange_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMDocument_put_onreadystatechange_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMDocument_put_ondataavailable_Proxy(IXMLDOMDocument *This,VARIANT ondataavailableSink);
+HRESULT  IXMLDOMDocument_put_ondataavailable_Proxy(IXMLDOMDocument *This, VARIANT ondataavailableSink);
+//C       void IXMLDOMDocument_put_ondataavailable_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMDocument_put_ondataavailable_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMDocument_put_ontransformnode_Proxy(IXMLDOMDocument *This,VARIANT ontransformnodeSink);
+HRESULT  IXMLDOMDocument_put_ontransformnode_Proxy(IXMLDOMDocument *This, VARIANT ontransformnodeSink);
+//C       void IXMLDOMDocument_put_ontransformnode_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMDocument_put_ontransformnode_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMNodeList;
+extern const IID IID_IXMLDOMNodeList;
+//C       typedef struct IXMLDOMNodeListVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMNodeList *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMNodeList *This);
+//C           ULONG ( *Release)(IXMLDOMNodeList *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMNodeList *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMNodeList *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMNodeList *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMNodeList *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_item)(IXMLDOMNodeList *This,LONG index,IXMLDOMNode **listItem);
+//C           HRESULT ( *get_length)(IXMLDOMNodeList *This,LONG *listLength);
+//C           HRESULT ( *nextNode)(IXMLDOMNodeList *This,IXMLDOMNode **nextItem);
+//C           HRESULT ( *reset)(IXMLDOMNodeList *This);
+//C           HRESULT ( *get__newEnum)(IXMLDOMNodeList *This,IUnknown **ppUnk);
+//C       } IXMLDOMNodeListVtbl;
+struct IXMLDOMNodeListVtbl
+{
+    HRESULT  function(IXMLDOMNodeList *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMNodeList *This)AddRef;
+    ULONG  function(IXMLDOMNodeList *This)Release;
+    HRESULT  function(IXMLDOMNodeList *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMNodeList *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMNodeList *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMNodeList *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMNodeList *This, LONG index, IXMLDOMNode **listItem)get_item;
+    HRESULT  function(IXMLDOMNodeList *This, LONG *listLength)get_length;
+    HRESULT  function(IXMLDOMNodeList *This, IXMLDOMNode **nextItem)nextNode;
+    HRESULT  function(IXMLDOMNodeList *This)reset;
+    HRESULT  function(IXMLDOMNodeList *This, IUnknown **ppUnk)get__newEnum;
+}
+//C       struct IXMLDOMNodeList {
+//C         struct IXMLDOMNodeListVtbl *lpVtbl;
+//C       };
+struct IXMLDOMNodeList
+{
+    IXMLDOMNodeListVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMNodeList_get_item_Proxy(IXMLDOMNodeList *This,LONG index,IXMLDOMNode **listItem);
+HRESULT  IXMLDOMNodeList_get_item_Proxy(IXMLDOMNodeList *This, LONG index, IXMLDOMNode **listItem);
+//C       void IXMLDOMNodeList_get_item_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNodeList_get_item_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNodeList_get_length_Proxy(IXMLDOMNodeList *This,LONG *listLength);
+HRESULT  IXMLDOMNodeList_get_length_Proxy(IXMLDOMNodeList *This, LONG *listLength);
+//C       void IXMLDOMNodeList_get_length_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNodeList_get_length_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNodeList_nextNode_Proxy(IXMLDOMNodeList *This,IXMLDOMNode **nextItem);
+HRESULT  IXMLDOMNodeList_nextNode_Proxy(IXMLDOMNodeList *This, IXMLDOMNode **nextItem);
+//C       void IXMLDOMNodeList_nextNode_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNodeList_nextNode_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNodeList_reset_Proxy(IXMLDOMNodeList *This);
+HRESULT  IXMLDOMNodeList_reset_Proxy(IXMLDOMNodeList *This);
+//C       void IXMLDOMNodeList_reset_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNodeList_reset_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNodeList_get__newEnum_Proxy(IXMLDOMNodeList *This,IUnknown **ppUnk);
+HRESULT  IXMLDOMNodeList_get__newEnum_Proxy(IXMLDOMNodeList *This, IUnknown **ppUnk);
+//C       void IXMLDOMNodeList_get__newEnum_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNodeList_get__newEnum_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMNamedNodeMap;
+extern const IID IID_IXMLDOMNamedNodeMap;
+//C       typedef struct IXMLDOMNamedNodeMapVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMNamedNodeMap *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMNamedNodeMap *This);
+//C           ULONG ( *Release)(IXMLDOMNamedNodeMap *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMNamedNodeMap *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMNamedNodeMap *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMNamedNodeMap *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMNamedNodeMap *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *getNamedItem)(IXMLDOMNamedNodeMap *This,BSTR name,IXMLDOMNode **namedItem);
+//C           HRESULT ( *setNamedItem)(IXMLDOMNamedNodeMap *This,IXMLDOMNode *newItem,IXMLDOMNode **nameItem);
+//C           HRESULT ( *removeNamedItem)(IXMLDOMNamedNodeMap *This,BSTR name,IXMLDOMNode **namedItem);
+//C           HRESULT ( *get_item)(IXMLDOMNamedNodeMap *This,LONG index,IXMLDOMNode **listItem);
+//C           HRESULT ( *get_length)(IXMLDOMNamedNodeMap *This,LONG *listLength);
+//C           HRESULT ( *getQualifiedItem)(IXMLDOMNamedNodeMap *This,BSTR baseName,BSTR namespaceURI,IXMLDOMNode **qualifiedItem);
+//C           HRESULT ( *removeQualifiedItem)(IXMLDOMNamedNodeMap *This,BSTR baseName,BSTR namespaceURI,IXMLDOMNode **qualifiedItem);
+//C           HRESULT ( *nextNode)(IXMLDOMNamedNodeMap *This,IXMLDOMNode **nextItem);
+//C           HRESULT ( *reset)(IXMLDOMNamedNodeMap *This);
+//C           HRESULT ( *get__newEnum)(IXMLDOMNamedNodeMap *This,IUnknown **ppUnk);
+//C       } IXMLDOMNamedNodeMapVtbl;
+struct IXMLDOMNamedNodeMapVtbl
+{
+    HRESULT  function(IXMLDOMNamedNodeMap *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMNamedNodeMap *This)AddRef;
+    ULONG  function(IXMLDOMNamedNodeMap *This)Release;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, BSTR name, IXMLDOMNode **namedItem)getNamedItem;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, IXMLDOMNode *newItem, IXMLDOMNode **nameItem)setNamedItem;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, BSTR name, IXMLDOMNode **namedItem)removeNamedItem;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, LONG index, IXMLDOMNode **listItem)get_item;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, LONG *listLength)get_length;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, BSTR baseName, BSTR namespaceURI, IXMLDOMNode **qualifiedItem)getQualifiedItem;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, BSTR baseName, BSTR namespaceURI, IXMLDOMNode **qualifiedItem)removeQualifiedItem;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, IXMLDOMNode **nextItem)nextNode;
+    HRESULT  function(IXMLDOMNamedNodeMap *This)reset;
+    HRESULT  function(IXMLDOMNamedNodeMap *This, IUnknown **ppUnk)get__newEnum;
+}
+//C       struct IXMLDOMNamedNodeMap {
+//C         struct IXMLDOMNamedNodeMapVtbl *lpVtbl;
+//C       };
+struct IXMLDOMNamedNodeMap
+{
+    IXMLDOMNamedNodeMapVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMNamedNodeMap_getNamedItem_Proxy(IXMLDOMNamedNodeMap *This,BSTR name,IXMLDOMNode **namedItem);
+HRESULT  IXMLDOMNamedNodeMap_getNamedItem_Proxy(IXMLDOMNamedNodeMap *This, BSTR name, IXMLDOMNode **namedItem);
+//C       void IXMLDOMNamedNodeMap_getNamedItem_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNamedNodeMap_getNamedItem_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNamedNodeMap_setNamedItem_Proxy(IXMLDOMNamedNodeMap *This,IXMLDOMNode *newItem,IXMLDOMNode **nameItem);
+HRESULT  IXMLDOMNamedNodeMap_setNamedItem_Proxy(IXMLDOMNamedNodeMap *This, IXMLDOMNode *newItem, IXMLDOMNode **nameItem);
+//C       void IXMLDOMNamedNodeMap_setNamedItem_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNamedNodeMap_setNamedItem_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNamedNodeMap_removeNamedItem_Proxy(IXMLDOMNamedNodeMap *This,BSTR name,IXMLDOMNode **namedItem);
+HRESULT  IXMLDOMNamedNodeMap_removeNamedItem_Proxy(IXMLDOMNamedNodeMap *This, BSTR name, IXMLDOMNode **namedItem);
+//C       void IXMLDOMNamedNodeMap_removeNamedItem_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNamedNodeMap_removeNamedItem_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNamedNodeMap_get_item_Proxy(IXMLDOMNamedNodeMap *This,LONG index,IXMLDOMNode **listItem);
+HRESULT  IXMLDOMNamedNodeMap_get_item_Proxy(IXMLDOMNamedNodeMap *This, LONG index, IXMLDOMNode **listItem);
+//C       void IXMLDOMNamedNodeMap_get_item_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNamedNodeMap_get_item_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNamedNodeMap_get_length_Proxy(IXMLDOMNamedNodeMap *This,LONG *listLength);
+HRESULT  IXMLDOMNamedNodeMap_get_length_Proxy(IXMLDOMNamedNodeMap *This, LONG *listLength);
+//C       void IXMLDOMNamedNodeMap_get_length_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNamedNodeMap_get_length_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNamedNodeMap_getQualifiedItem_Proxy(IXMLDOMNamedNodeMap *This,BSTR baseName,BSTR namespaceURI,IXMLDOMNode **qualifiedItem);
+HRESULT  IXMLDOMNamedNodeMap_getQualifiedItem_Proxy(IXMLDOMNamedNodeMap *This, BSTR baseName, BSTR namespaceURI, IXMLDOMNode **qualifiedItem);
+//C       void IXMLDOMNamedNodeMap_getQualifiedItem_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNamedNodeMap_getQualifiedItem_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNamedNodeMap_removeQualifiedItem_Proxy(IXMLDOMNamedNodeMap *This,BSTR baseName,BSTR namespaceURI,IXMLDOMNode **qualifiedItem);
+HRESULT  IXMLDOMNamedNodeMap_removeQualifiedItem_Proxy(IXMLDOMNamedNodeMap *This, BSTR baseName, BSTR namespaceURI, IXMLDOMNode **qualifiedItem);
+//C       void IXMLDOMNamedNodeMap_removeQualifiedItem_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNamedNodeMap_removeQualifiedItem_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNamedNodeMap_nextNode_Proxy(IXMLDOMNamedNodeMap *This,IXMLDOMNode **nextItem);
+HRESULT  IXMLDOMNamedNodeMap_nextNode_Proxy(IXMLDOMNamedNodeMap *This, IXMLDOMNode **nextItem);
+//C       void IXMLDOMNamedNodeMap_nextNode_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNamedNodeMap_nextNode_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNamedNodeMap_reset_Proxy(IXMLDOMNamedNodeMap *This);
+HRESULT  IXMLDOMNamedNodeMap_reset_Proxy(IXMLDOMNamedNodeMap *This);
+//C       void IXMLDOMNamedNodeMap_reset_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNamedNodeMap_reset_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNamedNodeMap_get__newEnum_Proxy(IXMLDOMNamedNodeMap *This,IUnknown **ppUnk);
+HRESULT  IXMLDOMNamedNodeMap_get__newEnum_Proxy(IXMLDOMNamedNodeMap *This, IUnknown **ppUnk);
+//C       void IXMLDOMNamedNodeMap_get__newEnum_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNamedNodeMap_get__newEnum_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMCharacterData;
+extern const IID IID_IXMLDOMCharacterData;
+//C       typedef struct IXMLDOMCharacterDataVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMCharacterData *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMCharacterData *This);
+//C           ULONG ( *Release)(IXMLDOMCharacterData *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMCharacterData *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMCharacterData *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMCharacterData *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMCharacterData *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMCharacterData *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMCharacterData *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMCharacterData *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMCharacterData *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMCharacterData *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMCharacterData *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMCharacterData *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMCharacterData *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMCharacterData *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMCharacterData *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMCharacterData *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMCharacterData *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMCharacterData *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMCharacterData *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMCharacterData *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMCharacterData *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMCharacterData *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMCharacterData *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMCharacterData *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMCharacterData *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMCharacterData *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMCharacterData *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMCharacterData *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMCharacterData *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMCharacterData *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMCharacterData *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMCharacterData *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMCharacterData *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMCharacterData *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMCharacterData *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMCharacterData *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMCharacterData *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMCharacterData *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMCharacterData *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMCharacterData *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMCharacterData *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *get_data)(IXMLDOMCharacterData *This,BSTR *data);
+//C           HRESULT ( *put_data)(IXMLDOMCharacterData *This,BSTR data);
+//C           HRESULT ( *get_length)(IXMLDOMCharacterData *This,LONG *dataLength);
+//C           HRESULT ( *substringData)(IXMLDOMCharacterData *This,LONG offset,LONG count,BSTR *data);
+//C           HRESULT ( *appendData)(IXMLDOMCharacterData *This,BSTR data);
+//C           HRESULT ( *insertData)(IXMLDOMCharacterData *This,LONG offset,BSTR data);
+//C           HRESULT ( *deleteData)(IXMLDOMCharacterData *This,LONG offset,LONG count);
+//C           HRESULT ( *replaceData)(IXMLDOMCharacterData *This,LONG offset,LONG count,BSTR data);
+//C       } IXMLDOMCharacterDataVtbl;
+struct IXMLDOMCharacterDataVtbl
+{
+    HRESULT  function(IXMLDOMCharacterData *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMCharacterData *This)AddRef;
+    ULONG  function(IXMLDOMCharacterData *This)Release;
+    HRESULT  function(IXMLDOMCharacterData *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMCharacterData *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMCharacterData *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMCharacterData *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMCharacterData *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMCharacterData *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMCharacterData *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMCharacterData *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMCharacterData *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMCharacterData *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMCharacterData *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMCharacterData *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMCharacterData *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMCharacterData *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMCharacterData *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR *data)get_data;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR data)put_data;
+    HRESULT  function(IXMLDOMCharacterData *This, LONG *dataLength)get_length;
+    HRESULT  function(IXMLDOMCharacterData *This, LONG offset, LONG count, BSTR *data)substringData;
+    HRESULT  function(IXMLDOMCharacterData *This, BSTR data)appendData;
+    HRESULT  function(IXMLDOMCharacterData *This, LONG offset, BSTR data)insertData;
+    HRESULT  function(IXMLDOMCharacterData *This, LONG offset, LONG count)deleteData;
+    HRESULT  function(IXMLDOMCharacterData *This, LONG offset, LONG count, BSTR data)replaceData;
+}
+//C       struct IXMLDOMCharacterData {
+//C         struct IXMLDOMCharacterDataVtbl *lpVtbl;
+//C       };
+struct IXMLDOMCharacterData
+{
+    IXMLDOMCharacterDataVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMCharacterData_get_data_Proxy(IXMLDOMCharacterData *This,BSTR *data);
+HRESULT  IXMLDOMCharacterData_get_data_Proxy(IXMLDOMCharacterData *This, BSTR *data);
+//C       void IXMLDOMCharacterData_get_data_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMCharacterData_get_data_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMCharacterData_put_data_Proxy(IXMLDOMCharacterData *This,BSTR data);
+HRESULT  IXMLDOMCharacterData_put_data_Proxy(IXMLDOMCharacterData *This, BSTR data);
+//C       void IXMLDOMCharacterData_put_data_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMCharacterData_put_data_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMCharacterData_get_length_Proxy(IXMLDOMCharacterData *This,LONG *dataLength);
+HRESULT  IXMLDOMCharacterData_get_length_Proxy(IXMLDOMCharacterData *This, LONG *dataLength);
+//C       void IXMLDOMCharacterData_get_length_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMCharacterData_get_length_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMCharacterData_substringData_Proxy(IXMLDOMCharacterData *This,LONG offset,LONG count,BSTR *data);
+HRESULT  IXMLDOMCharacterData_substringData_Proxy(IXMLDOMCharacterData *This, LONG offset, LONG count, BSTR *data);
+//C       void IXMLDOMCharacterData_substringData_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMCharacterData_substringData_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMCharacterData_appendData_Proxy(IXMLDOMCharacterData *This,BSTR data);
+HRESULT  IXMLDOMCharacterData_appendData_Proxy(IXMLDOMCharacterData *This, BSTR data);
+//C       void IXMLDOMCharacterData_appendData_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMCharacterData_appendData_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMCharacterData_insertData_Proxy(IXMLDOMCharacterData *This,LONG offset,BSTR data);
+HRESULT  IXMLDOMCharacterData_insertData_Proxy(IXMLDOMCharacterData *This, LONG offset, BSTR data);
+//C       void IXMLDOMCharacterData_insertData_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMCharacterData_insertData_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMCharacterData_deleteData_Proxy(IXMLDOMCharacterData *This,LONG offset,LONG count);
+HRESULT  IXMLDOMCharacterData_deleteData_Proxy(IXMLDOMCharacterData *This, LONG offset, LONG count);
+//C       void IXMLDOMCharacterData_deleteData_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMCharacterData_deleteData_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMCharacterData_replaceData_Proxy(IXMLDOMCharacterData *This,LONG offset,LONG count,BSTR data);
+HRESULT  IXMLDOMCharacterData_replaceData_Proxy(IXMLDOMCharacterData *This, LONG offset, LONG count, BSTR data);
+//C       void IXMLDOMCharacterData_replaceData_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMCharacterData_replaceData_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMAttribute;
+extern const IID IID_IXMLDOMAttribute;
+//C       typedef struct IXMLDOMAttributeVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMAttribute *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMAttribute *This);
+//C           ULONG ( *Release)(IXMLDOMAttribute *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMAttribute *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMAttribute *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMAttribute *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMAttribute *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMAttribute *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMAttribute *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMAttribute *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMAttribute *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMAttribute *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMAttribute *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMAttribute *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMAttribute *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMAttribute *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMAttribute *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMAttribute *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMAttribute *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMAttribute *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMAttribute *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMAttribute *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMAttribute *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMAttribute *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMAttribute *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMAttribute *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMAttribute *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMAttribute *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMAttribute *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMAttribute *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMAttribute *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMAttribute *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMAttribute *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMAttribute *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMAttribute *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMAttribute *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMAttribute *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMAttribute *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMAttribute *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMAttribute *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMAttribute *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMAttribute *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMAttribute *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *get_name)(IXMLDOMAttribute *This,BSTR *attributeName);
+//C           HRESULT ( *get_value)(IXMLDOMAttribute *This,VARIANT *attributeValue);
+//C           HRESULT ( *put_value)(IXMLDOMAttribute *This,VARIANT attributeValue);
+//C       } IXMLDOMAttributeVtbl;
+struct IXMLDOMAttributeVtbl
+{
+    HRESULT  function(IXMLDOMAttribute *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMAttribute *This)AddRef;
+    ULONG  function(IXMLDOMAttribute *This)Release;
+    HRESULT  function(IXMLDOMAttribute *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMAttribute *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMAttribute *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMAttribute *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMAttribute *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMAttribute *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXMLDOMAttribute *This, BSTR *attributeName)get_name;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT *attributeValue)get_value;
+    HRESULT  function(IXMLDOMAttribute *This, VARIANT attributeValue)put_value;
+}
+//C       struct IXMLDOMAttribute {
+//C         struct IXMLDOMAttributeVtbl *lpVtbl;
+//C       };
+struct IXMLDOMAttribute
+{
+    IXMLDOMAttributeVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMAttribute_get_name_Proxy(IXMLDOMAttribute *This,BSTR *attributeName);
+HRESULT  IXMLDOMAttribute_get_name_Proxy(IXMLDOMAttribute *This, BSTR *attributeName);
+//C       void IXMLDOMAttribute_get_name_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMAttribute_get_name_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMAttribute_get_value_Proxy(IXMLDOMAttribute *This,VARIANT *attributeValue);
+HRESULT  IXMLDOMAttribute_get_value_Proxy(IXMLDOMAttribute *This, VARIANT *attributeValue);
+//C       void IXMLDOMAttribute_get_value_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMAttribute_get_value_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMAttribute_put_value_Proxy(IXMLDOMAttribute *This,VARIANT attributeValue);
+HRESULT  IXMLDOMAttribute_put_value_Proxy(IXMLDOMAttribute *This, VARIANT attributeValue);
+//C       void IXMLDOMAttribute_put_value_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMAttribute_put_value_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMElement;
+extern const IID IID_IXMLDOMElement;
+//C       typedef struct IXMLDOMElementVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMElement *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMElement *This);
+//C           ULONG ( *Release)(IXMLDOMElement *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMElement *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMElement *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMElement *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMElement *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMElement *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMElement *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMElement *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMElement *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMElement *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMElement *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMElement *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMElement *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMElement *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMElement *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMElement *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMElement *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMElement *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMElement *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMElement *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMElement *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMElement *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMElement *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMElement *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMElement *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMElement *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMElement *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMElement *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMElement *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMElement *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMElement *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMElement *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMElement *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMElement *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMElement *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMElement *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMElement *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMElement *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMElement *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMElement *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMElement *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *get_tagName)(IXMLDOMElement *This,BSTR *tagName);
+//C           HRESULT ( *getAttribute)(IXMLDOMElement *This,BSTR name,VARIANT *value);
+//C           HRESULT ( *setAttribute)(IXMLDOMElement *This,BSTR name,VARIANT value);
+//C           HRESULT ( *removeAttribute)(IXMLDOMElement *This,BSTR name);
+//C           HRESULT ( *getAttributeNode)(IXMLDOMElement *This,BSTR name,IXMLDOMAttribute **attributeNode);
+//C           HRESULT ( *setAttributeNode)(IXMLDOMElement *This,IXMLDOMAttribute *DOMAttribute,IXMLDOMAttribute **attributeNode);
+//C           HRESULT ( *removeAttributeNode)(IXMLDOMElement *This,IXMLDOMAttribute *DOMAttribute,IXMLDOMAttribute **attributeNode);
+//C           HRESULT ( *getElementsByTagName)(IXMLDOMElement *This,BSTR tagName,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *normalize)(IXMLDOMElement *This);
+//C       } IXMLDOMElementVtbl;
+struct IXMLDOMElementVtbl
+{
+    HRESULT  function(IXMLDOMElement *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMElement *This)AddRef;
+    ULONG  function(IXMLDOMElement *This)Release;
+    HRESULT  function(IXMLDOMElement *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMElement *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMElement *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMElement *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMElement *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMElement *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMElement *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMElement *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMElement *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMElement *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMElement *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMElement *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMElement *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMElement *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMElement *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMElement *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMElement *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMElement *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMElement *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMElement *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMElement *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMElement *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMElement *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMElement *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMElement *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXMLDOMElement *This, BSTR *tagName)get_tagName;
+    HRESULT  function(IXMLDOMElement *This, BSTR name, VARIANT *value)getAttribute;
+    HRESULT  function(IXMLDOMElement *This, BSTR name, VARIANT value)setAttribute;
+    HRESULT  function(IXMLDOMElement *This, BSTR name)removeAttribute;
+    HRESULT  function(IXMLDOMElement *This, BSTR name, IXMLDOMAttribute **attributeNode)getAttributeNode;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMAttribute *DOMAttribute, IXMLDOMAttribute **attributeNode)setAttributeNode;
+    HRESULT  function(IXMLDOMElement *This, IXMLDOMAttribute *DOMAttribute, IXMLDOMAttribute **attributeNode)removeAttributeNode;
+    HRESULT  function(IXMLDOMElement *This, BSTR tagName, IXMLDOMNodeList **resultList)getElementsByTagName;
+    HRESULT  function(IXMLDOMElement *This)normalize;
+}
+//C       struct IXMLDOMElement {
+//C         struct IXMLDOMElementVtbl *lpVtbl;
+//C       };
+struct IXMLDOMElement
+{
+    IXMLDOMElementVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMElement_get_tagName_Proxy(IXMLDOMElement *This,BSTR *tagName);
+HRESULT  IXMLDOMElement_get_tagName_Proxy(IXMLDOMElement *This, BSTR *tagName);
+//C       void IXMLDOMElement_get_tagName_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMElement_get_tagName_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMElement_getAttribute_Proxy(IXMLDOMElement *This,BSTR name,VARIANT *value);
+HRESULT  IXMLDOMElement_getAttribute_Proxy(IXMLDOMElement *This, BSTR name, VARIANT *value);
+//C       void IXMLDOMElement_getAttribute_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMElement_getAttribute_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMElement_setAttribute_Proxy(IXMLDOMElement *This,BSTR name,VARIANT value);
+HRESULT  IXMLDOMElement_setAttribute_Proxy(IXMLDOMElement *This, BSTR name, VARIANT value);
+//C       void IXMLDOMElement_setAttribute_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMElement_setAttribute_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMElement_removeAttribute_Proxy(IXMLDOMElement *This,BSTR name);
+HRESULT  IXMLDOMElement_removeAttribute_Proxy(IXMLDOMElement *This, BSTR name);
+//C       void IXMLDOMElement_removeAttribute_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMElement_removeAttribute_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMElement_getAttributeNode_Proxy(IXMLDOMElement *This,BSTR name,IXMLDOMAttribute **attributeNode);
+HRESULT  IXMLDOMElement_getAttributeNode_Proxy(IXMLDOMElement *This, BSTR name, IXMLDOMAttribute **attributeNode);
+//C       void IXMLDOMElement_getAttributeNode_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMElement_getAttributeNode_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMElement_setAttributeNode_Proxy(IXMLDOMElement *This,IXMLDOMAttribute *DOMAttribute,IXMLDOMAttribute **attributeNode);
+HRESULT  IXMLDOMElement_setAttributeNode_Proxy(IXMLDOMElement *This, IXMLDOMAttribute *DOMAttribute, IXMLDOMAttribute **attributeNode);
+//C       void IXMLDOMElement_setAttributeNode_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMElement_setAttributeNode_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMElement_removeAttributeNode_Proxy(IXMLDOMElement *This,IXMLDOMAttribute *DOMAttribute,IXMLDOMAttribute **attributeNode);
+HRESULT  IXMLDOMElement_removeAttributeNode_Proxy(IXMLDOMElement *This, IXMLDOMAttribute *DOMAttribute, IXMLDOMAttribute **attributeNode);
+//C       void IXMLDOMElement_removeAttributeNode_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMElement_removeAttributeNode_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMElement_getElementsByTagName_Proxy(IXMLDOMElement *This,BSTR tagName,IXMLDOMNodeList **resultList);
+HRESULT  IXMLDOMElement_getElementsByTagName_Proxy(IXMLDOMElement *This, BSTR tagName, IXMLDOMNodeList **resultList);
+//C       void IXMLDOMElement_getElementsByTagName_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMElement_getElementsByTagName_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMElement_normalize_Proxy(IXMLDOMElement *This);
+HRESULT  IXMLDOMElement_normalize_Proxy(IXMLDOMElement *This);
+//C       void IXMLDOMElement_normalize_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMElement_normalize_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMText;
+extern const IID IID_IXMLDOMText;
+//C       typedef struct IXMLDOMTextVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMText *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMText *This);
+//C           ULONG ( *Release)(IXMLDOMText *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMText *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMText *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMText *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMText *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMText *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMText *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMText *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMText *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMText *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMText *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMText *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMText *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMText *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMText *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMText *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMText *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMText *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMText *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMText *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMText *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMText *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMText *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMText *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMText *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMText *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMText *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMText *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMText *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMText *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMText *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMText *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMText *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMText *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMText *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMText *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMText *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMText *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMText *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMText *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMText *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *get_data)(IXMLDOMText *This,BSTR *data);
+//C           HRESULT ( *put_data)(IXMLDOMText *This,BSTR data);
+//C           HRESULT ( *get_length)(IXMLDOMText *This,LONG *dataLength);
+//C           HRESULT ( *substringData)(IXMLDOMText *This,LONG offset,LONG count,BSTR *data);
+//C           HRESULT ( *appendData)(IXMLDOMText *This,BSTR data);
+//C           HRESULT ( *insertData)(IXMLDOMText *This,LONG offset,BSTR data);
+//C           HRESULT ( *deleteData)(IXMLDOMText *This,LONG offset,LONG count);
+//C           HRESULT ( *replaceData)(IXMLDOMText *This,LONG offset,LONG count,BSTR data);
+//C           HRESULT ( *splitText)(IXMLDOMText *This,LONG offset,IXMLDOMText **rightHandTextNode);
+//C       } IXMLDOMTextVtbl;
+struct IXMLDOMTextVtbl
+{
+    HRESULT  function(IXMLDOMText *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMText *This)AddRef;
+    ULONG  function(IXMLDOMText *This)Release;
+    HRESULT  function(IXMLDOMText *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMText *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMText *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMText *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMText *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMText *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMText *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMText *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMText *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMText *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMText *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMText *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMText *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMText *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMText *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMText *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMText *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMText *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMText *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMText *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMText *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMText *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMText *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMText *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMText *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMText *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXMLDOMText *This, BSTR *data)get_data;
+    HRESULT  function(IXMLDOMText *This, BSTR data)put_data;
+    HRESULT  function(IXMLDOMText *This, LONG *dataLength)get_length;
+    HRESULT  function(IXMLDOMText *This, LONG offset, LONG count, BSTR *data)substringData;
+    HRESULT  function(IXMLDOMText *This, BSTR data)appendData;
+    HRESULT  function(IXMLDOMText *This, LONG offset, BSTR data)insertData;
+    HRESULT  function(IXMLDOMText *This, LONG offset, LONG count)deleteData;
+    HRESULT  function(IXMLDOMText *This, LONG offset, LONG count, BSTR data)replaceData;
+    HRESULT  function(IXMLDOMText *This, LONG offset, IXMLDOMText **rightHandTextNode)splitText;
+}
+//C       struct IXMLDOMText {
+//C         struct IXMLDOMTextVtbl *lpVtbl;
+//C       };
+struct IXMLDOMText
+{
+    IXMLDOMTextVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMText_splitText_Proxy(IXMLDOMText *This,LONG offset,IXMLDOMText **rightHandTextNode);
+HRESULT  IXMLDOMText_splitText_Proxy(IXMLDOMText *This, LONG offset, IXMLDOMText **rightHandTextNode);
+//C       void IXMLDOMText_splitText_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMText_splitText_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMComment;
+extern const IID IID_IXMLDOMComment;
+//C       typedef struct IXMLDOMCommentVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMComment *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMComment *This);
+//C           ULONG ( *Release)(IXMLDOMComment *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMComment *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMComment *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMComment *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMComment *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMComment *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMComment *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMComment *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMComment *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMComment *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMComment *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMComment *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMComment *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMComment *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMComment *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMComment *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMComment *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMComment *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMComment *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMComment *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMComment *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMComment *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMComment *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMComment *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMComment *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMComment *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMComment *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMComment *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMComment *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMComment *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMComment *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMComment *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMComment *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMComment *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMComment *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMComment *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMComment *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMComment *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMComment *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMComment *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMComment *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *get_data)(IXMLDOMComment *This,BSTR *data);
+//C           HRESULT ( *put_data)(IXMLDOMComment *This,BSTR data);
+//C           HRESULT ( *get_length)(IXMLDOMComment *This,LONG *dataLength);
+//C           HRESULT ( *substringData)(IXMLDOMComment *This,LONG offset,LONG count,BSTR *data);
+//C           HRESULT ( *appendData)(IXMLDOMComment *This,BSTR data);
+//C           HRESULT ( *insertData)(IXMLDOMComment *This,LONG offset,BSTR data);
+//C           HRESULT ( *deleteData)(IXMLDOMComment *This,LONG offset,LONG count);
+//C           HRESULT ( *replaceData)(IXMLDOMComment *This,LONG offset,LONG count,BSTR data);
+//C       } IXMLDOMCommentVtbl;
+struct IXMLDOMCommentVtbl
+{
+    HRESULT  function(IXMLDOMComment *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMComment *This)AddRef;
+    ULONG  function(IXMLDOMComment *This)Release;
+    HRESULT  function(IXMLDOMComment *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMComment *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMComment *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMComment *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMComment *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMComment *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMComment *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMComment *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMComment *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMComment *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMComment *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMComment *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMComment *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMComment *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMComment *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMComment *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMComment *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMComment *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMComment *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMComment *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMComment *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMComment *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMComment *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMComment *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMComment *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMComment *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXMLDOMComment *This, BSTR *data)get_data;
+    HRESULT  function(IXMLDOMComment *This, BSTR data)put_data;
+    HRESULT  function(IXMLDOMComment *This, LONG *dataLength)get_length;
+    HRESULT  function(IXMLDOMComment *This, LONG offset, LONG count, BSTR *data)substringData;
+    HRESULT  function(IXMLDOMComment *This, BSTR data)appendData;
+    HRESULT  function(IXMLDOMComment *This, LONG offset, BSTR data)insertData;
+    HRESULT  function(IXMLDOMComment *This, LONG offset, LONG count)deleteData;
+    HRESULT  function(IXMLDOMComment *This, LONG offset, LONG count, BSTR data)replaceData;
+}
+//C       struct IXMLDOMComment {
+//C         struct IXMLDOMCommentVtbl *lpVtbl;
+//C       };
+struct IXMLDOMComment
+{
+    IXMLDOMCommentVtbl *lpVtbl;
+}
+//C       extern const IID IID_IXMLDOMProcessingInstruction;
+extern const IID IID_IXMLDOMProcessingInstruction;
+//C       typedef struct IXMLDOMProcessingInstructionVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMProcessingInstruction *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMProcessingInstruction *This);
+//C           ULONG ( *Release)(IXMLDOMProcessingInstruction *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMProcessingInstruction *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMProcessingInstruction *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMProcessingInstruction *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMProcessingInstruction *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMProcessingInstruction *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMProcessingInstruction *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMProcessingInstruction *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMProcessingInstruction *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMProcessingInstruction *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMProcessingInstruction *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMProcessingInstruction *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMProcessingInstruction *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMProcessingInstruction *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMProcessingInstruction *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMProcessingInstruction *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMProcessingInstruction *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMProcessingInstruction *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMProcessingInstruction *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMProcessingInstruction *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMProcessingInstruction *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMProcessingInstruction *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMProcessingInstruction *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMProcessingInstruction *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMProcessingInstruction *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMProcessingInstruction *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMProcessingInstruction *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMProcessingInstruction *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMProcessingInstruction *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMProcessingInstruction *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMProcessingInstruction *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMProcessingInstruction *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMProcessingInstruction *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMProcessingInstruction *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMProcessingInstruction *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMProcessingInstruction *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMProcessingInstruction *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMProcessingInstruction *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMProcessingInstruction *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMProcessingInstruction *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMProcessingInstruction *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *get_target)(IXMLDOMProcessingInstruction *This,BSTR *name);
+//C           HRESULT ( *get_data)(IXMLDOMProcessingInstruction *This,BSTR *value);
+//C           HRESULT ( *put_data)(IXMLDOMProcessingInstruction *This,BSTR value);
+//C       } IXMLDOMProcessingInstructionVtbl;
+struct IXMLDOMProcessingInstructionVtbl
+{
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMProcessingInstruction *This)AddRef;
+    ULONG  function(IXMLDOMProcessingInstruction *This)Release;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR *name)get_target;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR *value)get_data;
+    HRESULT  function(IXMLDOMProcessingInstruction *This, BSTR value)put_data;
+}
+//C       struct IXMLDOMProcessingInstruction {
+//C         struct IXMLDOMProcessingInstructionVtbl *lpVtbl;
+//C       };
+struct IXMLDOMProcessingInstruction
+{
+    IXMLDOMProcessingInstructionVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMProcessingInstruction_get_target_Proxy(IXMLDOMProcessingInstruction *This,BSTR *name);
+HRESULT  IXMLDOMProcessingInstruction_get_target_Proxy(IXMLDOMProcessingInstruction *This, BSTR *name);
+//C       void IXMLDOMProcessingInstruction_get_target_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMProcessingInstruction_get_target_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMProcessingInstruction_get_data_Proxy(IXMLDOMProcessingInstruction *This,BSTR *value);
+HRESULT  IXMLDOMProcessingInstruction_get_data_Proxy(IXMLDOMProcessingInstruction *This, BSTR *value);
+//C       void IXMLDOMProcessingInstruction_get_data_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMProcessingInstruction_get_data_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMProcessingInstruction_put_data_Proxy(IXMLDOMProcessingInstruction *This,BSTR value);
+HRESULT  IXMLDOMProcessingInstruction_put_data_Proxy(IXMLDOMProcessingInstruction *This, BSTR value);
+//C       void IXMLDOMProcessingInstruction_put_data_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMProcessingInstruction_put_data_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMCDATASection;
+extern const IID IID_IXMLDOMCDATASection;
+//C       typedef struct IXMLDOMCDATASectionVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMCDATASection *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMCDATASection *This);
+//C           ULONG ( *Release)(IXMLDOMCDATASection *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMCDATASection *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMCDATASection *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMCDATASection *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMCDATASection *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMCDATASection *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMCDATASection *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMCDATASection *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMCDATASection *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMCDATASection *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMCDATASection *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMCDATASection *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMCDATASection *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMCDATASection *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMCDATASection *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMCDATASection *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMCDATASection *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMCDATASection *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMCDATASection *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMCDATASection *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMCDATASection *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMCDATASection *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMCDATASection *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMCDATASection *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMCDATASection *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMCDATASection *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMCDATASection *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMCDATASection *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMCDATASection *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMCDATASection *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMCDATASection *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMCDATASection *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMCDATASection *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMCDATASection *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMCDATASection *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMCDATASection *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMCDATASection *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMCDATASection *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMCDATASection *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMCDATASection *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMCDATASection *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *get_data)(IXMLDOMCDATASection *This,BSTR *data);
+//C           HRESULT ( *put_data)(IXMLDOMCDATASection *This,BSTR data);
+//C           HRESULT ( *get_length)(IXMLDOMCDATASection *This,LONG *dataLength);
+//C           HRESULT ( *substringData)(IXMLDOMCDATASection *This,LONG offset,LONG count,BSTR *data);
+//C           HRESULT ( *appendData)(IXMLDOMCDATASection *This,BSTR data);
+//C           HRESULT ( *insertData)(IXMLDOMCDATASection *This,LONG offset,BSTR data);
+//C           HRESULT ( *deleteData)(IXMLDOMCDATASection *This,LONG offset,LONG count);
+//C           HRESULT ( *replaceData)(IXMLDOMCDATASection *This,LONG offset,LONG count,BSTR data);
+//C           HRESULT ( *splitText)(IXMLDOMCDATASection *This,LONG offset,IXMLDOMText **rightHandTextNode);
+//C       } IXMLDOMCDATASectionVtbl;
+struct IXMLDOMCDATASectionVtbl
+{
+    HRESULT  function(IXMLDOMCDATASection *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMCDATASection *This)AddRef;
+    ULONG  function(IXMLDOMCDATASection *This)Release;
+    HRESULT  function(IXMLDOMCDATASection *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMCDATASection *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMCDATASection *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMCDATASection *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMCDATASection *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMCDATASection *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMCDATASection *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMCDATASection *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMCDATASection *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMCDATASection *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMCDATASection *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMCDATASection *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMCDATASection *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMCDATASection *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMCDATASection *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR *data)get_data;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR data)put_data;
+    HRESULT  function(IXMLDOMCDATASection *This, LONG *dataLength)get_length;
+    HRESULT  function(IXMLDOMCDATASection *This, LONG offset, LONG count, BSTR *data)substringData;
+    HRESULT  function(IXMLDOMCDATASection *This, BSTR data)appendData;
+    HRESULT  function(IXMLDOMCDATASection *This, LONG offset, BSTR data)insertData;
+    HRESULT  function(IXMLDOMCDATASection *This, LONG offset, LONG count)deleteData;
+    HRESULT  function(IXMLDOMCDATASection *This, LONG offset, LONG count, BSTR data)replaceData;
+    HRESULT  function(IXMLDOMCDATASection *This, LONG offset, IXMLDOMText **rightHandTextNode)splitText;
+}
+//C       struct IXMLDOMCDATASection {
+//C         struct IXMLDOMCDATASectionVtbl *lpVtbl;
+//C       };
+struct IXMLDOMCDATASection
+{
+    IXMLDOMCDATASectionVtbl *lpVtbl;
+}
+//C       extern const IID IID_IXMLDOMDocumentType;
+extern const IID IID_IXMLDOMDocumentType;
+//C       typedef struct IXMLDOMDocumentTypeVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMDocumentType *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMDocumentType *This);
+//C           ULONG ( *Release)(IXMLDOMDocumentType *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMDocumentType *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMDocumentType *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMDocumentType *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMDocumentType *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMDocumentType *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMDocumentType *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMDocumentType *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMDocumentType *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMDocumentType *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMDocumentType *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMDocumentType *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMDocumentType *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMDocumentType *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMDocumentType *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMDocumentType *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMDocumentType *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMDocumentType *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMDocumentType *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMDocumentType *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMDocumentType *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMDocumentType *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMDocumentType *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMDocumentType *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMDocumentType *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMDocumentType *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMDocumentType *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMDocumentType *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMDocumentType *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMDocumentType *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMDocumentType *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMDocumentType *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMDocumentType *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMDocumentType *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMDocumentType *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMDocumentType *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMDocumentType *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMDocumentType *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMDocumentType *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMDocumentType *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMDocumentType *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *get_name)(IXMLDOMDocumentType *This,BSTR *rootName);
+//C           HRESULT ( *get_entities)(IXMLDOMDocumentType *This,IXMLDOMNamedNodeMap **entityMap);
+//C           HRESULT ( *get_notations)(IXMLDOMDocumentType *This,IXMLDOMNamedNodeMap **notationMap);
+//C       } IXMLDOMDocumentTypeVtbl;
+struct IXMLDOMDocumentTypeVtbl
+{
+    HRESULT  function(IXMLDOMDocumentType *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMDocumentType *This)AddRef;
+    ULONG  function(IXMLDOMDocumentType *This)Release;
+    HRESULT  function(IXMLDOMDocumentType *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMDocumentType *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMDocumentType *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMDocumentType *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMDocumentType *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMDocumentType *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMDocumentType *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMDocumentType *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMDocumentType *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMDocumentType *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMDocumentType *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMDocumentType *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMDocumentType *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMDocumentType *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXMLDOMDocumentType *This, BSTR *rootName)get_name;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNamedNodeMap **entityMap)get_entities;
+    HRESULT  function(IXMLDOMDocumentType *This, IXMLDOMNamedNodeMap **notationMap)get_notations;
+}
+//C       struct IXMLDOMDocumentType {
+//C         struct IXMLDOMDocumentTypeVtbl *lpVtbl;
+//C       };
+struct IXMLDOMDocumentType
+{
+    IXMLDOMDocumentTypeVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMDocumentType_get_name_Proxy(IXMLDOMDocumentType *This,BSTR *rootName);
+HRESULT  IXMLDOMDocumentType_get_name_Proxy(IXMLDOMDocumentType *This, BSTR *rootName);
+//C       void IXMLDOMDocumentType_get_name_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMDocumentType_get_name_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMDocumentType_get_entities_Proxy(IXMLDOMDocumentType *This,IXMLDOMNamedNodeMap **entityMap);
+HRESULT  IXMLDOMDocumentType_get_entities_Proxy(IXMLDOMDocumentType *This, IXMLDOMNamedNodeMap **entityMap);
+//C       void IXMLDOMDocumentType_get_entities_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMDocumentType_get_entities_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMDocumentType_get_notations_Proxy(IXMLDOMDocumentType *This,IXMLDOMNamedNodeMap **notationMap);
+HRESULT  IXMLDOMDocumentType_get_notations_Proxy(IXMLDOMDocumentType *This, IXMLDOMNamedNodeMap **notationMap);
+//C       void IXMLDOMDocumentType_get_notations_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMDocumentType_get_notations_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMNotation;
+extern const IID IID_IXMLDOMNotation;
+//C       typedef struct IXMLDOMNotationVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMNotation *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMNotation *This);
+//C           ULONG ( *Release)(IXMLDOMNotation *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMNotation *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMNotation *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMNotation *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMNotation *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMNotation *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMNotation *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMNotation *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMNotation *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMNotation *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMNotation *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMNotation *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMNotation *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMNotation *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMNotation *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMNotation *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMNotation *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMNotation *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMNotation *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMNotation *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMNotation *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMNotation *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMNotation *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMNotation *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMNotation *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMNotation *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMNotation *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMNotation *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMNotation *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMNotation *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMNotation *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMNotation *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMNotation *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMNotation *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMNotation *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMNotation *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMNotation *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMNotation *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMNotation *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMNotation *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMNotation *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *get_publicId)(IXMLDOMNotation *This,VARIANT *publicID);
+//C           HRESULT ( *get_systemId)(IXMLDOMNotation *This,VARIANT *systemID);
+//C       } IXMLDOMNotationVtbl;
+struct IXMLDOMNotationVtbl
+{
+    HRESULT  function(IXMLDOMNotation *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMNotation *This)AddRef;
+    ULONG  function(IXMLDOMNotation *This)Release;
+    HRESULT  function(IXMLDOMNotation *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMNotation *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMNotation *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMNotation *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMNotation *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMNotation *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMNotation *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMNotation *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMNotation *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMNotation *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMNotation *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMNotation *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMNotation *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMNotation *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMNotation *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMNotation *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMNotation *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT *publicID)get_publicId;
+    HRESULT  function(IXMLDOMNotation *This, VARIANT *systemID)get_systemId;
+}
+//C       struct IXMLDOMNotation {
+//C         struct IXMLDOMNotationVtbl *lpVtbl;
+//C       };
+struct IXMLDOMNotation
+{
+    IXMLDOMNotationVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMNotation_get_publicId_Proxy(IXMLDOMNotation *This,VARIANT *publicID);
+HRESULT  IXMLDOMNotation_get_publicId_Proxy(IXMLDOMNotation *This, VARIANT *publicID);
+//C       void IXMLDOMNotation_get_publicId_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNotation_get_publicId_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMNotation_get_systemId_Proxy(IXMLDOMNotation *This,VARIANT *systemID);
+HRESULT  IXMLDOMNotation_get_systemId_Proxy(IXMLDOMNotation *This, VARIANT *systemID);
+//C       void IXMLDOMNotation_get_systemId_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMNotation_get_systemId_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMEntity;
+extern const IID IID_IXMLDOMEntity;
+//C       typedef struct IXMLDOMEntityVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMEntity *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMEntity *This);
+//C           ULONG ( *Release)(IXMLDOMEntity *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMEntity *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMEntity *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMEntity *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMEntity *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMEntity *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMEntity *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMEntity *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMEntity *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMEntity *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMEntity *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMEntity *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMEntity *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMEntity *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMEntity *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMEntity *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMEntity *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMEntity *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMEntity *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMEntity *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMEntity *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMEntity *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMEntity *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMEntity *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMEntity *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMEntity *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMEntity *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMEntity *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMEntity *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMEntity *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMEntity *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMEntity *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMEntity *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMEntity *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMEntity *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMEntity *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMEntity *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMEntity *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMEntity *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMEntity *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMEntity *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *get_publicId)(IXMLDOMEntity *This,VARIANT *publicID);
+//C           HRESULT ( *get_systemId)(IXMLDOMEntity *This,VARIANT *systemID);
+//C           HRESULT ( *get_notationName)(IXMLDOMEntity *This,BSTR *name);
+//C       } IXMLDOMEntityVtbl;
+struct IXMLDOMEntityVtbl
+{
+    HRESULT  function(IXMLDOMEntity *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMEntity *This)AddRef;
+    ULONG  function(IXMLDOMEntity *This)Release;
+    HRESULT  function(IXMLDOMEntity *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMEntity *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMEntity *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMEntity *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMEntity *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMEntity *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMEntity *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMEntity *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMEntity *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMEntity *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMEntity *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMEntity *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMEntity *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMEntity *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMEntity *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMEntity *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMEntity *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT *publicID)get_publicId;
+    HRESULT  function(IXMLDOMEntity *This, VARIANT *systemID)get_systemId;
+    HRESULT  function(IXMLDOMEntity *This, BSTR *name)get_notationName;
+}
+//C       struct IXMLDOMEntity {
+//C         struct IXMLDOMEntityVtbl *lpVtbl;
+//C       };
+struct IXMLDOMEntity
+{
+    IXMLDOMEntityVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMEntity_get_publicId_Proxy(IXMLDOMEntity *This,VARIANT *publicID);
+HRESULT  IXMLDOMEntity_get_publicId_Proxy(IXMLDOMEntity *This, VARIANT *publicID);
+//C       void IXMLDOMEntity_get_publicId_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMEntity_get_publicId_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMEntity_get_systemId_Proxy(IXMLDOMEntity *This,VARIANT *systemID);
+HRESULT  IXMLDOMEntity_get_systemId_Proxy(IXMLDOMEntity *This, VARIANT *systemID);
+//C       void IXMLDOMEntity_get_systemId_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMEntity_get_systemId_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMEntity_get_notationName_Proxy(IXMLDOMEntity *This,BSTR *name);
+HRESULT  IXMLDOMEntity_get_notationName_Proxy(IXMLDOMEntity *This, BSTR *name);
+//C       void IXMLDOMEntity_get_notationName_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMEntity_get_notationName_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDOMEntityReference;
+extern const IID IID_IXMLDOMEntityReference;
+//C       typedef struct IXMLDOMEntityReferenceVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMEntityReference *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMEntityReference *This);
+//C           ULONG ( *Release)(IXMLDOMEntityReference *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMEntityReference *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMEntityReference *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMEntityReference *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMEntityReference *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXMLDOMEntityReference *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXMLDOMEntityReference *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXMLDOMEntityReference *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXMLDOMEntityReference *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXMLDOMEntityReference *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXMLDOMEntityReference *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXMLDOMEntityReference *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXMLDOMEntityReference *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXMLDOMEntityReference *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXMLDOMEntityReference *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXMLDOMEntityReference *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXMLDOMEntityReference *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXMLDOMEntityReference *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXMLDOMEntityReference *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXMLDOMEntityReference *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXMLDOMEntityReference *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXMLDOMEntityReference *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXMLDOMEntityReference *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXMLDOMEntityReference *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXMLDOMEntityReference *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXMLDOMEntityReference *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXMLDOMEntityReference *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXMLDOMEntityReference *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXMLDOMEntityReference *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXMLDOMEntityReference *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXMLDOMEntityReference *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXMLDOMEntityReference *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXMLDOMEntityReference *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXMLDOMEntityReference *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXMLDOMEntityReference *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXMLDOMEntityReference *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXMLDOMEntityReference *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXMLDOMEntityReference *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXMLDOMEntityReference *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXMLDOMEntityReference *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXMLDOMEntityReference *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C       } IXMLDOMEntityReferenceVtbl;
+struct IXMLDOMEntityReferenceVtbl
+{
+    HRESULT  function(IXMLDOMEntityReference *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMEntityReference *This)AddRef;
+    ULONG  function(IXMLDOMEntityReference *This)Release;
+    HRESULT  function(IXMLDOMEntityReference *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMEntityReference *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMEntityReference *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMEntityReference *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXMLDOMEntityReference *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXMLDOMEntityReference *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXMLDOMEntityReference *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXMLDOMEntityReference *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXMLDOMEntityReference *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR *text)get_text;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR text)put_text;
+    HRESULT  function(IXMLDOMEntityReference *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXMLDOMEntityReference *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXMLDOMEntityReference *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXMLDOMEntityReference *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXMLDOMEntityReference *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXMLDOMEntityReference *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXMLDOMEntityReference *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+}
+//C       struct IXMLDOMEntityReference {
+//C         struct IXMLDOMEntityReferenceVtbl *lpVtbl;
+//C       };
+struct IXMLDOMEntityReference
+{
+    IXMLDOMEntityReferenceVtbl *lpVtbl;
+}
+//C       extern const IID IID_IXMLDOMParseError;
+extern const IID IID_IXMLDOMParseError;
+//C       typedef struct IXMLDOMParseErrorVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDOMParseError *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDOMParseError *This);
+//C           ULONG ( *Release)(IXMLDOMParseError *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDOMParseError *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDOMParseError *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDOMParseError *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDOMParseError *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_errorCode)(IXMLDOMParseError *This,LONG *errorCode);
+//C           HRESULT ( *get_url)(IXMLDOMParseError *This,BSTR *urlString);
+//C           HRESULT ( *get_reason)(IXMLDOMParseError *This,BSTR *reasonString);
+//C           HRESULT ( *get_srcText)(IXMLDOMParseError *This,BSTR *sourceString);
+//C           HRESULT ( *get_line)(IXMLDOMParseError *This,LONG *lineNumber);
+//C           HRESULT ( *get_linepos)(IXMLDOMParseError *This,LONG *linePosition);
+//C           HRESULT ( *get_filepos)(IXMLDOMParseError *This,LONG *filePosition);
+//C       } IXMLDOMParseErrorVtbl;
+struct IXMLDOMParseErrorVtbl
+{
+    HRESULT  function(IXMLDOMParseError *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDOMParseError *This)AddRef;
+    ULONG  function(IXMLDOMParseError *This)Release;
+    HRESULT  function(IXMLDOMParseError *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDOMParseError *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDOMParseError *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDOMParseError *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDOMParseError *This, LONG *errorCode)get_errorCode;
+    HRESULT  function(IXMLDOMParseError *This, BSTR *urlString)get_url;
+    HRESULT  function(IXMLDOMParseError *This, BSTR *reasonString)get_reason;
+    HRESULT  function(IXMLDOMParseError *This, BSTR *sourceString)get_srcText;
+    HRESULT  function(IXMLDOMParseError *This, LONG *lineNumber)get_line;
+    HRESULT  function(IXMLDOMParseError *This, LONG *linePosition)get_linepos;
+    HRESULT  function(IXMLDOMParseError *This, LONG *filePosition)get_filepos;
+}
+//C       struct IXMLDOMParseError {
+//C         struct IXMLDOMParseErrorVtbl *lpVtbl;
+//C       };
+struct IXMLDOMParseError
+{
+    IXMLDOMParseErrorVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDOMParseError_get_errorCode_Proxy(IXMLDOMParseError *This,LONG *errorCode);
+HRESULT  IXMLDOMParseError_get_errorCode_Proxy(IXMLDOMParseError *This, LONG *errorCode);
+//C       void IXMLDOMParseError_get_errorCode_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMParseError_get_errorCode_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMParseError_get_url_Proxy(IXMLDOMParseError *This,BSTR *urlString);
+HRESULT  IXMLDOMParseError_get_url_Proxy(IXMLDOMParseError *This, BSTR *urlString);
+//C       void IXMLDOMParseError_get_url_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMParseError_get_url_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMParseError_get_reason_Proxy(IXMLDOMParseError *This,BSTR *reasonString);
+HRESULT  IXMLDOMParseError_get_reason_Proxy(IXMLDOMParseError *This, BSTR *reasonString);
+//C       void IXMLDOMParseError_get_reason_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMParseError_get_reason_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMParseError_get_srcText_Proxy(IXMLDOMParseError *This,BSTR *sourceString);
+HRESULT  IXMLDOMParseError_get_srcText_Proxy(IXMLDOMParseError *This, BSTR *sourceString);
+//C       void IXMLDOMParseError_get_srcText_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMParseError_get_srcText_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMParseError_get_line_Proxy(IXMLDOMParseError *This,LONG *lineNumber);
+HRESULT  IXMLDOMParseError_get_line_Proxy(IXMLDOMParseError *This, LONG *lineNumber);
+//C       void IXMLDOMParseError_get_line_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMParseError_get_line_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMParseError_get_linepos_Proxy(IXMLDOMParseError *This,LONG *linePosition);
+HRESULT  IXMLDOMParseError_get_linepos_Proxy(IXMLDOMParseError *This, LONG *linePosition);
+//C       void IXMLDOMParseError_get_linepos_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMParseError_get_linepos_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDOMParseError_get_filepos_Proxy(IXMLDOMParseError *This,LONG *filePosition);
+HRESULT  IXMLDOMParseError_get_filepos_Proxy(IXMLDOMParseError *This, LONG *filePosition);
+//C       void IXMLDOMParseError_get_filepos_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDOMParseError_get_filepos_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXTLRuntime;
+extern const IID IID_IXTLRuntime;
+//C       typedef struct IXTLRuntimeVtbl {
+//C           HRESULT ( *QueryInterface)(IXTLRuntime *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXTLRuntime *This);
+//C           ULONG ( *Release)(IXTLRuntime *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXTLRuntime *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXTLRuntime *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXTLRuntime *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXTLRuntime *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_nodeName)(IXTLRuntime *This,BSTR *name);
+//C           HRESULT ( *get_nodeValue)(IXTLRuntime *This,VARIANT *value);
+//C           HRESULT ( *put_nodeValue)(IXTLRuntime *This,VARIANT value);
+//C           HRESULT ( *get_nodeType)(IXTLRuntime *This,DOMNodeType *type);
+//C           HRESULT ( *get_parentNode)(IXTLRuntime *This,IXMLDOMNode **parent);
+//C           HRESULT ( *get_childNodes)(IXTLRuntime *This,IXMLDOMNodeList **childList);
+//C           HRESULT ( *get_firstChild)(IXTLRuntime *This,IXMLDOMNode **firstChild);
+//C           HRESULT ( *get_lastChild)(IXTLRuntime *This,IXMLDOMNode **lastChild);
+//C           HRESULT ( *get_previousSibling)(IXTLRuntime *This,IXMLDOMNode **previousSibling);
+//C           HRESULT ( *get_nextSibling)(IXTLRuntime *This,IXMLDOMNode **nextSibling);
+//C           HRESULT ( *get_attributes)(IXTLRuntime *This,IXMLDOMNamedNodeMap **attributeMap);
+//C           HRESULT ( *insertBefore)(IXTLRuntime *This,IXMLDOMNode *newChild,VARIANT refChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *replaceChild)(IXTLRuntime *This,IXMLDOMNode *newChild,IXMLDOMNode *oldChild,IXMLDOMNode **outOldChild);
+//C           HRESULT ( *removeChild)(IXTLRuntime *This,IXMLDOMNode *childNode,IXMLDOMNode **oldChild);
+//C           HRESULT ( *appendChild)(IXTLRuntime *This,IXMLDOMNode *newChild,IXMLDOMNode **outNewChild);
+//C           HRESULT ( *hasChildNodes)(IXTLRuntime *This,VARIANT_BOOL *hasChild);
+//C           HRESULT ( *get_ownerDocument)(IXTLRuntime *This,IXMLDOMDocument **DOMDocument);
+//C           HRESULT ( *cloneNode)(IXTLRuntime *This,VARIANT_BOOL deep,IXMLDOMNode **cloneRoot);
+//C           HRESULT ( *get_nodeTypeString)(IXTLRuntime *This,BSTR *nodeType);
+//C           HRESULT ( *get_text)(IXTLRuntime *This,BSTR *text);
+//C           HRESULT ( *put_text)(IXTLRuntime *This,BSTR text);
+//C           HRESULT ( *get_specified)(IXTLRuntime *This,VARIANT_BOOL *isSpecified);
+//C           HRESULT ( *get_definition)(IXTLRuntime *This,IXMLDOMNode **definitionNode);
+//C           HRESULT ( *get_nodeTypedValue)(IXTLRuntime *This,VARIANT *typedValue);
+//C           HRESULT ( *put_nodeTypedValue)(IXTLRuntime *This,VARIANT typedValue);
+//C           HRESULT ( *get_dataType)(IXTLRuntime *This,VARIANT *dataTypeName);
+//C           HRESULT ( *put_dataType)(IXTLRuntime *This,BSTR dataTypeName);
+//C           HRESULT ( *get_xml)(IXTLRuntime *This,BSTR *xmlString);
+//C           HRESULT ( *transformNode)(IXTLRuntime *This,IXMLDOMNode *stylesheet,BSTR *xmlString);
+//C           HRESULT ( *selectNodes)(IXTLRuntime *This,BSTR queryString,IXMLDOMNodeList **resultList);
+//C           HRESULT ( *selectSingleNode)(IXTLRuntime *This,BSTR queryString,IXMLDOMNode **resultNode);
+//C           HRESULT ( *get_parsed)(IXTLRuntime *This,VARIANT_BOOL *isParsed);
+//C           HRESULT ( *get_namespaceURI)(IXTLRuntime *This,BSTR *namespaceURI);
+//C           HRESULT ( *get_prefix)(IXTLRuntime *This,BSTR *prefixString);
+//C           HRESULT ( *get_baseName)(IXTLRuntime *This,BSTR *nameString);
+//C           HRESULT ( *transformNodeToObject)(IXTLRuntime *This,IXMLDOMNode *stylesheet,VARIANT outputObject);
+//C           HRESULT ( *uniqueID)(IXTLRuntime *This,IXMLDOMNode *pNode,LONG *pID);
+//C           HRESULT ( *depth)(IXTLRuntime *This,IXMLDOMNode *pNode,LONG *pDepth);
+//C           HRESULT ( *childNumber)(IXTLRuntime *This,IXMLDOMNode *pNode,LONG *pNumber);
+//C           HRESULT ( *ancestorChildNumber)(IXTLRuntime *This,BSTR bstrNodeName,IXMLDOMNode *pNode,LONG *pNumber);
+//C           HRESULT ( *absoluteChildNumber)(IXTLRuntime *This,IXMLDOMNode *pNode,LONG *pNumber);
+//C           HRESULT ( *formatIndex)(IXTLRuntime *This,LONG lIndex,BSTR bstrFormat,BSTR *pbstrFormattedString);
+//C           HRESULT ( *formatNumber)(IXTLRuntime *This,double dblNumber,BSTR bstrFormat,BSTR *pbstrFormattedString);
+//C           HRESULT ( *formatDate)(IXTLRuntime *This,VARIANT varDate,BSTR bstrFormat,VARIANT varDestLocale,BSTR *pbstrFormattedString);
+//C           HRESULT ( *formatTime)(IXTLRuntime *This,VARIANT varTime,BSTR bstrFormat,VARIANT varDestLocale,BSTR *pbstrFormattedString);
+//C       } IXTLRuntimeVtbl;
+struct IXTLRuntimeVtbl
+{
+    HRESULT  function(IXTLRuntime *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXTLRuntime *This)AddRef;
+    ULONG  function(IXTLRuntime *This)Release;
+    HRESULT  function(IXTLRuntime *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXTLRuntime *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXTLRuntime *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXTLRuntime *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXTLRuntime *This, BSTR *name)get_nodeName;
+    HRESULT  function(IXTLRuntime *This, VARIANT *value)get_nodeValue;
+    HRESULT  function(IXTLRuntime *This, VARIANT value)put_nodeValue;
+    HRESULT  function(IXTLRuntime *This, DOMNodeType *type)get_nodeType;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode **parent)get_parentNode;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNodeList **childList)get_childNodes;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode **firstChild)get_firstChild;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode **lastChild)get_lastChild;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode **previousSibling)get_previousSibling;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode **nextSibling)get_nextSibling;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNamedNodeMap **attributeMap)get_attributes;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode *newChild, VARIANT refChild, IXMLDOMNode **outNewChild)insertBefore;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode *newChild, IXMLDOMNode *oldChild, IXMLDOMNode **outOldChild)replaceChild;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode *childNode, IXMLDOMNode **oldChild)removeChild;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode *newChild, IXMLDOMNode **outNewChild)appendChild;
+    HRESULT  function(IXTLRuntime *This, VARIANT_BOOL *hasChild)hasChildNodes;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMDocument **DOMDocument)get_ownerDocument;
+    HRESULT  function(IXTLRuntime *This, VARIANT_BOOL deep, IXMLDOMNode **cloneRoot)cloneNode;
+    HRESULT  function(IXTLRuntime *This, BSTR *nodeType)get_nodeTypeString;
+    HRESULT  function(IXTLRuntime *This, BSTR *text)get_text;
+    HRESULT  function(IXTLRuntime *This, BSTR text)put_text;
+    HRESULT  function(IXTLRuntime *This, VARIANT_BOOL *isSpecified)get_specified;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode **definitionNode)get_definition;
+    HRESULT  function(IXTLRuntime *This, VARIANT *typedValue)get_nodeTypedValue;
+    HRESULT  function(IXTLRuntime *This, VARIANT typedValue)put_nodeTypedValue;
+    HRESULT  function(IXTLRuntime *This, VARIANT *dataTypeName)get_dataType;
+    HRESULT  function(IXTLRuntime *This, BSTR dataTypeName)put_dataType;
+    HRESULT  function(IXTLRuntime *This, BSTR *xmlString)get_xml;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode *stylesheet, BSTR *xmlString)transformNode;
+    HRESULT  function(IXTLRuntime *This, BSTR queryString, IXMLDOMNodeList **resultList)selectNodes;
+    HRESULT  function(IXTLRuntime *This, BSTR queryString, IXMLDOMNode **resultNode)selectSingleNode;
+    HRESULT  function(IXTLRuntime *This, VARIANT_BOOL *isParsed)get_parsed;
+    HRESULT  function(IXTLRuntime *This, BSTR *namespaceURI)get_namespaceURI;
+    HRESULT  function(IXTLRuntime *This, BSTR *prefixString)get_prefix;
+    HRESULT  function(IXTLRuntime *This, BSTR *nameString)get_baseName;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode *stylesheet, VARIANT outputObject)transformNodeToObject;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode *pNode, LONG *pID)uniqueID;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode *pNode, LONG *pDepth)depth;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode *pNode, LONG *pNumber)childNumber;
+    HRESULT  function(IXTLRuntime *This, BSTR bstrNodeName, IXMLDOMNode *pNode, LONG *pNumber)ancestorChildNumber;
+    HRESULT  function(IXTLRuntime *This, IXMLDOMNode *pNode, LONG *pNumber)absoluteChildNumber;
+    HRESULT  function(IXTLRuntime *This, LONG lIndex, BSTR bstrFormat, BSTR *pbstrFormattedString)formatIndex;
+    HRESULT  function(IXTLRuntime *This, double dblNumber, BSTR bstrFormat, BSTR *pbstrFormattedString)formatNumber;
+    HRESULT  function(IXTLRuntime *This, VARIANT varDate, BSTR bstrFormat, VARIANT varDestLocale, BSTR *pbstrFormattedString)formatDate;
+    HRESULT  function(IXTLRuntime *This, VARIANT varTime, BSTR bstrFormat, VARIANT varDestLocale, BSTR *pbstrFormattedString)formatTime;
+}
+//C       struct IXTLRuntime {
+//C         struct IXTLRuntimeVtbl *lpVtbl;
+//C       };
+struct IXTLRuntime
+{
+    IXTLRuntimeVtbl *lpVtbl;
+}
+//C       HRESULT IXTLRuntime_uniqueID_Proxy(IXTLRuntime *This,IXMLDOMNode *pNode,LONG *pID);
+HRESULT  IXTLRuntime_uniqueID_Proxy(IXTLRuntime *This, IXMLDOMNode *pNode, LONG *pID);
+//C       void IXTLRuntime_uniqueID_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXTLRuntime_uniqueID_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXTLRuntime_depth_Proxy(IXTLRuntime *This,IXMLDOMNode *pNode,LONG *pDepth);
+HRESULT  IXTLRuntime_depth_Proxy(IXTLRuntime *This, IXMLDOMNode *pNode, LONG *pDepth);
+//C       void IXTLRuntime_depth_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXTLRuntime_depth_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXTLRuntime_childNumber_Proxy(IXTLRuntime *This,IXMLDOMNode *pNode,LONG *pNumber);
+HRESULT  IXTLRuntime_childNumber_Proxy(IXTLRuntime *This, IXMLDOMNode *pNode, LONG *pNumber);
+//C       void IXTLRuntime_childNumber_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXTLRuntime_childNumber_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXTLRuntime_ancestorChildNumber_Proxy(IXTLRuntime *This,BSTR bstrNodeName,IXMLDOMNode *pNode,LONG *pNumber);
+HRESULT  IXTLRuntime_ancestorChildNumber_Proxy(IXTLRuntime *This, BSTR bstrNodeName, IXMLDOMNode *pNode, LONG *pNumber);
+//C       void IXTLRuntime_ancestorChildNumber_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXTLRuntime_ancestorChildNumber_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXTLRuntime_absoluteChildNumber_Proxy(IXTLRuntime *This,IXMLDOMNode *pNode,LONG *pNumber);
+HRESULT  IXTLRuntime_absoluteChildNumber_Proxy(IXTLRuntime *This, IXMLDOMNode *pNode, LONG *pNumber);
+//C       void IXTLRuntime_absoluteChildNumber_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXTLRuntime_absoluteChildNumber_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXTLRuntime_formatIndex_Proxy(IXTLRuntime *This,LONG lIndex,BSTR bstrFormat,BSTR *pbstrFormattedString);
+HRESULT  IXTLRuntime_formatIndex_Proxy(IXTLRuntime *This, LONG lIndex, BSTR bstrFormat, BSTR *pbstrFormattedString);
+//C       void IXTLRuntime_formatIndex_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXTLRuntime_formatIndex_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXTLRuntime_formatNumber_Proxy(IXTLRuntime *This,double dblNumber,BSTR bstrFormat,BSTR *pbstrFormattedString);
+HRESULT  IXTLRuntime_formatNumber_Proxy(IXTLRuntime *This, double dblNumber, BSTR bstrFormat, BSTR *pbstrFormattedString);
+//C       void IXTLRuntime_formatNumber_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXTLRuntime_formatNumber_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXTLRuntime_formatDate_Proxy(IXTLRuntime *This,VARIANT varDate,BSTR bstrFormat,VARIANT varDestLocale,BSTR *pbstrFormattedString);
+HRESULT  IXTLRuntime_formatDate_Proxy(IXTLRuntime *This, VARIANT varDate, BSTR bstrFormat, VARIANT varDestLocale, BSTR *pbstrFormattedString);
+//C       void IXTLRuntime_formatDate_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXTLRuntime_formatDate_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXTLRuntime_formatTime_Proxy(IXTLRuntime *This,VARIANT varTime,BSTR bstrFormat,VARIANT varDestLocale,BSTR *pbstrFormattedString);
+HRESULT  IXTLRuntime_formatTime_Proxy(IXTLRuntime *This, VARIANT varTime, BSTR bstrFormat, VARIANT varDestLocale, BSTR *pbstrFormattedString);
+//C       void IXTLRuntime_formatTime_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXTLRuntime_formatTime_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID DIID_XMLDOMDocumentEvents;
+extern const IID DIID_XMLDOMDocumentEvents;
+//C       typedef struct XMLDOMDocumentEventsVtbl {
+//C           HRESULT ( *QueryInterface)(XMLDOMDocumentEvents *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(XMLDOMDocumentEvents *This);
+//C           ULONG ( *Release)(XMLDOMDocumentEvents *This);
+//C           HRESULT ( *GetTypeInfoCount)(XMLDOMDocumentEvents *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(XMLDOMDocumentEvents *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(XMLDOMDocumentEvents *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(XMLDOMDocumentEvents *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C       } XMLDOMDocumentEventsVtbl;
+struct XMLDOMDocumentEventsVtbl
+{
+    HRESULT  function(XMLDOMDocumentEvents *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(XMLDOMDocumentEvents *This)AddRef;
+    ULONG  function(XMLDOMDocumentEvents *This)Release;
+    HRESULT  function(XMLDOMDocumentEvents *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(XMLDOMDocumentEvents *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(XMLDOMDocumentEvents *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(XMLDOMDocumentEvents *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+}
+//C       struct XMLDOMDocumentEvents {
+//C         struct XMLDOMDocumentEventsVtbl *lpVtbl;
+//C       };
+struct XMLDOMDocumentEvents
+{
+    XMLDOMDocumentEventsVtbl *lpVtbl;
+}
+//C       extern const CLSID CLSID_DOMDocument;
+extern const CLSID CLSID_DOMDocument;
+//C       extern const CLSID CLSID_DOMFreeThreadedDocument;
+extern const CLSID CLSID_DOMFreeThreadedDocument;
+//C       extern const IID IID_IXMLHttpRequest;
+extern const IID IID_IXMLHttpRequest;
+//C       typedef struct IXMLHttpRequestVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLHttpRequest *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLHttpRequest *This);
+//C           ULONG ( *Release)(IXMLHttpRequest *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLHttpRequest *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLHttpRequest *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLHttpRequest *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLHttpRequest *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *open)(IXMLHttpRequest *This,BSTR bstrMethod,BSTR bstrUrl,VARIANT varAsync,VARIANT bstrUser,VARIANT bstrPassword);
+//C           HRESULT ( *setRequestHeader)(IXMLHttpRequest *This,BSTR bstrHeader,BSTR bstrValue);
+//C           HRESULT ( *getResponseHeader)(IXMLHttpRequest *This,BSTR bstrHeader,BSTR *pbstrValue);
+//C           HRESULT ( *getAllResponseHeaders)(IXMLHttpRequest *This,BSTR *pbstrHeaders);
+//C           HRESULT ( *send)(IXMLHttpRequest *This,VARIANT varBody);
+//C           HRESULT ( *abort)(IXMLHttpRequest *This);
+//C           HRESULT ( *get_status)(IXMLHttpRequest *This,LONG *plStatus);
+//C           HRESULT ( *get_statusText)(IXMLHttpRequest *This,BSTR *pbstrStatus);
+//C           HRESULT ( *get_responseXML)(IXMLHttpRequest *This,IDispatch **ppBody);
+//C           HRESULT ( *get_responseText)(IXMLHttpRequest *This,BSTR *pbstrBody);
+//C           HRESULT ( *get_responseBody)(IXMLHttpRequest *This,VARIANT *pvarBody);
+//C           HRESULT ( *get_responseStream)(IXMLHttpRequest *This,VARIANT *pvarBody);
+//C           HRESULT ( *get_readyState)(IXMLHttpRequest *This,LONG *plState);
+//C           HRESULT ( *put_onreadystatechange)(IXMLHttpRequest *This,IDispatch *pReadyStateSink);
+//C       } IXMLHttpRequestVtbl;
+struct IXMLHttpRequestVtbl
+{
+    HRESULT  function(IXMLHttpRequest *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLHttpRequest *This)AddRef;
+    ULONG  function(IXMLHttpRequest *This)Release;
+    HRESULT  function(IXMLHttpRequest *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLHttpRequest *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLHttpRequest *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLHttpRequest *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLHttpRequest *This, BSTR bstrMethod, BSTR bstrUrl, VARIANT varAsync, VARIANT bstrUser, VARIANT bstrPassword)open;
+    HRESULT  function(IXMLHttpRequest *This, BSTR bstrHeader, BSTR bstrValue)setRequestHeader;
+    HRESULT  function(IXMLHttpRequest *This, BSTR bstrHeader, BSTR *pbstrValue)getResponseHeader;
+    HRESULT  function(IXMLHttpRequest *This, BSTR *pbstrHeaders)getAllResponseHeaders;
+    HRESULT  function(IXMLHttpRequest *This, VARIANT varBody)send;
+    HRESULT  function(IXMLHttpRequest *This)abort;
+    HRESULT  function(IXMLHttpRequest *This, LONG *plStatus)get_status;
+    HRESULT  function(IXMLHttpRequest *This, BSTR *pbstrStatus)get_statusText;
+    HRESULT  function(IXMLHttpRequest *This, IDispatch **ppBody)get_responseXML;
+    HRESULT  function(IXMLHttpRequest *This, BSTR *pbstrBody)get_responseText;
+    HRESULT  function(IXMLHttpRequest *This, VARIANT *pvarBody)get_responseBody;
+    HRESULT  function(IXMLHttpRequest *This, VARIANT *pvarBody)get_responseStream;
+    HRESULT  function(IXMLHttpRequest *This, LONG *plState)get_readyState;
+    HRESULT  function(IXMLHttpRequest *This, IDispatch *pReadyStateSink)put_onreadystatechange;
+}
+//C       struct IXMLHttpRequest {
+//C         struct IXMLHttpRequestVtbl *lpVtbl;
+//C       };
+struct IXMLHttpRequest
+{
+    IXMLHttpRequestVtbl *lpVtbl;
+}
+//C       HRESULT IXMLHttpRequest_open_Proxy(IXMLHttpRequest *This,BSTR bstrMethod,BSTR bstrUrl,VARIANT varAsync,VARIANT bstrUser,VARIANT bstrPassword);
+HRESULT  IXMLHttpRequest_open_Proxy(IXMLHttpRequest *This, BSTR bstrMethod, BSTR bstrUrl, VARIANT varAsync, VARIANT bstrUser, VARIANT bstrPassword);
+//C       void IXMLHttpRequest_open_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_open_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_setRequestHeader_Proxy(IXMLHttpRequest *This,BSTR bstrHeader,BSTR bstrValue);
+HRESULT  IXMLHttpRequest_setRequestHeader_Proxy(IXMLHttpRequest *This, BSTR bstrHeader, BSTR bstrValue);
+//C       void IXMLHttpRequest_setRequestHeader_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_setRequestHeader_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_getResponseHeader_Proxy(IXMLHttpRequest *This,BSTR bstrHeader,BSTR *pbstrValue);
+HRESULT  IXMLHttpRequest_getResponseHeader_Proxy(IXMLHttpRequest *This, BSTR bstrHeader, BSTR *pbstrValue);
+//C       void IXMLHttpRequest_getResponseHeader_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_getResponseHeader_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_getAllResponseHeaders_Proxy(IXMLHttpRequest *This,BSTR *pbstrHeaders);
+HRESULT  IXMLHttpRequest_getAllResponseHeaders_Proxy(IXMLHttpRequest *This, BSTR *pbstrHeaders);
+//C       void IXMLHttpRequest_getAllResponseHeaders_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_getAllResponseHeaders_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_send_Proxy(IXMLHttpRequest *This,VARIANT varBody);
+HRESULT  IXMLHttpRequest_send_Proxy(IXMLHttpRequest *This, VARIANT varBody);
+//C       void IXMLHttpRequest_send_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_send_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_abort_Proxy(IXMLHttpRequest *This);
+HRESULT  IXMLHttpRequest_abort_Proxy(IXMLHttpRequest *This);
+//C       void IXMLHttpRequest_abort_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_abort_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_get_status_Proxy(IXMLHttpRequest *This,LONG *plStatus);
+HRESULT  IXMLHttpRequest_get_status_Proxy(IXMLHttpRequest *This, LONG *plStatus);
+//C       void IXMLHttpRequest_get_status_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_get_status_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_get_statusText_Proxy(IXMLHttpRequest *This,BSTR *pbstrStatus);
+HRESULT  IXMLHttpRequest_get_statusText_Proxy(IXMLHttpRequest *This, BSTR *pbstrStatus);
+//C       void IXMLHttpRequest_get_statusText_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_get_statusText_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_get_responseXML_Proxy(IXMLHttpRequest *This,IDispatch **ppBody);
+HRESULT  IXMLHttpRequest_get_responseXML_Proxy(IXMLHttpRequest *This, IDispatch **ppBody);
+//C       void IXMLHttpRequest_get_responseXML_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_get_responseXML_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_get_responseText_Proxy(IXMLHttpRequest *This,BSTR *pbstrBody);
+HRESULT  IXMLHttpRequest_get_responseText_Proxy(IXMLHttpRequest *This, BSTR *pbstrBody);
+//C       void IXMLHttpRequest_get_responseText_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_get_responseText_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_get_responseBody_Proxy(IXMLHttpRequest *This,VARIANT *pvarBody);
+HRESULT  IXMLHttpRequest_get_responseBody_Proxy(IXMLHttpRequest *This, VARIANT *pvarBody);
+//C       void IXMLHttpRequest_get_responseBody_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_get_responseBody_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_get_responseStream_Proxy(IXMLHttpRequest *This,VARIANT *pvarBody);
+HRESULT  IXMLHttpRequest_get_responseStream_Proxy(IXMLHttpRequest *This, VARIANT *pvarBody);
+//C       void IXMLHttpRequest_get_responseStream_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_get_responseStream_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_get_readyState_Proxy(IXMLHttpRequest *This,LONG *plState);
+HRESULT  IXMLHttpRequest_get_readyState_Proxy(IXMLHttpRequest *This, LONG *plState);
+//C       void IXMLHttpRequest_get_readyState_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_get_readyState_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLHttpRequest_put_onreadystatechange_Proxy(IXMLHttpRequest *This,IDispatch *pReadyStateSink);
+HRESULT  IXMLHttpRequest_put_onreadystatechange_Proxy(IXMLHttpRequest *This, IDispatch *pReadyStateSink);
+//C       void IXMLHttpRequest_put_onreadystatechange_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLHttpRequest_put_onreadystatechange_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const CLSID CLSID_XMLHTTPRequest;
+extern const CLSID CLSID_XMLHTTPRequest;
+//C       extern const IID IID_IXMLDSOControl;
+extern const IID IID_IXMLDSOControl;
+//C       typedef struct IXMLDSOControlVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDSOControl *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDSOControl *This);
+//C           ULONG ( *Release)(IXMLDSOControl *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDSOControl *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDSOControl *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDSOControl *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDSOControl *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_XMLDocument)(IXMLDSOControl *This,IXMLDOMDocument **ppDoc);
+//C           HRESULT ( *put_XMLDocument)(IXMLDSOControl *This,IXMLDOMDocument *ppDoc);
+//C           HRESULT ( *get_JavaDSOCompatible)(IXMLDSOControl *This,WINBOOL *fJavaDSOCompatible);
+//C           HRESULT ( *put_JavaDSOCompatible)(IXMLDSOControl *This,WINBOOL fJavaDSOCompatible);
+//C           HRESULT ( *get_readyState)(IXMLDSOControl *This,LONG *state);
+//C       } IXMLDSOControlVtbl;
+struct IXMLDSOControlVtbl
+{
+    HRESULT  function(IXMLDSOControl *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDSOControl *This)AddRef;
+    ULONG  function(IXMLDSOControl *This)Release;
+    HRESULT  function(IXMLDSOControl *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDSOControl *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDSOControl *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDSOControl *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDSOControl *This, IXMLDOMDocument **ppDoc)get_XMLDocument;
+    HRESULT  function(IXMLDSOControl *This, IXMLDOMDocument *ppDoc)put_XMLDocument;
+    HRESULT  function(IXMLDSOControl *This, WINBOOL *fJavaDSOCompatible)get_JavaDSOCompatible;
+    HRESULT  function(IXMLDSOControl *This, WINBOOL fJavaDSOCompatible)put_JavaDSOCompatible;
+    HRESULT  function(IXMLDSOControl *This, LONG *state)get_readyState;
+}
+//C       struct IXMLDSOControl {
+//C         struct IXMLDSOControlVtbl *lpVtbl;
+//C       };
+struct IXMLDSOControl
+{
+    IXMLDSOControlVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDSOControl_get_XMLDocument_Proxy(IXMLDSOControl *This,IXMLDOMDocument **ppDoc);
+HRESULT  IXMLDSOControl_get_XMLDocument_Proxy(IXMLDSOControl *This, IXMLDOMDocument **ppDoc);
+//C       void IXMLDSOControl_get_XMLDocument_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDSOControl_get_XMLDocument_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDSOControl_put_XMLDocument_Proxy(IXMLDSOControl *This,IXMLDOMDocument *ppDoc);
+HRESULT  IXMLDSOControl_put_XMLDocument_Proxy(IXMLDSOControl *This, IXMLDOMDocument *ppDoc);
+//C       void IXMLDSOControl_put_XMLDocument_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDSOControl_put_XMLDocument_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDSOControl_get_JavaDSOCompatible_Proxy(IXMLDSOControl *This,WINBOOL *fJavaDSOCompatible);
+HRESULT  IXMLDSOControl_get_JavaDSOCompatible_Proxy(IXMLDSOControl *This, WINBOOL *fJavaDSOCompatible);
+//C       void IXMLDSOControl_get_JavaDSOCompatible_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDSOControl_get_JavaDSOCompatible_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDSOControl_put_JavaDSOCompatible_Proxy(IXMLDSOControl *This,WINBOOL fJavaDSOCompatible);
+HRESULT  IXMLDSOControl_put_JavaDSOCompatible_Proxy(IXMLDSOControl *This, WINBOOL fJavaDSOCompatible);
+//C       void IXMLDSOControl_put_JavaDSOCompatible_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDSOControl_put_JavaDSOCompatible_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDSOControl_get_readyState_Proxy(IXMLDSOControl *This,LONG *state);
+HRESULT  IXMLDSOControl_get_readyState_Proxy(IXMLDSOControl *This, LONG *state);
+//C       void IXMLDSOControl_get_readyState_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDSOControl_get_readyState_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const CLSID CLSID_XMLDSOControl;
+extern const CLSID CLSID_XMLDSOControl;
+//C       extern const IID IID_IXMLElementCollection;
+extern const IID IID_IXMLElementCollection;
+//C       typedef struct IXMLElementCollectionVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLElementCollection *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLElementCollection *This);
+//C           ULONG ( *Release)(IXMLElementCollection *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLElementCollection *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLElementCollection *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLElementCollection *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLElementCollection *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *put_length)(IXMLElementCollection *This,LONG v);
+//C           HRESULT ( *get_length)(IXMLElementCollection *This,LONG *p);
+//C           HRESULT ( *get__newEnum)(IXMLElementCollection *This,IUnknown **ppUnk);
+//C           HRESULT ( *item)(IXMLElementCollection *This,VARIANT var1,VARIANT var2,IDispatch **ppDisp);
+//C       } IXMLElementCollectionVtbl;
+struct IXMLElementCollectionVtbl
+{
+    HRESULT  function(IXMLElementCollection *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLElementCollection *This)AddRef;
+    ULONG  function(IXMLElementCollection *This)Release;
+    HRESULT  function(IXMLElementCollection *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLElementCollection *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLElementCollection *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLElementCollection *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLElementCollection *This, LONG v)put_length;
+    HRESULT  function(IXMLElementCollection *This, LONG *p)get_length;
+    HRESULT  function(IXMLElementCollection *This, IUnknown **ppUnk)get__newEnum;
+    HRESULT  function(IXMLElementCollection *This, VARIANT var1, VARIANT var2, IDispatch **ppDisp)item;
+}
+//C       struct IXMLElementCollection {
+//C         struct IXMLElementCollectionVtbl *lpVtbl;
+//C       };
+struct IXMLElementCollection
+{
+    IXMLElementCollectionVtbl *lpVtbl;
+}
+//C       HRESULT IXMLElementCollection_put_length_Proxy(IXMLElementCollection *This,LONG v);
+HRESULT  IXMLElementCollection_put_length_Proxy(IXMLElementCollection *This, LONG v);
+//C       void IXMLElementCollection_put_length_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElementCollection_put_length_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElementCollection_get_length_Proxy(IXMLElementCollection *This,LONG *p);
+HRESULT  IXMLElementCollection_get_length_Proxy(IXMLElementCollection *This, LONG *p);
+//C       void IXMLElementCollection_get_length_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElementCollection_get_length_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElementCollection_get__newEnum_Proxy(IXMLElementCollection *This,IUnknown **ppUnk);
+HRESULT  IXMLElementCollection_get__newEnum_Proxy(IXMLElementCollection *This, IUnknown **ppUnk);
+//C       void IXMLElementCollection_get__newEnum_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElementCollection_get__newEnum_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElementCollection_item_Proxy(IXMLElementCollection *This,VARIANT var1,VARIANT var2,IDispatch **ppDisp);
+HRESULT  IXMLElementCollection_item_Proxy(IXMLElementCollection *This, VARIANT var1, VARIANT var2, IDispatch **ppDisp);
+//C       void IXMLElementCollection_item_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElementCollection_item_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDocument;
+extern const IID IID_IXMLDocument;
+//C       typedef struct IXMLDocumentVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDocument *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDocument *This);
+//C           ULONG ( *Release)(IXMLDocument *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDocument *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDocument *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDocument *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDocument *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_root)(IXMLDocument *This,IXMLElement **p);
+//C           HRESULT ( *get_fileSize)(IXMLDocument *This,BSTR *p);
+//C           HRESULT ( *get_fileModifiedDate)(IXMLDocument *This,BSTR *p);
+//C           HRESULT ( *get_fileUpdatedDate)(IXMLDocument *This,BSTR *p);
+//C           HRESULT ( *get_URL)(IXMLDocument *This,BSTR *p);
+//C           HRESULT ( *put_URL)(IXMLDocument *This,BSTR p);
+//C           HRESULT ( *get_mimeType)(IXMLDocument *This,BSTR *p);
+//C           HRESULT ( *get_readyState)(IXMLDocument *This,LONG *pl);
+//C           HRESULT ( *get_charset)(IXMLDocument *This,BSTR *p);
+//C           HRESULT ( *put_charset)(IXMLDocument *This,BSTR p);
+//C           HRESULT ( *get_version)(IXMLDocument *This,BSTR *p);
+//C           HRESULT ( *get_doctype)(IXMLDocument *This,BSTR *p);
+//C           HRESULT ( *get_dtdURL)(IXMLDocument *This,BSTR *p);
+//C           HRESULT ( *createElement)(IXMLDocument *This,VARIANT vType,VARIANT var1,IXMLElement **ppElem);
+//C       } IXMLDocumentVtbl;
+struct IXMLDocumentVtbl
+{
+    HRESULT  function(IXMLDocument *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDocument *This)AddRef;
+    ULONG  function(IXMLDocument *This)Release;
+    HRESULT  function(IXMLDocument *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDocument *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDocument *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDocument *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDocument *This, IXMLElement **p)get_root;
+    HRESULT  function(IXMLDocument *This, BSTR *p)get_fileSize;
+    HRESULT  function(IXMLDocument *This, BSTR *p)get_fileModifiedDate;
+    HRESULT  function(IXMLDocument *This, BSTR *p)get_fileUpdatedDate;
+    HRESULT  function(IXMLDocument *This, BSTR *p)get_URL;
+    HRESULT  function(IXMLDocument *This, BSTR p)put_URL;
+    HRESULT  function(IXMLDocument *This, BSTR *p)get_mimeType;
+    HRESULT  function(IXMLDocument *This, LONG *pl)get_readyState;
+    HRESULT  function(IXMLDocument *This, BSTR *p)get_charset;
+    HRESULT  function(IXMLDocument *This, BSTR p)put_charset;
+    HRESULT  function(IXMLDocument *This, BSTR *p)get_version;
+    HRESULT  function(IXMLDocument *This, BSTR *p)get_doctype;
+    HRESULT  function(IXMLDocument *This, BSTR *p)get_dtdURL;
+    HRESULT  function(IXMLDocument *This, VARIANT vType, VARIANT var1, IXMLElement **ppElem)createElement;
+}
+//C       struct IXMLDocument {
+//C         struct IXMLDocumentVtbl *lpVtbl;
+//C       };
+struct IXMLDocument
+{
+    IXMLDocumentVtbl *lpVtbl;
+}
+//C       HRESULT IXMLDocument_get_root_Proxy(IXMLDocument *This,IXMLElement **p);
+HRESULT  IXMLDocument_get_root_Proxy(IXMLDocument *This, IXMLElement **p);
+//C       void IXMLDocument_get_root_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_root_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_get_fileSize_Proxy(IXMLDocument *This,BSTR *p);
+HRESULT  IXMLDocument_get_fileSize_Proxy(IXMLDocument *This, BSTR *p);
+//C       void IXMLDocument_get_fileSize_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_fileSize_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_get_fileModifiedDate_Proxy(IXMLDocument *This,BSTR *p);
+HRESULT  IXMLDocument_get_fileModifiedDate_Proxy(IXMLDocument *This, BSTR *p);
+//C       void IXMLDocument_get_fileModifiedDate_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_fileModifiedDate_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_get_fileUpdatedDate_Proxy(IXMLDocument *This,BSTR *p);
+HRESULT  IXMLDocument_get_fileUpdatedDate_Proxy(IXMLDocument *This, BSTR *p);
+//C       void IXMLDocument_get_fileUpdatedDate_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_fileUpdatedDate_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_get_URL_Proxy(IXMLDocument *This,BSTR *p);
+HRESULT  IXMLDocument_get_URL_Proxy(IXMLDocument *This, BSTR *p);
+//C       void IXMLDocument_get_URL_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_URL_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_put_URL_Proxy(IXMLDocument *This,BSTR p);
+HRESULT  IXMLDocument_put_URL_Proxy(IXMLDocument *This, BSTR p);
+//C       void IXMLDocument_put_URL_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_put_URL_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_get_mimeType_Proxy(IXMLDocument *This,BSTR *p);
+HRESULT  IXMLDocument_get_mimeType_Proxy(IXMLDocument *This, BSTR *p);
+//C       void IXMLDocument_get_mimeType_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_mimeType_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_get_readyState_Proxy(IXMLDocument *This,LONG *pl);
+HRESULT  IXMLDocument_get_readyState_Proxy(IXMLDocument *This, LONG *pl);
+//C       void IXMLDocument_get_readyState_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_readyState_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_get_charset_Proxy(IXMLDocument *This,BSTR *p);
+HRESULT  IXMLDocument_get_charset_Proxy(IXMLDocument *This, BSTR *p);
+//C       void IXMLDocument_get_charset_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_charset_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_put_charset_Proxy(IXMLDocument *This,BSTR p);
+HRESULT  IXMLDocument_put_charset_Proxy(IXMLDocument *This, BSTR p);
+//C       void IXMLDocument_put_charset_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_put_charset_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_get_version_Proxy(IXMLDocument *This,BSTR *p);
+HRESULT  IXMLDocument_get_version_Proxy(IXMLDocument *This, BSTR *p);
+//C       void IXMLDocument_get_version_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_version_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_get_doctype_Proxy(IXMLDocument *This,BSTR *p);
+HRESULT  IXMLDocument_get_doctype_Proxy(IXMLDocument *This, BSTR *p);
+//C       void IXMLDocument_get_doctype_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_doctype_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_get_dtdURL_Proxy(IXMLDocument *This,BSTR *p);
+HRESULT  IXMLDocument_get_dtdURL_Proxy(IXMLDocument *This, BSTR *p);
+//C       void IXMLDocument_get_dtdURL_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_get_dtdURL_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument_createElement_Proxy(IXMLDocument *This,VARIANT vType,VARIANT var1,IXMLElement **ppElem);
+HRESULT  IXMLDocument_createElement_Proxy(IXMLDocument *This, VARIANT vType, VARIANT var1, IXMLElement **ppElem);
+//C       void IXMLDocument_createElement_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument_createElement_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLDocument2;
+extern const IID IID_IXMLDocument2;
+//C       typedef struct IXMLDocument2Vtbl {
+//C           HRESULT ( *QueryInterface)(IXMLDocument2 *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLDocument2 *This);
+//C           ULONG ( *Release)(IXMLDocument2 *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLDocument2 *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLDocument2 *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLDocument2 *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLDocument2 *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_root)(IXMLDocument2 *This,IXMLElement2 **p);
+//C           HRESULT ( *get_fileSize)(IXMLDocument2 *This,BSTR *p);
+//C           HRESULT ( *get_fileModifiedDate)(IXMLDocument2 *This,BSTR *p);
+//C           HRESULT ( *get_fileUpdatedDate)(IXMLDocument2 *This,BSTR *p);
+//C           HRESULT ( *get_URL)(IXMLDocument2 *This,BSTR *p);
+//C           HRESULT ( *put_URL)(IXMLDocument2 *This,BSTR p);
+//C           HRESULT ( *get_mimeType)(IXMLDocument2 *This,BSTR *p);
+//C           HRESULT ( *get_readyState)(IXMLDocument2 *This,LONG *pl);
+//C           HRESULT ( *get_charset)(IXMLDocument2 *This,BSTR *p);
+//C           HRESULT ( *put_charset)(IXMLDocument2 *This,BSTR p);
+//C           HRESULT ( *get_version)(IXMLDocument2 *This,BSTR *p);
+//C           HRESULT ( *get_doctype)(IXMLDocument2 *This,BSTR *p);
+//C           HRESULT ( *get_dtdURL)(IXMLDocument2 *This,BSTR *p);
+//C           HRESULT ( *createElement)(IXMLDocument2 *This,VARIANT vType,VARIANT var1,IXMLElement2 **ppElem);
+//C           HRESULT ( *get_async)(IXMLDocument2 *This,VARIANT_BOOL *pf);
+//C           HRESULT ( *put_async)(IXMLDocument2 *This,VARIANT_BOOL f);
+//C       } IXMLDocument2Vtbl;
+struct IXMLDocument2Vtbl
+{
+    HRESULT  function(IXMLDocument2 *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLDocument2 *This)AddRef;
+    ULONG  function(IXMLDocument2 *This)Release;
+    HRESULT  function(IXMLDocument2 *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLDocument2 *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLDocument2 *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLDocument2 *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLDocument2 *This, IXMLElement2 **p)get_root;
+    HRESULT  function(IXMLDocument2 *This, BSTR *p)get_fileSize;
+    HRESULT  function(IXMLDocument2 *This, BSTR *p)get_fileModifiedDate;
+    HRESULT  function(IXMLDocument2 *This, BSTR *p)get_fileUpdatedDate;
+    HRESULT  function(IXMLDocument2 *This, BSTR *p)get_URL;
+    HRESULT  function(IXMLDocument2 *This, BSTR p)put_URL;
+    HRESULT  function(IXMLDocument2 *This, BSTR *p)get_mimeType;
+    HRESULT  function(IXMLDocument2 *This, LONG *pl)get_readyState;
+    HRESULT  function(IXMLDocument2 *This, BSTR *p)get_charset;
+    HRESULT  function(IXMLDocument2 *This, BSTR p)put_charset;
+    HRESULT  function(IXMLDocument2 *This, BSTR *p)get_version;
+    HRESULT  function(IXMLDocument2 *This, BSTR *p)get_doctype;
+    HRESULT  function(IXMLDocument2 *This, BSTR *p)get_dtdURL;
+    HRESULT  function(IXMLDocument2 *This, VARIANT vType, VARIANT var1, IXMLElement2 **ppElem)createElement;
+    HRESULT  function(IXMLDocument2 *This, VARIANT_BOOL *pf)get_async;
+    HRESULT  function(IXMLDocument2 *This, VARIANT_BOOL f)put_async;
+}
+//C       struct IXMLDocument2 {
+//C         struct IXMLDocument2Vtbl *lpVtbl;
+//C       };
+struct IXMLDocument2
+{
+    IXMLDocument2Vtbl *lpVtbl;
+}
+//C       HRESULT IXMLDocument2_get_root_Proxy(IXMLDocument2 *This,IXMLElement2 **p);
+HRESULT  IXMLDocument2_get_root_Proxy(IXMLDocument2 *This, IXMLElement2 **p);
+//C       void IXMLDocument2_get_root_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_root_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_fileSize_Proxy(IXMLDocument2 *This,BSTR *p);
+HRESULT  IXMLDocument2_get_fileSize_Proxy(IXMLDocument2 *This, BSTR *p);
+//C       void IXMLDocument2_get_fileSize_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_fileSize_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_fileModifiedDate_Proxy(IXMLDocument2 *This,BSTR *p);
+HRESULT  IXMLDocument2_get_fileModifiedDate_Proxy(IXMLDocument2 *This, BSTR *p);
+//C       void IXMLDocument2_get_fileModifiedDate_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_fileModifiedDate_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_fileUpdatedDate_Proxy(IXMLDocument2 *This,BSTR *p);
+HRESULT  IXMLDocument2_get_fileUpdatedDate_Proxy(IXMLDocument2 *This, BSTR *p);
+//C       void IXMLDocument2_get_fileUpdatedDate_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_fileUpdatedDate_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_URL_Proxy(IXMLDocument2 *This,BSTR *p);
+HRESULT  IXMLDocument2_get_URL_Proxy(IXMLDocument2 *This, BSTR *p);
+//C       void IXMLDocument2_get_URL_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_URL_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_put_URL_Proxy(IXMLDocument2 *This,BSTR p);
+HRESULT  IXMLDocument2_put_URL_Proxy(IXMLDocument2 *This, BSTR p);
+//C       void IXMLDocument2_put_URL_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_put_URL_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_mimeType_Proxy(IXMLDocument2 *This,BSTR *p);
+HRESULT  IXMLDocument2_get_mimeType_Proxy(IXMLDocument2 *This, BSTR *p);
+//C       void IXMLDocument2_get_mimeType_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_mimeType_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_readyState_Proxy(IXMLDocument2 *This,LONG *pl);
+HRESULT  IXMLDocument2_get_readyState_Proxy(IXMLDocument2 *This, LONG *pl);
+//C       void IXMLDocument2_get_readyState_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_readyState_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_charset_Proxy(IXMLDocument2 *This,BSTR *p);
+HRESULT  IXMLDocument2_get_charset_Proxy(IXMLDocument2 *This, BSTR *p);
+//C       void IXMLDocument2_get_charset_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_charset_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_put_charset_Proxy(IXMLDocument2 *This,BSTR p);
+HRESULT  IXMLDocument2_put_charset_Proxy(IXMLDocument2 *This, BSTR p);
+//C       void IXMLDocument2_put_charset_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_put_charset_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_version_Proxy(IXMLDocument2 *This,BSTR *p);
+HRESULT  IXMLDocument2_get_version_Proxy(IXMLDocument2 *This, BSTR *p);
+//C       void IXMLDocument2_get_version_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_version_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_doctype_Proxy(IXMLDocument2 *This,BSTR *p);
+HRESULT  IXMLDocument2_get_doctype_Proxy(IXMLDocument2 *This, BSTR *p);
+//C       void IXMLDocument2_get_doctype_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_doctype_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_dtdURL_Proxy(IXMLDocument2 *This,BSTR *p);
+HRESULT  IXMLDocument2_get_dtdURL_Proxy(IXMLDocument2 *This, BSTR *p);
+//C       void IXMLDocument2_get_dtdURL_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_dtdURL_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_createElement_Proxy(IXMLDocument2 *This,VARIANT vType,VARIANT var1,IXMLElement2 **ppElem);
+HRESULT  IXMLDocument2_createElement_Proxy(IXMLDocument2 *This, VARIANT vType, VARIANT var1, IXMLElement2 **ppElem);
+//C       void IXMLDocument2_createElement_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_createElement_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_get_async_Proxy(IXMLDocument2 *This,VARIANT_BOOL *pf);
+HRESULT  IXMLDocument2_get_async_Proxy(IXMLDocument2 *This, VARIANT_BOOL *pf);
+//C       void IXMLDocument2_get_async_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_get_async_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLDocument2_put_async_Proxy(IXMLDocument2 *This,VARIANT_BOOL f);
+HRESULT  IXMLDocument2_put_async_Proxy(IXMLDocument2 *This, VARIANT_BOOL f);
+//C       void IXMLDocument2_put_async_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLDocument2_put_async_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLElement;
+extern const IID IID_IXMLElement;
+//C       typedef struct IXMLElementVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLElement *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLElement *This);
+//C           ULONG ( *Release)(IXMLElement *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLElement *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLElement *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLElement *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLElement *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_tagName)(IXMLElement *This,BSTR *p);
+//C           HRESULT ( *put_tagName)(IXMLElement *This,BSTR p);
+//C           HRESULT ( *get_parent)(IXMLElement *This,IXMLElement **ppParent);
+//C           HRESULT ( *setAttribute)(IXMLElement *This,BSTR strPropertyName,VARIANT PropertyValue);
+//C           HRESULT ( *getAttribute)(IXMLElement *This,BSTR strPropertyName,VARIANT *PropertyValue);
+//C           HRESULT ( *removeAttribute)(IXMLElement *This,BSTR strPropertyName);
+//C           HRESULT ( *get_children)(IXMLElement *This,IXMLElementCollection **pp);
+//C           HRESULT ( *get_type)(IXMLElement *This,LONG *plType);
+//C           HRESULT ( *get_text)(IXMLElement *This,BSTR *p);
+//C           HRESULT ( *put_text)(IXMLElement *This,BSTR p);
+//C           HRESULT ( *addChild)(IXMLElement *This,IXMLElement *pChildElem,LONG lIndex,LONG lReserved);
+//C           HRESULT ( *removeChild)(IXMLElement *This,IXMLElement *pChildElem);
+//C       } IXMLElementVtbl;
+struct IXMLElementVtbl
+{
+    HRESULT  function(IXMLElement *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLElement *This)AddRef;
+    ULONG  function(IXMLElement *This)Release;
+    HRESULT  function(IXMLElement *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLElement *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLElement *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLElement *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLElement *This, BSTR *p)get_tagName;
+    HRESULT  function(IXMLElement *This, BSTR p)put_tagName;
+    HRESULT  function(IXMLElement *This, IXMLElement **ppParent)get_parent;
+    HRESULT  function(IXMLElement *This, BSTR strPropertyName, VARIANT PropertyValue)setAttribute;
+    HRESULT  function(IXMLElement *This, BSTR strPropertyName, VARIANT *PropertyValue)getAttribute;
+    HRESULT  function(IXMLElement *This, BSTR strPropertyName)removeAttribute;
+    HRESULT  function(IXMLElement *This, IXMLElementCollection **pp)get_children;
+    HRESULT  function(IXMLElement *This, LONG *plType)get_type;
+    HRESULT  function(IXMLElement *This, BSTR *p)get_text;
+    HRESULT  function(IXMLElement *This, BSTR p)put_text;
+    HRESULT  function(IXMLElement *This, IXMLElement *pChildElem, LONG lIndex, LONG lReserved)addChild;
+    HRESULT  function(IXMLElement *This, IXMLElement *pChildElem)removeChild;
+}
+//C       struct IXMLElement {
+//C         struct IXMLElementVtbl *lpVtbl;
+//C       };
+struct IXMLElement
+{
+    IXMLElementVtbl *lpVtbl;
+}
+//C       HRESULT IXMLElement_get_tagName_Proxy(IXMLElement *This,BSTR *p);
+HRESULT  IXMLElement_get_tagName_Proxy(IXMLElement *This, BSTR *p);
+//C       void IXMLElement_get_tagName_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_get_tagName_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_put_tagName_Proxy(IXMLElement *This,BSTR p);
+HRESULT  IXMLElement_put_tagName_Proxy(IXMLElement *This, BSTR p);
+//C       void IXMLElement_put_tagName_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_put_tagName_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_get_parent_Proxy(IXMLElement *This,IXMLElement **ppParent);
+HRESULT  IXMLElement_get_parent_Proxy(IXMLElement *This, IXMLElement **ppParent);
+//C       void IXMLElement_get_parent_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_get_parent_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_setAttribute_Proxy(IXMLElement *This,BSTR strPropertyName,VARIANT PropertyValue);
+HRESULT  IXMLElement_setAttribute_Proxy(IXMLElement *This, BSTR strPropertyName, VARIANT PropertyValue);
+//C       void IXMLElement_setAttribute_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_setAttribute_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_getAttribute_Proxy(IXMLElement *This,BSTR strPropertyName,VARIANT *PropertyValue);
+HRESULT  IXMLElement_getAttribute_Proxy(IXMLElement *This, BSTR strPropertyName, VARIANT *PropertyValue);
+//C       void IXMLElement_getAttribute_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_getAttribute_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_removeAttribute_Proxy(IXMLElement *This,BSTR strPropertyName);
+HRESULT  IXMLElement_removeAttribute_Proxy(IXMLElement *This, BSTR strPropertyName);
+//C       void IXMLElement_removeAttribute_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_removeAttribute_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_get_children_Proxy(IXMLElement *This,IXMLElementCollection **pp);
+HRESULT  IXMLElement_get_children_Proxy(IXMLElement *This, IXMLElementCollection **pp);
+//C       void IXMLElement_get_children_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_get_children_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_get_type_Proxy(IXMLElement *This,LONG *plType);
+HRESULT  IXMLElement_get_type_Proxy(IXMLElement *This, LONG *plType);
+//C       void IXMLElement_get_type_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_get_type_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_get_text_Proxy(IXMLElement *This,BSTR *p);
+HRESULT  IXMLElement_get_text_Proxy(IXMLElement *This, BSTR *p);
+//C       void IXMLElement_get_text_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_get_text_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_put_text_Proxy(IXMLElement *This,BSTR p);
+HRESULT  IXMLElement_put_text_Proxy(IXMLElement *This, BSTR p);
+//C       void IXMLElement_put_text_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_put_text_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_addChild_Proxy(IXMLElement *This,IXMLElement *pChildElem,LONG lIndex,LONG lReserved);
+HRESULT  IXMLElement_addChild_Proxy(IXMLElement *This, IXMLElement *pChildElem, LONG lIndex, LONG lReserved);
+//C       void IXMLElement_addChild_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_addChild_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement_removeChild_Proxy(IXMLElement *This,IXMLElement *pChildElem);
+HRESULT  IXMLElement_removeChild_Proxy(IXMLElement *This, IXMLElement *pChildElem);
+//C       void IXMLElement_removeChild_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement_removeChild_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLElement2;
+extern const IID IID_IXMLElement2;
+//C       typedef struct IXMLElement2Vtbl {
+//C           HRESULT ( *QueryInterface)(IXMLElement2 *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLElement2 *This);
+//C           ULONG ( *Release)(IXMLElement2 *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLElement2 *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLElement2 *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLElement2 *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLElement2 *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_tagName)(IXMLElement2 *This,BSTR *p);
+//C           HRESULT ( *put_tagName)(IXMLElement2 *This,BSTR p);
+//C           HRESULT ( *get_parent)(IXMLElement2 *This,IXMLElement2 **ppParent);
+//C           HRESULT ( *setAttribute)(IXMLElement2 *This,BSTR strPropertyName,VARIANT PropertyValue);
+//C           HRESULT ( *getAttribute)(IXMLElement2 *This,BSTR strPropertyName,VARIANT *PropertyValue);
+//C           HRESULT ( *removeAttribute)(IXMLElement2 *This,BSTR strPropertyName);
+//C           HRESULT ( *get_children)(IXMLElement2 *This,IXMLElementCollection **pp);
+//C           HRESULT ( *get_type)(IXMLElement2 *This,LONG *plType);
+//C           HRESULT ( *get_text)(IXMLElement2 *This,BSTR *p);
+//C           HRESULT ( *put_text)(IXMLElement2 *This,BSTR p);
+//C           HRESULT ( *addChild)(IXMLElement2 *This,IXMLElement2 *pChildElem,LONG lIndex,LONG lReserved);
+//C           HRESULT ( *removeChild)(IXMLElement2 *This,IXMLElement2 *pChildElem);
+//C           HRESULT ( *get_attributes)(IXMLElement2 *This,IXMLElementCollection **pp);
+//C       } IXMLElement2Vtbl;
+struct IXMLElement2Vtbl
+{
+    HRESULT  function(IXMLElement2 *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLElement2 *This)AddRef;
+    ULONG  function(IXMLElement2 *This)Release;
+    HRESULT  function(IXMLElement2 *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLElement2 *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLElement2 *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLElement2 *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLElement2 *This, BSTR *p)get_tagName;
+    HRESULT  function(IXMLElement2 *This, BSTR p)put_tagName;
+    HRESULT  function(IXMLElement2 *This, IXMLElement2 **ppParent)get_parent;
+    HRESULT  function(IXMLElement2 *This, BSTR strPropertyName, VARIANT PropertyValue)setAttribute;
+    HRESULT  function(IXMLElement2 *This, BSTR strPropertyName, VARIANT *PropertyValue)getAttribute;
+    HRESULT  function(IXMLElement2 *This, BSTR strPropertyName)removeAttribute;
+    HRESULT  function(IXMLElement2 *This, IXMLElementCollection **pp)get_children;
+    HRESULT  function(IXMLElement2 *This, LONG *plType)get_type;
+    HRESULT  function(IXMLElement2 *This, BSTR *p)get_text;
+    HRESULT  function(IXMLElement2 *This, BSTR p)put_text;
+    HRESULT  function(IXMLElement2 *This, IXMLElement2 *pChildElem, LONG lIndex, LONG lReserved)addChild;
+    HRESULT  function(IXMLElement2 *This, IXMLElement2 *pChildElem)removeChild;
+    HRESULT  function(IXMLElement2 *This, IXMLElementCollection **pp)get_attributes;
+}
+//C       struct IXMLElement2 {
+//C         struct IXMLElement2Vtbl *lpVtbl;
+//C       };
+struct IXMLElement2
+{
+    IXMLElement2Vtbl *lpVtbl;
+}
+//C       HRESULT IXMLElement2_get_tagName_Proxy(IXMLElement2 *This,BSTR *p);
+HRESULT  IXMLElement2_get_tagName_Proxy(IXMLElement2 *This, BSTR *p);
+//C       void IXMLElement2_get_tagName_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_get_tagName_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_put_tagName_Proxy(IXMLElement2 *This,BSTR p);
+HRESULT  IXMLElement2_put_tagName_Proxy(IXMLElement2 *This, BSTR p);
+//C       void IXMLElement2_put_tagName_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_put_tagName_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_get_parent_Proxy(IXMLElement2 *This,IXMLElement2 **ppParent);
+HRESULT  IXMLElement2_get_parent_Proxy(IXMLElement2 *This, IXMLElement2 **ppParent);
+//C       void IXMLElement2_get_parent_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_get_parent_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_setAttribute_Proxy(IXMLElement2 *This,BSTR strPropertyName,VARIANT PropertyValue);
+HRESULT  IXMLElement2_setAttribute_Proxy(IXMLElement2 *This, BSTR strPropertyName, VARIANT PropertyValue);
+//C       void IXMLElement2_setAttribute_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_setAttribute_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_getAttribute_Proxy(IXMLElement2 *This,BSTR strPropertyName,VARIANT *PropertyValue);
+HRESULT  IXMLElement2_getAttribute_Proxy(IXMLElement2 *This, BSTR strPropertyName, VARIANT *PropertyValue);
+//C       void IXMLElement2_getAttribute_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_getAttribute_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_removeAttribute_Proxy(IXMLElement2 *This,BSTR strPropertyName);
+HRESULT  IXMLElement2_removeAttribute_Proxy(IXMLElement2 *This, BSTR strPropertyName);
+//C       void IXMLElement2_removeAttribute_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_removeAttribute_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_get_children_Proxy(IXMLElement2 *This,IXMLElementCollection **pp);
+HRESULT  IXMLElement2_get_children_Proxy(IXMLElement2 *This, IXMLElementCollection **pp);
+//C       void IXMLElement2_get_children_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_get_children_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_get_type_Proxy(IXMLElement2 *This,LONG *plType);
+HRESULT  IXMLElement2_get_type_Proxy(IXMLElement2 *This, LONG *plType);
+//C       void IXMLElement2_get_type_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_get_type_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_get_text_Proxy(IXMLElement2 *This,BSTR *p);
+HRESULT  IXMLElement2_get_text_Proxy(IXMLElement2 *This, BSTR *p);
+//C       void IXMLElement2_get_text_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_get_text_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_put_text_Proxy(IXMLElement2 *This,BSTR p);
+HRESULT  IXMLElement2_put_text_Proxy(IXMLElement2 *This, BSTR p);
+//C       void IXMLElement2_put_text_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_put_text_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_addChild_Proxy(IXMLElement2 *This,IXMLElement2 *pChildElem,LONG lIndex,LONG lReserved);
+HRESULT  IXMLElement2_addChild_Proxy(IXMLElement2 *This, IXMLElement2 *pChildElem, LONG lIndex, LONG lReserved);
+//C       void IXMLElement2_addChild_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_addChild_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_removeChild_Proxy(IXMLElement2 *This,IXMLElement2 *pChildElem);
+HRESULT  IXMLElement2_removeChild_Proxy(IXMLElement2 *This, IXMLElement2 *pChildElem);
+//C       void IXMLElement2_removeChild_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_removeChild_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLElement2_get_attributes_Proxy(IXMLElement2 *This,IXMLElementCollection **pp);
+HRESULT  IXMLElement2_get_attributes_Proxy(IXMLElement2 *This, IXMLElementCollection **pp);
+//C       void IXMLElement2_get_attributes_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLElement2_get_attributes_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLAttribute;
+extern const IID IID_IXMLAttribute;
+//C       typedef struct IXMLAttributeVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLAttribute *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLAttribute *This);
+//C           ULONG ( *Release)(IXMLAttribute *This);
+//C           HRESULT ( *GetTypeInfoCount)(IXMLAttribute *This,UINT *pctinfo);
+//C           HRESULT ( *GetTypeInfo)(IXMLAttribute *This,UINT iTInfo,LCID lcid,ITypeInfo **ppTInfo);
+//C           HRESULT ( *GetIDsOfNames)(IXMLAttribute *This,const IID *const riid,LPOLESTR *rgszNames,UINT cNames,LCID lcid,DISPID *rgDispId);
+//C           HRESULT ( *Invoke)(IXMLAttribute *This,DISPID dispIdMember,const IID *const riid,LCID lcid,WORD wFlags,DISPPARAMS *pDispParams,VARIANT *pVarResult,EXCEPINFO *pExcepInfo,UINT *puArgErr);
+//C           HRESULT ( *get_name)(IXMLAttribute *This,BSTR *n);
+//C           HRESULT ( *get_value)(IXMLAttribute *This,BSTR *v);
+//C       } IXMLAttributeVtbl;
+struct IXMLAttributeVtbl
+{
+    HRESULT  function(IXMLAttribute *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLAttribute *This)AddRef;
+    ULONG  function(IXMLAttribute *This)Release;
+    HRESULT  function(IXMLAttribute *This, UINT *pctinfo)GetTypeInfoCount;
+    HRESULT  function(IXMLAttribute *This, UINT iTInfo, LCID lcid, ITypeInfo **ppTInfo)GetTypeInfo;
+    HRESULT  function(IXMLAttribute *This, IID *riid, LPOLESTR *rgszNames, UINT cNames, LCID lcid, DISPID *rgDispId)GetIDsOfNames;
+    HRESULT  function(IXMLAttribute *This, DISPID dispIdMember, IID *riid, LCID lcid, WORD wFlags, DISPPARAMS *pDispParams, VARIANT *pVarResult, EXCEPINFO *pExcepInfo, UINT *puArgErr)Invoke;
+    HRESULT  function(IXMLAttribute *This, BSTR *n)get_name;
+    HRESULT  function(IXMLAttribute *This, BSTR *v)get_value;
+}
+//C       struct IXMLAttribute {
+//C         struct IXMLAttributeVtbl *lpVtbl;
+//C       };
+struct IXMLAttribute
+{
+    IXMLAttributeVtbl *lpVtbl;
+}
+//C       HRESULT IXMLAttribute_get_name_Proxy(IXMLAttribute *This,BSTR *n);
+HRESULT  IXMLAttribute_get_name_Proxy(IXMLAttribute *This, BSTR *n);
+//C       void IXMLAttribute_get_name_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLAttribute_get_name_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IXMLAttribute_get_value_Proxy(IXMLAttribute *This,BSTR *v);
+HRESULT  IXMLAttribute_get_value_Proxy(IXMLAttribute *This, BSTR *v);
+//C       void IXMLAttribute_get_value_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLAttribute_get_value_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IXMLError;
+extern const IID IID_IXMLError;
+//C       typedef struct IXMLErrorVtbl {
+//C           HRESULT ( *QueryInterface)(IXMLError *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IXMLError *This);
+//C           ULONG ( *Release)(IXMLError *This);
+//C           HRESULT ( *GetErrorInfo)(IXMLError *This,XML_ERROR *pErrorReturn);
+//C       } IXMLErrorVtbl;
+struct IXMLErrorVtbl
+{
+    HRESULT  function(IXMLError *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IXMLError *This)AddRef;
+    ULONG  function(IXMLError *This)Release;
+    HRESULT  function(IXMLError *This, XML_ERROR *pErrorReturn)GetErrorInfo;
+}
+//C       struct IXMLError {
+//C         struct IXMLErrorVtbl *lpVtbl;
+//C       };
+struct IXMLError
+{
+    IXMLErrorVtbl *lpVtbl;
+}
+//C       HRESULT IXMLError_GetErrorInfo_Proxy(IXMLError *This,XML_ERROR *pErrorReturn);
+HRESULT  IXMLError_GetErrorInfo_Proxy(IXMLError *This, XML_ERROR *pErrorReturn);
+//C       void IXMLError_GetErrorInfo_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IXMLError_GetErrorInfo_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const CLSID CLSID_XMLDocument;
+extern const CLSID CLSID_XMLDocument;
+//C       extern const IID CLSID_SBS_StdURLMoniker;
+extern const IID CLSID_SBS_StdURLMoniker;
+//C       extern const IID CLSID_SBS_HttpProtocol;
+extern const IID CLSID_SBS_HttpProtocol;
+//C       extern const IID CLSID_SBS_FtpProtocol;
+extern const IID CLSID_SBS_FtpProtocol;
+//C       extern const IID CLSID_SBS_GopherProtocol;
+extern const IID CLSID_SBS_GopherProtocol;
+//C       extern const IID CLSID_SBS_HttpSProtocol;
+extern const IID CLSID_SBS_HttpSProtocol;
+//C       extern const IID CLSID_SBS_FileProtocol;
+extern const IID CLSID_SBS_FileProtocol;
+//C       extern const IID CLSID_SBS_MkProtocol;
+extern const IID CLSID_SBS_MkProtocol;
+//C       extern const IID CLSID_SBS_UrlMkBindCtx;
+extern const IID CLSID_SBS_UrlMkBindCtx;
+//C       extern const IID CLSID_SBS_SoftDistExt;
+extern const IID CLSID_SBS_SoftDistExt;
+//C       extern const IID CLSID_SBS_StdEncodingFilterFac;
+extern const IID CLSID_SBS_StdEncodingFilterFac;
+//C       extern const IID CLSID_SBS_DeCompMimeFilter;
+extern const IID CLSID_SBS_DeCompMimeFilter;
+//C       extern const IID CLSID_SBS_CdlProtocol;
+extern const IID CLSID_SBS_CdlProtocol;
+//C       extern const IID CLSID_SBS_ClassInstallFilter;
+extern const IID CLSID_SBS_ClassInstallFilter;
+//C       extern const IID CLSID_SBS_InternetSecurityManager;
+extern const IID CLSID_SBS_InternetSecurityManager;
+//C       extern const IID CLSID_SBS_InternetZoneManager;
+extern const IID CLSID_SBS_InternetZoneManager;
+//C       extern const IID IID_IAsyncMoniker;
+extern const IID IID_IAsyncMoniker;
+//C       extern const IID CLSID_StdURLMoniker;
+extern const IID CLSID_StdURLMoniker;
+//C       extern const IID CLSID_HttpProtocol;
+extern const IID CLSID_HttpProtocol;
+//C       extern const IID CLSID_FtpProtocol;
+extern const IID CLSID_FtpProtocol;
+//C       extern const IID CLSID_GopherProtocol;
+extern const IID CLSID_GopherProtocol;
+//C       extern const IID CLSID_HttpSProtocol;
+extern const IID CLSID_HttpSProtocol;
+//C       extern const IID CLSID_FileProtocol;
+extern const IID CLSID_FileProtocol;
+//C       extern const IID CLSID_MkProtocol;
+extern const IID CLSID_MkProtocol;
+//C       extern const IID CLSID_StdURLProtocol;
+extern const IID CLSID_StdURLProtocol;
+//C       extern const IID CLSID_UrlMkBindCtx;
+extern const IID CLSID_UrlMkBindCtx;
+//C       extern const IID CLSID_StdEncodingFilterFac;
+extern const IID CLSID_StdEncodingFilterFac;
+//C       extern const IID CLSID_DeCompMimeFilter;
+extern const IID CLSID_DeCompMimeFilter;
+//C       extern const IID CLSID_CdlProtocol;
+extern const IID CLSID_CdlProtocol;
+//C       extern const IID CLSID_ClassInstallFilter;
+extern const IID CLSID_ClassInstallFilter;
+//C       extern const IID IID_IAsyncBindCtx;
+extern const IID IID_IAsyncBindCtx;
+//C       extern HRESULT CreateURLMoniker(LPMONIKER pMkCtx,LPCWSTR szURL,LPMONIKER *ppmk);
+HRESULT  CreateURLMoniker(LPMONIKER pMkCtx, LPCWSTR szURL, LPMONIKER *ppmk);
+//C       extern HRESULT CreateURLMonikerEx(LPMONIKER pMkCtx,LPCWSTR szURL,LPMONIKER *ppmk,DWORD dwFlags);
+HRESULT  CreateURLMonikerEx(LPMONIKER pMkCtx, LPCWSTR szURL, LPMONIKER *ppmk, DWORD dwFlags);
+//C       extern HRESULT GetClassURL(LPCWSTR szURL,CLSID *pClsID);
+HRESULT  GetClassURL(LPCWSTR szURL, CLSID *pClsID);
+//C       extern HRESULT CreateAsyncBindCtx(DWORD reserved,IBindStatusCallback *pBSCb,IEnumFORMATETC *pEFetc,IBindCtx **ppBC);
+HRESULT  CreateAsyncBindCtx(DWORD reserved, IBindStatusCallback *pBSCb, IEnumFORMATETC *pEFetc, IBindCtx **ppBC);
+//C       extern HRESULT CreateAsyncBindCtxEx(IBindCtx *pbc,DWORD dwOptions,IBindStatusCallback *pBSCb,IEnumFORMATETC *pEnum,IBindCtx **ppBC,DWORD reserved);
+HRESULT  CreateAsyncBindCtxEx(IBindCtx *pbc, DWORD dwOptions, IBindStatusCallback *pBSCb, IEnumFORMATETC *pEnum, IBindCtx **ppBC, DWORD reserved);
+//C       extern HRESULT MkParseDisplayNameEx(IBindCtx *pbc,LPCWSTR szDisplayName,ULONG *pchEaten,LPMONIKER *ppmk);
+HRESULT  MkParseDisplayNameEx(IBindCtx *pbc, LPCWSTR szDisplayName, ULONG *pchEaten, LPMONIKER *ppmk);
+//C       extern HRESULT RegisterBindStatusCallback(LPBC pBC,IBindStatusCallback *pBSCb,IBindStatusCallback **ppBSCBPrev,DWORD dwReserved);
+HRESULT  RegisterBindStatusCallback(LPBC pBC, IBindStatusCallback *pBSCb, IBindStatusCallback **ppBSCBPrev, DWORD dwReserved);
+//C       extern HRESULT RevokeBindStatusCallback(LPBC pBC,IBindStatusCallback *pBSCb);
+HRESULT  RevokeBindStatusCallback(LPBC pBC, IBindStatusCallback *pBSCb);
+//C       extern HRESULT GetClassFileOrMime(LPBC pBC,LPCWSTR szFilename,LPVOID pBuffer,DWORD cbSize,LPCWSTR szMime,DWORD dwReserved,CLSID *pclsid);
+HRESULT  GetClassFileOrMime(LPBC pBC, LPCWSTR szFilename, LPVOID pBuffer, DWORD cbSize, LPCWSTR szMime, DWORD dwReserved, CLSID *pclsid);
+//C       extern HRESULT IsValidURL(LPBC pBC,LPCWSTR szURL,DWORD dwReserved);
+HRESULT  IsValidURL(LPBC pBC, LPCWSTR szURL, DWORD dwReserved);
+//C       extern HRESULT CoGetClassObjectFromURL(const IID *const rCLASSID,LPCWSTR szCODE,DWORD dwFileVersionMS,DWORD dwFileVersionLS,LPCWSTR szTYPE,LPBINDCTX pBindCtx,DWORD dwClsContext,LPVOID pvReserved,const IID *const riid,LPVOID *ppv);
+HRESULT  CoGetClassObjectFromURL(IID *rCLASSID, LPCWSTR szCODE, DWORD dwFileVersionMS, DWORD dwFileVersionLS, LPCWSTR szTYPE, LPBINDCTX pBindCtx, DWORD dwClsContext, LPVOID pvReserved, IID *riid, LPVOID *ppv);
+//C       extern HRESULT FaultInIEFeature(HWND hWnd,uCLSSPEC *pClassSpec,QUERYCONTEXT *pQuery,DWORD dwFlags);
+HRESULT  FaultInIEFeature(HWND hWnd, uCLSSPEC *pClassSpec, QUERYCONTEXT *pQuery, DWORD dwFlags);
+//C       extern HRESULT GetComponentIDFromCLSSPEC(uCLSSPEC *pClassspec,LPSTR *ppszComponentID);
+HRESULT  GetComponentIDFromCLSSPEC(uCLSSPEC *pClassspec, LPSTR *ppszComponentID);
+//C       extern HRESULT IsAsyncMoniker(IMoniker *pmk);
+HRESULT  IsAsyncMoniker(IMoniker *pmk);
+//C       extern HRESULT CreateURLBinding(LPCWSTR lpszUrl,IBindCtx *pbc,IBinding **ppBdg);
+HRESULT  CreateURLBinding(LPCWSTR lpszUrl, IBindCtx *pbc, IBinding **ppBdg);
+//C       extern HRESULT RegisterMediaTypes(UINT ctypes,const LPCSTR *rgszTypes,CLIPFORMAT *rgcfTypes);
+HRESULT  RegisterMediaTypes(UINT ctypes, LPCSTR *rgszTypes, CLIPFORMAT *rgcfTypes);
+//C       extern HRESULT FindMediaType(LPCSTR rgszTypes,CLIPFORMAT *rgcfTypes);
+HRESULT  FindMediaType(LPCSTR rgszTypes, CLIPFORMAT *rgcfTypes);
+//C       extern HRESULT CreateFormatEnumerator(UINT cfmtetc,FORMATETC *rgfmtetc,IEnumFORMATETC **ppenumfmtetc);
+HRESULT  CreateFormatEnumerator(UINT cfmtetc, FORMATETC *rgfmtetc, IEnumFORMATETC **ppenumfmtetc);
+//C       extern HRESULT RegisterFormatEnumerator(LPBC pBC,IEnumFORMATETC *pEFetc,DWORD reserved);
+HRESULT  RegisterFormatEnumerator(LPBC pBC, IEnumFORMATETC *pEFetc, DWORD reserved);
+//C       extern HRESULT RevokeFormatEnumerator(LPBC pBC,IEnumFORMATETC *pEFetc);
+HRESULT  RevokeFormatEnumerator(LPBC pBC, IEnumFORMATETC *pEFetc);
+//C       extern HRESULT RegisterMediaTypeClass(LPBC pBC,UINT ctypes,const LPCSTR *rgszTypes,CLSID *rgclsID,DWORD reserved);
+HRESULT  RegisterMediaTypeClass(LPBC pBC, UINT ctypes, LPCSTR *rgszTypes, CLSID *rgclsID, DWORD reserved);
+//C       extern HRESULT FindMediaTypeClass(LPBC pBC,LPCSTR szType,CLSID *pclsID,DWORD reserved);
+HRESULT  FindMediaTypeClass(LPBC pBC, LPCSTR szType, CLSID *pclsID, DWORD reserved);
+//C       extern HRESULT UrlMkSetSessionOption(DWORD dwOption,LPVOID pBuffer,DWORD dwBufferLength,DWORD dwReserved);
+HRESULT  UrlMkSetSessionOption(DWORD dwOption, LPVOID pBuffer, DWORD dwBufferLength, DWORD dwReserved);
+//C       extern HRESULT UrlMkGetSessionOption(DWORD dwOption,LPVOID pBuffer,DWORD dwBufferLength,DWORD *pdwBufferLength,DWORD dwReserved);
+HRESULT  UrlMkGetSessionOption(DWORD dwOption, LPVOID pBuffer, DWORD dwBufferLength, DWORD *pdwBufferLength, DWORD dwReserved);
+//C       extern HRESULT FindMimeFromData(LPBC pBC,LPCWSTR pwzUrl,LPVOID pBuffer,DWORD cbSize,LPCWSTR pwzMimeProposed,DWORD dwMimeFlags,LPWSTR *ppwzMimeOut,DWORD dwReserved);
+HRESULT  FindMimeFromData(LPBC pBC, LPCWSTR pwzUrl, LPVOID pBuffer, DWORD cbSize, LPCWSTR pwzMimeProposed, DWORD dwMimeFlags, LPWSTR *ppwzMimeOut, DWORD dwReserved);
+//C       extern HRESULT ObtainUserAgentString(DWORD dwOption,LPSTR pszUAOut,DWORD *cbSize);
+HRESULT  ObtainUserAgentString(DWORD dwOption, LPSTR pszUAOut, DWORD *cbSize);
+//C       extern HRESULT CompareSecurityIds(BYTE *pbSecurityId1,DWORD dwLen1,BYTE *pbSecurityId2,DWORD dwLen2,DWORD dwReserved);
+HRESULT  CompareSecurityIds(BYTE *pbSecurityId1, DWORD dwLen1, BYTE *pbSecurityId2, DWORD dwLen2, DWORD dwReserved);
+//C       extern HRESULT CompatFlagsFromClsid(CLSID *pclsid,LPDWORD pdwCompatFlags,LPDWORD pdwMiscStatusFlags);
+HRESULT  CompatFlagsFromClsid(CLSID *pclsid, LPDWORD pdwCompatFlags, LPDWORD pdwMiscStatusFlags);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0000_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0000_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0000_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0000_v0_0_s_ifspec;
+//C       typedef IPersistMoniker *LPPERSISTMONIKER;
+alias IPersistMoniker *LPPERSISTMONIKER;
+//C       extern const IID IID_IPersistMoniker;
+extern const IID IID_IPersistMoniker;
+//C       typedef struct IPersistMonikerVtbl {
+//C           HRESULT ( *QueryInterface)(IPersistMoniker *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IPersistMoniker *This);
+//C           ULONG ( *Release)(IPersistMoniker *This);
+//C           HRESULT ( *GetClassID)(IPersistMoniker *This,CLSID *pClassID);
+//C           HRESULT ( *IsDirty)(IPersistMoniker *This);
+//C           HRESULT ( *Load)(IPersistMoniker *This,WINBOOL fFullyAvailable,IMoniker *pimkName,LPBC pibc,DWORD grfMode);
+//C           HRESULT ( *Save)(IPersistMoniker *This,IMoniker *pimkName,LPBC pbc,WINBOOL fRemember);
+//C           HRESULT ( *SaveCompleted)(IPersistMoniker *This,IMoniker *pimkName,LPBC pibc);
+//C           HRESULT ( *GetCurMoniker)(IPersistMoniker *This,IMoniker **ppimkName);
+//C       } IPersistMonikerVtbl;
+struct IPersistMonikerVtbl
+{
+    HRESULT  function(IPersistMoniker *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IPersistMoniker *This)AddRef;
+    ULONG  function(IPersistMoniker *This)Release;
+    HRESULT  function(IPersistMoniker *This, CLSID *pClassID)GetClassID;
+    HRESULT  function(IPersistMoniker *This)IsDirty;
+    HRESULT  function(IPersistMoniker *This, WINBOOL fFullyAvailable, IMoniker *pimkName, LPBC pibc, DWORD grfMode)Load;
+    HRESULT  function(IPersistMoniker *This, IMoniker *pimkName, LPBC pbc, WINBOOL fRemember)Save;
+    HRESULT  function(IPersistMoniker *This, IMoniker *pimkName, LPBC pibc)SaveCompleted;
+    HRESULT  function(IPersistMoniker *This, IMoniker **ppimkName)GetCurMoniker;
+}
+//C       struct IPersistMoniker {
+//C         struct IPersistMonikerVtbl *lpVtbl;
+//C       };
+struct IPersistMoniker
+{
+    IPersistMonikerVtbl *lpVtbl;
+}
+//C       HRESULT IPersistMoniker_GetClassID_Proxy(IPersistMoniker *This,CLSID *pClassID);
+HRESULT  IPersistMoniker_GetClassID_Proxy(IPersistMoniker *This, CLSID *pClassID);
+//C       void IPersistMoniker_GetClassID_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPersistMoniker_GetClassID_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPersistMoniker_IsDirty_Proxy(IPersistMoniker *This);
+HRESULT  IPersistMoniker_IsDirty_Proxy(IPersistMoniker *This);
+//C       void IPersistMoniker_IsDirty_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPersistMoniker_IsDirty_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPersistMoniker_Load_Proxy(IPersistMoniker *This,WINBOOL fFullyAvailable,IMoniker *pimkName,LPBC pibc,DWORD grfMode);
+HRESULT  IPersistMoniker_Load_Proxy(IPersistMoniker *This, WINBOOL fFullyAvailable, IMoniker *pimkName, LPBC pibc, DWORD grfMode);
+//C       void IPersistMoniker_Load_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPersistMoniker_Load_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPersistMoniker_Save_Proxy(IPersistMoniker *This,IMoniker *pimkName,LPBC pbc,WINBOOL fRemember);
+HRESULT  IPersistMoniker_Save_Proxy(IPersistMoniker *This, IMoniker *pimkName, LPBC pbc, WINBOOL fRemember);
+//C       void IPersistMoniker_Save_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPersistMoniker_Save_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPersistMoniker_SaveCompleted_Proxy(IPersistMoniker *This,IMoniker *pimkName,LPBC pibc);
+HRESULT  IPersistMoniker_SaveCompleted_Proxy(IPersistMoniker *This, IMoniker *pimkName, LPBC pibc);
+//C       void IPersistMoniker_SaveCompleted_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPersistMoniker_SaveCompleted_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPersistMoniker_GetCurMoniker_Proxy(IPersistMoniker *This,IMoniker **ppimkName);
+HRESULT  IPersistMoniker_GetCurMoniker_Proxy(IPersistMoniker *This, IMoniker **ppimkName);
+//C       void IPersistMoniker_GetCurMoniker_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPersistMoniker_GetCurMoniker_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0178_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0178_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0178_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0178_v0_0_s_ifspec;
+//C       typedef IMonikerProp *LPMONIKERPROP;
+alias IMonikerProp *LPMONIKERPROP;
+//C       typedef enum __MIDL_IMonikerProp_0001 {
+//C         MIMETYPEPROP = 0,USE_SRC_URL = 0x1,CLASSIDPROP = 0x2,TRUSTEDDOWNLOADPROP = 0x3,POPUPLEVELPROP = 0x4
+//C       } MONIKERPROPERTY;
+enum __MIDL_IMonikerProp_0001
+{
+    MIMETYPEPROP,
+    USE_SRC_URL,
+    CLASSIDPROP,
+    TRUSTEDDOWNLOADPROP,
+    POPUPLEVELPROP,
+}
+alias __MIDL_IMonikerProp_0001 MONIKERPROPERTY;
+//C       extern const IID IID_IMonikerProp;
+extern const IID IID_IMonikerProp;
+//C       typedef struct IMonikerPropVtbl {
+//C           HRESULT ( *QueryInterface)(IMonikerProp *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IMonikerProp *This);
+//C           ULONG ( *Release)(IMonikerProp *This);
+//C           HRESULT ( *PutProperty)(IMonikerProp *This,MONIKERPROPERTY mkp,LPCWSTR val);
+//C       } IMonikerPropVtbl;
+struct IMonikerPropVtbl
+{
+    HRESULT  function(IMonikerProp *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IMonikerProp *This)AddRef;
+    ULONG  function(IMonikerProp *This)Release;
+    HRESULT  function(IMonikerProp *This, MONIKERPROPERTY mkp, LPCWSTR val)PutProperty;
+}
+//C       struct IMonikerProp {
+//C         struct IMonikerPropVtbl *lpVtbl;
+//C       };
+struct IMonikerProp
+{
+    IMonikerPropVtbl *lpVtbl;
+}
+//C       HRESULT IMonikerProp_PutProperty_Proxy(IMonikerProp *This,MONIKERPROPERTY mkp,LPCWSTR val);
+HRESULT  IMonikerProp_PutProperty_Proxy(IMonikerProp *This, MONIKERPROPERTY mkp, LPCWSTR val);
+//C       void IMonikerProp_PutProperty_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IMonikerProp_PutProperty_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0179_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0179_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0179_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0179_v0_0_s_ifspec;
+//C       typedef IBindProtocol *LPBINDPROTOCOL;
+alias IBindProtocol *LPBINDPROTOCOL;
+//C       extern const IID IID_IBindProtocol;
+extern const IID IID_IBindProtocol;
+//C       typedef struct IBindProtocolVtbl {
+//C           HRESULT ( *QueryInterface)(IBindProtocol *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IBindProtocol *This);
+//C           ULONG ( *Release)(IBindProtocol *This);
+//C           HRESULT ( *CreateBinding)(IBindProtocol *This,LPCWSTR szUrl,IBindCtx *pbc,IBinding **ppb);
+//C       } IBindProtocolVtbl;
+struct IBindProtocolVtbl
+{
+    HRESULT  function(IBindProtocol *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IBindProtocol *This)AddRef;
+    ULONG  function(IBindProtocol *This)Release;
+    HRESULT  function(IBindProtocol *This, LPCWSTR szUrl, IBindCtx *pbc, IBinding **ppb)CreateBinding;
+}
+//C       struct IBindProtocol {
+//C         struct IBindProtocolVtbl *lpVtbl;
+//C       };
+struct IBindProtocol
+{
+    IBindProtocolVtbl *lpVtbl;
+}
+//C       HRESULT IBindProtocol_CreateBinding_Proxy(IBindProtocol *This,LPCWSTR szUrl,IBindCtx *pbc,IBinding **ppb);
+HRESULT  IBindProtocol_CreateBinding_Proxy(IBindProtocol *This, LPCWSTR szUrl, IBindCtx *pbc, IBinding **ppb);
+//C       void IBindProtocol_CreateBinding_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IBindProtocol_CreateBinding_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C     typedef IBinding *LPBINDING;
+alias IBinding *LPBINDING;
+//C     extern const GUID IID_IBinding;
+extern const GUID IID_IBinding;
+//C     typedef struct IBindingVtbl {
+//C         HRESULT ( *QueryInterface)(
+//C             IBinding* This,
+//C             const IID *const riid,
+//C             void **ppvObject);
+//C         ULONG ( *AddRef)(
+//C             IBinding* This);
+//C         ULONG ( *Release)(
+//C             IBinding* This);
+//C         HRESULT ( *Abort)(
+//C             IBinding* This);
+//C         HRESULT ( *Suspend)(
+//C             IBinding* This);
+//C         HRESULT ( *Resume)(
+//C             IBinding* This);
+//C         HRESULT ( *SetPriority)(
+//C             IBinding* This,
+//C             LONG nPriority);
+//C         HRESULT ( *GetPriority)(
+//C             IBinding* This,
+//C             LONG *pnPriority);
+//C         HRESULT ( *GetBindResult)(
+//C             IBinding* This,
+//C             CLSID *pclsidProtocol,
+//C             DWORD *pdwResult,
+//C             LPOLESTR *pszResult,
+//C             DWORD *pdwReserved);
+//C     } IBindingVtbl;
+struct IBindingVtbl
+{
+    HRESULT  function(IBinding *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IBinding *This)AddRef;
+    ULONG  function(IBinding *This)Release;
+    HRESULT  function(IBinding *This)Abort;
+    HRESULT  function(IBinding *This)Suspend;
+    HRESULT  function(IBinding *This)Resume;
+    HRESULT  function(IBinding *This, LONG nPriority)SetPriority;
+    HRESULT  function(IBinding *This, LONG *pnPriority)GetPriority;
+    HRESULT  function(IBinding *This, CLSID *pclsidProtocol, DWORD *pdwResult, LPOLESTR *pszResult, DWORD *pdwReserved)GetBindResult;
+}
+//C     struct IBinding {
+//C         IBindingVtbl* lpVtbl;
+//C     };
+struct IBinding
+{
+    IBindingVtbl *lpVtbl;
+}
+//C     HRESULT IBinding_Abort_Proxy(
+//C         IBinding* This);
+HRESULT  IBinding_Abort_Proxy(IBinding *This);
+//C     void IBinding_Abort_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBinding_Abort_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBinding_Suspend_Proxy(
+//C         IBinding* This);
+HRESULT  IBinding_Suspend_Proxy(IBinding *This);
+//C     void IBinding_Suspend_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBinding_Suspend_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBinding_Resume_Proxy(
+//C         IBinding* This);
+HRESULT  IBinding_Resume_Proxy(IBinding *This);
+//C     void IBinding_Resume_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBinding_Resume_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBinding_SetPriority_Proxy(
+//C         IBinding* This,
+//C         LONG nPriority);
+HRESULT  IBinding_SetPriority_Proxy(IBinding *This, LONG nPriority);
+//C     void IBinding_SetPriority_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBinding_SetPriority_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBinding_GetPriority_Proxy(
+//C         IBinding* This,
+//C         LONG *pnPriority);
+HRESULT  IBinding_GetPriority_Proxy(IBinding *This, LONG *pnPriority);
+//C     void IBinding_GetPriority_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBinding_GetPriority_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBinding_RemoteGetBindResult_Proxy(
+//C         IBinding* This,
+//C         CLSID *pclsidProtocol,
+//C         DWORD *pdwResult,
+//C         LPOLESTR *pszResult,
+//C         DWORD dwReserved);
+HRESULT  IBinding_RemoteGetBindResult_Proxy(IBinding *This, CLSID *pclsidProtocol, DWORD *pdwResult, LPOLESTR *pszResult, DWORD dwReserved);
+//C     void IBinding_RemoteGetBindResult_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBinding_RemoteGetBindResult_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBinding_GetBindResult_Proxy(
+//C         IBinding* This,
+//C         CLSID *pclsidProtocol,
+//C         DWORD *pdwResult,
+//C         LPOLESTR *pszResult,
+//C         DWORD *pdwReserved);
+HRESULT  IBinding_GetBindResult_Proxy(IBinding *This, CLSID *pclsidProtocol, DWORD *pdwResult, LPOLESTR *pszResult, DWORD *pdwReserved);
+//C     HRESULT IBinding_GetBindResult_Stub(
+//C         IBinding* This,
+//C         CLSID *pclsidProtocol,
+//C         DWORD *pdwResult,
+//C         LPOLESTR *pszResult,
+//C         DWORD dwReserved);
+HRESULT  IBinding_GetBindResult_Stub(IBinding *This, CLSID *pclsidProtocol, DWORD *pdwResult, LPOLESTR *pszResult, DWORD dwReserved);
+//C     typedef IBindStatusCallback *LPBINDSTATUSCALLBACK;
+alias IBindStatusCallback *LPBINDSTATUSCALLBACK;
+//C     typedef enum __WIDL_urlmon_generated_name_00000000 {
+//C         BINDVERB_GET = 0,
+//C         BINDVERB_POST = 1,
+//C         BINDVERB_PUT = 2,
+//C         BINDVERB_CUSTOM = 3
+//C     } BINDVERB;
+enum __WIDL_urlmon_generated_name_00000000
+{
+    BINDVERB_GET,
+    BINDVERB_POST,
+    BINDVERB_PUT,
+    BINDVERB_CUSTOM,
+}
+alias __WIDL_urlmon_generated_name_00000000 BINDVERB;
+//C     typedef enum __WIDL_urlmon_generated_name_00000001 {
+//C         BINDINFOF_URLENCODESTGMEDDATA = 0x1,
+//C         BINDINFOF_URLENCODEDEXTRAINFO = 0x2
+//C     } BINDINFOF;
+enum __WIDL_urlmon_generated_name_00000001
+{
+    BINDINFOF_URLENCODESTGMEDDATA = 1,
+    BINDINFOF_URLENCODEDEXTRAINFO,
+}
+alias __WIDL_urlmon_generated_name_00000001 BINDINFOF;
+//C     typedef enum __WIDL_urlmon_generated_name_00000002 {
+//C         BINDF_ASYNCHRONOUS = 0x1,
+//C         BINDF_ASYNCSTORAGE = 0x2,
+//C         BINDF_NOPROGRESSIVERENDERING = 0x4,
+//C         BINDF_OFFLINEOPERATION = 0x8,
+//C         BINDF_GETNEWESTVERSION = 0x10,
+//C         BINDF_NOWRITECACHE = 0x20,
+//C         BINDF_NEEDFILE = 0x40,
+//C         BINDF_PULLDATA = 0x80,
+//C         BINDF_IGNORESECURITYPROBLEM = 0x100,
+//C         BINDF_RESYNCHRONIZE = 0x200,
+//C         BINDF_HYPERLINK = 0x400,
+//C         BINDF_NO_UI = 0x800,
+//C         BINDF_SILENTOPERATION = 0x1000,
+//C         BINDF_PRAGMA_NO_CACHE = 0x2000,
+//C         BINDF_GETCLASSOBJECT = 0x4000,
+//C         BINDF_RESERVED_1 = 0x8000,
+//C         BINDF_FREE_THREADED = 0x10000,
+//C         BINDF_DIRECT_READ = 0x20000,
+//C         BINDF_FORMS_SUBMIT = 0x40000,
+//C         BINDF_GETFROMCACHE_IF_NET_FAIL = 0x80000,
+//C         BINDF_FROMURLMON = 0x100000,
+//C         BINDF_FWD_BACK = 0x200000,
+//C         BINDF_PREFERDEFAULTHANDLER = 0x400000,
+//C         BINDF_ENFORCERESTRICTED = 0x800000
+//C     } BINDF;
+enum __WIDL_urlmon_generated_name_00000002
+{
+    BINDF_ASYNCHRONOUS = 1,
+    BINDF_ASYNCSTORAGE,
+    BINDF_NOPROGRESSIVERENDERING = 4,
+    BINDF_OFFLINEOPERATION = 8,
+    BINDF_GETNEWESTVERSION = 16,
+    BINDF_NOWRITECACHE = 32,
+    BINDF_NEEDFILE = 64,
+    BINDF_PULLDATA = 128,
+    BINDF_IGNORESECURITYPROBLEM = 256,
+    BINDF_RESYNCHRONIZE = 512,
+    BINDF_HYPERLINK = 1024,
+    BINDF_NO_UI = 2048,
+    BINDF_SILENTOPERATION = 4096,
+    BINDF_PRAGMA_NO_CACHE = 8192,
+    BINDF_GETCLASSOBJECT = 16384,
+    BINDF_RESERVED_1 = 32768,
+    BINDF_FREE_THREADED = 65536,
+    BINDF_DIRECT_READ = 131072,
+    BINDF_FORMS_SUBMIT = 262144,
+    BINDF_GETFROMCACHE_IF_NET_FAIL = 524288,
+    BINDF_FROMURLMON = 1048576,
+    BINDF_FWD_BACK = 2097152,
+    BINDF_PREFERDEFAULTHANDLER = 4194304,
+    BINDF_ENFORCERESTRICTED = 8388608,
+}
+alias __WIDL_urlmon_generated_name_00000002 BINDF;
+//C     typedef enum __WIDL_urlmon_generated_name_00000003 {
+//C         URL_ENCODING_NONE = 0,
+//C         URL_ENCODING_ENABLE_UTF8 = 0x10000000,
+//C         URL_ENCODING_DISABLE_UTF8 = 0x20000000
+//C     } URL_ENCODING;
+enum __WIDL_urlmon_generated_name_00000003
+{
+    URL_ENCODING_NONE,
+    URL_ENCODING_ENABLE_UTF8 = 268435456,
+    URL_ENCODING_DISABLE_UTF8 = 536870912,
+}
+alias __WIDL_urlmon_generated_name_00000003 URL_ENCODING;
+//C     typedef struct _tagBINDINFO {
+//C         ULONG cbSize;
+//C         LPWSTR szExtraInfo;
+//C         STGMEDIUM stgmedData;
+//C         DWORD grfBindInfoF;
+//C         DWORD dwBindVerb;
+//C         LPWSTR szCustomVerb;
+//C         DWORD cbstgmedData;
+//C         DWORD dwOptions;
+//C         DWORD dwOptionsFlags;
+//C         DWORD dwCodePage;
+//C         SECURITY_ATTRIBUTES securityAttributes;
+//C         IID iid;
+//C         IUnknown *pUnk;
+//C         DWORD dwReserved;
+//C     } BINDINFO;
+struct _tagBINDINFO
+{
+    ULONG cbSize;
+    LPWSTR szExtraInfo;
+    STGMEDIUM stgmedData;
+    DWORD grfBindInfoF;
+    DWORD dwBindVerb;
+    LPWSTR szCustomVerb;
+    DWORD cbstgmedData;
+    DWORD dwOptions;
+    DWORD dwOptionsFlags;
+    DWORD dwCodePage;
+    SECURITY_ATTRIBUTES securityAttributes;
+    IID iid;
+    IUnknown *pUnk;
+    DWORD dwReserved;
+}
+alias _tagBINDINFO BINDINFO;
+//C     typedef struct _REMSECURITY_ATTRIBUTES {
+//C         DWORD nLength;
+//C         DWORD lpSecurityDescriptor;
+//C         WINBOOL bInheritHandle;
+//C     } REMSECURITY_ATTRIBUTES;
+struct _REMSECURITY_ATTRIBUTES
+{
+    DWORD nLength;
+    DWORD lpSecurityDescriptor;
+    WINBOOL bInheritHandle;
+}
+alias _REMSECURITY_ATTRIBUTES REMSECURITY_ATTRIBUTES;
+//C     typedef struct _REMSECURITY_ATTRIBUTES *PREMSECURITY_ATTRIBUTES;
+alias _REMSECURITY_ATTRIBUTES *PREMSECURITY_ATTRIBUTES;
+//C     typedef struct _REMSECURITY_ATTRIBUTES *LPREMSECURITY_ATTRIBUTES;
+alias _REMSECURITY_ATTRIBUTES *LPREMSECURITY_ATTRIBUTES;
+//C     typedef struct _tagRemBINDINFO {
+//C         ULONG cbSize;
+//C         LPWSTR szExtraInfo;
+//C         DWORD grfBindInfoF;
+//C         DWORD dwBindVerb;
+//C         LPWSTR szCustomVerb;
+//C         DWORD cbstgmedData;
+//C         DWORD dwOptions;
+//C         DWORD dwOptionsFlags;
+//C         DWORD dwCodePage;
+//C         REMSECURITY_ATTRIBUTES securityAttributes;
+//C         IID iid;
+//C         IUnknown *pUnk;
+//C         DWORD dwReserved;
+//C     } RemBINDINFO;
+struct _tagRemBINDINFO
+{
+    ULONG cbSize;
+    LPWSTR szExtraInfo;
+    DWORD grfBindInfoF;
+    DWORD dwBindVerb;
+    LPWSTR szCustomVerb;
+    DWORD cbstgmedData;
+    DWORD dwOptions;
+    DWORD dwOptionsFlags;
+    DWORD dwCodePage;
+    REMSECURITY_ATTRIBUTES securityAttributes;
+    IID iid;
+    IUnknown *pUnk;
+    DWORD dwReserved;
+}
+alias _tagRemBINDINFO RemBINDINFO;
+//C     typedef struct tagRemFORMATETC {
+//C         DWORD cfFormat;
+//C         DWORD ptd;
+//C         DWORD dwAspect;
+//C         LONG lindex;
+//C         DWORD tymed;
+//C     } RemFORMATETC;
+struct tagRemFORMATETC
+{
+    DWORD cfFormat;
+    DWORD ptd;
+    DWORD dwAspect;
+    LONG lindex;
+    DWORD tymed;
+}
+alias tagRemFORMATETC RemFORMATETC;
+//C     typedef struct tagRemFORMATETC *LPREMFORMATETC;
+alias tagRemFORMATETC *LPREMFORMATETC;
+//C     typedef enum __WIDL_urlmon_generated_name_00000004 {
+//C         BINDINFO_OPTIONS_WININETFLAG = 0x10000,
+//C         BINDINFO_OPTIONS_ENABLE_UTF8 = 0x20000,
+//C         BINDINFO_OPTIONS_DISABLE_UTF8 = 0x40000,
+//C         BINDINFO_OPTIONS_USE_IE_ENCODING = 0x80000,
+//C         BINDINFO_OPTIONS_BINDTOOBJECT = 0x100000,
+//C         BINDINFO_OPTIONS_SECURITYOPTOUT = 0x200000,
+//C         BINDINFO_OPTIONS_IGNOREMIMETEXTPLAIN = 0x400000,
+//C         BINDINFO_OPTIONS_USEBINDSTRINGCREDS = 0x800000,
+//C         BINDINFO_OPTIONS_IGNOREHTTPHTTPSREDIRECTS = 0x1000000,
+//C         BINDINFO_OPTIONS_SHDOCVW_NAVIGATE = 0x80000000
+//C     } BINDINFO_OPTIONS;
+enum __WIDL_urlmon_generated_name_00000004
+{
+    BINDINFO_OPTIONS_WININETFLAG = 65536,
+    BINDINFO_OPTIONS_ENABLE_UTF8 = 131072,
+    BINDINFO_OPTIONS_DISABLE_UTF8 = 262144,
+    BINDINFO_OPTIONS_USE_IE_ENCODING = 524288,
+    BINDINFO_OPTIONS_BINDTOOBJECT = 1048576,
+    BINDINFO_OPTIONS_SECURITYOPTOUT = 2097152,
+    BINDINFO_OPTIONS_IGNOREMIMETEXTPLAIN = 4194304,
+    BINDINFO_OPTIONS_USEBINDSTRINGCREDS = 8388608,
+    BINDINFO_OPTIONS_IGNOREHTTPHTTPSREDIRECTS = 16777216,
+    BINDINFO_OPTIONS_SHDOCVW_NAVIGATE = -2147483648,
+}
+alias __WIDL_urlmon_generated_name_00000004 BINDINFO_OPTIONS;
+//C     typedef enum __WIDL_urlmon_generated_name_00000005 {
+//C         BSCF_FIRSTDATANOTIFICATION = 0x1,
+//C         BSCF_INTERMEDIATEDATANOTIFICATION = 0x2,
+//C         BSCF_LASTDATANOTIFICATION = 0x4,
+//C         BSCF_DATAFULLYAVAILABLE = 0x8,
+//C         BSCF_AVAILABLEDATASIZEUNKNOWN = 0x10
+//C     } BSCF;
+enum __WIDL_urlmon_generated_name_00000005
+{
+    BSCF_FIRSTDATANOTIFICATION = 1,
+    BSCF_INTERMEDIATEDATANOTIFICATION,
+    BSCF_LASTDATANOTIFICATION = 4,
+    BSCF_DATAFULLYAVAILABLE = 8,
+    BSCF_AVAILABLEDATASIZEUNKNOWN = 16,
+}
+alias __WIDL_urlmon_generated_name_00000005 BSCF;
+//C     typedef enum tagBINDSTATUS {
+//C         BINDSTATUS_FINDINGRESOURCE = 1,
+//C         BINDSTATUS_CONNECTING = 2,
+//C         BINDSTATUS_REDIRECTING = 3,
+//C         BINDSTATUS_BEGINDOWNLOADDATA = 4,
+//C         BINDSTATUS_DOWNLOADINGDATA = 5,
+//C         BINDSTATUS_ENDDOWNLOADDATA = 6,
+//C         BINDSTATUS_BEGINDOWNLOADCOMPONENTS = 7,
+//C         BINDSTATUS_INSTALLINGCOMPONENTS = 8,
+//C         BINDSTATUS_ENDDOWNLOADCOMPONENTS = 9,
+//C         BINDSTATUS_USINGCACHEDCOPY = 10,
+//C         BINDSTATUS_SENDINGREQUEST = 11,
+//C         BINDSTATUS_CLASSIDAVAILABLE = 12,
+//C         BINDSTATUS_MIMETYPEAVAILABLE = 13,
+//C         BINDSTATUS_CACHEFILENAMEAVAILABLE = 14,
+//C         BINDSTATUS_BEGINSYNCOPERATION = 15,
+//C         BINDSTATUS_ENDSYNCOPERATION = 16,
+//C         BINDSTATUS_BEGINUPLOADDATA = 17,
+//C         BINDSTATUS_UPLOADINGDATA = 18,
+//C         BINDSTATUS_ENDUPLOADDATA = 19,
+//C         BINDSTATUS_PROTOCOLCLASSID = 20,
+//C         BINDSTATUS_ENCODING = 21,
+//C         BINDSTATUS_VERIFIEDMIMETYPEAVAILABLE = 22,
+//C         BINDSTATUS_CLASSINSTALLLOCATION = 23,
+//C         BINDSTATUS_DECODING = 24,
+//C         BINDSTATUS_LOADINGMIMEHANDLER = 25,
+//C         BINDSTATUS_CONTENTDISPOSITIONATTACH = 26,
+//C         BINDSTATUS_FILTERREPORTMIMETYPE = 27,
+//C         BINDSTATUS_CLSIDCANINSTANTIATE = 28,
+//C         BINDSTATUS_IUNKNOWNAVAILABLE = 29,
+//C         BINDSTATUS_DIRECTBIND = 30,
+//C         BINDSTATUS_RAWMIMETYPE = 31,
+//C         BINDSTATUS_PROXYDETECTING = 32,
+//C         BINDSTATUS_ACCEPTRANGES = 33,
+//C         BINDSTATUS_COOKIE_SENT = 34,
+//C         BINDSTATUS_COMPACT_POLICY_RECEIVED = 35,
+//C         BINDSTATUS_COOKIE_SUPPRESSED = 36,
+//C         BINDSTATUS_COOKIE_STATE_UNKNOWN = 37,
+//C         BINDSTATUS_COOKIE_STATE_ACCEPT = 38,
+//C         BINDSTATUS_COOKIE_STATE_REJECT = 39,
+//C         BINDSTATUS_COOKIE_STATE_PROMPT = 40,
+//C         BINDSTATUS_COOKIE_STATE_LEASH = 41,
+//C         BINDSTATUS_COOKIE_STATE_DOWNGRADE = 42,
+//C         BINDSTATUS_POLICY_HREF = 43,
+//C         BINDSTATUS_P3P_HEADER = 44,
+//C         BINDSTATUS_SESSION_COOKIE_RECEIVED = 45,
+//C         BINDSTATUS_PERSISTENT_COOKIE_RECEIVED = 46,
+//C         BINDSTATUS_SESSION_COOKIES_ALLOWED = 47,
+//C         BINDSTATUS_CACHECONTROL = 48,
+//C         BINDSTATUS_CONTENTDISPOSITIONFILENAME = 49,
+//C         BINDSTATUS_MIMETEXTPLAINMISMATCH = 50,
+//C         BINDSTATUS_PUBLISHERAVAILABLE = 51,
+//C         BINDSTATUS_DISPLAYNAMEAVAILABLE = 52
+//C     } BINDSTATUS;
+enum tagBINDSTATUS
+{
+    BINDSTATUS_FINDINGRESOURCE = 1,
+    BINDSTATUS_CONNECTING,
+    BINDSTATUS_REDIRECTING,
+    BINDSTATUS_BEGINDOWNLOADDATA,
+    BINDSTATUS_DOWNLOADINGDATA,
+    BINDSTATUS_ENDDOWNLOADDATA,
+    BINDSTATUS_BEGINDOWNLOADCOMPONENTS,
+    BINDSTATUS_INSTALLINGCOMPONENTS,
+    BINDSTATUS_ENDDOWNLOADCOMPONENTS,
+    BINDSTATUS_USINGCACHEDCOPY,
+    BINDSTATUS_SENDINGREQUEST,
+    BINDSTATUS_CLASSIDAVAILABLE,
+    BINDSTATUS_MIMETYPEAVAILABLE,
+    BINDSTATUS_CACHEFILENAMEAVAILABLE,
+    BINDSTATUS_BEGINSYNCOPERATION,
+    BINDSTATUS_ENDSYNCOPERATION,
+    BINDSTATUS_BEGINUPLOADDATA,
+    BINDSTATUS_UPLOADINGDATA,
+    BINDSTATUS_ENDUPLOADDATA,
+    BINDSTATUS_PROTOCOLCLASSID,
+    BINDSTATUS_ENCODING,
+    BINDSTATUS_VERIFIEDMIMETYPEAVAILABLE,
+    BINDSTATUS_CLASSINSTALLLOCATION,
+    BINDSTATUS_DECODING,
+    BINDSTATUS_LOADINGMIMEHANDLER,
+    BINDSTATUS_CONTENTDISPOSITIONATTACH,
+    BINDSTATUS_FILTERREPORTMIMETYPE,
+    BINDSTATUS_CLSIDCANINSTANTIATE,
+    BINDSTATUS_IUNKNOWNAVAILABLE,
+    BINDSTATUS_DIRECTBIND,
+    BINDSTATUS_RAWMIMETYPE,
+    BINDSTATUS_PROXYDETECTING,
+    BINDSTATUS_ACCEPTRANGES,
+    BINDSTATUS_COOKIE_SENT,
+    BINDSTATUS_COMPACT_POLICY_RECEIVED,
+    BINDSTATUS_COOKIE_SUPPRESSED,
+    BINDSTATUS_COOKIE_STATE_UNKNOWN,
+    BINDSTATUS_COOKIE_STATE_ACCEPT,
+    BINDSTATUS_COOKIE_STATE_REJECT,
+    BINDSTATUS_COOKIE_STATE_PROMPT,
+    BINDSTATUS_COOKIE_STATE_LEASH,
+    BINDSTATUS_COOKIE_STATE_DOWNGRADE,
+    BINDSTATUS_POLICY_HREF,
+    BINDSTATUS_P3P_HEADER,
+    BINDSTATUS_SESSION_COOKIE_RECEIVED,
+    BINDSTATUS_PERSISTENT_COOKIE_RECEIVED,
+    BINDSTATUS_SESSION_COOKIES_ALLOWED,
+    BINDSTATUS_CACHECONTROL,
+    BINDSTATUS_CONTENTDISPOSITIONFILENAME,
+    BINDSTATUS_MIMETEXTPLAINMISMATCH,
+    BINDSTATUS_PUBLISHERAVAILABLE,
+    BINDSTATUS_DISPLAYNAMEAVAILABLE,
+}
+alias tagBINDSTATUS BINDSTATUS;
+//C     extern const GUID IID_IBindStatusCallback;
+extern const GUID IID_IBindStatusCallback;
+//C     typedef struct IBindStatusCallbackVtbl {
+//C         HRESULT ( *QueryInterface)(
+//C             IBindStatusCallback* This,
+//C             const IID *const riid,
+//C             void **ppvObject);
+//C         ULONG ( *AddRef)(
+//C             IBindStatusCallback* This);
+//C         ULONG ( *Release)(
+//C             IBindStatusCallback* This);
+//C         HRESULT ( *OnStartBinding)(
+//C             IBindStatusCallback* This,
+//C             DWORD dwReserved,
+//C             IBinding *pib);
+//C         HRESULT ( *GetPriority)(
+//C             IBindStatusCallback* This,
+//C             LONG *pnPriority);
+//C         HRESULT ( *OnLowResource)(
+//C             IBindStatusCallback* This,
+//C             DWORD reserved);
+//C         HRESULT ( *OnProgress)(
+//C             IBindStatusCallback* This,
+//C             ULONG ulProgress,
+//C             ULONG ulProgressMax,
+//C             ULONG ulStatusCode,
+//C             LPCWSTR szStatusText);
+//C         HRESULT ( *OnStopBinding)(
+//C             IBindStatusCallback* This,
+//C             HRESULT hresult,
+//C             LPCWSTR szError);
+//C         HRESULT ( *GetBindInfo)(
+//C             IBindStatusCallback* This,
+//C             DWORD *grfBINDF,
+//C             BINDINFO *pbindinfo);
+//C         HRESULT ( *OnDataAvailable)(
+//C             IBindStatusCallback* This,
+//C             DWORD grfBSCF,
+//C             DWORD dwSize,
+//C             FORMATETC *pformatetc,
+//C             STGMEDIUM *pstgmed);
+//C         HRESULT ( *OnObjectAvailable)(
+//C             IBindStatusCallback* This,
+//C             const IID *const riid,
+//C             IUnknown *punk);
+//C     } IBindStatusCallbackVtbl;
+struct IBindStatusCallbackVtbl
+{
+    HRESULT  function(IBindStatusCallback *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IBindStatusCallback *This)AddRef;
+    ULONG  function(IBindStatusCallback *This)Release;
+    HRESULT  function(IBindStatusCallback *This, DWORD dwReserved, IBinding *pib)OnStartBinding;
+    HRESULT  function(IBindStatusCallback *This, LONG *pnPriority)GetPriority;
+    HRESULT  function(IBindStatusCallback *This, DWORD reserved)OnLowResource;
+    HRESULT  function(IBindStatusCallback *This, ULONG ulProgress, ULONG ulProgressMax, ULONG ulStatusCode, LPCWSTR szStatusText)OnProgress;
+    HRESULT  function(IBindStatusCallback *This, HRESULT hresult, LPCWSTR szError)OnStopBinding;
+    HRESULT  function(IBindStatusCallback *This, DWORD *grfBINDF, BINDINFO *pbindinfo)GetBindInfo;
+    HRESULT  function(IBindStatusCallback *This, DWORD grfBSCF, DWORD dwSize, FORMATETC *pformatetc, STGMEDIUM *pstgmed)OnDataAvailable;
+    HRESULT  function(IBindStatusCallback *This, IID *riid, IUnknown *punk)OnObjectAvailable;
+}
+//C     struct IBindStatusCallback {
+//C         IBindStatusCallbackVtbl* lpVtbl;
+//C     };
+struct IBindStatusCallback
+{
+    IBindStatusCallbackVtbl *lpVtbl;
+}
+//C     HRESULT IBindStatusCallback_OnStartBinding_Proxy(
+//C         IBindStatusCallback* This,
+//C         DWORD dwReserved,
+//C         IBinding *pib);
+HRESULT  IBindStatusCallback_OnStartBinding_Proxy(IBindStatusCallback *This, DWORD dwReserved, IBinding *pib);
+//C     void IBindStatusCallback_OnStartBinding_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBindStatusCallback_OnStartBinding_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBindStatusCallback_GetPriority_Proxy(
+//C         IBindStatusCallback* This,
+//C         LONG *pnPriority);
+HRESULT  IBindStatusCallback_GetPriority_Proxy(IBindStatusCallback *This, LONG *pnPriority);
+//C     void IBindStatusCallback_GetPriority_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBindStatusCallback_GetPriority_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBindStatusCallback_OnLowResource_Proxy(
+//C         IBindStatusCallback* This,
+//C         DWORD reserved);
+HRESULT  IBindStatusCallback_OnLowResource_Proxy(IBindStatusCallback *This, DWORD reserved);
+//C     void IBindStatusCallback_OnLowResource_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBindStatusCallback_OnLowResource_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBindStatusCallback_OnProgress_Proxy(
+//C         IBindStatusCallback* This,
+//C         ULONG ulProgress,
+//C         ULONG ulProgressMax,
+//C         ULONG ulStatusCode,
+//C         LPCWSTR szStatusText);
+HRESULT  IBindStatusCallback_OnProgress_Proxy(IBindStatusCallback *This, ULONG ulProgress, ULONG ulProgressMax, ULONG ulStatusCode, LPCWSTR szStatusText);
+//C     void IBindStatusCallback_OnProgress_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBindStatusCallback_OnProgress_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBindStatusCallback_OnStopBinding_Proxy(
+//C         IBindStatusCallback* This,
+//C         HRESULT hresult,
+//C         LPCWSTR szError);
+HRESULT  IBindStatusCallback_OnStopBinding_Proxy(IBindStatusCallback *This, HRESULT hresult, LPCWSTR szError);
+//C     void IBindStatusCallback_OnStopBinding_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBindStatusCallback_OnStopBinding_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBindStatusCallback_RemoteGetBindInfo_Proxy(
+//C         IBindStatusCallback* This,
+//C         DWORD *grfBINDF,
+//C         RemBINDINFO *pbindinfo,
+//C         RemSTGMEDIUM *pstgmed);
+HRESULT  IBindStatusCallback_RemoteGetBindInfo_Proxy(IBindStatusCallback *This, DWORD *grfBINDF, RemBINDINFO *pbindinfo, RemSTGMEDIUM *pstgmed);
+//C     void IBindStatusCallback_RemoteGetBindInfo_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBindStatusCallback_RemoteGetBindInfo_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBindStatusCallback_RemoteOnDataAvailable_Proxy(
+//C         IBindStatusCallback* This,
+//C         DWORD grfBSCF,
+//C         DWORD dwSize,
+//C         RemFORMATETC *pformatetc,
+//C         RemSTGMEDIUM *pstgmed);
+HRESULT  IBindStatusCallback_RemoteOnDataAvailable_Proxy(IBindStatusCallback *This, DWORD grfBSCF, DWORD dwSize, RemFORMATETC *pformatetc, RemSTGMEDIUM *pstgmed);
+//C     void IBindStatusCallback_RemoteOnDataAvailable_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBindStatusCallback_RemoteOnDataAvailable_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBindStatusCallback_OnObjectAvailable_Proxy(
+//C         IBindStatusCallback* This,
+//C         const IID *const riid,
+//C         IUnknown *punk);
+HRESULT  IBindStatusCallback_OnObjectAvailable_Proxy(IBindStatusCallback *This, IID *riid, IUnknown *punk);
+//C     void IBindStatusCallback_OnObjectAvailable_Stub(
+//C         IRpcStubBuffer* This,
+//C         IRpcChannelBuffer* pRpcChannelBuffer,
+//C         PRPC_MESSAGE pRpcMessage,
+//C         DWORD* pdwStubPhase);
+void  IBindStatusCallback_OnObjectAvailable_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *pRpcChannelBuffer, PRPC_MESSAGE pRpcMessage, DWORD *pdwStubPhase);
+//C     HRESULT IBindStatusCallback_GetBindInfo_Proxy(
+//C         IBindStatusCallback* This,
+//C         DWORD *grfBINDF,
+//C         BINDINFO *pbindinfo);
+HRESULT  IBindStatusCallback_GetBindInfo_Proxy(IBindStatusCallback *This, DWORD *grfBINDF, BINDINFO *pbindinfo);
+//C     HRESULT IBindStatusCallback_GetBindInfo_Stub(
+//C         IBindStatusCallback* This,
+//C         DWORD *grfBINDF,
+//C         RemBINDINFO *pbindinfo,
+//C         RemSTGMEDIUM *pstgmed);
+HRESULT  IBindStatusCallback_GetBindInfo_Stub(IBindStatusCallback *This, DWORD *grfBINDF, RemBINDINFO *pbindinfo, RemSTGMEDIUM *pstgmed);
+//C     HRESULT IBindStatusCallback_OnDataAvailable_Proxy(
+//C         IBindStatusCallback* This,
+//C         DWORD grfBSCF,
+//C         DWORD dwSize,
+//C         FORMATETC *pformatetc,
+//C         STGMEDIUM *pstgmed);
+HRESULT  IBindStatusCallback_OnDataAvailable_Proxy(IBindStatusCallback *This, DWORD grfBSCF, DWORD dwSize, FORMATETC *pformatetc, STGMEDIUM *pstgmed);
+//C     HRESULT IBindStatusCallback_OnDataAvailable_Stub(
+//C         IBindStatusCallback* This,
+//C         DWORD grfBSCF,
+//C         DWORD dwSize,
+//C         RemFORMATETC *pformatetc,
+//C         RemSTGMEDIUM *pstgmed);
+HRESULT  IBindStatusCallback_OnDataAvailable_Stub(IBindStatusCallback *This, DWORD grfBSCF, DWORD dwSize, RemFORMATETC *pformatetc, RemSTGMEDIUM *pstgmed);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0182_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0182_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0182_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0182_v0_0_s_ifspec;
+//C       typedef IAuthenticate *LPAUTHENTICATION;
+alias IAuthenticate *LPAUTHENTICATION;
+//C       extern const IID IID_IAuthenticate;
+extern const IID IID_IAuthenticate;
+//C       typedef struct IAuthenticateVtbl {
+//C           HRESULT ( *QueryInterface)(IAuthenticate *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IAuthenticate *This);
+//C           ULONG ( *Release)(IAuthenticate *This);
+//C           HRESULT ( *Authenticate)(IAuthenticate *This,HWND *phwnd,LPWSTR *pszUsername,LPWSTR *pszPassword);
+//C       } IAuthenticateVtbl;
+struct IAuthenticateVtbl
+{
+    HRESULT  function(IAuthenticate *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IAuthenticate *This)AddRef;
+    ULONG  function(IAuthenticate *This)Release;
+    HRESULT  function(IAuthenticate *This, HWND *phwnd, LPWSTR *pszUsername, LPWSTR *pszPassword)Authenticate;
+}
+//C       struct IAuthenticate {
+//C         struct IAuthenticateVtbl *lpVtbl;
+//C       };
+struct IAuthenticate
+{
+    IAuthenticateVtbl *lpVtbl;
+}
+//C       HRESULT IAuthenticate_Authenticate_Proxy(IAuthenticate *This,HWND *phwnd,LPWSTR *pszUsername,LPWSTR *pszPassword);
+HRESULT  IAuthenticate_Authenticate_Proxy(IAuthenticate *This, HWND *phwnd, LPWSTR *pszUsername, LPWSTR *pszPassword);
+//C       void IAuthenticate_Authenticate_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IAuthenticate_Authenticate_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0183_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0183_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0183_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0183_v0_0_s_ifspec;
+//C       typedef IHttpNegotiate *LPHTTPNEGOTIATE;
+alias IHttpNegotiate *LPHTTPNEGOTIATE;
+//C       extern const IID IID_IHttpNegotiate;
+extern const IID IID_IHttpNegotiate;
+//C       typedef struct IHttpNegotiateVtbl {
+//C           HRESULT ( *QueryInterface)(IHttpNegotiate *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IHttpNegotiate *This);
+//C           ULONG ( *Release)(IHttpNegotiate *This);
+//C           HRESULT ( *BeginningTransaction)(IHttpNegotiate *This,LPCWSTR szURL,LPCWSTR szHeaders,DWORD dwReserved,LPWSTR *pszAdditionalHeaders);
+//C           HRESULT ( *OnResponse)(IHttpNegotiate *This,DWORD dwResponseCode,LPCWSTR szResponseHeaders,LPCWSTR szRequestHeaders,LPWSTR *pszAdditionalRequestHeaders);
+//C       } IHttpNegotiateVtbl;
+struct IHttpNegotiateVtbl
+{
+    HRESULT  function(IHttpNegotiate *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IHttpNegotiate *This)AddRef;
+    ULONG  function(IHttpNegotiate *This)Release;
+    HRESULT  function(IHttpNegotiate *This, LPCWSTR szURL, LPCWSTR szHeaders, DWORD dwReserved, LPWSTR *pszAdditionalHeaders)BeginningTransaction;
+    HRESULT  function(IHttpNegotiate *This, DWORD dwResponseCode, LPCWSTR szResponseHeaders, LPCWSTR szRequestHeaders, LPWSTR *pszAdditionalRequestHeaders)OnResponse;
+}
+//C       struct IHttpNegotiate {
+//C         struct IHttpNegotiateVtbl *lpVtbl;
+//C       };
+struct IHttpNegotiate
+{
+    IHttpNegotiateVtbl *lpVtbl;
+}
+//C       HRESULT IHttpNegotiate_BeginningTransaction_Proxy(IHttpNegotiate *This,LPCWSTR szURL,LPCWSTR szHeaders,DWORD dwReserved,LPWSTR *pszAdditionalHeaders);
+HRESULT  IHttpNegotiate_BeginningTransaction_Proxy(IHttpNegotiate *This, LPCWSTR szURL, LPCWSTR szHeaders, DWORD dwReserved, LPWSTR *pszAdditionalHeaders);
+//C       void IHttpNegotiate_BeginningTransaction_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IHttpNegotiate_BeginningTransaction_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IHttpNegotiate_OnResponse_Proxy(IHttpNegotiate *This,DWORD dwResponseCode,LPCWSTR szResponseHeaders,LPCWSTR szRequestHeaders,LPWSTR *pszAdditionalRequestHeaders);
+HRESULT  IHttpNegotiate_OnResponse_Proxy(IHttpNegotiate *This, DWORD dwResponseCode, LPCWSTR szResponseHeaders, LPCWSTR szRequestHeaders, LPWSTR *pszAdditionalRequestHeaders);
+//C       void IHttpNegotiate_OnResponse_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IHttpNegotiate_OnResponse_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0184_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0184_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0184_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0184_v0_0_s_ifspec;
+//C       typedef IHttpNegotiate2 *LPHTTPNEGOTIATE2;
+alias IHttpNegotiate2 *LPHTTPNEGOTIATE2;
+//C       extern const IID IID_IHttpNegotiate2;
+extern const IID IID_IHttpNegotiate2;
+//C       typedef struct IHttpNegotiate2Vtbl {
+//C           HRESULT ( *QueryInterface)(IHttpNegotiate2 *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IHttpNegotiate2 *This);
+//C           ULONG ( *Release)(IHttpNegotiate2 *This);
+//C           HRESULT ( *BeginningTransaction)(IHttpNegotiate2 *This,LPCWSTR szURL,LPCWSTR szHeaders,DWORD dwReserved,LPWSTR *pszAdditionalHeaders);
+//C           HRESULT ( *OnResponse)(IHttpNegotiate2 *This,DWORD dwResponseCode,LPCWSTR szResponseHeaders,LPCWSTR szRequestHeaders,LPWSTR *pszAdditionalRequestHeaders);
+//C           HRESULT ( *GetRootSecurityId)(IHttpNegotiate2 *This,BYTE *pbSecurityId,DWORD *pcbSecurityId,DWORD_PTR dwReserved);
+//C       } IHttpNegotiate2Vtbl;
+struct IHttpNegotiate2Vtbl
+{
+    HRESULT  function(IHttpNegotiate2 *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IHttpNegotiate2 *This)AddRef;
+    ULONG  function(IHttpNegotiate2 *This)Release;
+    HRESULT  function(IHttpNegotiate2 *This, LPCWSTR szURL, LPCWSTR szHeaders, DWORD dwReserved, LPWSTR *pszAdditionalHeaders)BeginningTransaction;
+    HRESULT  function(IHttpNegotiate2 *This, DWORD dwResponseCode, LPCWSTR szResponseHeaders, LPCWSTR szRequestHeaders, LPWSTR *pszAdditionalRequestHeaders)OnResponse;
+    HRESULT  function(IHttpNegotiate2 *This, BYTE *pbSecurityId, DWORD *pcbSecurityId, DWORD_PTR dwReserved)GetRootSecurityId;
+}
+//C       struct IHttpNegotiate2 {
+//C         struct IHttpNegotiate2Vtbl *lpVtbl;
+//C       };
+struct IHttpNegotiate2
+{
+    IHttpNegotiate2Vtbl *lpVtbl;
+}
+//C       HRESULT IHttpNegotiate2_GetRootSecurityId_Proxy(IHttpNegotiate2 *This,BYTE *pbSecurityId,DWORD *pcbSecurityId,DWORD_PTR dwReserved);
+HRESULT  IHttpNegotiate2_GetRootSecurityId_Proxy(IHttpNegotiate2 *This, BYTE *pbSecurityId, DWORD *pcbSecurityId, DWORD_PTR dwReserved);
+//C       void IHttpNegotiate2_GetRootSecurityId_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IHttpNegotiate2_GetRootSecurityId_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0185_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0185_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0185_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0185_v0_0_s_ifspec;
+//C       typedef IWinInetFileStream *LPWININETFILESTREAM;
+alias IWinInetFileStream *LPWININETFILESTREAM;
+//C       extern const IID IID_IWinInetFileStream;
+extern const IID IID_IWinInetFileStream;
+//C       typedef struct IWinInetFileStreamVtbl {
+//C           HRESULT ( *QueryInterface)(IWinInetFileStream *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IWinInetFileStream *This);
+//C           ULONG ( *Release)(IWinInetFileStream *This);
+//C           HRESULT ( *SetHandleForUnlock)(IWinInetFileStream *This,DWORD_PTR hWinInetLockHandle,DWORD_PTR dwReserved);
+//C           HRESULT ( *SetDeleteFile)(IWinInetFileStream *This,DWORD_PTR dwReserved);
+//C       } IWinInetFileStreamVtbl;
+struct IWinInetFileStreamVtbl
+{
+    HRESULT  function(IWinInetFileStream *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IWinInetFileStream *This)AddRef;
+    ULONG  function(IWinInetFileStream *This)Release;
+    HRESULT  function(IWinInetFileStream *This, DWORD_PTR hWinInetLockHandle, DWORD_PTR dwReserved)SetHandleForUnlock;
+    HRESULT  function(IWinInetFileStream *This, DWORD_PTR dwReserved)SetDeleteFile;
+}
+//C       struct IWinInetFileStream {
+//C         struct IWinInetFileStreamVtbl *lpVtbl;
+//C       };
+struct IWinInetFileStream
+{
+    IWinInetFileStreamVtbl *lpVtbl;
+}
+//C       HRESULT IWinInetFileStream_SetHandleForUnlock_Proxy(IWinInetFileStream *This,DWORD_PTR hWinInetLockHandle,DWORD_PTR dwReserved);
+HRESULT  IWinInetFileStream_SetHandleForUnlock_Proxy(IWinInetFileStream *This, DWORD_PTR hWinInetLockHandle, DWORD_PTR dwReserved);
+//C       void IWinInetFileStream_SetHandleForUnlock_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IWinInetFileStream_SetHandleForUnlock_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IWinInetFileStream_SetDeleteFile_Proxy(IWinInetFileStream *This,DWORD_PTR dwReserved);
+HRESULT  IWinInetFileStream_SetDeleteFile_Proxy(IWinInetFileStream *This, DWORD_PTR dwReserved);
+//C       void IWinInetFileStream_SetDeleteFile_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IWinInetFileStream_SetDeleteFile_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0186_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0186_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0186_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0186_v0_0_s_ifspec;
+//C       typedef IWindowForBindingUI *LPWINDOWFORBINDINGUI;
+alias IWindowForBindingUI *LPWINDOWFORBINDINGUI;
+//C       extern const IID IID_IWindowForBindingUI;
+extern const IID IID_IWindowForBindingUI;
+//C       typedef struct IWindowForBindingUIVtbl {
+//C           HRESULT ( *QueryInterface)(IWindowForBindingUI *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IWindowForBindingUI *This);
+//C           ULONG ( *Release)(IWindowForBindingUI *This);
+//C           HRESULT ( *GetWindow)(IWindowForBindingUI *This,const GUID *const rguidReason,HWND *phwnd);
+//C       } IWindowForBindingUIVtbl;
+struct IWindowForBindingUIVtbl
+{
+    HRESULT  function(IWindowForBindingUI *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IWindowForBindingUI *This)AddRef;
+    ULONG  function(IWindowForBindingUI *This)Release;
+    HRESULT  function(IWindowForBindingUI *This, GUID *rguidReason, HWND *phwnd)GetWindow;
+}
+//C       struct IWindowForBindingUI {
+//C         struct IWindowForBindingUIVtbl *lpVtbl;
+//C       };
+struct IWindowForBindingUI
+{
+    IWindowForBindingUIVtbl *lpVtbl;
+}
+//C       HRESULT IWindowForBindingUI_GetWindow_Proxy(IWindowForBindingUI *This,const GUID *const rguidReason,HWND *phwnd);
+HRESULT  IWindowForBindingUI_GetWindow_Proxy(IWindowForBindingUI *This, GUID *rguidReason, HWND *phwnd);
+//C       void IWindowForBindingUI_GetWindow_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IWindowForBindingUI_GetWindow_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0187_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0187_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0187_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0187_v0_0_s_ifspec;
+//C       typedef ICodeInstall *LPCODEINSTALL;
+alias ICodeInstall *LPCODEINSTALL;
+//C       typedef enum __MIDL_ICodeInstall_0001 {
+//C         CIP_DISK_FULL = 0,
+//C         CIP_ACCESS_DENIED,CIP_NEWER_VERSION_EXISTS,CIP_OLDER_VERSION_EXISTS,
+//C         CIP_NAME_CONFLICT,CIP_TRUST_VERIFICATION_COMPONENT_MISSING,CIP_EXE_SELF_REGISTERATION_TIMEOUT,
+//C         CIP_UNSAFE_TO_ABORT,CIP_NEED_REBOOT,CIP_NEED_REBOOT_UI_PERMISSION
+//C       } CIP_STATUS;
+enum __MIDL_ICodeInstall_0001
+{
+    CIP_DISK_FULL,
+    CIP_ACCESS_DENIED,
+    CIP_NEWER_VERSION_EXISTS,
+    CIP_OLDER_VERSION_EXISTS,
+    CIP_NAME_CONFLICT,
+    CIP_TRUST_VERIFICATION_COMPONENT_MISSING,
+    CIP_EXE_SELF_REGISTERATION_TIMEOUT,
+    CIP_UNSAFE_TO_ABORT,
+    CIP_NEED_REBOOT,
+    CIP_NEED_REBOOT_UI_PERMISSION,
+}
+alias __MIDL_ICodeInstall_0001 CIP_STATUS;
+//C       extern const IID IID_ICodeInstall;
+extern const IID IID_ICodeInstall;
+//C       typedef struct ICodeInstallVtbl {
+//C           HRESULT ( *QueryInterface)(ICodeInstall *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(ICodeInstall *This);
+//C           ULONG ( *Release)(ICodeInstall *This);
+//C           HRESULT ( *GetWindow)(ICodeInstall *This,const GUID *const rguidReason,HWND *phwnd);
+//C           HRESULT ( *OnCodeInstallProblem)(ICodeInstall *This,ULONG ulStatusCode,LPCWSTR szDestination,LPCWSTR szSource,DWORD dwReserved);
+//C       } ICodeInstallVtbl;
+struct ICodeInstallVtbl
+{
+    HRESULT  function(ICodeInstall *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(ICodeInstall *This)AddRef;
+    ULONG  function(ICodeInstall *This)Release;
+    HRESULT  function(ICodeInstall *This, GUID *rguidReason, HWND *phwnd)GetWindow;
+    HRESULT  function(ICodeInstall *This, ULONG ulStatusCode, LPCWSTR szDestination, LPCWSTR szSource, DWORD dwReserved)OnCodeInstallProblem;
+}
+//C       struct ICodeInstall {
+//C         struct ICodeInstallVtbl *lpVtbl;
+//C       };
+struct ICodeInstall
+{
+    ICodeInstallVtbl *lpVtbl;
+}
+//C       HRESULT ICodeInstall_OnCodeInstallProblem_Proxy(ICodeInstall *This,ULONG ulStatusCode,LPCWSTR szDestination,LPCWSTR szSource,DWORD dwReserved);
+HRESULT  ICodeInstall_OnCodeInstallProblem_Proxy(ICodeInstall *This, ULONG ulStatusCode, LPCWSTR szDestination, LPCWSTR szSource, DWORD dwReserved);
+//C       void ICodeInstall_OnCodeInstallProblem_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  ICodeInstall_OnCodeInstallProblem_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0188_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0188_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0188_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0188_v0_0_s_ifspec;
+//C       typedef IWinInetInfo *LPWININETINFO;
+alias IWinInetInfo *LPWININETINFO;
+//C       extern const IID IID_IWinInetInfo;
+extern const IID IID_IWinInetInfo;
+//C       typedef struct IWinInetInfoVtbl {
+//C           HRESULT ( *QueryInterface)(IWinInetInfo *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IWinInetInfo *This);
+//C           ULONG ( *Release)(IWinInetInfo *This);
+//C           HRESULT ( *QueryOption)(IWinInetInfo *This,DWORD dwOption,LPVOID pBuffer,DWORD *pcbBuf);
+//C       } IWinInetInfoVtbl;
+struct IWinInetInfoVtbl
+{
+    HRESULT  function(IWinInetInfo *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IWinInetInfo *This)AddRef;
+    ULONG  function(IWinInetInfo *This)Release;
+    HRESULT  function(IWinInetInfo *This, DWORD dwOption, LPVOID pBuffer, DWORD *pcbBuf)QueryOption;
+}
+//C       struct IWinInetInfo {
+//C         struct IWinInetInfoVtbl *lpVtbl;
+//C       };
+struct IWinInetInfo
+{
+    IWinInetInfoVtbl *lpVtbl;
+}
+//C       HRESULT IWinInetInfo_RemoteQueryOption_Proxy(IWinInetInfo *This,DWORD dwOption,BYTE *pBuffer,DWORD *pcbBuf);
+HRESULT  IWinInetInfo_RemoteQueryOption_Proxy(IWinInetInfo *This, DWORD dwOption, BYTE *pBuffer, DWORD *pcbBuf);
+//C       void IWinInetInfo_RemoteQueryOption_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IWinInetInfo_RemoteQueryOption_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0189_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0189_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0189_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0189_v0_0_s_ifspec;
+//C       typedef IHttpSecurity *LPHTTPSECURITY;
+alias IHttpSecurity *LPHTTPSECURITY;
+//C       extern const IID IID_IHttpSecurity;
+extern const IID IID_IHttpSecurity;
+//C       typedef struct IHttpSecurityVtbl {
+//C           HRESULT ( *QueryInterface)(IHttpSecurity *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IHttpSecurity *This);
+//C           ULONG ( *Release)(IHttpSecurity *This);
+//C           HRESULT ( *GetWindow)(IHttpSecurity *This,const GUID *const rguidReason,HWND *phwnd);
+//C           HRESULT ( *OnSecurityProblem)(IHttpSecurity *This,DWORD dwProblem);
+//C       } IHttpSecurityVtbl;
+struct IHttpSecurityVtbl
+{
+    HRESULT  function(IHttpSecurity *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IHttpSecurity *This)AddRef;
+    ULONG  function(IHttpSecurity *This)Release;
+    HRESULT  function(IHttpSecurity *This, GUID *rguidReason, HWND *phwnd)GetWindow;
+    HRESULT  function(IHttpSecurity *This, DWORD dwProblem)OnSecurityProblem;
+}
+//C       struct IHttpSecurity {
+//C         struct IHttpSecurityVtbl *lpVtbl;
+//C       };
+struct IHttpSecurity
+{
+    IHttpSecurityVtbl *lpVtbl;
+}
+//C       HRESULT IHttpSecurity_OnSecurityProblem_Proxy(IHttpSecurity *This,DWORD dwProblem);
+HRESULT  IHttpSecurity_OnSecurityProblem_Proxy(IHttpSecurity *This, DWORD dwProblem);
+//C       void IHttpSecurity_OnSecurityProblem_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IHttpSecurity_OnSecurityProblem_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0190_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0190_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0190_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0190_v0_0_s_ifspec;
+//C       typedef IWinInetHttpInfo *LPWININETHTTPINFO;
+alias IWinInetHttpInfo *LPWININETHTTPINFO;
+//C       extern const IID IID_IWinInetHttpInfo;
+extern const IID IID_IWinInetHttpInfo;
+//C       typedef struct IWinInetHttpInfoVtbl {
+//C           HRESULT ( *QueryInterface)(IWinInetHttpInfo *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IWinInetHttpInfo *This);
+//C           ULONG ( *Release)(IWinInetHttpInfo *This);
+//C           HRESULT ( *QueryOption)(IWinInetHttpInfo *This,DWORD dwOption,LPVOID pBuffer,DWORD *pcbBuf);
+//C           HRESULT ( *QueryInfo)(IWinInetHttpInfo *This,DWORD dwOption,LPVOID pBuffer,DWORD *pcbBuf,DWORD *pdwFlags,DWORD *pdwReserved);
+//C       } IWinInetHttpInfoVtbl;
+struct IWinInetHttpInfoVtbl
+{
+    HRESULT  function(IWinInetHttpInfo *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IWinInetHttpInfo *This)AddRef;
+    ULONG  function(IWinInetHttpInfo *This)Release;
+    HRESULT  function(IWinInetHttpInfo *This, DWORD dwOption, LPVOID pBuffer, DWORD *pcbBuf)QueryOption;
+    HRESULT  function(IWinInetHttpInfo *This, DWORD dwOption, LPVOID pBuffer, DWORD *pcbBuf, DWORD *pdwFlags, DWORD *pdwReserved)QueryInfo;
+}
+//C       struct IWinInetHttpInfo {
+//C         struct IWinInetHttpInfoVtbl *lpVtbl;
+//C       };
+struct IWinInetHttpInfo
+{
+    IWinInetHttpInfoVtbl *lpVtbl;
+}
+//C       HRESULT IWinInetHttpInfo_RemoteQueryInfo_Proxy(IWinInetHttpInfo *This,DWORD dwOption,BYTE *pBuffer,DWORD *pcbBuf,DWORD *pdwFlags,DWORD *pdwReserved);
+HRESULT  IWinInetHttpInfo_RemoteQueryInfo_Proxy(IWinInetHttpInfo *This, DWORD dwOption, BYTE *pBuffer, DWORD *pcbBuf, DWORD *pdwFlags, DWORD *pdwReserved);
+//C       void IWinInetHttpInfo_RemoteQueryInfo_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IWinInetHttpInfo_RemoteQueryInfo_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0191_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0191_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0191_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0191_v0_0_s_ifspec;
+//C       typedef IWinInetCacheHints *LPWININETCACHEHINTS;
+alias IWinInetCacheHints *LPWININETCACHEHINTS;
+//C       extern const IID IID_IWinInetCacheHints;
+extern const IID IID_IWinInetCacheHints;
+//C       typedef struct IWinInetCacheHintsVtbl {
+//C           HRESULT ( *QueryInterface)(IWinInetCacheHints *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IWinInetCacheHints *This);
+//C           ULONG ( *Release)(IWinInetCacheHints *This);
+//C           HRESULT ( *SetCacheExtension)(IWinInetCacheHints *This,LPCWSTR pwzExt,LPVOID pszCacheFile,DWORD *pcbCacheFile,DWORD *pdwWinInetError,DWORD *pdwReserved);
+//C       } IWinInetCacheHintsVtbl;
+struct IWinInetCacheHintsVtbl
+{
+    HRESULT  function(IWinInetCacheHints *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IWinInetCacheHints *This)AddRef;
+    ULONG  function(IWinInetCacheHints *This)Release;
+    HRESULT  function(IWinInetCacheHints *This, LPCWSTR pwzExt, LPVOID pszCacheFile, DWORD *pcbCacheFile, DWORD *pdwWinInetError, DWORD *pdwReserved)SetCacheExtension;
+}
+//C       struct IWinInetCacheHints {
+//C         struct IWinInetCacheHintsVtbl *lpVtbl;
+//C       };
+struct IWinInetCacheHints
+{
+    IWinInetCacheHintsVtbl *lpVtbl;
+}
+//C       HRESULT IWinInetCacheHints_SetCacheExtension_Proxy(IWinInetCacheHints *This,LPCWSTR pwzExt,LPVOID pszCacheFile,DWORD *pcbCacheFile,DWORD *pdwWinInetError,DWORD *pdwReserved);
+HRESULT  IWinInetCacheHints_SetCacheExtension_Proxy(IWinInetCacheHints *This, LPCWSTR pwzExt, LPVOID pszCacheFile, DWORD *pcbCacheFile, DWORD *pdwWinInetError, DWORD *pdwReserved);
+//C       void IWinInetCacheHints_SetCacheExtension_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IWinInetCacheHints_SetCacheExtension_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const GUID SID_BindHost;
+extern const GUID SID_BindHost;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0192_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0192_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0192_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0192_v0_0_s_ifspec;
+//C       typedef IBindHost *LPBINDHOST;
+alias IBindHost *LPBINDHOST;
+//C       extern const IID IID_IBindHost;
+extern const IID IID_IBindHost;
+//C       typedef struct IBindHostVtbl {
+//C           HRESULT ( *QueryInterface)(IBindHost *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IBindHost *This);
+//C           ULONG ( *Release)(IBindHost *This);
+//C           HRESULT ( *CreateMoniker)(IBindHost *This,LPOLESTR szName,IBindCtx *pBC,IMoniker **ppmk,DWORD dwReserved);
+//C           HRESULT ( *MonikerBindToStorage)(IBindHost *This,IMoniker *pMk,IBindCtx *pBC,IBindStatusCallback *pBSC,const IID *const riid,void **ppvObj);
+//C           HRESULT ( *MonikerBindToObject)(IBindHost *This,IMoniker *pMk,IBindCtx *pBC,IBindStatusCallback *pBSC,const IID *const riid,void **ppvObj);
+//C       } IBindHostVtbl;
+struct IBindHostVtbl
+{
+    HRESULT  function(IBindHost *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IBindHost *This)AddRef;
+    ULONG  function(IBindHost *This)Release;
+    HRESULT  function(IBindHost *This, LPOLESTR szName, IBindCtx *pBC, IMoniker **ppmk, DWORD dwReserved)CreateMoniker;
+    HRESULT  function(IBindHost *This, IMoniker *pMk, IBindCtx *pBC, IBindStatusCallback *pBSC, IID *riid, void **ppvObj)MonikerBindToStorage;
+    HRESULT  function(IBindHost *This, IMoniker *pMk, IBindCtx *pBC, IBindStatusCallback *pBSC, IID *riid, void **ppvObj)MonikerBindToObject;
+}
+//C       struct IBindHost {
+//C         struct IBindHostVtbl *lpVtbl;
+//C       };
+struct IBindHost
+{
+    IBindHostVtbl *lpVtbl;
+}
+//C       HRESULT IBindHost_CreateMoniker_Proxy(IBindHost *This,LPOLESTR szName,IBindCtx *pBC,IMoniker **ppmk,DWORD dwReserved);
+HRESULT  IBindHost_CreateMoniker_Proxy(IBindHost *This, LPOLESTR szName, IBindCtx *pBC, IMoniker **ppmk, DWORD dwReserved);
+//C       void IBindHost_CreateMoniker_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IBindHost_CreateMoniker_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IBindHost_RemoteMonikerBindToStorage_Proxy(IBindHost *This,IMoniker *pMk,IBindCtx *pBC,IBindStatusCallback *pBSC,const IID *const riid,IUnknown **ppvObj);
+HRESULT  IBindHost_RemoteMonikerBindToStorage_Proxy(IBindHost *This, IMoniker *pMk, IBindCtx *pBC, IBindStatusCallback *pBSC, IID *riid, IUnknown **ppvObj);
+//C       void IBindHost_RemoteMonikerBindToStorage_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IBindHost_RemoteMonikerBindToStorage_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IBindHost_RemoteMonikerBindToObject_Proxy(IBindHost *This,IMoniker *pMk,IBindCtx *pBC,IBindStatusCallback *pBSC,const IID *const riid,IUnknown **ppvObj);
+HRESULT  IBindHost_RemoteMonikerBindToObject_Proxy(IBindHost *This, IMoniker *pMk, IBindCtx *pBC, IBindStatusCallback *pBSC, IID *riid, IUnknown **ppvObj);
+//C       void IBindHost_RemoteMonikerBindToObject_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IBindHost_RemoteMonikerBindToObject_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       struct IBindStatusCallback;
+//C       extern HRESULT HlinkSimpleNavigateToString(LPCWSTR szTarget,LPCWSTR szLocation,LPCWSTR szTargetFrameName,IUnknown *pUnk,IBindCtx *pbc,IBindStatusCallback *,DWORD grfHLNF,DWORD dwReserved);
+HRESULT  HlinkSimpleNavigateToString(LPCWSTR szTarget, LPCWSTR szLocation, LPCWSTR szTargetFrameName, IUnknown *pUnk, IBindCtx *pbc, IBindStatusCallback *, DWORD grfHLNF, DWORD dwReserved);
+//C       extern HRESULT HlinkSimpleNavigateToMoniker(IMoniker *pmkTarget,LPCWSTR szLocation,LPCWSTR szTargetFrameName,IUnknown *pUnk,IBindCtx *pbc,IBindStatusCallback *,DWORD grfHLNF,DWORD dwReserved);
+HRESULT  HlinkSimpleNavigateToMoniker(IMoniker *pmkTarget, LPCWSTR szLocation, LPCWSTR szTargetFrameName, IUnknown *pUnk, IBindCtx *pbc, IBindStatusCallback *, DWORD grfHLNF, DWORD dwReserved);
+//C       extern HRESULT URLOpenStreamA(LPUNKNOWN,LPCSTR,DWORD,LPBINDSTATUSCALLBACK);
+HRESULT  URLOpenStreamA(LPUNKNOWN , LPCSTR , DWORD , LPBINDSTATUSCALLBACK );
+//C       extern HRESULT URLOpenStreamW(LPUNKNOWN,LPCWSTR,DWORD,LPBINDSTATUSCALLBACK);
+HRESULT  URLOpenStreamW(LPUNKNOWN , LPCWSTR , DWORD , LPBINDSTATUSCALLBACK );
+//C       extern HRESULT URLOpenPullStreamA(LPUNKNOWN,LPCSTR,DWORD,LPBINDSTATUSCALLBACK);
+HRESULT  URLOpenPullStreamA(LPUNKNOWN , LPCSTR , DWORD , LPBINDSTATUSCALLBACK );
+//C       extern HRESULT URLOpenPullStreamW(LPUNKNOWN,LPCWSTR,DWORD,LPBINDSTATUSCALLBACK);
+HRESULT  URLOpenPullStreamW(LPUNKNOWN , LPCWSTR , DWORD , LPBINDSTATUSCALLBACK );
+//C       extern HRESULT URLDownloadToFileA(LPUNKNOWN,LPCSTR,LPCSTR,DWORD,LPBINDSTATUSCALLBACK);
+HRESULT  URLDownloadToFileA(LPUNKNOWN , LPCSTR , LPCSTR , DWORD , LPBINDSTATUSCALLBACK );
+//C       extern HRESULT URLDownloadToFileW(LPUNKNOWN,LPCWSTR,LPCWSTR,DWORD,LPBINDSTATUSCALLBACK);
+HRESULT  URLDownloadToFileW(LPUNKNOWN , LPCWSTR , LPCWSTR , DWORD , LPBINDSTATUSCALLBACK );
+//C       extern HRESULT URLDownloadToCacheFileA(LPUNKNOWN,LPCSTR,LPTSTR,DWORD,DWORD,LPBINDSTATUSCALLBACK);
+HRESULT  URLDownloadToCacheFileA(LPUNKNOWN , LPCSTR , LPTSTR , DWORD , DWORD , LPBINDSTATUSCALLBACK );
+//C       extern HRESULT URLDownloadToCacheFileW(LPUNKNOWN,LPCWSTR,LPWSTR,DWORD,DWORD,LPBINDSTATUSCALLBACK);
+HRESULT  URLDownloadToCacheFileW(LPUNKNOWN , LPCWSTR , LPWSTR , DWORD , DWORD , LPBINDSTATUSCALLBACK );
+//C       extern HRESULT URLOpenBlockingStreamA(LPUNKNOWN,LPCSTR,LPSTREAM*,DWORD,LPBINDSTATUSCALLBACK);
+HRESULT  URLOpenBlockingStreamA(LPUNKNOWN , LPCSTR , LPSTREAM *, DWORD , LPBINDSTATUSCALLBACK );
+//C       extern HRESULT URLOpenBlockingStreamW(LPUNKNOWN,LPCWSTR,LPSTREAM*,DWORD,LPBINDSTATUSCALLBACK);
+HRESULT  URLOpenBlockingStreamW(LPUNKNOWN , LPCWSTR , LPSTREAM *, DWORD , LPBINDSTATUSCALLBACK );
+//C       extern HRESULT HlinkGoBack(IUnknown *pUnk);
+HRESULT  HlinkGoBack(IUnknown *pUnk);
+//C       extern HRESULT HlinkGoForward(IUnknown *pUnk);
+HRESULT  HlinkGoForward(IUnknown *pUnk);
+//C       extern HRESULT HlinkNavigateString(IUnknown *pUnk,LPCWSTR szTarget);
+HRESULT  HlinkNavigateString(IUnknown *pUnk, LPCWSTR szTarget);
+//C       extern HRESULT HlinkNavigateMoniker(IUnknown *pUnk,IMoniker *pmkTarget);
+HRESULT  HlinkNavigateMoniker(IUnknown *pUnk, IMoniker *pmkTarget);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0193_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0193_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0193_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0193_v0_0_s_ifspec;
+//C       typedef IInternet *LPIINTERNET;
+alias IInternet *LPIINTERNET;
+//C       extern const IID IID_IInternet;
+extern const IID IID_IInternet;
+//C       typedef struct IInternetVtbl {
+//C           HRESULT ( *QueryInterface)(IInternet *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternet *This);
+//C           ULONG ( *Release)(IInternet *This);
+//C       } IInternetVtbl;
+struct IInternetVtbl
+{
+    HRESULT  function(IInternet *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternet *This)AddRef;
+    ULONG  function(IInternet *This)Release;
+}
+//C       struct IInternet {
+//C         struct IInternetVtbl *lpVtbl;
+//C       };
+struct IInternet
+{
+    IInternetVtbl *lpVtbl;
+}
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0194_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0194_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0194_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0194_v0_0_s_ifspec;
+//C       typedef IInternetBindInfo *LPIINTERNETBINDINFO;
+alias IInternetBindInfo *LPIINTERNETBINDINFO;
+//C       typedef enum tagBINDSTRING {
+//C         BINDSTRING_HEADERS = 1,
+//C         BINDSTRING_ACCEPT_MIMES,BINDSTRING_EXTRA_URL,BINDSTRING_LANGUAGE,BINDSTRING_USERNAME,
+//C         BINDSTRING_PASSWORD,BINDSTRING_UA_PIXELS,BINDSTRING_UA_COLOR,BINDSTRING_OS,
+//C         BINDSTRING_USER_AGENT,BINDSTRING_ACCEPT_ENCODINGS,BINDSTRING_POST_COOKIE,
+//C         BINDSTRING_POST_DATA_MIME,BINDSTRING_URL,BINDSTRING_IID,BINDSTRING_FLAG_BIND_TO_OBJECT,
+//C         BINDSTRING_PTR_BIND_CONTEXT
+//C       } BINDSTRING;
+enum tagBINDSTRING
+{
+    BINDSTRING_HEADERS = 1,
+    BINDSTRING_ACCEPT_MIMES,
+    BINDSTRING_EXTRA_URL,
+    BINDSTRING_LANGUAGE,
+    BINDSTRING_USERNAME,
+    BINDSTRING_PASSWORD,
+    BINDSTRING_UA_PIXELS,
+    BINDSTRING_UA_COLOR,
+    BINDSTRING_OS,
+    BINDSTRING_USER_AGENT,
+    BINDSTRING_ACCEPT_ENCODINGS,
+    BINDSTRING_POST_COOKIE,
+    BINDSTRING_POST_DATA_MIME,
+    BINDSTRING_URL,
+    BINDSTRING_IID,
+    BINDSTRING_FLAG_BIND_TO_OBJECT,
+    BINDSTRING_PTR_BIND_CONTEXT,
+}
+alias tagBINDSTRING BINDSTRING;
+//C       extern const IID IID_IInternetBindInfo;
+extern const IID IID_IInternetBindInfo;
+//C       typedef struct IInternetBindInfoVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetBindInfo *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetBindInfo *This);
+//C           ULONG ( *Release)(IInternetBindInfo *This);
+//C           HRESULT ( *GetBindInfo)(IInternetBindInfo *This,DWORD *grfBINDF,BINDINFO *pbindinfo);
+//C           HRESULT ( *GetBindString)(IInternetBindInfo *This,ULONG ulStringType,LPOLESTR *ppwzStr,ULONG cEl,ULONG *pcElFetched);
+//C       } IInternetBindInfoVtbl;
+struct IInternetBindInfoVtbl
+{
+    HRESULT  function(IInternetBindInfo *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetBindInfo *This)AddRef;
+    ULONG  function(IInternetBindInfo *This)Release;
+    HRESULT  function(IInternetBindInfo *This, DWORD *grfBINDF, BINDINFO *pbindinfo)GetBindInfo;
+    HRESULT  function(IInternetBindInfo *This, ULONG ulStringType, LPOLESTR *ppwzStr, ULONG cEl, ULONG *pcElFetched)GetBindString;
+}
+//C       struct IInternetBindInfo {
+//C         struct IInternetBindInfoVtbl *lpVtbl;
+//C       };
+struct IInternetBindInfo
+{
+    IInternetBindInfoVtbl *lpVtbl;
+}
+//C       HRESULT IInternetBindInfo_GetBindInfo_Proxy(IInternetBindInfo *This,DWORD *grfBINDF,BINDINFO *pbindinfo);
+HRESULT  IInternetBindInfo_GetBindInfo_Proxy(IInternetBindInfo *This, DWORD *grfBINDF, BINDINFO *pbindinfo);
+//C       void IInternetBindInfo_GetBindInfo_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetBindInfo_GetBindInfo_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetBindInfo_GetBindString_Proxy(IInternetBindInfo *This,ULONG ulStringType,LPOLESTR *ppwzStr,ULONG cEl,ULONG *pcElFetched);
+HRESULT  IInternetBindInfo_GetBindString_Proxy(IInternetBindInfo *This, ULONG ulStringType, LPOLESTR *ppwzStr, ULONG cEl, ULONG *pcElFetched);
+//C       void IInternetBindInfo_GetBindString_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetBindInfo_GetBindString_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0195_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0195_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0195_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0195_v0_0_s_ifspec;
+//C       typedef IInternetProtocolRoot *LPIINTERNETPROTOCOLROOT;
+alias IInternetProtocolRoot *LPIINTERNETPROTOCOLROOT;
+//C       typedef enum _tagPI_FLAGS {
+//C         PI_PARSE_URL = 0x1,PI_FILTER_MODE = 0x2,PI_FORCE_ASYNC = 0x4,PI_USE_WORKERTHREAD = 0x8,PI_MIMEVERIFICATION = 0x10,PI_CLSIDLOOKUP = 0x20,
+//C         PI_DATAPROGRESS = 0x40,PI_SYNCHRONOUS = 0x80,PI_APARTMENTTHREADED = 0x100,PI_CLASSINSTALL = 0x200,PI_PASSONBINDCTX = 0x2000,
+//C         PI_NOMIMEHANDLER = 0x8000,PI_LOADAPPDIRECT = 0x4000,PD_FORCE_SWITCH = 0x10000,PI_PREFERDEFAULTHANDLER = 0x20000
+//C       } PI_FLAGS;
+enum _tagPI_FLAGS
+{
+    PI_PARSE_URL = 1,
+    PI_FILTER_MODE,
+    PI_FORCE_ASYNC = 4,
+    PI_USE_WORKERTHREAD = 8,
+    PI_MIMEVERIFICATION = 16,
+    PI_CLSIDLOOKUP = 32,
+    PI_DATAPROGRESS = 64,
+    PI_SYNCHRONOUS = 128,
+    PI_APARTMENTTHREADED = 256,
+    PI_CLASSINSTALL = 512,
+    PI_PASSONBINDCTX = 8192,
+    PI_NOMIMEHANDLER = 32768,
+    PI_LOADAPPDIRECT = 16384,
+    PD_FORCE_SWITCH = 65536,
+    PI_PREFERDEFAULTHANDLER = 131072,
+}
+alias _tagPI_FLAGS PI_FLAGS;
+//C       typedef struct _tagPROTOCOLDATA {
+//C         DWORD grfFlags;
+//C         DWORD dwState;
+//C         LPVOID pData;
+//C         ULONG cbData;
+//C       } PROTOCOLDATA;
+struct _tagPROTOCOLDATA
+{
+    DWORD grfFlags;
+    DWORD dwState;
+    LPVOID pData;
+    ULONG cbData;
+}
+alias _tagPROTOCOLDATA PROTOCOLDATA;
+//C       typedef struct _tagStartParam {
+//C         IID iid;
+//C         IBindCtx *pIBindCtx;
+//C         IUnknown *pItf;
+//C       } StartParam;
+struct _tagStartParam
+{
+    IID iid;
+    IBindCtx *pIBindCtx;
+    IUnknown *pItf;
+}
+alias _tagStartParam StartParam;
+//C       extern const IID IID_IInternetProtocolRoot;
+extern const IID IID_IInternetProtocolRoot;
+//C       typedef struct IInternetProtocolRootVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetProtocolRoot *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetProtocolRoot *This);
+//C           ULONG ( *Release)(IInternetProtocolRoot *This);
+//C           HRESULT ( *Start)(IInternetProtocolRoot *This,LPCWSTR szUrl,IInternetProtocolSink *pOIProtSink,IInternetBindInfo *pOIBindInfo,DWORD grfPI,HANDLE_PTR dwReserved);
+//C           HRESULT ( *Continue)(IInternetProtocolRoot *This,PROTOCOLDATA *pProtocolData);
+//C           HRESULT ( *Abort)(IInternetProtocolRoot *This,HRESULT hrReason,DWORD dwOptions);
+//C           HRESULT ( *Terminate)(IInternetProtocolRoot *This,DWORD dwOptions);
+//C           HRESULT ( *Suspend)(IInternetProtocolRoot *This);
+//C           HRESULT ( *Resume)(IInternetProtocolRoot *This);
+//C       } IInternetProtocolRootVtbl;
+struct IInternetProtocolRootVtbl
+{
+    HRESULT  function(IInternetProtocolRoot *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetProtocolRoot *This)AddRef;
+    ULONG  function(IInternetProtocolRoot *This)Release;
+    HRESULT  function(IInternetProtocolRoot *This, LPCWSTR szUrl, IInternetProtocolSink *pOIProtSink, IInternetBindInfo *pOIBindInfo, DWORD grfPI, HANDLE_PTR dwReserved)Start;
+    HRESULT  function(IInternetProtocolRoot *This, PROTOCOLDATA *pProtocolData)Continue;
+    HRESULT  function(IInternetProtocolRoot *This, HRESULT hrReason, DWORD dwOptions)Abort;
+    HRESULT  function(IInternetProtocolRoot *This, DWORD dwOptions)Terminate;
+    HRESULT  function(IInternetProtocolRoot *This)Suspend;
+    HRESULT  function(IInternetProtocolRoot *This)Resume;
+}
+//C       struct IInternetProtocolRoot {
+//C         struct IInternetProtocolRootVtbl *lpVtbl;
+//C       };
+struct IInternetProtocolRoot
+{
+    IInternetProtocolRootVtbl *lpVtbl;
+}
+//C       HRESULT IInternetProtocolRoot_Start_Proxy(IInternetProtocolRoot *This,LPCWSTR szUrl,IInternetProtocolSink *pOIProtSink,IInternetBindInfo *pOIBindInfo,DWORD grfPI,HANDLE_PTR dwReserved);
+HRESULT  IInternetProtocolRoot_Start_Proxy(IInternetProtocolRoot *This, LPCWSTR szUrl, IInternetProtocolSink *pOIProtSink, IInternetBindInfo *pOIBindInfo, DWORD grfPI, HANDLE_PTR dwReserved);
+//C       void IInternetProtocolRoot_Start_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolRoot_Start_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolRoot_Continue_Proxy(IInternetProtocolRoot *This,PROTOCOLDATA *pProtocolData);
+HRESULT  IInternetProtocolRoot_Continue_Proxy(IInternetProtocolRoot *This, PROTOCOLDATA *pProtocolData);
+//C       void IInternetProtocolRoot_Continue_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolRoot_Continue_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolRoot_Abort_Proxy(IInternetProtocolRoot *This,HRESULT hrReason,DWORD dwOptions);
+HRESULT  IInternetProtocolRoot_Abort_Proxy(IInternetProtocolRoot *This, HRESULT hrReason, DWORD dwOptions);
+//C       void IInternetProtocolRoot_Abort_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolRoot_Abort_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolRoot_Terminate_Proxy(IInternetProtocolRoot *This,DWORD dwOptions);
+HRESULT  IInternetProtocolRoot_Terminate_Proxy(IInternetProtocolRoot *This, DWORD dwOptions);
+//C       void IInternetProtocolRoot_Terminate_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolRoot_Terminate_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolRoot_Suspend_Proxy(IInternetProtocolRoot *This);
+HRESULT  IInternetProtocolRoot_Suspend_Proxy(IInternetProtocolRoot *This);
+//C       void IInternetProtocolRoot_Suspend_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolRoot_Suspend_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolRoot_Resume_Proxy(IInternetProtocolRoot *This);
+HRESULT  IInternetProtocolRoot_Resume_Proxy(IInternetProtocolRoot *This);
+//C       void IInternetProtocolRoot_Resume_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolRoot_Resume_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0196_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0196_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0196_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0196_v0_0_s_ifspec;
+//C       typedef IInternetProtocol *LPIINTERNETPROTOCOL;
+alias IInternetProtocol *LPIINTERNETPROTOCOL;
+//C       extern const IID IID_IInternetProtocol;
+extern const IID IID_IInternetProtocol;
+//C       typedef struct IInternetProtocolVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetProtocol *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetProtocol *This);
+//C           ULONG ( *Release)(IInternetProtocol *This);
+//C           HRESULT ( *Start)(IInternetProtocol *This,LPCWSTR szUrl,IInternetProtocolSink *pOIProtSink,IInternetBindInfo *pOIBindInfo,DWORD grfPI,HANDLE_PTR dwReserved);
+//C           HRESULT ( *Continue)(IInternetProtocol *This,PROTOCOLDATA *pProtocolData);
+//C           HRESULT ( *Abort)(IInternetProtocol *This,HRESULT hrReason,DWORD dwOptions);
+//C           HRESULT ( *Terminate)(IInternetProtocol *This,DWORD dwOptions);
+//C           HRESULT ( *Suspend)(IInternetProtocol *This);
+//C           HRESULT ( *Resume)(IInternetProtocol *This);
+//C           HRESULT ( *Read)(IInternetProtocol *This,void *pv,ULONG cb,ULONG *pcbRead);
+//C           HRESULT ( *Seek)(IInternetProtocol *This,LARGE_INTEGER dlibMove,DWORD dwOrigin,ULARGE_INTEGER *plibNewPosition);
+//C           HRESULT ( *LockRequest)(IInternetProtocol *This,DWORD dwOptions);
+//C           HRESULT ( *UnlockRequest)(IInternetProtocol *This);
+//C       } IInternetProtocolVtbl;
+struct IInternetProtocolVtbl
+{
+    HRESULT  function(IInternetProtocol *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetProtocol *This)AddRef;
+    ULONG  function(IInternetProtocol *This)Release;
+    HRESULT  function(IInternetProtocol *This, LPCWSTR szUrl, IInternetProtocolSink *pOIProtSink, IInternetBindInfo *pOIBindInfo, DWORD grfPI, HANDLE_PTR dwReserved)Start;
+    HRESULT  function(IInternetProtocol *This, PROTOCOLDATA *pProtocolData)Continue;
+    HRESULT  function(IInternetProtocol *This, HRESULT hrReason, DWORD dwOptions)Abort;
+    HRESULT  function(IInternetProtocol *This, DWORD dwOptions)Terminate;
+    HRESULT  function(IInternetProtocol *This)Suspend;
+    HRESULT  function(IInternetProtocol *This)Resume;
+    HRESULT  function(IInternetProtocol *This, void *pv, ULONG cb, ULONG *pcbRead)Read;
+    HRESULT  function(IInternetProtocol *This, LARGE_INTEGER dlibMove, DWORD dwOrigin, ULARGE_INTEGER *plibNewPosition)Seek;
+    HRESULT  function(IInternetProtocol *This, DWORD dwOptions)LockRequest;
+    HRESULT  function(IInternetProtocol *This)UnlockRequest;
+}
+//C       struct IInternetProtocol {
+//C         struct IInternetProtocolVtbl *lpVtbl;
+//C       };
+struct IInternetProtocol
+{
+    IInternetProtocolVtbl *lpVtbl;
+}
+//C       HRESULT IInternetProtocol_Read_Proxy(IInternetProtocol *This,void *pv,ULONG cb,ULONG *pcbRead);
+HRESULT  IInternetProtocol_Read_Proxy(IInternetProtocol *This, void *pv, ULONG cb, ULONG *pcbRead);
+//C       void IInternetProtocol_Read_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocol_Read_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocol_Seek_Proxy(IInternetProtocol *This,LARGE_INTEGER dlibMove,DWORD dwOrigin,ULARGE_INTEGER *plibNewPosition);
+HRESULT  IInternetProtocol_Seek_Proxy(IInternetProtocol *This, LARGE_INTEGER dlibMove, DWORD dwOrigin, ULARGE_INTEGER *plibNewPosition);
+//C       void IInternetProtocol_Seek_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocol_Seek_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocol_LockRequest_Proxy(IInternetProtocol *This,DWORD dwOptions);
+HRESULT  IInternetProtocol_LockRequest_Proxy(IInternetProtocol *This, DWORD dwOptions);
+//C       void IInternetProtocol_LockRequest_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocol_LockRequest_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocol_UnlockRequest_Proxy(IInternetProtocol *This);
+HRESULT  IInternetProtocol_UnlockRequest_Proxy(IInternetProtocol *This);
+//C       void IInternetProtocol_UnlockRequest_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocol_UnlockRequest_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0197_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0197_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0197_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0197_v0_0_s_ifspec;
+//C       typedef IInternetProtocolSink *LPIINTERNETPROTOCOLSINK;
+alias IInternetProtocolSink *LPIINTERNETPROTOCOLSINK;
+//C       extern const IID IID_IInternetProtocolSink;
+extern const IID IID_IInternetProtocolSink;
+//C       typedef struct IInternetProtocolSinkVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetProtocolSink *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetProtocolSink *This);
+//C           ULONG ( *Release)(IInternetProtocolSink *This);
+//C           HRESULT ( *Switch)(IInternetProtocolSink *This,PROTOCOLDATA *pProtocolData);
+//C           HRESULT ( *ReportProgress)(IInternetProtocolSink *This,ULONG ulStatusCode,LPCWSTR szStatusText);
+//C           HRESULT ( *ReportData)(IInternetProtocolSink *This,DWORD grfBSCF,ULONG ulProgress,ULONG ulProgressMax);
+//C           HRESULT ( *ReportResult)(IInternetProtocolSink *This,HRESULT hrResult,DWORD dwError,LPCWSTR szResult);
+//C       } IInternetProtocolSinkVtbl;
+struct IInternetProtocolSinkVtbl
+{
+    HRESULT  function(IInternetProtocolSink *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetProtocolSink *This)AddRef;
+    ULONG  function(IInternetProtocolSink *This)Release;
+    HRESULT  function(IInternetProtocolSink *This, PROTOCOLDATA *pProtocolData)Switch;
+    HRESULT  function(IInternetProtocolSink *This, ULONG ulStatusCode, LPCWSTR szStatusText)ReportProgress;
+    HRESULT  function(IInternetProtocolSink *This, DWORD grfBSCF, ULONG ulProgress, ULONG ulProgressMax)ReportData;
+    HRESULT  function(IInternetProtocolSink *This, HRESULT hrResult, DWORD dwError, LPCWSTR szResult)ReportResult;
+}
+//C       struct IInternetProtocolSink {
+//C         struct IInternetProtocolSinkVtbl *lpVtbl;
+//C       };
+struct IInternetProtocolSink
+{
+    IInternetProtocolSinkVtbl *lpVtbl;
+}
+//C       HRESULT IInternetProtocolSink_Switch_Proxy(IInternetProtocolSink *This,PROTOCOLDATA *pProtocolData);
+HRESULT  IInternetProtocolSink_Switch_Proxy(IInternetProtocolSink *This, PROTOCOLDATA *pProtocolData);
+//C       void IInternetProtocolSink_Switch_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolSink_Switch_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolSink_ReportProgress_Proxy(IInternetProtocolSink *This,ULONG ulStatusCode,LPCWSTR szStatusText);
+HRESULT  IInternetProtocolSink_ReportProgress_Proxy(IInternetProtocolSink *This, ULONG ulStatusCode, LPCWSTR szStatusText);
+//C       void IInternetProtocolSink_ReportProgress_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolSink_ReportProgress_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolSink_ReportData_Proxy(IInternetProtocolSink *This,DWORD grfBSCF,ULONG ulProgress,ULONG ulProgressMax);
+HRESULT  IInternetProtocolSink_ReportData_Proxy(IInternetProtocolSink *This, DWORD grfBSCF, ULONG ulProgress, ULONG ulProgressMax);
+//C       void IInternetProtocolSink_ReportData_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolSink_ReportData_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolSink_ReportResult_Proxy(IInternetProtocolSink *This,HRESULT hrResult,DWORD dwError,LPCWSTR szResult);
+HRESULT  IInternetProtocolSink_ReportResult_Proxy(IInternetProtocolSink *This, HRESULT hrResult, DWORD dwError, LPCWSTR szResult);
+//C       void IInternetProtocolSink_ReportResult_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolSink_ReportResult_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0198_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0198_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0198_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0198_v0_0_s_ifspec;
+//C       typedef IInternetProtocolSinkStackable *LPIINTERNETPROTOCOLSINKStackable;
+alias IInternetProtocolSinkStackable *LPIINTERNETPROTOCOLSINKStackable;
+//C       extern const IID IID_IInternetProtocolSinkStackable;
+extern const IID IID_IInternetProtocolSinkStackable;
+//C       typedef struct IInternetProtocolSinkStackableVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetProtocolSinkStackable *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetProtocolSinkStackable *This);
+//C           ULONG ( *Release)(IInternetProtocolSinkStackable *This);
+//C           HRESULT ( *SwitchSink)(IInternetProtocolSinkStackable *This,IInternetProtocolSink *pOIProtSink);
+//C           HRESULT ( *CommitSwitch)(IInternetProtocolSinkStackable *This);
+//C           HRESULT ( *RollbackSwitch)(IInternetProtocolSinkStackable *This);
+//C       } IInternetProtocolSinkStackableVtbl;
+struct IInternetProtocolSinkStackableVtbl
+{
+    HRESULT  function(IInternetProtocolSinkStackable *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetProtocolSinkStackable *This)AddRef;
+    ULONG  function(IInternetProtocolSinkStackable *This)Release;
+    HRESULT  function(IInternetProtocolSinkStackable *This, IInternetProtocolSink *pOIProtSink)SwitchSink;
+    HRESULT  function(IInternetProtocolSinkStackable *This)CommitSwitch;
+    HRESULT  function(IInternetProtocolSinkStackable *This)RollbackSwitch;
+}
+//C       struct IInternetProtocolSinkStackable {
+//C         struct IInternetProtocolSinkStackableVtbl *lpVtbl;
+//C       };
+struct IInternetProtocolSinkStackable
+{
+    IInternetProtocolSinkStackableVtbl *lpVtbl;
+}
+//C       HRESULT IInternetProtocolSinkStackable_SwitchSink_Proxy(IInternetProtocolSinkStackable *This,IInternetProtocolSink *pOIProtSink);
+HRESULT  IInternetProtocolSinkStackable_SwitchSink_Proxy(IInternetProtocolSinkStackable *This, IInternetProtocolSink *pOIProtSink);
+//C       void IInternetProtocolSinkStackable_SwitchSink_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolSinkStackable_SwitchSink_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolSinkStackable_CommitSwitch_Proxy(IInternetProtocolSinkStackable *This);
+HRESULT  IInternetProtocolSinkStackable_CommitSwitch_Proxy(IInternetProtocolSinkStackable *This);
+//C       void IInternetProtocolSinkStackable_CommitSwitch_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolSinkStackable_CommitSwitch_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolSinkStackable_RollbackSwitch_Proxy(IInternetProtocolSinkStackable *This);
+HRESULT  IInternetProtocolSinkStackable_RollbackSwitch_Proxy(IInternetProtocolSinkStackable *This);
+//C       void IInternetProtocolSinkStackable_RollbackSwitch_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolSinkStackable_RollbackSwitch_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0199_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0199_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0199_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0199_v0_0_s_ifspec;
+//C       typedef IInternetSession *LPIINTERNETSESSION;
+alias IInternetSession *LPIINTERNETSESSION;
+//C       typedef enum _tagOIBDG_FLAGS {
+//C         OIBDG_APARTMENTTHREADED = 0x100,OIBDG_DATAONLY = 0x1000
+//C       } OIBDG_FLAGS;
+enum _tagOIBDG_FLAGS
+{
+    OIBDG_APARTMENTTHREADED = 256,
+    OIBDG_DATAONLY = 4096,
+}
+alias _tagOIBDG_FLAGS OIBDG_FLAGS;
+//C       extern const IID IID_IInternetSession;
+extern const IID IID_IInternetSession;
+//C       typedef struct IInternetSessionVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetSession *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetSession *This);
+//C           ULONG ( *Release)(IInternetSession *This);
+//C           HRESULT ( *RegisterNameSpace)(IInternetSession *This,IClassFactory *pCF,const IID *const rclsid,LPCWSTR pwzProtocol,ULONG cPatterns,const LPCWSTR *ppwzPatterns,DWORD dwReserved);
+//C           HRESULT ( *UnregisterNameSpace)(IInternetSession *This,IClassFactory *pCF,LPCWSTR pszProtocol);
+//C           HRESULT ( *RegisterMimeFilter)(IInternetSession *This,IClassFactory *pCF,const IID *const rclsid,LPCWSTR pwzType);
+//C           HRESULT ( *UnregisterMimeFilter)(IInternetSession *This,IClassFactory *pCF,LPCWSTR pwzType);
+//C           HRESULT ( *CreateBinding)(IInternetSession *This,LPBC pBC,LPCWSTR szUrl,IUnknown *pUnkOuter,IUnknown **ppUnk,IInternetProtocol **ppOInetProt,DWORD dwOption);
+//C           HRESULT ( *SetSessionOption)(IInternetSession *This,DWORD dwOption,LPVOID pBuffer,DWORD dwBufferLength,DWORD dwReserved);
+//C           HRESULT ( *GetSessionOption)(IInternetSession *This,DWORD dwOption,LPVOID pBuffer,DWORD *pdwBufferLength,DWORD dwReserved);
+//C       } IInternetSessionVtbl;
+struct IInternetSessionVtbl
+{
+    HRESULT  function(IInternetSession *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetSession *This)AddRef;
+    ULONG  function(IInternetSession *This)Release;
+    HRESULT  function(IInternetSession *This, IClassFactory *pCF, IID *rclsid, LPCWSTR pwzProtocol, ULONG cPatterns, LPCWSTR *ppwzPatterns, DWORD dwReserved)RegisterNameSpace;
+    HRESULT  function(IInternetSession *This, IClassFactory *pCF, LPCWSTR pszProtocol)UnregisterNameSpace;
+    HRESULT  function(IInternetSession *This, IClassFactory *pCF, IID *rclsid, LPCWSTR pwzType)RegisterMimeFilter;
+    HRESULT  function(IInternetSession *This, IClassFactory *pCF, LPCWSTR pwzType)UnregisterMimeFilter;
+    HRESULT  function(IInternetSession *This, LPBC pBC, LPCWSTR szUrl, IUnknown *pUnkOuter, IUnknown **ppUnk, IInternetProtocol **ppOInetProt, DWORD dwOption)CreateBinding;
+    HRESULT  function(IInternetSession *This, DWORD dwOption, LPVOID pBuffer, DWORD dwBufferLength, DWORD dwReserved)SetSessionOption;
+    HRESULT  function(IInternetSession *This, DWORD dwOption, LPVOID pBuffer, DWORD *pdwBufferLength, DWORD dwReserved)GetSessionOption;
+}
+//C       struct IInternetSession {
+//C         struct IInternetSessionVtbl *lpVtbl;
+//C       };
+struct IInternetSession
+{
+    IInternetSessionVtbl *lpVtbl;
+}
+//C       HRESULT IInternetSession_RegisterNameSpace_Proxy(IInternetSession *This,IClassFactory *pCF,const IID *const rclsid,LPCWSTR pwzProtocol,ULONG cPatterns,const LPCWSTR *ppwzPatterns,DWORD dwReserved);
+HRESULT  IInternetSession_RegisterNameSpace_Proxy(IInternetSession *This, IClassFactory *pCF, IID *rclsid, LPCWSTR pwzProtocol, ULONG cPatterns, LPCWSTR *ppwzPatterns, DWORD dwReserved);
+//C       void IInternetSession_RegisterNameSpace_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSession_RegisterNameSpace_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSession_UnregisterNameSpace_Proxy(IInternetSession *This,IClassFactory *pCF,LPCWSTR pszProtocol);
+HRESULT  IInternetSession_UnregisterNameSpace_Proxy(IInternetSession *This, IClassFactory *pCF, LPCWSTR pszProtocol);
+//C       void IInternetSession_UnregisterNameSpace_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSession_UnregisterNameSpace_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSession_RegisterMimeFilter_Proxy(IInternetSession *This,IClassFactory *pCF,const IID *const rclsid,LPCWSTR pwzType);
+HRESULT  IInternetSession_RegisterMimeFilter_Proxy(IInternetSession *This, IClassFactory *pCF, IID *rclsid, LPCWSTR pwzType);
+//C       void IInternetSession_RegisterMimeFilter_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSession_RegisterMimeFilter_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSession_UnregisterMimeFilter_Proxy(IInternetSession *This,IClassFactory *pCF,LPCWSTR pwzType);
+HRESULT  IInternetSession_UnregisterMimeFilter_Proxy(IInternetSession *This, IClassFactory *pCF, LPCWSTR pwzType);
+//C       void IInternetSession_UnregisterMimeFilter_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSession_UnregisterMimeFilter_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSession_CreateBinding_Proxy(IInternetSession *This,LPBC pBC,LPCWSTR szUrl,IUnknown *pUnkOuter,IUnknown **ppUnk,IInternetProtocol **ppOInetProt,DWORD dwOption);
+HRESULT  IInternetSession_CreateBinding_Proxy(IInternetSession *This, LPBC pBC, LPCWSTR szUrl, IUnknown *pUnkOuter, IUnknown **ppUnk, IInternetProtocol **ppOInetProt, DWORD dwOption);
+//C       void IInternetSession_CreateBinding_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSession_CreateBinding_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSession_SetSessionOption_Proxy(IInternetSession *This,DWORD dwOption,LPVOID pBuffer,DWORD dwBufferLength,DWORD dwReserved);
+HRESULT  IInternetSession_SetSessionOption_Proxy(IInternetSession *This, DWORD dwOption, LPVOID pBuffer, DWORD dwBufferLength, DWORD dwReserved);
+//C       void IInternetSession_SetSessionOption_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSession_SetSessionOption_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSession_GetSessionOption_Proxy(IInternetSession *This,DWORD dwOption,LPVOID pBuffer,DWORD *pdwBufferLength,DWORD dwReserved);
+HRESULT  IInternetSession_GetSessionOption_Proxy(IInternetSession *This, DWORD dwOption, LPVOID pBuffer, DWORD *pdwBufferLength, DWORD dwReserved);
+//C       void IInternetSession_GetSessionOption_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSession_GetSessionOption_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0200_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0200_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0200_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0200_v0_0_s_ifspec;
+//C       typedef IInternetThreadSwitch *LPIINTERNETTHREADSWITCH;
+alias IInternetThreadSwitch *LPIINTERNETTHREADSWITCH;
+//C       extern const IID IID_IInternetThreadSwitch;
+extern const IID IID_IInternetThreadSwitch;
+//C       typedef struct IInternetThreadSwitchVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetThreadSwitch *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetThreadSwitch *This);
+//C           ULONG ( *Release)(IInternetThreadSwitch *This);
+//C           HRESULT ( *Prepare)(IInternetThreadSwitch *This);
+//C           HRESULT ( *Continue)(IInternetThreadSwitch *This);
+//C       } IInternetThreadSwitchVtbl;
+struct IInternetThreadSwitchVtbl
+{
+    HRESULT  function(IInternetThreadSwitch *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetThreadSwitch *This)AddRef;
+    ULONG  function(IInternetThreadSwitch *This)Release;
+    HRESULT  function(IInternetThreadSwitch *This)Prepare;
+    HRESULT  function(IInternetThreadSwitch *This)Continue;
+}
+//C       struct IInternetThreadSwitch {
+//C         struct IInternetThreadSwitchVtbl *lpVtbl;
+//C       };
+struct IInternetThreadSwitch
+{
+    IInternetThreadSwitchVtbl *lpVtbl;
+}
+//C       HRESULT IInternetThreadSwitch_Prepare_Proxy(IInternetThreadSwitch *This);
+HRESULT  IInternetThreadSwitch_Prepare_Proxy(IInternetThreadSwitch *This);
+//C       void IInternetThreadSwitch_Prepare_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetThreadSwitch_Prepare_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetThreadSwitch_Continue_Proxy(IInternetThreadSwitch *This);
+HRESULT  IInternetThreadSwitch_Continue_Proxy(IInternetThreadSwitch *This);
+//C       void IInternetThreadSwitch_Continue_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetThreadSwitch_Continue_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0201_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0201_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0201_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0201_v0_0_s_ifspec;
+//C       typedef IInternetPriority *LPIINTERNETPRIORITY;
+alias IInternetPriority *LPIINTERNETPRIORITY;
+//C       extern const IID IID_IInternetPriority;
+extern const IID IID_IInternetPriority;
+//C       typedef struct IInternetPriorityVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetPriority *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetPriority *This);
+//C           ULONG ( *Release)(IInternetPriority *This);
+//C           HRESULT ( *SetPriority)(IInternetPriority *This,LONG nPriority);
+//C           HRESULT ( *GetPriority)(IInternetPriority *This,LONG *pnPriority);
+//C       } IInternetPriorityVtbl;
+struct IInternetPriorityVtbl
+{
+    HRESULT  function(IInternetPriority *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetPriority *This)AddRef;
+    ULONG  function(IInternetPriority *This)Release;
+    HRESULT  function(IInternetPriority *This, LONG nPriority)SetPriority;
+    HRESULT  function(IInternetPriority *This, LONG *pnPriority)GetPriority;
+}
+//C       struct IInternetPriority {
+//C         struct IInternetPriorityVtbl *lpVtbl;
+//C       };
+struct IInternetPriority
+{
+    IInternetPriorityVtbl *lpVtbl;
+}
+//C       HRESULT IInternetPriority_SetPriority_Proxy(IInternetPriority *This,LONG nPriority);
+HRESULT  IInternetPriority_SetPriority_Proxy(IInternetPriority *This, LONG nPriority);
+//C       void IInternetPriority_SetPriority_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetPriority_SetPriority_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetPriority_GetPriority_Proxy(IInternetPriority *This,LONG *pnPriority);
+HRESULT  IInternetPriority_GetPriority_Proxy(IInternetPriority *This, LONG *pnPriority);
+//C       void IInternetPriority_GetPriority_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetPriority_GetPriority_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0202_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0202_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0202_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0202_v0_0_s_ifspec;
+//C       typedef IInternetProtocolInfo *LPIINTERNETPROTOCOLINFO;
+alias IInternetProtocolInfo *LPIINTERNETPROTOCOLINFO;
+//C       typedef enum _tagPARSEACTION {
+//C         PARSE_CANONICALIZE = 1,
+//C         PARSE_FRIENDLY,PARSE_SECURITY_URL,PARSE_ROOTDOCUMENT,PARSE_DOCUMENT,PARSE_ANCHOR,
+//C         PARSE_ENCODE,PARSE_DECODE,PARSE_PATH_FROM_URL,PARSE_URL_FROM_PATH,PARSE_MIME,
+//C         PARSE_SERVER,PARSE_SCHEMA,PARSE_SITE,PARSE_DOMAIN,PARSE_LOCATION,PARSE_SECURITY_DOMAIN,
+//C         PARSE_ESCAPE,PARSE_UNESCAPE
+//C       } PARSEACTION;
+enum _tagPARSEACTION
+{
+    PARSE_CANONICALIZE = 1,
+    PARSE_FRIENDLY,
+    PARSE_SECURITY_URL,
+    PARSE_ROOTDOCUMENT,
+    PARSE_DOCUMENT,
+    PARSE_ANCHOR,
+    PARSE_ENCODE,
+    PARSE_DECODE,
+    PARSE_PATH_FROM_URL,
+    PARSE_URL_FROM_PATH,
+    PARSE_MIME,
+    PARSE_SERVER,
+    PARSE_SCHEMA,
+    PARSE_SITE,
+    PARSE_DOMAIN,
+    PARSE_LOCATION,
+    PARSE_SECURITY_DOMAIN,
+    PARSE_ESCAPE,
+    PARSE_UNESCAPE,
+}
+alias _tagPARSEACTION PARSEACTION;
+//C       typedef enum _tagPSUACTION {
+//C         PSU_DEFAULT = 1,
+//C         PSU_SECURITY_URL_ONLY
+//C       } PSUACTION;
+enum _tagPSUACTION
+{
+    PSU_DEFAULT = 1,
+    PSU_SECURITY_URL_ONLY,
+}
+alias _tagPSUACTION PSUACTION;
+//C       typedef enum _tagQUERYOPTION {
+//C         QUERY_EXPIRATION_DATE = 1,
+//C         QUERY_TIME_OF_LAST_CHANGE,QUERY_CONTENT_ENCODING,QUERY_CONTENT_TYPE,QUERY_REFRESH,
+//C         QUERY_RECOMBINE,QUERY_CAN_NAVIGATE,QUERY_USES_NETWORK,QUERY_IS_CACHED,QUERY_IS_INSTALLEDENTRY,
+//C         QUERY_IS_CACHED_OR_MAPPED,QUERY_USES_CACHE,QUERY_IS_SECURE,QUERY_IS_SAFE
+//C       } QUERYOPTION;
+enum _tagQUERYOPTION
+{
+    QUERY_EXPIRATION_DATE = 1,
+    QUERY_TIME_OF_LAST_CHANGE,
+    QUERY_CONTENT_ENCODING,
+    QUERY_CONTENT_TYPE,
+    QUERY_REFRESH,
+    QUERY_RECOMBINE,
+    QUERY_CAN_NAVIGATE,
+    QUERY_USES_NETWORK,
+    QUERY_IS_CACHED,
+    QUERY_IS_INSTALLEDENTRY,
+    QUERY_IS_CACHED_OR_MAPPED,
+    QUERY_USES_CACHE,
+    QUERY_IS_SECURE,
+    QUERY_IS_SAFE,
+}
+alias _tagQUERYOPTION QUERYOPTION;
+//C       extern const IID IID_IInternetProtocolInfo;
+extern const IID IID_IInternetProtocolInfo;
+//C       typedef struct IInternetProtocolInfoVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetProtocolInfo *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetProtocolInfo *This);
+//C           ULONG ( *Release)(IInternetProtocolInfo *This);
+//C           HRESULT ( *ParseUrl)(IInternetProtocolInfo *This,LPCWSTR pwzUrl,PARSEACTION ParseAction,DWORD dwParseFlags,LPWSTR pwzResult,DWORD cchResult,DWORD *pcchResult,DWORD dwReserved);
+//C           HRESULT ( *CombineUrl)(IInternetProtocolInfo *This,LPCWSTR pwzBaseUrl,LPCWSTR pwzRelativeUrl,DWORD dwCombineFlags,LPWSTR pwzResult,DWORD cchResult,DWORD *pcchResult,DWORD dwReserved);
+//C           HRESULT ( *CompareUrl)(IInternetProtocolInfo *This,LPCWSTR pwzUrl1,LPCWSTR pwzUrl2,DWORD dwCompareFlags);
+//C           HRESULT ( *QueryInfo)(IInternetProtocolInfo *This,LPCWSTR pwzUrl,QUERYOPTION OueryOption,DWORD dwQueryFlags,LPVOID pBuffer,DWORD cbBuffer,DWORD *pcbBuf,DWORD dwReserved);
+//C       } IInternetProtocolInfoVtbl;
+struct IInternetProtocolInfoVtbl
+{
+    HRESULT  function(IInternetProtocolInfo *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetProtocolInfo *This)AddRef;
+    ULONG  function(IInternetProtocolInfo *This)Release;
+    HRESULT  function(IInternetProtocolInfo *This, LPCWSTR pwzUrl, PARSEACTION ParseAction, DWORD dwParseFlags, LPWSTR pwzResult, DWORD cchResult, DWORD *pcchResult, DWORD dwReserved)ParseUrl;
+    HRESULT  function(IInternetProtocolInfo *This, LPCWSTR pwzBaseUrl, LPCWSTR pwzRelativeUrl, DWORD dwCombineFlags, LPWSTR pwzResult, DWORD cchResult, DWORD *pcchResult, DWORD dwReserved)CombineUrl;
+    HRESULT  function(IInternetProtocolInfo *This, LPCWSTR pwzUrl1, LPCWSTR pwzUrl2, DWORD dwCompareFlags)CompareUrl;
+    HRESULT  function(IInternetProtocolInfo *This, LPCWSTR pwzUrl, QUERYOPTION OueryOption, DWORD dwQueryFlags, LPVOID pBuffer, DWORD cbBuffer, DWORD *pcbBuf, DWORD dwReserved)QueryInfo;
+}
+//C       struct IInternetProtocolInfo {
+//C         struct IInternetProtocolInfoVtbl *lpVtbl;
+//C       };
+struct IInternetProtocolInfo
+{
+    IInternetProtocolInfoVtbl *lpVtbl;
+}
+//C       HRESULT IInternetProtocolInfo_ParseUrl_Proxy(IInternetProtocolInfo *This,LPCWSTR pwzUrl,PARSEACTION ParseAction,DWORD dwParseFlags,LPWSTR pwzResult,DWORD cchResult,DWORD *pcchResult,DWORD dwReserved);
+HRESULT  IInternetProtocolInfo_ParseUrl_Proxy(IInternetProtocolInfo *This, LPCWSTR pwzUrl, PARSEACTION ParseAction, DWORD dwParseFlags, LPWSTR pwzResult, DWORD cchResult, DWORD *pcchResult, DWORD dwReserved);
+//C       void IInternetProtocolInfo_ParseUrl_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolInfo_ParseUrl_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolInfo_CombineUrl_Proxy(IInternetProtocolInfo *This,LPCWSTR pwzBaseUrl,LPCWSTR pwzRelativeUrl,DWORD dwCombineFlags,LPWSTR pwzResult,DWORD cchResult,DWORD *pcchResult,DWORD dwReserved);
+HRESULT  IInternetProtocolInfo_CombineUrl_Proxy(IInternetProtocolInfo *This, LPCWSTR pwzBaseUrl, LPCWSTR pwzRelativeUrl, DWORD dwCombineFlags, LPWSTR pwzResult, DWORD cchResult, DWORD *pcchResult, DWORD dwReserved);
+//C       void IInternetProtocolInfo_CombineUrl_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolInfo_CombineUrl_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolInfo_CompareUrl_Proxy(IInternetProtocolInfo *This,LPCWSTR pwzUrl1,LPCWSTR pwzUrl2,DWORD dwCompareFlags);
+HRESULT  IInternetProtocolInfo_CompareUrl_Proxy(IInternetProtocolInfo *This, LPCWSTR pwzUrl1, LPCWSTR pwzUrl2, DWORD dwCompareFlags);
+//C       void IInternetProtocolInfo_CompareUrl_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolInfo_CompareUrl_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetProtocolInfo_QueryInfo_Proxy(IInternetProtocolInfo *This,LPCWSTR pwzUrl,QUERYOPTION OueryOption,DWORD dwQueryFlags,LPVOID pBuffer,DWORD cbBuffer,DWORD *pcbBuf,DWORD dwReserved);
+HRESULT  IInternetProtocolInfo_QueryInfo_Proxy(IInternetProtocolInfo *This, LPCWSTR pwzUrl, QUERYOPTION OueryOption, DWORD dwQueryFlags, LPVOID pBuffer, DWORD cbBuffer, DWORD *pcbBuf, DWORD dwReserved);
+//C       void IInternetProtocolInfo_QueryInfo_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetProtocolInfo_QueryInfo_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern HRESULT CoInternetParseUrl(LPCWSTR pwzUrl,PARSEACTION ParseAction,DWORD dwFlags,LPWSTR pszResult,DWORD cchResult,DWORD *pcchResult,DWORD dwReserved);
+HRESULT  CoInternetParseUrl(LPCWSTR pwzUrl, PARSEACTION ParseAction, DWORD dwFlags, LPWSTR pszResult, DWORD cchResult, DWORD *pcchResult, DWORD dwReserved);
+//C       extern HRESULT CoInternetCombineUrl(LPCWSTR pwzBaseUrl,LPCWSTR pwzRelativeUrl,DWORD dwCombineFlags,LPWSTR pszResult,DWORD cchResult,DWORD *pcchResult,DWORD dwReserved);
+HRESULT  CoInternetCombineUrl(LPCWSTR pwzBaseUrl, LPCWSTR pwzRelativeUrl, DWORD dwCombineFlags, LPWSTR pszResult, DWORD cchResult, DWORD *pcchResult, DWORD dwReserved);
+//C       extern HRESULT CoInternetCompareUrl(LPCWSTR pwzUrl1,LPCWSTR pwzUrl2,DWORD dwFlags);
+HRESULT  CoInternetCompareUrl(LPCWSTR pwzUrl1, LPCWSTR pwzUrl2, DWORD dwFlags);
+//C       extern HRESULT CoInternetGetProtocolFlags(LPCWSTR pwzUrl,DWORD *pdwFlags,DWORD dwReserved);
+HRESULT  CoInternetGetProtocolFlags(LPCWSTR pwzUrl, DWORD *pdwFlags, DWORD dwReserved);
+//C       extern HRESULT CoInternetQueryInfo(LPCWSTR pwzUrl,QUERYOPTION QueryOptions,DWORD dwQueryFlags,LPVOID pvBuffer,DWORD cbBuffer,DWORD *pcbBuffer,DWORD dwReserved);
+HRESULT  CoInternetQueryInfo(LPCWSTR pwzUrl, QUERYOPTION QueryOptions, DWORD dwQueryFlags, LPVOID pvBuffer, DWORD cbBuffer, DWORD *pcbBuffer, DWORD dwReserved);
+//C       extern HRESULT CoInternetGetSession(DWORD dwSessionMode,IInternetSession **ppIInternetSession,DWORD dwReserved);
+HRESULT  CoInternetGetSession(DWORD dwSessionMode, IInternetSession **ppIInternetSession, DWORD dwReserved);
+//C       extern HRESULT CoInternetGetSecurityUrl(LPCWSTR pwzUrl,LPWSTR *ppwzSecUrl,PSUACTION psuAction,DWORD dwReserved);
+HRESULT  CoInternetGetSecurityUrl(LPCWSTR pwzUrl, LPWSTR *ppwzSecUrl, PSUACTION psuAction, DWORD dwReserved);
+//C       extern HRESULT AsyncInstallDistributionUnit(LPCWSTR szDistUnit,LPCWSTR szTYPE,LPCWSTR szExt,DWORD dwFileVersionMS,DWORD dwFileVersionLS,LPCWSTR szURL,IBindCtx *pbc,LPVOID pvReserved,DWORD flags);
+HRESULT  AsyncInstallDistributionUnit(LPCWSTR szDistUnit, LPCWSTR szTYPE, LPCWSTR szExt, DWORD dwFileVersionMS, DWORD dwFileVersionLS, LPCWSTR szURL, IBindCtx *pbc, LPVOID pvReserved, DWORD flags);
+//C       typedef enum _tagINTERNETFEATURELIST {
+//C         FEATURE_OBJECT_CACHING = 0,
+//C         FEATURE_ZONE_ELEVATION,FEATURE_MIME_HANDLING,FEATURE_MIME_SNIFFING,
+//C         FEATURE_WINDOW_RESTRICTIONS,FEATURE_WEBOC_POPUPMANAGEMENT,
+//C         FEATURE_BEHAVIORS,FEATURE_DISABLE_MK_PROTOCOL,FEATURE_LOCALMACHINE_LOCKDOWN,
+//C         FEATURE_SECURITYBAND,FEATURE_RESTRICT_ACTIVEXINSTALL,FEATURE_VALIDATE_NAVIGATE_URL,
+//C         FEATURE_RESTRICT_FILEDOWNLOAD,FEATURE_ADDON_MANAGEMENT,FEATURE_PROTOCOL_LOCKDOWN,
+//C         FEATURE_HTTP_USERNAME_PASSWORD_DISABLE,FEATURE_SAFE_BINDTOOBJECT,
+//C         FEATURE_UNC_SAVEDFILECHECK,FEATURE_GET_URL_DOM_FILEPATH_UNENCODED,
+//C         FEATURE_ENTRY_COUNT
+//C       } INTERNETFEATURELIST;
+enum _tagINTERNETFEATURELIST
+{
+    FEATURE_OBJECT_CACHING,
+    FEATURE_ZONE_ELEVATION,
+    FEATURE_MIME_HANDLING,
+    FEATURE_MIME_SNIFFING,
+    FEATURE_WINDOW_RESTRICTIONS,
+    FEATURE_WEBOC_POPUPMANAGEMENT,
+    FEATURE_BEHAVIORS,
+    FEATURE_DISABLE_MK_PROTOCOL,
+    FEATURE_LOCALMACHINE_LOCKDOWN,
+    FEATURE_SECURITYBAND,
+    FEATURE_RESTRICT_ACTIVEXINSTALL,
+    FEATURE_VALIDATE_NAVIGATE_URL,
+    FEATURE_RESTRICT_FILEDOWNLOAD,
+    FEATURE_ADDON_MANAGEMENT,
+    FEATURE_PROTOCOL_LOCKDOWN,
+    FEATURE_HTTP_USERNAME_PASSWORD_DISABLE,
+    FEATURE_SAFE_BINDTOOBJECT,
+    FEATURE_UNC_SAVEDFILECHECK,
+    FEATURE_GET_URL_DOM_FILEPATH_UNENCODED,
+    FEATURE_ENTRY_COUNT,
+}
+alias _tagINTERNETFEATURELIST INTERNETFEATURELIST;
+//C       extern HRESULT CoInternetSetFeatureEnabled(INTERNETFEATURELIST FeatureEntry,DWORD dwFlags,WINBOOL fEnable);
+HRESULT  CoInternetSetFeatureEnabled(INTERNETFEATURELIST FeatureEntry, DWORD dwFlags, WINBOOL fEnable);
+//C       extern HRESULT CoInternetIsFeatureEnabled(INTERNETFEATURELIST FeatureEntry,DWORD dwFlags);
+HRESULT  CoInternetIsFeatureEnabled(INTERNETFEATURELIST FeatureEntry, DWORD dwFlags);
+//C       extern HRESULT CoInternetIsFeatureEnabledForUrl(INTERNETFEATURELIST FeatureEntry,DWORD dwFlags,LPCWSTR szURL,IInternetSecurityManager *pSecMgr);
+HRESULT  CoInternetIsFeatureEnabledForUrl(INTERNETFEATURELIST FeatureEntry, DWORD dwFlags, LPCWSTR szURL, IInternetSecurityManager *pSecMgr);
+//C       extern HRESULT CoInternetIsFeatureZoneElevationEnabled(LPCWSTR szFromURL,LPCWSTR szToURL,IInternetSecurityManager *pSecMgr,DWORD dwFlags);
+HRESULT  CoInternetIsFeatureZoneElevationEnabled(LPCWSTR szFromURL, LPCWSTR szToURL, IInternetSecurityManager *pSecMgr, DWORD dwFlags);
+//C       extern HRESULT CopyStgMedium(const STGMEDIUM *pcstgmedSrc,STGMEDIUM *pstgmedDest);
+HRESULT  CopyStgMedium(STGMEDIUM *pcstgmedSrc, STGMEDIUM *pstgmedDest);
+//C       extern HRESULT CopyBindInfo(const BINDINFO *pcbiSrc,BINDINFO *pbiDest);
+HRESULT  CopyBindInfo(BINDINFO *pcbiSrc, BINDINFO *pbiDest);
+//C       extern void ReleaseBindInfo(BINDINFO *pbindinfo);
+void  ReleaseBindInfo(BINDINFO *pbindinfo);
+//C       extern HRESULT CoInternetCreateSecurityManager(IServiceProvider *pSP,IInternetSecurityManager **ppSM,DWORD dwReserved);
+HRESULT  CoInternetCreateSecurityManager(IServiceProvider *pSP, IInternetSecurityManager **ppSM, DWORD dwReserved);
+//C       extern HRESULT CoInternetCreateZoneManager(IServiceProvider *pSP,IInternetZoneManager **ppZM,DWORD dwReserved);
+HRESULT  CoInternetCreateZoneManager(IServiceProvider *pSP, IInternetZoneManager **ppZM, DWORD dwReserved);
+//C       extern const IID CLSID_InternetSecurityManager;
+extern const IID CLSID_InternetSecurityManager;
+//C       extern const IID CLSID_InternetZoneManager;
+extern const IID CLSID_InternetZoneManager;
+//C       extern const IID CLSID_PersistentZoneIdentifier;
+extern const IID CLSID_PersistentZoneIdentifier;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0203_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0203_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0203_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0203_v0_0_s_ifspec;
+//C       extern const IID IID_IInternetSecurityMgrSite;
+extern const IID IID_IInternetSecurityMgrSite;
+//C       typedef struct IInternetSecurityMgrSiteVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetSecurityMgrSite *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetSecurityMgrSite *This);
+//C           ULONG ( *Release)(IInternetSecurityMgrSite *This);
+//C           HRESULT ( *GetWindow)(IInternetSecurityMgrSite *This,HWND *phwnd);
+//C           HRESULT ( *EnableModeless)(IInternetSecurityMgrSite *This,WINBOOL fEnable);
+//C       } IInternetSecurityMgrSiteVtbl;
+struct IInternetSecurityMgrSiteVtbl
+{
+    HRESULT  function(IInternetSecurityMgrSite *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetSecurityMgrSite *This)AddRef;
+    ULONG  function(IInternetSecurityMgrSite *This)Release;
+    HRESULT  function(IInternetSecurityMgrSite *This, HWND *phwnd)GetWindow;
+    HRESULT  function(IInternetSecurityMgrSite *This, WINBOOL fEnable)EnableModeless;
+}
+//C       struct IInternetSecurityMgrSite {
+//C         struct IInternetSecurityMgrSiteVtbl *lpVtbl;
+//C       };
+struct IInternetSecurityMgrSite
+{
+    IInternetSecurityMgrSiteVtbl *lpVtbl;
+}
+//C       HRESULT IInternetSecurityMgrSite_GetWindow_Proxy(IInternetSecurityMgrSite *This,HWND *phwnd);
+HRESULT  IInternetSecurityMgrSite_GetWindow_Proxy(IInternetSecurityMgrSite *This, HWND *phwnd);
+//C       void IInternetSecurityMgrSite_GetWindow_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityMgrSite_GetWindow_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSecurityMgrSite_EnableModeless_Proxy(IInternetSecurityMgrSite *This,WINBOOL fEnable);
+HRESULT  IInternetSecurityMgrSite_EnableModeless_Proxy(IInternetSecurityMgrSite *This, WINBOOL fEnable);
+//C       void IInternetSecurityMgrSite_EnableModeless_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityMgrSite_EnableModeless_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0204_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0204_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0204_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0204_v0_0_s_ifspec;
+//C       typedef enum __MIDL_IInternetSecurityManager_0001 {
+//C         PUAF_DEFAULT = 0,PUAF_NOUI = 0x1,PUAF_ISFILE = 0x2,PUAF_WARN_IF_DENIED = 0x4,PUAF_FORCEUI_FOREGROUND = 0x8,PUAF_CHECK_TIFS = 0x10,
+//C         PUAF_DONTCHECKBOXINDIALOG = 0x20,PUAF_TRUSTED = 0x40,PUAF_ACCEPT_WILDCARD_SCHEME = 0x80,PUAF_ENFORCERESTRICTED = 0x100,
+//C         PUAF_NOSAVEDFILECHECK = 0x200,PUAF_REQUIRESAVEDFILECHECK = 0x400,PUAF_LMZ_UNLOCKED = 0x10000,PUAF_LMZ_LOCKED = 0x20000,
+//C         PUAF_DEFAULTZONEPOL = 0x40000,PUAF_NPL_USE_LOCKED_IF_RESTRICTED = 0x80000,PUAF_NOUIIFLOCKED = 0x100000,PUAF_DRAGPROTOCOLCHECK = 0x200000
+//C       } PUAF;
+enum __MIDL_IInternetSecurityManager_0001
+{
+    PUAF_DEFAULT,
+    PUAF_NOUI,
+    PUAF_ISFILE,
+    PUAF_WARN_IF_DENIED = 4,
+    PUAF_FORCEUI_FOREGROUND = 8,
+    PUAF_CHECK_TIFS = 16,
+    PUAF_DONTCHECKBOXINDIALOG = 32,
+    PUAF_TRUSTED = 64,
+    PUAF_ACCEPT_WILDCARD_SCHEME = 128,
+    PUAF_ENFORCERESTRICTED = 256,
+    PUAF_NOSAVEDFILECHECK = 512,
+    PUAF_REQUIRESAVEDFILECHECK = 1024,
+    PUAF_LMZ_UNLOCKED = 65536,
+    PUAF_LMZ_LOCKED = 131072,
+    PUAF_DEFAULTZONEPOL = 262144,
+    PUAF_NPL_USE_LOCKED_IF_RESTRICTED = 524288,
+    PUAF_NOUIIFLOCKED = 1048576,
+    PUAF_DRAGPROTOCOLCHECK = 2097152,
+}
+alias __MIDL_IInternetSecurityManager_0001 PUAF;
+//C       typedef enum __MIDL_IInternetSecurityManager_0002 {
+//C         PUAFOUT_DEFAULT = 0,PUAFOUT_ISLOCKZONEPOLICY = 0x1
+//C       } PUAFOUT;
+enum __MIDL_IInternetSecurityManager_0002
+{
+    PUAFOUT_DEFAULT,
+    PUAFOUT_ISLOCKZONEPOLICY,
+}
+alias __MIDL_IInternetSecurityManager_0002 PUAFOUT;
+//C       typedef enum __MIDL_IInternetSecurityManager_0003 {
+//C         SZM_CREATE = 0,SZM_DELETE = 0x1
+//C       } SZM_FLAGS;
+enum __MIDL_IInternetSecurityManager_0003
+{
+    SZM_CREATE,
+    SZM_DELETE,
+}
+alias __MIDL_IInternetSecurityManager_0003 SZM_FLAGS;
+//C       extern const IID IID_IInternetSecurityManager;
+extern const IID IID_IInternetSecurityManager;
+//C       typedef struct IInternetSecurityManagerVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetSecurityManager *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetSecurityManager *This);
+//C           ULONG ( *Release)(IInternetSecurityManager *This);
+//C           HRESULT ( *SetSecuritySite)(IInternetSecurityManager *This,IInternetSecurityMgrSite *pSite);
+//C           HRESULT ( *GetSecuritySite)(IInternetSecurityManager *This,IInternetSecurityMgrSite **ppSite);
+//C           HRESULT ( *MapUrlToZone)(IInternetSecurityManager *This,LPCWSTR pwszUrl,DWORD *pdwZone,DWORD dwFlags);
+//C           HRESULT ( *GetSecurityId)(IInternetSecurityManager *This,LPCWSTR pwszUrl,BYTE *pbSecurityId,DWORD *pcbSecurityId,DWORD_PTR dwReserved);
+//C           HRESULT ( *ProcessUrlAction)(IInternetSecurityManager *This,LPCWSTR pwszUrl,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwFlags,DWORD dwReserved);
+//C           HRESULT ( *QueryCustomPolicy)(IInternetSecurityManager *This,LPCWSTR pwszUrl,const GUID *const guidKey,BYTE **ppPolicy,DWORD *pcbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwReserved);
+//C           HRESULT ( *SetZoneMapping)(IInternetSecurityManager *This,DWORD dwZone,LPCWSTR lpszPattern,DWORD dwFlags);
+//C           HRESULT ( *GetZoneMappings)(IInternetSecurityManager *This,DWORD dwZone,IEnumString **ppenumString,DWORD dwFlags);
+//C       } IInternetSecurityManagerVtbl;
+struct IInternetSecurityManagerVtbl
+{
+    HRESULT  function(IInternetSecurityManager *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetSecurityManager *This)AddRef;
+    ULONG  function(IInternetSecurityManager *This)Release;
+    HRESULT  function(IInternetSecurityManager *This, IInternetSecurityMgrSite *pSite)SetSecuritySite;
+    HRESULT  function(IInternetSecurityManager *This, IInternetSecurityMgrSite **ppSite)GetSecuritySite;
+    HRESULT  function(IInternetSecurityManager *This, LPCWSTR pwszUrl, DWORD *pdwZone, DWORD dwFlags)MapUrlToZone;
+    HRESULT  function(IInternetSecurityManager *This, LPCWSTR pwszUrl, BYTE *pbSecurityId, DWORD *pcbSecurityId, DWORD_PTR dwReserved)GetSecurityId;
+    HRESULT  function(IInternetSecurityManager *This, LPCWSTR pwszUrl, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwFlags, DWORD dwReserved)ProcessUrlAction;
+    HRESULT  function(IInternetSecurityManager *This, LPCWSTR pwszUrl, GUID *guidKey, BYTE **ppPolicy, DWORD *pcbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwReserved)QueryCustomPolicy;
+    HRESULT  function(IInternetSecurityManager *This, DWORD dwZone, LPCWSTR lpszPattern, DWORD dwFlags)SetZoneMapping;
+    HRESULT  function(IInternetSecurityManager *This, DWORD dwZone, IEnumString **ppenumString, DWORD dwFlags)GetZoneMappings;
+}
+//C       struct IInternetSecurityManager {
+//C         struct IInternetSecurityManagerVtbl *lpVtbl;
+//C       };
+struct IInternetSecurityManager
+{
+    IInternetSecurityManagerVtbl *lpVtbl;
+}
+//C       HRESULT IInternetSecurityManager_SetSecuritySite_Proxy(IInternetSecurityManager *This,IInternetSecurityMgrSite *pSite);
+HRESULT  IInternetSecurityManager_SetSecuritySite_Proxy(IInternetSecurityManager *This, IInternetSecurityMgrSite *pSite);
+//C       void IInternetSecurityManager_SetSecuritySite_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityManager_SetSecuritySite_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSecurityManager_GetSecuritySite_Proxy(IInternetSecurityManager *This,IInternetSecurityMgrSite **ppSite);
+HRESULT  IInternetSecurityManager_GetSecuritySite_Proxy(IInternetSecurityManager *This, IInternetSecurityMgrSite **ppSite);
+//C       void IInternetSecurityManager_GetSecuritySite_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityManager_GetSecuritySite_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSecurityManager_MapUrlToZone_Proxy(IInternetSecurityManager *This,LPCWSTR pwszUrl,DWORD *pdwZone,DWORD dwFlags);
+HRESULT  IInternetSecurityManager_MapUrlToZone_Proxy(IInternetSecurityManager *This, LPCWSTR pwszUrl, DWORD *pdwZone, DWORD dwFlags);
+//C       void IInternetSecurityManager_MapUrlToZone_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityManager_MapUrlToZone_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSecurityManager_GetSecurityId_Proxy(IInternetSecurityManager *This,LPCWSTR pwszUrl,BYTE *pbSecurityId,DWORD *pcbSecurityId,DWORD_PTR dwReserved);
+HRESULT  IInternetSecurityManager_GetSecurityId_Proxy(IInternetSecurityManager *This, LPCWSTR pwszUrl, BYTE *pbSecurityId, DWORD *pcbSecurityId, DWORD_PTR dwReserved);
+//C       void IInternetSecurityManager_GetSecurityId_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityManager_GetSecurityId_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSecurityManager_ProcessUrlAction_Proxy(IInternetSecurityManager *This,LPCWSTR pwszUrl,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwFlags,DWORD dwReserved);
+HRESULT  IInternetSecurityManager_ProcessUrlAction_Proxy(IInternetSecurityManager *This, LPCWSTR pwszUrl, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwFlags, DWORD dwReserved);
+//C       void IInternetSecurityManager_ProcessUrlAction_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityManager_ProcessUrlAction_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSecurityManager_QueryCustomPolicy_Proxy(IInternetSecurityManager *This,LPCWSTR pwszUrl,const GUID *const guidKey,BYTE **ppPolicy,DWORD *pcbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwReserved);
+HRESULT  IInternetSecurityManager_QueryCustomPolicy_Proxy(IInternetSecurityManager *This, LPCWSTR pwszUrl, GUID *guidKey, BYTE **ppPolicy, DWORD *pcbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwReserved);
+//C       void IInternetSecurityManager_QueryCustomPolicy_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityManager_QueryCustomPolicy_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSecurityManager_SetZoneMapping_Proxy(IInternetSecurityManager *This,DWORD dwZone,LPCWSTR lpszPattern,DWORD dwFlags);
+HRESULT  IInternetSecurityManager_SetZoneMapping_Proxy(IInternetSecurityManager *This, DWORD dwZone, LPCWSTR lpszPattern, DWORD dwFlags);
+//C       void IInternetSecurityManager_SetZoneMapping_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityManager_SetZoneMapping_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetSecurityManager_GetZoneMappings_Proxy(IInternetSecurityManager *This,DWORD dwZone,IEnumString **ppenumString,DWORD dwFlags);
+HRESULT  IInternetSecurityManager_GetZoneMappings_Proxy(IInternetSecurityManager *This, DWORD dwZone, IEnumString **ppenumString, DWORD dwFlags);
+//C       void IInternetSecurityManager_GetZoneMappings_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityManager_GetZoneMappings_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID IID_IInternetSecurityManagerEx;
+extern const IID IID_IInternetSecurityManagerEx;
+//C       typedef struct IInternetSecurityManagerExVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetSecurityManagerEx *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetSecurityManagerEx *This);
+//C           ULONG ( *Release)(IInternetSecurityManagerEx *This);
+//C           HRESULT ( *SetSecuritySite)(IInternetSecurityManagerEx *This,IInternetSecurityMgrSite *pSite);
+//C           HRESULT ( *GetSecuritySite)(IInternetSecurityManagerEx *This,IInternetSecurityMgrSite **ppSite);
+//C           HRESULT ( *MapUrlToZone)(IInternetSecurityManagerEx *This,LPCWSTR pwszUrl,DWORD *pdwZone,DWORD dwFlags);
+//C           HRESULT ( *GetSecurityId)(IInternetSecurityManagerEx *This,LPCWSTR pwszUrl,BYTE *pbSecurityId,DWORD *pcbSecurityId,DWORD_PTR dwReserved);
+//C           HRESULT ( *ProcessUrlAction)(IInternetSecurityManagerEx *This,LPCWSTR pwszUrl,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwFlags,DWORD dwReserved);
+//C           HRESULT ( *QueryCustomPolicy)(IInternetSecurityManagerEx *This,LPCWSTR pwszUrl,const GUID *const guidKey,BYTE **ppPolicy,DWORD *pcbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwReserved);
+//C           HRESULT ( *SetZoneMapping)(IInternetSecurityManagerEx *This,DWORD dwZone,LPCWSTR lpszPattern,DWORD dwFlags);
+//C           HRESULT ( *GetZoneMappings)(IInternetSecurityManagerEx *This,DWORD dwZone,IEnumString **ppenumString,DWORD dwFlags);
+//C           HRESULT ( *ProcessUrlActionEx)(IInternetSecurityManagerEx *This,LPCWSTR pwszUrl,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwFlags,DWORD dwReserved,DWORD *pdwOutFlags);
+//C       } IInternetSecurityManagerExVtbl;
+struct IInternetSecurityManagerExVtbl
+{
+    HRESULT  function(IInternetSecurityManagerEx *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetSecurityManagerEx *This)AddRef;
+    ULONG  function(IInternetSecurityManagerEx *This)Release;
+    HRESULT  function(IInternetSecurityManagerEx *This, IInternetSecurityMgrSite *pSite)SetSecuritySite;
+    HRESULT  function(IInternetSecurityManagerEx *This, IInternetSecurityMgrSite **ppSite)GetSecuritySite;
+    HRESULT  function(IInternetSecurityManagerEx *This, LPCWSTR pwszUrl, DWORD *pdwZone, DWORD dwFlags)MapUrlToZone;
+    HRESULT  function(IInternetSecurityManagerEx *This, LPCWSTR pwszUrl, BYTE *pbSecurityId, DWORD *pcbSecurityId, DWORD_PTR dwReserved)GetSecurityId;
+    HRESULT  function(IInternetSecurityManagerEx *This, LPCWSTR pwszUrl, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwFlags, DWORD dwReserved)ProcessUrlAction;
+    HRESULT  function(IInternetSecurityManagerEx *This, LPCWSTR pwszUrl, GUID *guidKey, BYTE **ppPolicy, DWORD *pcbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwReserved)QueryCustomPolicy;
+    HRESULT  function(IInternetSecurityManagerEx *This, DWORD dwZone, LPCWSTR lpszPattern, DWORD dwFlags)SetZoneMapping;
+    HRESULT  function(IInternetSecurityManagerEx *This, DWORD dwZone, IEnumString **ppenumString, DWORD dwFlags)GetZoneMappings;
+    HRESULT  function(IInternetSecurityManagerEx *This, LPCWSTR pwszUrl, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwFlags, DWORD dwReserved, DWORD *pdwOutFlags)ProcessUrlActionEx;
+}
+//C       struct IInternetSecurityManagerEx {
+//C         struct IInternetSecurityManagerExVtbl *lpVtbl;
+//C       };
+struct IInternetSecurityManagerEx
+{
+    IInternetSecurityManagerExVtbl *lpVtbl;
+}
+//C       HRESULT IInternetSecurityManagerEx_ProcessUrlActionEx_Proxy(IInternetSecurityManagerEx *This,LPCWSTR pwszUrl,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwFlags,DWORD dwReserved,DWORD *pdwOutFlags);
+HRESULT  IInternetSecurityManagerEx_ProcessUrlActionEx_Proxy(IInternetSecurityManagerEx *This, LPCWSTR pwszUrl, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwFlags, DWORD dwReserved, DWORD *pdwOutFlags);
+//C       void IInternetSecurityManagerEx_ProcessUrlActionEx_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetSecurityManagerEx_ProcessUrlActionEx_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0205_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0205_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0205_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0205_v0_0_s_ifspec;
+//C       extern const IID IID_IZoneIdentifier;
+extern const IID IID_IZoneIdentifier;
+//C       typedef struct IZoneIdentifierVtbl {
+//C           HRESULT ( *QueryInterface)(IZoneIdentifier *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IZoneIdentifier *This);
+//C           ULONG ( *Release)(IZoneIdentifier *This);
+//C           HRESULT ( *GetId)(IZoneIdentifier *This,DWORD *pdwZone);
+//C           HRESULT ( *SetId)(IZoneIdentifier *This,DWORD dwZone);
+//C           HRESULT ( *Remove)(IZoneIdentifier *This);
+//C       } IZoneIdentifierVtbl;
+struct IZoneIdentifierVtbl
+{
+    HRESULT  function(IZoneIdentifier *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IZoneIdentifier *This)AddRef;
+    ULONG  function(IZoneIdentifier *This)Release;
+    HRESULT  function(IZoneIdentifier *This, DWORD *pdwZone)GetId;
+    HRESULT  function(IZoneIdentifier *This, DWORD dwZone)SetId;
+    HRESULT  function(IZoneIdentifier *This)Remove;
+}
+//C       struct IZoneIdentifier {
+//C         struct IZoneIdentifierVtbl *lpVtbl;
+//C       };
+struct IZoneIdentifier
+{
+    IZoneIdentifierVtbl *lpVtbl;
+}
+//C       HRESULT IZoneIdentifier_GetId_Proxy(IZoneIdentifier *This,DWORD *pdwZone);
+HRESULT  IZoneIdentifier_GetId_Proxy(IZoneIdentifier *This, DWORD *pdwZone);
+//C       void IZoneIdentifier_GetId_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IZoneIdentifier_GetId_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IZoneIdentifier_SetId_Proxy(IZoneIdentifier *This,DWORD dwZone);
+HRESULT  IZoneIdentifier_SetId_Proxy(IZoneIdentifier *This, DWORD dwZone);
+//C       void IZoneIdentifier_SetId_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IZoneIdentifier_SetId_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IZoneIdentifier_Remove_Proxy(IZoneIdentifier *This);
+HRESULT  IZoneIdentifier_Remove_Proxy(IZoneIdentifier *This);
+//C       void IZoneIdentifier_Remove_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IZoneIdentifier_Remove_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0207_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0207_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0207_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0207_v0_0_s_ifspec;
+//C       extern const IID IID_IInternetHostSecurityManager;
+extern const IID IID_IInternetHostSecurityManager;
+//C       typedef struct IInternetHostSecurityManagerVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetHostSecurityManager *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetHostSecurityManager *This);
+//C           ULONG ( *Release)(IInternetHostSecurityManager *This);
+//C           HRESULT ( *GetSecurityId)(IInternetHostSecurityManager *This,BYTE *pbSecurityId,DWORD *pcbSecurityId,DWORD_PTR dwReserved);
+//C           HRESULT ( *ProcessUrlAction)(IInternetHostSecurityManager *This,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwFlags,DWORD dwReserved);
+//C           HRESULT ( *QueryCustomPolicy)(IInternetHostSecurityManager *This,const GUID *const guidKey,BYTE **ppPolicy,DWORD *pcbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwReserved);
+//C       } IInternetHostSecurityManagerVtbl;
+struct IInternetHostSecurityManagerVtbl
+{
+    HRESULT  function(IInternetHostSecurityManager *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetHostSecurityManager *This)AddRef;
+    ULONG  function(IInternetHostSecurityManager *This)Release;
+    HRESULT  function(IInternetHostSecurityManager *This, BYTE *pbSecurityId, DWORD *pcbSecurityId, DWORD_PTR dwReserved)GetSecurityId;
+    HRESULT  function(IInternetHostSecurityManager *This, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwFlags, DWORD dwReserved)ProcessUrlAction;
+    HRESULT  function(IInternetHostSecurityManager *This, GUID *guidKey, BYTE **ppPolicy, DWORD *pcbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwReserved)QueryCustomPolicy;
+}
+//C       struct IInternetHostSecurityManager {
+//C         struct IInternetHostSecurityManagerVtbl *lpVtbl;
+//C       };
+struct IInternetHostSecurityManager
+{
+    IInternetHostSecurityManagerVtbl *lpVtbl;
+}
+//C       HRESULT IInternetHostSecurityManager_GetSecurityId_Proxy(IInternetHostSecurityManager *This,BYTE *pbSecurityId,DWORD *pcbSecurityId,DWORD_PTR dwReserved);
+HRESULT  IInternetHostSecurityManager_GetSecurityId_Proxy(IInternetHostSecurityManager *This, BYTE *pbSecurityId, DWORD *pcbSecurityId, DWORD_PTR dwReserved);
+//C       void IInternetHostSecurityManager_GetSecurityId_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetHostSecurityManager_GetSecurityId_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetHostSecurityManager_ProcessUrlAction_Proxy(IInternetHostSecurityManager *This,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwFlags,DWORD dwReserved);
+HRESULT  IInternetHostSecurityManager_ProcessUrlAction_Proxy(IInternetHostSecurityManager *This, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwFlags, DWORD dwReserved);
+//C       void IInternetHostSecurityManager_ProcessUrlAction_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetHostSecurityManager_ProcessUrlAction_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetHostSecurityManager_QueryCustomPolicy_Proxy(IInternetHostSecurityManager *This,const GUID *const guidKey,BYTE **ppPolicy,DWORD *pcbPolicy,BYTE *pContext,DWORD cbContext,DWORD dwReserved);
+HRESULT  IInternetHostSecurityManager_QueryCustomPolicy_Proxy(IInternetHostSecurityManager *This, GUID *guidKey, BYTE **ppPolicy, DWORD *pcbPolicy, BYTE *pContext, DWORD cbContext, DWORD dwReserved);
+//C       void IInternetHostSecurityManager_QueryCustomPolicy_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetHostSecurityManager_QueryCustomPolicy_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const GUID GUID_CUSTOM_LOCALMACHINEZONEUNLOCKED;
+extern const GUID GUID_CUSTOM_LOCALMACHINEZONEUNLOCKED;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0208_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0208_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0208_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0208_v0_0_s_ifspec;
+//C       typedef IInternetZoneManager *LPURLZONEMANAGER;
+alias IInternetZoneManager *LPURLZONEMANAGER;
+//C       typedef enum tagURLZONE {
+//C         URLZONE_PREDEFINED_MIN = 0,URLZONE_LOCAL_MACHINE = 0,
+//C         URLZONE_INTRANET,URLZONE_TRUSTED,URLZONE_INTERNET,URLZONE_UNTRUSTED,
+//C         URLZONE_PREDEFINED_MAX = 999,URLZONE_USER_MIN = 1000,
+//C         URLZONE_USER_MAX = 10000
+//C       } URLZONE;
+enum tagURLZONE
+{
+    URLZONE_PREDEFINED_MIN,
+    URLZONE_LOCAL_MACHINE = 0,
+    URLZONE_INTRANET,
+    URLZONE_TRUSTED,
+    URLZONE_INTERNET,
+    URLZONE_UNTRUSTED,
+    URLZONE_PREDEFINED_MAX = 999,
+    URLZONE_USER_MIN,
+    URLZONE_USER_MAX = 10000,
+}
+alias tagURLZONE URLZONE;
+//C       typedef enum tagURLTEMPLATE {
+//C         URLTEMPLATE_CUSTOM = 0,
+//C         URLTEMPLATE_PREDEFINED_MIN = 0x10000,
+//C         URLTEMPLATE_LOW = 0x10000,
+//C         URLTEMPLATE_MEDLOW = 0x10500,
+//C         URLTEMPLATE_MEDIUM = 0x11000,
+//C         URLTEMPLATE_HIGH = 0x12000,
+//C         URLTEMPLATE_PREDEFINED_MAX = 0x20000
+//C       } URLTEMPLATE;
+enum tagURLTEMPLATE
+{
+    URLTEMPLATE_CUSTOM,
+    URLTEMPLATE_PREDEFINED_MIN = 65536,
+    URLTEMPLATE_LOW = 65536,
+    URLTEMPLATE_MEDLOW = 66816,
+    URLTEMPLATE_MEDIUM = 69632,
+    URLTEMPLATE_HIGH = 73728,
+    URLTEMPLATE_PREDEFINED_MAX = 131072,
+}
+alias tagURLTEMPLATE URLTEMPLATE;
+//C       enum __MIDL_IInternetZoneManager_0001 {
+//C         MAX_ZONE_PATH = 260,MAX_ZONE_DESCRIPTION = 200
+//C       };
+enum __MIDL_IInternetZoneManager_0001
+{
+    MAX_ZONE_PATH = 260,
+    MAX_ZONE_DESCRIPTION = 200,
+}
+//C       typedef enum __MIDL_IInternetZoneManager_0002 {
+//C         ZAFLAGS_CUSTOM_EDIT = 0x1,ZAFLAGS_ADD_SITES = 0x2,ZAFLAGS_REQUIRE_VERIFICATION = 0x4,ZAFLAGS_INCLUDE_PROXY_OVERRIDE = 0x8,
+//C         ZAFLAGS_INCLUDE_INTRANET_SITES = 0x10,ZAFLAGS_NO_UI = 0x20,ZAFLAGS_SUPPORTS_VERIFICATION = 0x40,ZAFLAGS_UNC_AS_INTRANET = 0x80,
+//C         ZAFLAGS_USE_LOCKED_ZONES = 0x10000
+//C       } ZAFLAGS;
+enum __MIDL_IInternetZoneManager_0002
+{
+    ZAFLAGS_CUSTOM_EDIT = 1,
+    ZAFLAGS_ADD_SITES,
+    ZAFLAGS_REQUIRE_VERIFICATION = 4,
+    ZAFLAGS_INCLUDE_PROXY_OVERRIDE = 8,
+    ZAFLAGS_INCLUDE_INTRANET_SITES = 16,
+    ZAFLAGS_NO_UI = 32,
+    ZAFLAGS_SUPPORTS_VERIFICATION = 64,
+    ZAFLAGS_UNC_AS_INTRANET = 128,
+    ZAFLAGS_USE_LOCKED_ZONES = 65536,
+}
+alias __MIDL_IInternetZoneManager_0002 ZAFLAGS;
+//C       typedef struct _ZONEATTRIBUTES {
+//C         ULONG cbSize;
+//C         WCHAR szDisplayName[260 ];
+//C         WCHAR szDescription[200 ];
+//C         WCHAR szIconPath[260 ];
+//C         DWORD dwTemplateMinLevel;
+//C         DWORD dwTemplateRecommended;
+//C         DWORD dwTemplateCurrentLevel;
+//C         DWORD dwFlags;
+//C       } ZONEATTRIBUTES;
+struct _ZONEATTRIBUTES
+{
+    ULONG cbSize;
+    WCHAR [260]szDisplayName;
+    WCHAR [200]szDescription;
+    WCHAR [260]szIconPath;
+    DWORD dwTemplateMinLevel;
+    DWORD dwTemplateRecommended;
+    DWORD dwTemplateCurrentLevel;
+    DWORD dwFlags;
+}
+alias _ZONEATTRIBUTES ZONEATTRIBUTES;
+//C       typedef struct _ZONEATTRIBUTES *LPZONEATTRIBUTES;
+alias _ZONEATTRIBUTES *LPZONEATTRIBUTES;
+//C       typedef enum _URLZONEREG {
+//C         URLZONEREG_DEFAULT = 0,
+//C         URLZONEREG_HKLM,URLZONEREG_HKCU
+//C       } URLZONEREG;
+enum _URLZONEREG
+{
+    URLZONEREG_DEFAULT,
+    URLZONEREG_HKLM,
+    URLZONEREG_HKCU,
+}
+alias _URLZONEREG URLZONEREG;
+//C       extern const IID IID_IInternetZoneManager;
+extern const IID IID_IInternetZoneManager;
+//C       typedef struct IInternetZoneManagerVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetZoneManager *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetZoneManager *This);
+//C           ULONG ( *Release)(IInternetZoneManager *This);
+//C           HRESULT ( *GetZoneAttributes)(IInternetZoneManager *This,DWORD dwZone,ZONEATTRIBUTES *pZoneAttributes);
+//C           HRESULT ( *SetZoneAttributes)(IInternetZoneManager *This,DWORD dwZone,ZONEATTRIBUTES *pZoneAttributes);
+//C           HRESULT ( *GetZoneCustomPolicy)(IInternetZoneManager *This,DWORD dwZone,const GUID *const guidKey,BYTE **ppPolicy,DWORD *pcbPolicy,URLZONEREG urlZoneReg);
+//C           HRESULT ( *SetZoneCustomPolicy)(IInternetZoneManager *This,DWORD dwZone,const GUID *const guidKey,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg);
+//C           HRESULT ( *GetZoneActionPolicy)(IInternetZoneManager *This,DWORD dwZone,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg);
+//C           HRESULT ( *SetZoneActionPolicy)(IInternetZoneManager *This,DWORD dwZone,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg);
+//C           HRESULT ( *PromptAction)(IInternetZoneManager *This,DWORD dwAction,HWND hwndParent,LPCWSTR pwszUrl,LPCWSTR pwszText,DWORD dwPromptFlags);
+//C           HRESULT ( *LogAction)(IInternetZoneManager *This,DWORD dwAction,LPCWSTR pwszUrl,LPCWSTR pwszText,DWORD dwLogFlags);
+//C           HRESULT ( *CreateZoneEnumerator)(IInternetZoneManager *This,DWORD *pdwEnum,DWORD *pdwCount,DWORD dwFlags);
+//C           HRESULT ( *GetZoneAt)(IInternetZoneManager *This,DWORD dwEnum,DWORD dwIndex,DWORD *pdwZone);
+//C           HRESULT ( *DestroyZoneEnumerator)(IInternetZoneManager *This,DWORD dwEnum);
+//C           HRESULT ( *CopyTemplatePoliciesToZone)(IInternetZoneManager *This,DWORD dwTemplate,DWORD dwZone,DWORD dwReserved);
+//C       } IInternetZoneManagerVtbl;
+struct IInternetZoneManagerVtbl
+{
+    HRESULT  function(IInternetZoneManager *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetZoneManager *This)AddRef;
+    ULONG  function(IInternetZoneManager *This)Release;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwZone, ZONEATTRIBUTES *pZoneAttributes)GetZoneAttributes;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwZone, ZONEATTRIBUTES *pZoneAttributes)SetZoneAttributes;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwZone, GUID *guidKey, BYTE **ppPolicy, DWORD *pcbPolicy, URLZONEREG urlZoneReg)GetZoneCustomPolicy;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwZone, GUID *guidKey, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg)SetZoneCustomPolicy;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwZone, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg)GetZoneActionPolicy;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwZone, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg)SetZoneActionPolicy;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwAction, HWND hwndParent, LPCWSTR pwszUrl, LPCWSTR pwszText, DWORD dwPromptFlags)PromptAction;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwAction, LPCWSTR pwszUrl, LPCWSTR pwszText, DWORD dwLogFlags)LogAction;
+    HRESULT  function(IInternetZoneManager *This, DWORD *pdwEnum, DWORD *pdwCount, DWORD dwFlags)CreateZoneEnumerator;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwEnum, DWORD dwIndex, DWORD *pdwZone)GetZoneAt;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwEnum)DestroyZoneEnumerator;
+    HRESULT  function(IInternetZoneManager *This, DWORD dwTemplate, DWORD dwZone, DWORD dwReserved)CopyTemplatePoliciesToZone;
+}
+//C       struct IInternetZoneManager {
+//C         struct IInternetZoneManagerVtbl *lpVtbl;
+//C       };
+struct IInternetZoneManager
+{
+    IInternetZoneManagerVtbl *lpVtbl;
+}
+//C       HRESULT IInternetZoneManager_GetZoneAttributes_Proxy(IInternetZoneManager *This,DWORD dwZone,ZONEATTRIBUTES *pZoneAttributes);
+HRESULT  IInternetZoneManager_GetZoneAttributes_Proxy(IInternetZoneManager *This, DWORD dwZone, ZONEATTRIBUTES *pZoneAttributes);
+//C       void IInternetZoneManager_GetZoneAttributes_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_GetZoneAttributes_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_SetZoneAttributes_Proxy(IInternetZoneManager *This,DWORD dwZone,ZONEATTRIBUTES *pZoneAttributes);
+HRESULT  IInternetZoneManager_SetZoneAttributes_Proxy(IInternetZoneManager *This, DWORD dwZone, ZONEATTRIBUTES *pZoneAttributes);
+//C       void IInternetZoneManager_SetZoneAttributes_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_SetZoneAttributes_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_GetZoneCustomPolicy_Proxy(IInternetZoneManager *This,DWORD dwZone,const GUID *const guidKey,BYTE **ppPolicy,DWORD *pcbPolicy,URLZONEREG urlZoneReg);
+HRESULT  IInternetZoneManager_GetZoneCustomPolicy_Proxy(IInternetZoneManager *This, DWORD dwZone, GUID *guidKey, BYTE **ppPolicy, DWORD *pcbPolicy, URLZONEREG urlZoneReg);
+//C       void IInternetZoneManager_GetZoneCustomPolicy_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_GetZoneCustomPolicy_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_SetZoneCustomPolicy_Proxy(IInternetZoneManager *This,DWORD dwZone,const GUID *const guidKey,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg);
+HRESULT  IInternetZoneManager_SetZoneCustomPolicy_Proxy(IInternetZoneManager *This, DWORD dwZone, GUID *guidKey, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg);
+//C       void IInternetZoneManager_SetZoneCustomPolicy_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_SetZoneCustomPolicy_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_GetZoneActionPolicy_Proxy(IInternetZoneManager *This,DWORD dwZone,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg);
+HRESULT  IInternetZoneManager_GetZoneActionPolicy_Proxy(IInternetZoneManager *This, DWORD dwZone, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg);
+//C       void IInternetZoneManager_GetZoneActionPolicy_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_GetZoneActionPolicy_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_SetZoneActionPolicy_Proxy(IInternetZoneManager *This,DWORD dwZone,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg);
+HRESULT  IInternetZoneManager_SetZoneActionPolicy_Proxy(IInternetZoneManager *This, DWORD dwZone, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg);
+//C       void IInternetZoneManager_SetZoneActionPolicy_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_SetZoneActionPolicy_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_PromptAction_Proxy(IInternetZoneManager *This,DWORD dwAction,HWND hwndParent,LPCWSTR pwszUrl,LPCWSTR pwszText,DWORD dwPromptFlags);
+HRESULT  IInternetZoneManager_PromptAction_Proxy(IInternetZoneManager *This, DWORD dwAction, HWND hwndParent, LPCWSTR pwszUrl, LPCWSTR pwszText, DWORD dwPromptFlags);
+//C       void IInternetZoneManager_PromptAction_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_PromptAction_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_LogAction_Proxy(IInternetZoneManager *This,DWORD dwAction,LPCWSTR pwszUrl,LPCWSTR pwszText,DWORD dwLogFlags);
+HRESULT  IInternetZoneManager_LogAction_Proxy(IInternetZoneManager *This, DWORD dwAction, LPCWSTR pwszUrl, LPCWSTR pwszText, DWORD dwLogFlags);
+//C       void IInternetZoneManager_LogAction_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_LogAction_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_CreateZoneEnumerator_Proxy(IInternetZoneManager *This,DWORD *pdwEnum,DWORD *pdwCount,DWORD dwFlags);
+HRESULT  IInternetZoneManager_CreateZoneEnumerator_Proxy(IInternetZoneManager *This, DWORD *pdwEnum, DWORD *pdwCount, DWORD dwFlags);
+//C       void IInternetZoneManager_CreateZoneEnumerator_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_CreateZoneEnumerator_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_GetZoneAt_Proxy(IInternetZoneManager *This,DWORD dwEnum,DWORD dwIndex,DWORD *pdwZone);
+HRESULT  IInternetZoneManager_GetZoneAt_Proxy(IInternetZoneManager *This, DWORD dwEnum, DWORD dwIndex, DWORD *pdwZone);
+//C       void IInternetZoneManager_GetZoneAt_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_GetZoneAt_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_DestroyZoneEnumerator_Proxy(IInternetZoneManager *This,DWORD dwEnum);
+HRESULT  IInternetZoneManager_DestroyZoneEnumerator_Proxy(IInternetZoneManager *This, DWORD dwEnum);
+//C       void IInternetZoneManager_DestroyZoneEnumerator_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_DestroyZoneEnumerator_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManager_CopyTemplatePoliciesToZone_Proxy(IInternetZoneManager *This,DWORD dwTemplate,DWORD dwZone,DWORD dwReserved);
+HRESULT  IInternetZoneManager_CopyTemplatePoliciesToZone_Proxy(IInternetZoneManager *This, DWORD dwTemplate, DWORD dwZone, DWORD dwReserved);
+//C       void IInternetZoneManager_CopyTemplatePoliciesToZone_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManager_CopyTemplatePoliciesToZone_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0209_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0209_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0209_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0209_v0_0_s_ifspec;
+//C       extern const IID IID_IInternetZoneManagerEx;
+extern const IID IID_IInternetZoneManagerEx;
+//C       typedef struct IInternetZoneManagerExVtbl {
+//C           HRESULT ( *QueryInterface)(IInternetZoneManagerEx *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IInternetZoneManagerEx *This);
+//C           ULONG ( *Release)(IInternetZoneManagerEx *This);
+//C           HRESULT ( *GetZoneAttributes)(IInternetZoneManagerEx *This,DWORD dwZone,ZONEATTRIBUTES *pZoneAttributes);
+//C           HRESULT ( *SetZoneAttributes)(IInternetZoneManagerEx *This,DWORD dwZone,ZONEATTRIBUTES *pZoneAttributes);
+//C           HRESULT ( *GetZoneCustomPolicy)(IInternetZoneManagerEx *This,DWORD dwZone,const GUID *const guidKey,BYTE **ppPolicy,DWORD *pcbPolicy,URLZONEREG urlZoneReg);
+//C           HRESULT ( *SetZoneCustomPolicy)(IInternetZoneManagerEx *This,DWORD dwZone,const GUID *const guidKey,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg);
+//C           HRESULT ( *GetZoneActionPolicy)(IInternetZoneManagerEx *This,DWORD dwZone,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg);
+//C           HRESULT ( *SetZoneActionPolicy)(IInternetZoneManagerEx *This,DWORD dwZone,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg);
+//C           HRESULT ( *PromptAction)(IInternetZoneManagerEx *This,DWORD dwAction,HWND hwndParent,LPCWSTR pwszUrl,LPCWSTR pwszText,DWORD dwPromptFlags);
+//C           HRESULT ( *LogAction)(IInternetZoneManagerEx *This,DWORD dwAction,LPCWSTR pwszUrl,LPCWSTR pwszText,DWORD dwLogFlags);
+//C           HRESULT ( *CreateZoneEnumerator)(IInternetZoneManagerEx *This,DWORD *pdwEnum,DWORD *pdwCount,DWORD dwFlags);
+//C           HRESULT ( *GetZoneAt)(IInternetZoneManagerEx *This,DWORD dwEnum,DWORD dwIndex,DWORD *pdwZone);
+//C           HRESULT ( *DestroyZoneEnumerator)(IInternetZoneManagerEx *This,DWORD dwEnum);
+//C           HRESULT ( *CopyTemplatePoliciesToZone)(IInternetZoneManagerEx *This,DWORD dwTemplate,DWORD dwZone,DWORD dwReserved);
+//C           HRESULT ( *GetZoneActionPolicyEx)(IInternetZoneManagerEx *This,DWORD dwZone,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg,DWORD dwFlags);
+//C           HRESULT ( *SetZoneActionPolicyEx)(IInternetZoneManagerEx *This,DWORD dwZone,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg,DWORD dwFlags);
+//C       } IInternetZoneManagerExVtbl;
+struct IInternetZoneManagerExVtbl
+{
+    HRESULT  function(IInternetZoneManagerEx *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IInternetZoneManagerEx *This)AddRef;
+    ULONG  function(IInternetZoneManagerEx *This)Release;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwZone, ZONEATTRIBUTES *pZoneAttributes)GetZoneAttributes;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwZone, ZONEATTRIBUTES *pZoneAttributes)SetZoneAttributes;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwZone, GUID *guidKey, BYTE **ppPolicy, DWORD *pcbPolicy, URLZONEREG urlZoneReg)GetZoneCustomPolicy;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwZone, GUID *guidKey, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg)SetZoneCustomPolicy;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwZone, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg)GetZoneActionPolicy;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwZone, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg)SetZoneActionPolicy;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwAction, HWND hwndParent, LPCWSTR pwszUrl, LPCWSTR pwszText, DWORD dwPromptFlags)PromptAction;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwAction, LPCWSTR pwszUrl, LPCWSTR pwszText, DWORD dwLogFlags)LogAction;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD *pdwEnum, DWORD *pdwCount, DWORD dwFlags)CreateZoneEnumerator;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwEnum, DWORD dwIndex, DWORD *pdwZone)GetZoneAt;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwEnum)DestroyZoneEnumerator;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwTemplate, DWORD dwZone, DWORD dwReserved)CopyTemplatePoliciesToZone;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwZone, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg, DWORD dwFlags)GetZoneActionPolicyEx;
+    HRESULT  function(IInternetZoneManagerEx *This, DWORD dwZone, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg, DWORD dwFlags)SetZoneActionPolicyEx;
+}
+//C       struct IInternetZoneManagerEx {
+//C         struct IInternetZoneManagerExVtbl *lpVtbl;
+//C       };
+struct IInternetZoneManagerEx
+{
+    IInternetZoneManagerExVtbl *lpVtbl;
+}
+//C       HRESULT IInternetZoneManagerEx_GetZoneActionPolicyEx_Proxy(IInternetZoneManagerEx *This,DWORD dwZone,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg,DWORD dwFlags);
+HRESULT  IInternetZoneManagerEx_GetZoneActionPolicyEx_Proxy(IInternetZoneManagerEx *This, DWORD dwZone, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg, DWORD dwFlags);
+//C       void IInternetZoneManagerEx_GetZoneActionPolicyEx_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManagerEx_GetZoneActionPolicyEx_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IInternetZoneManagerEx_SetZoneActionPolicyEx_Proxy(IInternetZoneManagerEx *This,DWORD dwZone,DWORD dwAction,BYTE *pPolicy,DWORD cbPolicy,URLZONEREG urlZoneReg,DWORD dwFlags);
+HRESULT  IInternetZoneManagerEx_SetZoneActionPolicyEx_Proxy(IInternetZoneManagerEx *This, DWORD dwZone, DWORD dwAction, BYTE *pPolicy, DWORD cbPolicy, URLZONEREG urlZoneReg, DWORD dwFlags);
+//C       void IInternetZoneManagerEx_SetZoneActionPolicyEx_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IInternetZoneManagerEx_SetZoneActionPolicyEx_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern const IID CLSID_SoftDistExt;
+extern const IID CLSID_SoftDistExt;
+//C       typedef struct _tagCODEBASEHOLD {
+//C         ULONG cbSize;
+//C         LPWSTR szDistUnit;
+//C         LPWSTR szCodeBase;
+//C         DWORD dwVersionMS;
+//C         DWORD dwVersionLS;
+//C         DWORD dwStyle;
+//C       } CODEBASEHOLD;
+struct _tagCODEBASEHOLD
+{
+    ULONG cbSize;
+    LPWSTR szDistUnit;
+    LPWSTR szCodeBase;
+    DWORD dwVersionMS;
+    DWORD dwVersionLS;
+    DWORD dwStyle;
+}
+alias _tagCODEBASEHOLD CODEBASEHOLD;
+//C       typedef struct _tagCODEBASEHOLD *LPCODEBASEHOLD;
+alias _tagCODEBASEHOLD *LPCODEBASEHOLD;
+//C       typedef struct _tagSOFTDISTINFO {
+//C         ULONG cbSize;
+//C         DWORD dwFlags;
+//C         DWORD dwAdState;
+//C         LPWSTR szTitle;
+//C         LPWSTR szAbstract;
+//C         LPWSTR szHREF;
+//C         DWORD dwInstalledVersionMS;
+//C         DWORD dwInstalledVersionLS;
+//C         DWORD dwUpdateVersionMS;
+//C         DWORD dwUpdateVersionLS;
+//C         DWORD dwAdvertisedVersionMS;
+//C         DWORD dwAdvertisedVersionLS;
+//C         DWORD dwReserved;
+//C       } SOFTDISTINFO;
+struct _tagSOFTDISTINFO
+{
+    ULONG cbSize;
+    DWORD dwFlags;
+    DWORD dwAdState;
+    LPWSTR szTitle;
+    LPWSTR szAbstract;
+    LPWSTR szHREF;
+    DWORD dwInstalledVersionMS;
+    DWORD dwInstalledVersionLS;
+    DWORD dwUpdateVersionMS;
+    DWORD dwUpdateVersionLS;
+    DWORD dwAdvertisedVersionMS;
+    DWORD dwAdvertisedVersionLS;
+    DWORD dwReserved;
+}
+alias _tagSOFTDISTINFO SOFTDISTINFO;
+//C       typedef struct _tagSOFTDISTINFO *LPSOFTDISTINFO;
+alias _tagSOFTDISTINFO *LPSOFTDISTINFO;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0210_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0210_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0210_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0210_v0_0_s_ifspec;
+//C       extern const IID IID_ISoftDistExt;
+extern const IID IID_ISoftDistExt;
+//C       typedef struct ISoftDistExtVtbl {
+//C           HRESULT ( *QueryInterface)(ISoftDistExt *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(ISoftDistExt *This);
+//C           ULONG ( *Release)(ISoftDistExt *This);
+//C           HRESULT ( *ProcessSoftDist)(ISoftDistExt *This,LPCWSTR szCDFURL,IXMLElement *pSoftDistElement,LPSOFTDISTINFO lpsdi);
+//C           HRESULT ( *GetFirstCodeBase)(ISoftDistExt *This,LPWSTR *szCodeBase,LPDWORD dwMaxSize);
+//C           HRESULT ( *GetNextCodeBase)(ISoftDistExt *This,LPWSTR *szCodeBase,LPDWORD dwMaxSize);
+//C           HRESULT ( *AsyncInstallDistributionUnit)(ISoftDistExt *This,IBindCtx *pbc,LPVOID pvReserved,DWORD flags,LPCODEBASEHOLD lpcbh);
+//C       } ISoftDistExtVtbl;
+struct ISoftDistExtVtbl
+{
+    HRESULT  function(ISoftDistExt *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(ISoftDistExt *This)AddRef;
+    ULONG  function(ISoftDistExt *This)Release;
+    HRESULT  function(ISoftDistExt *This, LPCWSTR szCDFURL, IXMLElement *pSoftDistElement, LPSOFTDISTINFO lpsdi)ProcessSoftDist;
+    HRESULT  function(ISoftDistExt *This, LPWSTR *szCodeBase, LPDWORD dwMaxSize)GetFirstCodeBase;
+    HRESULT  function(ISoftDistExt *This, LPWSTR *szCodeBase, LPDWORD dwMaxSize)GetNextCodeBase;
+    HRESULT  function(ISoftDistExt *This, IBindCtx *pbc, LPVOID pvReserved, DWORD flags, LPCODEBASEHOLD lpcbh)AsyncInstallDistributionUnit;
+}
+//C       struct ISoftDistExt {
+//C         struct ISoftDistExtVtbl *lpVtbl;
+//C       };
+struct ISoftDistExt
+{
+    ISoftDistExtVtbl *lpVtbl;
+}
+//C       HRESULT ISoftDistExt_ProcessSoftDist_Proxy(ISoftDistExt *This,LPCWSTR szCDFURL,IXMLElement *pSoftDistElement,LPSOFTDISTINFO lpsdi);
+HRESULT  ISoftDistExt_ProcessSoftDist_Proxy(ISoftDistExt *This, LPCWSTR szCDFURL, IXMLElement *pSoftDistElement, LPSOFTDISTINFO lpsdi);
+//C       void ISoftDistExt_ProcessSoftDist_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  ISoftDistExt_ProcessSoftDist_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT ISoftDistExt_GetFirstCodeBase_Proxy(ISoftDistExt *This,LPWSTR *szCodeBase,LPDWORD dwMaxSize);
+HRESULT  ISoftDistExt_GetFirstCodeBase_Proxy(ISoftDistExt *This, LPWSTR *szCodeBase, LPDWORD dwMaxSize);
+//C       void ISoftDistExt_GetFirstCodeBase_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  ISoftDistExt_GetFirstCodeBase_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT ISoftDistExt_GetNextCodeBase_Proxy(ISoftDistExt *This,LPWSTR *szCodeBase,LPDWORD dwMaxSize);
+HRESULT  ISoftDistExt_GetNextCodeBase_Proxy(ISoftDistExt *This, LPWSTR *szCodeBase, LPDWORD dwMaxSize);
+//C       void ISoftDistExt_GetNextCodeBase_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  ISoftDistExt_GetNextCodeBase_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT ISoftDistExt_AsyncInstallDistributionUnit_Proxy(ISoftDistExt *This,IBindCtx *pbc,LPVOID pvReserved,DWORD flags,LPCODEBASEHOLD lpcbh);
+HRESULT  ISoftDistExt_AsyncInstallDistributionUnit_Proxy(ISoftDistExt *This, IBindCtx *pbc, LPVOID pvReserved, DWORD flags, LPCODEBASEHOLD lpcbh);
+//C       void ISoftDistExt_AsyncInstallDistributionUnit_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  ISoftDistExt_AsyncInstallDistributionUnit_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern HRESULT GetSoftwareUpdateInfo(LPCWSTR szDistUnit,LPSOFTDISTINFO psdi);
+HRESULT  GetSoftwareUpdateInfo(LPCWSTR szDistUnit, LPSOFTDISTINFO psdi);
+//C       extern HRESULT SetSoftwareUpdateAdvertisementState(LPCWSTR szDistUnit,DWORD dwAdState,DWORD dwAdvertisedVersionMS,DWORD dwAdvertisedVersionLS);
+HRESULT  SetSoftwareUpdateAdvertisementState(LPCWSTR szDistUnit, DWORD dwAdState, DWORD dwAdvertisedVersionMS, DWORD dwAdvertisedVersionLS);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0211_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0211_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0211_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0211_v0_0_s_ifspec;
+//C       typedef ICatalogFileInfo *LPCATALOGFILEINFO;
+alias ICatalogFileInfo *LPCATALOGFILEINFO;
+//C       extern const IID IID_ICatalogFileInfo;
+extern const IID IID_ICatalogFileInfo;
+//C       typedef struct ICatalogFileInfoVtbl {
+//C           HRESULT ( *QueryInterface)(ICatalogFileInfo *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(ICatalogFileInfo *This);
+//C           ULONG ( *Release)(ICatalogFileInfo *This);
+//C           HRESULT ( *GetCatalogFile)(ICatalogFileInfo *This,LPSTR *ppszCatalogFile);
+//C           HRESULT ( *GetJavaTrust)(ICatalogFileInfo *This,void **ppJavaTrust);
+//C       } ICatalogFileInfoVtbl;
+struct ICatalogFileInfoVtbl
+{
+    HRESULT  function(ICatalogFileInfo *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(ICatalogFileInfo *This)AddRef;
+    ULONG  function(ICatalogFileInfo *This)Release;
+    HRESULT  function(ICatalogFileInfo *This, LPSTR *ppszCatalogFile)GetCatalogFile;
+    HRESULT  function(ICatalogFileInfo *This, void **ppJavaTrust)GetJavaTrust;
+}
+//C       struct ICatalogFileInfo {
+//C         struct ICatalogFileInfoVtbl *lpVtbl;
+//C       };
+struct ICatalogFileInfo
+{
+    ICatalogFileInfoVtbl *lpVtbl;
+}
+//C       HRESULT ICatalogFileInfo_GetCatalogFile_Proxy(ICatalogFileInfo *This,LPSTR *ppszCatalogFile);
+HRESULT  ICatalogFileInfo_GetCatalogFile_Proxy(ICatalogFileInfo *This, LPSTR *ppszCatalogFile);
+//C       void ICatalogFileInfo_GetCatalogFile_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  ICatalogFileInfo_GetCatalogFile_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT ICatalogFileInfo_GetJavaTrust_Proxy(ICatalogFileInfo *This,void **ppJavaTrust);
+HRESULT  ICatalogFileInfo_GetJavaTrust_Proxy(ICatalogFileInfo *This, void **ppJavaTrust);
+//C       void ICatalogFileInfo_GetJavaTrust_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  ICatalogFileInfo_GetJavaTrust_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0212_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0212_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0212_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0212_v0_0_s_ifspec;
+//C       typedef IDataFilter *LPDATAFILTER;
+alias IDataFilter *LPDATAFILTER;
+//C       extern const IID IID_IDataFilter;
+extern const IID IID_IDataFilter;
+//C       typedef struct IDataFilterVtbl {
+//C           HRESULT ( *QueryInterface)(IDataFilter *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IDataFilter *This);
+//C           ULONG ( *Release)(IDataFilter *This);
+//C           HRESULT ( *DoEncode)(IDataFilter *This,DWORD dwFlags,LONG lInBufferSize,BYTE *pbInBuffer,LONG lOutBufferSize,BYTE *pbOutBuffer,LONG lInBytesAvailable,LONG *plInBytesRead,LONG *plOutBytesWritten,DWORD dwReserved);
+//C           HRESULT ( *DoDecode)(IDataFilter *This,DWORD dwFlags,LONG lInBufferSize,BYTE *pbInBuffer,LONG lOutBufferSize,BYTE *pbOutBuffer,LONG lInBytesAvailable,LONG *plInBytesRead,LONG *plOutBytesWritten,DWORD dwReserved);
+//C           HRESULT ( *SetEncodingLevel)(IDataFilter *This,DWORD dwEncLevel);
+//C       } IDataFilterVtbl;
+struct IDataFilterVtbl
+{
+    HRESULT  function(IDataFilter *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IDataFilter *This)AddRef;
+    ULONG  function(IDataFilter *This)Release;
+    HRESULT  function(IDataFilter *This, DWORD dwFlags, LONG lInBufferSize, BYTE *pbInBuffer, LONG lOutBufferSize, BYTE *pbOutBuffer, LONG lInBytesAvailable, LONG *plInBytesRead, LONG *plOutBytesWritten, DWORD dwReserved)DoEncode;
+    HRESULT  function(IDataFilter *This, DWORD dwFlags, LONG lInBufferSize, BYTE *pbInBuffer, LONG lOutBufferSize, BYTE *pbOutBuffer, LONG lInBytesAvailable, LONG *plInBytesRead, LONG *plOutBytesWritten, DWORD dwReserved)DoDecode;
+    HRESULT  function(IDataFilter *This, DWORD dwEncLevel)SetEncodingLevel;
+}
+//C       struct IDataFilter {
+//C         struct IDataFilterVtbl *lpVtbl;
+//C       };
+struct IDataFilter
+{
+    IDataFilterVtbl *lpVtbl;
+}
+//C       HRESULT IDataFilter_DoEncode_Proxy(IDataFilter *This,DWORD dwFlags,LONG lInBufferSize,BYTE *pbInBuffer,LONG lOutBufferSize,BYTE *pbOutBuffer,LONG lInBytesAvailable,LONG *plInBytesRead,LONG *plOutBytesWritten,DWORD dwReserved);
+HRESULT  IDataFilter_DoEncode_Proxy(IDataFilter *This, DWORD dwFlags, LONG lInBufferSize, BYTE *pbInBuffer, LONG lOutBufferSize, BYTE *pbOutBuffer, LONG lInBytesAvailable, LONG *plInBytesRead, LONG *plOutBytesWritten, DWORD dwReserved);
+//C       void IDataFilter_DoEncode_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IDataFilter_DoEncode_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IDataFilter_DoDecode_Proxy(IDataFilter *This,DWORD dwFlags,LONG lInBufferSize,BYTE *pbInBuffer,LONG lOutBufferSize,BYTE *pbOutBuffer,LONG lInBytesAvailable,LONG *plInBytesRead,LONG *plOutBytesWritten,DWORD dwReserved);
+HRESULT  IDataFilter_DoDecode_Proxy(IDataFilter *This, DWORD dwFlags, LONG lInBufferSize, BYTE *pbInBuffer, LONG lOutBufferSize, BYTE *pbOutBuffer, LONG lInBytesAvailable, LONG *plInBytesRead, LONG *plOutBytesWritten, DWORD dwReserved);
+//C       void IDataFilter_DoDecode_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IDataFilter_DoDecode_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IDataFilter_SetEncodingLevel_Proxy(IDataFilter *This,DWORD dwEncLevel);
+HRESULT  IDataFilter_SetEncodingLevel_Proxy(IDataFilter *This, DWORD dwEncLevel);
+//C       void IDataFilter_SetEncodingLevel_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IDataFilter_SetEncodingLevel_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       typedef struct _tagPROTOCOLFILTERDATA {
+//C         DWORD cbSize;
+//C         IInternetProtocolSink *pProtocolSink;
+//C         IInternetProtocol *pProtocol;
+//C         IUnknown *pUnk;
+//C         DWORD dwFilterFlags;
+//C       } PROTOCOLFILTERDATA;
+struct _tagPROTOCOLFILTERDATA
+{
+    DWORD cbSize;
+    IInternetProtocolSink *pProtocolSink;
+    IInternetProtocol *pProtocol;
+    IUnknown *pUnk;
+    DWORD dwFilterFlags;
+}
+alias _tagPROTOCOLFILTERDATA PROTOCOLFILTERDATA;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0213_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0213_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0213_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0213_v0_0_s_ifspec;
+//C       typedef IEncodingFilterFactory *LPENCODINGFILTERFACTORY;
+alias IEncodingFilterFactory *LPENCODINGFILTERFACTORY;
+//C       typedef struct _tagDATAINFO {
+//C         ULONG ulTotalSize;
+//C         ULONG ulavrPacketSize;
+//C         ULONG ulConnectSpeed;
+//C         ULONG ulProcessorSpeed;
+//C       } DATAINFO;
+struct _tagDATAINFO
+{
+    ULONG ulTotalSize;
+    ULONG ulavrPacketSize;
+    ULONG ulConnectSpeed;
+    ULONG ulProcessorSpeed;
+}
+alias _tagDATAINFO DATAINFO;
+//C       extern const IID IID_IEncodingFilterFactory;
+extern const IID IID_IEncodingFilterFactory;
+//C       typedef struct IEncodingFilterFactoryVtbl {
+//C           HRESULT ( *QueryInterface)(IEncodingFilterFactory *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IEncodingFilterFactory *This);
+//C           ULONG ( *Release)(IEncodingFilterFactory *This);
+//C           HRESULT ( *FindBestFilter)(IEncodingFilterFactory *This,LPCWSTR pwzCodeIn,LPCWSTR pwzCodeOut,DATAINFO info,IDataFilter **ppDF);
+//C           HRESULT ( *GetDefaultFilter)(IEncodingFilterFactory *This,LPCWSTR pwzCodeIn,LPCWSTR pwzCodeOut,IDataFilter **ppDF);
+//C       } IEncodingFilterFactoryVtbl;
+struct IEncodingFilterFactoryVtbl
+{
+    HRESULT  function(IEncodingFilterFactory *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IEncodingFilterFactory *This)AddRef;
+    ULONG  function(IEncodingFilterFactory *This)Release;
+    HRESULT  function(IEncodingFilterFactory *This, LPCWSTR pwzCodeIn, LPCWSTR pwzCodeOut, DATAINFO info, IDataFilter **ppDF)FindBestFilter;
+    HRESULT  function(IEncodingFilterFactory *This, LPCWSTR pwzCodeIn, LPCWSTR pwzCodeOut, IDataFilter **ppDF)GetDefaultFilter;
+}
+//C       struct IEncodingFilterFactory {
+//C         struct IEncodingFilterFactoryVtbl *lpVtbl;
+//C       };
+struct IEncodingFilterFactory
+{
+    IEncodingFilterFactoryVtbl *lpVtbl;
+}
+//C       HRESULT IEncodingFilterFactory_FindBestFilter_Proxy(IEncodingFilterFactory *This,LPCWSTR pwzCodeIn,LPCWSTR pwzCodeOut,DATAINFO info,IDataFilter **ppDF);
+HRESULT  IEncodingFilterFactory_FindBestFilter_Proxy(IEncodingFilterFactory *This, LPCWSTR pwzCodeIn, LPCWSTR pwzCodeOut, DATAINFO info, IDataFilter **ppDF);
+//C       void IEncodingFilterFactory_FindBestFilter_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IEncodingFilterFactory_FindBestFilter_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IEncodingFilterFactory_GetDefaultFilter_Proxy(IEncodingFilterFactory *This,LPCWSTR pwzCodeIn,LPCWSTR pwzCodeOut,IDataFilter **ppDF);
+HRESULT  IEncodingFilterFactory_GetDefaultFilter_Proxy(IEncodingFilterFactory *This, LPCWSTR pwzCodeIn, LPCWSTR pwzCodeOut, IDataFilter **ppDF);
+//C       void IEncodingFilterFactory_GetDefaultFilter_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IEncodingFilterFactory_GetDefaultFilter_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       WINBOOL IsLoggingEnabledA(LPCSTR pszUrl);
+WINBOOL  IsLoggingEnabledA(LPCSTR pszUrl);
+//C       WINBOOL IsLoggingEnabledW(LPCWSTR pwszUrl);
+WINBOOL  IsLoggingEnabledW(LPCWSTR pwszUrl);
+//C       typedef struct _tagHIT_LOGGING_INFO {
+//C         DWORD dwStructSize;
+//C         LPSTR lpszLoggedUrlName;
+//C         SYSTEMTIME StartTime;
+//C         SYSTEMTIME EndTime;
+//C         LPSTR lpszExtendedInfo;
+//C       } HIT_LOGGING_INFO;
+struct _tagHIT_LOGGING_INFO
+{
+    DWORD dwStructSize;
+    LPSTR lpszLoggedUrlName;
+    SYSTEMTIME StartTime;
+    SYSTEMTIME EndTime;
+    LPSTR lpszExtendedInfo;
+}
+alias _tagHIT_LOGGING_INFO HIT_LOGGING_INFO;
+//C       typedef struct _tagHIT_LOGGING_INFO *LPHIT_LOGGING_INFO;
+alias _tagHIT_LOGGING_INFO *LPHIT_LOGGING_INFO;
+//C       WINBOOL WriteHitLogging(LPHIT_LOGGING_INFO lpLogginginfo);
+WINBOOL  WriteHitLogging(LPHIT_LOGGING_INFO lpLogginginfo);
+//C       struct CONFIRMSAFETY {
+//C         CLSID clsid;
+//C         IUnknown *pUnk;
+//C         DWORD dwFlags;
+//C       };
+struct CONFIRMSAFETY
+{
+    CLSID clsid;
+    IUnknown *pUnk;
+    DWORD dwFlags;
+}
+//C       extern const GUID GUID_CUSTOM_CONFIRMOBJECTSAFETY;
+extern const GUID GUID_CUSTOM_CONFIRMOBJECTSAFETY;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0214_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0214_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0214_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0214_v0_0_s_ifspec;
+//C       typedef IWrappedProtocol *LPIWRAPPEDPROTOCOL;
+alias IWrappedProtocol *LPIWRAPPEDPROTOCOL;
+//C       extern const IID IID_IWrappedProtocol;
+extern const IID IID_IWrappedProtocol;
+//C       typedef struct IWrappedProtocolVtbl {
+//C           HRESULT ( *QueryInterface)(IWrappedProtocol *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IWrappedProtocol *This);
+//C           ULONG ( *Release)(IWrappedProtocol *This);
+//C           HRESULT ( *GetWrapperCode)(IWrappedProtocol *This,LONG *pnCode,DWORD_PTR dwReserved);
+//C       } IWrappedProtocolVtbl;
+struct IWrappedProtocolVtbl
+{
+    HRESULT  function(IWrappedProtocol *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IWrappedProtocol *This)AddRef;
+    ULONG  function(IWrappedProtocol *This)Release;
+    HRESULT  function(IWrappedProtocol *This, LONG *pnCode, DWORD_PTR dwReserved)GetWrapperCode;
+}
+//C       struct IWrappedProtocol {
+//C         struct IWrappedProtocolVtbl *lpVtbl;
+//C       };
+struct IWrappedProtocol
+{
+    IWrappedProtocolVtbl *lpVtbl;
+}
+//C       HRESULT IWrappedProtocol_GetWrapperCode_Proxy(IWrappedProtocol *This,LONG *pnCode,DWORD_PTR dwReserved);
+HRESULT  IWrappedProtocol_GetWrapperCode_Proxy(IWrappedProtocol *This, LONG *pnCode, DWORD_PTR dwReserved);
+//C       void IWrappedProtocol_GetWrapperCode_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IWrappedProtocol_GetWrapperCode_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0215_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0215_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_urlmon_0215_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_urlmon_0215_v0_0_s_ifspec;
+//C       ULONG HWND_UserSize(ULONG *,ULONG,HWND *);
+ULONG  HWND_UserSize(ULONG *, ULONG , HWND *);
+//C       unsigned char * HWND_UserMarshal(ULONG *,unsigned char *,HWND *);
+ubyte * HWND_UserMarshal(ULONG *, ubyte *, HWND *);
+//C       unsigned char * HWND_UserUnmarshal(ULONG *,unsigned char *,HWND *);
+ubyte * HWND_UserUnmarshal(ULONG *, ubyte *, HWND *);
+//C       void HWND_UserFree(ULONG *,HWND *);
+void  HWND_UserFree(ULONG *, HWND *);
+//C       HRESULT IWinInetInfo_QueryOption_Proxy(IWinInetInfo *This,DWORD dwOption,LPVOID pBuffer,DWORD *pcbBuf);
+HRESULT  IWinInetInfo_QueryOption_Proxy(IWinInetInfo *This, DWORD dwOption, LPVOID pBuffer, DWORD *pcbBuf);
+//C       HRESULT IWinInetInfo_QueryOption_Stub(IWinInetInfo *This,DWORD dwOption,BYTE *pBuffer,DWORD *pcbBuf);
+HRESULT  IWinInetInfo_QueryOption_Stub(IWinInetInfo *This, DWORD dwOption, BYTE *pBuffer, DWORD *pcbBuf);
+//C       HRESULT IWinInetHttpInfo_QueryInfo_Proxy(IWinInetHttpInfo *This,DWORD dwOption,LPVOID pBuffer,DWORD *pcbBuf,DWORD *pdwFlags,DWORD *pdwReserved);
+HRESULT  IWinInetHttpInfo_QueryInfo_Proxy(IWinInetHttpInfo *This, DWORD dwOption, LPVOID pBuffer, DWORD *pcbBuf, DWORD *pdwFlags, DWORD *pdwReserved);
+//C       HRESULT IWinInetHttpInfo_QueryInfo_Stub(IWinInetHttpInfo *This,DWORD dwOption,BYTE *pBuffer,DWORD *pcbBuf,DWORD *pdwFlags,DWORD *pdwReserved);
+HRESULT  IWinInetHttpInfo_QueryInfo_Stub(IWinInetHttpInfo *This, DWORD dwOption, BYTE *pBuffer, DWORD *pcbBuf, DWORD *pdwFlags, DWORD *pdwReserved);
+//C       HRESULT IBindHost_MonikerBindToStorage_Proxy(IBindHost *This,IMoniker *pMk,IBindCtx *pBC,IBindStatusCallback *pBSC,const IID *const riid,void **ppvObj);
+HRESULT  IBindHost_MonikerBindToStorage_Proxy(IBindHost *This, IMoniker *pMk, IBindCtx *pBC, IBindStatusCallback *pBSC, IID *riid, void **ppvObj);
+//C       HRESULT IBindHost_MonikerBindToStorage_Stub(IBindHost *This,IMoniker *pMk,IBindCtx *pBC,IBindStatusCallback *pBSC,const IID *const riid,IUnknown **ppvObj);
+HRESULT  IBindHost_MonikerBindToStorage_Stub(IBindHost *This, IMoniker *pMk, IBindCtx *pBC, IBindStatusCallback *pBSC, IID *riid, IUnknown **ppvObj);
+//C       HRESULT IBindHost_MonikerBindToObject_Proxy(IBindHost *This,IMoniker *pMk,IBindCtx *pBC,IBindStatusCallback *pBSC,const IID *const riid,void **ppvObj);
+HRESULT  IBindHost_MonikerBindToObject_Proxy(IBindHost *This, IMoniker *pMk, IBindCtx *pBC, IBindStatusCallback *pBSC, IID *riid, void **ppvObj);
+//C       HRESULT IBindHost_MonikerBindToObject_Stub(IBindHost *This,IMoniker *pMk,IBindCtx *pBC,IBindStatusCallback *pBSC,const IID *const riid,IUnknown **ppvObj);
+HRESULT  IBindHost_MonikerBindToObject_Stub(IBindHost *This, IMoniker *pMk, IBindCtx *pBC, IBindStatusCallback *pBSC, IID *riid, IUnknown **ppvObj);
+//C     ULONG STGMEDIUM_UserSize (ULONG *,ULONG,STGMEDIUM *);
+ULONG  STGMEDIUM_UserSize(ULONG *, ULONG , STGMEDIUM *);
+//C     unsigned char * STGMEDIUM_UserMarshal (ULONG *,unsigned char *,STGMEDIUM *);
+ubyte * STGMEDIUM_UserMarshal(ULONG *, ubyte *, STGMEDIUM *);
+//C     unsigned char * STGMEDIUM_UserUnmarshal(ULONG *,unsigned char *,STGMEDIUM *);
+ubyte * STGMEDIUM_UserUnmarshal(ULONG *, ubyte *, STGMEDIUM *);
+//C     void STGMEDIUM_UserFree (ULONG *,STGMEDIUM *);
+void  STGMEDIUM_UserFree(ULONG *, STGMEDIUM *);
+//C     ULONG CLIPFORMAT_UserSize (ULONG *,ULONG,CLIPFORMAT *);
+ULONG  CLIPFORMAT_UserSize(ULONG *, ULONG , CLIPFORMAT *);
+//C     unsigned char * CLIPFORMAT_UserMarshal (ULONG *,unsigned char *,CLIPFORMAT *);
+ubyte * CLIPFORMAT_UserMarshal(ULONG *, ubyte *, CLIPFORMAT *);
+//C     unsigned char * CLIPFORMAT_UserUnmarshal(ULONG *,unsigned char *,CLIPFORMAT *);
+ubyte * CLIPFORMAT_UserUnmarshal(ULONG *, ubyte *, CLIPFORMAT *);
+//C     void CLIPFORMAT_UserFree (ULONG *,CLIPFORMAT *);
+void  CLIPFORMAT_UserFree(ULONG *, CLIPFORMAT *);
+//C     typedef struct IPropertyStorage IPropertyStorage;
+//C     typedef struct IPropertySetStorage IPropertySetStorage;
+//C     typedef struct IEnumSTATPROPSTG IEnumSTATPROPSTG;
+//C     typedef struct IEnumSTATPROPSETSTG IEnumSTATPROPSETSTG;
+//C     typedef struct tagVersionedStream {
+//C         GUID guidVersion;
+//C         IStream *pStream;
+//C     } VERSIONEDSTREAM;
+struct tagVersionedStream
+{
+    GUID guidVersion;
+    IStream *pStream;
+}
+alias tagVersionedStream VERSIONEDSTREAM;
+//C     typedef struct tagVersionedStream *LPVERSIONEDSTREAM;
+alias tagVersionedStream *LPVERSIONEDSTREAM;
+//C     typedef struct tagPROPVARIANT PROPVARIANT;
+alias tagPROPVARIANT PROPVARIANT;
+//C     typedef struct tagCAC {
+//C         ULONG cElems;
+//C         CHAR *pElems;
+//C     } CAC;
+struct tagCAC
+{
+    ULONG cElems;
+    CHAR *pElems;
+}
+alias tagCAC CAC;
+//C     typedef struct tagCAUB {
+//C         ULONG cElems;
+//C         UCHAR *pElems;
+//C     } CAUB;
+struct tagCAUB
+{
+    ULONG cElems;
+    UCHAR *pElems;
+}
+alias tagCAUB CAUB;
+//C     typedef struct tagCAI {
+//C         ULONG cElems;
+//C         SHORT *pElems;
+//C     } CAI;
+struct tagCAI
+{
+    ULONG cElems;
+    SHORT *pElems;
+}
+alias tagCAI CAI;
+//C     typedef struct tagCAUI {
+//C         ULONG cElems;
+//C         USHORT *pElems;
+//C     } CAUI;
+struct tagCAUI
+{
+    ULONG cElems;
+    USHORT *pElems;
+}
+alias tagCAUI CAUI;
+//C     typedef struct tagCAL {
+//C         ULONG cElems;
+//C         LONG *pElems;
+//C     } CAL;
+struct tagCAL
+{
+    ULONG cElems;
+    LONG *pElems;
+}
+alias tagCAL CAL;
+//C     typedef struct tagCAUL {
+//C         ULONG cElems;
+//C         ULONG *pElems;
+//C     } CAUL;
+struct tagCAUL
+{
+    ULONG cElems;
+    ULONG *pElems;
+}
+alias tagCAUL CAUL;
+//C     typedef struct tagCAFLT {
+//C         ULONG cElems;
+//C         FLOAT *pElems;
+//C     } CAFLT;
+struct tagCAFLT
+{
+    ULONG cElems;
+    FLOAT *pElems;
+}
+alias tagCAFLT CAFLT;
+//C     typedef struct tagCADBL {
+//C         ULONG cElems;
+//C         DOUBLE *pElems;
+//C     } CADBL;
+struct tagCADBL
+{
+    ULONG cElems;
+    DOUBLE *pElems;
+}
+alias tagCADBL CADBL;
+//C     typedef struct tagCACY {
+//C         ULONG cElems;
+//C         CY *pElems;
+//C     } CACY;
+struct tagCACY
+{
+    ULONG cElems;
+    CY *pElems;
+}
+alias tagCACY CACY;
+//C     typedef struct tagCADATE {
+//C         ULONG cElems;
+//C         DATE *pElems;
+//C     } CADATE;
+struct tagCADATE
+{
+    ULONG cElems;
+    DATE *pElems;
+}
+alias tagCADATE CADATE;
+//C     typedef struct tagCABSTR {
+//C         ULONG cElems;
+//C         BSTR *pElems;
+//C     } CABSTR;
+struct tagCABSTR
+{
+    ULONG cElems;
+    BSTR *pElems;
+}
+alias tagCABSTR CABSTR;
+//C     typedef struct tagCABSTRBLOB {
+//C         ULONG cElems;
+//C         BSTRBLOB *pElems;
+//C     } CABSTRBLOB;
+struct tagCABSTRBLOB
+{
+    ULONG cElems;
+    BSTRBLOB *pElems;
+}
+alias tagCABSTRBLOB CABSTRBLOB;
+//C     typedef struct tagCABOOL {
+//C         ULONG cElems;
+//C         VARIANT_BOOL *pElems;
+//C     } CABOOL;
+struct tagCABOOL
+{
+    ULONG cElems;
+    VARIANT_BOOL *pElems;
+}
+alias tagCABOOL CABOOL;
+//C     typedef struct tagCASCODE {
+//C         ULONG cElems;
+//C         SCODE *pElems;
+//C     } CASCODE;
+struct tagCASCODE
+{
+    ULONG cElems;
+    SCODE *pElems;
+}
+alias tagCASCODE CASCODE;
+//C     typedef struct tagCAPROPVARIANT {
+//C         ULONG cElems;
+//C         PROPVARIANT *pElems;
+//C     } CAPROPVARIANT;
+struct tagCAPROPVARIANT
+{
+    ULONG cElems;
+    PROPVARIANT *pElems;
+}
+alias tagCAPROPVARIANT CAPROPVARIANT;
+//C     typedef struct tagCAH {
+//C         ULONG cElems;
+//C         LARGE_INTEGER *pElems;
+//C     } CAH;
+struct tagCAH
+{
+    ULONG cElems;
+    LARGE_INTEGER *pElems;
+}
+alias tagCAH CAH;
+//C     typedef struct tagCAUH {
+//C         ULONG cElems;
+//C         ULARGE_INTEGER *pElems;
+//C     } CAUH;
+struct tagCAUH
+{
+    ULONG cElems;
+    ULARGE_INTEGER *pElems;
+}
+alias tagCAUH CAUH;
+//C     typedef struct tagCALPSTR {
+//C         ULONG cElems;
+//C         LPSTR *pElems;
+//C     } CALPSTR;
+struct tagCALPSTR
+{
+    ULONG cElems;
+    LPSTR *pElems;
+}
+alias tagCALPSTR CALPSTR;
+//C     typedef struct tagCALPWSTR {
+//C         ULONG cElems;
+//C         LPWSTR *pElems;
+//C     } CALPWSTR;
+struct tagCALPWSTR
+{
+    ULONG cElems;
+    LPWSTR *pElems;
+}
+alias tagCALPWSTR CALPWSTR;
+//C     typedef struct tagCAFILETIME {
+//C         ULONG cElems;
+//C         FILETIME *pElems;
+//C     } CAFILETIME;
+struct tagCAFILETIME
+{
+    ULONG cElems;
+    FILETIME *pElems;
+}
+alias tagCAFILETIME CAFILETIME;
+//C     typedef struct tagCACLIPDATA {
+//C         ULONG cElems;
+//C         CLIPDATA *pElems;
+//C     } CACLIPDATA;
+struct tagCACLIPDATA
+{
+    ULONG cElems;
+    CLIPDATA *pElems;
+}
+alias tagCACLIPDATA CACLIPDATA;
+//C     typedef struct tagCACLSID {
+//C         ULONG cElems;
+//C         CLSID *pElems;
+//C     } CACLSID;
+struct tagCACLSID
+{
+    ULONG cElems;
+    CLSID *pElems;
+}
+alias tagCACLSID CACLSID;
+//C       typedef WORD PROPVAR_PAD1;
+alias WORD PROPVAR_PAD1;
+//C       typedef WORD PROPVAR_PAD2;
+alias WORD PROPVAR_PAD2;
+//C       typedef WORD PROPVAR_PAD3;
+alias WORD PROPVAR_PAD3;
+//C     struct tagPROPVARIANT {
+//C          union {
+//C     struct {
+//C         VARTYPE vt;
+//C         PROPVAR_PAD1 wReserved1;
+//C         PROPVAR_PAD2 wReserved2;
+//C         PROPVAR_PAD3 wReserved3;
+//C          union {
+//C             CHAR cVal;
+//C             UCHAR bVal;
+//C             SHORT iVal;
+//C             USHORT uiVal;
+//C             LONG lVal;
+//C             ULONG ulVal;
+//C             INT intVal;
+//C             UINT uintVal;
+//C             LARGE_INTEGER hVal;
+//C             ULARGE_INTEGER uhVal;
+//C             FLOAT fltVal;
+//C             DOUBLE dblVal;
+//C             VARIANT_BOOL boolVal;
+//C             SCODE scode;
+//C             CY cyVal;
+//C             DATE date;
+//C             FILETIME filetime;
+//C             CLSID *puuid;
+//C             CLIPDATA *pclipdata;
+//C             BSTR bstrVal;
+//C             BSTRBLOB bstrblobVal;
+//C             BLOB blob;
+//C             LPSTR pszVal;
+//C             LPWSTR pwszVal;
+//C             IUnknown *punkVal;
+//C             IDispatch *pdispVal;
+//C             IStream *pStream;
+//C             IStorage *pStorage;
+//C             LPVERSIONEDSTREAM pVersionedStream;
+//C             LPSAFEARRAY parray;
+//C             CAC cac;
+//C             CAUB caub;
+//C             CAI cai;
+//C             CAUI caui;
+//C             CAL cal;
+//C             CAUL caul;
+//C             CAH cah;
+//C             CAUH cauh;
+//C             CAFLT caflt;
+//C             CADBL cadbl;
+//C             CABOOL cabool;
+//C             CASCODE cascode;
+//C             CACY cacy;
+//C             CADATE cadate;
+//C             CAFILETIME cafiletime;
+//C             CACLSID cauuid;
+//C             CACLIPDATA caclipdata;
+//C             CABSTR cabstr;
+//C             CABSTRBLOB cabstrblob;
+//C             CALPSTR calpstr;
+//C             CALPWSTR calpwstr;
+//C             CAPROPVARIANT capropvar;
+//C             CHAR *pcVal;
+//C             UCHAR *pbVal;
+//C             SHORT *piVal;
+//C             USHORT *puiVal;
+//C             LONG *plVal;
+//C             ULONG *pulVal;
+//C             INT *pintVal;
+//C             UINT *puintVal;
+//C             FLOAT *pfltVal;
+//C             DOUBLE *pdblVal;
+//C             VARIANT_BOOL *pboolVal;
+//C             DECIMAL *pdecVal;
+//C             SCODE *pscode;
+//C             CY *pcyVal;
+//C             DATE *pdate;
+//C             BSTR *pbstrVal;
+//C             IUnknown **ppunkVal;
+//C             IDispatch **ppdispVal;
+//C             LPSAFEARRAY *pparray;
+//C             PROPVARIANT *pvarVal;
+//C         } ;
+union _N197
+{
+    CHAR cVal;
+    UCHAR bVal;
+    SHORT iVal;
+    USHORT uiVal;
+    LONG lVal;
+    ULONG ulVal;
+    INT intVal;
+    UINT uintVal;
+    LARGE_INTEGER hVal;
+    ULARGE_INTEGER uhVal;
+    FLOAT fltVal;
+    DOUBLE dblVal;
+    VARIANT_BOOL boolVal;
+    SCODE scode;
+    CY cyVal;
+    DATE date;
+    FILETIME filetime;
+    CLSID *puuid;
+    CLIPDATA *pclipdata;
+    BSTR bstrVal;
+    BSTRBLOB bstrblobVal;
+    BLOB blob;
+    LPSTR pszVal;
+    LPWSTR pwszVal;
+    IUnknown *punkVal;
+    IDispatch *pdispVal;
+    IStream *pStream;
+    IStorage *pStorage;
+    LPVERSIONEDSTREAM pVersionedStream;
+    LPSAFEARRAY parray;
+    CAC cac;
+    CAUB caub;
+    CAI cai;
+    CAUI caui;
+    CAL cal;
+    CAUL caul;
+    CAH cah;
+    CAUH cauh;
+    CAFLT caflt;
+    CADBL cadbl;
+    CABOOL cabool;
+    CASCODE cascode;
+    CACY cacy;
+    CADATE cadate;
+    CAFILETIME cafiletime;
+    CACLSID cauuid;
+    CACLIPDATA caclipdata;
+    CABSTR cabstr;
+    CABSTRBLOB cabstrblob;
+    CALPSTR calpstr;
+    CALPWSTR calpwstr;
+    CAPROPVARIANT capropvar;
+    CHAR *pcVal;
+    UCHAR *pbVal;
+    SHORT *piVal;
+    USHORT *puiVal;
+    LONG *plVal;
+    ULONG *pulVal;
+    INT *pintVal;
+    UINT *puintVal;
+    FLOAT *pfltVal;
+    DOUBLE *pdblVal;
+    VARIANT_BOOL *pboolVal;
+    DECIMAL *pdecVal;
+    SCODE *pscode;
+    CY *pcyVal;
+    DATE *pdate;
+    BSTR *pbstrVal;
+    IUnknown **ppunkVal;
+    IDispatch **ppdispVal;
+    LPSAFEARRAY *pparray;
+    PROPVARIANT *pvarVal;
+}
+//C     };
+struct _N196
+{
+    VARTYPE vt;
+    PROPVAR_PAD1 wReserved1;
+    PROPVAR_PAD2 wReserved2;
+    PROPVAR_PAD3 wReserved3;
+    CHAR cVal;
+    UCHAR bVal;
+    SHORT iVal;
+    USHORT uiVal;
+    LONG lVal;
+    ULONG ulVal;
+    INT intVal;
+    UINT uintVal;
+    LARGE_INTEGER hVal;
+    ULARGE_INTEGER uhVal;
+    FLOAT fltVal;
+    DOUBLE dblVal;
+    VARIANT_BOOL boolVal;
+    SCODE scode;
+    CY cyVal;
+    DATE date;
+    FILETIME filetime;
+    CLSID *puuid;
+    CLIPDATA *pclipdata;
+    BSTR bstrVal;
+    BSTRBLOB bstrblobVal;
+    BLOB blob;
+    LPSTR pszVal;
+    LPWSTR pwszVal;
+    IUnknown *punkVal;
+    IDispatch *pdispVal;
+    IStream *pStream;
+    IStorage *pStorage;
+    LPVERSIONEDSTREAM pVersionedStream;
+    LPSAFEARRAY parray;
+    CAC cac;
+    CAUB caub;
+    CAI cai;
+    CAUI caui;
+    CAL cal;
+    CAUL caul;
+    CAH cah;
+    CAUH cauh;
+    CAFLT caflt;
+    CADBL cadbl;
+    CABOOL cabool;
+    CASCODE cascode;
+    CACY cacy;
+    CADATE cadate;
+    CAFILETIME cafiletime;
+    CACLSID cauuid;
+    CACLIPDATA caclipdata;
+    CABSTR cabstr;
+    CABSTRBLOB cabstrblob;
+    CALPSTR calpstr;
+    CALPWSTR calpwstr;
+    CAPROPVARIANT capropvar;
+    CHAR *pcVal;
+    UCHAR *pbVal;
+    SHORT *piVal;
+    USHORT *puiVal;
+    LONG *plVal;
+    ULONG *pulVal;
+    INT *pintVal;
+    UINT *puintVal;
+    FLOAT *pfltVal;
+    DOUBLE *pdblVal;
+    VARIANT_BOOL *pboolVal;
+    DECIMAL *pdecVal;
+    SCODE *pscode;
+    CY *pcyVal;
+    DATE *pdate;
+    BSTR *pbstrVal;
+    IUnknown **ppunkVal;
+    IDispatch **ppdispVal;
+    LPSAFEARRAY *pparray;
+    PROPVARIANT *pvarVal;
+}
+//C           DECIMAL decVal;
+//C         };
+union _N195
+{
+    VARTYPE vt;
+    PROPVAR_PAD1 wReserved1;
+    PROPVAR_PAD2 wReserved2;
+    PROPVAR_PAD3 wReserved3;
+    CHAR cVal;
+    UCHAR bVal;
+    SHORT iVal;
+    USHORT uiVal;
+    LONG lVal;
+    ULONG ulVal;
+    INT intVal;
+    UINT uintVal;
+    LARGE_INTEGER hVal;
+    ULARGE_INTEGER uhVal;
+    FLOAT fltVal;
+    DOUBLE dblVal;
+    VARIANT_BOOL boolVal;
+    SCODE scode;
+    CY cyVal;
+    DATE date;
+    FILETIME filetime;
+    CLSID *puuid;
+    CLIPDATA *pclipdata;
+    BSTR bstrVal;
+    BSTRBLOB bstrblobVal;
+    BLOB blob;
+    LPSTR pszVal;
+    LPWSTR pwszVal;
+    IUnknown *punkVal;
+    IDispatch *pdispVal;
+    IStream *pStream;
+    IStorage *pStorage;
+    LPVERSIONEDSTREAM pVersionedStream;
+    LPSAFEARRAY parray;
+    CAC cac;
+    CAUB caub;
+    CAI cai;
+    CAUI caui;
+    CAL cal;
+    CAUL caul;
+    CAH cah;
+    CAUH cauh;
+    CAFLT caflt;
+    CADBL cadbl;
+    CABOOL cabool;
+    CASCODE cascode;
+    CACY cacy;
+    CADATE cadate;
+    CAFILETIME cafiletime;
+    CACLSID cauuid;
+    CACLIPDATA caclipdata;
+    CABSTR cabstr;
+    CABSTRBLOB cabstrblob;
+    CALPSTR calpstr;
+    CALPWSTR calpwstr;
+    CAPROPVARIANT capropvar;
+    CHAR *pcVal;
+    UCHAR *pbVal;
+    SHORT *piVal;
+    USHORT *puiVal;
+    LONG *plVal;
+    ULONG *pulVal;
+    INT *pintVal;
+    UINT *puintVal;
+    FLOAT *pfltVal;
+    DOUBLE *pdblVal;
+    VARIANT_BOOL *pboolVal;
+    DECIMAL *pdecVal;
+    SCODE *pscode;
+    CY *pcyVal;
+    DATE *pdate;
+    BSTR *pbstrVal;
+    IUnknown **ppunkVal;
+    IDispatch **ppdispVal;
+    LPSAFEARRAY *pparray;
+    PROPVARIANT *pvarVal;
+    DECIMAL decVal;
+}
+//C       };
+struct tagPROPVARIANT
+{
+    VARTYPE vt;
+    PROPVAR_PAD1 wReserved1;
+    PROPVAR_PAD2 wReserved2;
+    PROPVAR_PAD3 wReserved3;
+    CHAR cVal;
+    UCHAR bVal;
+    SHORT iVal;
+    USHORT uiVal;
+    LONG lVal;
+    ULONG ulVal;
+    INT intVal;
+    UINT uintVal;
+    LARGE_INTEGER hVal;
+    ULARGE_INTEGER uhVal;
+    FLOAT fltVal;
+    DOUBLE dblVal;
+    VARIANT_BOOL boolVal;
+    SCODE scode;
+    CY cyVal;
+    DATE date;
+    FILETIME filetime;
+    CLSID *puuid;
+    CLIPDATA *pclipdata;
+    BSTR bstrVal;
+    BSTRBLOB bstrblobVal;
+    BLOB blob;
+    LPSTR pszVal;
+    LPWSTR pwszVal;
+    IUnknown *punkVal;
+    IDispatch *pdispVal;
+    IStream *pStream;
+    IStorage *pStorage;
+    LPVERSIONEDSTREAM pVersionedStream;
+    LPSAFEARRAY parray;
+    CAC cac;
+    CAUB caub;
+    CAI cai;
+    CAUI caui;
+    CAL cal;
+    CAUL caul;
+    CAH cah;
+    CAUH cauh;
+    CAFLT caflt;
+    CADBL cadbl;
+    CABOOL cabool;
+    CASCODE cascode;
+    CACY cacy;
+    CADATE cadate;
+    CAFILETIME cafiletime;
+    CACLSID cauuid;
+    CACLIPDATA caclipdata;
+    CABSTR cabstr;
+    CABSTRBLOB cabstrblob;
+    CALPSTR calpstr;
+    CALPWSTR calpwstr;
+    CAPROPVARIANT capropvar;
+    CHAR *pcVal;
+    UCHAR *pbVal;
+    SHORT *piVal;
+    USHORT *puiVal;
+    LONG *plVal;
+    ULONG *pulVal;
+    INT *pintVal;
+    UINT *puintVal;
+    FLOAT *pfltVal;
+    DOUBLE *pdblVal;
+    VARIANT_BOOL *pboolVal;
+    DECIMAL *pdecVal;
+    SCODE *pscode;
+    CY *pcyVal;
+    DATE *pdate;
+    BSTR *pbstrVal;
+    IUnknown **ppunkVal;
+    IDispatch **ppdispVal;
+    LPSAFEARRAY *pparray;
+    PROPVARIANT *pvarVal;
+    DECIMAL decVal;
+}
+//C       typedef struct tagPROPVARIANT *LPPROPVARIANT;
+alias tagPROPVARIANT *LPPROPVARIANT;
+//C       enum PIDMSI_STATUS_VALUE {
+//C         PIDMSI_STATUS_NORMAL = 0,PIDMSI_STATUS_NEW,PIDMSI_STATUS_PRELIM,
+//C         PIDMSI_STATUS_DRAFT,PIDMSI_STATUS_INPROGRESS,PIDMSI_STATUS_EDIT,
+//C         PIDMSI_STATUS_REVIEW,PIDMSI_STATUS_PROOF,PIDMSI_STATUS_FINAL,
+//C         PIDMSI_STATUS_OTHER = 0x7fff
+//C       };
+enum PIDMSI_STATUS_VALUE
+{
+    PIDMSI_STATUS_NORMAL,
+    PIDMSI_STATUS_NEW,
+    PIDMSI_STATUS_PRELIM,
+    PIDMSI_STATUS_DRAFT,
+    PIDMSI_STATUS_INPROGRESS,
+    PIDMSI_STATUS_EDIT,
+    PIDMSI_STATUS_REVIEW,
+    PIDMSI_STATUS_PROOF,
+    PIDMSI_STATUS_FINAL,
+    PIDMSI_STATUS_OTHER = 32767,
+}
+//C       typedef struct tagPROPSPEC {
+//C         ULONG ulKind;
+//C          union {
+//C           PROPID propid;
+//C           LPOLESTR lpwstr;
+//C         } ;
+union _N198
+{
+    PROPID propid;
+    LPOLESTR lpwstr;
+}
+//C       } PROPSPEC;
+struct tagPROPSPEC
+{
+    ULONG ulKind;
+    PROPID propid;
+    LPOLESTR lpwstr;
+}
+alias tagPROPSPEC PROPSPEC;
+//C       typedef struct tagSTATPROPSTG {
+//C         LPOLESTR lpwstrName;
+//C         PROPID propid;
+//C         VARTYPE vt;
+//C       } STATPROPSTG;
+struct tagSTATPROPSTG
+{
+    LPOLESTR lpwstrName;
+    PROPID propid;
+    VARTYPE vt;
+}
+alias tagSTATPROPSTG STATPROPSTG;
+//C       typedef struct tagSTATPROPSETSTG {
+//C         FMTID fmtid;
+//C         CLSID clsid;
+//C         DWORD grfFlags;
+//C         FILETIME mtime;
+//C         FILETIME ctime;
+//C         FILETIME atime;
+//C         DWORD dwOSVersion;
+//C       } STATPROPSETSTG;
+struct tagSTATPROPSETSTG
+{
+    FMTID fmtid;
+    CLSID clsid;
+    DWORD grfFlags;
+    FILETIME mtime;
+    FILETIME ctime;
+    FILETIME atime;
+    DWORD dwOSVersion;
+}
+alias tagSTATPROPSETSTG STATPROPSETSTG;
+//C       extern RPC_IF_HANDLE __MIDL_itf_propidl_0000_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_propidl_0000_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_propidl_0000_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_propidl_0000_v0_0_s_ifspec;
+//C       extern const IID IID_IPropertyStorage;
+extern const IID IID_IPropertyStorage;
+//C       typedef struct IPropertyStorageVtbl {
+//C           HRESULT ( *QueryInterface)(IPropertyStorage *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IPropertyStorage *This);
+//C           ULONG ( *Release)(IPropertyStorage *This);
+//C           HRESULT ( *ReadMultiple)(IPropertyStorage *This,ULONG cpspec,const PROPSPEC rgpspec[],PROPVARIANT rgpropvar[]);
+//C           HRESULT ( *WriteMultiple)(IPropertyStorage *This,ULONG cpspec,const PROPSPEC rgpspec[],const PROPVARIANT rgpropvar[],PROPID propidNameFirst);
+//C           HRESULT ( *DeleteMultiple)(IPropertyStorage *This,ULONG cpspec,const PROPSPEC rgpspec[]);
+//C           HRESULT ( *ReadPropertyNames)(IPropertyStorage *This,ULONG cpropid,const PROPID rgpropid[],LPOLESTR rglpwstrName[]);
+//C           HRESULT ( *WritePropertyNames)(IPropertyStorage *This,ULONG cpropid,const PROPID rgpropid[],const LPOLESTR rglpwstrName[]);
+//C           HRESULT ( *DeletePropertyNames)(IPropertyStorage *This,ULONG cpropid,const PROPID rgpropid[]);
+//C           HRESULT ( *Commit)(IPropertyStorage *This,DWORD grfCommitFlags);
+//C           HRESULT ( *Revert)(IPropertyStorage *This);
+//C           HRESULT ( *Enum)(IPropertyStorage *This,IEnumSTATPROPSTG **ppenum);
+//C           HRESULT ( *SetTimes)(IPropertyStorage *This,const FILETIME *pctime,const FILETIME *patime,const FILETIME *pmtime);
+//C           HRESULT ( *SetClass)(IPropertyStorage *This,const IID *const clsid);
+//C           HRESULT ( *Stat)(IPropertyStorage *This,STATPROPSETSTG *pstatpsstg);
+//C       } IPropertyStorageVtbl;
+struct IPropertyStorageVtbl
+{
+    HRESULT  function(IPropertyStorage *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IPropertyStorage *This)AddRef;
+    ULONG  function(IPropertyStorage *This)Release;
+    HRESULT  function(IPropertyStorage *This, ULONG cpspec, PROPSPEC *rgpspec, PROPVARIANT *rgpropvar)ReadMultiple;
+    HRESULT  function(IPropertyStorage *This, ULONG cpspec, PROPSPEC *rgpspec, PROPVARIANT *rgpropvar, PROPID propidNameFirst)WriteMultiple;
+    HRESULT  function(IPropertyStorage *This, ULONG cpspec, PROPSPEC *rgpspec)DeleteMultiple;
+    HRESULT  function(IPropertyStorage *This, ULONG cpropid, PROPID *rgpropid, LPOLESTR *rglpwstrName)ReadPropertyNames;
+    HRESULT  function(IPropertyStorage *This, ULONG cpropid, PROPID *rgpropid, LPOLESTR *rglpwstrName)WritePropertyNames;
+    HRESULT  function(IPropertyStorage *This, ULONG cpropid, PROPID *rgpropid)DeletePropertyNames;
+    HRESULT  function(IPropertyStorage *This, DWORD grfCommitFlags)Commit;
+    HRESULT  function(IPropertyStorage *This)Revert;
+    HRESULT  function(IPropertyStorage *This, IEnumSTATPROPSTG **ppenum)Enum;
+    HRESULT  function(IPropertyStorage *This, FILETIME *pctime, FILETIME *patime, FILETIME *pmtime)SetTimes;
+    HRESULT  function(IPropertyStorage *This, IID *clsid)SetClass;
+    HRESULT  function(IPropertyStorage *This, STATPROPSETSTG *pstatpsstg)Stat;
+}
+//C       struct IPropertyStorage {
+//C         struct IPropertyStorageVtbl *lpVtbl;
+//C       };
+struct IPropertyStorage
+{
+    IPropertyStorageVtbl *lpVtbl;
+}
+//C       HRESULT IPropertyStorage_ReadMultiple_Proxy(IPropertyStorage *This,ULONG cpspec,const PROPSPEC rgpspec[],PROPVARIANT rgpropvar[]);
+HRESULT  IPropertyStorage_ReadMultiple_Proxy(IPropertyStorage *This, ULONG cpspec, PROPSPEC *rgpspec, PROPVARIANT *rgpropvar);
+//C       void IPropertyStorage_ReadMultiple_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_ReadMultiple_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_WriteMultiple_Proxy(IPropertyStorage *This,ULONG cpspec,const PROPSPEC rgpspec[],const PROPVARIANT rgpropvar[],PROPID propidNameFirst);
+HRESULT  IPropertyStorage_WriteMultiple_Proxy(IPropertyStorage *This, ULONG cpspec, PROPSPEC *rgpspec, PROPVARIANT *rgpropvar, PROPID propidNameFirst);
+//C       void IPropertyStorage_WriteMultiple_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_WriteMultiple_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_DeleteMultiple_Proxy(IPropertyStorage *This,ULONG cpspec,const PROPSPEC rgpspec[]);
+HRESULT  IPropertyStorage_DeleteMultiple_Proxy(IPropertyStorage *This, ULONG cpspec, PROPSPEC *rgpspec);
+//C       void IPropertyStorage_DeleteMultiple_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_DeleteMultiple_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_ReadPropertyNames_Proxy(IPropertyStorage *This,ULONG cpropid,const PROPID rgpropid[],LPOLESTR rglpwstrName[]);
+HRESULT  IPropertyStorage_ReadPropertyNames_Proxy(IPropertyStorage *This, ULONG cpropid, PROPID *rgpropid, LPOLESTR *rglpwstrName);
+//C       void IPropertyStorage_ReadPropertyNames_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_ReadPropertyNames_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_WritePropertyNames_Proxy(IPropertyStorage *This,ULONG cpropid,const PROPID rgpropid[],const LPOLESTR rglpwstrName[]);
+HRESULT  IPropertyStorage_WritePropertyNames_Proxy(IPropertyStorage *This, ULONG cpropid, PROPID *rgpropid, LPOLESTR *rglpwstrName);
+//C       void IPropertyStorage_WritePropertyNames_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_WritePropertyNames_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_DeletePropertyNames_Proxy(IPropertyStorage *This,ULONG cpropid,const PROPID rgpropid[]);
+HRESULT  IPropertyStorage_DeletePropertyNames_Proxy(IPropertyStorage *This, ULONG cpropid, PROPID *rgpropid);
+//C       void IPropertyStorage_DeletePropertyNames_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_DeletePropertyNames_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_Commit_Proxy(IPropertyStorage *This,DWORD grfCommitFlags);
+HRESULT  IPropertyStorage_Commit_Proxy(IPropertyStorage *This, DWORD grfCommitFlags);
+//C       void IPropertyStorage_Commit_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_Commit_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_Revert_Proxy(IPropertyStorage *This);
+HRESULT  IPropertyStorage_Revert_Proxy(IPropertyStorage *This);
+//C       void IPropertyStorage_Revert_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_Revert_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_Enum_Proxy(IPropertyStorage *This,IEnumSTATPROPSTG **ppenum);
+HRESULT  IPropertyStorage_Enum_Proxy(IPropertyStorage *This, IEnumSTATPROPSTG **ppenum);
+//C       void IPropertyStorage_Enum_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_Enum_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_SetTimes_Proxy(IPropertyStorage *This,const FILETIME *pctime,const FILETIME *patime,const FILETIME *pmtime);
+HRESULT  IPropertyStorage_SetTimes_Proxy(IPropertyStorage *This, FILETIME *pctime, FILETIME *patime, FILETIME *pmtime);
+//C       void IPropertyStorage_SetTimes_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_SetTimes_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_SetClass_Proxy(IPropertyStorage *This,const IID *const clsid);
+HRESULT  IPropertyStorage_SetClass_Proxy(IPropertyStorage *This, IID *clsid);
+//C       void IPropertyStorage_SetClass_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_SetClass_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertyStorage_Stat_Proxy(IPropertyStorage *This,STATPROPSETSTG *pstatpsstg);
+HRESULT  IPropertyStorage_Stat_Proxy(IPropertyStorage *This, STATPROPSETSTG *pstatpsstg);
+//C       void IPropertyStorage_Stat_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertyStorage_Stat_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       typedef IPropertySetStorage *LPPROPERTYSETSTORAGE;
+alias IPropertySetStorage *LPPROPERTYSETSTORAGE;
+//C       extern const IID IID_IPropertySetStorage;
+extern const IID IID_IPropertySetStorage;
+//C       typedef struct IPropertySetStorageVtbl {
+//C           HRESULT ( *QueryInterface)(IPropertySetStorage *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IPropertySetStorage *This);
+//C           ULONG ( *Release)(IPropertySetStorage *This);
+//C           HRESULT ( *Create)(IPropertySetStorage *This,const IID *const rfmtid,const CLSID *pclsid,DWORD grfFlags,DWORD grfMode,IPropertyStorage **ppprstg);
+//C           HRESULT ( *Open)(IPropertySetStorage *This,const IID *const rfmtid,DWORD grfMode,IPropertyStorage **ppprstg);
+//C           HRESULT ( *Delete)(IPropertySetStorage *This,const IID *const rfmtid);
+//C           HRESULT ( *Enum)(IPropertySetStorage *This,IEnumSTATPROPSETSTG **ppenum);
+//C       } IPropertySetStorageVtbl;
+struct IPropertySetStorageVtbl
+{
+    HRESULT  function(IPropertySetStorage *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IPropertySetStorage *This)AddRef;
+    ULONG  function(IPropertySetStorage *This)Release;
+    HRESULT  function(IPropertySetStorage *This, IID *rfmtid, CLSID *pclsid, DWORD grfFlags, DWORD grfMode, IPropertyStorage **ppprstg)Create;
+    HRESULT  function(IPropertySetStorage *This, IID *rfmtid, DWORD grfMode, IPropertyStorage **ppprstg)Open;
+    HRESULT  function(IPropertySetStorage *This, IID *rfmtid)Delete;
+    HRESULT  function(IPropertySetStorage *This, IEnumSTATPROPSETSTG **ppenum)Enum;
+}
+//C       struct IPropertySetStorage {
+//C         struct IPropertySetStorageVtbl *lpVtbl;
+//C       };
+struct IPropertySetStorage
+{
+    IPropertySetStorageVtbl *lpVtbl;
+}
+//C       HRESULT IPropertySetStorage_Create_Proxy(IPropertySetStorage *This,const IID *const rfmtid,const CLSID *pclsid,DWORD grfFlags,DWORD grfMode,IPropertyStorage **ppprstg);
+HRESULT  IPropertySetStorage_Create_Proxy(IPropertySetStorage *This, IID *rfmtid, CLSID *pclsid, DWORD grfFlags, DWORD grfMode, IPropertyStorage **ppprstg);
+//C       void IPropertySetStorage_Create_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertySetStorage_Create_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertySetStorage_Open_Proxy(IPropertySetStorage *This,const IID *const rfmtid,DWORD grfMode,IPropertyStorage **ppprstg);
+HRESULT  IPropertySetStorage_Open_Proxy(IPropertySetStorage *This, IID *rfmtid, DWORD grfMode, IPropertyStorage **ppprstg);
+//C       void IPropertySetStorage_Open_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertySetStorage_Open_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertySetStorage_Delete_Proxy(IPropertySetStorage *This,const IID *const rfmtid);
+HRESULT  IPropertySetStorage_Delete_Proxy(IPropertySetStorage *This, IID *rfmtid);
+//C       void IPropertySetStorage_Delete_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertySetStorage_Delete_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IPropertySetStorage_Enum_Proxy(IPropertySetStorage *This,IEnumSTATPROPSETSTG **ppenum);
+HRESULT  IPropertySetStorage_Enum_Proxy(IPropertySetStorage *This, IEnumSTATPROPSETSTG **ppenum);
+//C       void IPropertySetStorage_Enum_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IPropertySetStorage_Enum_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       typedef IEnumSTATPROPSTG *LPENUMSTATPROPSTG;
+alias IEnumSTATPROPSTG *LPENUMSTATPROPSTG;
+//C       extern const IID IID_IEnumSTATPROPSTG;
+extern const IID IID_IEnumSTATPROPSTG;
+//C       typedef struct IEnumSTATPROPSTGVtbl {
+//C           HRESULT ( *QueryInterface)(IEnumSTATPROPSTG *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IEnumSTATPROPSTG *This);
+//C           ULONG ( *Release)(IEnumSTATPROPSTG *This);
+//C           HRESULT ( *Next)(IEnumSTATPROPSTG *This,ULONG celt,STATPROPSTG *rgelt,ULONG *pceltFetched);
+//C           HRESULT ( *Skip)(IEnumSTATPROPSTG *This,ULONG celt);
+//C           HRESULT ( *Reset)(IEnumSTATPROPSTG *This);
+//C           HRESULT ( *Clone)(IEnumSTATPROPSTG *This,IEnumSTATPROPSTG **ppenum);
+//C       } IEnumSTATPROPSTGVtbl;
+struct IEnumSTATPROPSTGVtbl
+{
+    HRESULT  function(IEnumSTATPROPSTG *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IEnumSTATPROPSTG *This)AddRef;
+    ULONG  function(IEnumSTATPROPSTG *This)Release;
+    HRESULT  function(IEnumSTATPROPSTG *This, ULONG celt, STATPROPSTG *rgelt, ULONG *pceltFetched)Next;
+    HRESULT  function(IEnumSTATPROPSTG *This, ULONG celt)Skip;
+    HRESULT  function(IEnumSTATPROPSTG *This)Reset;
+    HRESULT  function(IEnumSTATPROPSTG *This, IEnumSTATPROPSTG **ppenum)Clone;
+}
+//C       struct IEnumSTATPROPSTG {
+//C         struct IEnumSTATPROPSTGVtbl *lpVtbl;
+//C       };
+struct IEnumSTATPROPSTG
+{
+    IEnumSTATPROPSTGVtbl *lpVtbl;
+}
+//C       HRESULT IEnumSTATPROPSTG_RemoteNext_Proxy(IEnumSTATPROPSTG *This,ULONG celt,STATPROPSTG *rgelt,ULONG *pceltFetched);
+HRESULT  IEnumSTATPROPSTG_RemoteNext_Proxy(IEnumSTATPROPSTG *This, ULONG celt, STATPROPSTG *rgelt, ULONG *pceltFetched);
+//C       void IEnumSTATPROPSTG_RemoteNext_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IEnumSTATPROPSTG_RemoteNext_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IEnumSTATPROPSTG_Skip_Proxy(IEnumSTATPROPSTG *This,ULONG celt);
+HRESULT  IEnumSTATPROPSTG_Skip_Proxy(IEnumSTATPROPSTG *This, ULONG celt);
+//C       void IEnumSTATPROPSTG_Skip_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IEnumSTATPROPSTG_Skip_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IEnumSTATPROPSTG_Reset_Proxy(IEnumSTATPROPSTG *This);
+HRESULT  IEnumSTATPROPSTG_Reset_Proxy(IEnumSTATPROPSTG *This);
+//C       void IEnumSTATPROPSTG_Reset_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IEnumSTATPROPSTG_Reset_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IEnumSTATPROPSTG_Clone_Proxy(IEnumSTATPROPSTG *This,IEnumSTATPROPSTG **ppenum);
+HRESULT  IEnumSTATPROPSTG_Clone_Proxy(IEnumSTATPROPSTG *This, IEnumSTATPROPSTG **ppenum);
+//C       void IEnumSTATPROPSTG_Clone_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IEnumSTATPROPSTG_Clone_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       typedef IEnumSTATPROPSETSTG *LPENUMSTATPROPSETSTG;
+alias IEnumSTATPROPSETSTG *LPENUMSTATPROPSETSTG;
+//C       extern const IID IID_IEnumSTATPROPSETSTG;
+extern const IID IID_IEnumSTATPROPSETSTG;
+//C       typedef struct IEnumSTATPROPSETSTGVtbl {
+//C           HRESULT ( *QueryInterface)(IEnumSTATPROPSETSTG *This,const IID *const riid,void **ppvObject);
+//C           ULONG ( *AddRef)(IEnumSTATPROPSETSTG *This);
+//C           ULONG ( *Release)(IEnumSTATPROPSETSTG *This);
+//C           HRESULT ( *Next)(IEnumSTATPROPSETSTG *This,ULONG celt,STATPROPSETSTG *rgelt,ULONG *pceltFetched);
+//C           HRESULT ( *Skip)(IEnumSTATPROPSETSTG *This,ULONG celt);
+//C           HRESULT ( *Reset)(IEnumSTATPROPSETSTG *This);
+//C           HRESULT ( *Clone)(IEnumSTATPROPSETSTG *This,IEnumSTATPROPSETSTG **ppenum);
+//C       } IEnumSTATPROPSETSTGVtbl;
+struct IEnumSTATPROPSETSTGVtbl
+{
+    HRESULT  function(IEnumSTATPROPSETSTG *This, IID *riid, void **ppvObject)QueryInterface;
+    ULONG  function(IEnumSTATPROPSETSTG *This)AddRef;
+    ULONG  function(IEnumSTATPROPSETSTG *This)Release;
+    HRESULT  function(IEnumSTATPROPSETSTG *This, ULONG celt, STATPROPSETSTG *rgelt, ULONG *pceltFetched)Next;
+    HRESULT  function(IEnumSTATPROPSETSTG *This, ULONG celt)Skip;
+    HRESULT  function(IEnumSTATPROPSETSTG *This)Reset;
+    HRESULT  function(IEnumSTATPROPSETSTG *This, IEnumSTATPROPSETSTG **ppenum)Clone;
+}
+//C       struct IEnumSTATPROPSETSTG {
+//C         struct IEnumSTATPROPSETSTGVtbl *lpVtbl;
+//C       };
+struct IEnumSTATPROPSETSTG
+{
+    IEnumSTATPROPSETSTGVtbl *lpVtbl;
+}
+//C       HRESULT IEnumSTATPROPSETSTG_RemoteNext_Proxy(IEnumSTATPROPSETSTG *This,ULONG celt,STATPROPSETSTG *rgelt,ULONG *pceltFetched);
+HRESULT  IEnumSTATPROPSETSTG_RemoteNext_Proxy(IEnumSTATPROPSETSTG *This, ULONG celt, STATPROPSETSTG *rgelt, ULONG *pceltFetched);
+//C       void IEnumSTATPROPSETSTG_RemoteNext_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IEnumSTATPROPSETSTG_RemoteNext_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IEnumSTATPROPSETSTG_Skip_Proxy(IEnumSTATPROPSETSTG *This,ULONG celt);
+HRESULT  IEnumSTATPROPSETSTG_Skip_Proxy(IEnumSTATPROPSETSTG *This, ULONG celt);
+//C       void IEnumSTATPROPSETSTG_Skip_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IEnumSTATPROPSETSTG_Skip_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IEnumSTATPROPSETSTG_Reset_Proxy(IEnumSTATPROPSETSTG *This);
+HRESULT  IEnumSTATPROPSETSTG_Reset_Proxy(IEnumSTATPROPSETSTG *This);
+//C       void IEnumSTATPROPSETSTG_Reset_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IEnumSTATPROPSETSTG_Reset_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       HRESULT IEnumSTATPROPSETSTG_Clone_Proxy(IEnumSTATPROPSETSTG *This,IEnumSTATPROPSETSTG **ppenum);
+HRESULT  IEnumSTATPROPSETSTG_Clone_Proxy(IEnumSTATPROPSETSTG *This, IEnumSTATPROPSETSTG **ppenum);
+//C       void IEnumSTATPROPSETSTG_Clone_Stub(IRpcStubBuffer *This,IRpcChannelBuffer *_pRpcChannelBuffer,PRPC_MESSAGE _pRpcMessage,DWORD *_pdwStubPhase);
+void  IEnumSTATPROPSETSTG_Clone_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
+//C       typedef IPropertyStorage *LPPROPERTYSTORAGE;
+alias IPropertyStorage *LPPROPERTYSTORAGE;
+//C       extern  HRESULT PropVariantCopy (PROPVARIANT *pvarDest,const PROPVARIANT *pvarSrc);
+HRESULT  PropVariantCopy(PROPVARIANT *pvarDest, PROPVARIANT *pvarSrc);
+//C       extern  HRESULT PropVariantClear (PROPVARIANT *pvar);
+HRESULT  PropVariantClear(PROPVARIANT *pvar);
+//C       extern  HRESULT FreePropVariantArray (ULONG cVariants,PROPVARIANT *rgvars);
+HRESULT  FreePropVariantArray(ULONG cVariants, PROPVARIANT *rgvars);
+//C       extern  HRESULT StgCreatePropStg(IUnknown *pUnk,const IID *const fmtid,const CLSID *pclsid,DWORD grfFlags,DWORD dwReserved,IPropertyStorage **ppPropStg);
+HRESULT  StgCreatePropStg(IUnknown *pUnk, IID *fmtid, CLSID *pclsid, DWORD grfFlags, DWORD dwReserved, IPropertyStorage **ppPropStg);
+//C       extern  HRESULT StgOpenPropStg(IUnknown *pUnk,const IID *const fmtid,DWORD grfFlags,DWORD dwReserved,IPropertyStorage **ppPropStg);
+HRESULT  StgOpenPropStg(IUnknown *pUnk, IID *fmtid, DWORD grfFlags, DWORD dwReserved, IPropertyStorage **ppPropStg);
+//C       extern  HRESULT StgCreatePropSetStg(IStorage *pStorage,DWORD dwReserved,IPropertySetStorage **ppPropSetStg);
+HRESULT  StgCreatePropSetStg(IStorage *pStorage, DWORD dwReserved, IPropertySetStorage **ppPropSetStg);
+//C       extern  HRESULT FmtIdToPropStgName(const FMTID *pfmtid,LPOLESTR oszName);
+HRESULT  FmtIdToPropStgName(FMTID *pfmtid, LPOLESTR oszName);
+//C       extern  HRESULT PropStgNameToFmtId(const LPOLESTR oszName,FMTID *pfmtid);
+HRESULT  PropStgNameToFmtId(LPOLESTR oszName, FMTID *pfmtid);
+//C       extern RPC_IF_HANDLE __MIDL_itf_propidl_0120_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_propidl_0120_v0_0_c_ifspec;
+//C       extern RPC_IF_HANDLE __MIDL_itf_propidl_0120_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_propidl_0120_v0_0_s_ifspec;
+//C       ULONG BSTR_UserSize(ULONG *,ULONG,BSTR *);
+ULONG  BSTR_UserSize(ULONG *, ULONG , BSTR *);
+//C       unsigned char * BSTR_UserMarshal(ULONG *,unsigned char *,BSTR *);
+ubyte * BSTR_UserMarshal(ULONG *, ubyte *, BSTR *);
+//C       unsigned char * BSTR_UserUnmarshal(ULONG *,unsigned char *,BSTR *);
+ubyte * BSTR_UserUnmarshal(ULONG *, ubyte *, BSTR *);
+//C       void BSTR_UserFree(ULONG *,BSTR *);
+void  BSTR_UserFree(ULONG *, BSTR *);
+//C       ULONG LPSAFEARRAY_UserSize(ULONG *,ULONG,LPSAFEARRAY *);
+ULONG  LPSAFEARRAY_UserSize(ULONG *, ULONG , LPSAFEARRAY *);
+//C       unsigned char * LPSAFEARRAY_UserMarshal(ULONG *,unsigned char *,LPSAFEARRAY *);
+ubyte * LPSAFEARRAY_UserMarshal(ULONG *, ubyte *, LPSAFEARRAY *);
+//C       unsigned char * LPSAFEARRAY_UserUnmarshal(ULONG *,unsigned char *,LPSAFEARRAY *);
+ubyte * LPSAFEARRAY_UserUnmarshal(ULONG *, ubyte *, LPSAFEARRAY *);
+//C       void LPSAFEARRAY_UserFree(ULONG *,LPSAFEARRAY *);
+void  LPSAFEARRAY_UserFree(ULONG *, LPSAFEARRAY *);
+//C       HRESULT IEnumSTATPROPSTG_Next_Proxy(IEnumSTATPROPSTG *This,ULONG celt,STATPROPSTG *rgelt,ULONG *pceltFetched);
+HRESULT  IEnumSTATPROPSTG_Next_Proxy(IEnumSTATPROPSTG *This, ULONG celt, STATPROPSTG *rgelt, ULONG *pceltFetched);
+//C       HRESULT IEnumSTATPROPSTG_Next_Stub(IEnumSTATPROPSTG *This,ULONG celt,STATPROPSTG *rgelt,ULONG *pceltFetched);
+HRESULT  IEnumSTATPROPSTG_Next_Stub(IEnumSTATPROPSTG *This, ULONG celt, STATPROPSTG *rgelt, ULONG *pceltFetched);
+//C       HRESULT IEnumSTATPROPSETSTG_Next_Proxy(IEnumSTATPROPSETSTG *This,ULONG celt,STATPROPSETSTG *rgelt,ULONG *pceltFetched);
+HRESULT  IEnumSTATPROPSETSTG_Next_Proxy(IEnumSTATPROPSETSTG *This, ULONG celt, STATPROPSETSTG *rgelt, ULONG *pceltFetched);
+//C       HRESULT IEnumSTATPROPSETSTG_Next_Stub(IEnumSTATPROPSETSTG *This,ULONG celt,STATPROPSETSTG *rgelt,ULONG *pceltFetched);
+HRESULT  IEnumSTATPROPSETSTG_Next_Stub(IEnumSTATPROPSETSTG *This, ULONG celt, STATPROPSETSTG *rgelt, ULONG *pceltFetched);
+//C     extern  HRESULT CreateStdProgressIndicator(HWND hwndParent,LPCOLESTR pszTitle,IBindStatusCallback *pIbscCaller,IBindStatusCallback **ppIbsc);
+HRESULT  CreateStdProgressIndicator(HWND hwndParent, LPCOLESTR pszTitle, IBindStatusCallback *pIbscCaller, IBindStatusCallback **ppIbsc);
+//C     extern const IID IID_StdOle;
+extern const IID IID_StdOle;
+//C     extern  BSTR SysAllocString(const OLECHAR *);
+BSTR  SysAllocString(OLECHAR *);
+//C     extern  INT SysReAllocString(BSTR *,const OLECHAR *);
+INT  SysReAllocString(BSTR *, OLECHAR *);
+//C     extern  BSTR SysAllocStringLen(const OLECHAR *,UINT);
+BSTR  SysAllocStringLen(OLECHAR *, UINT );
+//C     extern  INT SysReAllocStringLen(BSTR *,const OLECHAR *,UINT);
+INT  SysReAllocStringLen(BSTR *, OLECHAR *, UINT );
+//C     extern  void SysFreeString(BSTR);
+void  SysFreeString(BSTR );
+//C     extern  UINT SysStringLen(BSTR);
+UINT  SysStringLen(BSTR );
+//C     extern  UINT SysStringByteLen(BSTR bstr);
+UINT  SysStringByteLen(BSTR bstr);
+//C     extern  BSTR SysAllocStringByteLen(LPCSTR psz,UINT len);
+BSTR  SysAllocStringByteLen(LPCSTR psz, UINT len);
+//C     extern  INT DosDateTimeToVariantTime(USHORT wDosDate,USHORT wDosTime,DOUBLE *pvtime);
+INT  DosDateTimeToVariantTime(USHORT wDosDate, USHORT wDosTime, DOUBLE *pvtime);
+//C     extern  INT VariantTimeToDosDateTime(DOUBLE vtime,USHORT *pwDosDate,USHORT *pwDosTime);
+INT  VariantTimeToDosDateTime(DOUBLE vtime, USHORT *pwDosDate, USHORT *pwDosTime);
+//C     extern  INT SystemTimeToVariantTime(LPSYSTEMTIME lpSystemTime,DOUBLE *pvtime);
+INT  SystemTimeToVariantTime(LPSYSTEMTIME lpSystemTime, DOUBLE *pvtime);
+//C     extern  INT VariantTimeToSystemTime(DOUBLE vtime,LPSYSTEMTIME lpSystemTime);
+INT  VariantTimeToSystemTime(DOUBLE vtime, LPSYSTEMTIME lpSystemTime);
+//C     extern  HRESULT SafeArrayAllocDescriptor(UINT cDims,SAFEARRAY **ppsaOut);
+HRESULT  SafeArrayAllocDescriptor(UINT cDims, SAFEARRAY **ppsaOut);
+//C     extern  HRESULT SafeArrayAllocDescriptorEx(VARTYPE vt,UINT cDims,SAFEARRAY **ppsaOut);
+HRESULT  SafeArrayAllocDescriptorEx(VARTYPE vt, UINT cDims, SAFEARRAY **ppsaOut);
+//C     extern  HRESULT SafeArrayAllocData(SAFEARRAY *psa);
+HRESULT  SafeArrayAllocData(SAFEARRAY *psa);
+//C     extern  SAFEARRAY * SafeArrayCreate(VARTYPE vt,UINT cDims,SAFEARRAYBOUND *rgsabound);
+SAFEARRAY * SafeArrayCreate(VARTYPE vt, UINT cDims, SAFEARRAYBOUND *rgsabound);
+//C     extern  SAFEARRAY * SafeArrayCreateEx(VARTYPE vt,UINT cDims,SAFEARRAYBOUND *rgsabound,PVOID pvExtra);
+SAFEARRAY * SafeArrayCreateEx(VARTYPE vt, UINT cDims, SAFEARRAYBOUND *rgsabound, PVOID pvExtra);
+//C     extern  HRESULT SafeArrayCopyData(SAFEARRAY *psaSource,SAFEARRAY *psaTarget);
+HRESULT  SafeArrayCopyData(SAFEARRAY *psaSource, SAFEARRAY *psaTarget);
+//C     extern  HRESULT SafeArrayDestroyDescriptor(SAFEARRAY *psa);
+HRESULT  SafeArrayDestroyDescriptor(SAFEARRAY *psa);
+//C     extern  HRESULT SafeArrayDestroyData(SAFEARRAY *psa);
+HRESULT  SafeArrayDestroyData(SAFEARRAY *psa);
+//C     extern  HRESULT SafeArrayDestroy(SAFEARRAY *psa);
+HRESULT  SafeArrayDestroy(SAFEARRAY *psa);
+//C     extern  HRESULT SafeArrayRedim(SAFEARRAY *psa,SAFEARRAYBOUND *psaboundNew);
+HRESULT  SafeArrayRedim(SAFEARRAY *psa, SAFEARRAYBOUND *psaboundNew);
+//C     extern  UINT SafeArrayGetDim(SAFEARRAY *psa);
+UINT  SafeArrayGetDim(SAFEARRAY *psa);
+//C     extern  UINT SafeArrayGetElemsize(SAFEARRAY *psa);
+UINT  SafeArrayGetElemsize(SAFEARRAY *psa);
+//C     extern  HRESULT SafeArrayGetUBound(SAFEARRAY *psa,UINT nDim,LONG *plUbound);
+HRESULT  SafeArrayGetUBound(SAFEARRAY *psa, UINT nDim, LONG *plUbound);
+//C     extern  HRESULT SafeArrayGetLBound(SAFEARRAY *psa,UINT nDim,LONG *plLbound);
+HRESULT  SafeArrayGetLBound(SAFEARRAY *psa, UINT nDim, LONG *plLbound);
+//C     extern  HRESULT SafeArrayLock(SAFEARRAY *psa);
+HRESULT  SafeArrayLock(SAFEARRAY *psa);
+//C     extern  HRESULT SafeArrayUnlock(SAFEARRAY *psa);
+HRESULT  SafeArrayUnlock(SAFEARRAY *psa);
+//C     extern  HRESULT SafeArrayAccessData(SAFEARRAY *psa,void **ppvData);
+HRESULT  SafeArrayAccessData(SAFEARRAY *psa, void **ppvData);
+//C     extern  HRESULT SafeArrayUnaccessData(SAFEARRAY *psa);
+HRESULT  SafeArrayUnaccessData(SAFEARRAY *psa);
+//C     extern  HRESULT SafeArrayGetElement(SAFEARRAY *psa,LONG *rgIndices,void *pv);
+HRESULT  SafeArrayGetElement(SAFEARRAY *psa, LONG *rgIndices, void *pv);
+//C     extern  HRESULT SafeArrayPutElement(SAFEARRAY *psa,LONG *rgIndices,void *pv);
+HRESULT  SafeArrayPutElement(SAFEARRAY *psa, LONG *rgIndices, void *pv);
+//C     extern  HRESULT SafeArrayCopy(SAFEARRAY *psa,SAFEARRAY **ppsaOut);
+HRESULT  SafeArrayCopy(SAFEARRAY *psa, SAFEARRAY **ppsaOut);
+//C     extern  HRESULT SafeArrayPtrOfIndex(SAFEARRAY *psa,LONG *rgIndices,void **ppvData);
+HRESULT  SafeArrayPtrOfIndex(SAFEARRAY *psa, LONG *rgIndices, void **ppvData);
+//C     extern  HRESULT SafeArraySetRecordInfo(SAFEARRAY *psa,IRecordInfo *prinfo);
+HRESULT  SafeArraySetRecordInfo(SAFEARRAY *psa, IRecordInfo *prinfo);
+//C     extern  HRESULT SafeArrayGetRecordInfo(SAFEARRAY *psa,IRecordInfo **prinfo);
+HRESULT  SafeArrayGetRecordInfo(SAFEARRAY *psa, IRecordInfo **prinfo);
+//C     extern  HRESULT SafeArraySetIID(SAFEARRAY *psa,const GUID *const guid);
+HRESULT  SafeArraySetIID(SAFEARRAY *psa, GUID *guid);
+//C     extern  HRESULT SafeArrayGetIID(SAFEARRAY *psa,GUID *pguid);
+HRESULT  SafeArrayGetIID(SAFEARRAY *psa, GUID *pguid);
+//C     extern  HRESULT SafeArrayGetVartype(SAFEARRAY *psa,VARTYPE *pvt);
+HRESULT  SafeArrayGetVartype(SAFEARRAY *psa, VARTYPE *pvt);
+//C     extern  SAFEARRAY * SafeArrayCreateVector(VARTYPE vt,LONG lLbound,ULONG cElements);
+SAFEARRAY * SafeArrayCreateVector(VARTYPE vt, LONG lLbound, ULONG cElements);
+//C     extern  SAFEARRAY * SafeArrayCreateVectorEx(VARTYPE vt,LONG lLbound,ULONG cElements,PVOID pvExtra);
+SAFEARRAY * SafeArrayCreateVectorEx(VARTYPE vt, LONG lLbound, ULONG cElements, PVOID pvExtra);
+//C     extern  void VariantInit(VARIANTARG *pvarg);
+void  VariantInit(VARIANTARG *pvarg);
+//C     extern  HRESULT VariantClear(VARIANTARG *pvarg);
+HRESULT  VariantClear(VARIANTARG *pvarg);
+//C     extern  HRESULT VariantCopy(VARIANTARG *pvargDest,VARIANTARG *pvargSrc);
+HRESULT  VariantCopy(VARIANTARG *pvargDest, VARIANTARG *pvargSrc);
+//C     extern  HRESULT VariantCopyInd(VARIANT *pvarDest,VARIANTARG *pvargSrc);
+HRESULT  VariantCopyInd(VARIANT *pvarDest, VARIANTARG *pvargSrc);
+//C     extern  HRESULT VariantChangeType(VARIANTARG *pvargDest,VARIANTARG *pvarSrc,USHORT wFlags,VARTYPE vt);
+HRESULT  VariantChangeType(VARIANTARG *pvargDest, VARIANTARG *pvarSrc, USHORT wFlags, VARTYPE vt);
+//C     extern  HRESULT VariantChangeTypeEx(VARIANTARG *pvargDest,VARIANTARG *pvarSrc,LCID lcid,USHORT wFlags,VARTYPE vt);
+HRESULT  VariantChangeTypeEx(VARIANTARG *pvargDest, VARIANTARG *pvarSrc, LCID lcid, USHORT wFlags, VARTYPE vt);
+//C     extern  HRESULT VectorFromBstr (BSTR bstr,SAFEARRAY **ppsa);
+HRESULT  VectorFromBstr(BSTR bstr, SAFEARRAY **ppsa);
+//C     extern  HRESULT BstrFromVector (SAFEARRAY *psa,BSTR *pbstr);
+HRESULT  BstrFromVector(SAFEARRAY *psa, BSTR *pbstr);
+//C     extern  HRESULT VarUI1FromI2(SHORT sIn,BYTE *pbOut);
+HRESULT  VarUI1FromI2(SHORT sIn, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromI4(LONG lIn,BYTE *pbOut);
+HRESULT  VarUI1FromI4(LONG lIn, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromI8(LONG64 i64In,BYTE *pbOut);
+HRESULT  VarUI1FromI8(LONG64 i64In, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromR4(FLOAT fltIn,BYTE *pbOut);
+HRESULT  VarUI1FromR4(FLOAT fltIn, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromR8(DOUBLE dblIn,BYTE *pbOut);
+HRESULT  VarUI1FromR8(DOUBLE dblIn, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromCy(CY cyIn,BYTE *pbOut);
+HRESULT  VarUI1FromCy(CY cyIn, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromDate(DATE dateIn,BYTE *pbOut);
+HRESULT  VarUI1FromDate(DATE dateIn, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,BYTE *pbOut);
+HRESULT  VarUI1FromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromDisp(IDispatch *pdispIn,LCID lcid,BYTE *pbOut);
+HRESULT  VarUI1FromDisp(IDispatch *pdispIn, LCID lcid, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromBool(VARIANT_BOOL boolIn,BYTE *pbOut);
+HRESULT  VarUI1FromBool(VARIANT_BOOL boolIn, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromI1(CHAR cIn,BYTE *pbOut);
+HRESULT  VarUI1FromI1(CHAR cIn, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromUI2(USHORT uiIn,BYTE *pbOut);
+HRESULT  VarUI1FromUI2(USHORT uiIn, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromUI4(ULONG ulIn,BYTE *pbOut);
+HRESULT  VarUI1FromUI4(ULONG ulIn, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromUI8(ULONG64 ui64In,BYTE *pbOut);
+HRESULT  VarUI1FromUI8(ULONG64 ui64In, BYTE *pbOut);
+//C     extern  HRESULT VarUI1FromDec(DECIMAL *pdecIn,BYTE *pbOut);
+HRESULT  VarUI1FromDec(DECIMAL *pdecIn, BYTE *pbOut);
+//C     extern  HRESULT VarI2FromUI1(BYTE bIn,SHORT *psOut);
+HRESULT  VarI2FromUI1(BYTE bIn, SHORT *psOut);
+//C     extern  HRESULT VarI2FromI4(LONG lIn,SHORT *psOut);
+HRESULT  VarI2FromI4(LONG lIn, SHORT *psOut);
+//C     extern  HRESULT VarI2FromI8(LONG64 i64In,SHORT *psOut);
+HRESULT  VarI2FromI8(LONG64 i64In, SHORT *psOut);
+//C     extern  HRESULT VarI2FromR4(FLOAT fltIn,SHORT *psOut);
+HRESULT  VarI2FromR4(FLOAT fltIn, SHORT *psOut);
+//C     extern  HRESULT VarI2FromR8(DOUBLE dblIn,SHORT *psOut);
+HRESULT  VarI2FromR8(DOUBLE dblIn, SHORT *psOut);
+//C     extern  HRESULT VarI2FromCy(CY cyIn,SHORT *psOut);
+HRESULT  VarI2FromCy(CY cyIn, SHORT *psOut);
+//C     extern  HRESULT VarI2FromDate(DATE dateIn,SHORT *psOut);
+HRESULT  VarI2FromDate(DATE dateIn, SHORT *psOut);
+//C     extern  HRESULT VarI2FromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,SHORT *psOut);
+HRESULT  VarI2FromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, SHORT *psOut);
+//C     extern  HRESULT VarI2FromDisp(IDispatch *pdispIn,LCID lcid,SHORT *psOut);
+HRESULT  VarI2FromDisp(IDispatch *pdispIn, LCID lcid, SHORT *psOut);
+//C     extern  HRESULT VarI2FromBool(VARIANT_BOOL boolIn,SHORT *psOut);
+HRESULT  VarI2FromBool(VARIANT_BOOL boolIn, SHORT *psOut);
+//C     extern  HRESULT VarI2FromI1(CHAR cIn,SHORT *psOut);
+HRESULT  VarI2FromI1(CHAR cIn, SHORT *psOut);
+//C     extern  HRESULT VarI2FromUI2(USHORT uiIn,SHORT *psOut);
+HRESULT  VarI2FromUI2(USHORT uiIn, SHORT *psOut);
+//C     extern  HRESULT VarI2FromUI4(ULONG ulIn,SHORT *psOut);
+HRESULT  VarI2FromUI4(ULONG ulIn, SHORT *psOut);
+//C     extern  HRESULT VarI2FromUI8(ULONG64 ui64In,SHORT *psOut);
+HRESULT  VarI2FromUI8(ULONG64 ui64In, SHORT *psOut);
+//C     extern  HRESULT VarI2FromDec(DECIMAL *pdecIn,SHORT *psOut);
+HRESULT  VarI2FromDec(DECIMAL *pdecIn, SHORT *psOut);
+//C     extern  HRESULT VarI4FromUI1(BYTE bIn,LONG *plOut);
+HRESULT  VarI4FromUI1(BYTE bIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromI2(SHORT sIn,LONG *plOut);
+HRESULT  VarI4FromI2(SHORT sIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromI8(LONG64 i64In,LONG *plOut);
+HRESULT  VarI4FromI8(LONG64 i64In, LONG *plOut);
+//C     extern  HRESULT VarI4FromR4(FLOAT fltIn,LONG *plOut);
+HRESULT  VarI4FromR4(FLOAT fltIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromR8(DOUBLE dblIn,LONG *plOut);
+HRESULT  VarI4FromR8(DOUBLE dblIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromCy(CY cyIn,LONG *plOut);
+HRESULT  VarI4FromCy(CY cyIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromDate(DATE dateIn,LONG *plOut);
+HRESULT  VarI4FromDate(DATE dateIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,LONG *plOut);
+HRESULT  VarI4FromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, LONG *plOut);
+//C     extern  HRESULT VarI4FromDisp(IDispatch *pdispIn,LCID lcid,LONG *plOut);
+HRESULT  VarI4FromDisp(IDispatch *pdispIn, LCID lcid, LONG *plOut);
+//C     extern  HRESULT VarI4FromBool(VARIANT_BOOL boolIn,LONG *plOut);
+HRESULT  VarI4FromBool(VARIANT_BOOL boolIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromI1(CHAR cIn,LONG *plOut);
+HRESULT  VarI4FromI1(CHAR cIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromUI2(USHORT uiIn,LONG *plOut);
+HRESULT  VarI4FromUI2(USHORT uiIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromUI4(ULONG ulIn,LONG *plOut);
+HRESULT  VarI4FromUI4(ULONG ulIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromUI8(ULONG64 ui64In,LONG *plOut);
+HRESULT  VarI4FromUI8(ULONG64 ui64In, LONG *plOut);
+//C     extern  HRESULT VarI4FromDec(DECIMAL *pdecIn,LONG *plOut);
+HRESULT  VarI4FromDec(DECIMAL *pdecIn, LONG *plOut);
+//C     extern  HRESULT VarI4FromInt(INT intIn,LONG *plOut);
+HRESULT  VarI4FromInt(INT intIn, LONG *plOut);
+//C     extern  HRESULT VarI8FromUI1(BYTE bIn,LONG64 *pi64Out);
+HRESULT  VarI8FromUI1(BYTE bIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromI2(SHORT sIn,LONG64 *pi64Out);
+HRESULT  VarI8FromI2(SHORT sIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromI4(LONG lIn,LONG64 *pi64Out);
+HRESULT  VarI8FromI4(LONG lIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromR4(FLOAT fltIn,LONG64 *pi64Out);
+HRESULT  VarI8FromR4(FLOAT fltIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromR8(DOUBLE dblIn,LONG64 *pi64Out);
+HRESULT  VarI8FromR8(DOUBLE dblIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromCy(CY cyIn,LONG64 *pi64Out);
+HRESULT  VarI8FromCy(CY cyIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromDate(DATE dateIn,LONG64 *pi64Out);
+HRESULT  VarI8FromDate(DATE dateIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromStr(OLECHAR *strIn,LCID lcid,unsigned long dwFlags,LONG64 *pi64Out);
+HRESULT  VarI8FromStr(OLECHAR *strIn, LCID lcid, uint dwFlags, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromDisp(IDispatch *pdispIn,LCID lcid,LONG64 *pi64Out);
+HRESULT  VarI8FromDisp(IDispatch *pdispIn, LCID lcid, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromBool(VARIANT_BOOL boolIn,LONG64 *pi64Out);
+HRESULT  VarI8FromBool(VARIANT_BOOL boolIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromI1(CHAR cIn,LONG64 *pi64Out);
+HRESULT  VarI8FromI1(CHAR cIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromUI2(USHORT uiIn,LONG64 *pi64Out);
+HRESULT  VarI8FromUI2(USHORT uiIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromUI4(ULONG ulIn,LONG64 *pi64Out);
+HRESULT  VarI8FromUI4(ULONG ulIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromUI8(ULONG64 ui64In,LONG64 *pi64Out);
+HRESULT  VarI8FromUI8(ULONG64 ui64In, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromDec(DECIMAL *pdecIn,LONG64 *pi64Out);
+HRESULT  VarI8FromDec(DECIMAL *pdecIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarI8FromInt(INT intIn,LONG64 *pi64Out);
+HRESULT  VarI8FromInt(INT intIn, LONG64 *pi64Out);
+//C     extern  HRESULT VarR4FromUI1(BYTE bIn,FLOAT *pfltOut);
+HRESULT  VarR4FromUI1(BYTE bIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromI2(SHORT sIn,FLOAT *pfltOut);
+HRESULT  VarR4FromI2(SHORT sIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromI4(LONG lIn,FLOAT *pfltOut);
+HRESULT  VarR4FromI4(LONG lIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromI8(LONG64 i64In,FLOAT *pfltOut);
+HRESULT  VarR4FromI8(LONG64 i64In, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromR8(DOUBLE dblIn,FLOAT *pfltOut);
+HRESULT  VarR4FromR8(DOUBLE dblIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromCy(CY cyIn,FLOAT *pfltOut);
+HRESULT  VarR4FromCy(CY cyIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromDate(DATE dateIn,FLOAT *pfltOut);
+HRESULT  VarR4FromDate(DATE dateIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,FLOAT *pfltOut);
+HRESULT  VarR4FromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromDisp(IDispatch *pdispIn,LCID lcid,FLOAT *pfltOut);
+HRESULT  VarR4FromDisp(IDispatch *pdispIn, LCID lcid, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromBool(VARIANT_BOOL boolIn,FLOAT *pfltOut);
+HRESULT  VarR4FromBool(VARIANT_BOOL boolIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromI1(CHAR cIn,FLOAT *pfltOut);
+HRESULT  VarR4FromI1(CHAR cIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromUI2(USHORT uiIn,FLOAT *pfltOut);
+HRESULT  VarR4FromUI2(USHORT uiIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromUI4(ULONG ulIn,FLOAT *pfltOut);
+HRESULT  VarR4FromUI4(ULONG ulIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromUI8(ULONG64 ui64In,FLOAT *pfltOut);
+HRESULT  VarR4FromUI8(ULONG64 ui64In, FLOAT *pfltOut);
+//C     extern  HRESULT VarR4FromDec(DECIMAL *pdecIn,FLOAT *pfltOut);
+HRESULT  VarR4FromDec(DECIMAL *pdecIn, FLOAT *pfltOut);
+//C     extern  HRESULT VarR8FromUI1(BYTE bIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromUI1(BYTE bIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromI2(SHORT sIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromI2(SHORT sIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromI4(LONG lIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromI4(LONG lIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromI8(LONG64 i64In,DOUBLE *pdblOut);
+HRESULT  VarR8FromI8(LONG64 i64In, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromR4(FLOAT fltIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromR4(FLOAT fltIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromCy(CY cyIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromCy(CY cyIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromDate(DATE dateIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromDate(DATE dateIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,DOUBLE *pdblOut);
+HRESULT  VarR8FromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromDisp(IDispatch *pdispIn,LCID lcid,DOUBLE *pdblOut);
+HRESULT  VarR8FromDisp(IDispatch *pdispIn, LCID lcid, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromBool(VARIANT_BOOL boolIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromBool(VARIANT_BOOL boolIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromI1(CHAR cIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromI1(CHAR cIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromUI2(USHORT uiIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromUI2(USHORT uiIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromUI4(ULONG ulIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromUI4(ULONG ulIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromUI8(ULONG64 ui64In,DOUBLE *pdblOut);
+HRESULT  VarR8FromUI8(ULONG64 ui64In, DOUBLE *pdblOut);
+//C     extern  HRESULT VarR8FromDec(DECIMAL *pdecIn,DOUBLE *pdblOut);
+HRESULT  VarR8FromDec(DECIMAL *pdecIn, DOUBLE *pdblOut);
+//C     extern  HRESULT VarDateFromUI1(BYTE bIn,DATE *pdateOut);
+HRESULT  VarDateFromUI1(BYTE bIn, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromI2(SHORT sIn,DATE *pdateOut);
+HRESULT  VarDateFromI2(SHORT sIn, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromI4(LONG lIn,DATE *pdateOut);
+HRESULT  VarDateFromI4(LONG lIn, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromI8(LONG64 i64In,DATE *pdateOut);
+HRESULT  VarDateFromI8(LONG64 i64In, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromR4(FLOAT fltIn,DATE *pdateOut);
+HRESULT  VarDateFromR4(FLOAT fltIn, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromR8(DOUBLE dblIn,DATE *pdateOut);
+HRESULT  VarDateFromR8(DOUBLE dblIn, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromCy(CY cyIn,DATE *pdateOut);
+HRESULT  VarDateFromCy(CY cyIn, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,DATE *pdateOut);
+HRESULT  VarDateFromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromDisp(IDispatch *pdispIn,LCID lcid,DATE *pdateOut);
+HRESULT  VarDateFromDisp(IDispatch *pdispIn, LCID lcid, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromBool(VARIANT_BOOL boolIn,DATE *pdateOut);
+HRESULT  VarDateFromBool(VARIANT_BOOL boolIn, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromI1(CHAR cIn,DATE *pdateOut);
+HRESULT  VarDateFromI1(CHAR cIn, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromUI2(USHORT uiIn,DATE *pdateOut);
+HRESULT  VarDateFromUI2(USHORT uiIn, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromUI4(ULONG ulIn,DATE *pdateOut);
+HRESULT  VarDateFromUI4(ULONG ulIn, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromUI8(ULONG64 ui64In,DATE *pdateOut);
+HRESULT  VarDateFromUI8(ULONG64 ui64In, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromDec(DECIMAL *pdecIn,DATE *pdateOut);
+HRESULT  VarDateFromDec(DECIMAL *pdecIn, DATE *pdateOut);
+//C     extern  HRESULT VarCyFromUI1(BYTE bIn,CY *pcyOut);
+HRESULT  VarCyFromUI1(BYTE bIn, CY *pcyOut);
+//C     extern  HRESULT VarCyFromI2(SHORT sIn,CY *pcyOut);
+HRESULT  VarCyFromI2(SHORT sIn, CY *pcyOut);
+//C     extern  HRESULT VarCyFromI4(LONG lIn,CY *pcyOut);
+HRESULT  VarCyFromI4(LONG lIn, CY *pcyOut);
+//C     extern  HRESULT VarCyFromI8(LONG64 i64In,CY *pcyOut);
+HRESULT  VarCyFromI8(LONG64 i64In, CY *pcyOut);
+//C     extern  HRESULT VarCyFromR4(FLOAT fltIn,CY *pcyOut);
+HRESULT  VarCyFromR4(FLOAT fltIn, CY *pcyOut);
+//C     extern  HRESULT VarCyFromR8(DOUBLE dblIn,CY *pcyOut);
+HRESULT  VarCyFromR8(DOUBLE dblIn, CY *pcyOut);
+//C     extern  HRESULT VarCyFromDate(DATE dateIn,CY *pcyOut);
+HRESULT  VarCyFromDate(DATE dateIn, CY *pcyOut);
+//C     extern  HRESULT VarCyFromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,CY *pcyOut);
+HRESULT  VarCyFromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, CY *pcyOut);
+//C     extern  HRESULT VarCyFromDisp(IDispatch *pdispIn,LCID lcid,CY *pcyOut);
+HRESULT  VarCyFromDisp(IDispatch *pdispIn, LCID lcid, CY *pcyOut);
+//C     extern  HRESULT VarCyFromBool(VARIANT_BOOL boolIn,CY *pcyOut);
+HRESULT  VarCyFromBool(VARIANT_BOOL boolIn, CY *pcyOut);
+//C     extern  HRESULT VarCyFromI1(CHAR cIn,CY *pcyOut);
+HRESULT  VarCyFromI1(CHAR cIn, CY *pcyOut);
+//C     extern  HRESULT VarCyFromUI2(USHORT uiIn,CY *pcyOut);
+HRESULT  VarCyFromUI2(USHORT uiIn, CY *pcyOut);
+//C     extern  HRESULT VarCyFromUI4(ULONG ulIn,CY *pcyOut);
+HRESULT  VarCyFromUI4(ULONG ulIn, CY *pcyOut);
+//C     extern  HRESULT VarCyFromUI8(ULONG64 ui64In,CY *pcyOut);
+HRESULT  VarCyFromUI8(ULONG64 ui64In, CY *pcyOut);
+//C     extern  HRESULT VarCyFromDec(DECIMAL *pdecIn,CY *pcyOut);
+HRESULT  VarCyFromDec(DECIMAL *pdecIn, CY *pcyOut);
+//C     extern  HRESULT VarBstrFromUI1(BYTE bVal,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromUI1(BYTE bVal, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromI2(SHORT iVal,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromI2(SHORT iVal, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromI4(LONG lIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromI4(LONG lIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromI8(LONG64 i64In,LCID lcid,unsigned long dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromI8(LONG64 i64In, LCID lcid, uint dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromR4(FLOAT fltIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromR4(FLOAT fltIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromR8(DOUBLE dblIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromR8(DOUBLE dblIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromCy(CY cyIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromCy(CY cyIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromDate(DATE dateIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromDate(DATE dateIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromDisp(IDispatch *pdispIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromDisp(IDispatch *pdispIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromBool(VARIANT_BOOL boolIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromBool(VARIANT_BOOL boolIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromI1(CHAR cIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromI1(CHAR cIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromUI2(USHORT uiIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromUI2(USHORT uiIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromUI4(ULONG ulIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromUI4(ULONG ulIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromUI8(ULONG64 ui64In,LCID lcid,unsigned long dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromUI8(ULONG64 ui64In, LCID lcid, uint dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBstrFromDec(DECIMAL *pdecIn,LCID lcid,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarBstrFromDec(DECIMAL *pdecIn, LCID lcid, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarBoolFromUI1(BYTE bIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromUI1(BYTE bIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromI2(SHORT sIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromI2(SHORT sIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromI4(LONG lIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromI4(LONG lIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromI8(LONG64 i64In,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromI8(LONG64 i64In, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromR4(FLOAT fltIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromR4(FLOAT fltIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromR8(DOUBLE dblIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromR8(DOUBLE dblIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromDate(DATE dateIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromDate(DATE dateIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromCy(CY cyIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromCy(CY cyIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromDisp(IDispatch *pdispIn,LCID lcid,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromDisp(IDispatch *pdispIn, LCID lcid, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromI1(CHAR cIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromI1(CHAR cIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromUI2(USHORT uiIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromUI2(USHORT uiIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromUI4(ULONG ulIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromUI4(ULONG ulIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromUI8(ULONG64 i64In,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromUI8(ULONG64 i64In, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarBoolFromDec(DECIMAL *pdecIn,VARIANT_BOOL *pboolOut);
+HRESULT  VarBoolFromDec(DECIMAL *pdecIn, VARIANT_BOOL *pboolOut);
+//C     extern  HRESULT VarI1FromUI1(BYTE bIn,CHAR *pcOut);
+HRESULT  VarI1FromUI1(BYTE bIn, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromI2(SHORT uiIn,CHAR *pcOut);
+HRESULT  VarI1FromI2(SHORT uiIn, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromI4(LONG lIn,CHAR *pcOut);
+HRESULT  VarI1FromI4(LONG lIn, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromI8(LONG64 i64In,CHAR *pcOut);
+HRESULT  VarI1FromI8(LONG64 i64In, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromR4(FLOAT fltIn,CHAR *pcOut);
+HRESULT  VarI1FromR4(FLOAT fltIn, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromR8(DOUBLE dblIn,CHAR *pcOut);
+HRESULT  VarI1FromR8(DOUBLE dblIn, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromDate(DATE dateIn,CHAR *pcOut);
+HRESULT  VarI1FromDate(DATE dateIn, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromCy(CY cyIn,CHAR *pcOut);
+HRESULT  VarI1FromCy(CY cyIn, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,CHAR *pcOut);
+HRESULT  VarI1FromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromDisp(IDispatch *pdispIn,LCID lcid,CHAR *pcOut);
+HRESULT  VarI1FromDisp(IDispatch *pdispIn, LCID lcid, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromBool(VARIANT_BOOL boolIn,CHAR *pcOut);
+HRESULT  VarI1FromBool(VARIANT_BOOL boolIn, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromUI2(USHORT uiIn,CHAR *pcOut);
+HRESULT  VarI1FromUI2(USHORT uiIn, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromUI4(ULONG ulIn,CHAR *pcOut);
+HRESULT  VarI1FromUI4(ULONG ulIn, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromUI8(ULONG64 i64In,CHAR *pcOut);
+HRESULT  VarI1FromUI8(ULONG64 i64In, CHAR *pcOut);
+//C     extern  HRESULT VarI1FromDec(DECIMAL *pdecIn,CHAR *pcOut);
+HRESULT  VarI1FromDec(DECIMAL *pdecIn, CHAR *pcOut);
+//C     extern  HRESULT VarUI2FromUI1(BYTE bIn,USHORT *puiOut);
+HRESULT  VarUI2FromUI1(BYTE bIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromI2(SHORT uiIn,USHORT *puiOut);
+HRESULT  VarUI2FromI2(SHORT uiIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromI4(LONG lIn,USHORT *puiOut);
+HRESULT  VarUI2FromI4(LONG lIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromI8(LONG64 i64In,USHORT *puiOut);
+HRESULT  VarUI2FromI8(LONG64 i64In, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromR4(FLOAT fltIn,USHORT *puiOut);
+HRESULT  VarUI2FromR4(FLOAT fltIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromR8(DOUBLE dblIn,USHORT *puiOut);
+HRESULT  VarUI2FromR8(DOUBLE dblIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromDate(DATE dateIn,USHORT *puiOut);
+HRESULT  VarUI2FromDate(DATE dateIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromCy(CY cyIn,USHORT *puiOut);
+HRESULT  VarUI2FromCy(CY cyIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,USHORT *puiOut);
+HRESULT  VarUI2FromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromDisp(IDispatch *pdispIn,LCID lcid,USHORT *puiOut);
+HRESULT  VarUI2FromDisp(IDispatch *pdispIn, LCID lcid, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromBool(VARIANT_BOOL boolIn,USHORT *puiOut);
+HRESULT  VarUI2FromBool(VARIANT_BOOL boolIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromI1(CHAR cIn,USHORT *puiOut);
+HRESULT  VarUI2FromI1(CHAR cIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromUI4(ULONG ulIn,USHORT *puiOut);
+HRESULT  VarUI2FromUI4(ULONG ulIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromUI8(ULONG64 i64In,USHORT *puiOut);
+HRESULT  VarUI2FromUI8(ULONG64 i64In, USHORT *puiOut);
+//C     extern  HRESULT VarUI2FromDec(DECIMAL *pdecIn,USHORT *puiOut);
+HRESULT  VarUI2FromDec(DECIMAL *pdecIn, USHORT *puiOut);
+//C     extern  HRESULT VarUI4FromUI1(BYTE bIn,ULONG *pulOut);
+HRESULT  VarUI4FromUI1(BYTE bIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromI2(SHORT uiIn,ULONG *pulOut);
+HRESULT  VarUI4FromI2(SHORT uiIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromI4(LONG lIn,ULONG *pulOut);
+HRESULT  VarUI4FromI4(LONG lIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromI8(LONG64 i64In,ULONG *plOut);
+HRESULT  VarUI4FromI8(LONG64 i64In, ULONG *plOut);
+//C     extern  HRESULT VarUI4FromR4(FLOAT fltIn,ULONG *pulOut);
+HRESULT  VarUI4FromR4(FLOAT fltIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromR8(DOUBLE dblIn,ULONG *pulOut);
+HRESULT  VarUI4FromR8(DOUBLE dblIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromDate(DATE dateIn,ULONG *pulOut);
+HRESULT  VarUI4FromDate(DATE dateIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromCy(CY cyIn,ULONG *pulOut);
+HRESULT  VarUI4FromCy(CY cyIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,ULONG *pulOut);
+HRESULT  VarUI4FromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromDisp(IDispatch *pdispIn,LCID lcid,ULONG *pulOut);
+HRESULT  VarUI4FromDisp(IDispatch *pdispIn, LCID lcid, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromBool(VARIANT_BOOL boolIn,ULONG *pulOut);
+HRESULT  VarUI4FromBool(VARIANT_BOOL boolIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromI1(CHAR cIn,ULONG *pulOut);
+HRESULT  VarUI4FromI1(CHAR cIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromUI2(USHORT uiIn,ULONG *pulOut);
+HRESULT  VarUI4FromUI2(USHORT uiIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI4FromUI8(ULONG64 ui64In,ULONG *plOut);
+HRESULT  VarUI4FromUI8(ULONG64 ui64In, ULONG *plOut);
+//C     extern  HRESULT VarUI4FromDec(DECIMAL *pdecIn,ULONG *pulOut);
+HRESULT  VarUI4FromDec(DECIMAL *pdecIn, ULONG *pulOut);
+//C     extern  HRESULT VarUI8FromUI1(BYTE bIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromUI1(BYTE bIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromI2(SHORT sIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromI2(SHORT sIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromI4(LONG lIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromI4(LONG lIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromI8(LONG64 ui64In,ULONG64 *pi64Out);
+HRESULT  VarUI8FromI8(LONG64 ui64In, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromR4(FLOAT fltIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromR4(FLOAT fltIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromR8(DOUBLE dblIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromR8(DOUBLE dblIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromCy(CY cyIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromCy(CY cyIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromDate(DATE dateIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromDate(DATE dateIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromStr(OLECHAR *strIn,LCID lcid,unsigned long dwFlags,ULONG64 *pi64Out);
+HRESULT  VarUI8FromStr(OLECHAR *strIn, LCID lcid, uint dwFlags, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromDisp(IDispatch *pdispIn,LCID lcid,ULONG64 *pi64Out);
+HRESULT  VarUI8FromDisp(IDispatch *pdispIn, LCID lcid, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromBool(VARIANT_BOOL boolIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromBool(VARIANT_BOOL boolIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromI1(CHAR cIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromI1(CHAR cIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromUI2(USHORT uiIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromUI2(USHORT uiIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromUI4(ULONG ulIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromUI4(ULONG ulIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromDec(DECIMAL *pdecIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromDec(DECIMAL *pdecIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarUI8FromInt(INT intIn,ULONG64 *pi64Out);
+HRESULT  VarUI8FromInt(INT intIn, ULONG64 *pi64Out);
+//C     extern  HRESULT VarDecFromUI1(BYTE bIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromUI1(BYTE bIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromI2(SHORT uiIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromI2(SHORT uiIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromI4(LONG lIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromI4(LONG lIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromI8(LONG64 i64In,DECIMAL *pdecOut);
+HRESULT  VarDecFromI8(LONG64 i64In, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromR4(FLOAT fltIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromR4(FLOAT fltIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromR8(DOUBLE dblIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromR8(DOUBLE dblIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromDate(DATE dateIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromDate(DATE dateIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromCy(CY cyIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromCy(CY cyIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,DECIMAL *pdecOut);
+HRESULT  VarDecFromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromDisp(IDispatch *pdispIn,LCID lcid,DECIMAL *pdecOut);
+HRESULT  VarDecFromDisp(IDispatch *pdispIn, LCID lcid, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromBool(VARIANT_BOOL boolIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromBool(VARIANT_BOOL boolIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromI1(CHAR cIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromI1(CHAR cIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromUI2(USHORT uiIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromUI2(USHORT uiIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromUI4(ULONG ulIn,DECIMAL *pdecOut);
+HRESULT  VarDecFromUI4(ULONG ulIn, DECIMAL *pdecOut);
+//C     extern  HRESULT VarDecFromUI8(ULONG64 ui64In,DECIMAL *pdecOut);
+HRESULT  VarDecFromUI8(ULONG64 ui64In, DECIMAL *pdecOut);
+//C     extern  HRESULT VarI4FromI8(LONG64 i64In,LONG *plOut);
+HRESULT  VarI4FromI8(LONG64 i64In, LONG *plOut);
+//C     extern  HRESULT VarI4FromUI8(ULONG64 ui64In,LONG *plOut);
+HRESULT  VarI4FromUI8(ULONG64 ui64In, LONG *plOut);
+//C     typedef struct {
+//C       INT cDig;
+//C       ULONG dwInFlags;
+//C       ULONG dwOutFlags;
+//C       INT cchUsed;
+//C       INT nBaseShift;
+//C       INT nPwr10;
+//C     } NUMPARSE;
+struct _N199
+{
+    INT cDig;
+    ULONG dwInFlags;
+    ULONG dwOutFlags;
+    INT cchUsed;
+    INT nBaseShift;
+    INT nPwr10;
+}
+alias _N199 NUMPARSE;
+//C     extern  HRESULT VarParseNumFromStr(OLECHAR *strIn,LCID lcid,ULONG dwFlags,NUMPARSE *pnumprs,BYTE *rgbDig);
+HRESULT  VarParseNumFromStr(OLECHAR *strIn, LCID lcid, ULONG dwFlags, NUMPARSE *pnumprs, BYTE *rgbDig);
+//C     extern  HRESULT VarNumFromParseNum(NUMPARSE *pnumprs,BYTE *rgbDig,ULONG dwVtBits,VARIANT *pvar);
+HRESULT  VarNumFromParseNum(NUMPARSE *pnumprs, BYTE *rgbDig, ULONG dwVtBits, VARIANT *pvar);
+//C     extern HRESULT VarAdd(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarAdd(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarAnd(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarAnd(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarCat(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarCat(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarDiv(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarDiv(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarEqv(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarEqv(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarIdiv(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarIdiv(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarImp(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarImp(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarMod(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarMod(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarMul(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarMul(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarOr(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarOr(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarPow(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarPow(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarSub(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarSub(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarXor(LPVARIANT pvarLeft,LPVARIANT pvarRight,LPVARIANT pvarResult);
+HRESULT  VarXor(LPVARIANT pvarLeft, LPVARIANT pvarRight, LPVARIANT pvarResult);
+//C     extern HRESULT VarAbs(LPVARIANT pvarIn,LPVARIANT pvarResult);
+HRESULT  VarAbs(LPVARIANT pvarIn, LPVARIANT pvarResult);
+//C     extern HRESULT VarFix(LPVARIANT pvarIn,LPVARIANT pvarResult);
+HRESULT  VarFix(LPVARIANT pvarIn, LPVARIANT pvarResult);
+//C     extern HRESULT VarInt(LPVARIANT pvarIn,LPVARIANT pvarResult);
+HRESULT  VarInt(LPVARIANT pvarIn, LPVARIANT pvarResult);
+//C     extern HRESULT VarNeg(LPVARIANT pvarIn,LPVARIANT pvarResult);
+HRESULT  VarNeg(LPVARIANT pvarIn, LPVARIANT pvarResult);
+//C     extern HRESULT VarNot(LPVARIANT pvarIn,LPVARIANT pvarResult);
+HRESULT  VarNot(LPVARIANT pvarIn, LPVARIANT pvarResult);
+//C     extern HRESULT VarRound(LPVARIANT pvarIn,int cDecimals,LPVARIANT pvarResult);
+HRESULT  VarRound(LPVARIANT pvarIn, int cDecimals, LPVARIANT pvarResult);
+//C     extern HRESULT VarCmp(LPVARIANT pvarLeft,LPVARIANT pvarRight,LCID lcid,ULONG dwFlags);
+HRESULT  VarCmp(LPVARIANT pvarLeft, LPVARIANT pvarRight, LCID lcid, ULONG dwFlags);
+//C     extern HRESULT VarDecAdd(LPDECIMAL pdecLeft,LPDECIMAL pdecRight,LPDECIMAL pdecResult);
+HRESULT  VarDecAdd(LPDECIMAL pdecLeft, LPDECIMAL pdecRight, LPDECIMAL pdecResult);
+//C     extern HRESULT VarDecDiv(LPDECIMAL pdecLeft,LPDECIMAL pdecRight,LPDECIMAL pdecResult);
+HRESULT  VarDecDiv(LPDECIMAL pdecLeft, LPDECIMAL pdecRight, LPDECIMAL pdecResult);
+//C     extern HRESULT VarDecMul(LPDECIMAL pdecLeft,LPDECIMAL pdecRight,LPDECIMAL pdecResult);
+HRESULT  VarDecMul(LPDECIMAL pdecLeft, LPDECIMAL pdecRight, LPDECIMAL pdecResult);
+//C     extern HRESULT VarDecSub(LPDECIMAL pdecLeft,LPDECIMAL pdecRight,LPDECIMAL pdecResult);
+HRESULT  VarDecSub(LPDECIMAL pdecLeft, LPDECIMAL pdecRight, LPDECIMAL pdecResult);
+//C     extern HRESULT VarDecAbs(LPDECIMAL pdecIn,LPDECIMAL pdecResult);
+HRESULT  VarDecAbs(LPDECIMAL pdecIn, LPDECIMAL pdecResult);
+//C     extern HRESULT VarDecFix(LPDECIMAL pdecIn,LPDECIMAL pdecResult);
+HRESULT  VarDecFix(LPDECIMAL pdecIn, LPDECIMAL pdecResult);
+//C     extern HRESULT VarDecInt(LPDECIMAL pdecIn,LPDECIMAL pdecResult);
+HRESULT  VarDecInt(LPDECIMAL pdecIn, LPDECIMAL pdecResult);
+//C     extern HRESULT VarDecNeg(LPDECIMAL pdecIn,LPDECIMAL pdecResult);
+HRESULT  VarDecNeg(LPDECIMAL pdecIn, LPDECIMAL pdecResult);
+//C     extern HRESULT VarDecRound(LPDECIMAL pdecIn,int cDecimals,LPDECIMAL pdecResult);
+HRESULT  VarDecRound(LPDECIMAL pdecIn, int cDecimals, LPDECIMAL pdecResult);
+//C     extern HRESULT VarDecCmp(LPDECIMAL pdecLeft,LPDECIMAL pdecRight);
+HRESULT  VarDecCmp(LPDECIMAL pdecLeft, LPDECIMAL pdecRight);
+//C     extern HRESULT VarDecCmpR8(LPDECIMAL pdecLeft,double dblRight);
+HRESULT  VarDecCmpR8(LPDECIMAL pdecLeft, double dblRight);
+//C     extern HRESULT VarCyAdd(CY cyLeft,CY cyRight,LPCY pcyResult);
+HRESULT  VarCyAdd(CY cyLeft, CY cyRight, LPCY pcyResult);
+//C     extern HRESULT VarCyMul(CY cyLeft,CY cyRight,LPCY pcyResult);
+HRESULT  VarCyMul(CY cyLeft, CY cyRight, LPCY pcyResult);
+//C     extern HRESULT VarCyMulI4(CY cyLeft,long lRight,LPCY pcyResult);
+HRESULT  VarCyMulI4(CY cyLeft, int lRight, LPCY pcyResult);
+//C     extern HRESULT VarCyMulI8(CY cyLeft,LONG64 lRight,LPCY pcyResult);
+HRESULT  VarCyMulI8(CY cyLeft, LONG64 lRight, LPCY pcyResult);
+//C     extern HRESULT VarCySub(CY cyLeft,CY cyRight,LPCY pcyResult);
+HRESULT  VarCySub(CY cyLeft, CY cyRight, LPCY pcyResult);
+//C     extern HRESULT VarCyAbs(CY cyIn,LPCY pcyResult);
+HRESULT  VarCyAbs(CY cyIn, LPCY pcyResult);
+//C     extern HRESULT VarCyFix(CY cyIn,LPCY pcyResult);
+HRESULT  VarCyFix(CY cyIn, LPCY pcyResult);
+//C     extern HRESULT VarCyInt(CY cyIn,LPCY pcyResult);
+HRESULT  VarCyInt(CY cyIn, LPCY pcyResult);
+//C     extern HRESULT VarCyNeg(CY cyIn,LPCY pcyResult);
+HRESULT  VarCyNeg(CY cyIn, LPCY pcyResult);
+//C     extern HRESULT VarCyRound(CY cyIn,int cDecimals,LPCY pcyResult);
+HRESULT  VarCyRound(CY cyIn, int cDecimals, LPCY pcyResult);
+//C     extern HRESULT VarCyCmp(CY cyLeft,CY cyRight);
+HRESULT  VarCyCmp(CY cyLeft, CY cyRight);
+//C     extern HRESULT VarCyCmpR8(CY cyLeft,double dblRight);
+HRESULT  VarCyCmpR8(CY cyLeft, double dblRight);
+//C     extern HRESULT VarBstrCat(BSTR bstrLeft,BSTR bstrRight,LPBSTR pbstrResult);
+HRESULT  VarBstrCat(BSTR bstrLeft, BSTR bstrRight, LPBSTR pbstrResult);
+//C     extern HRESULT VarBstrCmp(BSTR bstrLeft,BSTR bstrRight,LCID lcid,ULONG dwFlags);
+HRESULT  VarBstrCmp(BSTR bstrLeft, BSTR bstrRight, LCID lcid, ULONG dwFlags);
+//C     extern HRESULT VarR8Pow(double dblLeft,double dblRight,double *pdblResult);
+HRESULT  VarR8Pow(double dblLeft, double dblRight, double *pdblResult);
+//C     extern HRESULT VarR4CmpR8(float fltLeft,double dblRight);
+HRESULT  VarR4CmpR8(float fltLeft, double dblRight);
+//C     extern HRESULT VarR8Round(double dblIn,int cDecimals,double *pdblResult);
+HRESULT  VarR8Round(double dblIn, int cDecimals, double *pdblResult);
+//C     typedef struct {
+//C       SYSTEMTIME st;
+//C       USHORT wDayOfYear;
+//C     } UDATE;
+struct _N200
+{
+    SYSTEMTIME st;
+    USHORT wDayOfYear;
+}
+alias _N200 UDATE;
+//C     extern  HRESULT VarDateFromUdate(UDATE *pudateIn,ULONG dwFlags,DATE *pdateOut);
+HRESULT  VarDateFromUdate(UDATE *pudateIn, ULONG dwFlags, DATE *pdateOut);
+//C     extern  HRESULT VarDateFromUdateEx(UDATE *pudateIn,LCID lcid,ULONG dwFlags,DATE *pdateOut);
+HRESULT  VarDateFromUdateEx(UDATE *pudateIn, LCID lcid, ULONG dwFlags, DATE *pdateOut);
+//C     extern  HRESULT VarUdateFromDate(DATE dateIn,ULONG dwFlags,UDATE *pudateOut);
+HRESULT  VarUdateFromDate(DATE dateIn, ULONG dwFlags, UDATE *pudateOut);
+//C     extern  HRESULT GetAltMonthNames(LCID lcid,LPOLESTR **prgp);
+HRESULT  GetAltMonthNames(LCID lcid, LPOLESTR **prgp);
+//C     extern  HRESULT VarFormat(LPVARIANT pvarIn,LPOLESTR pstrFormat,int iFirstDay,int iFirstWeek,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarFormat(LPVARIANT pvarIn, LPOLESTR pstrFormat, int iFirstDay, int iFirstWeek, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarFormatDateTime(LPVARIANT pvarIn,int iNamedFormat,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarFormatDateTime(LPVARIANT pvarIn, int iNamedFormat, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarFormatNumber(LPVARIANT pvarIn,int iNumDig,int iIncLead,int iUseParens,int iGroup,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarFormatNumber(LPVARIANT pvarIn, int iNumDig, int iIncLead, int iUseParens, int iGroup, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarFormatPercent(LPVARIANT pvarIn,int iNumDig,int iIncLead,int iUseParens,int iGroup,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarFormatPercent(LPVARIANT pvarIn, int iNumDig, int iIncLead, int iUseParens, int iGroup, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarFormatCurrency(LPVARIANT pvarIn,int iNumDig,int iIncLead,int iUseParens,int iGroup,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarFormatCurrency(LPVARIANT pvarIn, int iNumDig, int iIncLead, int iUseParens, int iGroup, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarWeekdayName(int iWeekday,int fAbbrev,int iFirstDay,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarWeekdayName(int iWeekday, int fAbbrev, int iFirstDay, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarMonthName(int iMonth,int fAbbrev,ULONG dwFlags,BSTR *pbstrOut);
+HRESULT  VarMonthName(int iMonth, int fAbbrev, ULONG dwFlags, BSTR *pbstrOut);
+//C     extern  HRESULT VarFormatFromTokens(LPVARIANT pvarIn,LPOLESTR pstrFormat,LPBYTE pbTokCur,ULONG dwFlags,BSTR *pbstrOut,LCID lcid);
+HRESULT  VarFormatFromTokens(LPVARIANT pvarIn, LPOLESTR pstrFormat, LPBYTE pbTokCur, ULONG dwFlags, BSTR *pbstrOut, LCID lcid);
+//C     extern  HRESULT VarTokenizeFormatString(LPOLESTR pstrFormat,LPBYTE rgbTok,int cbTok,int iFirstDay,int iFirstWeek,LCID lcid,int *pcbActual);
+HRESULT  VarTokenizeFormatString(LPOLESTR pstrFormat, LPBYTE rgbTok, int cbTok, int iFirstDay, int iFirstWeek, LCID lcid, int *pcbActual);
+//C     typedef ITypeLib *LPTYPELIB;
+
+//C     typedef ITypeInfo *LPTYPEINFO;
+
+//C     typedef ITypeComp *LPTYPECOMP;
+
+//C     extern  ULONG LHashValOfNameSysA(SYSKIND syskind,LCID lcid,LPCSTR szName);
+ULONG  LHashValOfNameSysA(SYSKIND syskind, LCID lcid, LPCSTR szName);
+//C     extern  ULONG LHashValOfNameSys(SYSKIND syskind,LCID lcid,const OLECHAR *szName);
+ULONG  LHashValOfNameSys(SYSKIND syskind, LCID lcid, OLECHAR *szName);
+//C     extern  HRESULT LoadTypeLib(const OLECHAR *szFile,ITypeLib **pptlib);
+HRESULT  LoadTypeLib(OLECHAR *szFile, ITypeLib **pptlib);
+//C     typedef enum tagREGKIND {
+//C       REGKIND_DEFAULT,REGKIND_REGISTER,REGKIND_NONE
+//C     } REGKIND;
+enum tagREGKIND
+{
+    REGKIND_DEFAULT,
+    REGKIND_REGISTER,
+    REGKIND_NONE,
+}
+alias tagREGKIND REGKIND;
+//C     extern  HRESULT LoadTypeLibEx(LPCOLESTR szFile,REGKIND regkind,ITypeLib **pptlib);
+HRESULT  LoadTypeLibEx(LPCOLESTR szFile, REGKIND regkind, ITypeLib **pptlib);
+//C     extern  HRESULT LoadRegTypeLib(const GUID *const rguid,WORD wVerMajor,WORD wVerMinor,LCID lcid,ITypeLib **pptlib);
+HRESULT  LoadRegTypeLib(GUID *rguid, WORD wVerMajor, WORD wVerMinor, LCID lcid, ITypeLib **pptlib);
+//C     extern  HRESULT QueryPathOfRegTypeLib(const GUID *const guid,USHORT wMaj,USHORT wMin,LCID lcid,LPBSTR lpbstrPathName);
+HRESULT  QueryPathOfRegTypeLib(GUID *guid, USHORT wMaj, USHORT wMin, LCID lcid, LPBSTR lpbstrPathName);
+//C     extern  HRESULT RegisterTypeLib(ITypeLib *ptlib,OLECHAR *szFullPath,OLECHAR *szHelpDir);
+HRESULT  RegisterTypeLib(ITypeLib *ptlib, OLECHAR *szFullPath, OLECHAR *szHelpDir);
+//C     extern  HRESULT UnRegisterTypeLib(const GUID *const libID,WORD wVerMajor,WORD wVerMinor,LCID lcid,SYSKIND syskind);
+HRESULT  UnRegisterTypeLib(GUID *libID, WORD wVerMajor, WORD wVerMinor, LCID lcid, SYSKIND syskind);
+//C     extern  HRESULT CreateTypeLib(SYSKIND syskind,const OLECHAR *szFile,ICreateTypeLib **ppctlib);
+HRESULT  CreateTypeLib(SYSKIND syskind, OLECHAR *szFile, ICreateTypeLib **ppctlib);
+//C     extern  HRESULT CreateTypeLib2(SYSKIND syskind,LPCOLESTR szFile,ICreateTypeLib2 **ppctlib);
+HRESULT  CreateTypeLib2(SYSKIND syskind, LPCOLESTR szFile, ICreateTypeLib2 **ppctlib);
+//C     typedef IDispatch *LPDISPATCH;
+
+//C     typedef struct tagPARAMDATA {
+//C       OLECHAR *szName;
+//C       VARTYPE vt;
+//C     } PARAMDATA,*LPPARAMDATA;
+struct tagPARAMDATA
+{
+    OLECHAR *szName;
+    VARTYPE vt;
+}
+alias tagPARAMDATA PARAMDATA;
+alias tagPARAMDATA *LPPARAMDATA;
+//C     typedef struct tagMETHODDATA {
+//C       OLECHAR *szName;
+//C       PARAMDATA *ppdata;
+//C       DISPID dispid;
+//C       UINT iMeth;
+//C       CALLCONV cc;
+//C       UINT cArgs;
+//C       WORD wFlags;
+//C       VARTYPE vtReturn;
+//C     } METHODDATA,*LPMETHODDATA;
+struct tagMETHODDATA
+{
+    OLECHAR *szName;
+    PARAMDATA *ppdata;
+    DISPID dispid;
+    UINT iMeth;
+    CALLCONV cc;
+    UINT cArgs;
+    WORD wFlags;
+    VARTYPE vtReturn;
+}
+alias tagMETHODDATA METHODDATA;
+alias tagMETHODDATA *LPMETHODDATA;
+//C     typedef struct tagINTERFACEDATA {
+//C       METHODDATA *pmethdata;
+//C       UINT cMembers;
+//C     } INTERFACEDATA,*LPINTERFACEDATA;
+struct tagINTERFACEDATA
+{
+    METHODDATA *pmethdata;
+    UINT cMembers;
+}
+alias tagINTERFACEDATA INTERFACEDATA;
+alias tagINTERFACEDATA *LPINTERFACEDATA;
+//C     extern  HRESULT DispGetParam(DISPPARAMS *pdispparams,UINT position,VARTYPE vtTarg,VARIANT *pvarResult,UINT *puArgErr);
+HRESULT  DispGetParam(DISPPARAMS *pdispparams, UINT position, VARTYPE vtTarg, VARIANT *pvarResult, UINT *puArgErr);
+//C     extern  HRESULT DispGetIDsOfNames(ITypeInfo *ptinfo,OLECHAR **rgszNames,UINT cNames,DISPID *rgdispid);
+HRESULT  DispGetIDsOfNames(ITypeInfo *ptinfo, OLECHAR **rgszNames, UINT cNames, DISPID *rgdispid);
+//C     extern  HRESULT DispInvoke(void *_this,ITypeInfo *ptinfo,DISPID dispidMember,WORD wFlags,DISPPARAMS *pparams,VARIANT *pvarResult,EXCEPINFO *pexcepinfo,UINT *puArgErr);
+HRESULT  DispInvoke(void *_this, ITypeInfo *ptinfo, DISPID dispidMember, WORD wFlags, DISPPARAMS *pparams, VARIANT *pvarResult, EXCEPINFO *pexcepinfo, UINT *puArgErr);
+//C     extern  HRESULT CreateDispTypeInfo(INTERFACEDATA *pidata,LCID lcid,ITypeInfo **pptinfo);
+HRESULT  CreateDispTypeInfo(INTERFACEDATA *pidata, LCID lcid, ITypeInfo **pptinfo);
+//C     extern  HRESULT CreateStdDispatch(IUnknown *punkOuter,void *pvThis,ITypeInfo *ptinfo,IUnknown **ppunkStdDisp);
+HRESULT  CreateStdDispatch(IUnknown *punkOuter, void *pvThis, ITypeInfo *ptinfo, IUnknown **ppunkStdDisp);
+//C     extern  HRESULT DispCallFunc(void *pvInstance,ULONG_PTR oVft,CALLCONV cc,VARTYPE vtReturn,UINT cActuals,VARTYPE *prgvt,VARIANTARG **prgpvarg,VARIANT *pvargResult);
+HRESULT  DispCallFunc(void *pvInstance, ULONG_PTR oVft, CALLCONV cc, VARTYPE vtReturn, UINT cActuals, VARTYPE *prgvt, VARIANTARG **prgpvarg, VARIANT *pvargResult);
+//C     extern  HRESULT RegisterActiveObject(IUnknown *punk,const IID *const rclsid,DWORD dwFlags,DWORD *pdwRegister);
+HRESULT  RegisterActiveObject(IUnknown *punk, IID *rclsid, DWORD dwFlags, DWORD *pdwRegister);
+//C     extern  HRESULT RevokeActiveObject(DWORD dwRegister,void *pvReserved);
+HRESULT  RevokeActiveObject(DWORD dwRegister, void *pvReserved);
+//C     extern  HRESULT GetActiveObject(const IID *const rclsid,void *pvReserved,IUnknown **ppunk);
+HRESULT  GetActiveObject(IID *rclsid, void *pvReserved, IUnknown **ppunk);
+//C     extern  HRESULT SetErrorInfo(ULONG dwReserved,IErrorInfo *perrinfo);
+HRESULT  SetErrorInfo(ULONG dwReserved, IErrorInfo *perrinfo);
+//C     extern  HRESULT GetErrorInfo(ULONG dwReserved,IErrorInfo **pperrinfo);
+HRESULT  GetErrorInfo(ULONG dwReserved, IErrorInfo **pperrinfo);
+//C     extern  HRESULT CreateErrorInfo(ICreateErrorInfo **pperrinfo);
+HRESULT  CreateErrorInfo(ICreateErrorInfo **pperrinfo);
+//C     extern  HRESULT GetRecordInfoFromTypeInfo(ITypeInfo *pTypeInfo,IRecordInfo **ppRecInfo);
+HRESULT  GetRecordInfoFromTypeInfo(ITypeInfo *pTypeInfo, IRecordInfo **ppRecInfo);
+//C     extern  HRESULT GetRecordInfoFromGuids(const GUID *const rGuidTypeLib,ULONG uVerMajor,ULONG uVerMinor,LCID lcid,const GUID *const rGuidTypeInfo,IRecordInfo **ppRecInfo);
+HRESULT  GetRecordInfoFromGuids(GUID *rGuidTypeLib, ULONG uVerMajor, ULONG uVerMinor, LCID lcid, GUID *rGuidTypeInfo, IRecordInfo **ppRecInfo);
+//C     extern  ULONG OaBuildVersion(void);
+ULONG  OaBuildVersion();
+//C     extern  void ClearCustData(LPCUSTDATA pCustData);
+void  ClearCustData(LPCUSTDATA pCustData);
+//C     extern  HRESULT CreateDataAdviseHolder(LPDATAADVISEHOLDER *ppDAHolder);
+HRESULT  CreateDataAdviseHolder(LPDATAADVISEHOLDER *ppDAHolder);
+//C     extern  DWORD OleBuildVersion(void);
+DWORD  OleBuildVersion();
+//C     extern  HRESULT ReadClassStg(LPSTORAGE pStg,CLSID *pclsid);
+HRESULT  ReadClassStg(LPSTORAGE pStg, CLSID *pclsid);
+//C     extern  HRESULT WriteClassStg(LPSTORAGE pStg,const IID *const rclsid);
+HRESULT  WriteClassStg(LPSTORAGE pStg, IID *rclsid);
+//C     extern  HRESULT ReadClassStm(LPSTREAM pStm,CLSID *pclsid);
+HRESULT  ReadClassStm(LPSTREAM pStm, CLSID *pclsid);
+//C     extern  HRESULT WriteClassStm(LPSTREAM pStm,const IID *const rclsid);
+HRESULT  WriteClassStm(LPSTREAM pStm, IID *rclsid);
+//C     extern  HRESULT WriteFmtUserTypeStg (LPSTORAGE pstg,CLIPFORMAT cf,LPOLESTR lpszUserType);
+HRESULT  WriteFmtUserTypeStg(LPSTORAGE pstg, CLIPFORMAT cf, LPOLESTR lpszUserType);
+//C     extern  HRESULT ReadFmtUserTypeStg (LPSTORAGE pstg,CLIPFORMAT *pcf,LPOLESTR *lplpszUserType);
+HRESULT  ReadFmtUserTypeStg(LPSTORAGE pstg, CLIPFORMAT *pcf, LPOLESTR *lplpszUserType);
+//C     extern  HRESULT OleInitialize(LPVOID pvReserved);
+HRESULT  OleInitialize(LPVOID pvReserved);
+//C     extern  void OleUninitialize(void);
+void  OleUninitialize();
+//C     extern  HRESULT OleQueryLinkFromData(LPDATAOBJECT pSrcDataObject);
+HRESULT  OleQueryLinkFromData(LPDATAOBJECT pSrcDataObject);
+//C     extern  HRESULT OleQueryCreateFromData(LPDATAOBJECT pSrcDataObject);
+HRESULT  OleQueryCreateFromData(LPDATAOBJECT pSrcDataObject);
+//C     extern  HRESULT OleCreate(const IID *const rclsid,const IID *const riid,DWORD renderopt,LPFORMATETC pFormatEtc,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreate(IID *rclsid, IID *riid, DWORD renderopt, LPFORMATETC pFormatEtc, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateEx(const IID *const rclsid,const IID *const riid,DWORD dwFlags,DWORD renderopt,ULONG cFormats,DWORD *rgAdvf,LPFORMATETC rgFormatEtc,IAdviseSink *lpAdviseSink,DWORD *rgdwConnection,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateEx(IID *rclsid, IID *riid, DWORD dwFlags, DWORD renderopt, ULONG cFormats, DWORD *rgAdvf, LPFORMATETC rgFormatEtc, IAdviseSink *lpAdviseSink, DWORD *rgdwConnection, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateFromData(LPDATAOBJECT pSrcDataObj,const IID *const riid,DWORD renderopt,LPFORMATETC pFormatEtc,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateFromData(LPDATAOBJECT pSrcDataObj, IID *riid, DWORD renderopt, LPFORMATETC pFormatEtc, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateFromDataEx(LPDATAOBJECT pSrcDataObj,const IID *const riid,DWORD dwFlags,DWORD renderopt,ULONG cFormats,DWORD *rgAdvf,LPFORMATETC rgFormatEtc,IAdviseSink *lpAdviseSink,DWORD *rgdwConnection,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateFromDataEx(LPDATAOBJECT pSrcDataObj, IID *riid, DWORD dwFlags, DWORD renderopt, ULONG cFormats, DWORD *rgAdvf, LPFORMATETC rgFormatEtc, IAdviseSink *lpAdviseSink, DWORD *rgdwConnection, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateLinkFromData(LPDATAOBJECT pSrcDataObj,const IID *const riid,DWORD renderopt,LPFORMATETC pFormatEtc,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateLinkFromData(LPDATAOBJECT pSrcDataObj, IID *riid, DWORD renderopt, LPFORMATETC pFormatEtc, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateLinkFromDataEx(LPDATAOBJECT pSrcDataObj,const IID *const riid,DWORD dwFlags,DWORD renderopt,ULONG cFormats,DWORD *rgAdvf,LPFORMATETC rgFormatEtc,IAdviseSink *lpAdviseSink,DWORD *rgdwConnection,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateLinkFromDataEx(LPDATAOBJECT pSrcDataObj, IID *riid, DWORD dwFlags, DWORD renderopt, ULONG cFormats, DWORD *rgAdvf, LPFORMATETC rgFormatEtc, IAdviseSink *lpAdviseSink, DWORD *rgdwConnection, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateStaticFromData(LPDATAOBJECT pSrcDataObj,const IID *const iid,DWORD renderopt,LPFORMATETC pFormatEtc,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateStaticFromData(LPDATAOBJECT pSrcDataObj, IID *iid, DWORD renderopt, LPFORMATETC pFormatEtc, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateLink(LPMONIKER pmkLinkSrc,const IID *const riid,DWORD renderopt,LPFORMATETC lpFormatEtc,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateLink(LPMONIKER pmkLinkSrc, IID *riid, DWORD renderopt, LPFORMATETC lpFormatEtc, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateLinkEx(LPMONIKER pmkLinkSrc,const IID *const riid,DWORD dwFlags,DWORD renderopt,ULONG cFormats,DWORD *rgAdvf,LPFORMATETC rgFormatEtc,IAdviseSink *lpAdviseSink,DWORD *rgdwConnection,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateLinkEx(LPMONIKER pmkLinkSrc, IID *riid, DWORD dwFlags, DWORD renderopt, ULONG cFormats, DWORD *rgAdvf, LPFORMATETC rgFormatEtc, IAdviseSink *lpAdviseSink, DWORD *rgdwConnection, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateLinkToFile(LPCOLESTR lpszFileName,const IID *const riid,DWORD renderopt,LPFORMATETC lpFormatEtc,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateLinkToFile(LPCOLESTR lpszFileName, IID *riid, DWORD renderopt, LPFORMATETC lpFormatEtc, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateLinkToFileEx(LPCOLESTR lpszFileName,const IID *const riid,DWORD dwFlags,DWORD renderopt,ULONG cFormats,DWORD *rgAdvf,LPFORMATETC rgFormatEtc,IAdviseSink *lpAdviseSink,DWORD *rgdwConnection,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateLinkToFileEx(LPCOLESTR lpszFileName, IID *riid, DWORD dwFlags, DWORD renderopt, ULONG cFormats, DWORD *rgAdvf, LPFORMATETC rgFormatEtc, IAdviseSink *lpAdviseSink, DWORD *rgdwConnection, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateFromFile(const IID *const rclsid,LPCOLESTR lpszFileName,const IID *const riid,DWORD renderopt,LPFORMATETC lpFormatEtc,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateFromFile(IID *rclsid, LPCOLESTR lpszFileName, IID *riid, DWORD renderopt, LPFORMATETC lpFormatEtc, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleCreateFromFileEx(const IID *const rclsid,LPCOLESTR lpszFileName,const IID *const riid,DWORD dwFlags,DWORD renderopt,ULONG cFormats,DWORD *rgAdvf,LPFORMATETC rgFormatEtc,IAdviseSink *lpAdviseSink,DWORD *rgdwConnection,LPOLECLIENTSITE pClientSite,LPSTORAGE pStg,LPVOID *ppvObj);
+HRESULT  OleCreateFromFileEx(IID *rclsid, LPCOLESTR lpszFileName, IID *riid, DWORD dwFlags, DWORD renderopt, ULONG cFormats, DWORD *rgAdvf, LPFORMATETC rgFormatEtc, IAdviseSink *lpAdviseSink, DWORD *rgdwConnection, LPOLECLIENTSITE pClientSite, LPSTORAGE pStg, LPVOID *ppvObj);
+//C     extern  HRESULT OleLoad(LPSTORAGE pStg,const IID *const riid,LPOLECLIENTSITE pClientSite,LPVOID *ppvObj);
+HRESULT  OleLoad(LPSTORAGE pStg, IID *riid, LPOLECLIENTSITE pClientSite, LPVOID *ppvObj);
+//C     extern  HRESULT OleSave(LPPERSISTSTORAGE pPS,LPSTORAGE pStg,WINBOOL fSameAsLoad);
+HRESULT  OleSave(LPPERSISTSTORAGE pPS, LPSTORAGE pStg, WINBOOL fSameAsLoad);
+//C     extern  HRESULT OleLoadFromStream(LPSTREAM pStm,const IID *const iidInterface,LPVOID *ppvObj);
+HRESULT  OleLoadFromStream(LPSTREAM pStm, IID *iidInterface, LPVOID *ppvObj);
+//C     extern  HRESULT OleSaveToStream(LPPERSISTSTREAM pPStm,LPSTREAM pStm);
+HRESULT  OleSaveToStream(LPPERSISTSTREAM pPStm, LPSTREAM pStm);
+//C     extern  HRESULT OleSetContainedObject(LPUNKNOWN pUnknown,WINBOOL fContained);
+HRESULT  OleSetContainedObject(LPUNKNOWN pUnknown, WINBOOL fContained);
+//C     extern  HRESULT OleNoteObjectVisible(LPUNKNOWN pUnknown,WINBOOL fVisible);
+HRESULT  OleNoteObjectVisible(LPUNKNOWN pUnknown, WINBOOL fVisible);
+//C     extern  HRESULT RegisterDragDrop(HWND hwnd,LPDROPTARGET pDropTarget);
+HRESULT  RegisterDragDrop(HWND hwnd, LPDROPTARGET pDropTarget);
+//C     extern  HRESULT RevokeDragDrop(HWND hwnd);
+HRESULT  RevokeDragDrop(HWND hwnd);
+//C     extern  HRESULT DoDragDrop(LPDATAOBJECT pDataObj,LPDROPSOURCE pDropSource,DWORD dwOKEffects,LPDWORD pdwEffect);
+HRESULT  DoDragDrop(LPDATAOBJECT pDataObj, LPDROPSOURCE pDropSource, DWORD dwOKEffects, LPDWORD pdwEffect);
+//C     extern  HRESULT OleSetClipboard(LPDATAOBJECT pDataObj);
+HRESULT  OleSetClipboard(LPDATAOBJECT pDataObj);
+//C     extern  HRESULT OleGetClipboard(LPDATAOBJECT *ppDataObj);
+HRESULT  OleGetClipboard(LPDATAOBJECT *ppDataObj);
+//C     extern  HRESULT OleFlushClipboard(void);
+HRESULT  OleFlushClipboard();
+//C     extern  HRESULT OleIsCurrentClipboard(LPDATAOBJECT pDataObj);
+HRESULT  OleIsCurrentClipboard(LPDATAOBJECT pDataObj);
+//C     extern  HOLEMENU OleCreateMenuDescriptor (HMENU hmenuCombined,LPOLEMENUGROUPWIDTHS lpMenuWidths);
+HOLEMENU  OleCreateMenuDescriptor(HMENU hmenuCombined, LPOLEMENUGROUPWIDTHS lpMenuWidths);
+//C     extern  HRESULT OleSetMenuDescriptor (HOLEMENU holemenu,HWND hwndFrame,HWND hwndActiveObject,LPOLEINPLACEFRAME lpFrame,LPOLEINPLACEACTIVEOBJECT lpActiveObj);
+HRESULT  OleSetMenuDescriptor(HOLEMENU holemenu, HWND hwndFrame, HWND hwndActiveObject, LPOLEINPLACEFRAME lpFrame, LPOLEINPLACEACTIVEOBJECT lpActiveObj);
+//C     extern  HRESULT OleDestroyMenuDescriptor (HOLEMENU holemenu);
+HRESULT  OleDestroyMenuDescriptor(HOLEMENU holemenu);
+//C     extern  HRESULT OleTranslateAccelerator (LPOLEINPLACEFRAME lpFrame,LPOLEINPLACEFRAMEINFO lpFrameInfo,LPMSG lpmsg);
+HRESULT  OleTranslateAccelerator(LPOLEINPLACEFRAME lpFrame, LPOLEINPLACEFRAMEINFO lpFrameInfo, LPMSG lpmsg);
+//C     extern  HANDLE OleDuplicateData (HANDLE hSrc,CLIPFORMAT cfFormat,UINT uiFlags);
+HANDLE  OleDuplicateData(HANDLE hSrc, CLIPFORMAT cfFormat, UINT uiFlags);
+//C     extern  HRESULT OleDraw (LPUNKNOWN pUnknown,DWORD dwAspect,HDC hdcDraw,LPCRECT lprcBounds);
+HRESULT  OleDraw(LPUNKNOWN pUnknown, DWORD dwAspect, HDC hdcDraw, LPCRECT lprcBounds);
+//C     extern  HRESULT OleRun(LPUNKNOWN pUnknown);
+HRESULT  OleRun(LPUNKNOWN pUnknown);
+//C     extern  WINBOOL OleIsRunning(LPOLEOBJECT pObject);
+WINBOOL  OleIsRunning(LPOLEOBJECT pObject);
+//C     extern  HRESULT OleLockRunning(LPUNKNOWN pUnknown,WINBOOL fLock,WINBOOL fLastUnlockCloses);
+HRESULT  OleLockRunning(LPUNKNOWN pUnknown, WINBOOL fLock, WINBOOL fLastUnlockCloses);
+//C     extern  void ReleaseStgMedium(LPSTGMEDIUM);
+void  ReleaseStgMedium(LPSTGMEDIUM );
+//C     extern  HRESULT CreateOleAdviseHolder(LPOLEADVISEHOLDER *ppOAHolder);
+HRESULT  CreateOleAdviseHolder(LPOLEADVISEHOLDER *ppOAHolder);
+//C     extern  HRESULT OleCreateDefaultHandler(const IID *const clsid,LPUNKNOWN pUnkOuter,const IID *const riid,LPVOID *lplpObj);
+HRESULT  OleCreateDefaultHandler(IID *clsid, LPUNKNOWN pUnkOuter, IID *riid, LPVOID *lplpObj);
+//C     extern  HRESULT OleCreateEmbeddingHelper(const IID *const clsid,LPUNKNOWN pUnkOuter,DWORD flags,LPCLASSFACTORY pCF,const IID *const riid,LPVOID *lplpObj);
+HRESULT  OleCreateEmbeddingHelper(IID *clsid, LPUNKNOWN pUnkOuter, DWORD flags, LPCLASSFACTORY pCF, IID *riid, LPVOID *lplpObj);
+//C     extern  WINBOOL IsAccelerator(HACCEL hAccel,int cAccelEntries,LPMSG lpMsg,WORD *lpwCmd);
+WINBOOL  IsAccelerator(HACCEL hAccel, int cAccelEntries, LPMSG lpMsg, WORD *lpwCmd);
+//C     extern  HGLOBAL OleGetIconOfFile(LPOLESTR lpszPath,WINBOOL fUseFileAsLabel);
+HGLOBAL  OleGetIconOfFile(LPOLESTR lpszPath, WINBOOL fUseFileAsLabel);
+//C     extern  HGLOBAL OleGetIconOfClass(const IID *const rclsid,LPOLESTR lpszLabel,WINBOOL fUseTypeAsLabel);
+HGLOBAL  OleGetIconOfClass(IID *rclsid, LPOLESTR lpszLabel, WINBOOL fUseTypeAsLabel);
+//C     extern  HGLOBAL OleMetafilePictFromIconAndLabel(HICON hIcon,LPOLESTR lpszLabel,LPOLESTR lpszSourceFile,UINT iIconIndex);
+HGLOBAL  OleMetafilePictFromIconAndLabel(HICON hIcon, LPOLESTR lpszLabel, LPOLESTR lpszSourceFile, UINT iIconIndex);
+//C     extern  HRESULT OleRegGetUserType (const IID *const clsid,DWORD dwFormOfType,LPOLESTR *pszUserType);
+HRESULT  OleRegGetUserType(IID *clsid, DWORD dwFormOfType, LPOLESTR *pszUserType);
+//C     extern  HRESULT OleRegGetMiscStatus (const IID *const clsid,DWORD dwAspect,DWORD *pdwStatus);
+HRESULT  OleRegGetMiscStatus(IID *clsid, DWORD dwAspect, DWORD *pdwStatus);
+//C     extern  HRESULT OleRegEnumFormatEtc (const IID *const clsid,DWORD dwDirection,LPENUMFORMATETC *ppenum);
+HRESULT  OleRegEnumFormatEtc(IID *clsid, DWORD dwDirection, LPENUMFORMATETC *ppenum);
+//C     extern  HRESULT OleRegEnumVerbs (const IID *const clsid,LPENUMOLEVERB *ppenum);
+HRESULT  OleRegEnumVerbs(IID *clsid, LPENUMOLEVERB *ppenum);
+//C     typedef struct _OLESTREAM *LPOLESTREAM;
+alias _OLESTREAM *LPOLESTREAM;
+//C     typedef struct _OLESTREAMVTBL {
+//C       DWORD ( *Get)(LPOLESTREAM,void *,DWORD);
+//C       DWORD ( *Put)(LPOLESTREAM,const void *,DWORD);
+//C     } OLESTREAMVTBL;
+struct _OLESTREAMVTBL
+{
+    DWORD  function(LPOLESTREAM , void *, DWORD )Get;
+    DWORD  function(LPOLESTREAM , void *, DWORD )Put;
+}
+alias _OLESTREAMVTBL OLESTREAMVTBL;
+//C     typedef OLESTREAMVTBL *LPOLESTREAMVTBL;
+alias OLESTREAMVTBL *LPOLESTREAMVTBL;
+//C     typedef struct _OLESTREAM {
+//C       LPOLESTREAMVTBL lpstbl;
+//C     } OLESTREAM;
+struct _OLESTREAM
+{
+    LPOLESTREAMVTBL lpstbl;
+}
+alias _OLESTREAM OLESTREAM;
+//C     extern  HRESULT OleConvertOLESTREAMToIStorage(LPOLESTREAM lpolestream,LPSTORAGE pstg,const DVTARGETDEVICE *ptd);
+HRESULT  OleConvertOLESTREAMToIStorage(LPOLESTREAM lpolestream, LPSTORAGE pstg, DVTARGETDEVICE *ptd);
+//C     extern  HRESULT OleConvertIStorageToOLESTREAM(LPSTORAGE pstg,LPOLESTREAM lpolestream);
+HRESULT  OleConvertIStorageToOLESTREAM(LPSTORAGE pstg, LPOLESTREAM lpolestream);
+//C     extern  HRESULT GetHGlobalFromILockBytes (LPLOCKBYTES plkbyt,HGLOBAL *phglobal);
+HRESULT  GetHGlobalFromILockBytes(LPLOCKBYTES plkbyt, HGLOBAL *phglobal);
+//C     extern  HRESULT CreateILockBytesOnHGlobal (HGLOBAL hGlobal,WINBOOL fDeleteOnRelease,LPLOCKBYTES *pplkbyt);
+HRESULT  CreateILockBytesOnHGlobal(HGLOBAL hGlobal, WINBOOL fDeleteOnRelease, LPLOCKBYTES *pplkbyt);
+//C     extern  HRESULT GetHGlobalFromStream (LPSTREAM pstm,HGLOBAL *phglobal);
+HRESULT  GetHGlobalFromStream(LPSTREAM pstm, HGLOBAL *phglobal);
+//C     extern  HRESULT CreateStreamOnHGlobal (HGLOBAL hGlobal,WINBOOL fDeleteOnRelease,LPSTREAM *ppstm);
+HRESULT  CreateStreamOnHGlobal(HGLOBAL hGlobal, WINBOOL fDeleteOnRelease, LPSTREAM *ppstm);
+//C     extern  HRESULT OleDoAutoConvert(LPSTORAGE pStg,LPCLSID pClsidNew);
+HRESULT  OleDoAutoConvert(LPSTORAGE pStg, LPCLSID pClsidNew);
+//C     extern  HRESULT OleGetAutoConvert(const IID *const clsidOld,LPCLSID pClsidNew);
+HRESULT  OleGetAutoConvert(IID *clsidOld, LPCLSID pClsidNew);
+//C     extern  HRESULT OleSetAutoConvert(const IID *const clsidOld,const IID *const clsidNew);
+HRESULT  OleSetAutoConvert(IID *clsidOld, IID *clsidNew);
+//C     extern  HRESULT GetConvertStg(LPSTORAGE pStg);
+HRESULT  GetConvertStg(LPSTORAGE pStg);
+//C     extern  HRESULT SetConvertStg(LPSTORAGE pStg,WINBOOL fConvert);
+HRESULT  SetConvertStg(LPSTORAGE pStg, WINBOOL fConvert);
+//C     extern  HRESULT OleConvertIStorageToOLESTREAMEx(LPSTORAGE pstg,CLIPFORMAT cfFormat,LONG lWidth,LONG lHeight,DWORD dwSize,LPSTGMEDIUM pmedium,LPOLESTREAM polestm);
+HRESULT  OleConvertIStorageToOLESTREAMEx(LPSTORAGE pstg, CLIPFORMAT cfFormat, LONG lWidth, LONG lHeight, DWORD dwSize, LPSTGMEDIUM pmedium, LPOLESTREAM polestm);
+//C     extern  HRESULT OleConvertOLESTREAMToIStorageEx(LPOLESTREAM polestm,LPSTORAGE pstg,CLIPFORMAT *pcfFormat,LONG *plwWidth,LONG *plHeight,DWORD *pdwSize,LPSTGMEDIUM pmedium);
+HRESULT  OleConvertOLESTREAMToIStorageEx(LPOLESTREAM polestm, LPSTORAGE pstg, CLIPFORMAT *pcfFormat, LONG *plwWidth, LONG *plHeight, DWORD *pdwSize, LPSTGMEDIUM pmedium);
+//C     extern const GUID GUID_DEVINTERFACE_DISK;
+extern const GUID GUID_DEVINTERFACE_DISK;
+//C     extern const GUID GUID_DEVINTERFACE_CDROM;
+extern const GUID GUID_DEVINTERFACE_CDROM;
+//C     extern const GUID GUID_DEVINTERFACE_PARTITION;
+extern const GUID GUID_DEVINTERFACE_PARTITION;
+//C     extern const GUID GUID_DEVINTERFACE_TAPE;
+extern const GUID GUID_DEVINTERFACE_TAPE;
+//C     extern const GUID GUID_DEVINTERFACE_WRITEONCEDISK;
+extern const GUID GUID_DEVINTERFACE_WRITEONCEDISK;
+//C     extern const GUID GUID_DEVINTERFACE_VOLUME;
+extern const GUID GUID_DEVINTERFACE_VOLUME;
+//C     extern const GUID GUID_DEVINTERFACE_MEDIUMCHANGER;
+extern const GUID GUID_DEVINTERFACE_MEDIUMCHANGER;
+//C     extern const GUID GUID_DEVINTERFACE_FLOPPY;
+extern const GUID GUID_DEVINTERFACE_FLOPPY;
+//C     extern const GUID GUID_DEVINTERFACE_CDCHANGER;
+extern const GUID GUID_DEVINTERFACE_CDCHANGER;
+//C     extern const GUID GUID_DEVINTERFACE_STORAGEPORT;
+extern const GUID GUID_DEVINTERFACE_STORAGEPORT;
+//C     extern const GUID GUID_DEVINTERFACE_COMPORT;
+extern const GUID GUID_DEVINTERFACE_COMPORT;
+//C     extern const GUID GUID_DEVINTERFACE_SERENUM_BUS_ENUMERATOR;
+extern const GUID GUID_DEVINTERFACE_SERENUM_BUS_ENUMERATOR;
+//C       typedef struct _STORAGE_HOTPLUG_INFO {
+//C         DWORD Size;
+//C         BOOLEAN MediaRemovable;
+//C         BOOLEAN MediaHotplug;
+//C         BOOLEAN DeviceHotplug;
+//C         BOOLEAN WriteCacheEnableOverride;
+//C       } STORAGE_HOTPLUG_INFO,*PSTORAGE_HOTPLUG_INFO;
+struct _STORAGE_HOTPLUG_INFO
+{
+    DWORD Size;
+    BOOLEAN MediaRemovable;
+    BOOLEAN MediaHotplug;
+    BOOLEAN DeviceHotplug;
+    BOOLEAN WriteCacheEnableOverride;
+}
+alias _STORAGE_HOTPLUG_INFO STORAGE_HOTPLUG_INFO;
+alias _STORAGE_HOTPLUG_INFO *PSTORAGE_HOTPLUG_INFO;
+//C       typedef struct _STORAGE_DEVICE_NUMBER {
+//C         DWORD DeviceType;
+//C         DWORD DeviceNumber;
+//C         DWORD PartitionNumber;
+//C       } STORAGE_DEVICE_NUMBER,*PSTORAGE_DEVICE_NUMBER;
+struct _STORAGE_DEVICE_NUMBER
+{
+    DWORD DeviceType;
+    DWORD DeviceNumber;
+    DWORD PartitionNumber;
+}
+alias _STORAGE_DEVICE_NUMBER STORAGE_DEVICE_NUMBER;
+alias _STORAGE_DEVICE_NUMBER *PSTORAGE_DEVICE_NUMBER;
+//C       typedef struct _STORAGE_BUS_RESET_REQUEST {
+//C         BYTE PathId;
+//C       } STORAGE_BUS_RESET_REQUEST,*PSTORAGE_BUS_RESET_REQUEST;
+struct _STORAGE_BUS_RESET_REQUEST
+{
+    BYTE PathId;
+}
+alias _STORAGE_BUS_RESET_REQUEST STORAGE_BUS_RESET_REQUEST;
+alias _STORAGE_BUS_RESET_REQUEST *PSTORAGE_BUS_RESET_REQUEST;
+//C       typedef struct STORAGE_BREAK_RESERVATION_REQUEST {
+//C         DWORD Length;
+//C         BYTE _unused;
+//C         BYTE PathId;
+//C         BYTE TargetId;
+//C         BYTE Lun;
+//C       } STORAGE_BREAK_RESERVATION_REQUEST,*PSTORAGE_BREAK_RESERVATION_REQUEST;
+struct STORAGE_BREAK_RESERVATION_REQUEST
+{
+    DWORD Length;
+    BYTE _unused;
+    BYTE PathId;
+    BYTE TargetId;
+    BYTE Lun;
+}
+alias STORAGE_BREAK_RESERVATION_REQUEST *PSTORAGE_BREAK_RESERVATION_REQUEST;
+//C       typedef struct _PREVENT_MEDIA_REMOVAL {
+//C         BOOLEAN PreventMediaRemoval;
+//C       } PREVENT_MEDIA_REMOVAL,*PPREVENT_MEDIA_REMOVAL;
+struct _PREVENT_MEDIA_REMOVAL
+{
+    BOOLEAN PreventMediaRemoval;
+}
+alias _PREVENT_MEDIA_REMOVAL PREVENT_MEDIA_REMOVAL;
+alias _PREVENT_MEDIA_REMOVAL *PPREVENT_MEDIA_REMOVAL;
+//C       typedef struct _CLASS_MEDIA_CHANGE_CONTEXT {
+//C         DWORD MediaChangeCount;
+//C         DWORD NewState;
+//C       } CLASS_MEDIA_CHANGE_CONTEXT,*PCLASS_MEDIA_CHANGE_CONTEXT;
+struct _CLASS_MEDIA_CHANGE_CONTEXT
+{
+    DWORD MediaChangeCount;
+    DWORD NewState;
+}
+alias _CLASS_MEDIA_CHANGE_CONTEXT CLASS_MEDIA_CHANGE_CONTEXT;
+alias _CLASS_MEDIA_CHANGE_CONTEXT *PCLASS_MEDIA_CHANGE_CONTEXT;
+//C       typedef struct _TAPE_STATISTICS {
+//C         DWORD Version;
+//C         DWORD Flags;
+//C         LARGE_INTEGER RecoveredWrites;
+//C         LARGE_INTEGER UnrecoveredWrites;
+//C         LARGE_INTEGER RecoveredReads;
+//C         LARGE_INTEGER UnrecoveredReads;
+//C         BYTE CompressionRatioReads;
+//C         BYTE CompressionRatioWrites;
+//C       } TAPE_STATISTICS,*PTAPE_STATISTICS;
+struct _TAPE_STATISTICS
+{
+    DWORD Version;
+    DWORD Flags;
+    LARGE_INTEGER RecoveredWrites;
+    LARGE_INTEGER UnrecoveredWrites;
+    LARGE_INTEGER RecoveredReads;
+    LARGE_INTEGER UnrecoveredReads;
+    BYTE CompressionRatioReads;
+    BYTE CompressionRatioWrites;
+}
+alias _TAPE_STATISTICS TAPE_STATISTICS;
+alias _TAPE_STATISTICS *PTAPE_STATISTICS;
+//C       typedef struct _TAPE_GET_STATISTICS {
+//C         DWORD Operation;
+//C       } TAPE_GET_STATISTICS,*PTAPE_GET_STATISTICS;
+struct _TAPE_GET_STATISTICS
+{
+    DWORD Operation;
+}
+alias _TAPE_GET_STATISTICS TAPE_GET_STATISTICS;
+alias _TAPE_GET_STATISTICS *PTAPE_GET_STATISTICS;
+//C       typedef enum _STORAGE_MEDIA_TYPE {
+//C         DDS_4mm = 0x20,
+//C         MiniQic,
+//C         Travan,
+//C         QIC,
+//C         MP_8mm,
+//C         AME_8mm,
+//C         AIT1_8mm,
+//C         DLT,
+//C         NCTP,
+//C         IBM_3480,
+//C         IBM_3490E,
+//C         IBM_Magstar_3590,
+//C         IBM_Magstar_MP,
+//C         STK_DATA_D3,
+//C         SONY_DTF,
+//C         DV_6mm,
+//C         DMI,
+//C         SONY_D2,
+//C         CLEANER_CARTRIDGE,
+//C         CD_ROM,
+//C         CD_R,
+//C         CD_RW,
+//C         DVD_ROM,
+//C         DVD_R,
+//C         DVD_RW,
+//C         MO_3_RW,
+//C         MO_5_WO,
+//C         MO_5_RW,
+//C         MO_5_LIMDOW,
+//C         PC_5_WO,
+//C         PC_5_RW,
+//C         PD_5_RW,
+//C         ABL_5_WO,
+//C         PINNACLE_APEX_5_RW,
+//C         SONY_12_WO,
+//C         PHILIPS_12_WO,
+//C         HITACHI_12_WO,
+//C         CYGNET_12_WO,
+//C         KODAK_14_WO,
+//C         MO_NFR_525,
+//C         NIKON_12_RW,
+//C         IOMEGA_ZIP,
+//C         IOMEGA_JAZ,
+//C         SYQUEST_EZ135,
+//C         SYQUEST_EZFLYER,
+//C         SYQUEST_SYJET,
+//C         AVATAR_F2,
+//C         MP2_8mm,
+//C         DST_S,
+//C         DST_M,
+//C         DST_L,
+//C         VXATape_1,
+//C         VXATape_2,
+//C         STK_9840,
+//C         LTO_Ultrium,
+//C         LTO_Accelis,
+//C         DVD_RAM,
+//C         AIT_8mm,
+//C         ADR_1,
+//C         ADR_2,
+//C         STK_9940,
+//C         SAIT,
+//C         VXATape
+//C       } STORAGE_MEDIA_TYPE,*PSTORAGE_MEDIA_TYPE;
+enum _STORAGE_MEDIA_TYPE
+{
+    DDS_4mm = 32,
+    MiniQic,
+    Travan,
+    QIC,
+    MP_8mm,
+    AME_8mm,
+    AIT1_8mm,
+    DLT,
+    NCTP,
+    IBM_3480,
+    IBM_3490E,
+    IBM_Magstar_3590,
+    IBM_Magstar_MP,
+    STK_DATA_D3,
+    SONY_DTF,
+    DV_6mm,
+    DMI,
+    SONY_D2,
+    CLEANER_CARTRIDGE,
+    CD_ROM,
+    CD_R,
+    CD_RW,
+    DVD_ROM,
+    DVD_R,
+    DVD_RW,
+    MO_3_RW,
+    MO_5_WO,
+    MO_5_RW,
+    MO_5_LIMDOW,
+    PC_5_WO,
+    PC_5_RW,
+    PD_5_RW,
+    ABL_5_WO,
+    PINNACLE_APEX_5_RW,
+    SONY_12_WO,
+    PHILIPS_12_WO,
+    HITACHI_12_WO,
+    CYGNET_12_WO,
+    KODAK_14_WO,
+    MO_NFR_525,
+    NIKON_12_RW,
+    IOMEGA_ZIP,
+    IOMEGA_JAZ,
+    SYQUEST_EZ135,
+    SYQUEST_EZFLYER,
+    SYQUEST_SYJET,
+    AVATAR_F2,
+    MP2_8mm,
+    DST_S,
+    DST_M,
+    DST_L,
+    VXATape_1,
+    VXATape_2,
+    STK_9840,
+    LTO_Ultrium,
+    LTO_Accelis,
+    DVD_RAM,
+    AIT_8mm,
+    ADR_1,
+    ADR_2,
+    STK_9940,
+    SAIT,
+    VXATape,
+}
+alias _STORAGE_MEDIA_TYPE STORAGE_MEDIA_TYPE;
+alias _STORAGE_MEDIA_TYPE *PSTORAGE_MEDIA_TYPE;
+//C       typedef enum _STORAGE_BUS_TYPE {
+//C         BusTypeUnknown = 0x00,
+//C         BusTypeScsi = 0x1,
+//C         BusTypeAtapi = 0x2,
+//C         BusTypeAta = 0x3,
+//C         BusType1394 = 0x4,
+//C         BusTypeSsa = 0x5,
+//C         BusTypeFibre = 0x6,
+//C         BusTypeUsb = 0x7,
+//C         BusTypeRAID = 0x8,
+//C         BusTypeMax,
+//C         BusTypeMaxReserved = 0x7F
+//C       } STORAGE_BUS_TYPE,*PSTORAGE_BUS_TYPE;
+enum _STORAGE_BUS_TYPE
+{
+    BusTypeUnknown,
+    BusTypeScsi,
+    BusTypeAtapi,
+    BusTypeAta,
+    BusType1394,
+    BusTypeSsa,
+    BusTypeFibre,
+    BusTypeUsb,
+    BusTypeRAID,
+    BusTypeMax,
+    BusTypeMaxReserved = 127,
+}
+alias _STORAGE_BUS_TYPE STORAGE_BUS_TYPE;
+alias _STORAGE_BUS_TYPE *PSTORAGE_BUS_TYPE;
+//C       typedef struct _DEVICE_MEDIA_INFO {
+//C         union {
+//C           struct {
+//C      LARGE_INTEGER Cylinders;
+//C      STORAGE_MEDIA_TYPE MediaType;
+//C      DWORD TracksPerCylinder;
+//C      DWORD SectorsPerTrack;
+//C      DWORD BytesPerSector;
+//C      DWORD NumberMediaSides;
+//C      DWORD MediaCharacteristics;
+//C           } DiskInfo;
+struct _N202
+{
+    LARGE_INTEGER Cylinders;
+    STORAGE_MEDIA_TYPE MediaType;
+    DWORD TracksPerCylinder;
+    DWORD SectorsPerTrack;
+    DWORD BytesPerSector;
+    DWORD NumberMediaSides;
+    DWORD MediaCharacteristics;
+}
+//C           struct {
+//C      LARGE_INTEGER Cylinders;
+//C      STORAGE_MEDIA_TYPE MediaType;
+//C      DWORD TracksPerCylinder;
+//C      DWORD SectorsPerTrack;
+//C      DWORD BytesPerSector;
+//C      DWORD NumberMediaSides;
+//C      DWORD MediaCharacteristics;
+//C           } RemovableDiskInfo;
+struct _N203
+{
+    LARGE_INTEGER Cylinders;
+    STORAGE_MEDIA_TYPE MediaType;
+    DWORD TracksPerCylinder;
+    DWORD SectorsPerTrack;
+    DWORD BytesPerSector;
+    DWORD NumberMediaSides;
+    DWORD MediaCharacteristics;
+}
+//C           struct {
+//C      STORAGE_MEDIA_TYPE MediaType;
+//C      DWORD MediaCharacteristics;
+//C      DWORD CurrentBlockSize;
+//C      STORAGE_BUS_TYPE BusType;
+//C      union {
+//C        struct {
+//C          BYTE MediumType;
+//C          BYTE DensityCode;
+//C        } ScsiInformation;
+struct _N206
+{
+    BYTE MediumType;
+    BYTE DensityCode;
+}
+//C      } BusSpecificData;
+union _N205
+{
+    _N206 ScsiInformation;
+}
+//C           } TapeInfo;
+struct _N204
+{
+    STORAGE_MEDIA_TYPE MediaType;
+    DWORD MediaCharacteristics;
+    DWORD CurrentBlockSize;
+    STORAGE_BUS_TYPE BusType;
+    _N205 BusSpecificData;
+}
+//C         } DeviceSpecific;
+union _N201
+{
+    _N202 DiskInfo;
+    _N203 RemovableDiskInfo;
+    _N204 TapeInfo;
+}
+//C       } DEVICE_MEDIA_INFO,*PDEVICE_MEDIA_INFO;
+struct _DEVICE_MEDIA_INFO
+{
+    _N201 DeviceSpecific;
+}
+alias _DEVICE_MEDIA_INFO DEVICE_MEDIA_INFO;
+alias _DEVICE_MEDIA_INFO *PDEVICE_MEDIA_INFO;
+//C       typedef struct _GET_MEDIA_TYPES {
+//C         DWORD DeviceType;
+//C         DWORD MediaInfoCount;
+//C         DEVICE_MEDIA_INFO MediaInfo[1];
+//C       } GET_MEDIA_TYPES,*PGET_MEDIA_TYPES;
+struct _GET_MEDIA_TYPES
+{
+    DWORD DeviceType;
+    DWORD MediaInfoCount;
+    DEVICE_MEDIA_INFO [1]MediaInfo;
+}
+alias _GET_MEDIA_TYPES GET_MEDIA_TYPES;
+alias _GET_MEDIA_TYPES *PGET_MEDIA_TYPES;
+//C       typedef struct _STORAGE_PREDICT_FAILURE {
+//C         DWORD PredictFailure;
+//C         BYTE VendorSpecific[512];
+//C       } STORAGE_PREDICT_FAILURE,*PSTORAGE_PREDICT_FAILURE;
+struct _STORAGE_PREDICT_FAILURE
+{
+    DWORD PredictFailure;
+    BYTE [512]VendorSpecific;
+}
+alias _STORAGE_PREDICT_FAILURE STORAGE_PREDICT_FAILURE;
+alias _STORAGE_PREDICT_FAILURE *PSTORAGE_PREDICT_FAILURE;
+//C     typedef enum _MEDIA_TYPE {
+//C       Unknown,F5_1Pt2_512,F3_1Pt44_512,F3_2Pt88_512,F3_20Pt8_512,F3_720_512,F5_360_512,F5_320_512,F5_320_1024,F5_180_512,F5_160_512,
+//C       RemovableMedia,FixedMedia,F3_120M_512,F3_640_512,F5_640_512,F5_720_512,F3_1Pt2_512,F3_1Pt23_1024,F5_1Pt23_1024,F3_128Mb_512,
+//C       F3_230Mb_512,F8_256_128,F3_200Mb_512,F3_240M_512,F3_32M_512
+//C     } MEDIA_TYPE,*PMEDIA_TYPE;
+enum _MEDIA_TYPE
+{
+    Unknown,
+    F5_1Pt2_512,
+    F3_1Pt44_512,
+    F3_2Pt88_512,
+    F3_20Pt8_512,
+    F3_720_512,
+    F5_360_512,
+    F5_320_512,
+    F5_320_1024,
+    F5_180_512,
+    F5_160_512,
+    RemovableMedia,
+    FixedMedia,
+    F3_120M_512,
+    F3_640_512,
+    F5_640_512,
+    F5_720_512,
+    F3_1Pt2_512,
+    F3_1Pt23_1024,
+    F5_1Pt23_1024,
+    F3_128Mb_512,
+    F3_230Mb_512,
+    F8_256_128,
+    F3_200Mb_512,
+    F3_240M_512,
+    F3_32M_512,
+}
+alias _MEDIA_TYPE MEDIA_TYPE;
+alias _MEDIA_TYPE *PMEDIA_TYPE;
+//C     typedef struct _FORMAT_PARAMETERS {
+//C       MEDIA_TYPE MediaType;
+//C       DWORD StartCylinderNumber;
+//C       DWORD EndCylinderNumber;
+//C       DWORD StartHeadNumber;
+//C       DWORD EndHeadNumber;
+//C     } FORMAT_PARAMETERS,*PFORMAT_PARAMETERS;
+struct _FORMAT_PARAMETERS
+{
+    MEDIA_TYPE MediaType;
+    DWORD StartCylinderNumber;
+    DWORD EndCylinderNumber;
+    DWORD StartHeadNumber;
+    DWORD EndHeadNumber;
+}
+alias _FORMAT_PARAMETERS FORMAT_PARAMETERS;
+alias _FORMAT_PARAMETERS *PFORMAT_PARAMETERS;
+//C     typedef WORD BAD_TRACK_NUMBER;
+alias WORD BAD_TRACK_NUMBER;
+//C     typedef WORD *PBAD_TRACK_NUMBER;
+alias WORD *PBAD_TRACK_NUMBER;
+//C     typedef struct _FORMAT_EX_PARAMETERS {
+//C       MEDIA_TYPE MediaType;
+//C       DWORD StartCylinderNumber;
+//C       DWORD EndCylinderNumber;
+//C       DWORD StartHeadNumber;
+//C       DWORD EndHeadNumber;
+//C       WORD FormatGapLength;
+//C       WORD SectorsPerTrack;
+//C       WORD SectorNumber[1];
+//C     } FORMAT_EX_PARAMETERS,*PFORMAT_EX_PARAMETERS;
+struct _FORMAT_EX_PARAMETERS
+{
+    MEDIA_TYPE MediaType;
+    DWORD StartCylinderNumber;
+    DWORD EndCylinderNumber;
+    DWORD StartHeadNumber;
+    DWORD EndHeadNumber;
+    WORD FormatGapLength;
+    WORD SectorsPerTrack;
+    WORD [1]SectorNumber;
+}
+alias _FORMAT_EX_PARAMETERS FORMAT_EX_PARAMETERS;
+alias _FORMAT_EX_PARAMETERS *PFORMAT_EX_PARAMETERS;
+//C     typedef struct _DISK_GEOMETRY {
+//C       LARGE_INTEGER Cylinders;
+//C       MEDIA_TYPE MediaType;
+//C       DWORD TracksPerCylinder;
+//C       DWORD SectorsPerTrack;
+//C       DWORD BytesPerSector;
+//C     } DISK_GEOMETRY,*PDISK_GEOMETRY;
+struct _DISK_GEOMETRY
+{
+    LARGE_INTEGER Cylinders;
+    MEDIA_TYPE MediaType;
+    DWORD TracksPerCylinder;
+    DWORD SectorsPerTrack;
+    DWORD BytesPerSector;
+}
+alias _DISK_GEOMETRY DISK_GEOMETRY;
+alias _DISK_GEOMETRY *PDISK_GEOMETRY;
+//C     typedef struct _PARTITION_INFORMATION {
+//C       LARGE_INTEGER StartingOffset;
+//C       LARGE_INTEGER PartitionLength;
+//C       DWORD HiddenSectors;
+//C       DWORD PartitionNumber;
+//C       BYTE PartitionType;
+//C       BOOLEAN BootIndicator;
+//C       BOOLEAN RecognizedPartition;
+//C       BOOLEAN RewritePartition;
+//C     } PARTITION_INFORMATION,*PPARTITION_INFORMATION;
+struct _PARTITION_INFORMATION
+{
+    LARGE_INTEGER StartingOffset;
+    LARGE_INTEGER PartitionLength;
+    DWORD HiddenSectors;
+    DWORD PartitionNumber;
+    BYTE PartitionType;
+    BOOLEAN BootIndicator;
+    BOOLEAN RecognizedPartition;
+    BOOLEAN RewritePartition;
+}
+alias _PARTITION_INFORMATION PARTITION_INFORMATION;
+alias _PARTITION_INFORMATION *PPARTITION_INFORMATION;
+//C     typedef struct _SET_PARTITION_INFORMATION {
+//C       BYTE PartitionType;
+//C     } SET_PARTITION_INFORMATION,*PSET_PARTITION_INFORMATION;
+struct _SET_PARTITION_INFORMATION
+{
+    BYTE PartitionType;
+}
+alias _SET_PARTITION_INFORMATION SET_PARTITION_INFORMATION;
+alias _SET_PARTITION_INFORMATION *PSET_PARTITION_INFORMATION;
+//C     typedef struct _DRIVE_LAYOUT_INFORMATION {
+//C       DWORD PartitionCount;
+//C       DWORD Signature;
+//C       PARTITION_INFORMATION PartitionEntry[1];
+//C     } DRIVE_LAYOUT_INFORMATION,*PDRIVE_LAYOUT_INFORMATION;
+struct _DRIVE_LAYOUT_INFORMATION
+{
+    DWORD PartitionCount;
+    DWORD Signature;
+    PARTITION_INFORMATION [1]PartitionEntry;
+}
+alias _DRIVE_LAYOUT_INFORMATION DRIVE_LAYOUT_INFORMATION;
+alias _DRIVE_LAYOUT_INFORMATION *PDRIVE_LAYOUT_INFORMATION;
+//C     typedef struct _VERIFY_INFORMATION {
+//C       LARGE_INTEGER StartingOffset;
+//C       DWORD Length;
+//C     } VERIFY_INFORMATION,*PVERIFY_INFORMATION;
+struct _VERIFY_INFORMATION
+{
+    LARGE_INTEGER StartingOffset;
+    DWORD Length;
+}
+alias _VERIFY_INFORMATION VERIFY_INFORMATION;
+alias _VERIFY_INFORMATION *PVERIFY_INFORMATION;
+//C     typedef struct _REASSIGN_BLOCKS {
+//C       WORD Reserved;
+//C       WORD Count;
+//C       DWORD BlockNumber[1];
+//C     } REASSIGN_BLOCKS,*PREASSIGN_BLOCKS;
+struct _REASSIGN_BLOCKS
+{
+    WORD Reserved;
+    WORD Count;
+    DWORD [1]BlockNumber;
+}
+alias _REASSIGN_BLOCKS REASSIGN_BLOCKS;
+alias _REASSIGN_BLOCKS *PREASSIGN_BLOCKS;
+//C     typedef struct _REASSIGN_BLOCKS_EX {
+//C       WORD Reserved;
+//C       WORD Count;
+//C       LARGE_INTEGER BlockNumber[1];
+//C     } REASSIGN_BLOCKS_EX,*PREASSIGN_BLOCKS_EX;
+struct _REASSIGN_BLOCKS_EX
+{
+    WORD Reserved;
+    WORD Count;
+    LARGE_INTEGER [1]BlockNumber;
+}
+alias _REASSIGN_BLOCKS_EX REASSIGN_BLOCKS_EX;
+alias _REASSIGN_BLOCKS_EX *PREASSIGN_BLOCKS_EX;
+//C     typedef enum _PARTITION_STYLE {
+//C       PARTITION_STYLE_MBR,PARTITION_STYLE_GPT,PARTITION_STYLE_RAW
+//C     } PARTITION_STYLE;
+enum _PARTITION_STYLE
+{
+    PARTITION_STYLE_MBR,
+    PARTITION_STYLE_GPT,
+    PARTITION_STYLE_RAW,
+}
+alias _PARTITION_STYLE PARTITION_STYLE;
+//C     typedef struct _PARTITION_INFORMATION_GPT {
+//C       GUID PartitionType;
+//C       GUID PartitionId;
+//C       DWORD64 Attributes;
+//C       WCHAR Name [36];
+//C     } PARTITION_INFORMATION_GPT,*PPARTITION_INFORMATION_GPT;
+struct _PARTITION_INFORMATION_GPT
+{
+    GUID PartitionType;
+    GUID PartitionId;
+    DWORD64 Attributes;
+    WCHAR [36]Name;
+}
+alias _PARTITION_INFORMATION_GPT PARTITION_INFORMATION_GPT;
+alias _PARTITION_INFORMATION_GPT *PPARTITION_INFORMATION_GPT;
+//C     typedef struct _PARTITION_INFORMATION_MBR {
+//C       BYTE PartitionType;
+//C       BOOLEAN BootIndicator;
+//C       BOOLEAN RecognizedPartition;
+//C       DWORD HiddenSectors;
+//C     } PARTITION_INFORMATION_MBR,*PPARTITION_INFORMATION_MBR;
+struct _PARTITION_INFORMATION_MBR
+{
+    BYTE PartitionType;
+    BOOLEAN BootIndicator;
+    BOOLEAN RecognizedPartition;
+    DWORD HiddenSectors;
+}
+alias _PARTITION_INFORMATION_MBR PARTITION_INFORMATION_MBR;
+alias _PARTITION_INFORMATION_MBR *PPARTITION_INFORMATION_MBR;
+//C     typedef SET_PARTITION_INFORMATION SET_PARTITION_INFORMATION_MBR;
+alias SET_PARTITION_INFORMATION SET_PARTITION_INFORMATION_MBR;
+//C     typedef PARTITION_INFORMATION_GPT SET_PARTITION_INFORMATION_GPT;
+alias PARTITION_INFORMATION_GPT SET_PARTITION_INFORMATION_GPT;
+//C     typedef struct _SET_PARTITION_INFORMATION_EX {
+//C       PARTITION_STYLE PartitionStyle;
+//C        union {
+//C         SET_PARTITION_INFORMATION_MBR Mbr;
+//C         SET_PARTITION_INFORMATION_GPT Gpt;
+//C       } ;
+union _N207
+{
+    SET_PARTITION_INFORMATION_MBR Mbr;
+    SET_PARTITION_INFORMATION_GPT Gpt;
+}
+//C     } SET_PARTITION_INFORMATION_EX,*PSET_PARTITION_INFORMATION_EX;
+struct _SET_PARTITION_INFORMATION_EX
+{
+    PARTITION_STYLE PartitionStyle;
+    SET_PARTITION_INFORMATION_MBR Mbr;
+    SET_PARTITION_INFORMATION_GPT Gpt;
+}
+alias _SET_PARTITION_INFORMATION_EX SET_PARTITION_INFORMATION_EX;
+alias _SET_PARTITION_INFORMATION_EX *PSET_PARTITION_INFORMATION_EX;
+//C     typedef struct _CREATE_DISK_GPT {
+//C       GUID DiskId;
+//C       DWORD MaxPartitionCount;
+//C     } CREATE_DISK_GPT,*PCREATE_DISK_GPT;
+struct _CREATE_DISK_GPT
+{
+    GUID DiskId;
+    DWORD MaxPartitionCount;
+}
+alias _CREATE_DISK_GPT CREATE_DISK_GPT;
+alias _CREATE_DISK_GPT *PCREATE_DISK_GPT;
+//C     typedef struct _CREATE_DISK_MBR {
+//C       DWORD Signature;
+//C     } CREATE_DISK_MBR,*PCREATE_DISK_MBR;
+struct _CREATE_DISK_MBR
+{
+    DWORD Signature;
+}
+alias _CREATE_DISK_MBR CREATE_DISK_MBR;
+alias _CREATE_DISK_MBR *PCREATE_DISK_MBR;
+//C     typedef struct _CREATE_DISK {
+//C       PARTITION_STYLE PartitionStyle;
+//C        union {
+//C         CREATE_DISK_MBR Mbr;
+//C         CREATE_DISK_GPT Gpt;
+//C       } ;
+union _N208
+{
+    CREATE_DISK_MBR Mbr;
+    CREATE_DISK_GPT Gpt;
+}
+//C     } CREATE_DISK,*PCREATE_DISK;
+struct _CREATE_DISK
+{
+    PARTITION_STYLE PartitionStyle;
+    CREATE_DISK_MBR Mbr;
+    CREATE_DISK_GPT Gpt;
+}
+alias _CREATE_DISK CREATE_DISK;
+alias _CREATE_DISK *PCREATE_DISK;
+//C     typedef struct _GET_LENGTH_INFORMATION {
+//C       LARGE_INTEGER Length;
+//C     } GET_LENGTH_INFORMATION,*PGET_LENGTH_INFORMATION;
+struct _GET_LENGTH_INFORMATION
+{
+    LARGE_INTEGER Length;
+}
+alias _GET_LENGTH_INFORMATION GET_LENGTH_INFORMATION;
+alias _GET_LENGTH_INFORMATION *PGET_LENGTH_INFORMATION;
+//C     typedef struct _PARTITION_INFORMATION_EX {
+//C       PARTITION_STYLE PartitionStyle;
+//C       LARGE_INTEGER StartingOffset;
+//C       LARGE_INTEGER PartitionLength;
+//C       DWORD PartitionNumber;
+//C       BOOLEAN RewritePartition;
+//C        union {
+//C         PARTITION_INFORMATION_MBR Mbr;
+//C         PARTITION_INFORMATION_GPT Gpt;
+//C       } ;
+union _N209
+{
+    PARTITION_INFORMATION_MBR Mbr;
+    PARTITION_INFORMATION_GPT Gpt;
+}
+//C     } PARTITION_INFORMATION_EX,*PPARTITION_INFORMATION_EX;
+struct _PARTITION_INFORMATION_EX
+{
+    PARTITION_STYLE PartitionStyle;
+    LARGE_INTEGER StartingOffset;
+    LARGE_INTEGER PartitionLength;
+    DWORD PartitionNumber;
+    BOOLEAN RewritePartition;
+    PARTITION_INFORMATION_MBR Mbr;
+    PARTITION_INFORMATION_GPT Gpt;
+}
+alias _PARTITION_INFORMATION_EX PARTITION_INFORMATION_EX;
+alias _PARTITION_INFORMATION_EX *PPARTITION_INFORMATION_EX;
+//C     typedef struct _DRIVE_LAYOUT_INFORMATION_GPT {
+//C       GUID DiskId;
+//C       LARGE_INTEGER StartingUsableOffset;
+//C       LARGE_INTEGER UsableLength;
+//C       DWORD MaxPartitionCount;
+//C     } DRIVE_LAYOUT_INFORMATION_GPT,*PDRIVE_LAYOUT_INFORMATION_GPT;
+struct _DRIVE_LAYOUT_INFORMATION_GPT
+{
+    GUID DiskId;
+    LARGE_INTEGER StartingUsableOffset;
+    LARGE_INTEGER UsableLength;
+    DWORD MaxPartitionCount;
+}
+alias _DRIVE_LAYOUT_INFORMATION_GPT DRIVE_LAYOUT_INFORMATION_GPT;
+alias _DRIVE_LAYOUT_INFORMATION_GPT *PDRIVE_LAYOUT_INFORMATION_GPT;
+//C     typedef struct _DRIVE_LAYOUT_INFORMATION_MBR {
+//C       DWORD Signature;
+//C     } DRIVE_LAYOUT_INFORMATION_MBR,*PDRIVE_LAYOUT_INFORMATION_MBR;
+struct _DRIVE_LAYOUT_INFORMATION_MBR
+{
+    DWORD Signature;
+}
+alias _DRIVE_LAYOUT_INFORMATION_MBR DRIVE_LAYOUT_INFORMATION_MBR;
+alias _DRIVE_LAYOUT_INFORMATION_MBR *PDRIVE_LAYOUT_INFORMATION_MBR;
+//C     typedef struct _DRIVE_LAYOUT_INFORMATION_EX {
+//C       DWORD PartitionStyle;
+//C       DWORD PartitionCount;
+//C        union {
+//C         DRIVE_LAYOUT_INFORMATION_MBR Mbr;
+//C         DRIVE_LAYOUT_INFORMATION_GPT Gpt;
+//C       } ;
+union _N210
+{
+    DRIVE_LAYOUT_INFORMATION_MBR Mbr;
+    DRIVE_LAYOUT_INFORMATION_GPT Gpt;
+}
+//C       PARTITION_INFORMATION_EX PartitionEntry[1];
+//C     } DRIVE_LAYOUT_INFORMATION_EX,*PDRIVE_LAYOUT_INFORMATION_EX;
+struct _DRIVE_LAYOUT_INFORMATION_EX
+{
+    DWORD PartitionStyle;
+    DWORD PartitionCount;
+    DRIVE_LAYOUT_INFORMATION_MBR Mbr;
+    DRIVE_LAYOUT_INFORMATION_GPT Gpt;
+    PARTITION_INFORMATION_EX [1]PartitionEntry;
+}
+alias _DRIVE_LAYOUT_INFORMATION_EX DRIVE_LAYOUT_INFORMATION_EX;
+alias _DRIVE_LAYOUT_INFORMATION_EX *PDRIVE_LAYOUT_INFORMATION_EX;
+//C     typedef enum _DETECTION_TYPE {
+//C       DetectNone,DetectInt13,DetectExInt13
+//C     } DETECTION_TYPE;
+enum _DETECTION_TYPE
+{
+    DetectNone,
+    DetectInt13,
+    DetectExInt13,
+}
+alias _DETECTION_TYPE DETECTION_TYPE;
+//C     typedef struct _DISK_INT13_INFO {
+//C       WORD DriveSelect;
+//C       DWORD MaxCylinders;
+//C       WORD SectorsPerTrack;
+//C       WORD MaxHeads;
+//C       WORD NumberDrives;
+//C     } DISK_INT13_INFO,*PDISK_INT13_INFO;
+struct _DISK_INT13_INFO
+{
+    WORD DriveSelect;
+    DWORD MaxCylinders;
+    WORD SectorsPerTrack;
+    WORD MaxHeads;
+    WORD NumberDrives;
+}
+alias _DISK_INT13_INFO DISK_INT13_INFO;
+alias _DISK_INT13_INFO *PDISK_INT13_INFO;
+//C     typedef struct _DISK_EX_INT13_INFO {
+//C       WORD ExBufferSize;
+//C       WORD ExFlags;
+//C       DWORD ExCylinders;
+//C       DWORD ExHeads;
+//C       DWORD ExSectorsPerTrack;
+//C       DWORD64 ExSectorsPerDrive;
+//C       WORD ExSectorSize;
+//C       WORD ExReserved;
+//C     } DISK_EX_INT13_INFO,*PDISK_EX_INT13_INFO;
+struct _DISK_EX_INT13_INFO
+{
+    WORD ExBufferSize;
+    WORD ExFlags;
+    DWORD ExCylinders;
+    DWORD ExHeads;
+    DWORD ExSectorsPerTrack;
+    DWORD64 ExSectorsPerDrive;
+    WORD ExSectorSize;
+    WORD ExReserved;
+}
+alias _DISK_EX_INT13_INFO DISK_EX_INT13_INFO;
+alias _DISK_EX_INT13_INFO *PDISK_EX_INT13_INFO;
+//C     typedef struct _DISK_DETECTION_INFO {
+//C       DWORD SizeOfDetectInfo;
+//C       DETECTION_TYPE DetectionType;
+//C        union {
+//C          struct {
+//C           DISK_INT13_INFO Int13;
+//C           DISK_EX_INT13_INFO ExInt13;
+//C         } ;
+struct _N212
+{
+    DISK_INT13_INFO Int13;
+    DISK_EX_INT13_INFO ExInt13;
+}
+//C       } ;
+union _N211
+{
+    DISK_INT13_INFO Int13;
+    DISK_EX_INT13_INFO ExInt13;
+}
+//C     } DISK_DETECTION_INFO,*PDISK_DETECTION_INFO;
+struct _DISK_DETECTION_INFO
+{
+    DWORD SizeOfDetectInfo;
+    DETECTION_TYPE DetectionType;
+    DISK_INT13_INFO Int13;
+    DISK_EX_INT13_INFO ExInt13;
+}
+alias _DISK_DETECTION_INFO DISK_DETECTION_INFO;
+alias _DISK_DETECTION_INFO *PDISK_DETECTION_INFO;
+//C     typedef struct _DISK_PARTITION_INFO {
+//C       DWORD SizeOfPartitionInfo;
+//C       PARTITION_STYLE PartitionStyle;
+//C        union {
+//C         struct {
+//C           DWORD Signature;
+//C           DWORD CheckSum;
+//C         } Mbr;
+struct _N214
+{
+    DWORD Signature;
+    DWORD CheckSum;
+}
+//C         struct {
+//C           GUID DiskId;
+//C         } Gpt;
+struct _N215
+{
+    GUID DiskId;
+}
+//C       } ;
+union _N213
+{
+    _N214 Mbr;
+    _N215 Gpt;
+}
+//C     } DISK_PARTITION_INFO,*PDISK_PARTITION_INFO;
+struct _DISK_PARTITION_INFO
+{
+    DWORD SizeOfPartitionInfo;
+    PARTITION_STYLE PartitionStyle;
+    _N214 Mbr;
+    _N215 Gpt;
+}
+alias _DISK_PARTITION_INFO DISK_PARTITION_INFO;
+alias _DISK_PARTITION_INFO *PDISK_PARTITION_INFO;
+//C     typedef struct _DISK_GEOMETRY_EX {
+//C       DISK_GEOMETRY Geometry;
+//C       LARGE_INTEGER DiskSize;
+//C       BYTE Data[1];
+//C     } DISK_GEOMETRY_EX,*PDISK_GEOMETRY_EX;
+struct _DISK_GEOMETRY_EX
+{
+    DISK_GEOMETRY Geometry;
+    LARGE_INTEGER DiskSize;
+    BYTE [1]Data;
+}
+alias _DISK_GEOMETRY_EX DISK_GEOMETRY_EX;
+alias _DISK_GEOMETRY_EX *PDISK_GEOMETRY_EX;
+//C     typedef struct _DISK_CONTROLLER_NUMBER {
+//C       DWORD ControllerNumber;
+//C       DWORD DiskNumber;
+//C     } DISK_CONTROLLER_NUMBER,*PDISK_CONTROLLER_NUMBER;
+struct _DISK_CONTROLLER_NUMBER
+{
+    DWORD ControllerNumber;
+    DWORD DiskNumber;
+}
+alias _DISK_CONTROLLER_NUMBER DISK_CONTROLLER_NUMBER;
+alias _DISK_CONTROLLER_NUMBER *PDISK_CONTROLLER_NUMBER;
+//C     typedef enum {
+//C       EqualPriority,KeepPrefetchedData,KeepReadData
+//C     } DISK_CACHE_RETENTION_PRIORITY;
+enum
+{
+    EqualPriority,
+    KeepPrefetchedData,
+    KeepReadData,
+}
+alias int DISK_CACHE_RETENTION_PRIORITY;
+//C     typedef struct _DISK_CACHE_INFORMATION {
+//C       BOOLEAN ParametersSavable;
+//C       BOOLEAN ReadCacheEnabled;
+//C       BOOLEAN WriteCacheEnabled;
+//C       DISK_CACHE_RETENTION_PRIORITY ReadRetentionPriority;
+//C       DISK_CACHE_RETENTION_PRIORITY WriteRetentionPriority;
+//C       WORD DisablePrefetchTransferLength;
+//C       BOOLEAN PrefetchScalar;
+//C        union {
+//C         struct {
+//C           WORD Minimum;
+//C           WORD Maximum;
+//C           WORD MaximumBlocks;
+//C         } ScalarPrefetch;
+struct _N218
+{
+    WORD Minimum;
+    WORD Maximum;
+    WORD MaximumBlocks;
+}
+//C         struct {
+//C           WORD Minimum;
+//C           WORD Maximum;
+//C         } BlockPrefetch;
+struct _N219
+{
+    WORD Minimum;
+    WORD Maximum;
+}
+//C       } ;
+union _N217
+{
+    _N218 ScalarPrefetch;
+    _N219 BlockPrefetch;
+}
+//C     } DISK_CACHE_INFORMATION,*PDISK_CACHE_INFORMATION;
+struct _DISK_CACHE_INFORMATION
+{
+    BOOLEAN ParametersSavable;
+    BOOLEAN ReadCacheEnabled;
+    BOOLEAN WriteCacheEnabled;
+    DISK_CACHE_RETENTION_PRIORITY ReadRetentionPriority;
+    DISK_CACHE_RETENTION_PRIORITY WriteRetentionPriority;
+    WORD DisablePrefetchTransferLength;
+    BOOLEAN PrefetchScalar;
+    _N218 ScalarPrefetch;
+    _N219 BlockPrefetch;
+}
+alias _DISK_CACHE_INFORMATION DISK_CACHE_INFORMATION;
+alias _DISK_CACHE_INFORMATION *PDISK_CACHE_INFORMATION;
+//C     typedef struct _DISK_GROW_PARTITION {
+//C       DWORD PartitionNumber;
+//C       LARGE_INTEGER BytesToGrow;
+//C     } DISK_GROW_PARTITION,*PDISK_GROW_PARTITION;
+struct _DISK_GROW_PARTITION
+{
+    DWORD PartitionNumber;
+    LARGE_INTEGER BytesToGrow;
+}
+alias _DISK_GROW_PARTITION DISK_GROW_PARTITION;
+alias _DISK_GROW_PARTITION *PDISK_GROW_PARTITION;
+//C     typedef struct _HISTOGRAM_BUCKET {
+//C       DWORD Reads;
+//C       DWORD Writes;
+//C     } HISTOGRAM_BUCKET,*PHISTOGRAM_BUCKET;
+struct _HISTOGRAM_BUCKET
+{
+    DWORD Reads;
+    DWORD Writes;
+}
+alias _HISTOGRAM_BUCKET HISTOGRAM_BUCKET;
+alias _HISTOGRAM_BUCKET *PHISTOGRAM_BUCKET;
+//C     typedef struct _DISK_HISTOGRAM {
+//C       LARGE_INTEGER DiskSize;
+//C       LARGE_INTEGER Start;
+//C       LARGE_INTEGER End;
+//C       LARGE_INTEGER Average;
+//C       LARGE_INTEGER AverageRead;
+//C       LARGE_INTEGER AverageWrite;
+//C       DWORD Granularity;
+//C       DWORD Size;
+//C       DWORD ReadCount;
+//C       DWORD WriteCount;
+//C       PHISTOGRAM_BUCKET Histogram;
+//C     } DISK_HISTOGRAM,*PDISK_HISTOGRAM;
+struct _DISK_HISTOGRAM
+{
+    LARGE_INTEGER DiskSize;
+    LARGE_INTEGER Start;
+    LARGE_INTEGER End;
+    LARGE_INTEGER Average;
+    LARGE_INTEGER AverageRead;
+    LARGE_INTEGER AverageWrite;
+    DWORD Granularity;
+    DWORD Size;
+    DWORD ReadCount;
+    DWORD WriteCount;
+    PHISTOGRAM_BUCKET Histogram;
+}
+alias _DISK_HISTOGRAM DISK_HISTOGRAM;
+alias _DISK_HISTOGRAM *PDISK_HISTOGRAM;
+//C     typedef struct _DISK_PERFORMANCE {
+//C       LARGE_INTEGER BytesRead;
+//C       LARGE_INTEGER BytesWritten;
+//C       LARGE_INTEGER ReadTime;
+//C       LARGE_INTEGER WriteTime;
+//C       LARGE_INTEGER IdleTime;
+//C       DWORD ReadCount;
+//C       DWORD WriteCount;
+//C       DWORD QueueDepth;
+//C       DWORD SplitCount;
+//C       LARGE_INTEGER QueryTime;
+//C       DWORD StorageDeviceNumber;
+//C       WCHAR StorageManagerName[8];
+//C     } DISK_PERFORMANCE,*PDISK_PERFORMANCE;
+struct _DISK_PERFORMANCE
+{
+    LARGE_INTEGER BytesRead;
+    LARGE_INTEGER BytesWritten;
+    LARGE_INTEGER ReadTime;
+    LARGE_INTEGER WriteTime;
+    LARGE_INTEGER IdleTime;
+    DWORD ReadCount;
+    DWORD WriteCount;
+    DWORD QueueDepth;
+    DWORD SplitCount;
+    LARGE_INTEGER QueryTime;
+    DWORD StorageDeviceNumber;
+    WCHAR [8]StorageManagerName;
+}
+alias _DISK_PERFORMANCE DISK_PERFORMANCE;
+alias _DISK_PERFORMANCE *PDISK_PERFORMANCE;
+//C     typedef struct _DISK_RECORD {
+//C       LARGE_INTEGER ByteOffset;
+//C       LARGE_INTEGER StartTime;
+//C       LARGE_INTEGER EndTime;
+//C       PVOID VirtualAddress;
+//C       DWORD NumberOfBytes;
+//C       BYTE DeviceNumber;
+//C       BOOLEAN ReadRequest;
+//C     } DISK_RECORD,*PDISK_RECORD;
+struct _DISK_RECORD
+{
+    LARGE_INTEGER ByteOffset;
+    LARGE_INTEGER StartTime;
+    LARGE_INTEGER EndTime;
+    PVOID VirtualAddress;
+    DWORD NumberOfBytes;
+    BYTE DeviceNumber;
+    BOOLEAN ReadRequest;
+}
+alias _DISK_RECORD DISK_RECORD;
+alias _DISK_RECORD *PDISK_RECORD;
+//C     typedef struct _DISK_LOGGING {
+//C       BYTE Function;
+//C       PVOID BufferAddress;
+//C       DWORD BufferSize;
+//C     } DISK_LOGGING,*PDISK_LOGGING;
+struct _DISK_LOGGING
+{
+    BYTE Function;
+    PVOID BufferAddress;
+    DWORD BufferSize;
+}
+alias _DISK_LOGGING DISK_LOGGING;
+alias _DISK_LOGGING *PDISK_LOGGING;
+//C     typedef enum _BIN_TYPES {
+//C       RequestSize,RequestLocation
+//C     } BIN_TYPES;
+enum _BIN_TYPES
+{
+    RequestSize,
+    RequestLocation,
+}
+alias _BIN_TYPES BIN_TYPES;
+//C     typedef struct _BIN_RANGE {
+//C       LARGE_INTEGER StartValue;
+//C       LARGE_INTEGER Length;
+//C     } BIN_RANGE,*PBIN_RANGE;
+struct _BIN_RANGE
+{
+    LARGE_INTEGER StartValue;
+    LARGE_INTEGER Length;
+}
+alias _BIN_RANGE BIN_RANGE;
+alias _BIN_RANGE *PBIN_RANGE;
+//C     typedef struct _PERF_BIN {
+//C       DWORD NumberOfBins;
+//C       DWORD TypeOfBin;
+//C       BIN_RANGE BinsRanges[1];
+//C     } PERF_BIN,*PPERF_BIN;
+struct _PERF_BIN
+{
+    DWORD NumberOfBins;
+    DWORD TypeOfBin;
+    BIN_RANGE [1]BinsRanges;
+}
+alias _PERF_BIN PERF_BIN;
+alias _PERF_BIN *PPERF_BIN;
+//C     typedef struct _BIN_COUNT {
+//C       BIN_RANGE BinRange;
+//C       DWORD BinCount;
+//C     } BIN_COUNT,*PBIN_COUNT;
+struct _BIN_COUNT
+{
+    BIN_RANGE BinRange;
+    DWORD BinCount;
+}
+alias _BIN_COUNT BIN_COUNT;
+alias _BIN_COUNT *PBIN_COUNT;
+//C     typedef struct _BIN_RESULTS {
+//C       DWORD NumberOfBins;
+//C       BIN_COUNT BinCounts[1];
+//C     } BIN_RESULTS,*PBIN_RESULTS;
+struct _BIN_RESULTS
+{
+    DWORD NumberOfBins;
+    BIN_COUNT [1]BinCounts;
+}
+alias _BIN_RESULTS BIN_RESULTS;
+alias _BIN_RESULTS *PBIN_RESULTS;
+//C     typedef struct _GETVERSIONINPARAMS {
+//C       BYTE bVersion;
+//C       BYTE bRevision;
+//C       BYTE bReserved;
+//C       BYTE bIDEDeviceMap;
+//C       DWORD fCapabilities;
+//C       DWORD dwReserved[4];
+//C     } GETVERSIONINPARAMS,*PGETVERSIONINPARAMS,*LPGETVERSIONINPARAMS;
+struct _GETVERSIONINPARAMS
+{
+    BYTE bVersion;
+    BYTE bRevision;
+    BYTE bReserved;
+    BYTE bIDEDeviceMap;
+    DWORD fCapabilities;
+    DWORD [4]dwReserved;
+}
+alias _GETVERSIONINPARAMS GETVERSIONINPARAMS;
+alias _GETVERSIONINPARAMS *PGETVERSIONINPARAMS;
+alias _GETVERSIONINPARAMS *LPGETVERSIONINPARAMS;
+//C     typedef struct _IDEREGS {
+//C       BYTE bFeaturesReg;
+//C       BYTE bSectorCountReg;
+//C       BYTE bSectorNumberReg;
+//C       BYTE bCylLowReg;
+//C       BYTE bCylHighReg;
+//C       BYTE bDriveHeadReg;
+//C       BYTE bCommandReg;
+//C       BYTE bReserved;
+//C     } IDEREGS,*PIDEREGS,*LPIDEREGS;
+struct _IDEREGS
+{
+    BYTE bFeaturesReg;
+    BYTE bSectorCountReg;
+    BYTE bSectorNumberReg;
+    BYTE bCylLowReg;
+    BYTE bCylHighReg;
+    BYTE bDriveHeadReg;
+    BYTE bCommandReg;
+    BYTE bReserved;
+}
+alias _IDEREGS IDEREGS;
+alias _IDEREGS *PIDEREGS;
+alias _IDEREGS *LPIDEREGS;
+//C     typedef struct _SENDCMDINPARAMS {
+//C       DWORD cBufferSize;
+//C       IDEREGS irDriveRegs;
+//C       BYTE bDriveNumber;
+//C       BYTE bReserved[3];
+//C       DWORD dwReserved[4];
+//C       BYTE bBuffer[1];
+//C     } SENDCMDINPARAMS,*PSENDCMDINPARAMS,*LPSENDCMDINPARAMS;
+struct _SENDCMDINPARAMS
+{
+    DWORD cBufferSize;
+    IDEREGS irDriveRegs;
+    BYTE bDriveNumber;
+    BYTE [3]bReserved;
+    DWORD [4]dwReserved;
+    BYTE [1]bBuffer;
+}
+alias _SENDCMDINPARAMS SENDCMDINPARAMS;
+alias _SENDCMDINPARAMS *PSENDCMDINPARAMS;
+alias _SENDCMDINPARAMS *LPSENDCMDINPARAMS;
+//C     typedef struct _DRIVERSTATUS {
+//C       BYTE bDriverError;
+//C       BYTE bIDEError;
+//C       BYTE bReserved[2];
+//C       DWORD dwReserved[2];
+//C     } DRIVERSTATUS,*PDRIVERSTATUS,*LPDRIVERSTATUS;
+struct _DRIVERSTATUS
+{
+    BYTE bDriverError;
+    BYTE bIDEError;
+    BYTE [2]bReserved;
+    DWORD [2]dwReserved;
+}
+alias _DRIVERSTATUS DRIVERSTATUS;
+alias _DRIVERSTATUS *PDRIVERSTATUS;
+alias _DRIVERSTATUS *LPDRIVERSTATUS;
+//C     typedef struct _SENDCMDOUTPARAMS {
+//C       DWORD cBufferSize;
+//C       DRIVERSTATUS DriverStatus;
+//C       BYTE bBuffer[1];
+//C     } SENDCMDOUTPARAMS,*PSENDCMDOUTPARAMS,*LPSENDCMDOUTPARAMS;
+struct _SENDCMDOUTPARAMS
+{
+    DWORD cBufferSize;
+    DRIVERSTATUS DriverStatus;
+    BYTE [1]bBuffer;
+}
+alias _SENDCMDOUTPARAMS SENDCMDOUTPARAMS;
+alias _SENDCMDOUTPARAMS *PSENDCMDOUTPARAMS;
+alias _SENDCMDOUTPARAMS *LPSENDCMDOUTPARAMS;
+//C     typedef enum _ELEMENT_TYPE {
+//C       AllElements,ChangerTransport,ChangerSlot,ChangerIEPort,ChangerDrive,ChangerDoor,ChangerKeypad,ChangerMaxElement
+//C     } ELEMENT_TYPE,*PELEMENT_TYPE;
+enum _ELEMENT_TYPE
+{
+    AllElements,
+    ChangerTransport,
+    ChangerSlot,
+    ChangerIEPort,
+    ChangerDrive,
+    ChangerDoor,
+    ChangerKeypad,
+    ChangerMaxElement,
+}
+alias _ELEMENT_TYPE ELEMENT_TYPE;
+alias _ELEMENT_TYPE *PELEMENT_TYPE;
+//C     typedef struct _CHANGER_ELEMENT {
+//C       ELEMENT_TYPE ElementType;
+//C       DWORD ElementAddress;
+//C     } CHANGER_ELEMENT,*PCHANGER_ELEMENT;
+struct _CHANGER_ELEMENT
+{
+    ELEMENT_TYPE ElementType;
+    DWORD ElementAddress;
+}
+alias _CHANGER_ELEMENT CHANGER_ELEMENT;
+alias _CHANGER_ELEMENT *PCHANGER_ELEMENT;
+//C     typedef struct _CHANGER_ELEMENT_LIST {
+//C       CHANGER_ELEMENT Element;
+//C       DWORD NumberOfElements;
+//C     } CHANGER_ELEMENT_LIST ,*PCHANGER_ELEMENT_LIST;
+struct _CHANGER_ELEMENT_LIST
+{
+    CHANGER_ELEMENT Element;
+    DWORD NumberOfElements;
+}
+alias _CHANGER_ELEMENT_LIST CHANGER_ELEMENT_LIST;
+alias _CHANGER_ELEMENT_LIST *PCHANGER_ELEMENT_LIST;
+//C     typedef struct _GET_CHANGER_PARAMETERS {
+//C       DWORD Size;
+//C       WORD NumberTransportElements;
+//C       WORD NumberStorageElements;
+//C       WORD NumberCleanerSlots;
+//C       WORD NumberIEElements;
+//C       WORD NumberDataTransferElements;
+//C       WORD NumberOfDoors;
+//C       WORD FirstSlotNumber;
+//C       WORD FirstDriveNumber;
+//C       WORD FirstTransportNumber;
+//C       WORD FirstIEPortNumber;
+//C       WORD FirstCleanerSlotAddress;
+//C       WORD MagazineSize;
+//C       DWORD DriveCleanTimeout;
+//C       DWORD Features0;
+//C       DWORD Features1;
+//C       BYTE MoveFromTransport;
+//C       BYTE MoveFromSlot;
+//C       BYTE MoveFromIePort;
+//C       BYTE MoveFromDrive;
+//C       BYTE ExchangeFromTransport;
+//C       BYTE ExchangeFromSlot;
+//C       BYTE ExchangeFromIePort;
+//C       BYTE ExchangeFromDrive;
+//C       BYTE LockUnlockCapabilities;
+//C       BYTE PositionCapabilities;
+//C       BYTE Reserved1[2];
+//C       DWORD Reserved2[2];
+//C     } GET_CHANGER_PARAMETERS,*PGET_CHANGER_PARAMETERS;
+struct _GET_CHANGER_PARAMETERS
+{
+    DWORD Size;
+    WORD NumberTransportElements;
+    WORD NumberStorageElements;
+    WORD NumberCleanerSlots;
+    WORD NumberIEElements;
+    WORD NumberDataTransferElements;
+    WORD NumberOfDoors;
+    WORD FirstSlotNumber;
+    WORD FirstDriveNumber;
+    WORD FirstTransportNumber;
+    WORD FirstIEPortNumber;
+    WORD FirstCleanerSlotAddress;
+    WORD MagazineSize;
+    DWORD DriveCleanTimeout;
+    DWORD Features0;
+    DWORD Features1;
+    BYTE MoveFromTransport;
+    BYTE MoveFromSlot;
+    BYTE MoveFromIePort;
+    BYTE MoveFromDrive;
+    BYTE ExchangeFromTransport;
+    BYTE ExchangeFromSlot;
+    BYTE ExchangeFromIePort;
+    BYTE ExchangeFromDrive;
+    BYTE LockUnlockCapabilities;
+    BYTE PositionCapabilities;
+    BYTE [2]Reserved1;
+    DWORD [2]Reserved2;
+}
+alias _GET_CHANGER_PARAMETERS GET_CHANGER_PARAMETERS;
+alias _GET_CHANGER_PARAMETERS *PGET_CHANGER_PARAMETERS;
+//C     typedef struct _CHANGER_PRODUCT_DATA {
+//C       BYTE VendorId[8];
+//C       BYTE ProductId[16];
+//C       BYTE Revision[4];
+//C       BYTE SerialNumber[32];
+//C       BYTE DeviceType;
+//C     } CHANGER_PRODUCT_DATA,*PCHANGER_PRODUCT_DATA;
+struct _CHANGER_PRODUCT_DATA
+{
+    BYTE [8]VendorId;
+    BYTE [16]ProductId;
+    BYTE [4]Revision;
+    BYTE [32]SerialNumber;
+    BYTE DeviceType;
+}
+alias _CHANGER_PRODUCT_DATA CHANGER_PRODUCT_DATA;
+alias _CHANGER_PRODUCT_DATA *PCHANGER_PRODUCT_DATA;
+//C     typedef struct _CHANGER_SET_ACCESS {
+//C       CHANGER_ELEMENT Element;
+//C       DWORD Control;
+//C     } CHANGER_SET_ACCESS,*PCHANGER_SET_ACCESS;
+struct _CHANGER_SET_ACCESS
+{
+    CHANGER_ELEMENT Element;
+    DWORD Control;
+}
+alias _CHANGER_SET_ACCESS CHANGER_SET_ACCESS;
+alias _CHANGER_SET_ACCESS *PCHANGER_SET_ACCESS;
+//C     typedef struct _CHANGER_READ_ELEMENT_STATUS {
+//C       CHANGER_ELEMENT_LIST ElementList;
+//C       BOOLEAN VolumeTagInfo;
+//C     } CHANGER_READ_ELEMENT_STATUS,*PCHANGER_READ_ELEMENT_STATUS;
+struct _CHANGER_READ_ELEMENT_STATUS
+{
+    CHANGER_ELEMENT_LIST ElementList;
+    BOOLEAN VolumeTagInfo;
+}
+alias _CHANGER_READ_ELEMENT_STATUS CHANGER_READ_ELEMENT_STATUS;
+alias _CHANGER_READ_ELEMENT_STATUS *PCHANGER_READ_ELEMENT_STATUS;
+//C     typedef struct _CHANGER_ELEMENT_STATUS {
+//C       CHANGER_ELEMENT Element;
+//C       CHANGER_ELEMENT SrcElementAddress;
+//C       DWORD Flags;
+//C       DWORD ExceptionCode;
+//C       BYTE TargetId;
+//C       BYTE Lun;
+//C       WORD Reserved;
+//C       BYTE PrimaryVolumeID[36];
+//C       BYTE AlternateVolumeID[36];
+//C     } CHANGER_ELEMENT_STATUS,*PCHANGER_ELEMENT_STATUS;
+struct _CHANGER_ELEMENT_STATUS
+{
+    CHANGER_ELEMENT Element;
+    CHANGER_ELEMENT SrcElementAddress;
+    DWORD Flags;
+    DWORD ExceptionCode;
+    BYTE TargetId;
+    BYTE Lun;
+    WORD Reserved;
+    BYTE [36]PrimaryVolumeID;
+    BYTE [36]AlternateVolumeID;
+}
+alias _CHANGER_ELEMENT_STATUS CHANGER_ELEMENT_STATUS;
+alias _CHANGER_ELEMENT_STATUS *PCHANGER_ELEMENT_STATUS;
+//C     typedef struct _CHANGER_ELEMENT_STATUS_EX {
+//C       CHANGER_ELEMENT Element;
+//C       CHANGER_ELEMENT SrcElementAddress;
+//C       DWORD Flags;
+//C       DWORD ExceptionCode;
+//C       BYTE TargetId;
+//C       BYTE Lun;
+//C       WORD Reserved;
+//C       BYTE PrimaryVolumeID[36];
+//C       BYTE AlternateVolumeID[36];
+//C       BYTE VendorIdentification[8];
+//C       BYTE ProductIdentification[16];
+//C       BYTE SerialNumber[32];
+//C     } CHANGER_ELEMENT_STATUS_EX,*PCHANGER_ELEMENT_STATUS_EX;
+struct _CHANGER_ELEMENT_STATUS_EX
+{
+    CHANGER_ELEMENT Element;
+    CHANGER_ELEMENT SrcElementAddress;
+    DWORD Flags;
+    DWORD ExceptionCode;
+    BYTE TargetId;
+    BYTE Lun;
+    WORD Reserved;
+    BYTE [36]PrimaryVolumeID;
+    BYTE [36]AlternateVolumeID;
+    BYTE [8]VendorIdentification;
+    BYTE [16]ProductIdentification;
+    BYTE [32]SerialNumber;
+}
+alias _CHANGER_ELEMENT_STATUS_EX CHANGER_ELEMENT_STATUS_EX;
+alias _CHANGER_ELEMENT_STATUS_EX *PCHANGER_ELEMENT_STATUS_EX;
+//C     typedef struct _CHANGER_INITIALIZE_ELEMENT_STATUS {
+//C       CHANGER_ELEMENT_LIST ElementList;
+//C       BOOLEAN BarCodeScan;
+//C     } CHANGER_INITIALIZE_ELEMENT_STATUS,*PCHANGER_INITIALIZE_ELEMENT_STATUS;
+struct _CHANGER_INITIALIZE_ELEMENT_STATUS
+{
+    CHANGER_ELEMENT_LIST ElementList;
+    BOOLEAN BarCodeScan;
+}
+alias _CHANGER_INITIALIZE_ELEMENT_STATUS CHANGER_INITIALIZE_ELEMENT_STATUS;
+alias _CHANGER_INITIALIZE_ELEMENT_STATUS *PCHANGER_INITIALIZE_ELEMENT_STATUS;
+//C     typedef struct _CHANGER_SET_POSITION {
+//C       CHANGER_ELEMENT Transport;
+//C       CHANGER_ELEMENT Destination;
+//C       BOOLEAN Flip;
+//C     } CHANGER_SET_POSITION,*PCHANGER_SET_POSITION;
+struct _CHANGER_SET_POSITION
+{
+    CHANGER_ELEMENT Transport;
+    CHANGER_ELEMENT Destination;
+    BOOLEAN Flip;
+}
+alias _CHANGER_SET_POSITION CHANGER_SET_POSITION;
+alias _CHANGER_SET_POSITION *PCHANGER_SET_POSITION;
+//C     typedef struct _CHANGER_EXCHANGE_MEDIUM {
+//C       CHANGER_ELEMENT Transport;
+//C       CHANGER_ELEMENT Source;
+//C       CHANGER_ELEMENT Destination1;
+//C       CHANGER_ELEMENT Destination2;
+//C       BOOLEAN Flip1;
+//C       BOOLEAN Flip2;
+//C     } CHANGER_EXCHANGE_MEDIUM,*PCHANGER_EXCHANGE_MEDIUM;
+struct _CHANGER_EXCHANGE_MEDIUM
+{
+    CHANGER_ELEMENT Transport;
+    CHANGER_ELEMENT Source;
+    CHANGER_ELEMENT Destination1;
+    CHANGER_ELEMENT Destination2;
+    BOOLEAN Flip1;
+    BOOLEAN Flip2;
+}
+alias _CHANGER_EXCHANGE_MEDIUM CHANGER_EXCHANGE_MEDIUM;
+alias _CHANGER_EXCHANGE_MEDIUM *PCHANGER_EXCHANGE_MEDIUM;
+//C     typedef struct _CHANGER_MOVE_MEDIUM {
+//C       CHANGER_ELEMENT Transport;
+//C       CHANGER_ELEMENT Source;
+//C       CHANGER_ELEMENT Destination;
+//C       BOOLEAN Flip;
+//C     } CHANGER_MOVE_MEDIUM,*PCHANGER_MOVE_MEDIUM;
+struct _CHANGER_MOVE_MEDIUM
+{
+    CHANGER_ELEMENT Transport;
+    CHANGER_ELEMENT Source;
+    CHANGER_ELEMENT Destination;
+    BOOLEAN Flip;
+}
+alias _CHANGER_MOVE_MEDIUM CHANGER_MOVE_MEDIUM;
+alias _CHANGER_MOVE_MEDIUM *PCHANGER_MOVE_MEDIUM;
+//C     typedef struct _CHANGER_SEND_VOLUME_TAG_INFORMATION {
+//C       CHANGER_ELEMENT StartingElement;
+//C       DWORD ActionCode;
+//C       BYTE VolumeIDTemplate[40];
+//C     } CHANGER_SEND_VOLUME_TAG_INFORMATION,*PCHANGER_SEND_VOLUME_TAG_INFORMATION;
+struct _CHANGER_SEND_VOLUME_TAG_INFORMATION
+{
+    CHANGER_ELEMENT StartingElement;
+    DWORD ActionCode;
+    BYTE [40]VolumeIDTemplate;
+}
+alias _CHANGER_SEND_VOLUME_TAG_INFORMATION CHANGER_SEND_VOLUME_TAG_INFORMATION;
+alias _CHANGER_SEND_VOLUME_TAG_INFORMATION *PCHANGER_SEND_VOLUME_TAG_INFORMATION;
+//C     typedef struct _READ_ELEMENT_ADDRESS_INFO {
+//C       DWORD NumberOfElements;
+//C       CHANGER_ELEMENT_STATUS ElementStatus[1];
+//C     } READ_ELEMENT_ADDRESS_INFO,*PREAD_ELEMENT_ADDRESS_INFO;
+struct _READ_ELEMENT_ADDRESS_INFO
+{
+    DWORD NumberOfElements;
+    CHANGER_ELEMENT_STATUS [1]ElementStatus;
+}
+alias _READ_ELEMENT_ADDRESS_INFO READ_ELEMENT_ADDRESS_INFO;
+alias _READ_ELEMENT_ADDRESS_INFO *PREAD_ELEMENT_ADDRESS_INFO;
+//C     typedef enum _CHANGER_DEVICE_PROBLEM_TYPE {
+//C       DeviceProblemNone,DeviceProblemHardware,DeviceProblemCHMError,DeviceProblemDoorOpen,DeviceProblemCalibrationError,DeviceProblemTargetFailure,
+//C       DeviceProblemCHMMoveError,DeviceProblemCHMZeroError,DeviceProblemCartridgeInsertError,DeviceProblemPositionError,DeviceProblemSensorError,
+//C       DeviceProblemCartridgeEjectError,DeviceProblemGripperError,DeviceProblemDriveError
+//C     } CHANGER_DEVICE_PROBLEM_TYPE,*PCHANGER_DEVICE_PROBLEM_TYPE;
+enum _CHANGER_DEVICE_PROBLEM_TYPE
+{
+    DeviceProblemNone,
+    DeviceProblemHardware,
+    DeviceProblemCHMError,
+    DeviceProblemDoorOpen,
+    DeviceProblemCalibrationError,
+    DeviceProblemTargetFailure,
+    DeviceProblemCHMMoveError,
+    DeviceProblemCHMZeroError,
+    DeviceProblemCartridgeInsertError,
+    DeviceProblemPositionError,
+    DeviceProblemSensorError,
+    DeviceProblemCartridgeEjectError,
+    DeviceProblemGripperError,
+    DeviceProblemDriveError,
+}
+alias _CHANGER_DEVICE_PROBLEM_TYPE CHANGER_DEVICE_PROBLEM_TYPE;
+alias _CHANGER_DEVICE_PROBLEM_TYPE *PCHANGER_DEVICE_PROBLEM_TYPE;
+//C     typedef struct _PATHNAME_BUFFER {
+//C       DWORD PathNameLength;
+//C       WCHAR Name[1];
+//C     } PATHNAME_BUFFER,*PPATHNAME_BUFFER;
+struct _PATHNAME_BUFFER
+{
+    DWORD PathNameLength;
+    WCHAR [1]Name;
+}
+alias _PATHNAME_BUFFER PATHNAME_BUFFER;
+alias _PATHNAME_BUFFER *PPATHNAME_BUFFER;
+//C     typedef struct _FSCTL_QUERY_FAT_BPB_BUFFER {
+//C       BYTE First0x24BytesOfBootSector[0x24];
+//C     } FSCTL_QUERY_FAT_BPB_BUFFER,*PFSCTL_QUERY_FAT_BPB_BUFFER;
+struct _FSCTL_QUERY_FAT_BPB_BUFFER
+{
+    BYTE [36]First0x24BytesOfBootSector;
+}
+alias _FSCTL_QUERY_FAT_BPB_BUFFER FSCTL_QUERY_FAT_BPB_BUFFER;
+alias _FSCTL_QUERY_FAT_BPB_BUFFER *PFSCTL_QUERY_FAT_BPB_BUFFER;
+//C     typedef struct {
+//C       LARGE_INTEGER VolumeSerialNumber;
+//C       LARGE_INTEGER NumberSectors;
+//C       LARGE_INTEGER TotalClusters;
+//C       LARGE_INTEGER FreeClusters;
+//C       LARGE_INTEGER TotalReserved;
+//C       DWORD BytesPerSector;
+//C       DWORD BytesPerCluster;
+//C       DWORD BytesPerFileRecordSegment;
+//C       DWORD ClustersPerFileRecordSegment;
+//C       LARGE_INTEGER MftValidDataLength;
+//C       LARGE_INTEGER MftStartLcn;
+//C       LARGE_INTEGER Mft2StartLcn;
+//C       LARGE_INTEGER MftZoneStart;
+//C       LARGE_INTEGER MftZoneEnd;
+//C     } NTFS_VOLUME_DATA_BUFFER,*PNTFS_VOLUME_DATA_BUFFER;
+struct _N220
+{
+    LARGE_INTEGER VolumeSerialNumber;
+    LARGE_INTEGER NumberSectors;
+    LARGE_INTEGER TotalClusters;
+    LARGE_INTEGER FreeClusters;
+    LARGE_INTEGER TotalReserved;
+    DWORD BytesPerSector;
+    DWORD BytesPerCluster;
+    DWORD BytesPerFileRecordSegment;
+    DWORD ClustersPerFileRecordSegment;
+    LARGE_INTEGER MftValidDataLength;
+    LARGE_INTEGER MftStartLcn;
+    LARGE_INTEGER Mft2StartLcn;
+    LARGE_INTEGER MftZoneStart;
+    LARGE_INTEGER MftZoneEnd;
+}
+alias _N220 NTFS_VOLUME_DATA_BUFFER;
+alias _N220 *PNTFS_VOLUME_DATA_BUFFER;
+//C     typedef struct {
+//C       DWORD ByteCount;
+//C       WORD MajorVersion;
+//C       WORD MinorVersion;
+//C     } NTFS_EXTENDED_VOLUME_DATA,*PNTFS_EXTENDED_VOLUME_DATA;
+struct _N221
+{
+    DWORD ByteCount;
+    WORD MajorVersion;
+    WORD MinorVersion;
+}
+alias _N221 NTFS_EXTENDED_VOLUME_DATA;
+alias _N221 *PNTFS_EXTENDED_VOLUME_DATA;
+//C     typedef struct {
+//C       LARGE_INTEGER StartingLcn;
+//C     } STARTING_LCN_INPUT_BUFFER,*PSTARTING_LCN_INPUT_BUFFER;
+struct _N222
+{
+    LARGE_INTEGER StartingLcn;
+}
+alias _N222 STARTING_LCN_INPUT_BUFFER;
+alias _N222 *PSTARTING_LCN_INPUT_BUFFER;
+//C     typedef struct {
+//C       LARGE_INTEGER StartingLcn;
+//C       LARGE_INTEGER BitmapSize;
+//C       BYTE Buffer[1];
+//C     } VOLUME_BITMAP_BUFFER,*PVOLUME_BITMAP_BUFFER;
+struct _N223
+{
+    LARGE_INTEGER StartingLcn;
+    LARGE_INTEGER BitmapSize;
+    BYTE [1]Buffer;
+}
+alias _N223 VOLUME_BITMAP_BUFFER;
+alias _N223 *PVOLUME_BITMAP_BUFFER;
+//C     typedef struct {
+//C       LARGE_INTEGER StartingVcn;
+//C     } STARTING_VCN_INPUT_BUFFER,*PSTARTING_VCN_INPUT_BUFFER;
+struct _N224
+{
+    LARGE_INTEGER StartingVcn;
+}
+alias _N224 STARTING_VCN_INPUT_BUFFER;
+alias _N224 *PSTARTING_VCN_INPUT_BUFFER;
+//C     typedef struct RETRIEVAL_POINTERS_BUFFER {
+//C       DWORD ExtentCount;
+//C       LARGE_INTEGER StartingVcn;
+//C       struct {
+//C         LARGE_INTEGER NextVcn;
+//C         LARGE_INTEGER Lcn;
+//C       } Extents[1];
+struct _N225
+{
+    LARGE_INTEGER NextVcn;
+    LARGE_INTEGER Lcn;
+}
+//C     } RETRIEVAL_POINTERS_BUFFER,*PRETRIEVAL_POINTERS_BUFFER;
+struct RETRIEVAL_POINTERS_BUFFER
+{
+    DWORD ExtentCount;
+    LARGE_INTEGER StartingVcn;
+    _N225 [1]Extents;
+}
+alias RETRIEVAL_POINTERS_BUFFER *PRETRIEVAL_POINTERS_BUFFER;
+//C     typedef struct {
+//C       LARGE_INTEGER FileReferenceNumber;
+//C     } NTFS_FILE_RECORD_INPUT_BUFFER,*PNTFS_FILE_RECORD_INPUT_BUFFER;
+struct _N226
+{
+    LARGE_INTEGER FileReferenceNumber;
+}
+alias _N226 NTFS_FILE_RECORD_INPUT_BUFFER;
+alias _N226 *PNTFS_FILE_RECORD_INPUT_BUFFER;
+//C     typedef struct {
+//C       LARGE_INTEGER FileReferenceNumber;
+//C       DWORD FileRecordLength;
+//C       BYTE FileRecordBuffer[1];
+//C     } NTFS_FILE_RECORD_OUTPUT_BUFFER,*PNTFS_FILE_RECORD_OUTPUT_BUFFER;
+struct _N227
+{
+    LARGE_INTEGER FileReferenceNumber;
+    DWORD FileRecordLength;
+    BYTE [1]FileRecordBuffer;
+}
+alias _N227 NTFS_FILE_RECORD_OUTPUT_BUFFER;
+alias _N227 *PNTFS_FILE_RECORD_OUTPUT_BUFFER;
+//C     typedef struct {
+//C       HANDLE FileHandle;
+//C       LARGE_INTEGER StartingVcn;
+//C       LARGE_INTEGER StartingLcn;
+//C       DWORD ClusterCount;
+//C     } MOVE_FILE_DATA,*PMOVE_FILE_DATA;
+struct _N228
+{
+    HANDLE FileHandle;
+    LARGE_INTEGER StartingVcn;
+    LARGE_INTEGER StartingLcn;
+    DWORD ClusterCount;
+}
+alias _N228 MOVE_FILE_DATA;
+alias _N228 *PMOVE_FILE_DATA;
+//C     typedef struct _MOVE_FILE_DATA32 {
+//C       UINT32 FileHandle;
+//C       LARGE_INTEGER StartingVcn;
+//C       LARGE_INTEGER StartingLcn;
+//C       DWORD ClusterCount;
+//C     } MOVE_FILE_DATA32,*PMOVE_FILE_DATA32;
+struct _MOVE_FILE_DATA32
+{
+    UINT32 FileHandle;
+    LARGE_INTEGER StartingVcn;
+    LARGE_INTEGER StartingLcn;
+    DWORD ClusterCount;
+}
+alias _MOVE_FILE_DATA32 MOVE_FILE_DATA32;
+alias _MOVE_FILE_DATA32 *PMOVE_FILE_DATA32;
+//C     typedef struct {
+//C       DWORD Restart;
+//C       SID Sid;
+//C     } FIND_BY_SID_DATA,*PFIND_BY_SID_DATA;
+struct _N229
+{
+    DWORD Restart;
+    SID Sid;
+}
+alias _N229 FIND_BY_SID_DATA;
+alias _N229 *PFIND_BY_SID_DATA;
+//C     typedef struct {
+//C       DWORD NextEntryOffset;
+//C       DWORD FileIndex;
+//C       DWORD FileNameLength;
+//C       WCHAR FileName[1];
+//C     } FIND_BY_SID_OUTPUT,*PFIND_BY_SID_OUTPUT;
+struct _N230
+{
+    DWORD NextEntryOffset;
+    DWORD FileIndex;
+    DWORD FileNameLength;
+    WCHAR [1]FileName;
+}
+alias _N230 FIND_BY_SID_OUTPUT;
+alias _N230 *PFIND_BY_SID_OUTPUT;
+//C     typedef struct {
+//C       DWORDLONG StartFileReferenceNumber;
+//C       USN LowUsn;
+//C       USN HighUsn;
+//C     } MFT_ENUM_DATA,*PMFT_ENUM_DATA;
+struct _N231
+{
+    DWORDLONG StartFileReferenceNumber;
+    USN LowUsn;
+    USN HighUsn;
+}
+alias _N231 MFT_ENUM_DATA;
+alias _N231 *PMFT_ENUM_DATA;
+//C     typedef struct {
+//C       DWORDLONG MaximumSize;
+//C       DWORDLONG AllocationDelta;
+//C     } CREATE_USN_JOURNAL_DATA,*PCREATE_USN_JOURNAL_DATA;
+struct _N232
+{
+    DWORDLONG MaximumSize;
+    DWORDLONG AllocationDelta;
+}
+alias _N232 CREATE_USN_JOURNAL_DATA;
+alias _N232 *PCREATE_USN_JOURNAL_DATA;
+//C     typedef struct {
+//C       USN StartUsn;
+//C       DWORD ReasonMask;
+//C       DWORD ReturnOnlyOnClose;
+//C       DWORDLONG Timeout;
+//C       DWORDLONG BytesToWaitFor;
+//C       DWORDLONG UsnJournalID;
+//C     } READ_USN_JOURNAL_DATA,*PREAD_USN_JOURNAL_DATA;
+struct _N233
+{
+    USN StartUsn;
+    DWORD ReasonMask;
+    DWORD ReturnOnlyOnClose;
+    DWORDLONG Timeout;
+    DWORDLONG BytesToWaitFor;
+    DWORDLONG UsnJournalID;
+}
+alias _N233 READ_USN_JOURNAL_DATA;
+alias _N233 *PREAD_USN_JOURNAL_DATA;
+//C     typedef struct {
+//C       DWORD RecordLength;
+//C       WORD MajorVersion;
+//C       WORD MinorVersion;
+//C       DWORDLONG FileReferenceNumber;
+//C       DWORDLONG ParentFileReferenceNumber;
+//C       USN Usn;
+//C       LARGE_INTEGER TimeStamp;
+//C       DWORD Reason;
+//C       DWORD SourceInfo;
+//C       DWORD SecurityId;
+//C       DWORD FileAttributes;
+//C       WORD FileNameLength;
+//C       WORD FileNameOffset;
+//C       WCHAR FileName[1];
+//C     } USN_RECORD,*PUSN_RECORD;
+struct _N234
+{
+    DWORD RecordLength;
+    WORD MajorVersion;
+    WORD MinorVersion;
+    DWORDLONG FileReferenceNumber;
+    DWORDLONG ParentFileReferenceNumber;
+    USN Usn;
+    LARGE_INTEGER TimeStamp;
+    DWORD Reason;
+    DWORD SourceInfo;
+    DWORD SecurityId;
+    DWORD FileAttributes;
+    WORD FileNameLength;
+    WORD FileNameOffset;
+    WCHAR [1]FileName;
+}
+alias _N234 USN_RECORD;
+alias _N234 *PUSN_RECORD;
+//C     typedef struct {
+//C       DWORDLONG UsnJournalID;
+//C       USN FirstUsn;
+//C       USN NextUsn;
+//C       USN LowestValidUsn;
+//C       USN MaxUsn;
+//C       DWORDLONG MaximumSize;
+//C       DWORDLONG AllocationDelta;
+//C     } USN_JOURNAL_DATA,*PUSN_JOURNAL_DATA;
+struct _N235
+{
+    DWORDLONG UsnJournalID;
+    USN FirstUsn;
+    USN NextUsn;
+    USN LowestValidUsn;
+    USN MaxUsn;
+    DWORDLONG MaximumSize;
+    DWORDLONG AllocationDelta;
+}
+alias _N235 USN_JOURNAL_DATA;
+alias _N235 *PUSN_JOURNAL_DATA;
+//C     typedef struct {
+//C       DWORDLONG UsnJournalID;
+//C       DWORD DeleteFlags;
+//C     } DELETE_USN_JOURNAL_DATA,*PDELETE_USN_JOURNAL_DATA;
+struct _N236
+{
+    DWORDLONG UsnJournalID;
+    DWORD DeleteFlags;
+}
+alias _N236 DELETE_USN_JOURNAL_DATA;
+alias _N236 *PDELETE_USN_JOURNAL_DATA;
+//C     typedef struct {
+//C       DWORD UsnSourceInfo;
+//C       HANDLE VolumeHandle;
+//C       DWORD HandleInfo;
+//C     } MARK_HANDLE_INFO,*PMARK_HANDLE_INFO;
+struct _N237
+{
+    DWORD UsnSourceInfo;
+    HANDLE VolumeHandle;
+    DWORD HandleInfo;
+}
+alias _N237 MARK_HANDLE_INFO;
+alias _N237 *PMARK_HANDLE_INFO;
+//C     typedef struct {
+//C       DWORD UsnSourceInfo;
+//C       UINT32 VolumeHandle;
+//C       DWORD HandleInfo;
+//C     } MARK_HANDLE_INFO32,*PMARK_HANDLE_INFO32;
+struct _N238
+{
+    DWORD UsnSourceInfo;
+    UINT32 VolumeHandle;
+    DWORD HandleInfo;
+}
+alias _N238 MARK_HANDLE_INFO32;
+alias _N238 *PMARK_HANDLE_INFO32;
+//C     typedef struct {
+//C       ACCESS_MASK DesiredAccess;
+//C       DWORD SecurityIds[1];
+//C     } BULK_SECURITY_TEST_DATA,*PBULK_SECURITY_TEST_DATA;
+struct _N239
+{
+    ACCESS_MASK DesiredAccess;
+    DWORD [1]SecurityIds;
+}
+alias _N239 BULK_SECURITY_TEST_DATA;
+alias _N239 *PBULK_SECURITY_TEST_DATA;
+//C     typedef struct _FILE_PREFETCH {
+//C       DWORD Type;
+//C       DWORD Count;
+//C       DWORDLONG Prefetch[1];
+//C     } FILE_PREFETCH,*PFILE_PREFETCH;
+struct _FILE_PREFETCH
+{
+    DWORD Type;
+    DWORD Count;
+    DWORDLONG [1]Prefetch;
+}
+alias _FILE_PREFETCH FILE_PREFETCH;
+alias _FILE_PREFETCH *PFILE_PREFETCH;
+//C     typedef struct _FILESYSTEM_STATISTICS {
+//C       WORD FileSystemType;
+//C       WORD Version;
+//C       DWORD SizeOfCompleteStructure;
+//C       DWORD UserFileReads;
+//C       DWORD UserFileReadBytes;
+//C       DWORD UserDiskReads;
+//C       DWORD UserFileWrites;
+//C       DWORD UserFileWriteBytes;
+//C       DWORD UserDiskWrites;
+//C       DWORD MetaDataReads;
+//C       DWORD MetaDataReadBytes;
+//C       DWORD MetaDataDiskReads;
+//C       DWORD MetaDataWrites;
+//C       DWORD MetaDataWriteBytes;
+//C       DWORD MetaDataDiskWrites;
+//C     } FILESYSTEM_STATISTICS,*PFILESYSTEM_STATISTICS;
+struct _FILESYSTEM_STATISTICS
+{
+    WORD FileSystemType;
+    WORD Version;
+    DWORD SizeOfCompleteStructure;
+    DWORD UserFileReads;
+    DWORD UserFileReadBytes;
+    DWORD UserDiskReads;
+    DWORD UserFileWrites;
+    DWORD UserFileWriteBytes;
+    DWORD UserDiskWrites;
+    DWORD MetaDataReads;
+    DWORD MetaDataReadBytes;
+    DWORD MetaDataDiskReads;
+    DWORD MetaDataWrites;
+    DWORD MetaDataWriteBytes;
+    DWORD MetaDataDiskWrites;
+}
+alias _FILESYSTEM_STATISTICS FILESYSTEM_STATISTICS;
+alias _FILESYSTEM_STATISTICS *PFILESYSTEM_STATISTICS;
+//C     typedef struct _FAT_STATISTICS {
+//C       DWORD CreateHits;
+//C       DWORD SuccessfulCreates;
+//C       DWORD FailedCreates;
+//C       DWORD NonCachedReads;
+//C       DWORD NonCachedReadBytes;
+//C       DWORD NonCachedWrites;
+//C       DWORD NonCachedWriteBytes;
+//C       DWORD NonCachedDiskReads;
+//C       DWORD NonCachedDiskWrites;
+//C     } FAT_STATISTICS,*PFAT_STATISTICS;
+struct _FAT_STATISTICS
+{
+    DWORD CreateHits;
+    DWORD SuccessfulCreates;
+    DWORD FailedCreates;
+    DWORD NonCachedReads;
+    DWORD NonCachedReadBytes;
+    DWORD NonCachedWrites;
+    DWORD NonCachedWriteBytes;
+    DWORD NonCachedDiskReads;
+    DWORD NonCachedDiskWrites;
+}
+alias _FAT_STATISTICS FAT_STATISTICS;
+alias _FAT_STATISTICS *PFAT_STATISTICS;
+//C     typedef struct _EXFAT_STATISTICS {
+//C       DWORD CreateHits;
+//C       DWORD SuccessfulCreates;
+//C       DWORD FailedCreates;
+//C       DWORD NonCachedReads;
+//C       DWORD NonCachedReadBytes;
+//C       DWORD NonCachedWrites;
+//C       DWORD NonCachedWriteBytes;
+//C       DWORD NonCachedDiskReads;
+//C       DWORD NonCachedDiskWrites;
+//C     } EXFAT_STATISTICS,*PEXFAT_STATISTICS;
+struct _EXFAT_STATISTICS
+{
+    DWORD CreateHits;
+    DWORD SuccessfulCreates;
+    DWORD FailedCreates;
+    DWORD NonCachedReads;
+    DWORD NonCachedReadBytes;
+    DWORD NonCachedWrites;
+    DWORD NonCachedWriteBytes;
+    DWORD NonCachedDiskReads;
+    DWORD NonCachedDiskWrites;
+}
+alias _EXFAT_STATISTICS EXFAT_STATISTICS;
+alias _EXFAT_STATISTICS *PEXFAT_STATISTICS;
+//C     typedef struct _NTFS_STATISTICS {
+//C       DWORD LogFileFullExceptions;
+//C       DWORD OtherExceptions;
+//C       DWORD MftReads;
+//C       DWORD MftReadBytes;
+//C       DWORD MftWrites;
+//C       DWORD MftWriteBytes;
+//C       struct {
+//C         WORD Write;
+//C         WORD Create;
+//C         WORD SetInfo;
+//C         WORD Flush;
+//C       } MftWritesUserLevel;
+struct _N240
+{
+    WORD Write;
+    WORD Create;
+    WORD SetInfo;
+    WORD Flush;
+}
+//C       WORD MftWritesFlushForLogFileFull;
+//C       WORD MftWritesLazyWriter;
+//C       WORD MftWritesUserRequest;
+//C       DWORD Mft2Writes;
+//C       DWORD Mft2WriteBytes;
+//C       struct {
+//C         WORD Write;
+//C         WORD Create;
+//C         WORD SetInfo;
+//C         WORD Flush;
+//C       } Mft2WritesUserLevel;
+struct _N241
+{
+    WORD Write;
+    WORD Create;
+    WORD SetInfo;
+    WORD Flush;
+}
+//C       WORD Mft2WritesFlushForLogFileFull;
+//C       WORD Mft2WritesLazyWriter;
+//C       WORD Mft2WritesUserRequest;
+//C       DWORD RootIndexReads;
+//C       DWORD RootIndexReadBytes;
+//C       DWORD RootIndexWrites;
+//C       DWORD RootIndexWriteBytes;
+//C       DWORD BitmapReads;
+//C       DWORD BitmapReadBytes;
+//C       DWORD BitmapWrites;
+//C       DWORD BitmapWriteBytes;
+//C       WORD BitmapWritesFlushForLogFileFull;
+//C       WORD BitmapWritesLazyWriter;
+//C       WORD BitmapWritesUserRequest;
+//C       struct {
+//C         WORD Write;
+//C         WORD Create;
+//C         WORD SetInfo;
+//C       } BitmapWritesUserLevel;
+struct _N242
+{
+    WORD Write;
+    WORD Create;
+    WORD SetInfo;
+}
+//C       DWORD MftBitmapReads;
+//C       DWORD MftBitmapReadBytes;
+//C       DWORD MftBitmapWrites;
+//C       DWORD MftBitmapWriteBytes;
+//C       WORD MftBitmapWritesFlushForLogFileFull;
+//C       WORD MftBitmapWritesLazyWriter;
+//C       WORD MftBitmapWritesUserRequest;
+//C       struct {
+//C         WORD Write;
+//C         WORD Create;
+//C         WORD SetInfo;
+//C         WORD Flush;
+//C       } MftBitmapWritesUserLevel;
+struct _N243
+{
+    WORD Write;
+    WORD Create;
+    WORD SetInfo;
+    WORD Flush;
+}
+//C       DWORD UserIndexReads;
+//C       DWORD UserIndexReadBytes;
+//C       DWORD UserIndexWrites;
+//C       DWORD UserIndexWriteBytes;
+//C       DWORD LogFileReads;
+//C       DWORD LogFileReadBytes;
+//C       DWORD LogFileWrites;
+//C       DWORD LogFileWriteBytes;
+//C       struct {
+//C         DWORD Calls;
+//C         DWORD Clusters;
+//C         DWORD Hints;
+//C         DWORD RunsReturned;
+//C         DWORD HintsHonored;
+//C         DWORD HintsClusters;
+//C         DWORD Cache;
+//C         DWORD CacheClusters;
+//C         DWORD CacheMiss;
+//C         DWORD CacheMissClusters;
+//C       } Allocate;
+struct _N244
+{
+    DWORD Calls;
+    DWORD Clusters;
+    DWORD Hints;
+    DWORD RunsReturned;
+    DWORD HintsHonored;
+    DWORD HintsClusters;
+    DWORD Cache;
+    DWORD CacheClusters;
+    DWORD CacheMiss;
+    DWORD CacheMissClusters;
+}
+//C     } NTFS_STATISTICS,*PNTFS_STATISTICS;
+struct _NTFS_STATISTICS
+{
+    DWORD LogFileFullExceptions;
+    DWORD OtherExceptions;
+    DWORD MftReads;
+    DWORD MftReadBytes;
+    DWORD MftWrites;
+    DWORD MftWriteBytes;
+    _N240 MftWritesUserLevel;
+    WORD MftWritesFlushForLogFileFull;
+    WORD MftWritesLazyWriter;
+    WORD MftWritesUserRequest;
+    DWORD Mft2Writes;
+    DWORD Mft2WriteBytes;
+    _N241 Mft2WritesUserLevel;
+    WORD Mft2WritesFlushForLogFileFull;
+    WORD Mft2WritesLazyWriter;
+    WORD Mft2WritesUserRequest;
+    DWORD RootIndexReads;
+    DWORD RootIndexReadBytes;
+    DWORD RootIndexWrites;
+    DWORD RootIndexWriteBytes;
+    DWORD BitmapReads;
+    DWORD BitmapReadBytes;
+    DWORD BitmapWrites;
+    DWORD BitmapWriteBytes;
+    WORD BitmapWritesFlushForLogFileFull;
+    WORD BitmapWritesLazyWriter;
+    WORD BitmapWritesUserRequest;
+    _N242 BitmapWritesUserLevel;
+    DWORD MftBitmapReads;
+    DWORD MftBitmapReadBytes;
+    DWORD MftBitmapWrites;
+    DWORD MftBitmapWriteBytes;
+    WORD MftBitmapWritesFlushForLogFileFull;
+    WORD MftBitmapWritesLazyWriter;
+    WORD MftBitmapWritesUserRequest;
+    _N243 MftBitmapWritesUserLevel;
+    DWORD UserIndexReads;
+    DWORD UserIndexReadBytes;
+    DWORD UserIndexWrites;
+    DWORD UserIndexWriteBytes;
+    DWORD LogFileReads;
+    DWORD LogFileReadBytes;
+    DWORD LogFileWrites;
+    DWORD LogFileWriteBytes;
+    _N244 Allocate;
+}
+alias _NTFS_STATISTICS NTFS_STATISTICS;
+alias _NTFS_STATISTICS *PNTFS_STATISTICS;
+//C     typedef struct _FILE_OBJECTID_BUFFER {
+//C       BYTE ObjectId[16];
+//C        union {
+//C          struct {
+//C           BYTE BirthVolumeId[16];
+//C           BYTE BirthObjectId[16];
+//C           BYTE DomainId[16];
+//C         } ;
+struct _N246
+{
+    BYTE [16]BirthVolumeId;
+    BYTE [16]BirthObjectId;
+    BYTE [16]DomainId;
+}
+//C         BYTE ExtendedInfo[48];
+//C       } ;
+union _N245
+{
+    BYTE [16]BirthVolumeId;
+    BYTE [16]BirthObjectId;
+    BYTE [16]DomainId;
+    BYTE [48]ExtendedInfo;
+}
+//C     } FILE_OBJECTID_BUFFER,*PFILE_OBJECTID_BUFFER;
+struct _FILE_OBJECTID_BUFFER
+{
+    BYTE [16]ObjectId;
+    BYTE [16]BirthVolumeId;
+    BYTE [16]BirthObjectId;
+    BYTE [16]DomainId;
+    BYTE [48]ExtendedInfo;
+}
+alias _FILE_OBJECTID_BUFFER FILE_OBJECTID_BUFFER;
+alias _FILE_OBJECTID_BUFFER *PFILE_OBJECTID_BUFFER;
+//C     typedef struct _FILE_SET_SPARSE_BUFFER {
+//C       BOOLEAN SetSparse;
+//C     } FILE_SET_SPARSE_BUFFER,*PFILE_SET_SPARSE_BUFFER;
+struct _FILE_SET_SPARSE_BUFFER
+{
+    BOOLEAN SetSparse;
+}
+alias _FILE_SET_SPARSE_BUFFER FILE_SET_SPARSE_BUFFER;
+alias _FILE_SET_SPARSE_BUFFER *PFILE_SET_SPARSE_BUFFER;
+//C     typedef struct _FILE_ZERO_DATA_INFORMATION {
+//C       LARGE_INTEGER FileOffset;
+//C       LARGE_INTEGER BeyondFinalZero;
+//C     } FILE_ZERO_DATA_INFORMATION,*PFILE_ZERO_DATA_INFORMATION;
+struct _FILE_ZERO_DATA_INFORMATION
+{
+    LARGE_INTEGER FileOffset;
+    LARGE_INTEGER BeyondFinalZero;
+}
+alias _FILE_ZERO_DATA_INFORMATION FILE_ZERO_DATA_INFORMATION;
+alias _FILE_ZERO_DATA_INFORMATION *PFILE_ZERO_DATA_INFORMATION;
+//C     typedef struct _FILE_ALLOCATED_RANGE_BUFFER {
+//C       LARGE_INTEGER FileOffset;
+//C       LARGE_INTEGER Length;
+//C     } FILE_ALLOCATED_RANGE_BUFFER,*PFILE_ALLOCATED_RANGE_BUFFER;
+struct _FILE_ALLOCATED_RANGE_BUFFER
+{
+    LARGE_INTEGER FileOffset;
+    LARGE_INTEGER Length;
+}
+alias _FILE_ALLOCATED_RANGE_BUFFER FILE_ALLOCATED_RANGE_BUFFER;
+alias _FILE_ALLOCATED_RANGE_BUFFER *PFILE_ALLOCATED_RANGE_BUFFER;
+//C     typedef struct _ENCRYPTION_BUFFER {
+//C       DWORD EncryptionOperation;
+//C       BYTE Private[1];
+//C     } ENCRYPTION_BUFFER,*PENCRYPTION_BUFFER;
+struct _ENCRYPTION_BUFFER
+{
+    DWORD EncryptionOperation;
+    BYTE [1]Private;
+}
+alias _ENCRYPTION_BUFFER ENCRYPTION_BUFFER;
+alias _ENCRYPTION_BUFFER *PENCRYPTION_BUFFER;
+//C     typedef struct _DECRYPTION_STATUS_BUFFER {
+//C       BOOLEAN NoEncryptedStreams;
+//C     } DECRYPTION_STATUS_BUFFER,*PDECRYPTION_STATUS_BUFFER;
+struct _DECRYPTION_STATUS_BUFFER
+{
+    BOOLEAN NoEncryptedStreams;
+}
+alias _DECRYPTION_STATUS_BUFFER DECRYPTION_STATUS_BUFFER;
+alias _DECRYPTION_STATUS_BUFFER *PDECRYPTION_STATUS_BUFFER;
+//C     typedef struct _REQUEST_RAW_ENCRYPTED_DATA {
+//C       LONGLONG FileOffset;
+//C       DWORD Length;
+//C     } REQUEST_RAW_ENCRYPTED_DATA,*PREQUEST_RAW_ENCRYPTED_DATA;
+struct _REQUEST_RAW_ENCRYPTED_DATA
+{
+    LONGLONG FileOffset;
+    DWORD Length;
+}
+alias _REQUEST_RAW_ENCRYPTED_DATA REQUEST_RAW_ENCRYPTED_DATA;
+alias _REQUEST_RAW_ENCRYPTED_DATA *PREQUEST_RAW_ENCRYPTED_DATA;
+//C     typedef struct _ENCRYPTED_DATA_INFO {
+//C       DWORDLONG StartingFileOffset;
+//C       DWORD OutputBufferOffset;
+//C       DWORD BytesWithinFileSize;
+//C       DWORD BytesWithinValidDataLength;
+//C       WORD CompressionFormat;
+//C       BYTE DataUnitShift;
+//C       BYTE ChunkShift;
+//C       BYTE ClusterShift;
+//C       BYTE EncryptionFormat;
+//C       WORD NumberOfDataBlocks;
+//C       DWORD DataBlockSize[1];
+//C     } ENCRYPTED_DATA_INFO;
+struct _ENCRYPTED_DATA_INFO
+{
+    DWORDLONG StartingFileOffset;
+    DWORD OutputBufferOffset;
+    DWORD BytesWithinFileSize;
+    DWORD BytesWithinValidDataLength;
+    WORD CompressionFormat;
+    BYTE DataUnitShift;
+    BYTE ChunkShift;
+    BYTE ClusterShift;
+    BYTE EncryptionFormat;
+    WORD NumberOfDataBlocks;
+    DWORD [1]DataBlockSize;
+}
+alias _ENCRYPTED_DATA_INFO ENCRYPTED_DATA_INFO;
+//C     typedef ENCRYPTED_DATA_INFO *PENCRYPTED_DATA_INFO;
+alias ENCRYPTED_DATA_INFO *PENCRYPTED_DATA_INFO;
+//C     typedef struct _PLEX_READ_DATA_REQUEST {
+//C       LARGE_INTEGER ByteOffset;
+//C       DWORD ByteLength;
+//C       DWORD PlexNumber;
+//C     } PLEX_READ_DATA_REQUEST,*PPLEX_READ_DATA_REQUEST;
+struct _PLEX_READ_DATA_REQUEST
+{
+    LARGE_INTEGER ByteOffset;
+    DWORD ByteLength;
+    DWORD PlexNumber;
+}
+alias _PLEX_READ_DATA_REQUEST PLEX_READ_DATA_REQUEST;
+alias _PLEX_READ_DATA_REQUEST *PPLEX_READ_DATA_REQUEST;
+//C     typedef struct _SI_COPYFILE {
+//C       DWORD SourceFileNameLength;
+//C       DWORD DestinationFileNameLength;
+//C       DWORD Flags;
+//C       WCHAR FileNameBuffer[1];
+//C     } SI_COPYFILE,*PSI_COPYFILE;
+struct _SI_COPYFILE
+{
+    DWORD SourceFileNameLength;
+    DWORD DestinationFileNameLength;
+    DWORD Flags;
+    WCHAR [1]FileNameBuffer;
+}
+alias _SI_COPYFILE SI_COPYFILE;
+alias _SI_COPYFILE *PSI_COPYFILE;
+//C     typedef struct _STORAGE_DESCRIPTOR_HEADER {
+//C       DWORD Version;
+//C       DWORD Size;
+//C     } STORAGE_DESCRIPTOR_HEADER,*PSTORAGE_DESCRIPTOR_HEADER;
+struct _STORAGE_DESCRIPTOR_HEADER
+{
+    DWORD Version;
+    DWORD Size;
+}
+alias _STORAGE_DESCRIPTOR_HEADER STORAGE_DESCRIPTOR_HEADER;
+alias _STORAGE_DESCRIPTOR_HEADER *PSTORAGE_DESCRIPTOR_HEADER;
+//C     typedef enum _STORAGE_PROPERTY_ID {
+//C       StorageDeviceProperty = 0,
+//C       StorageAdapterProperty = 1,
+//C       StorageDeviceIdProperty = 2,
+//C       StorageDeviceUniqueIdProperty = 3,
+//C       StorageDeviceWriteCacheProperty = 4,
+//C       StorageMiniportProperty = 5,
+//C       StorageAccessAlignmentProperty = 6,
+//C       StorageDeviceSeekPenaltyProperty = 7,
+//C       StorageDeviceTrimProperty = 8
+//C     } STORAGE_PROPERTY_ID,*PSTORAGE_PROPERTY_ID;
+enum _STORAGE_PROPERTY_ID
+{
+    StorageDeviceProperty,
+    StorageAdapterProperty,
+    StorageDeviceIdProperty,
+    StorageDeviceUniqueIdProperty,
+    StorageDeviceWriteCacheProperty,
+    StorageMiniportProperty,
+    StorageAccessAlignmentProperty,
+    StorageDeviceSeekPenaltyProperty,
+    StorageDeviceTrimProperty,
+}
+alias _STORAGE_PROPERTY_ID STORAGE_PROPERTY_ID;
+alias _STORAGE_PROPERTY_ID *PSTORAGE_PROPERTY_ID;
+//C     typedef enum _STORAGE_QUERY_TYPE {
+//C       PropertyStandardQuery = 0,
+//C       PropertyExistsQuery = 1,
+//C       PropertyMaskQuery = 2,
+//C       PropertyQueryMaxDefined = 3
+//C     } STORAGE_QUERY_TYPE,*PSTORAGE_QUERY_TYPE;
+enum _STORAGE_QUERY_TYPE
+{
+    PropertyStandardQuery,
+    PropertyExistsQuery,
+    PropertyMaskQuery,
+    PropertyQueryMaxDefined,
+}
+alias _STORAGE_QUERY_TYPE STORAGE_QUERY_TYPE;
+alias _STORAGE_QUERY_TYPE *PSTORAGE_QUERY_TYPE;
+//C     typedef struct _STORAGE_PROPERTY_QUERY {
+//C       STORAGE_PROPERTY_ID PropertyId;
+//C       STORAGE_QUERY_TYPE QueryType;
+//C       BYTE AdditionalParameters[1];
+//C     } STORAGE_PROPERTY_QUERY,*PSTORAGE_PROPERTY_QUERY;
+struct _STORAGE_PROPERTY_QUERY
+{
+    STORAGE_PROPERTY_ID PropertyId;
+    STORAGE_QUERY_TYPE QueryType;
+    BYTE [1]AdditionalParameters;
+}
+alias _STORAGE_PROPERTY_QUERY STORAGE_PROPERTY_QUERY;
+alias _STORAGE_PROPERTY_QUERY *PSTORAGE_PROPERTY_QUERY;
+//C     typedef struct _STORAGE_DEVICE_DESCRIPTOR {
+//C       DWORD Version;
+//C       DWORD Size;
+//C       BYTE DeviceType;
+//C       BYTE DeviceTypeModifier;
+//C       BOOLEAN RemovableMedia;
+//C       BOOLEAN CommandQueueing;
+//C       DWORD VendorIdOffset;
+//C       DWORD ProductIdOffset;
+//C       DWORD ProductRevisionOffset;
+//C       DWORD SerialNumberOffset;
+//C       STORAGE_BUS_TYPE BusType;
+//C       DWORD RawPropertiesLength;
+//C       BYTE RawDeviceProperties[1];
+//C     } STORAGE_DEVICE_DESCRIPTOR,*PSTORAGE_DEVICE_DESCRIPTOR;
+struct _STORAGE_DEVICE_DESCRIPTOR
+{
+    DWORD Version;
+    DWORD Size;
+    BYTE DeviceType;
+    BYTE DeviceTypeModifier;
+    BOOLEAN RemovableMedia;
+    BOOLEAN CommandQueueing;
+    DWORD VendorIdOffset;
+    DWORD ProductIdOffset;
+    DWORD ProductRevisionOffset;
+    DWORD SerialNumberOffset;
+    STORAGE_BUS_TYPE BusType;
+    DWORD RawPropertiesLength;
+    BYTE [1]RawDeviceProperties;
+}
+alias _STORAGE_DEVICE_DESCRIPTOR STORAGE_DEVICE_DESCRIPTOR;
+alias _STORAGE_DEVICE_DESCRIPTOR *PSTORAGE_DEVICE_DESCRIPTOR;
+//C     typedef struct _STORAGE_ADAPTER_DESCRIPTOR {
+//C       DWORD Version;
+//C       DWORD Size;
+//C       DWORD MaximumTransferLength;
+//C       DWORD MaximumPhysicalPages;
+//C       DWORD AlignmentMask;
+//C       BOOLEAN AdapterUsesPio;
+//C       BOOLEAN AdapterScansDown;
+//C       BOOLEAN CommandQueueing;
+//C       BOOLEAN AcceleratedTransfer;
+//C       BYTE BusType;
+//C       WORD BusMajorVersion;
+//C       WORD BusMinorVersion;
+//C     } STORAGE_ADAPTER_DESCRIPTOR,*PSTORAGE_ADAPTER_DESCRIPTOR;
+struct _STORAGE_ADAPTER_DESCRIPTOR
+{
+    DWORD Version;
+    DWORD Size;
+    DWORD MaximumTransferLength;
+    DWORD MaximumPhysicalPages;
+    DWORD AlignmentMask;
+    BOOLEAN AdapterUsesPio;
+    BOOLEAN AdapterScansDown;
+    BOOLEAN CommandQueueing;
+    BOOLEAN AcceleratedTransfer;
+    BYTE BusType;
+    WORD BusMajorVersion;
+    WORD BusMinorVersion;
+}
+alias _STORAGE_ADAPTER_DESCRIPTOR STORAGE_ADAPTER_DESCRIPTOR;
+alias _STORAGE_ADAPTER_DESCRIPTOR *PSTORAGE_ADAPTER_DESCRIPTOR;
+//C     typedef struct _STORAGE_DEVICE_ID_DESCRIPTOR {
+//C       DWORD Version;
+//C       DWORD Size;
+//C       DWORD NumberOfIdentifiers;
+//C       BYTE Identifiers[1];
+//C     } STORAGE_DEVICE_ID_DESCRIPTOR,*PSTORAGE_DEVICE_ID_DESCRIPTOR;
+struct _STORAGE_DEVICE_ID_DESCRIPTOR
+{
+    DWORD Version;
+    DWORD Size;
+    DWORD NumberOfIdentifiers;
+    BYTE [1]Identifiers;
+}
+alias _STORAGE_DEVICE_ID_DESCRIPTOR STORAGE_DEVICE_ID_DESCRIPTOR;
+alias _STORAGE_DEVICE_ID_DESCRIPTOR *PSTORAGE_DEVICE_ID_DESCRIPTOR;
+//C     typedef struct _VOLUME_GET_GPT_ATTRIBUTES_INFORMATION {
+//C       ULONGLONG GptAttributes;
+//C     } VOLUME_GET_GPT_ATTRIBUTES_INFORMATION,*PVOLUME_GET_GPT_ATTRIBUTES_INFORMATION;
+struct _VOLUME_GET_GPT_ATTRIBUTES_INFORMATION
+{
+    ULONGLONG GptAttributes;
+}
+alias _VOLUME_GET_GPT_ATTRIBUTES_INFORMATION VOLUME_GET_GPT_ATTRIBUTES_INFORMATION;
+alias _VOLUME_GET_GPT_ATTRIBUTES_INFORMATION *PVOLUME_GET_GPT_ATTRIBUTES_INFORMATION;
+//C     typedef struct _DISK_EXTENT {
+//C       DWORD DiskNumber;
+//C       LARGE_INTEGER StartingOffset;
+//C       LARGE_INTEGER ExtentLength;
+//C     } DISK_EXTENT,*PDISK_EXTENT;
+struct _DISK_EXTENT
+{
+    DWORD DiskNumber;
+    LARGE_INTEGER StartingOffset;
+    LARGE_INTEGER ExtentLength;
+}
+alias _DISK_EXTENT DISK_EXTENT;
+alias _DISK_EXTENT *PDISK_EXTENT;
+//C     typedef struct _VOLUME_DISK_EXTENTS {
+//C       DWORD NumberOfDiskExtents;
+//C       DISK_EXTENT Extents[1];
+//C     } VOLUME_DISK_EXTENTS,*PVOLUME_DISK_EXTENTS;
+struct _VOLUME_DISK_EXTENTS
+{
+    DWORD NumberOfDiskExtents;
+    DISK_EXTENT [1]Extents;
+}
+alias _VOLUME_DISK_EXTENTS VOLUME_DISK_EXTENTS;
+alias _VOLUME_DISK_EXTENTS *PVOLUME_DISK_EXTENTS;
+//C       typedef WORD UWORD;
+alias WORD UWORD;
+//C       typedef struct _SCARD_IO_REQUEST {
+//C         DWORD dwProtocol;
+//C         DWORD cbPciLength;
+//C       } SCARD_IO_REQUEST,*PSCARD_IO_REQUEST,*LPSCARD_IO_REQUEST;
+struct _SCARD_IO_REQUEST
+{
+    DWORD dwProtocol;
+    DWORD cbPciLength;
+}
+alias _SCARD_IO_REQUEST SCARD_IO_REQUEST;
+alias _SCARD_IO_REQUEST *PSCARD_IO_REQUEST;
+alias _SCARD_IO_REQUEST *LPSCARD_IO_REQUEST;
+//C       typedef const SCARD_IO_REQUEST *LPCSCARD_IO_REQUEST;
+alias SCARD_IO_REQUEST *LPCSCARD_IO_REQUEST;
+//C       typedef struct {
+//C         BYTE
+//C           bCla,bIns,bP1,bP2,bP3;
+//C       } SCARD_T0_COMMAND,*LPSCARD_T0_COMMAND;
+struct _N247
+{
+    BYTE bCla;
+    BYTE bIns;
+    BYTE bP1;
+    BYTE bP2;
+    BYTE bP3;
+}
+alias _N247 SCARD_T0_COMMAND;
+alias _N247 *LPSCARD_T0_COMMAND;
+//C       typedef struct {
+//C         SCARD_IO_REQUEST ioRequest;
+//C         BYTE bSw1,bSw2;
+//C          union {
+//C           SCARD_T0_COMMAND CmdBytes;
+//C           BYTE rgbHeader[5];
+//C         };
+union _N249
+{
+    SCARD_T0_COMMAND CmdBytes;
+    BYTE [5]rgbHeader;
+}
+//C       } SCARD_T0_REQUEST;
+struct _N248
+{
+    SCARD_IO_REQUEST ioRequest;
+    BYTE bSw1;
+    BYTE bSw2;
+    SCARD_T0_COMMAND CmdBytes;
+    BYTE [5]rgbHeader;
+}
+alias _N248 SCARD_T0_REQUEST;
+//C       typedef SCARD_T0_REQUEST *PSCARD_T0_REQUEST,*LPSCARD_T0_REQUEST;
+alias SCARD_T0_REQUEST *PSCARD_T0_REQUEST;
+alias SCARD_T0_REQUEST *LPSCARD_T0_REQUEST;
+//C       typedef struct {
+//C         SCARD_IO_REQUEST ioRequest;
+//C       } SCARD_T1_REQUEST;
+struct _N250
+{
+    SCARD_IO_REQUEST ioRequest;
+}
+alias _N250 SCARD_T1_REQUEST;
+//C       typedef SCARD_T1_REQUEST *PSCARD_T1_REQUEST,*LPSCARD_T1_REQUEST;
+alias SCARD_T1_REQUEST *PSCARD_T1_REQUEST;
+alias SCARD_T1_REQUEST *LPSCARD_T1_REQUEST;
+//C       typedef const BYTE *LPCBYTE;
+alias BYTE *LPCBYTE;
+//C        extern const SCARD_IO_REQUEST g_rgSCardT0Pci,g_rgSCardT1Pci,g_rgSCardRawPci;
+extern const SCARD_IO_REQUEST g_rgSCardT0Pci;
+extern const SCARD_IO_REQUEST g_rgSCardT1Pci;
+extern const SCARD_IO_REQUEST g_rgSCardRawPci;
+//C       typedef ULONG_PTR SCARDCONTEXT;
+alias ULONG_PTR SCARDCONTEXT;
+//C       typedef SCARDCONTEXT *PSCARDCONTEXT,*LPSCARDCONTEXT;
+alias SCARDCONTEXT *PSCARDCONTEXT;
+alias SCARDCONTEXT *LPSCARDCONTEXT;
+//C       typedef ULONG_PTR SCARDHANDLE;
+alias ULONG_PTR SCARDHANDLE;
+//C       typedef SCARDHANDLE *PSCARDHANDLE,*LPSCARDHANDLE;
+alias SCARDHANDLE *PSCARDHANDLE;
+alias SCARDHANDLE *LPSCARDHANDLE;
+//C       extern LONG SCardEstablishContext(DWORD dwScope,LPCVOID pvReserved1,LPCVOID pvReserved2,LPSCARDCONTEXT phContext);
+LONG  SCardEstablishContext(DWORD dwScope, LPCVOID pvReserved1, LPCVOID pvReserved2, LPSCARDCONTEXT phContext);
+//C       extern LONG SCardReleaseContext(SCARDCONTEXT hContext);
+LONG  SCardReleaseContext(SCARDCONTEXT hContext);
+//C       extern LONG SCardIsValidContext(SCARDCONTEXT hContext);
+LONG  SCardIsValidContext(SCARDCONTEXT hContext);
+//C       extern LONG SCardListReaderGroupsA(SCARDCONTEXT hContext,LPSTR mszGroups,LPDWORD pcchGroups);
+LONG  SCardListReaderGroupsA(SCARDCONTEXT hContext, LPSTR mszGroups, LPDWORD pcchGroups);
+//C       extern LONG SCardListReaderGroupsW(SCARDCONTEXT hContext,LPWSTR mszGroups,LPDWORD pcchGroups);
+LONG  SCardListReaderGroupsW(SCARDCONTEXT hContext, LPWSTR mszGroups, LPDWORD pcchGroups);
+//C       extern LONG SCardListReadersA(SCARDCONTEXT hContext,LPCSTR mszGroups,LPSTR mszReaders,LPDWORD pcchReaders);
+LONG  SCardListReadersA(SCARDCONTEXT hContext, LPCSTR mszGroups, LPSTR mszReaders, LPDWORD pcchReaders);
+//C       extern LONG SCardListReadersW(SCARDCONTEXT hContext,LPCWSTR mszGroups,LPWSTR mszReaders,LPDWORD pcchReaders);
+LONG  SCardListReadersW(SCARDCONTEXT hContext, LPCWSTR mszGroups, LPWSTR mszReaders, LPDWORD pcchReaders);
+//C       extern LONG SCardListCardsA(SCARDCONTEXT hContext,LPCBYTE pbAtr,LPCGUID rgquidInterfaces,DWORD cguidInterfaceCount,LPSTR mszCards,LPDWORD pcchCards);
+LONG  SCardListCardsA(SCARDCONTEXT hContext, LPCBYTE pbAtr, LPCGUID rgquidInterfaces, DWORD cguidInterfaceCount, LPSTR mszCards, LPDWORD pcchCards);
+//C       extern LONG SCardListCardsW(SCARDCONTEXT hContext,LPCBYTE pbAtr,LPCGUID rgquidInterfaces,DWORD cguidInterfaceCount,LPWSTR mszCards,LPDWORD pcchCards);
+LONG  SCardListCardsW(SCARDCONTEXT hContext, LPCBYTE pbAtr, LPCGUID rgquidInterfaces, DWORD cguidInterfaceCount, LPWSTR mszCards, LPDWORD pcchCards);
+//C       extern LONG SCardListInterfacesA(SCARDCONTEXT hContext,LPCSTR szCard,LPGUID pguidInterfaces,LPDWORD pcguidInterfaces);
+LONG  SCardListInterfacesA(SCARDCONTEXT hContext, LPCSTR szCard, LPGUID pguidInterfaces, LPDWORD pcguidInterfaces);
+//C       extern LONG SCardListInterfacesW(SCARDCONTEXT hContext,LPCWSTR szCard,LPGUID pguidInterfaces,LPDWORD pcguidInterfaces);
+LONG  SCardListInterfacesW(SCARDCONTEXT hContext, LPCWSTR szCard, LPGUID pguidInterfaces, LPDWORD pcguidInterfaces);
+//C       extern LONG SCardGetProviderIdA(SCARDCONTEXT hContext,LPCSTR szCard,LPGUID pguidProviderId);
+LONG  SCardGetProviderIdA(SCARDCONTEXT hContext, LPCSTR szCard, LPGUID pguidProviderId);
+//C       extern LONG SCardGetProviderIdW(SCARDCONTEXT hContext,LPCWSTR szCard,LPGUID pguidProviderId);
+LONG  SCardGetProviderIdW(SCARDCONTEXT hContext, LPCWSTR szCard, LPGUID pguidProviderId);
+//C       extern LONG SCardGetCardTypeProviderNameA(SCARDCONTEXT hContext,LPCSTR szCardName,DWORD dwProviderId,LPSTR szProvider,LPDWORD pcchProvider);
+LONG  SCardGetCardTypeProviderNameA(SCARDCONTEXT hContext, LPCSTR szCardName, DWORD dwProviderId, LPSTR szProvider, LPDWORD pcchProvider);
+//C       extern LONG SCardGetCardTypeProviderNameW(SCARDCONTEXT hContext,LPCWSTR szCardName,DWORD dwProviderId,LPWSTR szProvider,LPDWORD pcchProvider);
+LONG  SCardGetCardTypeProviderNameW(SCARDCONTEXT hContext, LPCWSTR szCardName, DWORD dwProviderId, LPWSTR szProvider, LPDWORD pcchProvider);
+//C       extern LONG SCardIntroduceReaderGroupA(SCARDCONTEXT hContext,LPCSTR szGroupName);
+LONG  SCardIntroduceReaderGroupA(SCARDCONTEXT hContext, LPCSTR szGroupName);
+//C       extern LONG SCardIntroduceReaderGroupW(SCARDCONTEXT hContext,LPCWSTR szGroupName);
+LONG  SCardIntroduceReaderGroupW(SCARDCONTEXT hContext, LPCWSTR szGroupName);
+//C       extern LONG SCardForgetReaderGroupA(SCARDCONTEXT hContext,LPCSTR szGroupName);
+LONG  SCardForgetReaderGroupA(SCARDCONTEXT hContext, LPCSTR szGroupName);
+//C       extern LONG SCardForgetReaderGroupW(SCARDCONTEXT hContext,LPCWSTR szGroupName);
+LONG  SCardForgetReaderGroupW(SCARDCONTEXT hContext, LPCWSTR szGroupName);
+//C       extern LONG SCardIntroduceReaderA(SCARDCONTEXT hContext,LPCSTR szReaderName,LPCSTR szDeviceName);
+LONG  SCardIntroduceReaderA(SCARDCONTEXT hContext, LPCSTR szReaderName, LPCSTR szDeviceName);
+//C       extern LONG SCardIntroduceReaderW(SCARDCONTEXT hContext,LPCWSTR szReaderName,LPCWSTR szDeviceName);
+LONG  SCardIntroduceReaderW(SCARDCONTEXT hContext, LPCWSTR szReaderName, LPCWSTR szDeviceName);
+//C       extern LONG SCardForgetReaderA(SCARDCONTEXT hContext,LPCSTR szReaderName);
+LONG  SCardForgetReaderA(SCARDCONTEXT hContext, LPCSTR szReaderName);
+//C       extern LONG SCardForgetReaderW(SCARDCONTEXT hContext,LPCWSTR szReaderName);
+LONG  SCardForgetReaderW(SCARDCONTEXT hContext, LPCWSTR szReaderName);
+//C       extern LONG SCardAddReaderToGroupA(SCARDCONTEXT hContext,LPCSTR szReaderName,LPCSTR szGroupName);
+LONG  SCardAddReaderToGroupA(SCARDCONTEXT hContext, LPCSTR szReaderName, LPCSTR szGroupName);
+//C       extern LONG SCardAddReaderToGroupW(SCARDCONTEXT hContext,LPCWSTR szReaderName,LPCWSTR szGroupName);
+LONG  SCardAddReaderToGroupW(SCARDCONTEXT hContext, LPCWSTR szReaderName, LPCWSTR szGroupName);
+//C       extern LONG SCardRemoveReaderFromGroupA(SCARDCONTEXT hContext,LPCSTR szReaderName,LPCSTR szGroupName);
+LONG  SCardRemoveReaderFromGroupA(SCARDCONTEXT hContext, LPCSTR szReaderName, LPCSTR szGroupName);
+//C       extern LONG SCardRemoveReaderFromGroupW(SCARDCONTEXT hContext,LPCWSTR szReaderName,LPCWSTR szGroupName);
+LONG  SCardRemoveReaderFromGroupW(SCARDCONTEXT hContext, LPCWSTR szReaderName, LPCWSTR szGroupName);
+//C       extern LONG SCardIntroduceCardTypeA(SCARDCONTEXT hContext,LPCSTR szCardName,LPCGUID pguidPrimaryProvider,LPCGUID rgguidInterfaces,DWORD dwInterfaceCount,LPCBYTE pbAtr,LPCBYTE pbAtrMask,DWORD cbAtrLen);
+LONG  SCardIntroduceCardTypeA(SCARDCONTEXT hContext, LPCSTR szCardName, LPCGUID pguidPrimaryProvider, LPCGUID rgguidInterfaces, DWORD dwInterfaceCount, LPCBYTE pbAtr, LPCBYTE pbAtrMask, DWORD cbAtrLen);
+//C       extern LONG SCardIntroduceCardTypeW(SCARDCONTEXT hContext,LPCWSTR szCardName,LPCGUID pguidPrimaryProvider,LPCGUID rgguidInterfaces,DWORD dwInterfaceCount,LPCBYTE pbAtr,LPCBYTE pbAtrMask,DWORD cbAtrLen);
+LONG  SCardIntroduceCardTypeW(SCARDCONTEXT hContext, LPCWSTR szCardName, LPCGUID pguidPrimaryProvider, LPCGUID rgguidInterfaces, DWORD dwInterfaceCount, LPCBYTE pbAtr, LPCBYTE pbAtrMask, DWORD cbAtrLen);
+//C       extern LONG SCardSetCardTypeProviderNameA(SCARDCONTEXT hContext,LPCSTR szCardName,DWORD dwProviderId,LPCSTR szProvider);
+LONG  SCardSetCardTypeProviderNameA(SCARDCONTEXT hContext, LPCSTR szCardName, DWORD dwProviderId, LPCSTR szProvider);
+//C       extern LONG SCardSetCardTypeProviderNameW(SCARDCONTEXT hContext,LPCWSTR szCardName,DWORD dwProviderId,LPCWSTR szProvider);
+LONG  SCardSetCardTypeProviderNameW(SCARDCONTEXT hContext, LPCWSTR szCardName, DWORD dwProviderId, LPCWSTR szProvider);
+//C       extern LONG SCardForgetCardTypeA(SCARDCONTEXT hContext,LPCSTR szCardName);
+LONG  SCardForgetCardTypeA(SCARDCONTEXT hContext, LPCSTR szCardName);
+//C       extern LONG SCardForgetCardTypeW(SCARDCONTEXT hContext,LPCWSTR szCardName);
+LONG  SCardForgetCardTypeW(SCARDCONTEXT hContext, LPCWSTR szCardName);
+//C       extern LONG SCardFreeMemory(SCARDCONTEXT hContext,LPCVOID pvMem);
+LONG  SCardFreeMemory(SCARDCONTEXT hContext, LPCVOID pvMem);
+//C       extern HANDLE SCardAccessStartedEvent(void);
+HANDLE  SCardAccessStartedEvent();
+//C       extern void SCardReleaseStartedEvent(void);
+void  SCardReleaseStartedEvent();
+//C       typedef struct {
+//C         LPCSTR szReader;
+//C         LPVOID pvUserData;
+//C         DWORD dwCurrentState;
+//C         DWORD dwEventState;
+//C         DWORD cbAtr;
+//C         BYTE rgbAtr[36];
+//C       } SCARD_READERSTATEA,*PSCARD_READERSTATEA,*LPSCARD_READERSTATEA;
+struct _N251
+{
+    LPCSTR szReader;
+    LPVOID pvUserData;
+    DWORD dwCurrentState;
+    DWORD dwEventState;
+    DWORD cbAtr;
+    BYTE [36]rgbAtr;
+}
+alias _N251 SCARD_READERSTATEA;
+alias _N251 *PSCARD_READERSTATEA;
+alias _N251 *LPSCARD_READERSTATEA;
+//C       typedef struct {
+//C         LPCWSTR szReader;
+//C         LPVOID pvUserData;
+//C         DWORD dwCurrentState;
+//C         DWORD dwEventState;
+//C         DWORD cbAtr;
+//C         BYTE rgbAtr[36];
+//C       } SCARD_READERSTATEW,*PSCARD_READERSTATEW,*LPSCARD_READERSTATEW;
+struct _N252
+{
+    LPCWSTR szReader;
+    LPVOID pvUserData;
+    DWORD dwCurrentState;
+    DWORD dwEventState;
+    DWORD cbAtr;
+    BYTE [36]rgbAtr;
+}
+alias _N252 SCARD_READERSTATEW;
+alias _N252 *PSCARD_READERSTATEW;
+alias _N252 *LPSCARD_READERSTATEW;
+//C       typedef SCARD_READERSTATEA SCARD_READERSTATE;
+alias SCARD_READERSTATEA SCARD_READERSTATE;
+//C       typedef PSCARD_READERSTATEA PSCARD_READERSTATE;
+alias PSCARD_READERSTATEA PSCARD_READERSTATE;
+//C       typedef LPSCARD_READERSTATEA LPSCARD_READERSTATE;
+alias LPSCARD_READERSTATEA LPSCARD_READERSTATE;
+//C       extern LONG SCardLocateCardsA(SCARDCONTEXT hContext,LPCSTR mszCards,LPSCARD_READERSTATEA rgReaderStates,DWORD cReaders);
+LONG  SCardLocateCardsA(SCARDCONTEXT hContext, LPCSTR mszCards, LPSCARD_READERSTATEA rgReaderStates, DWORD cReaders);
+//C       extern LONG SCardLocateCardsW(SCARDCONTEXT hContext,LPCWSTR mszCards,LPSCARD_READERSTATEW rgReaderStates,DWORD cReaders);
+LONG  SCardLocateCardsW(SCARDCONTEXT hContext, LPCWSTR mszCards, LPSCARD_READERSTATEW rgReaderStates, DWORD cReaders);
+//C       typedef struct _SCARD_ATRMASK {
+//C         DWORD cbAtr;
+//C         BYTE rgbAtr[36];
+//C         BYTE rgbMask[36];
+//C       } SCARD_ATRMASK,*PSCARD_ATRMASK,*LPSCARD_ATRMASK;
+struct _SCARD_ATRMASK
+{
+    DWORD cbAtr;
+    BYTE [36]rgbAtr;
+    BYTE [36]rgbMask;
+}
+alias _SCARD_ATRMASK SCARD_ATRMASK;
+alias _SCARD_ATRMASK *PSCARD_ATRMASK;
+alias _SCARD_ATRMASK *LPSCARD_ATRMASK;
+//C       extern LONG SCardLocateCardsByATRA(SCARDCONTEXT hContext,LPSCARD_ATRMASK rgAtrMasks,DWORD cAtrs,LPSCARD_READERSTATEA rgReaderStates,DWORD cReaders);
+LONG  SCardLocateCardsByATRA(SCARDCONTEXT hContext, LPSCARD_ATRMASK rgAtrMasks, DWORD cAtrs, LPSCARD_READERSTATEA rgReaderStates, DWORD cReaders);
+//C       extern LONG SCardLocateCardsByATRW(SCARDCONTEXT hContext,LPSCARD_ATRMASK rgAtrMasks,DWORD cAtrs,LPSCARD_READERSTATEW rgReaderStates,DWORD cReaders);
+LONG  SCardLocateCardsByATRW(SCARDCONTEXT hContext, LPSCARD_ATRMASK rgAtrMasks, DWORD cAtrs, LPSCARD_READERSTATEW rgReaderStates, DWORD cReaders);
+//C       extern LONG SCardGetStatusChangeA(SCARDCONTEXT hContext,DWORD dwTimeout,LPSCARD_READERSTATEA rgReaderStates,DWORD cReaders);
+LONG  SCardGetStatusChangeA(SCARDCONTEXT hContext, DWORD dwTimeout, LPSCARD_READERSTATEA rgReaderStates, DWORD cReaders);
+//C       extern LONG SCardGetStatusChangeW(SCARDCONTEXT hContext,DWORD dwTimeout,LPSCARD_READERSTATEW rgReaderStates,DWORD cReaders);
+LONG  SCardGetStatusChangeW(SCARDCONTEXT hContext, DWORD dwTimeout, LPSCARD_READERSTATEW rgReaderStates, DWORD cReaders);
+//C       extern LONG SCardCancel(SCARDCONTEXT hContext);
+LONG  SCardCancel(SCARDCONTEXT hContext);
+//C       extern LONG SCardConnectA(SCARDCONTEXT hContext,LPCSTR szReader,DWORD dwShareMode,DWORD dwPreferredProtocols,LPSCARDHANDLE phCard,LPDWORD pdwActiveProtocol);
+LONG  SCardConnectA(SCARDCONTEXT hContext, LPCSTR szReader, DWORD dwShareMode, DWORD dwPreferredProtocols, LPSCARDHANDLE phCard, LPDWORD pdwActiveProtocol);
+//C       extern LONG SCardConnectW(SCARDCONTEXT hContext,LPCWSTR szReader,DWORD dwShareMode,DWORD dwPreferredProtocols,LPSCARDHANDLE phCard,LPDWORD pdwActiveProtocol);
+LONG  SCardConnectW(SCARDCONTEXT hContext, LPCWSTR szReader, DWORD dwShareMode, DWORD dwPreferredProtocols, LPSCARDHANDLE phCard, LPDWORD pdwActiveProtocol);
+//C       extern LONG SCardReconnect(SCARDHANDLE hCard,DWORD dwShareMode,DWORD dwPreferredProtocols,DWORD dwInitialization,LPDWORD pdwActiveProtocol);
+LONG  SCardReconnect(SCARDHANDLE hCard, DWORD dwShareMode, DWORD dwPreferredProtocols, DWORD dwInitialization, LPDWORD pdwActiveProtocol);
+//C       extern LONG SCardDisconnect(SCARDHANDLE hCard,DWORD dwDisposition);
+LONG  SCardDisconnect(SCARDHANDLE hCard, DWORD dwDisposition);
+//C       extern LONG SCardBeginTransaction(SCARDHANDLE hCard);
+LONG  SCardBeginTransaction(SCARDHANDLE hCard);
+//C       extern LONG SCardEndTransaction(SCARDHANDLE hCard,DWORD dwDisposition);
+LONG  SCardEndTransaction(SCARDHANDLE hCard, DWORD dwDisposition);
+//C       extern LONG SCardCancelTransaction(SCARDHANDLE hCard);
+LONG  SCardCancelTransaction(SCARDHANDLE hCard);
+//C       extern LONG SCardState(SCARDHANDLE hCard,LPDWORD pdwState,LPDWORD pdwProtocol,LPBYTE pbAtr,LPDWORD pcbAtrLen);
+LONG  SCardState(SCARDHANDLE hCard, LPDWORD pdwState, LPDWORD pdwProtocol, LPBYTE pbAtr, LPDWORD pcbAtrLen);
+//C       extern LONG SCardStatusA(SCARDHANDLE hCard,LPSTR szReaderName,LPDWORD pcchReaderLen,LPDWORD pdwState,LPDWORD pdwProtocol,LPBYTE pbAtr,LPDWORD pcbAtrLen);
+LONG  SCardStatusA(SCARDHANDLE hCard, LPSTR szReaderName, LPDWORD pcchReaderLen, LPDWORD pdwState, LPDWORD pdwProtocol, LPBYTE pbAtr, LPDWORD pcbAtrLen);
+//C       extern LONG SCardStatusW(SCARDHANDLE hCard,LPWSTR szReaderName,LPDWORD pcchReaderLen,LPDWORD pdwState,LPDWORD pdwProtocol,LPBYTE pbAtr,LPDWORD pcbAtrLen);
+LONG  SCardStatusW(SCARDHANDLE hCard, LPWSTR szReaderName, LPDWORD pcchReaderLen, LPDWORD pdwState, LPDWORD pdwProtocol, LPBYTE pbAtr, LPDWORD pcbAtrLen);
+//C       extern LONG SCardTransmit(SCARDHANDLE hCard,LPCSCARD_IO_REQUEST pioSendPci,LPCBYTE pbSendBuffer,DWORD cbSendLength,LPSCARD_IO_REQUEST pioRecvPci,LPBYTE pbRecvBuffer,LPDWORD pcbRecvLength);
+LONG  SCardTransmit(SCARDHANDLE hCard, LPCSCARD_IO_REQUEST pioSendPci, LPCBYTE pbSendBuffer, DWORD cbSendLength, LPSCARD_IO_REQUEST pioRecvPci, LPBYTE pbRecvBuffer, LPDWORD pcbRecvLength);
+//C       extern LONG SCardControl(SCARDHANDLE hCard,DWORD dwControlCode,LPCVOID lpInBuffer,DWORD nInBufferSize,LPVOID lpOutBuffer,DWORD nOutBufferSize,LPDWORD lpBytesReturned);
+LONG  SCardControl(SCARDHANDLE hCard, DWORD dwControlCode, LPCVOID lpInBuffer, DWORD nInBufferSize, LPVOID lpOutBuffer, DWORD nOutBufferSize, LPDWORD lpBytesReturned);
+//C       extern LONG SCardGetAttrib(SCARDHANDLE hCard,DWORD dwAttrId,LPBYTE pbAttr,LPDWORD pcbAttrLen);
+LONG  SCardGetAttrib(SCARDHANDLE hCard, DWORD dwAttrId, LPBYTE pbAttr, LPDWORD pcbAttrLen);
+//C       extern LONG SCardSetAttrib(SCARDHANDLE hCard,DWORD dwAttrId,LPCBYTE pbAttr,DWORD cbAttrLen);
+LONG  SCardSetAttrib(SCARDHANDLE hCard, DWORD dwAttrId, LPCBYTE pbAttr, DWORD cbAttrLen);
+//C       typedef SCARDHANDLE ( *LPOCNCONNPROCA) (SCARDCONTEXT,LPSTR,LPSTR,PVOID);
+alias SCARDHANDLE  function(SCARDCONTEXT , LPSTR , LPSTR , PVOID )LPOCNCONNPROCA;
+//C       typedef SCARDHANDLE ( *LPOCNCONNPROCW) (SCARDCONTEXT,LPWSTR,LPWSTR,PVOID);
+alias SCARDHANDLE  function(SCARDCONTEXT , LPWSTR , LPWSTR , PVOID )LPOCNCONNPROCW;
+//C       typedef WINBOOL ( *LPOCNCHKPROC) (SCARDCONTEXT,SCARDHANDLE,PVOID);
+alias WINBOOL  function(SCARDCONTEXT , SCARDHANDLE , PVOID )LPOCNCHKPROC;
+//C       typedef void ( *LPOCNDSCPROC) (SCARDCONTEXT,SCARDHANDLE,PVOID);
+alias void  function(SCARDCONTEXT , SCARDHANDLE , PVOID )LPOCNDSCPROC;
+//C       typedef struct {
+//C         DWORD dwStructSize;
+//C         LPSTR lpstrGroupNames;
+//C         DWORD nMaxGroupNames;
+//C         LPCGUID rgguidInterfaces;
+//C         DWORD cguidInterfaces;
+//C         LPSTR lpstrCardNames;
+//C         DWORD nMaxCardNames;
+//C         LPOCNCHKPROC lpfnCheck;
+//C         LPOCNCONNPROCA lpfnConnect;
+//C         LPOCNDSCPROC lpfnDisconnect;
+//C         LPVOID pvUserData;
+//C         DWORD dwShareMode;
+//C         DWORD dwPreferredProtocols;
+//C       } OPENCARD_SEARCH_CRITERIAA,*POPENCARD_SEARCH_CRITERIAA,*LPOPENCARD_SEARCH_CRITERIAA;
+struct _N253
+{
+    DWORD dwStructSize;
+    LPSTR lpstrGroupNames;
+    DWORD nMaxGroupNames;
+    LPCGUID rgguidInterfaces;
+    DWORD cguidInterfaces;
+    LPSTR lpstrCardNames;
+    DWORD nMaxCardNames;
+    LPOCNCHKPROC lpfnCheck;
+    LPOCNCONNPROCA lpfnConnect;
+    LPOCNDSCPROC lpfnDisconnect;
+    LPVOID pvUserData;
+    DWORD dwShareMode;
+    DWORD dwPreferredProtocols;
+}
+alias _N253 OPENCARD_SEARCH_CRITERIAA;
+alias _N253 *POPENCARD_SEARCH_CRITERIAA;
+alias _N253 *LPOPENCARD_SEARCH_CRITERIAA;
+//C       typedef struct {
+//C         DWORD dwStructSize;
+//C         LPWSTR lpstrGroupNames;
+//C         DWORD nMaxGroupNames;
+//C         LPCGUID rgguidInterfaces;
+//C         DWORD cguidInterfaces;
+//C         LPWSTR lpstrCardNames;
+//C         DWORD nMaxCardNames;
+//C         LPOCNCHKPROC lpfnCheck;
+//C         LPOCNCONNPROCW lpfnConnect;
+//C         LPOCNDSCPROC lpfnDisconnect;
+//C         LPVOID pvUserData;
+//C         DWORD dwShareMode;
+//C         DWORD dwPreferredProtocols;
+//C       } OPENCARD_SEARCH_CRITERIAW,*POPENCARD_SEARCH_CRITERIAW,*LPOPENCARD_SEARCH_CRITERIAW;
+struct _N254
+{
+    DWORD dwStructSize;
+    LPWSTR lpstrGroupNames;
+    DWORD nMaxGroupNames;
+    LPCGUID rgguidInterfaces;
+    DWORD cguidInterfaces;
+    LPWSTR lpstrCardNames;
+    DWORD nMaxCardNames;
+    LPOCNCHKPROC lpfnCheck;
+    LPOCNCONNPROCW lpfnConnect;
+    LPOCNDSCPROC lpfnDisconnect;
+    LPVOID pvUserData;
+    DWORD dwShareMode;
+    DWORD dwPreferredProtocols;
+}
+alias _N254 OPENCARD_SEARCH_CRITERIAW;
+alias _N254 *POPENCARD_SEARCH_CRITERIAW;
+alias _N254 *LPOPENCARD_SEARCH_CRITERIAW;
+//C       typedef OPENCARD_SEARCH_CRITERIAA OPENCARD_SEARCH_CRITERIA;
+alias OPENCARD_SEARCH_CRITERIAA OPENCARD_SEARCH_CRITERIA;
+//C       typedef POPENCARD_SEARCH_CRITERIAA POPENCARD_SEARCH_CRITERIA;
+alias POPENCARD_SEARCH_CRITERIAA POPENCARD_SEARCH_CRITERIA;
+//C       typedef LPOPENCARD_SEARCH_CRITERIAA LPOPENCARD_SEARCH_CRITERIA;
+alias LPOPENCARD_SEARCH_CRITERIAA LPOPENCARD_SEARCH_CRITERIA;
+//C       typedef struct {
+//C         DWORD dwStructSize;
+//C         SCARDCONTEXT hSCardContext;
+//C         HWND hwndOwner;
+//C         DWORD dwFlags;
+//C         LPCSTR lpstrTitle;
+//C         LPCSTR lpstrSearchDesc;
+//C         HICON hIcon;
+//C         POPENCARD_SEARCH_CRITERIAA pOpenCardSearchCriteria;
+//C         LPOCNCONNPROCA lpfnConnect;
+//C         LPVOID pvUserData;
+//C         DWORD dwShareMode;
+//C         DWORD dwPreferredProtocols;
+//C         LPSTR lpstrRdr;
+//C         DWORD nMaxRdr;
+//C         LPSTR lpstrCard;
+//C         DWORD nMaxCard;
+//C         DWORD dwActiveProtocol;
+//C         SCARDHANDLE hCardHandle;
+//C       } OPENCARDNAME_EXA,*POPENCARDNAME_EXA,*LPOPENCARDNAME_EXA;
+struct _N255
+{
+    DWORD dwStructSize;
+    SCARDCONTEXT hSCardContext;
+    HWND hwndOwner;
+    DWORD dwFlags;
+    LPCSTR lpstrTitle;
+    LPCSTR lpstrSearchDesc;
+    HICON hIcon;
+    POPENCARD_SEARCH_CRITERIAA pOpenCardSearchCriteria;
+    LPOCNCONNPROCA lpfnConnect;
+    LPVOID pvUserData;
+    DWORD dwShareMode;
+    DWORD dwPreferredProtocols;
+    LPSTR lpstrRdr;
+    DWORD nMaxRdr;
+    LPSTR lpstrCard;
+    DWORD nMaxCard;
+    DWORD dwActiveProtocol;
+    SCARDHANDLE hCardHandle;
+}
+alias _N255 OPENCARDNAME_EXA;
+alias _N255 *POPENCARDNAME_EXA;
+alias _N255 *LPOPENCARDNAME_EXA;
+//C       typedef struct {
+//C         DWORD dwStructSize;
+//C         SCARDCONTEXT hSCardContext;
+//C         HWND hwndOwner;
+//C         DWORD dwFlags;
+//C         LPCWSTR lpstrTitle;
+//C         LPCWSTR lpstrSearchDesc;
+//C         HICON hIcon;
+//C         POPENCARD_SEARCH_CRITERIAW pOpenCardSearchCriteria;
+//C         LPOCNCONNPROCW lpfnConnect;
+//C         LPVOID pvUserData;
+//C         DWORD dwShareMode;
+//C         DWORD dwPreferredProtocols;
+//C         LPWSTR lpstrRdr;
+//C         DWORD nMaxRdr;
+//C         LPWSTR lpstrCard;
+//C         DWORD nMaxCard;
+//C         DWORD dwActiveProtocol;
+//C         SCARDHANDLE hCardHandle;
+//C       } OPENCARDNAME_EXW,*POPENCARDNAME_EXW,*LPOPENCARDNAME_EXW;
+struct _N256
+{
+    DWORD dwStructSize;
+    SCARDCONTEXT hSCardContext;
+    HWND hwndOwner;
+    DWORD dwFlags;
+    LPCWSTR lpstrTitle;
+    LPCWSTR lpstrSearchDesc;
+    HICON hIcon;
+    POPENCARD_SEARCH_CRITERIAW pOpenCardSearchCriteria;
+    LPOCNCONNPROCW lpfnConnect;
+    LPVOID pvUserData;
+    DWORD dwShareMode;
+    DWORD dwPreferredProtocols;
+    LPWSTR lpstrRdr;
+    DWORD nMaxRdr;
+    LPWSTR lpstrCard;
+    DWORD nMaxCard;
+    DWORD dwActiveProtocol;
+    SCARDHANDLE hCardHandle;
+}
+alias _N256 OPENCARDNAME_EXW;
+alias _N256 *POPENCARDNAME_EXW;
+alias _N256 *LPOPENCARDNAME_EXW;
+//C       typedef OPENCARDNAME_EXA OPENCARDNAME_EX;
+alias OPENCARDNAME_EXA OPENCARDNAME_EX;
+//C       typedef POPENCARDNAME_EXA POPENCARDNAME_EX;
+alias POPENCARDNAME_EXA POPENCARDNAME_EX;
+//C       typedef LPOPENCARDNAME_EXA LPOPENCARDNAME_EX;
+alias LPOPENCARDNAME_EXA LPOPENCARDNAME_EX;
+//C       extern LONG SCardUIDlgSelectCardA(LPOPENCARDNAME_EXA);
+LONG  SCardUIDlgSelectCardA(LPOPENCARDNAME_EXA );
+//C       extern LONG SCardUIDlgSelectCardW(LPOPENCARDNAME_EXW);
+LONG  SCardUIDlgSelectCardW(LPOPENCARDNAME_EXW );
+//C       typedef struct {
+//C         DWORD dwStructSize;
+//C         HWND hwndOwner;
+//C         SCARDCONTEXT hSCardContext;
+//C         LPSTR lpstrGroupNames;
+//C         DWORD nMaxGroupNames;
+//C         LPSTR lpstrCardNames;
+//C         DWORD nMaxCardNames;
+//C         LPCGUID rgguidInterfaces;
+//C         DWORD cguidInterfaces;
+//C         LPSTR lpstrRdr;
+//C         DWORD nMaxRdr;
+//C         LPSTR lpstrCard;
+//C         DWORD nMaxCard;
+//C         LPCSTR lpstrTitle;
+//C         DWORD dwFlags;
+//C         LPVOID pvUserData;
+//C         DWORD dwShareMode;
+//C         DWORD dwPreferredProtocols;
+//C         DWORD dwActiveProtocol;
+//C         LPOCNCONNPROCA lpfnConnect;
+//C         LPOCNCHKPROC lpfnCheck;
+//C         LPOCNDSCPROC lpfnDisconnect;
+//C         SCARDHANDLE hCardHandle;
+//C       } OPENCARDNAMEA,*POPENCARDNAMEA,*LPOPENCARDNAMEA;
+struct _N257
+{
+    DWORD dwStructSize;
+    HWND hwndOwner;
+    SCARDCONTEXT hSCardContext;
+    LPSTR lpstrGroupNames;
+    DWORD nMaxGroupNames;
+    LPSTR lpstrCardNames;
+    DWORD nMaxCardNames;
+    LPCGUID rgguidInterfaces;
+    DWORD cguidInterfaces;
+    LPSTR lpstrRdr;
+    DWORD nMaxRdr;
+    LPSTR lpstrCard;
+    DWORD nMaxCard;
+    LPCSTR lpstrTitle;
+    DWORD dwFlags;
+    LPVOID pvUserData;
+    DWORD dwShareMode;
+    DWORD dwPreferredProtocols;
+    DWORD dwActiveProtocol;
+    LPOCNCONNPROCA lpfnConnect;
+    LPOCNCHKPROC lpfnCheck;
+    LPOCNDSCPROC lpfnDisconnect;
+    SCARDHANDLE hCardHandle;
+}
+alias _N257 OPENCARDNAMEA;
+alias _N257 *POPENCARDNAMEA;
+alias _N257 *LPOPENCARDNAMEA;
+//C       typedef struct {
+//C         DWORD dwStructSize;
+//C         HWND hwndOwner;
+//C         SCARDCONTEXT hSCardContext;
+//C         LPWSTR lpstrGroupNames;
+//C         DWORD nMaxGroupNames;
+//C         LPWSTR lpstrCardNames;
+//C         DWORD nMaxCardNames;
+//C         LPCGUID rgguidInterfaces;
+//C         DWORD cguidInterfaces;
+//C         LPWSTR lpstrRdr;
+//C         DWORD nMaxRdr;
+//C         LPWSTR lpstrCard;
+//C         DWORD nMaxCard;
+//C         LPCWSTR lpstrTitle;
+//C         DWORD dwFlags;
+//C         LPVOID pvUserData;
+//C         DWORD dwShareMode;
+//C         DWORD dwPreferredProtocols;
+//C         DWORD dwActiveProtocol;
+//C         LPOCNCONNPROCW lpfnConnect;
+//C         LPOCNCHKPROC lpfnCheck;
+//C         LPOCNDSCPROC lpfnDisconnect;
+//C         SCARDHANDLE hCardHandle;
+//C       } OPENCARDNAMEW,*POPENCARDNAMEW,*LPOPENCARDNAMEW;
+struct _N258
+{
+    DWORD dwStructSize;
+    HWND hwndOwner;
+    SCARDCONTEXT hSCardContext;
+    LPWSTR lpstrGroupNames;
+    DWORD nMaxGroupNames;
+    LPWSTR lpstrCardNames;
+    DWORD nMaxCardNames;
+    LPCGUID rgguidInterfaces;
+    DWORD cguidInterfaces;
+    LPWSTR lpstrRdr;
+    DWORD nMaxRdr;
+    LPWSTR lpstrCard;
+    DWORD nMaxCard;
+    LPCWSTR lpstrTitle;
+    DWORD dwFlags;
+    LPVOID pvUserData;
+    DWORD dwShareMode;
+    DWORD dwPreferredProtocols;
+    DWORD dwActiveProtocol;
+    LPOCNCONNPROCW lpfnConnect;
+    LPOCNCHKPROC lpfnCheck;
+    LPOCNDSCPROC lpfnDisconnect;
+    SCARDHANDLE hCardHandle;
+}
+alias _N258 OPENCARDNAMEW;
+alias _N258 *POPENCARDNAMEW;
+alias _N258 *LPOPENCARDNAMEW;
+//C       typedef OPENCARDNAMEA OPENCARDNAME;
+alias OPENCARDNAMEA OPENCARDNAME;
+//C       typedef POPENCARDNAMEA POPENCARDNAME;
+alias POPENCARDNAMEA POPENCARDNAME;
+//C       typedef LPOPENCARDNAMEA LPOPENCARDNAME;
+alias LPOPENCARDNAMEA LPOPENCARDNAME;
+//C       extern LONG GetOpenCardNameA(LPOPENCARDNAMEA);
+LONG  GetOpenCardNameA(LPOPENCARDNAMEA );
+//C       extern LONG GetOpenCardNameW(LPOPENCARDNAMEW);
+LONG  GetOpenCardNameW(LPOPENCARDNAMEW );
+//C       extern LONG SCardDlgExtendedError(void);
+LONG  SCardDlgExtendedError();
+//C       struct _PSP;
+//C       struct _PROPSHEETPAGEA;
+//C       struct _PROPSHEETPAGEW;
+//C       typedef struct _PSP *HPROPSHEETPAGE;
+alias _PSP *HPROPSHEETPAGE;
+//C       typedef UINT ( *LPFNPSPCALLBACKA)(HWND hwnd,UINT uMsg,struct _PROPSHEETPAGEA *ppsp);
+alias UINT  function(HWND hwnd, UINT uMsg, _PROPSHEETPAGEA *ppsp)LPFNPSPCALLBACKA;
+//C       typedef UINT ( *LPFNPSPCALLBACKW)(HWND hwnd,UINT uMsg,struct _PROPSHEETPAGEW *ppsp);
+alias UINT  function(HWND hwnd, UINT uMsg, _PROPSHEETPAGEW *ppsp)LPFNPSPCALLBACKW;
+//C       typedef LPCDLGTEMPLATE PROPSHEETPAGE_RESOURCE;
+alias LPCDLGTEMPLATE PROPSHEETPAGE_RESOURCE;
+//C       typedef struct _PROPSHEETPAGEA_V1 {
+//C         DWORD dwSize,dwFlags; HINSTANCE hInstance;  union { LPCSTR pszTemplate; PROPSHEETPAGE_RESOURCE pResource; } ;  union { HICON hIcon; LPCSTR pszIcon; } ; LPCSTR pszTitle; DLGPROC pfnDlgProc; LPARAM lParam; LPFNPSPCALLBACKA pfnCallback; UINT *pcRefParent;
+union _N259
+{
+    LPCSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+}
+union _N260
+{
+    HICON hIcon;
+    LPCSTR pszIcon;
+}
+//C       } PROPSHEETPAGEA_V1,*LPPROPSHEETPAGEA_V1;
+struct _PROPSHEETPAGEA_V1
+{
+    DWORD dwSize;
+    DWORD dwFlags;
+    HINSTANCE hInstance;
+    LPCSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+    HICON hIcon;
+    LPCSTR pszIcon;
+    LPCSTR pszTitle;
+    DLGPROC pfnDlgProc;
+    LPARAM lParam;
+    LPFNPSPCALLBACKA pfnCallback;
+    UINT *pcRefParent;
+}
+alias _PROPSHEETPAGEA_V1 PROPSHEETPAGEA_V1;
+alias _PROPSHEETPAGEA_V1 *LPPROPSHEETPAGEA_V1;
+//C       typedef const PROPSHEETPAGEA_V1 *LPCPROPSHEETPAGEA_V1;
+alias PROPSHEETPAGEA_V1 *LPCPROPSHEETPAGEA_V1;
+//C       typedef struct _PROPSHEETPAGEA_V2 {
+//C         DWORD dwSize,dwFlags; HINSTANCE hInstance;  union { LPCSTR pszTemplate; PROPSHEETPAGE_RESOURCE pResource; } ;  union { HICON hIcon; LPCSTR pszIcon; } ; LPCSTR pszTitle; DLGPROC pfnDlgProc; LPARAM lParam; LPFNPSPCALLBACKA pfnCallback; UINT *pcRefParent;
+union _N261
+{
+    LPCSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+}
+union _N262
+{
+    HICON hIcon;
+    LPCSTR pszIcon;
+}
+//C           LPCSTR pszHeaderTitle;
+//C         LPCSTR pszHeaderSubTitle;
+//C       } PROPSHEETPAGEA_V2,*LPPROPSHEETPAGEA_V2;
+struct _PROPSHEETPAGEA_V2
+{
+    DWORD dwSize;
+    DWORD dwFlags;
+    HINSTANCE hInstance;
+    LPCSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+    HICON hIcon;
+    LPCSTR pszIcon;
+    LPCSTR pszTitle;
+    DLGPROC pfnDlgProc;
+    LPARAM lParam;
+    LPFNPSPCALLBACKA pfnCallback;
+    UINT *pcRefParent;
+    LPCSTR pszHeaderTitle;
+    LPCSTR pszHeaderSubTitle;
+}
+alias _PROPSHEETPAGEA_V2 PROPSHEETPAGEA_V2;
+alias _PROPSHEETPAGEA_V2 *LPPROPSHEETPAGEA_V2;
+//C       typedef const PROPSHEETPAGEA_V2 *LPCPROPSHEETPAGEA_V2;
+alias PROPSHEETPAGEA_V2 *LPCPROPSHEETPAGEA_V2;
+//C       typedef struct _PROPSHEETPAGEA {
+//C         DWORD dwSize,dwFlags; HINSTANCE hInstance;  union { LPCSTR pszTemplate; PROPSHEETPAGE_RESOURCE pResource; } ;  union { HICON hIcon; LPCSTR pszIcon; } ; LPCSTR pszTitle; DLGPROC pfnDlgProc; LPARAM lParam; LPFNPSPCALLBACKA pfnCallback; UINT *pcRefParent;
+union _N263
+{
+    LPCSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+}
+union _N264
+{
+    HICON hIcon;
+    LPCSTR pszIcon;
+}
+//C           LPCSTR pszHeaderTitle;
+//C         LPCSTR pszHeaderSubTitle;
+//C         HANDLE hActCtx;
+//C       } PROPSHEETPAGEA_V3,*LPPROPSHEETPAGEA_V3;
+struct _PROPSHEETPAGEA
+{
+    DWORD dwSize;
+    DWORD dwFlags;
+    HINSTANCE hInstance;
+    LPCSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+    HICON hIcon;
+    LPCSTR pszIcon;
+    LPCSTR pszTitle;
+    DLGPROC pfnDlgProc;
+    LPARAM lParam;
+    LPFNPSPCALLBACKA pfnCallback;
+    UINT *pcRefParent;
+    LPCSTR pszHeaderTitle;
+    LPCSTR pszHeaderSubTitle;
+    HANDLE hActCtx;
+}
+alias _PROPSHEETPAGEA PROPSHEETPAGEA_V3;
+alias _PROPSHEETPAGEA *LPPROPSHEETPAGEA_V3;
+//C       typedef const PROPSHEETPAGEA_V3 *LPCPROPSHEETPAGEA_V3;
+alias PROPSHEETPAGEA_V3 *LPCPROPSHEETPAGEA_V3;
+//C       typedef struct _PROPSHEETPAGEW_V1 {
+//C         DWORD dwSize,dwFlags; HINSTANCE hInstance;  union { LPCWSTR pszTemplate; PROPSHEETPAGE_RESOURCE pResource; } ;  union { HICON hIcon; LPCWSTR pszIcon; } ; LPCWSTR pszTitle; DLGPROC pfnDlgProc; LPARAM lParam; LPFNPSPCALLBACKW pfnCallback; UINT *pcRefParent;
+union _N265
+{
+    LPCWSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+}
+union _N266
+{
+    HICON hIcon;
+    LPCWSTR pszIcon;
+}
+//C       } PROPSHEETPAGEW_V1,*LPPROPSHEETPAGEW_V1;
+struct _PROPSHEETPAGEW_V1
+{
+    DWORD dwSize;
+    DWORD dwFlags;
+    HINSTANCE hInstance;
+    LPCWSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+    HICON hIcon;
+    LPCWSTR pszIcon;
+    LPCWSTR pszTitle;
+    DLGPROC pfnDlgProc;
+    LPARAM lParam;
+    LPFNPSPCALLBACKW pfnCallback;
+    UINT *pcRefParent;
+}
+alias _PROPSHEETPAGEW_V1 PROPSHEETPAGEW_V1;
+alias _PROPSHEETPAGEW_V1 *LPPROPSHEETPAGEW_V1;
+//C       typedef const PROPSHEETPAGEW_V1 *LPCPROPSHEETPAGEW_V1;
+alias PROPSHEETPAGEW_V1 *LPCPROPSHEETPAGEW_V1;
+//C       typedef struct _PROPSHEETPAGEW_V2 {
+//C         DWORD dwSize,dwFlags; HINSTANCE hInstance;  union { LPCWSTR pszTemplate; PROPSHEETPAGE_RESOURCE pResource; } ;  union { HICON hIcon; LPCWSTR pszIcon; } ; LPCWSTR pszTitle; DLGPROC pfnDlgProc; LPARAM lParam; LPFNPSPCALLBACKW pfnCallback; UINT *pcRefParent;
+union _N267
+{
+    LPCWSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+}
+union _N268
+{
+    HICON hIcon;
+    LPCWSTR pszIcon;
+}
+//C           LPCWSTR pszHeaderTitle;
+//C         LPCWSTR pszHeaderSubTitle;
+//C       } PROPSHEETPAGEW_V2,*LPPROPSHEETPAGEW_V2;
+struct _PROPSHEETPAGEW_V2
+{
+    DWORD dwSize;
+    DWORD dwFlags;
+    HINSTANCE hInstance;
+    LPCWSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+    HICON hIcon;
+    LPCWSTR pszIcon;
+    LPCWSTR pszTitle;
+    DLGPROC pfnDlgProc;
+    LPARAM lParam;
+    LPFNPSPCALLBACKW pfnCallback;
+    UINT *pcRefParent;
+    LPCWSTR pszHeaderTitle;
+    LPCWSTR pszHeaderSubTitle;
+}
+alias _PROPSHEETPAGEW_V2 PROPSHEETPAGEW_V2;
+alias _PROPSHEETPAGEW_V2 *LPPROPSHEETPAGEW_V2;
+//C       typedef const PROPSHEETPAGEW_V2 *LPCPROPSHEETPAGEW_V2;
+alias PROPSHEETPAGEW_V2 *LPCPROPSHEETPAGEW_V2;
+//C       typedef struct _PROPSHEETPAGEW {
+//C         DWORD dwSize,dwFlags; HINSTANCE hInstance;  union { LPCWSTR pszTemplate; PROPSHEETPAGE_RESOURCE pResource; } ;  union { HICON hIcon; LPCWSTR pszIcon; } ; LPCWSTR pszTitle; DLGPROC pfnDlgProc; LPARAM lParam; LPFNPSPCALLBACKW pfnCallback; UINT *pcRefParent;
+union _N269
+{
+    LPCWSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+}
+union _N270
+{
+    HICON hIcon;
+    LPCWSTR pszIcon;
+}
+//C           LPCWSTR pszHeaderTitle;
+//C         LPCWSTR pszHeaderSubTitle;
+//C         HANDLE hActCtx;
+//C       } PROPSHEETPAGEW_V3,*LPPROPSHEETPAGEW_V3;
+struct _PROPSHEETPAGEW
+{
+    DWORD dwSize;
+    DWORD dwFlags;
+    HINSTANCE hInstance;
+    LPCWSTR pszTemplate;
+    PROPSHEETPAGE_RESOURCE pResource;
+    HICON hIcon;
+    LPCWSTR pszIcon;
+    LPCWSTR pszTitle;
+    DLGPROC pfnDlgProc;
+    LPARAM lParam;
+    LPFNPSPCALLBACKW pfnCallback;
+    UINT *pcRefParent;
+    LPCWSTR pszHeaderTitle;
+    LPCWSTR pszHeaderSubTitle;
+    HANDLE hActCtx;
+}
+alias _PROPSHEETPAGEW PROPSHEETPAGEW_V3;
+alias _PROPSHEETPAGEW *LPPROPSHEETPAGEW_V3;
+//C       typedef const PROPSHEETPAGEW_V3 *LPCPROPSHEETPAGEW_V3;
+alias PROPSHEETPAGEW_V3 *LPCPROPSHEETPAGEW_V3;
+//C       typedef PROPSHEETPAGEA_V3 PROPSHEETPAGEA_LATEST;
+alias PROPSHEETPAGEA_V3 PROPSHEETPAGEA_LATEST;
+//C       typedef PROPSHEETPAGEW_V3 PROPSHEETPAGEW_LATEST;
+alias PROPSHEETPAGEW_V3 PROPSHEETPAGEW_LATEST;
+//C       typedef LPPROPSHEETPAGEA_V3 LPPROPSHEETPAGEA_LATEST;
+alias LPPROPSHEETPAGEA_V3 LPPROPSHEETPAGEA_LATEST;
+//C       typedef LPPROPSHEETPAGEW_V3 LPPROPSHEETPAGEW_LATEST;
+alias LPPROPSHEETPAGEW_V3 LPPROPSHEETPAGEW_LATEST;
+//C       typedef LPCPROPSHEETPAGEA_V3 LPCPROPSHEETPAGEA_LATEST;
+alias LPCPROPSHEETPAGEA_V3 LPCPROPSHEETPAGEA_LATEST;
+//C       typedef LPCPROPSHEETPAGEW_V3 LPCPROPSHEETPAGEW_LATEST;
+alias LPCPROPSHEETPAGEW_V3 LPCPROPSHEETPAGEW_LATEST;
+//C       typedef PROPSHEETPAGEA_V3 PROPSHEETPAGEA;
+alias PROPSHEETPAGEA_V3 PROPSHEETPAGEA;
+//C       typedef PROPSHEETPAGEW_V3 PROPSHEETPAGEW;
+alias PROPSHEETPAGEW_V3 PROPSHEETPAGEW;
+//C       typedef LPPROPSHEETPAGEA_V3 LPPROPSHEETPAGEA;
+alias LPPROPSHEETPAGEA_V3 LPPROPSHEETPAGEA;
+//C       typedef LPPROPSHEETPAGEW_V3 LPPROPSHEETPAGEW;
+alias LPPROPSHEETPAGEW_V3 LPPROPSHEETPAGEW;
+//C       typedef LPCPROPSHEETPAGEA_V3 LPCPROPSHEETPAGEA;
+alias LPCPROPSHEETPAGEA_V3 LPCPROPSHEETPAGEA;
+//C       typedef LPCPROPSHEETPAGEW_V3 LPCPROPSHEETPAGEW;
+alias LPCPROPSHEETPAGEW_V3 LPCPROPSHEETPAGEW;
+//C       typedef int ( *PFNPROPSHEETCALLBACK)(HWND,UINT,LPARAM);
+alias int  function(HWND , UINT , LPARAM )PFNPROPSHEETCALLBACK;
+//C       typedef struct _PROPSHEETHEADERA {
+//C         DWORD dwSize;
+//C         DWORD dwFlags;
+//C         HWND hwndParent;
+//C         HINSTANCE hInstance;
+//C          union {
+//C           HICON hIcon;
+//C           LPCSTR pszIcon;
+//C         } ;
+union _N271
+{
+    HICON hIcon;
+    LPCSTR pszIcon;
+}
+//C         LPCSTR pszCaption;
+//C         UINT nPages;
+//C          union {
+//C           UINT nStartPage;
+//C           LPCSTR pStartPage;
+//C         } ;
+union _N272
+{
+    UINT nStartPage;
+    LPCSTR pStartPage;
+}
+//C          union {
+//C           LPCPROPSHEETPAGEA ppsp;
+//C           HPROPSHEETPAGE *phpage;
+//C         } ;
+union _N273
+{
+    LPCPROPSHEETPAGEA ppsp;
+    HPROPSHEETPAGE *phpage;
+}
+//C         PFNPROPSHEETCALLBACK pfnCallback;
+//C          union {
+//C           HBITMAP hbmWatermark;
+//C           LPCSTR pszbmWatermark;
+//C         } ;
+union _N274
+{
+    HBITMAP hbmWatermark;
+    LPCSTR pszbmWatermark;
+}
+//C         HPALETTE hplWatermark;
+//C          union {
+//C           HBITMAP hbmHeader;
+//C           LPCSTR pszbmHeader;
+//C         } ;
+union _N275
+{
+    HBITMAP hbmHeader;
+    LPCSTR pszbmHeader;
+}
+//C       } PROPSHEETHEADERA,*LPPROPSHEETHEADERA;
+struct _PROPSHEETHEADERA
+{
+    DWORD dwSize;
+    DWORD dwFlags;
+    HWND hwndParent;
+    HINSTANCE hInstance;
+    HICON hIcon;
+    LPCSTR pszIcon;
+    LPCSTR pszCaption;
+    UINT nPages;
+    UINT nStartPage;
+    LPCSTR pStartPage;
+    LPCPROPSHEETPAGEA ppsp;
+    HPROPSHEETPAGE *phpage;
+    PFNPROPSHEETCALLBACK pfnCallback;
+    HBITMAP hbmWatermark;
+    LPCSTR pszbmWatermark;
+    HPALETTE hplWatermark;
+    HBITMAP hbmHeader;
+    LPCSTR pszbmHeader;
+}
+alias _PROPSHEETHEADERA PROPSHEETHEADERA;
+alias _PROPSHEETHEADERA *LPPROPSHEETHEADERA;
+//C       typedef const PROPSHEETHEADERA *LPCPROPSHEETHEADERA;
+alias PROPSHEETHEADERA *LPCPROPSHEETHEADERA;
+//C       typedef struct _PROPSHEETHEADERW {
+//C         DWORD dwSize;
+//C         DWORD dwFlags;
+//C         HWND hwndParent;
+//C         HINSTANCE hInstance;
+//C          union {
+//C           HICON hIcon;
+//C           LPCWSTR pszIcon;
+//C         } ;
+union _N276
+{
+    HICON hIcon;
+    LPCWSTR pszIcon;
+}
+//C         LPCWSTR pszCaption;
+//C         UINT nPages;
+//C          union {
+//C           UINT nStartPage;
+//C           LPCWSTR pStartPage;
+//C         } ;
+union _N277
+{
+    UINT nStartPage;
+    LPCWSTR pStartPage;
+}
+//C          union {
+//C           LPCPROPSHEETPAGEW ppsp;
+//C           HPROPSHEETPAGE *phpage;
+//C         } ;
+union _N278
+{
+    LPCPROPSHEETPAGEW ppsp;
+    HPROPSHEETPAGE *phpage;
+}
+//C         PFNPROPSHEETCALLBACK pfnCallback;
+//C          union {
+//C           HBITMAP hbmWatermark;
+//C           LPCWSTR pszbmWatermark;
+//C         } ;
+union _N279
+{
+    HBITMAP hbmWatermark;
+    LPCWSTR pszbmWatermark;
+}
+//C         HPALETTE hplWatermark;
+//C          union {
+//C           HBITMAP hbmHeader;
+//C           LPCWSTR pszbmHeader;
+//C         } ;
+union _N280
+{
+    HBITMAP hbmHeader;
+    LPCWSTR pszbmHeader;
+}
+//C       } PROPSHEETHEADERW,*LPPROPSHEETHEADERW;
+struct _PROPSHEETHEADERW
+{
+    DWORD dwSize;
+    DWORD dwFlags;
+    HWND hwndParent;
+    HINSTANCE hInstance;
+    HICON hIcon;
+    LPCWSTR pszIcon;
+    LPCWSTR pszCaption;
+    UINT nPages;
+    UINT nStartPage;
+    LPCWSTR pStartPage;
+    LPCPROPSHEETPAGEW ppsp;
+    HPROPSHEETPAGE *phpage;
+    PFNPROPSHEETCALLBACK pfnCallback;
+    HBITMAP hbmWatermark;
+    LPCWSTR pszbmWatermark;
+    HPALETTE hplWatermark;
+    HBITMAP hbmHeader;
+    LPCWSTR pszbmHeader;
+}
+alias _PROPSHEETHEADERW PROPSHEETHEADERW;
+alias _PROPSHEETHEADERW *LPPROPSHEETHEADERW;
+//C       typedef const PROPSHEETHEADERW *LPCPROPSHEETHEADERW;
+alias PROPSHEETHEADERW *LPCPROPSHEETHEADERW;
+//C        HPROPSHEETPAGE CreatePropertySheetPageA(LPCPROPSHEETPAGEA constPropSheetPagePointer);
+HPROPSHEETPAGE  CreatePropertySheetPageA(LPCPROPSHEETPAGEA constPropSheetPagePointer);
+//C        HPROPSHEETPAGE CreatePropertySheetPageW(LPCPROPSHEETPAGEW constPropSheetPagePointer);
+HPROPSHEETPAGE  CreatePropertySheetPageW(LPCPROPSHEETPAGEW constPropSheetPagePointer);
+//C        WINBOOL DestroyPropertySheetPage(HPROPSHEETPAGE);
+WINBOOL  DestroyPropertySheetPage(HPROPSHEETPAGE );
+//C        INT_PTR PropertySheetA(LPCPROPSHEETHEADERA);
+INT_PTR  PropertySheetA(LPCPROPSHEETHEADERA );
+//C        INT_PTR PropertySheetW(LPCPROPSHEETHEADERW);
+INT_PTR  PropertySheetW(LPCPROPSHEETHEADERW );
+//C       typedef WINBOOL ( *LPFNADDPROPSHEETPAGE)(HPROPSHEETPAGE,LPARAM);
+alias WINBOOL  function(HPROPSHEETPAGE , LPARAM )LPFNADDPROPSHEETPAGE;
+//C       typedef WINBOOL ( *LPFNADDPROPSHEETPAGES)(LPVOID,LPFNADDPROPSHEETPAGE,LPARAM);
+alias WINBOOL  function(LPVOID , LPFNADDPROPSHEETPAGE , LPARAM )LPFNADDPROPSHEETPAGES;
+//C       typedef struct _PSHNOTIFY {
+//C         NMHDR hdr;
+//C         LPARAM lParam;
+//C       } PSHNOTIFY,*LPPSHNOTIFY;
+struct _PSHNOTIFY
+{
+    NMHDR hdr;
+    LPARAM lParam;
+}
+alias _PSHNOTIFY PSHNOTIFY;
+alias _PSHNOTIFY *LPPSHNOTIFY;
+//C       typedef struct _PRINTER_INFO_1A {
+//C         DWORD Flags;
+//C         LPSTR pDescription;
+//C         LPSTR pName;
+//C         LPSTR pComment;
+//C       } PRINTER_INFO_1A,*PPRINTER_INFO_1A,*LPPRINTER_INFO_1A;
+struct _PRINTER_INFO_1A
+{
+    DWORD Flags;
+    LPSTR pDescription;
+    LPSTR pName;
+    LPSTR pComment;
+}
+alias _PRINTER_INFO_1A PRINTER_INFO_1A;
+alias _PRINTER_INFO_1A *PPRINTER_INFO_1A;
+alias _PRINTER_INFO_1A *LPPRINTER_INFO_1A;
+//C       typedef struct _PRINTER_INFO_1W {
+//C         DWORD Flags;
+//C         LPWSTR pDescription;
+//C         LPWSTR pName;
+//C         LPWSTR pComment;
+//C       } PRINTER_INFO_1W,*PPRINTER_INFO_1W,*LPPRINTER_INFO_1W;
+struct _PRINTER_INFO_1W
+{
+    DWORD Flags;
+    LPWSTR pDescription;
+    LPWSTR pName;
+    LPWSTR pComment;
+}
+alias _PRINTER_INFO_1W PRINTER_INFO_1W;
+alias _PRINTER_INFO_1W *PPRINTER_INFO_1W;
+alias _PRINTER_INFO_1W *LPPRINTER_INFO_1W;
+//C       typedef PRINTER_INFO_1A PRINTER_INFO_1;
+alias PRINTER_INFO_1A PRINTER_INFO_1;
+//C       typedef PPRINTER_INFO_1A PPRINTER_INFO_1;
+alias PPRINTER_INFO_1A PPRINTER_INFO_1;
+//C       typedef LPPRINTER_INFO_1A LPPRINTER_INFO_1;
+alias LPPRINTER_INFO_1A LPPRINTER_INFO_1;
+//C       typedef struct _PRINTER_INFO_2A {
+//C         LPSTR pServerName;
+//C         LPSTR pPrinterName;
+//C         LPSTR pShareName;
+//C         LPSTR pPortName;
+//C         LPSTR pDriverName;
+//C         LPSTR pComment;
+//C         LPSTR pLocation;
+//C         LPDEVMODEA pDevMode;
+//C         LPSTR pSepFile;
+//C         LPSTR pPrintProcessor;
+//C         LPSTR pDatatype;
+//C         LPSTR pParameters;
+//C         PSECURITY_DESCRIPTOR pSecurityDescriptor;
+//C         DWORD Attributes;
+//C         DWORD Priority;
+//C         DWORD DefaultPriority;
+//C         DWORD StartTime;
+//C         DWORD UntilTime;
+//C         DWORD Status;
+//C         DWORD cJobs;
+//C         DWORD AveragePPM;
+//C       } PRINTER_INFO_2A,*PPRINTER_INFO_2A,*LPPRINTER_INFO_2A;
+struct _PRINTER_INFO_2A
+{
+    LPSTR pServerName;
+    LPSTR pPrinterName;
+    LPSTR pShareName;
+    LPSTR pPortName;
+    LPSTR pDriverName;
+    LPSTR pComment;
+    LPSTR pLocation;
+    LPDEVMODEA pDevMode;
+    LPSTR pSepFile;
+    LPSTR pPrintProcessor;
+    LPSTR pDatatype;
+    LPSTR pParameters;
+    PSECURITY_DESCRIPTOR pSecurityDescriptor;
+    DWORD Attributes;
+    DWORD Priority;
+    DWORD DefaultPriority;
+    DWORD StartTime;
+    DWORD UntilTime;
+    DWORD Status;
+    DWORD cJobs;
+    DWORD AveragePPM;
+}
+alias _PRINTER_INFO_2A PRINTER_INFO_2A;
+alias _PRINTER_INFO_2A *PPRINTER_INFO_2A;
+alias _PRINTER_INFO_2A *LPPRINTER_INFO_2A;
+//C       typedef struct _PRINTER_INFO_2W {
+//C         LPWSTR pServerName;
+//C         LPWSTR pPrinterName;
+//C         LPWSTR pShareName;
+//C         LPWSTR pPortName;
+//C         LPWSTR pDriverName;
+//C         LPWSTR pComment;
+//C         LPWSTR pLocation;
+//C         LPDEVMODEW pDevMode;
+//C         LPWSTR pSepFile;
+//C         LPWSTR pPrintProcessor;
+//C         LPWSTR pDatatype;
+//C         LPWSTR pParameters;
+//C         PSECURITY_DESCRIPTOR pSecurityDescriptor;
+//C         DWORD Attributes;
+//C         DWORD Priority;
+//C         DWORD DefaultPriority;
+//C         DWORD StartTime;
+//C         DWORD UntilTime;
+//C         DWORD Status;
+//C         DWORD cJobs;
+//C         DWORD AveragePPM;
+//C       } PRINTER_INFO_2W,*PPRINTER_INFO_2W,*LPPRINTER_INFO_2W;
+struct _PRINTER_INFO_2W
+{
+    LPWSTR pServerName;
+    LPWSTR pPrinterName;
+    LPWSTR pShareName;
+    LPWSTR pPortName;
+    LPWSTR pDriverName;
+    LPWSTR pComment;
+    LPWSTR pLocation;
+    LPDEVMODEW pDevMode;
+    LPWSTR pSepFile;
+    LPWSTR pPrintProcessor;
+    LPWSTR pDatatype;
+    LPWSTR pParameters;
+    PSECURITY_DESCRIPTOR pSecurityDescriptor;
+    DWORD Attributes;
+    DWORD Priority;
+    DWORD DefaultPriority;
+    DWORD StartTime;
+    DWORD UntilTime;
+    DWORD Status;
+    DWORD cJobs;
+    DWORD AveragePPM;
+}
+alias _PRINTER_INFO_2W PRINTER_INFO_2W;
+alias _PRINTER_INFO_2W *PPRINTER_INFO_2W;
+alias _PRINTER_INFO_2W *LPPRINTER_INFO_2W;
+//C       typedef PRINTER_INFO_2A PRINTER_INFO_2;
+alias PRINTER_INFO_2A PRINTER_INFO_2;
+//C       typedef PPRINTER_INFO_2A PPRINTER_INFO_2;
+alias PPRINTER_INFO_2A PPRINTER_INFO_2;
+//C       typedef LPPRINTER_INFO_2A LPPRINTER_INFO_2;
+alias LPPRINTER_INFO_2A LPPRINTER_INFO_2;
+//C       typedef struct _PRINTER_INFO_3 {
+//C         PSECURITY_DESCRIPTOR pSecurityDescriptor;
+//C       } PRINTER_INFO_3,*PPRINTER_INFO_3,*LPPRINTER_INFO_3;
+struct _PRINTER_INFO_3
+{
+    PSECURITY_DESCRIPTOR pSecurityDescriptor;
+}
+alias _PRINTER_INFO_3 PRINTER_INFO_3;
+alias _PRINTER_INFO_3 *PPRINTER_INFO_3;
+alias _PRINTER_INFO_3 *LPPRINTER_INFO_3;
+//C       typedef struct _PRINTER_INFO_4A {
+//C         LPSTR pPrinterName;
+//C         LPSTR pServerName;
+//C         DWORD Attributes;
+//C       } PRINTER_INFO_4A,*PPRINTER_INFO_4A,*LPPRINTER_INFO_4A;
+struct _PRINTER_INFO_4A
+{
+    LPSTR pPrinterName;
+    LPSTR pServerName;
+    DWORD Attributes;
+}
+alias _PRINTER_INFO_4A PRINTER_INFO_4A;
+alias _PRINTER_INFO_4A *PPRINTER_INFO_4A;
+alias _PRINTER_INFO_4A *LPPRINTER_INFO_4A;
+//C       typedef struct _PRINTER_INFO_4W {
+//C         LPWSTR pPrinterName;
+//C         LPWSTR pServerName;
+//C         DWORD Attributes;
+//C       } PRINTER_INFO_4W,*PPRINTER_INFO_4W,*LPPRINTER_INFO_4W;
+struct _PRINTER_INFO_4W
+{
+    LPWSTR pPrinterName;
+    LPWSTR pServerName;
+    DWORD Attributes;
+}
+alias _PRINTER_INFO_4W PRINTER_INFO_4W;
+alias _PRINTER_INFO_4W *PPRINTER_INFO_4W;
+alias _PRINTER_INFO_4W *LPPRINTER_INFO_4W;
+//C       typedef PRINTER_INFO_4A PRINTER_INFO_4;
+alias PRINTER_INFO_4A PRINTER_INFO_4;
+//C       typedef PPRINTER_INFO_4A PPRINTER_INFO_4;
+alias PPRINTER_INFO_4A PPRINTER_INFO_4;
+//C       typedef LPPRINTER_INFO_4A LPPRINTER_INFO_4;
+alias LPPRINTER_INFO_4A LPPRINTER_INFO_4;
+//C       typedef struct _PRINTER_INFO_5A {
+//C         LPSTR pPrinterName;
+//C         LPSTR pPortName;
+//C         DWORD Attributes;
+//C         DWORD DeviceNotSelectedTimeout;
+//C         DWORD TransmissionRetryTimeout;
+//C       } PRINTER_INFO_5A,*PPRINTER_INFO_5A,*LPPRINTER_INFO_5A;
+struct _PRINTER_INFO_5A
+{
+    LPSTR pPrinterName;
+    LPSTR pPortName;
+    DWORD Attributes;
+    DWORD DeviceNotSelectedTimeout;
+    DWORD TransmissionRetryTimeout;
+}
+alias _PRINTER_INFO_5A PRINTER_INFO_5A;
+alias _PRINTER_INFO_5A *PPRINTER_INFO_5A;
+alias _PRINTER_INFO_5A *LPPRINTER_INFO_5A;
+//C       typedef struct _PRINTER_INFO_5W {
+//C         LPWSTR pPrinterName;
+//C         LPWSTR pPortName;
+//C         DWORD Attributes;
+//C         DWORD DeviceNotSelectedTimeout;
+//C         DWORD TransmissionRetryTimeout;
+//C       } PRINTER_INFO_5W,*PPRINTER_INFO_5W,*LPPRINTER_INFO_5W;
+struct _PRINTER_INFO_5W
+{
+    LPWSTR pPrinterName;
+    LPWSTR pPortName;
+    DWORD Attributes;
+    DWORD DeviceNotSelectedTimeout;
+    DWORD TransmissionRetryTimeout;
+}
+alias _PRINTER_INFO_5W PRINTER_INFO_5W;
+alias _PRINTER_INFO_5W *PPRINTER_INFO_5W;
+alias _PRINTER_INFO_5W *LPPRINTER_INFO_5W;
+//C       typedef PRINTER_INFO_5A PRINTER_INFO_5;
+alias PRINTER_INFO_5A PRINTER_INFO_5;
+//C       typedef PPRINTER_INFO_5A PPRINTER_INFO_5;
+alias PPRINTER_INFO_5A PPRINTER_INFO_5;
+//C       typedef LPPRINTER_INFO_5A LPPRINTER_INFO_5;
+alias LPPRINTER_INFO_5A LPPRINTER_INFO_5;
+//C       typedef struct _PRINTER_INFO_6 {
+//C         DWORD dwStatus;
+//C       } PRINTER_INFO_6,*PPRINTER_INFO_6,*LPPRINTER_INFO_6;
+struct _PRINTER_INFO_6
+{
+    DWORD dwStatus;
+}
+alias _PRINTER_INFO_6 PRINTER_INFO_6;
+alias _PRINTER_INFO_6 *PPRINTER_INFO_6;
+alias _PRINTER_INFO_6 *LPPRINTER_INFO_6;
+//C       typedef struct _PRINTER_INFO_7A {
+//C         LPSTR pszObjectGUID;
+//C         DWORD dwAction;
+//C       } PRINTER_INFO_7A,*PPRINTER_INFO_7A,*LPPRINTER_INFO_7A;
+struct _PRINTER_INFO_7A
+{
+    LPSTR pszObjectGUID;
+    DWORD dwAction;
+}
+alias _PRINTER_INFO_7A PRINTER_INFO_7A;
+alias _PRINTER_INFO_7A *PPRINTER_INFO_7A;
+alias _PRINTER_INFO_7A *LPPRINTER_INFO_7A;
+//C       typedef struct _PRINTER_INFO_7W {
+//C         LPWSTR pszObjectGUID;
+//C         DWORD dwAction;
+//C       } PRINTER_INFO_7W,*PPRINTER_INFO_7W,*LPPRINTER_INFO_7W;
+struct _PRINTER_INFO_7W
+{
+    LPWSTR pszObjectGUID;
+    DWORD dwAction;
+}
+alias _PRINTER_INFO_7W PRINTER_INFO_7W;
+alias _PRINTER_INFO_7W *PPRINTER_INFO_7W;
+alias _PRINTER_INFO_7W *LPPRINTER_INFO_7W;
+//C       typedef PRINTER_INFO_7A PRINTER_INFO_7;
+alias PRINTER_INFO_7A PRINTER_INFO_7;
+//C       typedef PPRINTER_INFO_7A PPRINTER_INFO_7;
+alias PPRINTER_INFO_7A PPRINTER_INFO_7;
+//C       typedef LPPRINTER_INFO_7A LPPRINTER_INFO_7;
+alias LPPRINTER_INFO_7A LPPRINTER_INFO_7;
+//C       typedef struct _PRINTER_INFO_8A {
+//C         LPDEVMODEA pDevMode;
+//C       } PRINTER_INFO_8A,*PPRINTER_INFO_8A,*LPPRINTER_INFO_8A;
+struct _PRINTER_INFO_8A
+{
+    LPDEVMODEA pDevMode;
+}
+alias _PRINTER_INFO_8A PRINTER_INFO_8A;
+alias _PRINTER_INFO_8A *PPRINTER_INFO_8A;
+alias _PRINTER_INFO_8A *LPPRINTER_INFO_8A;
+//C       typedef struct _PRINTER_INFO_8W {
+//C         LPDEVMODEW pDevMode;
+//C       } PRINTER_INFO_8W,*PPRINTER_INFO_8W,*LPPRINTER_INFO_8W;
+struct _PRINTER_INFO_8W
+{
+    LPDEVMODEW pDevMode;
+}
+alias _PRINTER_INFO_8W PRINTER_INFO_8W;
+alias _PRINTER_INFO_8W *PPRINTER_INFO_8W;
+alias _PRINTER_INFO_8W *LPPRINTER_INFO_8W;
+//C       typedef PRINTER_INFO_8A PRINTER_INFO_8;
+alias PRINTER_INFO_8A PRINTER_INFO_8;
+//C       typedef PPRINTER_INFO_8A PPRINTER_INFO_8;
+alias PPRINTER_INFO_8A PPRINTER_INFO_8;
+//C       typedef LPPRINTER_INFO_8A LPPRINTER_INFO_8;
+alias LPPRINTER_INFO_8A LPPRINTER_INFO_8;
+//C       typedef struct _PRINTER_INFO_9A {
+//C         LPDEVMODEA pDevMode;
+//C       } PRINTER_INFO_9A,*PPRINTER_INFO_9A,*LPPRINTER_INFO_9A;
+struct _PRINTER_INFO_9A
+{
+    LPDEVMODEA pDevMode;
+}
+alias _PRINTER_INFO_9A PRINTER_INFO_9A;
+alias _PRINTER_INFO_9A *PPRINTER_INFO_9A;
+alias _PRINTER_INFO_9A *LPPRINTER_INFO_9A;
+//C       typedef struct _PRINTER_INFO_9W {
+//C         LPDEVMODEW pDevMode;
+//C       } PRINTER_INFO_9W,*PPRINTER_INFO_9W,*LPPRINTER_INFO_9W;
+struct _PRINTER_INFO_9W
+{
+    LPDEVMODEW pDevMode;
+}
+alias _PRINTER_INFO_9W PRINTER_INFO_9W;
+alias _PRINTER_INFO_9W *PPRINTER_INFO_9W;
+alias _PRINTER_INFO_9W *LPPRINTER_INFO_9W;
+//C       typedef PRINTER_INFO_9A PRINTER_INFO_9;
+alias PRINTER_INFO_9A PRINTER_INFO_9;
+//C       typedef PPRINTER_INFO_9A PPRINTER_INFO_9;
+alias PPRINTER_INFO_9A PPRINTER_INFO_9;
+//C       typedef LPPRINTER_INFO_9A LPPRINTER_INFO_9;
+alias LPPRINTER_INFO_9A LPPRINTER_INFO_9;
+//C       typedef struct _JOB_INFO_1A {
+//C         DWORD JobId;
+//C         LPSTR pPrinterName;
+//C         LPSTR pMachineName;
+//C         LPSTR pUserName;
+//C         LPSTR pDocument;
+//C         LPSTR pDatatype;
+//C         LPSTR pStatus;
+//C         DWORD Status;
+//C         DWORD Priority;
+//C         DWORD Position;
+//C         DWORD TotalPages;
+//C         DWORD PagesPrinted;
+//C         SYSTEMTIME Submitted;
+//C       } JOB_INFO_1A,*PJOB_INFO_1A,*LPJOB_INFO_1A;
+struct _JOB_INFO_1A
+{
+    DWORD JobId;
+    LPSTR pPrinterName;
+    LPSTR pMachineName;
+    LPSTR pUserName;
+    LPSTR pDocument;
+    LPSTR pDatatype;
+    LPSTR pStatus;
+    DWORD Status;
+    DWORD Priority;
+    DWORD Position;
+    DWORD TotalPages;
+    DWORD PagesPrinted;
+    SYSTEMTIME Submitted;
+}
+alias _JOB_INFO_1A JOB_INFO_1A;
+alias _JOB_INFO_1A *PJOB_INFO_1A;
+alias _JOB_INFO_1A *LPJOB_INFO_1A;
+//C       typedef struct _JOB_INFO_1W {
+//C         DWORD JobId;
+//C         LPWSTR pPrinterName;
+//C         LPWSTR pMachineName;
+//C         LPWSTR pUserName;
+//C         LPWSTR pDocument;
+//C         LPWSTR pDatatype;
+//C         LPWSTR pStatus;
+//C         DWORD Status;
+//C         DWORD Priority;
+//C         DWORD Position;
+//C         DWORD TotalPages;
+//C         DWORD PagesPrinted;
+//C         SYSTEMTIME Submitted;
+//C       } JOB_INFO_1W,*PJOB_INFO_1W,*LPJOB_INFO_1W;
+struct _JOB_INFO_1W
+{
+    DWORD JobId;
+    LPWSTR pPrinterName;
+    LPWSTR pMachineName;
+    LPWSTR pUserName;
+    LPWSTR pDocument;
+    LPWSTR pDatatype;
+    LPWSTR pStatus;
+    DWORD Status;
+    DWORD Priority;
+    DWORD Position;
+    DWORD TotalPages;
+    DWORD PagesPrinted;
+    SYSTEMTIME Submitted;
+}
+alias _JOB_INFO_1W JOB_INFO_1W;
+alias _JOB_INFO_1W *PJOB_INFO_1W;
+alias _JOB_INFO_1W *LPJOB_INFO_1W;
+//C       typedef JOB_INFO_1A JOB_INFO_1;
+alias JOB_INFO_1A JOB_INFO_1;
+//C       typedef PJOB_INFO_1A PJOB_INFO_1;
+alias PJOB_INFO_1A PJOB_INFO_1;
+//C       typedef LPJOB_INFO_1A LPJOB_INFO_1;
+alias LPJOB_INFO_1A LPJOB_INFO_1;
+//C       typedef struct _JOB_INFO_2A {
+//C         DWORD JobId;
+//C         LPSTR pPrinterName;
+//C         LPSTR pMachineName;
+//C         LPSTR pUserName;
+//C         LPSTR pDocument;
+//C         LPSTR pNotifyName;
+//C         LPSTR pDatatype;
+//C         LPSTR pPrintProcessor;
+//C         LPSTR pParameters;
+//C         LPSTR pDriverName;
+//C         LPDEVMODEA pDevMode;
+//C         LPSTR pStatus;
+//C         PSECURITY_DESCRIPTOR pSecurityDescriptor;
+//C         DWORD Status;
+//C         DWORD Priority;
+//C         DWORD Position;
+//C         DWORD StartTime;
+//C         DWORD UntilTime;
+//C         DWORD TotalPages;
+//C         DWORD Size;
+//C         SYSTEMTIME Submitted;
+//C         DWORD Time;
+//C         DWORD PagesPrinted;
+//C       } JOB_INFO_2A,*PJOB_INFO_2A,*LPJOB_INFO_2A;
+struct _JOB_INFO_2A
+{
+    DWORD JobId;
+    LPSTR pPrinterName;
+    LPSTR pMachineName;
+    LPSTR pUserName;
+    LPSTR pDocument;
+    LPSTR pNotifyName;
+    LPSTR pDatatype;
+    LPSTR pPrintProcessor;
+    LPSTR pParameters;
+    LPSTR pDriverName;
+    LPDEVMODEA pDevMode;
+    LPSTR pStatus;
+    PSECURITY_DESCRIPTOR pSecurityDescriptor;
+    DWORD Status;
+    DWORD Priority;
+    DWORD Position;
+    DWORD StartTime;
+    DWORD UntilTime;
+    DWORD TotalPages;
+    DWORD Size;
+    SYSTEMTIME Submitted;
+    DWORD Time;
+    DWORD PagesPrinted;
+}
+alias _JOB_INFO_2A JOB_INFO_2A;
+alias _JOB_INFO_2A *PJOB_INFO_2A;
+alias _JOB_INFO_2A *LPJOB_INFO_2A;
+//C       typedef struct _JOB_INFO_2W {
+//C         DWORD JobId;
+//C         LPWSTR pPrinterName;
+//C         LPWSTR pMachineName;
+//C         LPWSTR pUserName;
+//C         LPWSTR pDocument;
+//C         LPWSTR pNotifyName;
+//C         LPWSTR pDatatype;
+//C         LPWSTR pPrintProcessor;
+//C         LPWSTR pParameters;
+//C         LPWSTR pDriverName;
+//C         LPDEVMODEW pDevMode;
+//C         LPWSTR pStatus;
+//C         PSECURITY_DESCRIPTOR pSecurityDescriptor;
+//C         DWORD Status;
+//C         DWORD Priority;
+//C         DWORD Position;
+//C         DWORD StartTime;
+//C         DWORD UntilTime;
+//C         DWORD TotalPages;
+//C         DWORD Size;
+//C         SYSTEMTIME Submitted;
+//C         DWORD Time;
+//C         DWORD PagesPrinted;
+//C       } JOB_INFO_2W,*PJOB_INFO_2W,*LPJOB_INFO_2W;
+struct _JOB_INFO_2W
+{
+    DWORD JobId;
+    LPWSTR pPrinterName;
+    LPWSTR pMachineName;
+    LPWSTR pUserName;
+    LPWSTR pDocument;
+    LPWSTR pNotifyName;
+    LPWSTR pDatatype;
+    LPWSTR pPrintProcessor;
+    LPWSTR pParameters;
+    LPWSTR pDriverName;
+    LPDEVMODEW pDevMode;
+    LPWSTR pStatus;
+    PSECURITY_DESCRIPTOR pSecurityDescriptor;
+    DWORD Status;
+    DWORD Priority;
+    DWORD Position;
+    DWORD StartTime;
+    DWORD UntilTime;
+    DWORD TotalPages;
+    DWORD Size;
+    SYSTEMTIME Submitted;
+    DWORD Time;
+    DWORD PagesPrinted;
+}
+alias _JOB_INFO_2W JOB_INFO_2W;
+alias _JOB_INFO_2W *PJOB_INFO_2W;
+alias _JOB_INFO_2W *LPJOB_INFO_2W;
+//C       typedef JOB_INFO_2A JOB_INFO_2;
+alias JOB_INFO_2A JOB_INFO_2;
+//C       typedef PJOB_INFO_2A PJOB_INFO_2;
+alias PJOB_INFO_2A PJOB_INFO_2;
+//C       typedef LPJOB_INFO_2A LPJOB_INFO_2;
+alias LPJOB_INFO_2A LPJOB_INFO_2;
+//C       typedef struct _JOB_INFO_3 {
+//C         DWORD JobId;
+//C         DWORD NextJobId;
+//C         DWORD Reserved;
+//C       } JOB_INFO_3,*PJOB_INFO_3,*LPJOB_INFO_3;
+struct _JOB_INFO_3
+{
+    DWORD JobId;
+    DWORD NextJobId;
+    DWORD Reserved;
+}
+alias _JOB_INFO_3 JOB_INFO_3;
+alias _JOB_INFO_3 *PJOB_INFO_3;
+alias _JOB_INFO_3 *LPJOB_INFO_3;
+//C       typedef struct _ADDJOB_INFO_1A {
+//C         LPSTR Path;
+//C         DWORD JobId;
+//C       } ADDJOB_INFO_1A,*PADDJOB_INFO_1A,*LPADDJOB_INFO_1A;
+struct _ADDJOB_INFO_1A
+{
+    LPSTR Path;
+    DWORD JobId;
+}
+alias _ADDJOB_INFO_1A ADDJOB_INFO_1A;
+alias _ADDJOB_INFO_1A *PADDJOB_INFO_1A;
+alias _ADDJOB_INFO_1A *LPADDJOB_INFO_1A;
+//C       typedef struct _ADDJOB_INFO_1W {
+//C         LPWSTR Path;
+//C         DWORD JobId;
+//C       } ADDJOB_INFO_1W,*PADDJOB_INFO_1W,*LPADDJOB_INFO_1W;
+struct _ADDJOB_INFO_1W
+{
+    LPWSTR Path;
+    DWORD JobId;
+}
+alias _ADDJOB_INFO_1W ADDJOB_INFO_1W;
+alias _ADDJOB_INFO_1W *PADDJOB_INFO_1W;
+alias _ADDJOB_INFO_1W *LPADDJOB_INFO_1W;
+//C       typedef ADDJOB_INFO_1A ADDJOB_INFO_1;
+alias ADDJOB_INFO_1A ADDJOB_INFO_1;
+//C       typedef PADDJOB_INFO_1A PADDJOB_INFO_1;
+alias PADDJOB_INFO_1A PADDJOB_INFO_1;
+//C       typedef LPADDJOB_INFO_1A LPADDJOB_INFO_1;
+alias LPADDJOB_INFO_1A LPADDJOB_INFO_1;
+//C       typedef struct _DRIVER_INFO_1A {
+//C         LPSTR pName;
+//C       } DRIVER_INFO_1A,*PDRIVER_INFO_1A,*LPDRIVER_INFO_1A;
+struct _DRIVER_INFO_1A
+{
+    LPSTR pName;
+}
+alias _DRIVER_INFO_1A DRIVER_INFO_1A;
+alias _DRIVER_INFO_1A *PDRIVER_INFO_1A;
+alias _DRIVER_INFO_1A *LPDRIVER_INFO_1A;
+//C       typedef struct _DRIVER_INFO_1W {
+//C         LPWSTR pName;
+//C       } DRIVER_INFO_1W,*PDRIVER_INFO_1W,*LPDRIVER_INFO_1W;
+struct _DRIVER_INFO_1W
+{
+    LPWSTR pName;
+}
+alias _DRIVER_INFO_1W DRIVER_INFO_1W;
+alias _DRIVER_INFO_1W *PDRIVER_INFO_1W;
+alias _DRIVER_INFO_1W *LPDRIVER_INFO_1W;
+//C       typedef DRIVER_INFO_1A DRIVER_INFO_1;
+alias DRIVER_INFO_1A DRIVER_INFO_1;
+//C       typedef PDRIVER_INFO_1A PDRIVER_INFO_1;
+alias PDRIVER_INFO_1A PDRIVER_INFO_1;
+//C       typedef LPDRIVER_INFO_1A LPDRIVER_INFO_1;
+alias LPDRIVER_INFO_1A LPDRIVER_INFO_1;
+//C       typedef struct _DRIVER_INFO_2A {
+//C         DWORD cVersion;
+//C         LPSTR pName;
+//C         LPSTR pEnvironment;
+//C         LPSTR pDriverPath;
+//C         LPSTR pDataFile;
+//C         LPSTR pConfigFile;
+//C       } DRIVER_INFO_2A,*PDRIVER_INFO_2A,*LPDRIVER_INFO_2A;
+struct _DRIVER_INFO_2A
+{
+    DWORD cVersion;
+    LPSTR pName;
+    LPSTR pEnvironment;
+    LPSTR pDriverPath;
+    LPSTR pDataFile;
+    LPSTR pConfigFile;
+}
+alias _DRIVER_INFO_2A DRIVER_INFO_2A;
+alias _DRIVER_INFO_2A *PDRIVER_INFO_2A;
+alias _DRIVER_INFO_2A *LPDRIVER_INFO_2A;
+//C       typedef struct _DRIVER_INFO_2W {
+//C         DWORD cVersion;
+//C         LPWSTR pName;
+//C         LPWSTR pEnvironment;
+//C         LPWSTR pDriverPath;
+//C         LPWSTR pDataFile;
+//C         LPWSTR pConfigFile;
+//C       } DRIVER_INFO_2W,*PDRIVER_INFO_2W,*LPDRIVER_INFO_2W;
+struct _DRIVER_INFO_2W
+{
+    DWORD cVersion;
+    LPWSTR pName;
+    LPWSTR pEnvironment;
+    LPWSTR pDriverPath;
+    LPWSTR pDataFile;
+    LPWSTR pConfigFile;
+}
+alias _DRIVER_INFO_2W DRIVER_INFO_2W;
+alias _DRIVER_INFO_2W *PDRIVER_INFO_2W;
+alias _DRIVER_INFO_2W *LPDRIVER_INFO_2W;
+//C       typedef DRIVER_INFO_2A DRIVER_INFO_2;
+alias DRIVER_INFO_2A DRIVER_INFO_2;
+//C       typedef PDRIVER_INFO_2A PDRIVER_INFO_2;
+alias PDRIVER_INFO_2A PDRIVER_INFO_2;
+//C       typedef LPDRIVER_INFO_2A LPDRIVER_INFO_2;
+alias LPDRIVER_INFO_2A LPDRIVER_INFO_2;
+//C       typedef struct _DRIVER_INFO_3A {
+//C         DWORD cVersion;
+//C         LPSTR pName;
+//C         LPSTR pEnvironment;
+//C         LPSTR pDriverPath;
+//C         LPSTR pDataFile;
+//C         LPSTR pConfigFile;
+//C         LPSTR pHelpFile;
+//C         LPSTR pDependentFiles;
+//C         LPSTR pMonitorName;
+//C         LPSTR pDefaultDataType;
+//C       } DRIVER_INFO_3A,*PDRIVER_INFO_3A,*LPDRIVER_INFO_3A;
+struct _DRIVER_INFO_3A
+{
+    DWORD cVersion;
+    LPSTR pName;
+    LPSTR pEnvironment;
+    LPSTR pDriverPath;
+    LPSTR pDataFile;
+    LPSTR pConfigFile;
+    LPSTR pHelpFile;
+    LPSTR pDependentFiles;
+    LPSTR pMonitorName;
+    LPSTR pDefaultDataType;
+}
+alias _DRIVER_INFO_3A DRIVER_INFO_3A;
+alias _DRIVER_INFO_3A *PDRIVER_INFO_3A;
+alias _DRIVER_INFO_3A *LPDRIVER_INFO_3A;
+//C       typedef struct _DRIVER_INFO_3W {
+//C         DWORD cVersion;
+//C         LPWSTR pName;
+//C         LPWSTR pEnvironment;
+//C         LPWSTR pDriverPath;
+//C         LPWSTR pDataFile;
+//C         LPWSTR pConfigFile;
+//C         LPWSTR pHelpFile;
+//C         LPWSTR pDependentFiles;
+//C         LPWSTR pMonitorName;
+//C         LPWSTR pDefaultDataType;
+//C       } DRIVER_INFO_3W,*PDRIVER_INFO_3W,*LPDRIVER_INFO_3W;
+struct _DRIVER_INFO_3W
+{
+    DWORD cVersion;
+    LPWSTR pName;
+    LPWSTR pEnvironment;
+    LPWSTR pDriverPath;
+    LPWSTR pDataFile;
+    LPWSTR pConfigFile;
+    LPWSTR pHelpFile;
+    LPWSTR pDependentFiles;
+    LPWSTR pMonitorName;
+    LPWSTR pDefaultDataType;
+}
+alias _DRIVER_INFO_3W DRIVER_INFO_3W;
+alias _DRIVER_INFO_3W *PDRIVER_INFO_3W;
+alias _DRIVER_INFO_3W *LPDRIVER_INFO_3W;
+//C       typedef DRIVER_INFO_3A DRIVER_INFO_3;
+alias DRIVER_INFO_3A DRIVER_INFO_3;
+//C       typedef PDRIVER_INFO_3A PDRIVER_INFO_3;
+alias PDRIVER_INFO_3A PDRIVER_INFO_3;
+//C       typedef LPDRIVER_INFO_3A LPDRIVER_INFO_3;
+alias LPDRIVER_INFO_3A LPDRIVER_INFO_3;
+//C       typedef struct _DRIVER_INFO_4A {
+//C         DWORD cVersion;
+//C         LPSTR pName;
+//C         LPSTR pEnvironment;
+//C         LPSTR pDriverPath;
+//C         LPSTR pDataFile;
+//C         LPSTR pConfigFile;
+//C         LPSTR pHelpFile;
+//C         LPSTR pDependentFiles;
+//C         LPSTR pMonitorName;
+//C         LPSTR pDefaultDataType;
+//C         LPSTR pszzPreviousNames;
+//C       } DRIVER_INFO_4A,*PDRIVER_INFO_4A,*LPDRIVER_INFO_4A;
+struct _DRIVER_INFO_4A
+{
+    DWORD cVersion;
+    LPSTR pName;
+    LPSTR pEnvironment;
+    LPSTR pDriverPath;
+    LPSTR pDataFile;
+    LPSTR pConfigFile;
+    LPSTR pHelpFile;
+    LPSTR pDependentFiles;
+    LPSTR pMonitorName;
+    LPSTR pDefaultDataType;
+    LPSTR pszzPreviousNames;
+}
+alias _DRIVER_INFO_4A DRIVER_INFO_4A;
+alias _DRIVER_INFO_4A *PDRIVER_INFO_4A;
+alias _DRIVER_INFO_4A *LPDRIVER_INFO_4A;
+//C       typedef struct _DRIVER_INFO_4W {
+//C         DWORD cVersion;
+//C         LPWSTR pName;
+//C         LPWSTR pEnvironment;
+//C         LPWSTR pDriverPath;
+//C         LPWSTR pDataFile;
+//C         LPWSTR pConfigFile;
+//C         LPWSTR pHelpFile;
+//C         LPWSTR pDependentFiles;
+//C         LPWSTR pMonitorName;
+//C         LPWSTR pDefaultDataType;
+//C         LPWSTR pszzPreviousNames;
+//C       } DRIVER_INFO_4W,*PDRIVER_INFO_4W,*LPDRIVER_INFO_4W;
+struct _DRIVER_INFO_4W
+{
+    DWORD cVersion;
+    LPWSTR pName;
+    LPWSTR pEnvironment;
+    LPWSTR pDriverPath;
+    LPWSTR pDataFile;
+    LPWSTR pConfigFile;
+    LPWSTR pHelpFile;
+    LPWSTR pDependentFiles;
+    LPWSTR pMonitorName;
+    LPWSTR pDefaultDataType;
+    LPWSTR pszzPreviousNames;
+}
+alias _DRIVER_INFO_4W DRIVER_INFO_4W;
+alias _DRIVER_INFO_4W *PDRIVER_INFO_4W;
+alias _DRIVER_INFO_4W *LPDRIVER_INFO_4W;
+//C       typedef DRIVER_INFO_4A DRIVER_INFO_4;
+alias DRIVER_INFO_4A DRIVER_INFO_4;
+//C       typedef PDRIVER_INFO_4A PDRIVER_INFO_4;
+alias PDRIVER_INFO_4A PDRIVER_INFO_4;
+//C       typedef LPDRIVER_INFO_4A LPDRIVER_INFO_4;
+alias LPDRIVER_INFO_4A LPDRIVER_INFO_4;
+//C       typedef struct _DRIVER_INFO_5A {
+//C         DWORD cVersion;
+//C         LPSTR pName;
+//C         LPSTR pEnvironment;
+//C         LPSTR pDriverPath;
+//C         LPSTR pDataFile;
+//C         LPSTR pConfigFile;
+//C         DWORD dwDriverAttributes;
+//C         DWORD dwConfigVersion;
+//C         DWORD dwDriverVersion;
+//C       } DRIVER_INFO_5A,*PDRIVER_INFO_5A,*LPDRIVER_INFO_5A;
+struct _DRIVER_INFO_5A
+{
+    DWORD cVersion;
+    LPSTR pName;
+    LPSTR pEnvironment;
+    LPSTR pDriverPath;
+    LPSTR pDataFile;
+    LPSTR pConfigFile;
+    DWORD dwDriverAttributes;
+    DWORD dwConfigVersion;
+    DWORD dwDriverVersion;
+}
+alias _DRIVER_INFO_5A DRIVER_INFO_5A;
+alias _DRIVER_INFO_5A *PDRIVER_INFO_5A;
+alias _DRIVER_INFO_5A *LPDRIVER_INFO_5A;
+//C       typedef struct _DRIVER_INFO_5W {
+//C         DWORD cVersion;
+//C         LPWSTR pName;
+//C         LPWSTR pEnvironment;
+//C         LPWSTR pDriverPath;
+//C         LPWSTR pDataFile;
+//C         LPWSTR pConfigFile;
+//C         DWORD dwDriverAttributes;
+//C         DWORD dwConfigVersion;
+//C         DWORD dwDriverVersion;
+//C       } DRIVER_INFO_5W,*PDRIVER_INFO_5W,*LPDRIVER_INFO_5W;
+struct _DRIVER_INFO_5W
+{
+    DWORD cVersion;
+    LPWSTR pName;
+    LPWSTR pEnvironment;
+    LPWSTR pDriverPath;
+    LPWSTR pDataFile;
+    LPWSTR pConfigFile;
+    DWORD dwDriverAttributes;
+    DWORD dwConfigVersion;
+    DWORD dwDriverVersion;
+}
+alias _DRIVER_INFO_5W DRIVER_INFO_5W;
+alias _DRIVER_INFO_5W *PDRIVER_INFO_5W;
+alias _DRIVER_INFO_5W *LPDRIVER_INFO_5W;
+//C       typedef DRIVER_INFO_5A DRIVER_INFO_5;
+alias DRIVER_INFO_5A DRIVER_INFO_5;
+//C       typedef PDRIVER_INFO_5A PDRIVER_INFO_5;
+alias PDRIVER_INFO_5A PDRIVER_INFO_5;
+//C       typedef LPDRIVER_INFO_5A LPDRIVER_INFO_5;
+alias LPDRIVER_INFO_5A LPDRIVER_INFO_5;
+//C       typedef struct _DRIVER_INFO_6A {
+//C         DWORD cVersion;
+//C         LPSTR pName;
+//C         LPSTR pEnvironment;
+//C         LPSTR pDriverPath;
+//C         LPSTR pDataFile;
+//C         LPSTR pConfigFile;
+//C         LPSTR pHelpFile;
+//C         LPSTR pDependentFiles;
+//C         LPSTR pMonitorName;
+//C         LPSTR pDefaultDataType;
+//C         LPSTR pszzPreviousNames;
+//C         FILETIME ftDriverDate;
+//C         DWORDLONG dwlDriverVersion;
+//C         LPSTR pszMfgName;
+//C         LPSTR pszOEMUrl;
+//C         LPSTR pszHardwareID;
+//C         LPSTR pszProvider;
+//C       } DRIVER_INFO_6A,*PDRIVER_INFO_6A,*LPDRIVER_INFO_6A;
+struct _DRIVER_INFO_6A
+{
+    DWORD cVersion;
+    LPSTR pName;
+    LPSTR pEnvironment;
+    LPSTR pDriverPath;
+    LPSTR pDataFile;
+    LPSTR pConfigFile;
+    LPSTR pHelpFile;
+    LPSTR pDependentFiles;
+    LPSTR pMonitorName;
+    LPSTR pDefaultDataType;
+    LPSTR pszzPreviousNames;
+    FILETIME ftDriverDate;
+    DWORDLONG dwlDriverVersion;
+    LPSTR pszMfgName;
+    LPSTR pszOEMUrl;
+    LPSTR pszHardwareID;
+    LPSTR pszProvider;
+}
+alias _DRIVER_INFO_6A DRIVER_INFO_6A;
+alias _DRIVER_INFO_6A *PDRIVER_INFO_6A;
+alias _DRIVER_INFO_6A *LPDRIVER_INFO_6A;
+//C       typedef struct _DRIVER_INFO_6W {
+//C         DWORD cVersion;
+//C         LPWSTR pName;
+//C         LPWSTR pEnvironment;
+//C         LPWSTR pDriverPath;
+//C         LPWSTR pDataFile;
+//C         LPWSTR pConfigFile;
+//C         LPWSTR pHelpFile;
+//C         LPWSTR pDependentFiles;
+//C         LPWSTR pMonitorName;
+//C         LPWSTR pDefaultDataType;
+//C         LPWSTR pszzPreviousNames;
+//C         FILETIME ftDriverDate;
+//C         DWORDLONG dwlDriverVersion;
+//C         LPWSTR pszMfgName;
+//C         LPWSTR pszOEMUrl;
+//C         LPWSTR pszHardwareID;
+//C         LPWSTR pszProvider;
+//C       } DRIVER_INFO_6W,*PDRIVER_INFO_6W,*LPDRIVER_INFO_6W;
+struct _DRIVER_INFO_6W
+{
+    DWORD cVersion;
+    LPWSTR pName;
+    LPWSTR pEnvironment;
+    LPWSTR pDriverPath;
+    LPWSTR pDataFile;
+    LPWSTR pConfigFile;
+    LPWSTR pHelpFile;
+    LPWSTR pDependentFiles;
+    LPWSTR pMonitorName;
+    LPWSTR pDefaultDataType;
+    LPWSTR pszzPreviousNames;
+    FILETIME ftDriverDate;
+    DWORDLONG dwlDriverVersion;
+    LPWSTR pszMfgName;
+    LPWSTR pszOEMUrl;
+    LPWSTR pszHardwareID;
+    LPWSTR pszProvider;
+}
+alias _DRIVER_INFO_6W DRIVER_INFO_6W;
+alias _DRIVER_INFO_6W *PDRIVER_INFO_6W;
+alias _DRIVER_INFO_6W *LPDRIVER_INFO_6W;
+//C       typedef DRIVER_INFO_6A DRIVER_INFO_6;
+alias DRIVER_INFO_6A DRIVER_INFO_6;
+//C       typedef PDRIVER_INFO_6A PDRIVER_INFO_6;
+alias PDRIVER_INFO_6A PDRIVER_INFO_6;
+//C       typedef LPDRIVER_INFO_6A LPDRIVER_INFO_6;
+alias LPDRIVER_INFO_6A LPDRIVER_INFO_6;
+//C       typedef struct _DOC_INFO_1A {
+//C         LPSTR pDocName;
+//C         LPSTR pOutputFile;
+//C         LPSTR pDatatype;
+//C       } DOC_INFO_1A,*PDOC_INFO_1A,*LPDOC_INFO_1A;
+struct _DOC_INFO_1A
+{
+    LPSTR pDocName;
+    LPSTR pOutputFile;
+    LPSTR pDatatype;
+}
+alias _DOC_INFO_1A DOC_INFO_1A;
+alias _DOC_INFO_1A *PDOC_INFO_1A;
+alias _DOC_INFO_1A *LPDOC_INFO_1A;
+//C       typedef struct _DOC_INFO_1W {
+//C         LPWSTR pDocName;
+//C         LPWSTR pOutputFile;
+//C         LPWSTR pDatatype;
+//C       } DOC_INFO_1W,*PDOC_INFO_1W,*LPDOC_INFO_1W;
+struct _DOC_INFO_1W
+{
+    LPWSTR pDocName;
+    LPWSTR pOutputFile;
+    LPWSTR pDatatype;
+}
+alias _DOC_INFO_1W DOC_INFO_1W;
+alias _DOC_INFO_1W *PDOC_INFO_1W;
+alias _DOC_INFO_1W *LPDOC_INFO_1W;
+//C       typedef DOC_INFO_1A DOC_INFO_1;
+alias DOC_INFO_1A DOC_INFO_1;
+//C       typedef PDOC_INFO_1A PDOC_INFO_1;
+alias PDOC_INFO_1A PDOC_INFO_1;
+//C       typedef LPDOC_INFO_1A LPDOC_INFO_1;
+alias LPDOC_INFO_1A LPDOC_INFO_1;
+//C       typedef struct _FORM_INFO_1A {
+//C         DWORD Flags;
+//C         LPSTR pName;
+//C         SIZEL Size;
+//C         RECTL ImageableArea;
+//C       } FORM_INFO_1A,*PFORM_INFO_1A,*LPFORM_INFO_1A;
+struct _FORM_INFO_1A
+{
+    DWORD Flags;
+    LPSTR pName;
+    SIZEL Size;
+    RECTL ImageableArea;
+}
+alias _FORM_INFO_1A FORM_INFO_1A;
+alias _FORM_INFO_1A *PFORM_INFO_1A;
+alias _FORM_INFO_1A *LPFORM_INFO_1A;
+//C       typedef struct _FORM_INFO_1W {
+//C         DWORD Flags;
+//C         LPWSTR pName;
+//C         SIZEL Size;
+//C         RECTL ImageableArea;
+//C       } FORM_INFO_1W,*PFORM_INFO_1W,*LPFORM_INFO_1W;
+struct _FORM_INFO_1W
+{
+    DWORD Flags;
+    LPWSTR pName;
+    SIZEL Size;
+    RECTL ImageableArea;
+}
+alias _FORM_INFO_1W FORM_INFO_1W;
+alias _FORM_INFO_1W *PFORM_INFO_1W;
+alias _FORM_INFO_1W *LPFORM_INFO_1W;
+//C       typedef FORM_INFO_1A FORM_INFO_1;
+alias FORM_INFO_1A FORM_INFO_1;
+//C       typedef PFORM_INFO_1A PFORM_INFO_1;
+alias PFORM_INFO_1A PFORM_INFO_1;
+//C       typedef LPFORM_INFO_1A LPFORM_INFO_1;
+alias LPFORM_INFO_1A LPFORM_INFO_1;
+//C       typedef struct _DOC_INFO_2A {
+//C         LPSTR pDocName;
+//C         LPSTR pOutputFile;
+//C         LPSTR pDatatype;
+//C         DWORD dwMode;
+//C         DWORD JobId;
+//C       } DOC_INFO_2A,*PDOC_INFO_2A,*LPDOC_INFO_2A;
+struct _DOC_INFO_2A
+{
+    LPSTR pDocName;
+    LPSTR pOutputFile;
+    LPSTR pDatatype;
+    DWORD dwMode;
+    DWORD JobId;
+}
+alias _DOC_INFO_2A DOC_INFO_2A;
+alias _DOC_INFO_2A *PDOC_INFO_2A;
+alias _DOC_INFO_2A *LPDOC_INFO_2A;
+//C       typedef struct _DOC_INFO_2W {
+//C         LPWSTR pDocName;
+//C         LPWSTR pOutputFile;
+//C         LPWSTR pDatatype;
+//C         DWORD dwMode;
+//C         DWORD JobId;
+//C       } DOC_INFO_2W,*PDOC_INFO_2W,*LPDOC_INFO_2W;
+struct _DOC_INFO_2W
+{
+    LPWSTR pDocName;
+    LPWSTR pOutputFile;
+    LPWSTR pDatatype;
+    DWORD dwMode;
+    DWORD JobId;
+}
+alias _DOC_INFO_2W DOC_INFO_2W;
+alias _DOC_INFO_2W *PDOC_INFO_2W;
+alias _DOC_INFO_2W *LPDOC_INFO_2W;
+//C       typedef DOC_INFO_2A DOC_INFO_2;
+alias DOC_INFO_2A DOC_INFO_2;
+//C       typedef PDOC_INFO_2A PDOC_INFO_2;
+alias PDOC_INFO_2A PDOC_INFO_2;
+//C       typedef LPDOC_INFO_2A LPDOC_INFO_2;
+alias LPDOC_INFO_2A LPDOC_INFO_2;
+//C       typedef struct _DOC_INFO_3A {
+//C         LPSTR pDocName;
+//C         LPSTR pOutputFile;
+//C         LPSTR pDatatype;
+//C         DWORD dwFlags;
+//C       } DOC_INFO_3A,*PDOC_INFO_3A,*LPDOC_INFO_3A;
+struct _DOC_INFO_3A
+{
+    LPSTR pDocName;
+    LPSTR pOutputFile;
+    LPSTR pDatatype;
+    DWORD dwFlags;
+}
+alias _DOC_INFO_3A DOC_INFO_3A;
+alias _DOC_INFO_3A *PDOC_INFO_3A;
+alias _DOC_INFO_3A *LPDOC_INFO_3A;
+//C       typedef struct _DOC_INFO_3W {
+//C         LPWSTR pDocName;
+//C         LPWSTR pOutputFile;
+//C         LPWSTR pDatatype;
+//C         DWORD dwFlags;
+//C       } DOC_INFO_3W,*PDOC_INFO_3W,*LPDOC_INFO_3W;
+struct _DOC_INFO_3W
+{
+    LPWSTR pDocName;
+    LPWSTR pOutputFile;
+    LPWSTR pDatatype;
+    DWORD dwFlags;
+}
+alias _DOC_INFO_3W DOC_INFO_3W;
+alias _DOC_INFO_3W *PDOC_INFO_3W;
+alias _DOC_INFO_3W *LPDOC_INFO_3W;
+//C       typedef DOC_INFO_3A DOC_INFO_3;
+alias DOC_INFO_3A DOC_INFO_3;
+//C       typedef PDOC_INFO_3A PDOC_INFO_3;
+alias PDOC_INFO_3A PDOC_INFO_3;
+//C       typedef LPDOC_INFO_3A LPDOC_INFO_3;
+alias LPDOC_INFO_3A LPDOC_INFO_3;
+//C       typedef struct _PRINTPROCESSOR_INFO_1A {
+//C         LPSTR pName;
+//C       } PRINTPROCESSOR_INFO_1A,*PPRINTPROCESSOR_INFO_1A,*LPPRINTPROCESSOR_INFO_1A;
+struct _PRINTPROCESSOR_INFO_1A
+{
+    LPSTR pName;
+}
+alias _PRINTPROCESSOR_INFO_1A PRINTPROCESSOR_INFO_1A;
+alias _PRINTPROCESSOR_INFO_1A *PPRINTPROCESSOR_INFO_1A;
+alias _PRINTPROCESSOR_INFO_1A *LPPRINTPROCESSOR_INFO_1A;
+//C       typedef struct _PRINTPROCESSOR_INFO_1W {
+//C         LPWSTR pName;
+//C       } PRINTPROCESSOR_INFO_1W,*PPRINTPROCESSOR_INFO_1W,*LPPRINTPROCESSOR_INFO_1W;
+struct _PRINTPROCESSOR_INFO_1W
+{
+    LPWSTR pName;
+}
+alias _PRINTPROCESSOR_INFO_1W PRINTPROCESSOR_INFO_1W;
+alias _PRINTPROCESSOR_INFO_1W *PPRINTPROCESSOR_INFO_1W;
+alias _PRINTPROCESSOR_INFO_1W *LPPRINTPROCESSOR_INFO_1W;
+//C       typedef PRINTPROCESSOR_INFO_1A PRINTPROCESSOR_INFO_1;
+alias PRINTPROCESSOR_INFO_1A PRINTPROCESSOR_INFO_1;
+//C       typedef PPRINTPROCESSOR_INFO_1A PPRINTPROCESSOR_INFO_1;
+alias PPRINTPROCESSOR_INFO_1A PPRINTPROCESSOR_INFO_1;
+//C       typedef LPPRINTPROCESSOR_INFO_1A LPPRINTPROCESSOR_INFO_1;
+alias LPPRINTPROCESSOR_INFO_1A LPPRINTPROCESSOR_INFO_1;
+//C       typedef struct _PRINTPROCESSOR_CAPS_1 {
+//C         DWORD dwLevel;
+//C         DWORD dwNupOptions;
+//C         DWORD dwPageOrderFlags;
+//C         DWORD dwNumberOfCopies;
+//C       } PRINTPROCESSOR_CAPS_1,*PPRINTPROCESSOR_CAPS_1;
+struct _PRINTPROCESSOR_CAPS_1
+{
+    DWORD dwLevel;
+    DWORD dwNupOptions;
+    DWORD dwPageOrderFlags;
+    DWORD dwNumberOfCopies;
+}
+alias _PRINTPROCESSOR_CAPS_1 PRINTPROCESSOR_CAPS_1;
+alias _PRINTPROCESSOR_CAPS_1 *PPRINTPROCESSOR_CAPS_1;
+//C       typedef struct _PORT_INFO_1A {
+//C         LPSTR pName;
+//C       } PORT_INFO_1A,*PPORT_INFO_1A,*LPPORT_INFO_1A;
+struct _PORT_INFO_1A
+{
+    LPSTR pName;
+}
+alias _PORT_INFO_1A PORT_INFO_1A;
+alias _PORT_INFO_1A *PPORT_INFO_1A;
+alias _PORT_INFO_1A *LPPORT_INFO_1A;
+//C       typedef struct _PORT_INFO_1W {
+//C         LPWSTR pName;
+//C       } PORT_INFO_1W,*PPORT_INFO_1W,*LPPORT_INFO_1W;
+struct _PORT_INFO_1W
+{
+    LPWSTR pName;
+}
+alias _PORT_INFO_1W PORT_INFO_1W;
+alias _PORT_INFO_1W *PPORT_INFO_1W;
+alias _PORT_INFO_1W *LPPORT_INFO_1W;
+//C       typedef PORT_INFO_1A PORT_INFO_1;
+alias PORT_INFO_1A PORT_INFO_1;
+//C       typedef PPORT_INFO_1A PPORT_INFO_1;
+alias PPORT_INFO_1A PPORT_INFO_1;
+//C       typedef LPPORT_INFO_1A LPPORT_INFO_1;
+alias LPPORT_INFO_1A LPPORT_INFO_1;
+//C       typedef struct _PORT_INFO_2A {
+//C         LPSTR pPortName;
+//C         LPSTR pMonitorName;
+//C         LPSTR pDescription;
+//C         DWORD fPortType;
+//C         DWORD Reserved;
+//C       } PORT_INFO_2A,*PPORT_INFO_2A,*LPPORT_INFO_2A;
+struct _PORT_INFO_2A
+{
+    LPSTR pPortName;
+    LPSTR pMonitorName;
+    LPSTR pDescription;
+    DWORD fPortType;
+    DWORD Reserved;
+}
+alias _PORT_INFO_2A PORT_INFO_2A;
+alias _PORT_INFO_2A *PPORT_INFO_2A;
+alias _PORT_INFO_2A *LPPORT_INFO_2A;
+//C       typedef struct _PORT_INFO_2W {
+//C         LPWSTR pPortName;
+//C         LPWSTR pMonitorName;
+//C         LPWSTR pDescription;
+//C         DWORD fPortType;
+//C         DWORD Reserved;
+//C       } PORT_INFO_2W,*PPORT_INFO_2W,*LPPORT_INFO_2W;
+struct _PORT_INFO_2W
+{
+    LPWSTR pPortName;
+    LPWSTR pMonitorName;
+    LPWSTR pDescription;
+    DWORD fPortType;
+    DWORD Reserved;
+}
+alias _PORT_INFO_2W PORT_INFO_2W;
+alias _PORT_INFO_2W *PPORT_INFO_2W;
+alias _PORT_INFO_2W *LPPORT_INFO_2W;
+//C       typedef PORT_INFO_2A PORT_INFO_2;
+alias PORT_INFO_2A PORT_INFO_2;
+//C       typedef PPORT_INFO_2A PPORT_INFO_2;
+alias PPORT_INFO_2A PPORT_INFO_2;
+//C       typedef LPPORT_INFO_2A LPPORT_INFO_2;
+alias LPPORT_INFO_2A LPPORT_INFO_2;
+//C       typedef struct _PORT_INFO_3A {
+//C         DWORD dwStatus;
+//C         LPSTR pszStatus;
+//C         DWORD dwSeverity;
+//C       } PORT_INFO_3A,*PPORT_INFO_3A,*LPPORT_INFO_3A;
+struct _PORT_INFO_3A
+{
+    DWORD dwStatus;
+    LPSTR pszStatus;
+    DWORD dwSeverity;
+}
+alias _PORT_INFO_3A PORT_INFO_3A;
+alias _PORT_INFO_3A *PPORT_INFO_3A;
+alias _PORT_INFO_3A *LPPORT_INFO_3A;
+//C       typedef struct _PORT_INFO_3W {
+//C         DWORD dwStatus;
+//C         LPWSTR pszStatus;
+//C         DWORD dwSeverity;
+//C       } PORT_INFO_3W,*PPORT_INFO_3W,*LPPORT_INFO_3W;
+struct _PORT_INFO_3W
+{
+    DWORD dwStatus;
+    LPWSTR pszStatus;
+    DWORD dwSeverity;
+}
+alias _PORT_INFO_3W PORT_INFO_3W;
+alias _PORT_INFO_3W *PPORT_INFO_3W;
+alias _PORT_INFO_3W *LPPORT_INFO_3W;
+//C       typedef PORT_INFO_3A PORT_INFO_3;
+alias PORT_INFO_3A PORT_INFO_3;
+//C       typedef PPORT_INFO_3A PPORT_INFO_3;
+alias PPORT_INFO_3A PPORT_INFO_3;
+//C       typedef LPPORT_INFO_3A LPPORT_INFO_3;
+alias LPPORT_INFO_3A LPPORT_INFO_3;
+//C       typedef struct _MONITOR_INFO_1A{
+//C         LPSTR pName;
+//C       } MONITOR_INFO_1A,*PMONITOR_INFO_1A,*LPMONITOR_INFO_1A;
+struct _MONITOR_INFO_1A
+{
+    LPSTR pName;
+}
+alias _MONITOR_INFO_1A MONITOR_INFO_1A;
+alias _MONITOR_INFO_1A *PMONITOR_INFO_1A;
+alias _MONITOR_INFO_1A *LPMONITOR_INFO_1A;
+//C       typedef struct _MONITOR_INFO_1W{
+//C         LPWSTR pName;
+//C       } MONITOR_INFO_1W,*PMONITOR_INFO_1W,*LPMONITOR_INFO_1W;
+struct _MONITOR_INFO_1W
+{
+    LPWSTR pName;
+}
+alias _MONITOR_INFO_1W MONITOR_INFO_1W;
+alias _MONITOR_INFO_1W *PMONITOR_INFO_1W;
+alias _MONITOR_INFO_1W *LPMONITOR_INFO_1W;
+//C       typedef MONITOR_INFO_1A MONITOR_INFO_1;
+alias MONITOR_INFO_1A MONITOR_INFO_1;
+//C       typedef PMONITOR_INFO_1A PMONITOR_INFO_1;
+alias PMONITOR_INFO_1A PMONITOR_INFO_1;
+//C       typedef LPMONITOR_INFO_1A LPMONITOR_INFO_1;
+alias LPMONITOR_INFO_1A LPMONITOR_INFO_1;
+//C       typedef struct _MONITOR_INFO_2A {
+//C         LPSTR pName;
+//C         LPSTR pEnvironment;
+//C         LPSTR pDLLName;
+//C       } MONITOR_INFO_2A,*PMONITOR_INFO_2A,*LPMONITOR_INFO_2A;
+struct _MONITOR_INFO_2A
+{
+    LPSTR pName;
+    LPSTR pEnvironment;
+    LPSTR pDLLName;
+}
+alias _MONITOR_INFO_2A MONITOR_INFO_2A;
+alias _MONITOR_INFO_2A *PMONITOR_INFO_2A;
+alias _MONITOR_INFO_2A *LPMONITOR_INFO_2A;
+//C       typedef struct _MONITOR_INFO_2W {
+//C         LPWSTR pName;
+//C         LPWSTR pEnvironment;
+//C         LPWSTR pDLLName;
+//C       } MONITOR_INFO_2W,*PMONITOR_INFO_2W,*LPMONITOR_INFO_2W;
+struct _MONITOR_INFO_2W
+{
+    LPWSTR pName;
+    LPWSTR pEnvironment;
+    LPWSTR pDLLName;
+}
+alias _MONITOR_INFO_2W MONITOR_INFO_2W;
+alias _MONITOR_INFO_2W *PMONITOR_INFO_2W;
+alias _MONITOR_INFO_2W *LPMONITOR_INFO_2W;
+//C       typedef MONITOR_INFO_2A MONITOR_INFO_2;
+alias MONITOR_INFO_2A MONITOR_INFO_2;
+//C       typedef PMONITOR_INFO_2A PMONITOR_INFO_2;
+alias PMONITOR_INFO_2A PMONITOR_INFO_2;
+//C       typedef LPMONITOR_INFO_2A LPMONITOR_INFO_2;
+alias LPMONITOR_INFO_2A LPMONITOR_INFO_2;
+//C       typedef struct _DATATYPES_INFO_1A {
+//C         LPSTR pName;
+//C       } DATATYPES_INFO_1A,*PDATATYPES_INFO_1A,*LPDATATYPES_INFO_1A;
+struct _DATATYPES_INFO_1A
+{
+    LPSTR pName;
+}
+alias _DATATYPES_INFO_1A DATATYPES_INFO_1A;
+alias _DATATYPES_INFO_1A *PDATATYPES_INFO_1A;
+alias _DATATYPES_INFO_1A *LPDATATYPES_INFO_1A;
+//C       typedef struct _DATATYPES_INFO_1W {
+//C         LPWSTR pName;
+//C       } DATATYPES_INFO_1W,*PDATATYPES_INFO_1W,*LPDATATYPES_INFO_1W;
+struct _DATATYPES_INFO_1W
+{
+    LPWSTR pName;
+}
+alias _DATATYPES_INFO_1W DATATYPES_INFO_1W;
+alias _DATATYPES_INFO_1W *PDATATYPES_INFO_1W;
+alias _DATATYPES_INFO_1W *LPDATATYPES_INFO_1W;
+//C       typedef DATATYPES_INFO_1A DATATYPES_INFO_1;
+alias DATATYPES_INFO_1A DATATYPES_INFO_1;
+//C       typedef PDATATYPES_INFO_1A PDATATYPES_INFO_1;
+alias PDATATYPES_INFO_1A PDATATYPES_INFO_1;
+//C       typedef LPDATATYPES_INFO_1A LPDATATYPES_INFO_1;
+alias LPDATATYPES_INFO_1A LPDATATYPES_INFO_1;
+//C       typedef struct _PRINTER_DEFAULTSA {
+//C         LPSTR pDatatype;
+//C         LPDEVMODEA pDevMode;
+//C         ACCESS_MASK DesiredAccess;
+//C       } PRINTER_DEFAULTSA,*PPRINTER_DEFAULTSA,*LPPRINTER_DEFAULTSA;
+struct _PRINTER_DEFAULTSA
+{
+    LPSTR pDatatype;
+    LPDEVMODEA pDevMode;
+    ACCESS_MASK DesiredAccess;
+}
+alias _PRINTER_DEFAULTSA PRINTER_DEFAULTSA;
+alias _PRINTER_DEFAULTSA *PPRINTER_DEFAULTSA;
+alias _PRINTER_DEFAULTSA *LPPRINTER_DEFAULTSA;
+//C       typedef struct _PRINTER_DEFAULTSW {
+//C         LPWSTR pDatatype;
+//C         LPDEVMODEW pDevMode;
+//C         ACCESS_MASK DesiredAccess;
+//C       } PRINTER_DEFAULTSW,*PPRINTER_DEFAULTSW,*LPPRINTER_DEFAULTSW;
+struct _PRINTER_DEFAULTSW
+{
+    LPWSTR pDatatype;
+    LPDEVMODEW pDevMode;
+    ACCESS_MASK DesiredAccess;
+}
+alias _PRINTER_DEFAULTSW PRINTER_DEFAULTSW;
+alias _PRINTER_DEFAULTSW *PPRINTER_DEFAULTSW;
+alias _PRINTER_DEFAULTSW *LPPRINTER_DEFAULTSW;
+//C       typedef PRINTER_DEFAULTSA PRINTER_DEFAULTS;
+alias PRINTER_DEFAULTSA PRINTER_DEFAULTS;
+//C       typedef PPRINTER_DEFAULTSA PPRINTER_DEFAULTS;
+alias PPRINTER_DEFAULTSA PPRINTER_DEFAULTS;
+//C       typedef LPPRINTER_DEFAULTSA LPPRINTER_DEFAULTS;
+alias LPPRINTER_DEFAULTSA LPPRINTER_DEFAULTS;
+//C       typedef struct _PRINTER_ENUM_VALUESA {
+//C         LPSTR pValueName;
+//C         DWORD cbValueName;
+//C         DWORD dwType;
+//C         LPBYTE pData;
+//C         DWORD cbData;
+//C       } PRINTER_ENUM_VALUESA,*PPRINTER_ENUM_VALUESA,*LPPRINTER_ENUM_VALUESA;
+struct _PRINTER_ENUM_VALUESA
+{
+    LPSTR pValueName;
+    DWORD cbValueName;
+    DWORD dwType;
+    LPBYTE pData;
+    DWORD cbData;
+}
+alias _PRINTER_ENUM_VALUESA PRINTER_ENUM_VALUESA;
+alias _PRINTER_ENUM_VALUESA *PPRINTER_ENUM_VALUESA;
+alias _PRINTER_ENUM_VALUESA *LPPRINTER_ENUM_VALUESA;
+//C       typedef struct _PRINTER_ENUM_VALUESW {
+//C         LPWSTR pValueName;
+//C         DWORD cbValueName;
+//C         DWORD dwType;
+//C         LPBYTE pData;
+//C         DWORD cbData;
+//C       } PRINTER_ENUM_VALUESW,*PPRINTER_ENUM_VALUESW,*LPPRINTER_ENUM_VALUESW;
+struct _PRINTER_ENUM_VALUESW
+{
+    LPWSTR pValueName;
+    DWORD cbValueName;
+    DWORD dwType;
+    LPBYTE pData;
+    DWORD cbData;
+}
+alias _PRINTER_ENUM_VALUESW PRINTER_ENUM_VALUESW;
+alias _PRINTER_ENUM_VALUESW *PPRINTER_ENUM_VALUESW;
+alias _PRINTER_ENUM_VALUESW *LPPRINTER_ENUM_VALUESW;
+//C       typedef PRINTER_ENUM_VALUESA PRINTER_ENUM_VALUES;
+alias PRINTER_ENUM_VALUESA PRINTER_ENUM_VALUES;
+//C       typedef PPRINTER_ENUM_VALUESA PPRINTER_ENUM_VALUES;
+alias PPRINTER_ENUM_VALUESA PPRINTER_ENUM_VALUES;
+//C       typedef LPPRINTER_ENUM_VALUESA LPPRINTER_ENUM_VALUES;
+alias LPPRINTER_ENUM_VALUESA LPPRINTER_ENUM_VALUES;
+//C       WINBOOL EnumPrintersA(DWORD Flags,LPSTR Name,DWORD Level,LPBYTE pPrinterEnum,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumPrintersA(DWORD Flags, LPSTR Name, DWORD Level, LPBYTE pPrinterEnum, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL EnumPrintersW(DWORD Flags,LPWSTR Name,DWORD Level,LPBYTE pPrinterEnum,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumPrintersW(DWORD Flags, LPWSTR Name, DWORD Level, LPBYTE pPrinterEnum, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL OpenPrinterA(LPSTR pPrinterName,LPHANDLE phPrinter,LPPRINTER_DEFAULTSA pDefault);
+WINBOOL  OpenPrinterA(LPSTR pPrinterName, LPHANDLE phPrinter, LPPRINTER_DEFAULTSA pDefault);
+//C       WINBOOL OpenPrinterW(LPWSTR pPrinterName,LPHANDLE phPrinter,LPPRINTER_DEFAULTSW pDefault);
+WINBOOL  OpenPrinterW(LPWSTR pPrinterName, LPHANDLE phPrinter, LPPRINTER_DEFAULTSW pDefault);
+//C       WINBOOL ResetPrinterA(HANDLE hPrinter,LPPRINTER_DEFAULTSA pDefault);
+WINBOOL  ResetPrinterA(HANDLE hPrinter, LPPRINTER_DEFAULTSA pDefault);
+//C       WINBOOL ResetPrinterW(HANDLE hPrinter,LPPRINTER_DEFAULTSW pDefault);
+WINBOOL  ResetPrinterW(HANDLE hPrinter, LPPRINTER_DEFAULTSW pDefault);
+//C       WINBOOL SetJobA(HANDLE hPrinter,DWORD JobId,DWORD Level,LPBYTE pJob,DWORD Command);
+WINBOOL  SetJobA(HANDLE hPrinter, DWORD JobId, DWORD Level, LPBYTE pJob, DWORD Command);
+//C       WINBOOL SetJobW(HANDLE hPrinter,DWORD JobId,DWORD Level,LPBYTE pJob,DWORD Command);
+WINBOOL  SetJobW(HANDLE hPrinter, DWORD JobId, DWORD Level, LPBYTE pJob, DWORD Command);
+//C       WINBOOL GetJobA(HANDLE hPrinter,DWORD JobId,DWORD Level,LPBYTE pJob,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetJobA(HANDLE hPrinter, DWORD JobId, DWORD Level, LPBYTE pJob, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL GetJobW(HANDLE hPrinter,DWORD JobId,DWORD Level,LPBYTE pJob,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetJobW(HANDLE hPrinter, DWORD JobId, DWORD Level, LPBYTE pJob, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL EnumJobsA(HANDLE hPrinter,DWORD FirstJob,DWORD NoJobs,DWORD Level,LPBYTE pJob,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumJobsA(HANDLE hPrinter, DWORD FirstJob, DWORD NoJobs, DWORD Level, LPBYTE pJob, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL EnumJobsW(HANDLE hPrinter,DWORD FirstJob,DWORD NoJobs,DWORD Level,LPBYTE pJob,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumJobsW(HANDLE hPrinter, DWORD FirstJob, DWORD NoJobs, DWORD Level, LPBYTE pJob, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       HANDLE AddPrinterA(LPSTR pName,DWORD Level,LPBYTE pPrinter);
+HANDLE  AddPrinterA(LPSTR pName, DWORD Level, LPBYTE pPrinter);
+//C       HANDLE AddPrinterW(LPWSTR pName,DWORD Level,LPBYTE pPrinter);
+HANDLE  AddPrinterW(LPWSTR pName, DWORD Level, LPBYTE pPrinter);
+//C       WINBOOL DeletePrinter(HANDLE hPrinter);
+WINBOOL  DeletePrinter(HANDLE hPrinter);
+//C       WINBOOL SetPrinterA(HANDLE hPrinter,DWORD Level,LPBYTE pPrinter,DWORD Command);
+WINBOOL  SetPrinterA(HANDLE hPrinter, DWORD Level, LPBYTE pPrinter, DWORD Command);
+//C       WINBOOL SetPrinterW(HANDLE hPrinter,DWORD Level,LPBYTE pPrinter,DWORD Command);
+WINBOOL  SetPrinterW(HANDLE hPrinter, DWORD Level, LPBYTE pPrinter, DWORD Command);
+//C       WINBOOL GetPrinterA(HANDLE hPrinter,DWORD Level,LPBYTE pPrinter,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetPrinterA(HANDLE hPrinter, DWORD Level, LPBYTE pPrinter, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL GetPrinterW(HANDLE hPrinter,DWORD Level,LPBYTE pPrinter,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetPrinterW(HANDLE hPrinter, DWORD Level, LPBYTE pPrinter, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL AddPrinterDriverA(LPSTR pName,DWORD Level,LPBYTE pDriverInfo);
+WINBOOL  AddPrinterDriverA(LPSTR pName, DWORD Level, LPBYTE pDriverInfo);
+//C       WINBOOL AddPrinterDriverW(LPWSTR pName,DWORD Level,LPBYTE pDriverInfo);
+WINBOOL  AddPrinterDriverW(LPWSTR pName, DWORD Level, LPBYTE pDriverInfo);
+//C       WINBOOL AddPrinterDriverExA(LPSTR pName,DWORD Level,LPBYTE pDriverInfo,DWORD dwFileCopyFlags);
+WINBOOL  AddPrinterDriverExA(LPSTR pName, DWORD Level, LPBYTE pDriverInfo, DWORD dwFileCopyFlags);
+//C       WINBOOL AddPrinterDriverExW(LPWSTR pName,DWORD Level,LPBYTE pDriverInfo,DWORD dwFileCopyFlags);
+WINBOOL  AddPrinterDriverExW(LPWSTR pName, DWORD Level, LPBYTE pDriverInfo, DWORD dwFileCopyFlags);
+//C       WINBOOL EnumPrinterDriversA(LPSTR pName,LPSTR pEnvironment,DWORD Level,LPBYTE pDriverInfo,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumPrinterDriversA(LPSTR pName, LPSTR pEnvironment, DWORD Level, LPBYTE pDriverInfo, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL EnumPrinterDriversW(LPWSTR pName,LPWSTR pEnvironment,DWORD Level,LPBYTE pDriverInfo,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumPrinterDriversW(LPWSTR pName, LPWSTR pEnvironment, DWORD Level, LPBYTE pDriverInfo, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL GetPrinterDriverA(HANDLE hPrinter,LPSTR pEnvironment,DWORD Level,LPBYTE pDriverInfo,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetPrinterDriverA(HANDLE hPrinter, LPSTR pEnvironment, DWORD Level, LPBYTE pDriverInfo, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL GetPrinterDriverW(HANDLE hPrinter,LPWSTR pEnvironment,DWORD Level,LPBYTE pDriverInfo,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetPrinterDriverW(HANDLE hPrinter, LPWSTR pEnvironment, DWORD Level, LPBYTE pDriverInfo, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL GetPrinterDriverDirectoryA(LPSTR pName,LPSTR pEnvironment,DWORD Level,LPBYTE pDriverDirectory,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetPrinterDriverDirectoryA(LPSTR pName, LPSTR pEnvironment, DWORD Level, LPBYTE pDriverDirectory, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL GetPrinterDriverDirectoryW(LPWSTR pName,LPWSTR pEnvironment,DWORD Level,LPBYTE pDriverDirectory,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetPrinterDriverDirectoryW(LPWSTR pName, LPWSTR pEnvironment, DWORD Level, LPBYTE pDriverDirectory, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL DeletePrinterDriverA(LPSTR pName,LPSTR pEnvironment,LPSTR pDriverName);
+WINBOOL  DeletePrinterDriverA(LPSTR pName, LPSTR pEnvironment, LPSTR pDriverName);
+//C       WINBOOL DeletePrinterDriverW(LPWSTR pName,LPWSTR pEnvironment,LPWSTR pDriverName);
+WINBOOL  DeletePrinterDriverW(LPWSTR pName, LPWSTR pEnvironment, LPWSTR pDriverName);
+//C       WINBOOL DeletePrinterDriverExA(LPSTR pName,LPSTR pEnvironment,LPSTR pDriverName,DWORD dwDeleteFlag,DWORD dwVersionFlag);
+WINBOOL  DeletePrinterDriverExA(LPSTR pName, LPSTR pEnvironment, LPSTR pDriverName, DWORD dwDeleteFlag, DWORD dwVersionFlag);
+//C       WINBOOL DeletePrinterDriverExW(LPWSTR pName,LPWSTR pEnvironment,LPWSTR pDriverName,DWORD dwDeleteFlag,DWORD dwVersionFlag);
+WINBOOL  DeletePrinterDriverExW(LPWSTR pName, LPWSTR pEnvironment, LPWSTR pDriverName, DWORD dwDeleteFlag, DWORD dwVersionFlag);
+//C       WINBOOL AddPrintProcessorA(LPSTR pName,LPSTR pEnvironment,LPSTR pPathName,LPSTR pPrintProcessorName);
+WINBOOL  AddPrintProcessorA(LPSTR pName, LPSTR pEnvironment, LPSTR pPathName, LPSTR pPrintProcessorName);
+//C       WINBOOL AddPrintProcessorW(LPWSTR pName,LPWSTR pEnvironment,LPWSTR pPathName,LPWSTR pPrintProcessorName);
+WINBOOL  AddPrintProcessorW(LPWSTR pName, LPWSTR pEnvironment, LPWSTR pPathName, LPWSTR pPrintProcessorName);
+//C       WINBOOL EnumPrintProcessorsA(LPSTR pName,LPSTR pEnvironment,DWORD Level,LPBYTE pPrintProcessorInfo,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumPrintProcessorsA(LPSTR pName, LPSTR pEnvironment, DWORD Level, LPBYTE pPrintProcessorInfo, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL EnumPrintProcessorsW(LPWSTR pName,LPWSTR pEnvironment,DWORD Level,LPBYTE pPrintProcessorInfo,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumPrintProcessorsW(LPWSTR pName, LPWSTR pEnvironment, DWORD Level, LPBYTE pPrintProcessorInfo, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL GetPrintProcessorDirectoryA(LPSTR pName,LPSTR pEnvironment,DWORD Level,LPBYTE pPrintProcessorInfo,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetPrintProcessorDirectoryA(LPSTR pName, LPSTR pEnvironment, DWORD Level, LPBYTE pPrintProcessorInfo, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL GetPrintProcessorDirectoryW(LPWSTR pName,LPWSTR pEnvironment,DWORD Level,LPBYTE pPrintProcessorInfo,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetPrintProcessorDirectoryW(LPWSTR pName, LPWSTR pEnvironment, DWORD Level, LPBYTE pPrintProcessorInfo, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL EnumPrintProcessorDatatypesA(LPSTR pName,LPSTR pPrintProcessorName,DWORD Level,LPBYTE pDatatypes,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumPrintProcessorDatatypesA(LPSTR pName, LPSTR pPrintProcessorName, DWORD Level, LPBYTE pDatatypes, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL EnumPrintProcessorDatatypesW(LPWSTR pName,LPWSTR pPrintProcessorName,DWORD Level,LPBYTE pDatatypes,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumPrintProcessorDatatypesW(LPWSTR pName, LPWSTR pPrintProcessorName, DWORD Level, LPBYTE pDatatypes, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL DeletePrintProcessorA(LPSTR pName,LPSTR pEnvironment,LPSTR pPrintProcessorName);
+WINBOOL  DeletePrintProcessorA(LPSTR pName, LPSTR pEnvironment, LPSTR pPrintProcessorName);
+//C       WINBOOL DeletePrintProcessorW(LPWSTR pName,LPWSTR pEnvironment,LPWSTR pPrintProcessorName);
+WINBOOL  DeletePrintProcessorW(LPWSTR pName, LPWSTR pEnvironment, LPWSTR pPrintProcessorName);
+//C       DWORD StartDocPrinterA(HANDLE hPrinter,DWORD Level,LPBYTE pDocInfo);
+DWORD  StartDocPrinterA(HANDLE hPrinter, DWORD Level, LPBYTE pDocInfo);
+//C       DWORD StartDocPrinterW(HANDLE hPrinter,DWORD Level,LPBYTE pDocInfo);
+DWORD  StartDocPrinterW(HANDLE hPrinter, DWORD Level, LPBYTE pDocInfo);
+//C       WINBOOL StartPagePrinter(HANDLE hPrinter);
+WINBOOL  StartPagePrinter(HANDLE hPrinter);
+//C       WINBOOL WritePrinter(HANDLE hPrinter,LPVOID pBuf,DWORD cbBuf,LPDWORD pcWritten);
+WINBOOL  WritePrinter(HANDLE hPrinter, LPVOID pBuf, DWORD cbBuf, LPDWORD pcWritten);
+//C       WINBOOL FlushPrinter(HANDLE hPrinter,LPVOID pBuf,DWORD cbBuf,LPDWORD pcWritten,DWORD cSleep);
+WINBOOL  FlushPrinter(HANDLE hPrinter, LPVOID pBuf, DWORD cbBuf, LPDWORD pcWritten, DWORD cSleep);
+//C       WINBOOL EndPagePrinter(HANDLE hPrinter);
+WINBOOL  EndPagePrinter(HANDLE hPrinter);
+//C       WINBOOL AbortPrinter(HANDLE hPrinter);
+WINBOOL  AbortPrinter(HANDLE hPrinter);
+//C       WINBOOL ReadPrinter(HANDLE hPrinter,LPVOID pBuf,DWORD cbBuf,LPDWORD pNoBytesRead);
+WINBOOL  ReadPrinter(HANDLE hPrinter, LPVOID pBuf, DWORD cbBuf, LPDWORD pNoBytesRead);
+//C       WINBOOL EndDocPrinter(HANDLE hPrinter);
+WINBOOL  EndDocPrinter(HANDLE hPrinter);
+//C       WINBOOL AddJobA(HANDLE hPrinter,DWORD Level,LPBYTE pData,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  AddJobA(HANDLE hPrinter, DWORD Level, LPBYTE pData, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL AddJobW(HANDLE hPrinter,DWORD Level,LPBYTE pData,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  AddJobW(HANDLE hPrinter, DWORD Level, LPBYTE pData, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL ScheduleJob(HANDLE hPrinter,DWORD JobId);
+WINBOOL  ScheduleJob(HANDLE hPrinter, DWORD JobId);
+//C       WINBOOL PrinterProperties(HWND hWnd,HANDLE hPrinter);
+WINBOOL  PrinterProperties(HWND hWnd, HANDLE hPrinter);
+//C       LONG DocumentPropertiesA(HWND hWnd,HANDLE hPrinter,LPSTR pDeviceName,PDEVMODEA pDevModeOutput,PDEVMODEA pDevModeInput,DWORD fMode);
+LONG  DocumentPropertiesA(HWND hWnd, HANDLE hPrinter, LPSTR pDeviceName, PDEVMODEA pDevModeOutput, PDEVMODEA pDevModeInput, DWORD fMode);
+//C       LONG DocumentPropertiesW(HWND hWnd,HANDLE hPrinter,LPWSTR pDeviceName,PDEVMODEW pDevModeOutput,PDEVMODEW pDevModeInput,DWORD fMode);
+LONG  DocumentPropertiesW(HWND hWnd, HANDLE hPrinter, LPWSTR pDeviceName, PDEVMODEW pDevModeOutput, PDEVMODEW pDevModeInput, DWORD fMode);
+//C       LONG AdvancedDocumentPropertiesA(HWND hWnd,HANDLE hPrinter,LPSTR pDeviceName,PDEVMODEA pDevModeOutput,PDEVMODEA pDevModeInput);
+LONG  AdvancedDocumentPropertiesA(HWND hWnd, HANDLE hPrinter, LPSTR pDeviceName, PDEVMODEA pDevModeOutput, PDEVMODEA pDevModeInput);
+//C       LONG AdvancedDocumentPropertiesW(HWND hWnd,HANDLE hPrinter,LPWSTR pDeviceName,PDEVMODEW pDevModeOutput,PDEVMODEW pDevModeInput);
+LONG  AdvancedDocumentPropertiesW(HWND hWnd, HANDLE hPrinter, LPWSTR pDeviceName, PDEVMODEW pDevModeOutput, PDEVMODEW pDevModeInput);
+//C       LONG ExtDeviceMode(HWND hWnd,HANDLE hInst,LPDEVMODEA pDevModeOutput,LPSTR pDeviceName,LPSTR pPort,LPDEVMODEA pDevModeInput,LPSTR pProfile,DWORD fMode);
+LONG  ExtDeviceMode(HWND hWnd, HANDLE hInst, LPDEVMODEA pDevModeOutput, LPSTR pDeviceName, LPSTR pPort, LPDEVMODEA pDevModeInput, LPSTR pProfile, DWORD fMode);
+//C       DWORD GetPrinterDataA(HANDLE hPrinter,LPSTR pValueName,LPDWORD pType,LPBYTE pData,DWORD nSize,LPDWORD pcbNeeded);
+DWORD  GetPrinterDataA(HANDLE hPrinter, LPSTR pValueName, LPDWORD pType, LPBYTE pData, DWORD nSize, LPDWORD pcbNeeded);
+//C       DWORD GetPrinterDataW(HANDLE hPrinter,LPWSTR pValueName,LPDWORD pType,LPBYTE pData,DWORD nSize,LPDWORD pcbNeeded);
+DWORD  GetPrinterDataW(HANDLE hPrinter, LPWSTR pValueName, LPDWORD pType, LPBYTE pData, DWORD nSize, LPDWORD pcbNeeded);
+//C       DWORD GetPrinterDataExA(HANDLE hPrinter,LPCSTR pKeyName,LPCSTR pValueName,LPDWORD pType,LPBYTE pData,DWORD nSize,LPDWORD pcbNeeded);
+DWORD  GetPrinterDataExA(HANDLE hPrinter, LPCSTR pKeyName, LPCSTR pValueName, LPDWORD pType, LPBYTE pData, DWORD nSize, LPDWORD pcbNeeded);
+//C       DWORD GetPrinterDataExW(HANDLE hPrinter,LPCWSTR pKeyName,LPCWSTR pValueName,LPDWORD pType,LPBYTE pData,DWORD nSize,LPDWORD pcbNeeded);
+DWORD  GetPrinterDataExW(HANDLE hPrinter, LPCWSTR pKeyName, LPCWSTR pValueName, LPDWORD pType, LPBYTE pData, DWORD nSize, LPDWORD pcbNeeded);
+//C       DWORD EnumPrinterDataA(HANDLE hPrinter,DWORD dwIndex,LPSTR pValueName,DWORD cbValueName,LPDWORD pcbValueName,LPDWORD pType,LPBYTE pData,DWORD cbData,LPDWORD pcbData);
+DWORD  EnumPrinterDataA(HANDLE hPrinter, DWORD dwIndex, LPSTR pValueName, DWORD cbValueName, LPDWORD pcbValueName, LPDWORD pType, LPBYTE pData, DWORD cbData, LPDWORD pcbData);
+//C       DWORD EnumPrinterDataW(HANDLE hPrinter,DWORD dwIndex,LPWSTR pValueName,DWORD cbValueName,LPDWORD pcbValueName,LPDWORD pType,LPBYTE pData,DWORD cbData,LPDWORD pcbData);
+DWORD  EnumPrinterDataW(HANDLE hPrinter, DWORD dwIndex, LPWSTR pValueName, DWORD cbValueName, LPDWORD pcbValueName, LPDWORD pType, LPBYTE pData, DWORD cbData, LPDWORD pcbData);
+//C       DWORD EnumPrinterDataExA(HANDLE hPrinter,LPCSTR pKeyName,LPBYTE pEnumValues,DWORD cbEnumValues,LPDWORD pcbEnumValues,LPDWORD pnEnumValues);
+DWORD  EnumPrinterDataExA(HANDLE hPrinter, LPCSTR pKeyName, LPBYTE pEnumValues, DWORD cbEnumValues, LPDWORD pcbEnumValues, LPDWORD pnEnumValues);
+//C       DWORD EnumPrinterDataExW(HANDLE hPrinter,LPCWSTR pKeyName,LPBYTE pEnumValues,DWORD cbEnumValues,LPDWORD pcbEnumValues,LPDWORD pnEnumValues);
+DWORD  EnumPrinterDataExW(HANDLE hPrinter, LPCWSTR pKeyName, LPBYTE pEnumValues, DWORD cbEnumValues, LPDWORD pcbEnumValues, LPDWORD pnEnumValues);
+//C       DWORD EnumPrinterKeyA(HANDLE hPrinter,LPCSTR pKeyName,LPSTR pSubkey,DWORD cbSubkey,LPDWORD pcbSubkey);
+DWORD  EnumPrinterKeyA(HANDLE hPrinter, LPCSTR pKeyName, LPSTR pSubkey, DWORD cbSubkey, LPDWORD pcbSubkey);
+//C       DWORD EnumPrinterKeyW(HANDLE hPrinter,LPCWSTR pKeyName,LPWSTR pSubkey,DWORD cbSubkey,LPDWORD pcbSubkey);
+DWORD  EnumPrinterKeyW(HANDLE hPrinter, LPCWSTR pKeyName, LPWSTR pSubkey, DWORD cbSubkey, LPDWORD pcbSubkey);
+//C       DWORD SetPrinterDataA(HANDLE hPrinter,LPSTR pValueName,DWORD Type,LPBYTE pData,DWORD cbData);
+DWORD  SetPrinterDataA(HANDLE hPrinter, LPSTR pValueName, DWORD Type, LPBYTE pData, DWORD cbData);
+//C       DWORD SetPrinterDataW(HANDLE hPrinter,LPWSTR pValueName,DWORD Type,LPBYTE pData,DWORD cbData);
+DWORD  SetPrinterDataW(HANDLE hPrinter, LPWSTR pValueName, DWORD Type, LPBYTE pData, DWORD cbData);
+//C       DWORD SetPrinterDataExA(HANDLE hPrinter,LPCSTR pKeyName,LPCSTR pValueName,DWORD Type,LPBYTE pData,DWORD cbData);
+DWORD  SetPrinterDataExA(HANDLE hPrinter, LPCSTR pKeyName, LPCSTR pValueName, DWORD Type, LPBYTE pData, DWORD cbData);
+//C       DWORD SetPrinterDataExW(HANDLE hPrinter,LPCWSTR pKeyName,LPCWSTR pValueName,DWORD Type,LPBYTE pData,DWORD cbData);
+DWORD  SetPrinterDataExW(HANDLE hPrinter, LPCWSTR pKeyName, LPCWSTR pValueName, DWORD Type, LPBYTE pData, DWORD cbData);
+//C       DWORD DeletePrinterDataA(HANDLE hPrinter,LPSTR pValueName);
+DWORD  DeletePrinterDataA(HANDLE hPrinter, LPSTR pValueName);
+//C       DWORD DeletePrinterDataW(HANDLE hPrinter,LPWSTR pValueName);
+DWORD  DeletePrinterDataW(HANDLE hPrinter, LPWSTR pValueName);
+//C       DWORD DeletePrinterDataExA(HANDLE hPrinter,LPCSTR pKeyName,LPCSTR pValueName);
+DWORD  DeletePrinterDataExA(HANDLE hPrinter, LPCSTR pKeyName, LPCSTR pValueName);
+//C       DWORD DeletePrinterDataExW(HANDLE hPrinter,LPCWSTR pKeyName,LPCWSTR pValueName);
+DWORD  DeletePrinterDataExW(HANDLE hPrinter, LPCWSTR pKeyName, LPCWSTR pValueName);
+//C       DWORD DeletePrinterKeyA(HANDLE hPrinter,LPCSTR pKeyName);
+DWORD  DeletePrinterKeyA(HANDLE hPrinter, LPCSTR pKeyName);
+//C       DWORD DeletePrinterKeyW(HANDLE hPrinter,LPCWSTR pKeyName);
+DWORD  DeletePrinterKeyW(HANDLE hPrinter, LPCWSTR pKeyName);
+//C       typedef struct _PRINTER_NOTIFY_OPTIONS_TYPE {
+//C         WORD Type;
+//C         WORD Reserved0;
+//C         DWORD Reserved1;
+//C         DWORD Reserved2;
+//C         DWORD Count;
+//C         PWORD pFields;
+//C       } PRINTER_NOTIFY_OPTIONS_TYPE,*PPRINTER_NOTIFY_OPTIONS_TYPE,*LPPRINTER_NOTIFY_OPTIONS_TYPE;
+struct _PRINTER_NOTIFY_OPTIONS_TYPE
+{
+    WORD Type;
+    WORD Reserved0;
+    DWORD Reserved1;
+    DWORD Reserved2;
+    DWORD Count;
+    PWORD pFields;
+}
+alias _PRINTER_NOTIFY_OPTIONS_TYPE PRINTER_NOTIFY_OPTIONS_TYPE;
+alias _PRINTER_NOTIFY_OPTIONS_TYPE *PPRINTER_NOTIFY_OPTIONS_TYPE;
+alias _PRINTER_NOTIFY_OPTIONS_TYPE *LPPRINTER_NOTIFY_OPTIONS_TYPE;
+//C       typedef struct _PRINTER_NOTIFY_OPTIONS {
+//C         DWORD Version;
+//C         DWORD Flags;
+//C         DWORD Count;
+//C         PPRINTER_NOTIFY_OPTIONS_TYPE pTypes;
+//C       } PRINTER_NOTIFY_OPTIONS,*PPRINTER_NOTIFY_OPTIONS,*LPPRINTER_NOTIFY_OPTIONS;
+struct _PRINTER_NOTIFY_OPTIONS
+{
+    DWORD Version;
+    DWORD Flags;
+    DWORD Count;
+    PPRINTER_NOTIFY_OPTIONS_TYPE pTypes;
+}
+alias _PRINTER_NOTIFY_OPTIONS PRINTER_NOTIFY_OPTIONS;
+alias _PRINTER_NOTIFY_OPTIONS *PPRINTER_NOTIFY_OPTIONS;
+alias _PRINTER_NOTIFY_OPTIONS *LPPRINTER_NOTIFY_OPTIONS;
+//C       typedef struct _PRINTER_NOTIFY_INFO_DATA {
+//C         WORD Type;
+//C         WORD Field;
+//C         DWORD Reserved;
+//C         DWORD Id;
+//C         union {
+//C           DWORD adwData[2];
+//C           struct {
+//C      DWORD cbBuf;
+//C      LPVOID pBuf;
+//C           } Data;
+struct _N282
+{
+    DWORD cbBuf;
+    LPVOID pBuf;
+}
+//C         } NotifyData;
+union _N281
+{
+    DWORD [2]adwData;
+    _N282 Data;
+}
+//C       } PRINTER_NOTIFY_INFO_DATA,*PPRINTER_NOTIFY_INFO_DATA,*LPPRINTER_NOTIFY_INFO_DATA;
+struct _PRINTER_NOTIFY_INFO_DATA
+{
+    WORD Type;
+    WORD Field;
+    DWORD Reserved;
+    DWORD Id;
+    _N281 NotifyData;
+}
+alias _PRINTER_NOTIFY_INFO_DATA PRINTER_NOTIFY_INFO_DATA;
+alias _PRINTER_NOTIFY_INFO_DATA *PPRINTER_NOTIFY_INFO_DATA;
+alias _PRINTER_NOTIFY_INFO_DATA *LPPRINTER_NOTIFY_INFO_DATA;
+//C       typedef struct _PRINTER_NOTIFY_INFO {
+//C         DWORD Version;
+//C         DWORD Flags;
+//C         DWORD Count;
+//C         PRINTER_NOTIFY_INFO_DATA aData[1];
+//C       } PRINTER_NOTIFY_INFO,*PPRINTER_NOTIFY_INFO,*LPPRINTER_NOTIFY_INFO;
+struct _PRINTER_NOTIFY_INFO
+{
+    DWORD Version;
+    DWORD Flags;
+    DWORD Count;
+    PRINTER_NOTIFY_INFO_DATA [1]aData;
+}
+alias _PRINTER_NOTIFY_INFO PRINTER_NOTIFY_INFO;
+alias _PRINTER_NOTIFY_INFO *PPRINTER_NOTIFY_INFO;
+alias _PRINTER_NOTIFY_INFO *LPPRINTER_NOTIFY_INFO;
+//C       typedef struct _BINARY_CONTAINER{
+//C         DWORD cbBuf;
+//C         LPBYTE pData;
+//C       } BINARY_CONTAINER,*PBINARY_CONTAINER;
+struct _BINARY_CONTAINER
+{
+    DWORD cbBuf;
+    LPBYTE pData;
+}
+alias _BINARY_CONTAINER BINARY_CONTAINER;
+alias _BINARY_CONTAINER *PBINARY_CONTAINER;
+//C       typedef struct _BIDI_DATA{
+//C         DWORD dwBidiType;
+//C         union {
+//C           WINBOOL bData;
+//C           LONG iData;
+//C           LPWSTR sData;
+//C           FLOAT fData;
+//C           BINARY_CONTAINER biData;
+//C         } u;
+union _N283
+{
+    WINBOOL bData;
+    LONG iData;
+    LPWSTR sData;
+    FLOAT fData;
+    BINARY_CONTAINER biData;
+}
+//C       } BIDI_DATA,*PBIDI_DATA,*LPBIDI_DATA;
+struct _BIDI_DATA
+{
+    DWORD dwBidiType;
+    _N283 u;
+}
+alias _BIDI_DATA BIDI_DATA;
+alias _BIDI_DATA *PBIDI_DATA;
+alias _BIDI_DATA *LPBIDI_DATA;
+//C       typedef struct _BIDI_REQUEST_DATA{
+//C         DWORD dwReqNumber;
+//C         LPWSTR pSchema;
+//C         BIDI_DATA data;
+//C       } BIDI_REQUEST_DATA ,*PBIDI_REQUEST_DATA ,*LPBIDI_REQUEST_DATA;
+struct _BIDI_REQUEST_DATA
+{
+    DWORD dwReqNumber;
+    LPWSTR pSchema;
+    BIDI_DATA data;
+}
+alias _BIDI_REQUEST_DATA BIDI_REQUEST_DATA;
+alias _BIDI_REQUEST_DATA *PBIDI_REQUEST_DATA;
+alias _BIDI_REQUEST_DATA *LPBIDI_REQUEST_DATA;
+//C       typedef struct _BIDI_REQUEST_CONTAINER{
+//C         DWORD Version;
+//C         DWORD Flags;
+//C         DWORD Count;
+//C         BIDI_REQUEST_DATA aData[1 ];
+//C       }BIDI_REQUEST_CONTAINER,*PBIDI_REQUEST_CONTAINER,*LPBIDI_REQUEST_CONTAINER;
+struct _BIDI_REQUEST_CONTAINER
+{
+    DWORD Version;
+    DWORD Flags;
+    DWORD Count;
+    BIDI_REQUEST_DATA [1]aData;
+}
+alias _BIDI_REQUEST_CONTAINER BIDI_REQUEST_CONTAINER;
+alias _BIDI_REQUEST_CONTAINER *PBIDI_REQUEST_CONTAINER;
+alias _BIDI_REQUEST_CONTAINER *LPBIDI_REQUEST_CONTAINER;
+//C       typedef struct _BIDI_RESPONSE_DATA{
+//C         DWORD dwResult;
+//C         DWORD dwReqNumber;
+//C         LPWSTR pSchema;
+//C         BIDI_DATA data;
+//C       } BIDI_RESPONSE_DATA,*PBIDI_RESPONSE_DATA,*LPBIDI_RESPONSE_DATA;
+struct _BIDI_RESPONSE_DATA
+{
+    DWORD dwResult;
+    DWORD dwReqNumber;
+    LPWSTR pSchema;
+    BIDI_DATA data;
+}
+alias _BIDI_RESPONSE_DATA BIDI_RESPONSE_DATA;
+alias _BIDI_RESPONSE_DATA *PBIDI_RESPONSE_DATA;
+alias _BIDI_RESPONSE_DATA *LPBIDI_RESPONSE_DATA;
+//C       typedef struct _BIDI_RESPONSE_CONTAINER{
+//C         DWORD Version;
+//C         DWORD Flags;
+//C         DWORD Count;
+//C         BIDI_RESPONSE_DATA aData[1 ];
+//C       } BIDI_RESPONSE_CONTAINER,*PBIDI_RESPONSE_CONTAINER,*LPBIDI_RESPONSE_CONTAINER;
+struct _BIDI_RESPONSE_CONTAINER
+{
+    DWORD Version;
+    DWORD Flags;
+    DWORD Count;
+    BIDI_RESPONSE_DATA [1]aData;
+}
+alias _BIDI_RESPONSE_CONTAINER BIDI_RESPONSE_CONTAINER;
+alias _BIDI_RESPONSE_CONTAINER *PBIDI_RESPONSE_CONTAINER;
+alias _BIDI_RESPONSE_CONTAINER *LPBIDI_RESPONSE_CONTAINER;
+//C       typedef enum {
+//C         BIDI_NULL = 0,BIDI_INT = 1,BIDI_FLOAT = 2,BIDI_BOOL = 3,BIDI_STRING = 4,BIDI_TEXT = 5,BIDI_ENUM = 6,BIDI_BLOB = 7
+//C       } BIDI_TYPE;
+enum
+{
+    BIDI_NULL,
+    BIDI_INT,
+    BIDI_FLOAT,
+    BIDI_BOOL,
+    BIDI_STRING,
+    BIDI_TEXT,
+    BIDI_ENUM,
+    BIDI_BLOB,
+}
+alias int BIDI_TYPE;
+//C       DWORD WaitForPrinterChange(HANDLE hPrinter,DWORD Flags);
+DWORD  WaitForPrinterChange(HANDLE hPrinter, DWORD Flags);
+//C       HANDLE FindFirstPrinterChangeNotification(HANDLE hPrinter,DWORD fdwFlags,DWORD fdwOptions,LPVOID pPrinterNotifyOptions);
+HANDLE  FindFirstPrinterChangeNotification(HANDLE hPrinter, DWORD fdwFlags, DWORD fdwOptions, LPVOID pPrinterNotifyOptions);
+//C       WINBOOL FindNextPrinterChangeNotification(HANDLE hChange,PDWORD pdwChange,LPVOID pPrinterNotifyOptions,LPVOID *ppPrinterNotifyInfo);
+WINBOOL  FindNextPrinterChangeNotification(HANDLE hChange, PDWORD pdwChange, LPVOID pPrinterNotifyOptions, LPVOID *ppPrinterNotifyInfo);
+//C       WINBOOL FreePrinterNotifyInfo (PPRINTER_NOTIFY_INFO pPrinterNotifyInfo);
+WINBOOL  FreePrinterNotifyInfo(PPRINTER_NOTIFY_INFO pPrinterNotifyInfo);
+//C       WINBOOL FindClosePrinterChangeNotification(HANDLE hChange);
+WINBOOL  FindClosePrinterChangeNotification(HANDLE hChange);
+//C       DWORD PrinterMessageBoxA(HANDLE hPrinter,DWORD Error,HWND hWnd,LPSTR pText,LPSTR pCaption,DWORD dwType);
+DWORD  PrinterMessageBoxA(HANDLE hPrinter, DWORD Error, HWND hWnd, LPSTR pText, LPSTR pCaption, DWORD dwType);
+//C       DWORD PrinterMessageBoxW(HANDLE hPrinter,DWORD Error,HWND hWnd,LPWSTR pText,LPWSTR pCaption,DWORD dwType);
+DWORD  PrinterMessageBoxW(HANDLE hPrinter, DWORD Error, HWND hWnd, LPWSTR pText, LPWSTR pCaption, DWORD dwType);
+//C       WINBOOL ClosePrinter(HANDLE hPrinter);
+WINBOOL  ClosePrinter(HANDLE hPrinter);
+//C       WINBOOL AddFormA(HANDLE hPrinter,DWORD Level,LPBYTE pForm);
+WINBOOL  AddFormA(HANDLE hPrinter, DWORD Level, LPBYTE pForm);
+//C       WINBOOL AddFormW(HANDLE hPrinter,DWORD Level,LPBYTE pForm);
+WINBOOL  AddFormW(HANDLE hPrinter, DWORD Level, LPBYTE pForm);
+//C       WINBOOL DeleteFormA(HANDLE hPrinter,LPSTR pFormName);
+WINBOOL  DeleteFormA(HANDLE hPrinter, LPSTR pFormName);
+//C       WINBOOL DeleteFormW(HANDLE hPrinter,LPWSTR pFormName);
+WINBOOL  DeleteFormW(HANDLE hPrinter, LPWSTR pFormName);
+//C       WINBOOL GetFormA(HANDLE hPrinter,LPSTR pFormName,DWORD Level,LPBYTE pForm,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetFormA(HANDLE hPrinter, LPSTR pFormName, DWORD Level, LPBYTE pForm, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL GetFormW(HANDLE hPrinter,LPWSTR pFormName,DWORD Level,LPBYTE pForm,DWORD cbBuf,LPDWORD pcbNeeded);
+WINBOOL  GetFormW(HANDLE hPrinter, LPWSTR pFormName, DWORD Level, LPBYTE pForm, DWORD cbBuf, LPDWORD pcbNeeded);
+//C       WINBOOL SetFormA(HANDLE hPrinter,LPSTR pFormName,DWORD Level,LPBYTE pForm);
+WINBOOL  SetFormA(HANDLE hPrinter, LPSTR pFormName, DWORD Level, LPBYTE pForm);
+//C       WINBOOL SetFormW(HANDLE hPrinter,LPWSTR pFormName,DWORD Level,LPBYTE pForm);
+WINBOOL  SetFormW(HANDLE hPrinter, LPWSTR pFormName, DWORD Level, LPBYTE pForm);
+//C       WINBOOL EnumFormsA(HANDLE hPrinter,DWORD Level,LPBYTE pForm,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumFormsA(HANDLE hPrinter, DWORD Level, LPBYTE pForm, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL EnumFormsW(HANDLE hPrinter,DWORD Level,LPBYTE pForm,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumFormsW(HANDLE hPrinter, DWORD Level, LPBYTE pForm, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL EnumMonitorsA(LPSTR pName,DWORD Level,LPBYTE pMonitor,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumMonitorsA(LPSTR pName, DWORD Level, LPBYTE pMonitor, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL EnumMonitorsW(LPWSTR pName,DWORD Level,LPBYTE pMonitor,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumMonitorsW(LPWSTR pName, DWORD Level, LPBYTE pMonitor, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL AddMonitorA(LPSTR pName,DWORD Level,LPBYTE pMonitorInfo);
+WINBOOL  AddMonitorA(LPSTR pName, DWORD Level, LPBYTE pMonitorInfo);
+//C       WINBOOL AddMonitorW(LPWSTR pName,DWORD Level,LPBYTE pMonitorInfo);
+WINBOOL  AddMonitorW(LPWSTR pName, DWORD Level, LPBYTE pMonitorInfo);
+//C       WINBOOL DeleteMonitorA(LPSTR pName,LPSTR pEnvironment,LPSTR pMonitorName);
+WINBOOL  DeleteMonitorA(LPSTR pName, LPSTR pEnvironment, LPSTR pMonitorName);
+//C       WINBOOL DeleteMonitorW(LPWSTR pName,LPWSTR pEnvironment,LPWSTR pMonitorName);
+WINBOOL  DeleteMonitorW(LPWSTR pName, LPWSTR pEnvironment, LPWSTR pMonitorName);
+//C       WINBOOL EnumPortsA(LPSTR pName,DWORD Level,LPBYTE pPorts,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumPortsA(LPSTR pName, DWORD Level, LPBYTE pPorts, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL EnumPortsW(LPWSTR pName,DWORD Level,LPBYTE pPorts,DWORD cbBuf,LPDWORD pcbNeeded,LPDWORD pcReturned);
+WINBOOL  EnumPortsW(LPWSTR pName, DWORD Level, LPBYTE pPorts, DWORD cbBuf, LPDWORD pcbNeeded, LPDWORD pcReturned);
+//C       WINBOOL AddPortA(LPSTR pName,HWND hWnd,LPSTR pMonitorName);
+WINBOOL  AddPortA(LPSTR pName, HWND hWnd, LPSTR pMonitorName);
+//C       WINBOOL AddPortW(LPWSTR pName,HWND hWnd,LPWSTR pMonitorName);
+WINBOOL  AddPortW(LPWSTR pName, HWND hWnd, LPWSTR pMonitorName);
+//C       WINBOOL ConfigurePortA(LPSTR pName,HWND hWnd,LPSTR pPortName);
+WINBOOL  ConfigurePortA(LPSTR pName, HWND hWnd, LPSTR pPortName);
+//C       WINBOOL ConfigurePortW(LPWSTR pName,HWND hWnd,LPWSTR pPortName);
+WINBOOL  ConfigurePortW(LPWSTR pName, HWND hWnd, LPWSTR pPortName);
+//C       WINBOOL DeletePortA(LPSTR pName,HWND hWnd,LPSTR pPortName);
+WINBOOL  DeletePortA(LPSTR pName, HWND hWnd, LPSTR pPortName);
+//C       WINBOOL DeletePortW(LPWSTR pName,HWND hWnd,LPWSTR pPortName);
+WINBOOL  DeletePortW(LPWSTR pName, HWND hWnd, LPWSTR pPortName);
+//C       WINBOOL XcvDataW(HANDLE hXcv,PCWSTR pszDataName,PBYTE pInputData,DWORD cbInputData,PBYTE pOutputData,DWORD cbOutputData,PDWORD pcbOutputNeeded,PDWORD pdwStatus);
+WINBOOL  XcvDataW(HANDLE hXcv, PCWSTR pszDataName, PBYTE pInputData, DWORD cbInputData, PBYTE pOutputData, DWORD cbOutputData, PDWORD pcbOutputNeeded, PDWORD pdwStatus);
+//C       WINBOOL GetDefaultPrinterA(LPSTR pszBuffer,LPDWORD pcchBuffer);
+WINBOOL  GetDefaultPrinterA(LPSTR pszBuffer, LPDWORD pcchBuffer);
+//C       WINBOOL GetDefaultPrinterW(LPWSTR pszBuffer,LPDWORD pcchBuffer);
+WINBOOL  GetDefaultPrinterW(LPWSTR pszBuffer, LPDWORD pcchBuffer);
+//C       WINBOOL SetDefaultPrinterA(LPCSTR pszPrinter);
+WINBOOL  SetDefaultPrinterA(LPCSTR pszPrinter);
+//C       WINBOOL SetDefaultPrinterW(LPCWSTR pszPrinter);
+WINBOOL  SetDefaultPrinterW(LPCWSTR pszPrinter);
+//C       WINBOOL SetPortA(LPSTR pName,LPSTR pPortName,DWORD dwLevel,LPBYTE pPortInfo);
+WINBOOL  SetPortA(LPSTR pName, LPSTR pPortName, DWORD dwLevel, LPBYTE pPortInfo);
+//C       WINBOOL SetPortW(LPWSTR pName,LPWSTR pPortName,DWORD dwLevel,LPBYTE pPortInfo);
+WINBOOL  SetPortW(LPWSTR pName, LPWSTR pPortName, DWORD dwLevel, LPBYTE pPortInfo);
+//C       WINBOOL AddPrinterConnectionA(LPSTR pName);
+WINBOOL  AddPrinterConnectionA(LPSTR pName);
+//C       WINBOOL AddPrinterConnectionW(LPWSTR pName);
+WINBOOL  AddPrinterConnectionW(LPWSTR pName);
+//C       WINBOOL DeletePrinterConnectionA(LPSTR pName);
+WINBOOL  DeletePrinterConnectionA(LPSTR pName);
+//C       WINBOOL DeletePrinterConnectionW(LPWSTR pName);
+WINBOOL  DeletePrinterConnectionW(LPWSTR pName);
+//C       HANDLE ConnectToPrinterDlg(HWND hwnd,DWORD Flags);
+HANDLE  ConnectToPrinterDlg(HWND hwnd, DWORD Flags);
+//C       typedef struct _PROVIDOR_INFO_1A{
+//C         LPSTR pName;
+//C         LPSTR pEnvironment;
+//C         LPSTR pDLLName;
+//C       } PROVIDOR_INFO_1A,*PPROVIDOR_INFO_1A,*LPPROVIDOR_INFO_1A;
+struct _PROVIDOR_INFO_1A
+{
+    LPSTR pName;
+    LPSTR pEnvironment;
+    LPSTR pDLLName;
+}
+alias _PROVIDOR_INFO_1A PROVIDOR_INFO_1A;
+alias _PROVIDOR_INFO_1A *PPROVIDOR_INFO_1A;
+alias _PROVIDOR_INFO_1A *LPPROVIDOR_INFO_1A;
+//C       typedef struct _PROVIDOR_INFO_1W{
+//C         LPWSTR pName;
+//C         LPWSTR pEnvironment;
+//C         LPWSTR pDLLName;
+//C       } PROVIDOR_INFO_1W,*PPROVIDOR_INFO_1W,*LPPROVIDOR_INFO_1W;
+struct _PROVIDOR_INFO_1W
+{
+    LPWSTR pName;
+    LPWSTR pEnvironment;
+    LPWSTR pDLLName;
+}
+alias _PROVIDOR_INFO_1W PROVIDOR_INFO_1W;
+alias _PROVIDOR_INFO_1W *PPROVIDOR_INFO_1W;
+alias _PROVIDOR_INFO_1W *LPPROVIDOR_INFO_1W;
+//C       typedef PROVIDOR_INFO_1A PROVIDOR_INFO_1;
+alias PROVIDOR_INFO_1A PROVIDOR_INFO_1;
+//C       typedef PPROVIDOR_INFO_1A PPROVIDOR_INFO_1;
+alias PPROVIDOR_INFO_1A PPROVIDOR_INFO_1;
+//C       typedef LPPROVIDOR_INFO_1A LPPROVIDOR_INFO_1;
+alias LPPROVIDOR_INFO_1A LPPROVIDOR_INFO_1;
+//C       typedef struct _PROVIDOR_INFO_2A{
+//C         LPSTR pOrder;
+//C       } PROVIDOR_INFO_2A,*PPROVIDOR_INFO_2A,*LPPROVIDOR_INFO_2A;
+struct _PROVIDOR_INFO_2A
+{
+    LPSTR pOrder;
+}
+alias _PROVIDOR_INFO_2A PROVIDOR_INFO_2A;
+alias _PROVIDOR_INFO_2A *PPROVIDOR_INFO_2A;
+alias _PROVIDOR_INFO_2A *LPPROVIDOR_INFO_2A;
+//C       typedef struct _PROVIDOR_INFO_2W{
+//C         LPWSTR pOrder;
+//C       } PROVIDOR_INFO_2W,*PPROVIDOR_INFO_2W,*LPPROVIDOR_INFO_2W;
+struct _PROVIDOR_INFO_2W
+{
+    LPWSTR pOrder;
+}
+alias _PROVIDOR_INFO_2W PROVIDOR_INFO_2W;
+alias _PROVIDOR_INFO_2W *PPROVIDOR_INFO_2W;
+alias _PROVIDOR_INFO_2W *LPPROVIDOR_INFO_2W;
+//C       typedef PROVIDOR_INFO_2A PROVIDOR_INFO_2;
+alias PROVIDOR_INFO_2A PROVIDOR_INFO_2;
+//C       typedef PPROVIDOR_INFO_2A PPROVIDOR_INFO_2;
+alias PPROVIDOR_INFO_2A PPROVIDOR_INFO_2;
+//C       typedef LPPROVIDOR_INFO_2A LPPROVIDOR_INFO_2;
+alias LPPROVIDOR_INFO_2A LPPROVIDOR_INFO_2;
+//C       WINBOOL AddPrintProvidorA(LPSTR pName,DWORD level,LPBYTE pProvidorInfo);
+WINBOOL  AddPrintProvidorA(LPSTR pName, DWORD level, LPBYTE pProvidorInfo);
+//C       WINBOOL AddPrintProvidorW(LPWSTR pName,DWORD level,LPBYTE pProvidorInfo);
+WINBOOL  AddPrintProvidorW(LPWSTR pName, DWORD level, LPBYTE pProvidorInfo);
+//C       WINBOOL DeletePrintProvidorA(LPSTR pName,LPSTR pEnvironment,LPSTR pPrintProvidorName);
+WINBOOL  DeletePrintProvidorA(LPSTR pName, LPSTR pEnvironment, LPSTR pPrintProvidorName);
+//C       WINBOOL DeletePrintProvidorW(LPWSTR pName,LPWSTR pEnvironment,LPWSTR pPrintProvidorName);
+WINBOOL  DeletePrintProvidorW(LPWSTR pName, LPWSTR pEnvironment, LPWSTR pPrintProvidorName);
+//C       WINBOOL IsValidDevmodeA (PDEVMODEA pDevmode,size_t DevmodeSize);
+WINBOOL  IsValidDevmodeA(PDEVMODEA pDevmode, size_t DevmodeSize);
+//C       WINBOOL IsValidDevmodeW (PDEVMODEW pDevmode,size_t DevmodeSize);
+WINBOOL  IsValidDevmodeW(PDEVMODEW pDevmode, size_t DevmodeSize);
+//C     extern const GUID IID_IPrintDialogCallback;
+extern const GUID IID_IPrintDialogCallback;
+//C     extern const GUID IID_IPrintDialogServices;
+extern const GUID IID_IPrintDialogServices;
+//C       typedef UINT_PTR ( *LPOFNHOOKPROC) (HWND,UINT,WPARAM,LPARAM);
+alias UINT_PTR  function(HWND , UINT , WPARAM , LPARAM )LPOFNHOOKPROC;
+//C       typedef struct tagOFN_NT4A {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HINSTANCE hInstance;
+//C         LPCSTR lpstrFilter;
+//C         LPSTR lpstrCustomFilter;
+//C         DWORD nMaxCustFilter;
+//C         DWORD nFilterIndex;
+//C         LPSTR lpstrFile;
+//C         DWORD nMaxFile;
+//C         LPSTR lpstrFileTitle;
+//C         DWORD nMaxFileTitle;
+//C         LPCSTR lpstrInitialDir;
+//C         LPCSTR lpstrTitle;
+//C         DWORD Flags;
+//C         WORD nFileOffset;
+//C         WORD nFileExtension;
+//C         LPCSTR lpstrDefExt;
+//C         LPARAM lCustData;
+//C         LPOFNHOOKPROC lpfnHook;
+//C         LPCSTR lpTemplateName;
+//C       } OPENFILENAME_NT4A,*LPOPENFILENAME_NT4A;
+struct tagOFN_NT4A
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HINSTANCE hInstance;
+    LPCSTR lpstrFilter;
+    LPSTR lpstrCustomFilter;
+    DWORD nMaxCustFilter;
+    DWORD nFilterIndex;
+    LPSTR lpstrFile;
+    DWORD nMaxFile;
+    LPSTR lpstrFileTitle;
+    DWORD nMaxFileTitle;
+    LPCSTR lpstrInitialDir;
+    LPCSTR lpstrTitle;
+    DWORD Flags;
+    WORD nFileOffset;
+    WORD nFileExtension;
+    LPCSTR lpstrDefExt;
+    LPARAM lCustData;
+    LPOFNHOOKPROC lpfnHook;
+    LPCSTR lpTemplateName;
+}
+alias tagOFN_NT4A OPENFILENAME_NT4A;
+alias tagOFN_NT4A *LPOPENFILENAME_NT4A;
+//C       typedef struct tagOFN_NT4W {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HINSTANCE hInstance;
+//C         LPCWSTR lpstrFilter;
+//C         LPWSTR lpstrCustomFilter;
+//C         DWORD nMaxCustFilter;
+//C         DWORD nFilterIndex;
+//C         LPWSTR lpstrFile;
+//C         DWORD nMaxFile;
+//C         LPWSTR lpstrFileTitle;
+//C         DWORD nMaxFileTitle;
+//C         LPCWSTR lpstrInitialDir;
+//C         LPCWSTR lpstrTitle;
+//C         DWORD Flags;
+//C         WORD nFileOffset;
+//C         WORD nFileExtension;
+//C         LPCWSTR lpstrDefExt;
+//C         LPARAM lCustData;
+//C         LPOFNHOOKPROC lpfnHook;
+//C         LPCWSTR lpTemplateName;
+//C       } OPENFILENAME_NT4W,*LPOPENFILENAME_NT4W;
+struct tagOFN_NT4W
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HINSTANCE hInstance;
+    LPCWSTR lpstrFilter;
+    LPWSTR lpstrCustomFilter;
+    DWORD nMaxCustFilter;
+    DWORD nFilterIndex;
+    LPWSTR lpstrFile;
+    DWORD nMaxFile;
+    LPWSTR lpstrFileTitle;
+    DWORD nMaxFileTitle;
+    LPCWSTR lpstrInitialDir;
+    LPCWSTR lpstrTitle;
+    DWORD Flags;
+    WORD nFileOffset;
+    WORD nFileExtension;
+    LPCWSTR lpstrDefExt;
+    LPARAM lCustData;
+    LPOFNHOOKPROC lpfnHook;
+    LPCWSTR lpTemplateName;
+}
+alias tagOFN_NT4W OPENFILENAME_NT4W;
+alias tagOFN_NT4W *LPOPENFILENAME_NT4W;
+//C       typedef OPENFILENAME_NT4A OPENFILENAME_NT4;
+alias OPENFILENAME_NT4A OPENFILENAME_NT4;
+//C       typedef LPOPENFILENAME_NT4A LPOPENFILENAME_NT4;
+alias LPOPENFILENAME_NT4A LPOPENFILENAME_NT4;
+//C       typedef struct tagOFNA {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HINSTANCE hInstance;
+//C         LPCSTR lpstrFilter;
+//C         LPSTR lpstrCustomFilter;
+//C         DWORD nMaxCustFilter;
+//C         DWORD nFilterIndex;
+//C         LPSTR lpstrFile;
+//C         DWORD nMaxFile;
+//C         LPSTR lpstrFileTitle;
+//C         DWORD nMaxFileTitle;
+//C         LPCSTR lpstrInitialDir;
+//C         LPCSTR lpstrTitle;
+//C         DWORD Flags;
+//C         WORD nFileOffset;
+//C         WORD nFileExtension;
+//C         LPCSTR lpstrDefExt;
+//C         LPARAM lCustData;
+//C         LPOFNHOOKPROC lpfnHook;
+//C         LPCSTR lpTemplateName;
+//C         void *pvReserved;
+//C         DWORD dwReserved;
+//C         DWORD FlagsEx;
+//C       } OPENFILENAMEA,*LPOPENFILENAMEA;
+struct tagOFNA
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HINSTANCE hInstance;
+    LPCSTR lpstrFilter;
+    LPSTR lpstrCustomFilter;
+    DWORD nMaxCustFilter;
+    DWORD nFilterIndex;
+    LPSTR lpstrFile;
+    DWORD nMaxFile;
+    LPSTR lpstrFileTitle;
+    DWORD nMaxFileTitle;
+    LPCSTR lpstrInitialDir;
+    LPCSTR lpstrTitle;
+    DWORD Flags;
+    WORD nFileOffset;
+    WORD nFileExtension;
+    LPCSTR lpstrDefExt;
+    LPARAM lCustData;
+    LPOFNHOOKPROC lpfnHook;
+    LPCSTR lpTemplateName;
+    void *pvReserved;
+    DWORD dwReserved;
+    DWORD FlagsEx;
+}
+alias tagOFNA OPENFILENAMEA;
+alias tagOFNA *LPOPENFILENAMEA;
+//C       typedef struct tagOFNW {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HINSTANCE hInstance;
+//C         LPCWSTR lpstrFilter;
+//C         LPWSTR lpstrCustomFilter;
+//C         DWORD nMaxCustFilter;
+//C         DWORD nFilterIndex;
+//C         LPWSTR lpstrFile;
+//C         DWORD nMaxFile;
+//C         LPWSTR lpstrFileTitle;
+//C         DWORD nMaxFileTitle;
+//C         LPCWSTR lpstrInitialDir;
+//C         LPCWSTR lpstrTitle;
+//C         DWORD Flags;
+//C         WORD nFileOffset;
+//C         WORD nFileExtension;
+//C         LPCWSTR lpstrDefExt;
+//C         LPARAM lCustData;
+//C         LPOFNHOOKPROC lpfnHook;
+//C         LPCWSTR lpTemplateName;
+//C         void *pvReserved;
+//C         DWORD dwReserved;
+//C         DWORD FlagsEx;
+//C       } OPENFILENAMEW,*LPOPENFILENAMEW;
+struct tagOFNW
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HINSTANCE hInstance;
+    LPCWSTR lpstrFilter;
+    LPWSTR lpstrCustomFilter;
+    DWORD nMaxCustFilter;
+    DWORD nFilterIndex;
+    LPWSTR lpstrFile;
+    DWORD nMaxFile;
+    LPWSTR lpstrFileTitle;
+    DWORD nMaxFileTitle;
+    LPCWSTR lpstrInitialDir;
+    LPCWSTR lpstrTitle;
+    DWORD Flags;
+    WORD nFileOffset;
+    WORD nFileExtension;
+    LPCWSTR lpstrDefExt;
+    LPARAM lCustData;
+    LPOFNHOOKPROC lpfnHook;
+    LPCWSTR lpTemplateName;
+    void *pvReserved;
+    DWORD dwReserved;
+    DWORD FlagsEx;
+}
+alias tagOFNW OPENFILENAMEW;
+alias tagOFNW *LPOPENFILENAMEW;
+//C       typedef OPENFILENAMEA OPENFILENAME;
+alias OPENFILENAMEA OPENFILENAME;
+//C       typedef LPOPENFILENAMEA LPOPENFILENAME;
+alias LPOPENFILENAMEA LPOPENFILENAME;
+//C        WINBOOL GetOpenFileNameA(LPOPENFILENAMEA);
+WINBOOL  GetOpenFileNameA(LPOPENFILENAMEA );
+//C        WINBOOL GetOpenFileNameW(LPOPENFILENAMEW);
+WINBOOL  GetOpenFileNameW(LPOPENFILENAMEW );
+//C        WINBOOL GetSaveFileNameA(LPOPENFILENAMEA);
+WINBOOL  GetSaveFileNameA(LPOPENFILENAMEA );
+//C        WINBOOL GetSaveFileNameW(LPOPENFILENAMEW);
+WINBOOL  GetSaveFileNameW(LPOPENFILENAMEW );
+//C        short GetFileTitleA(LPCSTR,LPSTR,WORD);
+short  GetFileTitleA(LPCSTR , LPSTR , WORD );
+//C        short GetFileTitleW(LPCWSTR,LPWSTR,WORD);
+short  GetFileTitleW(LPCWSTR , LPWSTR , WORD );
+//C       typedef UINT_PTR ( *LPCCHOOKPROC) (HWND,UINT,WPARAM,LPARAM);
+alias UINT_PTR  function(HWND , UINT , WPARAM , LPARAM )LPCCHOOKPROC;
+//C       typedef struct _OFNOTIFYA {
+//C         NMHDR hdr;
+//C         LPOPENFILENAMEA lpOFN;
+//C         LPSTR pszFile;
+//C       } OFNOTIFYA,*LPOFNOTIFYA;
+struct _OFNOTIFYA
+{
+    NMHDR hdr;
+    LPOPENFILENAMEA lpOFN;
+    LPSTR pszFile;
+}
+alias _OFNOTIFYA OFNOTIFYA;
+alias _OFNOTIFYA *LPOFNOTIFYA;
+//C       typedef struct _OFNOTIFYW {
+//C         NMHDR hdr;
+//C         LPOPENFILENAMEW lpOFN;
+//C         LPWSTR pszFile;
+//C       } OFNOTIFYW,*LPOFNOTIFYW;
+struct _OFNOTIFYW
+{
+    NMHDR hdr;
+    LPOPENFILENAMEW lpOFN;
+    LPWSTR pszFile;
+}
+alias _OFNOTIFYW OFNOTIFYW;
+alias _OFNOTIFYW *LPOFNOTIFYW;
+//C       typedef OFNOTIFYA OFNOTIFY;
+alias OFNOTIFYA OFNOTIFY;
+//C       typedef LPOFNOTIFYA LPOFNOTIFY;
+alias LPOFNOTIFYA LPOFNOTIFY;
+//C       typedef struct _OFNOTIFYEXA {
+//C         NMHDR hdr;
+//C         LPOPENFILENAMEA lpOFN;
+//C         LPVOID psf;
+//C         LPVOID pidl;
+//C       } OFNOTIFYEXA,*LPOFNOTIFYEXA;
+struct _OFNOTIFYEXA
+{
+    NMHDR hdr;
+    LPOPENFILENAMEA lpOFN;
+    LPVOID psf;
+    LPVOID pidl;
+}
+alias _OFNOTIFYEXA OFNOTIFYEXA;
+alias _OFNOTIFYEXA *LPOFNOTIFYEXA;
+//C       typedef struct _OFNOTIFYEXW {
+//C         NMHDR hdr;
+//C         LPOPENFILENAMEW lpOFN;
+//C         LPVOID psf;
+//C         LPVOID pidl;
+//C       } OFNOTIFYEXW,*LPOFNOTIFYEXW;
+struct _OFNOTIFYEXW
+{
+    NMHDR hdr;
+    LPOPENFILENAMEW lpOFN;
+    LPVOID psf;
+    LPVOID pidl;
+}
+alias _OFNOTIFYEXW OFNOTIFYEXW;
+alias _OFNOTIFYEXW *LPOFNOTIFYEXW;
+//C       typedef OFNOTIFYEXA OFNOTIFYEX;
+alias OFNOTIFYEXA OFNOTIFYEX;
+//C       typedef LPOFNOTIFYEXA LPOFNOTIFYEX;
+alias LPOFNOTIFYEXA LPOFNOTIFYEX;
+//C       typedef struct tagCHOOSECOLORA {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HWND hInstance;
+//C         COLORREF rgbResult;
+//C         COLORREF *lpCustColors;
+//C         DWORD Flags;
+//C         LPARAM lCustData;
+//C         LPCCHOOKPROC lpfnHook;
+//C         LPCSTR lpTemplateName;
+//C       } CHOOSECOLORA,*LPCHOOSECOLORA;
+struct tagCHOOSECOLORA
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HWND hInstance;
+    COLORREF rgbResult;
+    COLORREF *lpCustColors;
+    DWORD Flags;
+    LPARAM lCustData;
+    LPCCHOOKPROC lpfnHook;
+    LPCSTR lpTemplateName;
+}
+alias tagCHOOSECOLORA CHOOSECOLORA;
+alias tagCHOOSECOLORA *LPCHOOSECOLORA;
+//C       typedef struct tagCHOOSECOLORW {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HWND hInstance;
+//C         COLORREF rgbResult;
+//C         COLORREF *lpCustColors;
+//C         DWORD Flags;
+//C         LPARAM lCustData;
+//C         LPCCHOOKPROC lpfnHook;
+//C         LPCWSTR lpTemplateName;
+//C       } CHOOSECOLORW,*LPCHOOSECOLORW;
+struct tagCHOOSECOLORW
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HWND hInstance;
+    COLORREF rgbResult;
+    COLORREF *lpCustColors;
+    DWORD Flags;
+    LPARAM lCustData;
+    LPCCHOOKPROC lpfnHook;
+    LPCWSTR lpTemplateName;
+}
+alias tagCHOOSECOLORW CHOOSECOLORW;
+alias tagCHOOSECOLORW *LPCHOOSECOLORW;
+//C       typedef CHOOSECOLORA CHOOSECOLOR;
+alias CHOOSECOLORA CHOOSECOLOR;
+//C       typedef LPCHOOSECOLORA LPCHOOSECOLOR;
+alias LPCHOOSECOLORA LPCHOOSECOLOR;
+//C        WINBOOL ChooseColorA(LPCHOOSECOLORA);
+WINBOOL  ChooseColorA(LPCHOOSECOLORA );
+//C        WINBOOL ChooseColorW(LPCHOOSECOLORW);
+WINBOOL  ChooseColorW(LPCHOOSECOLORW );
+//C       typedef UINT_PTR ( *LPFRHOOKPROC) (HWND,UINT,WPARAM,LPARAM);
+alias UINT_PTR  function(HWND , UINT , WPARAM , LPARAM )LPFRHOOKPROC;
+//C       typedef struct tagFINDREPLACEA {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HINSTANCE hInstance;
+//C         DWORD Flags;
+//C         LPSTR lpstrFindWhat;
+//C         LPSTR lpstrReplaceWith;
+//C         WORD wFindWhatLen;
+//C         WORD wReplaceWithLen;
+//C         LPARAM lCustData;
+//C         LPFRHOOKPROC lpfnHook;
+//C         LPCSTR lpTemplateName;
+//C       } FINDREPLACEA,*LPFINDREPLACEA;
+struct tagFINDREPLACEA
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HINSTANCE hInstance;
+    DWORD Flags;
+    LPSTR lpstrFindWhat;
+    LPSTR lpstrReplaceWith;
+    WORD wFindWhatLen;
+    WORD wReplaceWithLen;
+    LPARAM lCustData;
+    LPFRHOOKPROC lpfnHook;
+    LPCSTR lpTemplateName;
+}
+alias tagFINDREPLACEA FINDREPLACEA;
+alias tagFINDREPLACEA *LPFINDREPLACEA;
+//C       typedef struct tagFINDREPLACEW {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HINSTANCE hInstance;
+//C         DWORD Flags;
+//C         LPWSTR lpstrFindWhat;
+//C         LPWSTR lpstrReplaceWith;
+//C         WORD wFindWhatLen;
+//C         WORD wReplaceWithLen;
+//C         LPARAM lCustData;
+//C         LPFRHOOKPROC lpfnHook;
+//C         LPCWSTR lpTemplateName;
+//C       } FINDREPLACEW,*LPFINDREPLACEW;
+struct tagFINDREPLACEW
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HINSTANCE hInstance;
+    DWORD Flags;
+    LPWSTR lpstrFindWhat;
+    LPWSTR lpstrReplaceWith;
+    WORD wFindWhatLen;
+    WORD wReplaceWithLen;
+    LPARAM lCustData;
+    LPFRHOOKPROC lpfnHook;
+    LPCWSTR lpTemplateName;
+}
+alias tagFINDREPLACEW FINDREPLACEW;
+alias tagFINDREPLACEW *LPFINDREPLACEW;
+//C       typedef FINDREPLACEA FINDREPLACE;
+alias FINDREPLACEA FINDREPLACE;
+//C       typedef LPFINDREPLACEA LPFINDREPLACE;
+alias LPFINDREPLACEA LPFINDREPLACE;
+//C        HWND FindTextA(LPFINDREPLACEA);
+HWND  FindTextA(LPFINDREPLACEA );
+//C        HWND FindTextW(LPFINDREPLACEW);
+HWND  FindTextW(LPFINDREPLACEW );
+//C        HWND ReplaceTextA(LPFINDREPLACEA);
+HWND  ReplaceTextA(LPFINDREPLACEA );
+//C        HWND ReplaceTextW(LPFINDREPLACEW);
+HWND  ReplaceTextW(LPFINDREPLACEW );
+//C       typedef UINT_PTR ( *LPCFHOOKPROC) (HWND,UINT,WPARAM,LPARAM);
+alias UINT_PTR  function(HWND , UINT , WPARAM , LPARAM )LPCFHOOKPROC;
+//C       typedef struct tagCHOOSEFONTA {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HDC hDC;
+//C         LPLOGFONTA lpLogFont;
+//C         INT iPointSize;
+//C         DWORD Flags;
+//C         COLORREF rgbColors;
+//C         LPARAM lCustData;
+//C         LPCFHOOKPROC lpfnHook;
+//C         LPCSTR lpTemplateName;
+//C         HINSTANCE hInstance;
+//C         LPSTR lpszStyle;
+//C         WORD nFontType;
+//C         WORD ___MISSING_ALIGNMENT__;
+//C         INT nSizeMin;
+//C         INT nSizeMax;
+//C       } CHOOSEFONTA,*LPCHOOSEFONTA;
+struct tagCHOOSEFONTA
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HDC hDC;
+    LPLOGFONTA lpLogFont;
+    INT iPointSize;
+    DWORD Flags;
+    COLORREF rgbColors;
+    LPARAM lCustData;
+    LPCFHOOKPROC lpfnHook;
+    LPCSTR lpTemplateName;
+    HINSTANCE hInstance;
+    LPSTR lpszStyle;
+    WORD nFontType;
+    WORD ___MISSING_ALIGNMENT__;
+    INT nSizeMin;
+    INT nSizeMax;
+}
+alias tagCHOOSEFONTA CHOOSEFONTA;
+alias tagCHOOSEFONTA *LPCHOOSEFONTA;
+//C       typedef struct tagCHOOSEFONTW {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HDC hDC;
+//C         LPLOGFONTW lpLogFont;
+//C         INT iPointSize;
+//C         DWORD Flags;
+//C         COLORREF rgbColors;
+//C         LPARAM lCustData;
+//C         LPCFHOOKPROC lpfnHook;
+//C         LPCWSTR lpTemplateName;
+//C         HINSTANCE hInstance;
+//C         LPWSTR lpszStyle;
+//C         WORD nFontType;
+//C         WORD ___MISSING_ALIGNMENT__;
+//C         INT nSizeMin;
+//C         INT nSizeMax;
+//C       } CHOOSEFONTW,*LPCHOOSEFONTW;
+struct tagCHOOSEFONTW
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HDC hDC;
+    LPLOGFONTW lpLogFont;
+    INT iPointSize;
+    DWORD Flags;
+    COLORREF rgbColors;
+    LPARAM lCustData;
+    LPCFHOOKPROC lpfnHook;
+    LPCWSTR lpTemplateName;
+    HINSTANCE hInstance;
+    LPWSTR lpszStyle;
+    WORD nFontType;
+    WORD ___MISSING_ALIGNMENT__;
+    INT nSizeMin;
+    INT nSizeMax;
+}
+alias tagCHOOSEFONTW CHOOSEFONTW;
+alias tagCHOOSEFONTW *LPCHOOSEFONTW;
+//C       typedef CHOOSEFONTA CHOOSEFONT;
+alias CHOOSEFONTA CHOOSEFONT;
+//C       typedef LPCHOOSEFONTA LPCHOOSEFONT;
+alias LPCHOOSEFONTA LPCHOOSEFONT;
+//C        WINBOOL ChooseFontA(LPCHOOSEFONTA);
+WINBOOL  ChooseFontA(LPCHOOSEFONTA );
+//C        WINBOOL ChooseFontW(LPCHOOSEFONTW);
+WINBOOL  ChooseFontW(LPCHOOSEFONTW );
+//C       typedef UINT_PTR ( *LPPRINTHOOKPROC) (HWND,UINT,WPARAM,LPARAM);
+alias UINT_PTR  function(HWND , UINT , WPARAM , LPARAM )LPPRINTHOOKPROC;
+//C       typedef UINT_PTR ( *LPSETUPHOOKPROC) (HWND,UINT,WPARAM,LPARAM);
+alias UINT_PTR  function(HWND , UINT , WPARAM , LPARAM )LPSETUPHOOKPROC;
+//C       typedef struct tagPDA {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HGLOBAL hDevMode;
+//C         HGLOBAL hDevNames;
+//C         HDC hDC;
+//C         DWORD Flags;
+//C         WORD nFromPage;
+//C         WORD nToPage;
+//C         WORD nMinPage;
+//C         WORD nMaxPage;
+//C         WORD nCopies;
+//C         HINSTANCE hInstance;
+//C         LPARAM lCustData;
+//C         LPPRINTHOOKPROC lpfnPrintHook;
+//C         LPSETUPHOOKPROC lpfnSetupHook;
+//C         LPCSTR lpPrintTemplateName;
+//C         LPCSTR lpSetupTemplateName;
+//C         HGLOBAL hPrintTemplate;
+//C         HGLOBAL hSetupTemplate;
+//C       } PRINTDLGA,*LPPRINTDLGA;
+struct tagPDA
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HGLOBAL hDevMode;
+    HGLOBAL hDevNames;
+    HDC hDC;
+    DWORD Flags;
+    WORD nFromPage;
+    WORD nToPage;
+    WORD nMinPage;
+    WORD nMaxPage;
+    WORD nCopies;
+    HINSTANCE hInstance;
+    LPARAM lCustData;
+    LPPRINTHOOKPROC lpfnPrintHook;
+    LPSETUPHOOKPROC lpfnSetupHook;
+    LPCSTR lpPrintTemplateName;
+    LPCSTR lpSetupTemplateName;
+    HGLOBAL hPrintTemplate;
+    HGLOBAL hSetupTemplate;
+}
+alias tagPDA PRINTDLGA;
+alias tagPDA *LPPRINTDLGA;
+//C       typedef struct tagPDW {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HGLOBAL hDevMode;
+//C         HGLOBAL hDevNames;
+//C         HDC hDC;
+//C         DWORD Flags;
+//C         WORD nFromPage;
+//C         WORD nToPage;
+//C         WORD nMinPage;
+//C         WORD nMaxPage;
+//C         WORD nCopies;
+//C         HINSTANCE hInstance;
+//C         LPARAM lCustData;
+//C         LPPRINTHOOKPROC lpfnPrintHook;
+//C         LPSETUPHOOKPROC lpfnSetupHook;
+//C         LPCWSTR lpPrintTemplateName;
+//C         LPCWSTR lpSetupTemplateName;
+//C         HGLOBAL hPrintTemplate;
+//C         HGLOBAL hSetupTemplate;
+//C       } PRINTDLGW,*LPPRINTDLGW;
+struct tagPDW
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HGLOBAL hDevMode;
+    HGLOBAL hDevNames;
+    HDC hDC;
+    DWORD Flags;
+    WORD nFromPage;
+    WORD nToPage;
+    WORD nMinPage;
+    WORD nMaxPage;
+    WORD nCopies;
+    HINSTANCE hInstance;
+    LPARAM lCustData;
+    LPPRINTHOOKPROC lpfnPrintHook;
+    LPSETUPHOOKPROC lpfnSetupHook;
+    LPCWSTR lpPrintTemplateName;
+    LPCWSTR lpSetupTemplateName;
+    HGLOBAL hPrintTemplate;
+    HGLOBAL hSetupTemplate;
+}
+alias tagPDW PRINTDLGW;
+alias tagPDW *LPPRINTDLGW;
+//C       typedef PRINTDLGA PRINTDLG;
+alias PRINTDLGA PRINTDLG;
+//C       typedef LPPRINTDLGA LPPRINTDLG;
+alias LPPRINTDLGA LPPRINTDLG;
+//C        WINBOOL PrintDlgA(LPPRINTDLGA);
+WINBOOL  PrintDlgA(LPPRINTDLGA );
+//C        WINBOOL PrintDlgW(LPPRINTDLGW);
+WINBOOL  PrintDlgW(LPPRINTDLGW );
+//C       typedef struct IPrintDialogCallback { struct IPrintDialogCallbackVtbl *lpVtbl; } IPrintDialogCallback; typedef struct IPrintDialogCallbackVtbl IPrintDialogCallbackVtbl; struct IPrintDialogCallbackVtbl {
+struct IPrintDialogCallback
+{
+    IPrintDialogCallbackVtbl *lpVtbl;
+}
+//C         HRESULT ( *QueryInterface) (IPrintDialogCallback *This,const IID *const riid,LPVOID *ppvObj) ;
+//C         ULONG ( *AddRef) (IPrintDialogCallback *This) ;
+//C         ULONG ( *Release) (IPrintDialogCallback *This) ;
+//C         HRESULT ( *InitDone) (IPrintDialogCallback *This) ;
+//C         HRESULT ( *SelectionChange) (IPrintDialogCallback *This) ;
+//C         HRESULT ( *HandleMessage) (IPrintDialogCallback *This,HWND hDlg,UINT uMsg,WPARAM wParam,LPARAM lParam,LRESULT *pResult) ;
+//C       };
+struct IPrintDialogCallbackVtbl
+{
+    HRESULT  function(IPrintDialogCallback *This, IID *riid, LPVOID *ppvObj)QueryInterface;
+    ULONG  function(IPrintDialogCallback *This)AddRef;
+    ULONG  function(IPrintDialogCallback *This)Release;
+    HRESULT  function(IPrintDialogCallback *This)InitDone;
+    HRESULT  function(IPrintDialogCallback *This)SelectionChange;
+    HRESULT  function(IPrintDialogCallback *This, HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam, LRESULT *pResult)HandleMessage;
+}
+//C       typedef struct IPrintDialogServices { struct IPrintDialogServicesVtbl *lpVtbl; } IPrintDialogServices; typedef struct IPrintDialogServicesVtbl IPrintDialogServicesVtbl; struct IPrintDialogServicesVtbl {
+struct IPrintDialogServices
+{
+    IPrintDialogServicesVtbl *lpVtbl;
+}
+//C         HRESULT ( *QueryInterface) (IPrintDialogServices *This,const IID *const riid,LPVOID *ppvObj) ;
+//C         ULONG ( *AddRef) (IPrintDialogServices *This) ;
+//C         ULONG ( *Release) (IPrintDialogServices *This) ;
+//C         HRESULT ( *GetCurrentDevMode) (IPrintDialogServices *This,LPDEVMODE pDevMode,UINT *pcbSize) ;
+//C         HRESULT ( *GetCurrentPrinterName) (IPrintDialogServices *This,LPTSTR pPrinterName,UINT *pcchSize) ;
+//C         HRESULT ( *GetCurrentPortName) (IPrintDialogServices *This,LPTSTR pPortName,UINT *pcchSize) ;
+//C       };
+struct IPrintDialogServicesVtbl
+{
+    HRESULT  function(IPrintDialogServices *This, IID *riid, LPVOID *ppvObj)QueryInterface;
+    ULONG  function(IPrintDialogServices *This)AddRef;
+    ULONG  function(IPrintDialogServices *This)Release;
+    HRESULT  function(IPrintDialogServices *This, LPDEVMODE pDevMode, UINT *pcbSize)GetCurrentDevMode;
+    HRESULT  function(IPrintDialogServices *This, LPTSTR pPrinterName, UINT *pcchSize)GetCurrentPrinterName;
+    HRESULT  function(IPrintDialogServices *This, LPTSTR pPortName, UINT *pcchSize)GetCurrentPortName;
+}
+//C       typedef struct tagPRINTPAGERANGE {
+//C         DWORD nFromPage;
+//C         DWORD nToPage;
+//C       } PRINTPAGERANGE,*LPPRINTPAGERANGE;
+struct tagPRINTPAGERANGE
+{
+    DWORD nFromPage;
+    DWORD nToPage;
+}
+alias tagPRINTPAGERANGE PRINTPAGERANGE;
+alias tagPRINTPAGERANGE *LPPRINTPAGERANGE;
+//C       typedef struct tagPDEXA {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HGLOBAL hDevMode;
+//C         HGLOBAL hDevNames;
+//C         HDC hDC;
+//C         DWORD Flags;
+//C         DWORD Flags2;
+//C         DWORD ExclusionFlags;
+//C         DWORD nPageRanges;
+//C         DWORD nMaxPageRanges;
+//C         LPPRINTPAGERANGE lpPageRanges;
+//C         DWORD nMinPage;
+//C         DWORD nMaxPage;
+//C         DWORD nCopies;
+//C         HINSTANCE hInstance;
+//C         LPCSTR lpPrintTemplateName;
+//C         LPUNKNOWN lpCallback;
+//C         DWORD nPropertyPages;
+//C         HPROPSHEETPAGE *lphPropertyPages;
+//C         DWORD nStartPage;
+//C         DWORD dwResultAction;
+//C       } PRINTDLGEXA,*LPPRINTDLGEXA;
+struct tagPDEXA
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HGLOBAL hDevMode;
+    HGLOBAL hDevNames;
+    HDC hDC;
+    DWORD Flags;
+    DWORD Flags2;
+    DWORD ExclusionFlags;
+    DWORD nPageRanges;
+    DWORD nMaxPageRanges;
+    LPPRINTPAGERANGE lpPageRanges;
+    DWORD nMinPage;
+    DWORD nMaxPage;
+    DWORD nCopies;
+    HINSTANCE hInstance;
+    LPCSTR lpPrintTemplateName;
+    LPUNKNOWN lpCallback;
+    DWORD nPropertyPages;
+    HPROPSHEETPAGE *lphPropertyPages;
+    DWORD nStartPage;
+    DWORD dwResultAction;
+}
+alias tagPDEXA PRINTDLGEXA;
+alias tagPDEXA *LPPRINTDLGEXA;
+//C       typedef struct tagPDEXW {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HGLOBAL hDevMode;
+//C         HGLOBAL hDevNames;
+//C         HDC hDC;
+//C         DWORD Flags;
+//C         DWORD Flags2;
+//C         DWORD ExclusionFlags;
+//C         DWORD nPageRanges;
+//C         DWORD nMaxPageRanges;
+//C         LPPRINTPAGERANGE lpPageRanges;
+//C         DWORD nMinPage;
+//C         DWORD nMaxPage;
+//C         DWORD nCopies;
+//C         HINSTANCE hInstance;
+//C         LPCWSTR lpPrintTemplateName;
+//C         LPUNKNOWN lpCallback;
+//C         DWORD nPropertyPages;
+//C         HPROPSHEETPAGE *lphPropertyPages;
+//C         DWORD nStartPage;
+//C         DWORD dwResultAction;
+//C       } PRINTDLGEXW,*LPPRINTDLGEXW;
+struct tagPDEXW
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HGLOBAL hDevMode;
+    HGLOBAL hDevNames;
+    HDC hDC;
+    DWORD Flags;
+    DWORD Flags2;
+    DWORD ExclusionFlags;
+    DWORD nPageRanges;
+    DWORD nMaxPageRanges;
+    LPPRINTPAGERANGE lpPageRanges;
+    DWORD nMinPage;
+    DWORD nMaxPage;
+    DWORD nCopies;
+    HINSTANCE hInstance;
+    LPCWSTR lpPrintTemplateName;
+    LPUNKNOWN lpCallback;
+    DWORD nPropertyPages;
+    HPROPSHEETPAGE *lphPropertyPages;
+    DWORD nStartPage;
+    DWORD dwResultAction;
+}
+alias tagPDEXW PRINTDLGEXW;
+alias tagPDEXW *LPPRINTDLGEXW;
+//C       typedef PRINTDLGEXA PRINTDLGEX;
+alias PRINTDLGEXA PRINTDLGEX;
+//C       typedef LPPRINTDLGEXA LPPRINTDLGEX;
+alias LPPRINTDLGEXA LPPRINTDLGEX;
+//C        HRESULT PrintDlgExA(LPPRINTDLGEXA);
+HRESULT  PrintDlgExA(LPPRINTDLGEXA );
+//C        HRESULT PrintDlgExW(LPPRINTDLGEXW);
+HRESULT  PrintDlgExW(LPPRINTDLGEXW );
+//C       typedef struct tagDEVNAMES {
+//C         WORD wDriverOffset;
+//C         WORD wDeviceOffset;
+//C         WORD wOutputOffset;
+//C         WORD wDefault;
+//C       } DEVNAMES,*LPDEVNAMES;
+struct tagDEVNAMES
+{
+    WORD wDriverOffset;
+    WORD wDeviceOffset;
+    WORD wOutputOffset;
+    WORD wDefault;
+}
+alias tagDEVNAMES DEVNAMES;
+alias tagDEVNAMES *LPDEVNAMES;
+//C        DWORD CommDlgExtendedError(void);
+DWORD  CommDlgExtendedError();
+//C       typedef UINT_PTR ( *LPPAGEPAINTHOOK)(HWND,UINT,WPARAM,LPARAM);
+alias UINT_PTR  function(HWND , UINT , WPARAM , LPARAM )LPPAGEPAINTHOOK;
+//C       typedef UINT_PTR ( *LPPAGESETUPHOOK)(HWND,UINT,WPARAM,LPARAM);
+alias UINT_PTR  function(HWND , UINT , WPARAM , LPARAM )LPPAGESETUPHOOK;
+//C       typedef struct tagPSDA {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HGLOBAL hDevMode;
+//C         HGLOBAL hDevNames;
+//C         DWORD Flags;
+//C         POINT ptPaperSize;
+//C         RECT rtMinMargin;
+//C         RECT rtMargin;
+//C         HINSTANCE hInstance;
+//C         LPARAM lCustData;
+//C         LPPAGESETUPHOOK lpfnPageSetupHook;
+//C         LPPAGEPAINTHOOK lpfnPagePaintHook;
+//C         LPCSTR lpPageSetupTemplateName;
+//C         HGLOBAL hPageSetupTemplate;
+//C       } PAGESETUPDLGA,*LPPAGESETUPDLGA;
+struct tagPSDA
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HGLOBAL hDevMode;
+    HGLOBAL hDevNames;
+    DWORD Flags;
+    POINT ptPaperSize;
+    RECT rtMinMargin;
+    RECT rtMargin;
+    HINSTANCE hInstance;
+    LPARAM lCustData;
+    LPPAGESETUPHOOK lpfnPageSetupHook;
+    LPPAGEPAINTHOOK lpfnPagePaintHook;
+    LPCSTR lpPageSetupTemplateName;
+    HGLOBAL hPageSetupTemplate;
+}
+alias tagPSDA PAGESETUPDLGA;
+alias tagPSDA *LPPAGESETUPDLGA;
+//C       typedef struct tagPSDW {
+//C         DWORD lStructSize;
+//C         HWND hwndOwner;
+//C         HGLOBAL hDevMode;
+//C         HGLOBAL hDevNames;
+//C         DWORD Flags;
+//C         POINT ptPaperSize;
+//C         RECT rtMinMargin;
+//C         RECT rtMargin;
+//C         HINSTANCE hInstance;
+//C         LPARAM lCustData;
+//C         LPPAGESETUPHOOK lpfnPageSetupHook;
+//C         LPPAGEPAINTHOOK lpfnPagePaintHook;
+//C         LPCWSTR lpPageSetupTemplateName;
+//C         HGLOBAL hPageSetupTemplate;
+//C       } PAGESETUPDLGW,*LPPAGESETUPDLGW;
+struct tagPSDW
+{
+    DWORD lStructSize;
+    HWND hwndOwner;
+    HGLOBAL hDevMode;
+    HGLOBAL hDevNames;
+    DWORD Flags;
+    POINT ptPaperSize;
+    RECT rtMinMargin;
+    RECT rtMargin;
+    HINSTANCE hInstance;
+    LPARAM lCustData;
+    LPPAGESETUPHOOK lpfnPageSetupHook;
+    LPPAGEPAINTHOOK lpfnPagePaintHook;
+    LPCWSTR lpPageSetupTemplateName;
+    HGLOBAL hPageSetupTemplate;
+}
+alias tagPSDW PAGESETUPDLGW;
+alias tagPSDW *LPPAGESETUPDLGW;
+//C       typedef PAGESETUPDLGA PAGESETUPDLG;
+alias PAGESETUPDLGA PAGESETUPDLG;
+//C       typedef LPPAGESETUPDLGA LPPAGESETUPDLG;
+alias LPPAGESETUPDLGA LPPAGESETUPDLG;
+//C        WINBOOL PageSetupDlgA(LPPAGESETUPDLGA);
+WINBOOL  PageSetupDlgA(LPPAGESETUPDLGA );
+//C        WINBOOL PageSetupDlgW(LPPAGESETUPDLGW);
+WINBOOL  PageSetupDlgW(LPPAGESETUPDLGW );
+//C       LPUWSTR uaw_CharUpperW(LPUWSTR String);
+LPUWSTR  uaw_CharUpperW(LPUWSTR String);
+//C       int uaw_lstrcmpW(PCUWSTR String1,PCUWSTR String2);
+int  uaw_lstrcmpW(PCUWSTR String1, PCUWSTR String2);
+//C       int uaw_lstrcmpiW(PCUWSTR String1,PCUWSTR String2);
+int  uaw_lstrcmpiW(PCUWSTR String1, PCUWSTR String2);
+//C       int uaw_lstrlenW(LPCUWSTR String);
+int  uaw_lstrlenW(LPCUWSTR String);
+//C       PUWSTR  uaw_wcschr(PCUWSTR String,WCHAR Character);
+PUWSTR  uaw_wcschr(PCUWSTR String, WCHAR Character);
+//C       PUWSTR  uaw_wcscpy(PUWSTR Destination,PCUWSTR Source);
+PUWSTR  uaw_wcscpy(PUWSTR Destination, PCUWSTR Source);
+//C       int  uaw_wcsicmp(PCUWSTR String1,PCUWSTR String2);
+int  uaw_wcsicmp(PCUWSTR String1, PCUWSTR String2);
+//C       size_t  uaw_wcslen(PCUWSTR String);
+size_t  uaw_wcslen(PCUWSTR String);
+//C       PUWSTR  uaw_wcsrchr(PCUWSTR String,WCHAR Character);
+PUWSTR  uaw_wcsrchr(PCUWSTR String, WCHAR Character);
+//C       LPUWSTR ua_CharUpperW(LPUWSTR String);
+LPUWSTR  ua_CharUpperW(LPUWSTR String);
+//C       int ua_lstrcmpW(LPCUWSTR String1,LPCUWSTR String2);
+int  ua_lstrcmpW(LPCUWSTR String1, LPCUWSTR String2);
+//C       int ua_lstrcmpiW(LPCUWSTR String1,LPCUWSTR String2);
+int  ua_lstrcmpiW(LPCUWSTR String1, LPCUWSTR String2);
+//C       int ua_lstrlenW(LPCUWSTR String);
+int  ua_lstrlenW(LPCUWSTR String);
+//C       typedef WCHAR *PUWSTR_C;
+alias WCHAR *PUWSTR_C;
+//C       PUWSTR_C ua_wcschr(PCUWSTR String,WCHAR Character);
+PUWSTR_C  ua_wcschr(PCUWSTR String, WCHAR Character);
+//C       PUWSTR_C ua_wcsrchr(PCUWSTR String,WCHAR Character);
+PUWSTR_C  ua_wcsrchr(PCUWSTR String, WCHAR Character);
+//C       PUWSTR ua_wcscpy(PUWSTR Destination,PCUWSTR Source);
+PUWSTR  ua_wcscpy(PUWSTR Destination, PCUWSTR Source);
+//C       size_t ua_wcslen(PCUWSTR String);
+size_t  ua_wcslen(PCUWSTR String);
+//C       int ua_wcsicmp(LPCUWSTR String1,LPCUWSTR String2);
+int  ua_wcsicmp(LPCUWSTR String1, LPCUWSTR String2);
+//C       typedef struct _SERVICE_DESCRIPTIONA {
+//C         LPSTR lpDescription;
+//C       } SERVICE_DESCRIPTIONA,*LPSERVICE_DESCRIPTIONA;
+struct _SERVICE_DESCRIPTIONA
+{
+    LPSTR lpDescription;
+}
+alias _SERVICE_DESCRIPTIONA SERVICE_DESCRIPTIONA;
+alias _SERVICE_DESCRIPTIONA *LPSERVICE_DESCRIPTIONA;
+//C       typedef struct _SERVICE_DESCRIPTIONW {
+//C         LPWSTR lpDescription;
+//C       } SERVICE_DESCRIPTIONW,*LPSERVICE_DESCRIPTIONW;
+struct _SERVICE_DESCRIPTIONW
+{
+    LPWSTR lpDescription;
+}
+alias _SERVICE_DESCRIPTIONW SERVICE_DESCRIPTIONW;
+alias _SERVICE_DESCRIPTIONW *LPSERVICE_DESCRIPTIONW;
+//C       typedef SERVICE_DESCRIPTIONA SERVICE_DESCRIPTION;
+alias SERVICE_DESCRIPTIONA SERVICE_DESCRIPTION;
+//C       typedef LPSERVICE_DESCRIPTIONA LPSERVICE_DESCRIPTION;
+alias LPSERVICE_DESCRIPTIONA LPSERVICE_DESCRIPTION;
+//C       typedef enum _SC_ACTION_TYPE {
+//C         SC_ACTION_NONE = 0,SC_ACTION_RESTART = 1,SC_ACTION_REBOOT = 2,SC_ACTION_RUN_COMMAND = 3
+//C       } SC_ACTION_TYPE;
+enum _SC_ACTION_TYPE
+{
+    SC_ACTION_NONE,
+    SC_ACTION_RESTART,
+    SC_ACTION_REBOOT,
+    SC_ACTION_RUN_COMMAND,
+}
+alias _SC_ACTION_TYPE SC_ACTION_TYPE;
+//C       typedef struct _SC_ACTION {
+//C         SC_ACTION_TYPE Type;
+//C         DWORD Delay;
+//C       } SC_ACTION,*LPSC_ACTION;
+struct _SC_ACTION
+{
+    SC_ACTION_TYPE Type;
+    DWORD Delay;
+}
+alias _SC_ACTION SC_ACTION;
+alias _SC_ACTION *LPSC_ACTION;
+//C       typedef struct _SERVICE_FAILURE_ACTIONSA {
+//C         DWORD dwResetPeriod;
+//C         LPSTR lpRebootMsg;
+//C         LPSTR lpCommand;
+//C         DWORD cActions;
+//C         SC_ACTION *lpsaActions;
+//C       } SERVICE_FAILURE_ACTIONSA,*LPSERVICE_FAILURE_ACTIONSA;
+struct _SERVICE_FAILURE_ACTIONSA
+{
+    DWORD dwResetPeriod;
+    LPSTR lpRebootMsg;
+    LPSTR lpCommand;
+    DWORD cActions;
+    SC_ACTION *lpsaActions;
+}
+alias _SERVICE_FAILURE_ACTIONSA SERVICE_FAILURE_ACTIONSA;
+alias _SERVICE_FAILURE_ACTIONSA *LPSERVICE_FAILURE_ACTIONSA;
+//C       typedef struct _SERVICE_FAILURE_ACTIONSW {
+//C         DWORD dwResetPeriod;
+//C         LPWSTR lpRebootMsg;
+//C         LPWSTR lpCommand;
+//C         DWORD cActions;
+//C         SC_ACTION *lpsaActions;
+//C       } SERVICE_FAILURE_ACTIONSW,*LPSERVICE_FAILURE_ACTIONSW;
+struct _SERVICE_FAILURE_ACTIONSW
+{
+    DWORD dwResetPeriod;
+    LPWSTR lpRebootMsg;
+    LPWSTR lpCommand;
+    DWORD cActions;
+    SC_ACTION *lpsaActions;
+}
+alias _SERVICE_FAILURE_ACTIONSW SERVICE_FAILURE_ACTIONSW;
+alias _SERVICE_FAILURE_ACTIONSW *LPSERVICE_FAILURE_ACTIONSW;
+//C       typedef SERVICE_FAILURE_ACTIONSA SERVICE_FAILURE_ACTIONS;
+alias SERVICE_FAILURE_ACTIONSA SERVICE_FAILURE_ACTIONS;
+//C       typedef LPSERVICE_FAILURE_ACTIONSA LPSERVICE_FAILURE_ACTIONS;
+alias LPSERVICE_FAILURE_ACTIONSA LPSERVICE_FAILURE_ACTIONS;
+//C       struct SC_HANDLE__ { int unused; }; typedef struct SC_HANDLE__ *SC_HANDLE;
+struct SC_HANDLE__
+{
+    int unused;
+}
+alias SC_HANDLE__ *SC_HANDLE;
+//C       typedef SC_HANDLE *LPSC_HANDLE;
+alias SC_HANDLE *LPSC_HANDLE;
+//C       struct SERVICE_STATUS_HANDLE__ { int unused; }; typedef struct SERVICE_STATUS_HANDLE__ *SERVICE_STATUS_HANDLE;
+struct SERVICE_STATUS_HANDLE__
+{
+    int unused;
+}
+alias SERVICE_STATUS_HANDLE__ *SERVICE_STATUS_HANDLE;
+//C       typedef enum _SC_STATUS_TYPE {
+//C         SC_STATUS_PROCESS_INFO = 0
+//C       } SC_STATUS_TYPE;
+enum _SC_STATUS_TYPE
+{
+    SC_STATUS_PROCESS_INFO,
+}
+alias _SC_STATUS_TYPE SC_STATUS_TYPE;
+//C       typedef enum _SC_ENUM_TYPE {
+//C         SC_ENUM_PROCESS_INFO = 0
+//C       } SC_ENUM_TYPE;
+enum _SC_ENUM_TYPE
+{
+    SC_ENUM_PROCESS_INFO,
+}
+alias _SC_ENUM_TYPE SC_ENUM_TYPE;
+//C       typedef struct _SERVICE_STATUS {
+//C         DWORD dwServiceType;
+//C         DWORD dwCurrentState;
+//C         DWORD dwControlsAccepted;
+//C         DWORD dwWin32ExitCode;
+//C         DWORD dwServiceSpecificExitCode;
+//C         DWORD dwCheckPoint;
+//C         DWORD dwWaitHint;
+//C       } SERVICE_STATUS,*LPSERVICE_STATUS;
+struct _SERVICE_STATUS
+{
+    DWORD dwServiceType;
+    DWORD dwCurrentState;
+    DWORD dwControlsAccepted;
+    DWORD dwWin32ExitCode;
+    DWORD dwServiceSpecificExitCode;
+    DWORD dwCheckPoint;
+    DWORD dwWaitHint;
+}
+alias _SERVICE_STATUS SERVICE_STATUS;
+alias _SERVICE_STATUS *LPSERVICE_STATUS;
+//C       typedef struct _SERVICE_STATUS_PROCESS {
+//C         DWORD dwServiceType;
+//C         DWORD dwCurrentState;
+//C         DWORD dwControlsAccepted;
+//C         DWORD dwWin32ExitCode;
+//C         DWORD dwServiceSpecificExitCode;
+//C         DWORD dwCheckPoint;
+//C         DWORD dwWaitHint;
+//C         DWORD dwProcessId;
+//C         DWORD dwServiceFlags;
+//C       } SERVICE_STATUS_PROCESS,*LPSERVICE_STATUS_PROCESS;
+struct _SERVICE_STATUS_PROCESS
+{
+    DWORD dwServiceType;
+    DWORD dwCurrentState;
+    DWORD dwControlsAccepted;
+    DWORD dwWin32ExitCode;
+    DWORD dwServiceSpecificExitCode;
+    DWORD dwCheckPoint;
+    DWORD dwWaitHint;
+    DWORD dwProcessId;
+    DWORD dwServiceFlags;
+}
+alias _SERVICE_STATUS_PROCESS SERVICE_STATUS_PROCESS;
+alias _SERVICE_STATUS_PROCESS *LPSERVICE_STATUS_PROCESS;
+//C       typedef struct _ENUM_SERVICE_STATUSA {
+//C         LPSTR lpServiceName;
+//C         LPSTR lpDisplayName;
+//C         SERVICE_STATUS ServiceStatus;
+//C       } ENUM_SERVICE_STATUSA,*LPENUM_SERVICE_STATUSA;
+struct _ENUM_SERVICE_STATUSA
+{
+    LPSTR lpServiceName;
+    LPSTR lpDisplayName;
+    SERVICE_STATUS ServiceStatus;
+}
+alias _ENUM_SERVICE_STATUSA ENUM_SERVICE_STATUSA;
+alias _ENUM_SERVICE_STATUSA *LPENUM_SERVICE_STATUSA;
+//C       typedef struct _ENUM_SERVICE_STATUSW {
+//C         LPWSTR lpServiceName;
+//C         LPWSTR lpDisplayName;
+//C         SERVICE_STATUS ServiceStatus;
+//C       } ENUM_SERVICE_STATUSW,*LPENUM_SERVICE_STATUSW;
+struct _ENUM_SERVICE_STATUSW
+{
+    LPWSTR lpServiceName;
+    LPWSTR lpDisplayName;
+    SERVICE_STATUS ServiceStatus;
+}
+alias _ENUM_SERVICE_STATUSW ENUM_SERVICE_STATUSW;
+alias _ENUM_SERVICE_STATUSW *LPENUM_SERVICE_STATUSW;
+//C       typedef ENUM_SERVICE_STATUSA ENUM_SERVICE_STATUS;
+alias ENUM_SERVICE_STATUSA ENUM_SERVICE_STATUS;
+//C       typedef LPENUM_SERVICE_STATUSA LPENUM_SERVICE_STATUS;
+alias LPENUM_SERVICE_STATUSA LPENUM_SERVICE_STATUS;
+//C       typedef struct _ENUM_SERVICE_STATUS_PROCESSA {
+//C         LPSTR lpServiceName;
+//C         LPSTR lpDisplayName;
+//C         SERVICE_STATUS_PROCESS ServiceStatusProcess;
+//C       } ENUM_SERVICE_STATUS_PROCESSA,*LPENUM_SERVICE_STATUS_PROCESSA;
+struct _ENUM_SERVICE_STATUS_PROCESSA
+{
+    LPSTR lpServiceName;
+    LPSTR lpDisplayName;
+    SERVICE_STATUS_PROCESS ServiceStatusProcess;
+}
+alias _ENUM_SERVICE_STATUS_PROCESSA ENUM_SERVICE_STATUS_PROCESSA;
+alias _ENUM_SERVICE_STATUS_PROCESSA *LPENUM_SERVICE_STATUS_PROCESSA;
+//C       typedef struct _ENUM_SERVICE_STATUS_PROCESSW {
+//C         LPWSTR lpServiceName;
+//C         LPWSTR lpDisplayName;
+//C         SERVICE_STATUS_PROCESS ServiceStatusProcess;
+//C       } ENUM_SERVICE_STATUS_PROCESSW,*LPENUM_SERVICE_STATUS_PROCESSW;
+struct _ENUM_SERVICE_STATUS_PROCESSW
+{
+    LPWSTR lpServiceName;
+    LPWSTR lpDisplayName;
+    SERVICE_STATUS_PROCESS ServiceStatusProcess;
+}
+alias _ENUM_SERVICE_STATUS_PROCESSW ENUM_SERVICE_STATUS_PROCESSW;
+alias _ENUM_SERVICE_STATUS_PROCESSW *LPENUM_SERVICE_STATUS_PROCESSW;
+//C       typedef ENUM_SERVICE_STATUS_PROCESSA ENUM_SERVICE_STATUS_PROCESS;
+alias ENUM_SERVICE_STATUS_PROCESSA ENUM_SERVICE_STATUS_PROCESS;
+//C       typedef LPENUM_SERVICE_STATUS_PROCESSA LPENUM_SERVICE_STATUS_PROCESS;
+alias LPENUM_SERVICE_STATUS_PROCESSA LPENUM_SERVICE_STATUS_PROCESS;
+//C       typedef LPVOID SC_LOCK;
+alias LPVOID SC_LOCK;
+//C       typedef struct _QUERY_SERVICE_LOCK_STATUSA {
+//C         DWORD fIsLocked;
+//C         LPSTR lpLockOwner;
+//C         DWORD dwLockDuration;
+//C       } QUERY_SERVICE_LOCK_STATUSA,*LPQUERY_SERVICE_LOCK_STATUSA;
+struct _QUERY_SERVICE_LOCK_STATUSA
+{
+    DWORD fIsLocked;
+    LPSTR lpLockOwner;
+    DWORD dwLockDuration;
+}
+alias _QUERY_SERVICE_LOCK_STATUSA QUERY_SERVICE_LOCK_STATUSA;
+alias _QUERY_SERVICE_LOCK_STATUSA *LPQUERY_SERVICE_LOCK_STATUSA;
+//C       typedef struct _QUERY_SERVICE_LOCK_STATUSW {
+//C         DWORD fIsLocked;
+//C         LPWSTR lpLockOwner;
+//C         DWORD dwLockDuration;
+//C       } QUERY_SERVICE_LOCK_STATUSW,*LPQUERY_SERVICE_LOCK_STATUSW;
+struct _QUERY_SERVICE_LOCK_STATUSW
+{
+    DWORD fIsLocked;
+    LPWSTR lpLockOwner;
+    DWORD dwLockDuration;
+}
+alias _QUERY_SERVICE_LOCK_STATUSW QUERY_SERVICE_LOCK_STATUSW;
+alias _QUERY_SERVICE_LOCK_STATUSW *LPQUERY_SERVICE_LOCK_STATUSW;
+//C       typedef QUERY_SERVICE_LOCK_STATUSA QUERY_SERVICE_LOCK_STATUS;
+alias QUERY_SERVICE_LOCK_STATUSA QUERY_SERVICE_LOCK_STATUS;
+//C       typedef LPQUERY_SERVICE_LOCK_STATUSA LPQUERY_SERVICE_LOCK_STATUS;
+alias LPQUERY_SERVICE_LOCK_STATUSA LPQUERY_SERVICE_LOCK_STATUS;
+//C       typedef struct _QUERY_SERVICE_CONFIGA {
+//C         DWORD dwServiceType;
+//C         DWORD dwStartType;
+//C         DWORD dwErrorControl;
+//C         LPSTR lpBinaryPathName;
+//C         LPSTR lpLoadOrderGroup;
+//C         DWORD dwTagId;
+//C         LPSTR lpDependencies;
+//C         LPSTR lpServiceStartName;
+//C         LPSTR lpDisplayName;
+//C       } QUERY_SERVICE_CONFIGA,*LPQUERY_SERVICE_CONFIGA;
+struct _QUERY_SERVICE_CONFIGA
+{
+    DWORD dwServiceType;
+    DWORD dwStartType;
+    DWORD dwErrorControl;
+    LPSTR lpBinaryPathName;
+    LPSTR lpLoadOrderGroup;
+    DWORD dwTagId;
+    LPSTR lpDependencies;
+    LPSTR lpServiceStartName;
+    LPSTR lpDisplayName;
+}
+alias _QUERY_SERVICE_CONFIGA QUERY_SERVICE_CONFIGA;
+alias _QUERY_SERVICE_CONFIGA *LPQUERY_SERVICE_CONFIGA;
+//C       typedef struct _QUERY_SERVICE_CONFIGW {
+//C         DWORD dwServiceType;
+//C         DWORD dwStartType;
+//C         DWORD dwErrorControl;
+//C         LPWSTR lpBinaryPathName;
+//C         LPWSTR lpLoadOrderGroup;
+//C         DWORD dwTagId;
+//C         LPWSTR lpDependencies;
+//C         LPWSTR lpServiceStartName;
+//C         LPWSTR lpDisplayName;
+//C       } QUERY_SERVICE_CONFIGW,*LPQUERY_SERVICE_CONFIGW;
+struct _QUERY_SERVICE_CONFIGW
+{
+    DWORD dwServiceType;
+    DWORD dwStartType;
+    DWORD dwErrorControl;
+    LPWSTR lpBinaryPathName;
+    LPWSTR lpLoadOrderGroup;
+    DWORD dwTagId;
+    LPWSTR lpDependencies;
+    LPWSTR lpServiceStartName;
+    LPWSTR lpDisplayName;
+}
+alias _QUERY_SERVICE_CONFIGW QUERY_SERVICE_CONFIGW;
+alias _QUERY_SERVICE_CONFIGW *LPQUERY_SERVICE_CONFIGW;
+//C       typedef QUERY_SERVICE_CONFIGA QUERY_SERVICE_CONFIG;
+alias QUERY_SERVICE_CONFIGA QUERY_SERVICE_CONFIG;
+//C       typedef LPQUERY_SERVICE_CONFIGA LPQUERY_SERVICE_CONFIG;
+alias LPQUERY_SERVICE_CONFIGA LPQUERY_SERVICE_CONFIG;
+//C       typedef void ( *LPSERVICE_MAIN_FUNCTIONW)(DWORD dwNumServicesArgs,LPWSTR *lpServiceArgVectors);
+alias void  function(DWORD dwNumServicesArgs, LPWSTR *lpServiceArgVectors)LPSERVICE_MAIN_FUNCTIONW;
+//C       typedef void ( *LPSERVICE_MAIN_FUNCTIONA)(DWORD dwNumServicesArgs,LPSTR *lpServiceArgVectors);
+alias void  function(DWORD dwNumServicesArgs, LPSTR *lpServiceArgVectors)LPSERVICE_MAIN_FUNCTIONA;
+//C       typedef struct _SERVICE_TABLE_ENTRYA {
+//C         LPSTR lpServiceName;
+//C         LPSERVICE_MAIN_FUNCTIONA lpServiceProc;
+//C       } SERVICE_TABLE_ENTRYA,*LPSERVICE_TABLE_ENTRYA;
+struct _SERVICE_TABLE_ENTRYA
+{
+    LPSTR lpServiceName;
+    LPSERVICE_MAIN_FUNCTIONA lpServiceProc;
+}
+alias _SERVICE_TABLE_ENTRYA SERVICE_TABLE_ENTRYA;
+alias _SERVICE_TABLE_ENTRYA *LPSERVICE_TABLE_ENTRYA;
+//C       typedef struct _SERVICE_TABLE_ENTRYW {
+//C         LPWSTR lpServiceName;
+//C         LPSERVICE_MAIN_FUNCTIONW lpServiceProc;
+//C       } SERVICE_TABLE_ENTRYW,*LPSERVICE_TABLE_ENTRYW;
+struct _SERVICE_TABLE_ENTRYW
+{
+    LPWSTR lpServiceName;
+    LPSERVICE_MAIN_FUNCTIONW lpServiceProc;
+}
+alias _SERVICE_TABLE_ENTRYW SERVICE_TABLE_ENTRYW;
+alias _SERVICE_TABLE_ENTRYW *LPSERVICE_TABLE_ENTRYW;
+//C       typedef SERVICE_TABLE_ENTRYA SERVICE_TABLE_ENTRY;
+alias SERVICE_TABLE_ENTRYA SERVICE_TABLE_ENTRY;
+//C       typedef LPSERVICE_TABLE_ENTRYA LPSERVICE_TABLE_ENTRY;
+alias LPSERVICE_TABLE_ENTRYA LPSERVICE_TABLE_ENTRY;
+//C       typedef void ( *LPHANDLER_FUNCTION)(DWORD dwControl);
+alias void  function(DWORD dwControl)LPHANDLER_FUNCTION;
+//C       typedef DWORD ( *LPHANDLER_FUNCTION_EX)(DWORD dwControl,DWORD dwEventType,LPVOID lpEventData,LPVOID lpContext);
+alias DWORD  function(DWORD dwControl, DWORD dwEventType, LPVOID lpEventData, LPVOID lpContext)LPHANDLER_FUNCTION_EX;
+//C        WINBOOL ChangeServiceConfigA(SC_HANDLE hService,DWORD dwServiceType,DWORD dwStartType,DWORD dwErrorControl,LPCSTR lpBinaryPathName,LPCSTR lpLoadOrderGroup,LPDWORD lpdwTagId,LPCSTR lpDependencies,LPCSTR lpServiceStartName,LPCSTR lpPassword,LPCSTR lpDisplayName);
+WINBOOL  ChangeServiceConfigA(SC_HANDLE hService, DWORD dwServiceType, DWORD dwStartType, DWORD dwErrorControl, LPCSTR lpBinaryPathName, LPCSTR lpLoadOrderGroup, LPDWORD lpdwTagId, LPCSTR lpDependencies, LPCSTR lpServiceStartName, LPCSTR lpPassword, LPCSTR lpDisplayName);
+//C        WINBOOL ChangeServiceConfigW(SC_HANDLE hService,DWORD dwServiceType,DWORD dwStartType,DWORD dwErrorControl,LPCWSTR lpBinaryPathName,LPCWSTR lpLoadOrderGroup,LPDWORD lpdwTagId,LPCWSTR lpDependencies,LPCWSTR lpServiceStartName,LPCWSTR lpPassword,LPCWSTR lpDisplayName);
+WINBOOL  ChangeServiceConfigW(SC_HANDLE hService, DWORD dwServiceType, DWORD dwStartType, DWORD dwErrorControl, LPCWSTR lpBinaryPathName, LPCWSTR lpLoadOrderGroup, LPDWORD lpdwTagId, LPCWSTR lpDependencies, LPCWSTR lpServiceStartName, LPCWSTR lpPassword, LPCWSTR lpDisplayName);
+//C        WINBOOL ChangeServiceConfig2A(SC_HANDLE hService,DWORD dwInfoLevel,LPVOID lpInfo);
+WINBOOL  ChangeServiceConfig2A(SC_HANDLE hService, DWORD dwInfoLevel, LPVOID lpInfo);
+//C        WINBOOL ChangeServiceConfig2W(SC_HANDLE hService,DWORD dwInfoLevel,LPVOID lpInfo);
+WINBOOL  ChangeServiceConfig2W(SC_HANDLE hService, DWORD dwInfoLevel, LPVOID lpInfo);
+//C        WINBOOL CloseServiceHandle(SC_HANDLE hSCObject);
+WINBOOL  CloseServiceHandle(SC_HANDLE hSCObject);
+//C        WINBOOL ControlService(SC_HANDLE hService,DWORD dwControl,LPSERVICE_STATUS lpServiceStatus);
+WINBOOL  ControlService(SC_HANDLE hService, DWORD dwControl, LPSERVICE_STATUS lpServiceStatus);
+//C        SC_HANDLE CreateServiceA(SC_HANDLE hSCManager,LPCSTR lpServiceName,LPCSTR lpDisplayName,DWORD dwDesiredAccess,DWORD dwServiceType,DWORD dwStartType,DWORD dwErrorControl,LPCSTR lpBinaryPathName,LPCSTR lpLoadOrderGroup,LPDWORD lpdwTagId,LPCSTR lpDependencies,LPCSTR lpServiceStartName,LPCSTR lpPassword);
+SC_HANDLE  CreateServiceA(SC_HANDLE hSCManager, LPCSTR lpServiceName, LPCSTR lpDisplayName, DWORD dwDesiredAccess, DWORD dwServiceType, DWORD dwStartType, DWORD dwErrorControl, LPCSTR lpBinaryPathName, LPCSTR lpLoadOrderGroup, LPDWORD lpdwTagId, LPCSTR lpDependencies, LPCSTR lpServiceStartName, LPCSTR lpPassword);
+//C        SC_HANDLE CreateServiceW(SC_HANDLE hSCManager,LPCWSTR lpServiceName,LPCWSTR lpDisplayName,DWORD dwDesiredAccess,DWORD dwServiceType,DWORD dwStartType,DWORD dwErrorControl,LPCWSTR lpBinaryPathName,LPCWSTR lpLoadOrderGroup,LPDWORD lpdwTagId,LPCWSTR lpDependencies,LPCWSTR lpServiceStartName,LPCWSTR lpPassword);
+SC_HANDLE  CreateServiceW(SC_HANDLE hSCManager, LPCWSTR lpServiceName, LPCWSTR lpDisplayName, DWORD dwDesiredAccess, DWORD dwServiceType, DWORD dwStartType, DWORD dwErrorControl, LPCWSTR lpBinaryPathName, LPCWSTR lpLoadOrderGroup, LPDWORD lpdwTagId, LPCWSTR lpDependencies, LPCWSTR lpServiceStartName, LPCWSTR lpPassword);
+//C        WINBOOL DeleteService(SC_HANDLE hService);
+WINBOOL  DeleteService(SC_HANDLE hService);
+//C        WINBOOL EnumDependentServicesA(SC_HANDLE hService,DWORD dwServiceState,LPENUM_SERVICE_STATUSA lpServices,DWORD cbBufSize,LPDWORD pcbBytesNeeded,LPDWORD lpServicesReturned);
+WINBOOL  EnumDependentServicesA(SC_HANDLE hService, DWORD dwServiceState, LPENUM_SERVICE_STATUSA lpServices, DWORD cbBufSize, LPDWORD pcbBytesNeeded, LPDWORD lpServicesReturned);
+//C        WINBOOL EnumDependentServicesW(SC_HANDLE hService,DWORD dwServiceState,LPENUM_SERVICE_STATUSW lpServices,DWORD cbBufSize,LPDWORD pcbBytesNeeded,LPDWORD lpServicesReturned);
+WINBOOL  EnumDependentServicesW(SC_HANDLE hService, DWORD dwServiceState, LPENUM_SERVICE_STATUSW lpServices, DWORD cbBufSize, LPDWORD pcbBytesNeeded, LPDWORD lpServicesReturned);
+//C        WINBOOL EnumServicesStatusA(SC_HANDLE hSCManager,DWORD dwServiceType,DWORD dwServiceState,LPENUM_SERVICE_STATUSA lpServices,DWORD cbBufSize,LPDWORD pcbBytesNeeded,LPDWORD lpServicesReturned,LPDWORD lpResumeHandle);
+WINBOOL  EnumServicesStatusA(SC_HANDLE hSCManager, DWORD dwServiceType, DWORD dwServiceState, LPENUM_SERVICE_STATUSA lpServices, DWORD cbBufSize, LPDWORD pcbBytesNeeded, LPDWORD lpServicesReturned, LPDWORD lpResumeHandle);
+//C        WINBOOL EnumServicesStatusW(SC_HANDLE hSCManager,DWORD dwServiceType,DWORD dwServiceState,LPENUM_SERVICE_STATUSW lpServices,DWORD cbBufSize,LPDWORD pcbBytesNeeded,LPDWORD lpServicesReturned,LPDWORD lpResumeHandle);
+WINBOOL  EnumServicesStatusW(SC_HANDLE hSCManager, DWORD dwServiceType, DWORD dwServiceState, LPENUM_SERVICE_STATUSW lpServices, DWORD cbBufSize, LPDWORD pcbBytesNeeded, LPDWORD lpServicesReturned, LPDWORD lpResumeHandle);
+//C        WINBOOL EnumServicesStatusExA(SC_HANDLE hSCManager,SC_ENUM_TYPE InfoLevel,DWORD dwServiceType,DWORD dwServiceState,LPBYTE lpServices,DWORD cbBufSize,LPDWORD pcbBytesNeeded,LPDWORD lpServicesReturned,LPDWORD lpResumeHandle,LPCSTR pszGroupName);
+WINBOOL  EnumServicesStatusExA(SC_HANDLE hSCManager, SC_ENUM_TYPE InfoLevel, DWORD dwServiceType, DWORD dwServiceState, LPBYTE lpServices, DWORD cbBufSize, LPDWORD pcbBytesNeeded, LPDWORD lpServicesReturned, LPDWORD lpResumeHandle, LPCSTR pszGroupName);
+//C        WINBOOL EnumServicesStatusExW(SC_HANDLE hSCManager,SC_ENUM_TYPE InfoLevel,DWORD dwServiceType,DWORD dwServiceState,LPBYTE lpServices,DWORD cbBufSize,LPDWORD pcbBytesNeeded,LPDWORD lpServicesReturned,LPDWORD lpResumeHandle,LPCWSTR pszGroupName);
+WINBOOL  EnumServicesStatusExW(SC_HANDLE hSCManager, SC_ENUM_TYPE InfoLevel, DWORD dwServiceType, DWORD dwServiceState, LPBYTE lpServices, DWORD cbBufSize, LPDWORD pcbBytesNeeded, LPDWORD lpServicesReturned, LPDWORD lpResumeHandle, LPCWSTR pszGroupName);
+//C        WINBOOL GetServiceKeyNameA(SC_HANDLE hSCManager,LPCSTR lpDisplayName,LPSTR lpServiceName,LPDWORD lpcchBuffer);
+WINBOOL  GetServiceKeyNameA(SC_HANDLE hSCManager, LPCSTR lpDisplayName, LPSTR lpServiceName, LPDWORD lpcchBuffer);
+//C        WINBOOL GetServiceKeyNameW(SC_HANDLE hSCManager,LPCWSTR lpDisplayName,LPWSTR lpServiceName,LPDWORD lpcchBuffer);
+WINBOOL  GetServiceKeyNameW(SC_HANDLE hSCManager, LPCWSTR lpDisplayName, LPWSTR lpServiceName, LPDWORD lpcchBuffer);
+//C        WINBOOL GetServiceDisplayNameA(SC_HANDLE hSCManager,LPCSTR lpServiceName,LPSTR lpDisplayName,LPDWORD lpcchBuffer);
+WINBOOL  GetServiceDisplayNameA(SC_HANDLE hSCManager, LPCSTR lpServiceName, LPSTR lpDisplayName, LPDWORD lpcchBuffer);
+//C        WINBOOL GetServiceDisplayNameW(SC_HANDLE hSCManager,LPCWSTR lpServiceName,LPWSTR lpDisplayName,LPDWORD lpcchBuffer);
+WINBOOL  GetServiceDisplayNameW(SC_HANDLE hSCManager, LPCWSTR lpServiceName, LPWSTR lpDisplayName, LPDWORD lpcchBuffer);
+//C        SC_LOCK LockServiceDatabase(SC_HANDLE hSCManager);
+SC_LOCK  LockServiceDatabase(SC_HANDLE hSCManager);
+//C        WINBOOL NotifyBootConfigStatus(WINBOOL BootAcceptable);
+WINBOOL  NotifyBootConfigStatus(WINBOOL BootAcceptable);
+//C        SC_HANDLE OpenSCManagerA(LPCSTR lpMachineName,LPCSTR lpDatabaseName,DWORD dwDesiredAccess);
+SC_HANDLE  OpenSCManagerA(LPCSTR lpMachineName, LPCSTR lpDatabaseName, DWORD dwDesiredAccess);
+//C        SC_HANDLE OpenSCManagerW(LPCWSTR lpMachineName,LPCWSTR lpDatabaseName,DWORD dwDesiredAccess);
+SC_HANDLE  OpenSCManagerW(LPCWSTR lpMachineName, LPCWSTR lpDatabaseName, DWORD dwDesiredAccess);
+//C        SC_HANDLE OpenServiceA(SC_HANDLE hSCManager,LPCSTR lpServiceName,DWORD dwDesiredAccess);
+SC_HANDLE  OpenServiceA(SC_HANDLE hSCManager, LPCSTR lpServiceName, DWORD dwDesiredAccess);
+//C        SC_HANDLE OpenServiceW(SC_HANDLE hSCManager,LPCWSTR lpServiceName,DWORD dwDesiredAccess);
+SC_HANDLE  OpenServiceW(SC_HANDLE hSCManager, LPCWSTR lpServiceName, DWORD dwDesiredAccess);
+//C        WINBOOL QueryServiceConfigA(SC_HANDLE hService,LPQUERY_SERVICE_CONFIGA lpServiceConfig,DWORD cbBufSize,LPDWORD pcbBytesNeeded);
+WINBOOL  QueryServiceConfigA(SC_HANDLE hService, LPQUERY_SERVICE_CONFIGA lpServiceConfig, DWORD cbBufSize, LPDWORD pcbBytesNeeded);
+//C        WINBOOL QueryServiceConfigW(SC_HANDLE hService,LPQUERY_SERVICE_CONFIGW lpServiceConfig,DWORD cbBufSize,LPDWORD pcbBytesNeeded);
+WINBOOL  QueryServiceConfigW(SC_HANDLE hService, LPQUERY_SERVICE_CONFIGW lpServiceConfig, DWORD cbBufSize, LPDWORD pcbBytesNeeded);
+//C        WINBOOL QueryServiceConfig2A(SC_HANDLE hService,DWORD dwInfoLevel,LPBYTE lpBuffer,DWORD cbBufSize,LPDWORD pcbBytesNeeded);
+WINBOOL  QueryServiceConfig2A(SC_HANDLE hService, DWORD dwInfoLevel, LPBYTE lpBuffer, DWORD cbBufSize, LPDWORD pcbBytesNeeded);
+//C        WINBOOL QueryServiceConfig2W(SC_HANDLE hService,DWORD dwInfoLevel,LPBYTE lpBuffer,DWORD cbBufSize,LPDWORD pcbBytesNeeded);
+WINBOOL  QueryServiceConfig2W(SC_HANDLE hService, DWORD dwInfoLevel, LPBYTE lpBuffer, DWORD cbBufSize, LPDWORD pcbBytesNeeded);
+//C        WINBOOL QueryServiceLockStatusA(SC_HANDLE hSCManager,LPQUERY_SERVICE_LOCK_STATUSA lpLockStatus,DWORD cbBufSize,LPDWORD pcbBytesNeeded);
+WINBOOL  QueryServiceLockStatusA(SC_HANDLE hSCManager, LPQUERY_SERVICE_LOCK_STATUSA lpLockStatus, DWORD cbBufSize, LPDWORD pcbBytesNeeded);
+//C        WINBOOL QueryServiceLockStatusW(SC_HANDLE hSCManager,LPQUERY_SERVICE_LOCK_STATUSW lpLockStatus,DWORD cbBufSize,LPDWORD pcbBytesNeeded);
+WINBOOL  QueryServiceLockStatusW(SC_HANDLE hSCManager, LPQUERY_SERVICE_LOCK_STATUSW lpLockStatus, DWORD cbBufSize, LPDWORD pcbBytesNeeded);
+//C        WINBOOL QueryServiceObjectSecurity(SC_HANDLE hService,SECURITY_INFORMATION dwSecurityInformation,PSECURITY_DESCRIPTOR lpSecurityDescriptor,DWORD cbBufSize,LPDWORD pcbBytesNeeded);
+WINBOOL  QueryServiceObjectSecurity(SC_HANDLE hService, SECURITY_INFORMATION dwSecurityInformation, PSECURITY_DESCRIPTOR lpSecurityDescriptor, DWORD cbBufSize, LPDWORD pcbBytesNeeded);
+//C        WINBOOL QueryServiceStatus(SC_HANDLE hService,LPSERVICE_STATUS lpServiceStatus);
+WINBOOL  QueryServiceStatus(SC_HANDLE hService, LPSERVICE_STATUS lpServiceStatus);
+//C        WINBOOL QueryServiceStatusEx(SC_HANDLE hService,SC_STATUS_TYPE InfoLevel,LPBYTE lpBuffer,DWORD cbBufSize,LPDWORD pcbBytesNeeded);
+WINBOOL  QueryServiceStatusEx(SC_HANDLE hService, SC_STATUS_TYPE InfoLevel, LPBYTE lpBuffer, DWORD cbBufSize, LPDWORD pcbBytesNeeded);
+//C        SERVICE_STATUS_HANDLE RegisterServiceCtrlHandlerA(LPCSTR lpServiceName,LPHANDLER_FUNCTION lpHandlerProc);
+SERVICE_STATUS_HANDLE  RegisterServiceCtrlHandlerA(LPCSTR lpServiceName, LPHANDLER_FUNCTION lpHandlerProc);
+//C        SERVICE_STATUS_HANDLE RegisterServiceCtrlHandlerW(LPCWSTR lpServiceName,LPHANDLER_FUNCTION lpHandlerProc);
+SERVICE_STATUS_HANDLE  RegisterServiceCtrlHandlerW(LPCWSTR lpServiceName, LPHANDLER_FUNCTION lpHandlerProc);
+//C        SERVICE_STATUS_HANDLE RegisterServiceCtrlHandlerExA(LPCSTR lpServiceName,LPHANDLER_FUNCTION_EX lpHandlerProc,LPVOID lpContext);
+SERVICE_STATUS_HANDLE  RegisterServiceCtrlHandlerExA(LPCSTR lpServiceName, LPHANDLER_FUNCTION_EX lpHandlerProc, LPVOID lpContext);
+//C        SERVICE_STATUS_HANDLE RegisterServiceCtrlHandlerExW(LPCWSTR lpServiceName,LPHANDLER_FUNCTION_EX lpHandlerProc,LPVOID lpContext);
+SERVICE_STATUS_HANDLE  RegisterServiceCtrlHandlerExW(LPCWSTR lpServiceName, LPHANDLER_FUNCTION_EX lpHandlerProc, LPVOID lpContext);
+//C        WINBOOL SetServiceObjectSecurity(SC_HANDLE hService,SECURITY_INFORMATION dwSecurityInformation,PSECURITY_DESCRIPTOR lpSecurityDescriptor);
+WINBOOL  SetServiceObjectSecurity(SC_HANDLE hService, SECURITY_INFORMATION dwSecurityInformation, PSECURITY_DESCRIPTOR lpSecurityDescriptor);
+//C        WINBOOL SetServiceStatus(SERVICE_STATUS_HANDLE hServiceStatus,LPSERVICE_STATUS lpServiceStatus);
+WINBOOL  SetServiceStatus(SERVICE_STATUS_HANDLE hServiceStatus, LPSERVICE_STATUS lpServiceStatus);
+//C        WINBOOL StartServiceCtrlDispatcherA(const SERVICE_TABLE_ENTRYA *lpServiceStartTable);
+WINBOOL  StartServiceCtrlDispatcherA(SERVICE_TABLE_ENTRYA *lpServiceStartTable);
+//C        WINBOOL StartServiceCtrlDispatcherW(const SERVICE_TABLE_ENTRYW *lpServiceStartTable);
+WINBOOL  StartServiceCtrlDispatcherW(SERVICE_TABLE_ENTRYW *lpServiceStartTable);
+//C        WINBOOL StartServiceA(SC_HANDLE hService,DWORD dwNumServiceArgs,LPCSTR *lpServiceArgVectors);
+WINBOOL  StartServiceA(SC_HANDLE hService, DWORD dwNumServiceArgs, LPCSTR *lpServiceArgVectors);
+//C        WINBOOL StartServiceW(SC_HANDLE hService,DWORD dwNumServiceArgs,LPCWSTR *lpServiceArgVectors);
+WINBOOL  StartServiceW(SC_HANDLE hService, DWORD dwNumServiceArgs, LPCWSTR *lpServiceArgVectors);
+//C        WINBOOL UnlockServiceDatabase(SC_LOCK ScLock);
+WINBOOL  UnlockServiceDatabase(SC_LOCK ScLock);
+//C     typedef struct _MODEMDEVCAPS {
+//C       DWORD dwActualSize;
+//C       DWORD dwRequiredSize;
+//C       DWORD dwDevSpecificOffset;
+//C       DWORD dwDevSpecificSize;
+//C       DWORD dwModemProviderVersion;
+//C       DWORD dwModemManufacturerOffset;
+//C       DWORD dwModemManufacturerSize;
+//C       DWORD dwModemModelOffset;
+//C       DWORD dwModemModelSize;
+//C       DWORD dwModemVersionOffset;
+//C       DWORD dwModemVersionSize;
+//C       DWORD dwDialOptions;
+//C       DWORD dwCallSetupFailTimer;
+//C       DWORD dwInactivityTimeout;
+//C       DWORD dwSpeakerVolume;
+//C       DWORD dwSpeakerMode;
+//C       DWORD dwModemOptions;
+//C       DWORD dwMaxDTERate;
+//C       DWORD dwMaxDCERate;
+//C       BYTE abVariablePortion[1];
+//C     } MODEMDEVCAPS,*PMODEMDEVCAPS,*LPMODEMDEVCAPS;
+struct _MODEMDEVCAPS
+{
+    DWORD dwActualSize;
+    DWORD dwRequiredSize;
+    DWORD dwDevSpecificOffset;
+    DWORD dwDevSpecificSize;
+    DWORD dwModemProviderVersion;
+    DWORD dwModemManufacturerOffset;
+    DWORD dwModemManufacturerSize;
+    DWORD dwModemModelOffset;
+    DWORD dwModemModelSize;
+    DWORD dwModemVersionOffset;
+    DWORD dwModemVersionSize;
+    DWORD dwDialOptions;
+    DWORD dwCallSetupFailTimer;
+    DWORD dwInactivityTimeout;
+    DWORD dwSpeakerVolume;
+    DWORD dwSpeakerMode;
+    DWORD dwModemOptions;
+    DWORD dwMaxDTERate;
+    DWORD dwMaxDCERate;
+    BYTE [1]abVariablePortion;
+}
+alias _MODEMDEVCAPS MODEMDEVCAPS;
+alias _MODEMDEVCAPS *PMODEMDEVCAPS;
+alias _MODEMDEVCAPS *LPMODEMDEVCAPS;
+//C     typedef struct _MODEMSETTINGS {
+//C       DWORD dwActualSize;
+//C       DWORD dwRequiredSize;
+//C       DWORD dwDevSpecificOffset;
+//C       DWORD dwDevSpecificSize;
+//C       DWORD dwCallSetupFailTimer;
+//C       DWORD dwInactivityTimeout;
+//C       DWORD dwSpeakerVolume;
+//C       DWORD dwSpeakerMode;
+//C       DWORD dwPreferredModemOptions;
+//C       DWORD dwNegotiatedModemOptions;
+//C       DWORD dwNegotiatedDCERate;
+//C       BYTE abVariablePortion [1];
+//C     } MODEMSETTINGS,*PMODEMSETTINGS,*LPMODEMSETTINGS;
+struct _MODEMSETTINGS
+{
+    DWORD dwActualSize;
+    DWORD dwRequiredSize;
+    DWORD dwDevSpecificOffset;
+    DWORD dwDevSpecificSize;
+    DWORD dwCallSetupFailTimer;
+    DWORD dwInactivityTimeout;
+    DWORD dwSpeakerVolume;
+    DWORD dwSpeakerMode;
+    DWORD dwPreferredModemOptions;
+    DWORD dwNegotiatedModemOptions;
+    DWORD dwNegotiatedDCERate;
+    BYTE [1]abVariablePortion;
+}
+alias _MODEMSETTINGS MODEMSETTINGS;
+alias _MODEMSETTINGS *PMODEMSETTINGS;
+alias _MODEMSETTINGS *LPMODEMSETTINGS;
+//C       struct HIMC__ { int unused; }; typedef struct HIMC__ *HIMC;
+struct HIMC__
+{
+    int unused;
+}
+alias HIMC__ *HIMC;
+//C       struct HIMCC__ { int unused; }; typedef struct HIMCC__ *HIMCC;
+struct HIMCC__
+{
+    int unused;
+}
+alias HIMCC__ *HIMCC;
+//C       typedef HKL *LPHKL;
+alias HKL *LPHKL;
+//C       typedef struct tagCOMPOSITIONFORM {
+//C         DWORD dwStyle;
+//C         POINT ptCurrentPos;
+//C         RECT rcArea;
+//C       } COMPOSITIONFORM,*PCOMPOSITIONFORM,*NPCOMPOSITIONFORM,*LPCOMPOSITIONFORM;
+struct tagCOMPOSITIONFORM
+{
+    DWORD dwStyle;
+    POINT ptCurrentPos;
+    RECT rcArea;
+}
+alias tagCOMPOSITIONFORM COMPOSITIONFORM;
+alias tagCOMPOSITIONFORM *PCOMPOSITIONFORM;
+alias tagCOMPOSITIONFORM *NPCOMPOSITIONFORM;
+alias tagCOMPOSITIONFORM *LPCOMPOSITIONFORM;
+//C       typedef struct tagCANDIDATEFORM {
+//C         DWORD dwIndex;
+//C         DWORD dwStyle;
+//C         POINT ptCurrentPos;
+//C         RECT rcArea;
+//C       } CANDIDATEFORM,*PCANDIDATEFORM,*NPCANDIDATEFORM,*LPCANDIDATEFORM;
+struct tagCANDIDATEFORM
+{
+    DWORD dwIndex;
+    DWORD dwStyle;
+    POINT ptCurrentPos;
+    RECT rcArea;
+}
+alias tagCANDIDATEFORM CANDIDATEFORM;
+alias tagCANDIDATEFORM *PCANDIDATEFORM;
+alias tagCANDIDATEFORM *NPCANDIDATEFORM;
+alias tagCANDIDATEFORM *LPCANDIDATEFORM;
+//C       typedef struct tagCANDIDATELIST {
+//C         DWORD dwSize;
+//C         DWORD dwStyle;
+//C         DWORD dwCount;
+//C         DWORD dwSelection;
+//C         DWORD dwPageStart;
+//C         DWORD dwPageSize;
+//C         DWORD dwOffset[1];
+//C       } CANDIDATELIST,*PCANDIDATELIST,*NPCANDIDATELIST,*LPCANDIDATELIST;
+struct tagCANDIDATELIST
+{
+    DWORD dwSize;
+    DWORD dwStyle;
+    DWORD dwCount;
+    DWORD dwSelection;
+    DWORD dwPageStart;
+    DWORD dwPageSize;
+    DWORD [1]dwOffset;
+}
+alias tagCANDIDATELIST CANDIDATELIST;
+alias tagCANDIDATELIST *PCANDIDATELIST;
+alias tagCANDIDATELIST *NPCANDIDATELIST;
+alias tagCANDIDATELIST *LPCANDIDATELIST;
+//C       typedef struct tagREGISTERWORDA {
+//C         LPSTR lpReading;
+//C         LPSTR lpWord;
+//C       } REGISTERWORDA,*PREGISTERWORDA,*NPREGISTERWORDA,*LPREGISTERWORDA;
+struct tagREGISTERWORDA
+{
+    LPSTR lpReading;
+    LPSTR lpWord;
+}
+alias tagREGISTERWORDA REGISTERWORDA;
+alias tagREGISTERWORDA *PREGISTERWORDA;
+alias tagREGISTERWORDA *NPREGISTERWORDA;
+alias tagREGISTERWORDA *LPREGISTERWORDA;
+//C       typedef struct tagREGISTERWORDW {
+//C         LPWSTR lpReading;
+//C         LPWSTR lpWord;
+//C       } REGISTERWORDW,*PREGISTERWORDW,*NPREGISTERWORDW,*LPREGISTERWORDW;
+struct tagREGISTERWORDW
+{
+    LPWSTR lpReading;
+    LPWSTR lpWord;
+}
+alias tagREGISTERWORDW REGISTERWORDW;
+alias tagREGISTERWORDW *PREGISTERWORDW;
+alias tagREGISTERWORDW *NPREGISTERWORDW;
+alias tagREGISTERWORDW *LPREGISTERWORDW;
+//C       typedef REGISTERWORDA REGISTERWORD;
+alias REGISTERWORDA REGISTERWORD;
+//C       typedef PREGISTERWORDA PREGISTERWORD;
+alias PREGISTERWORDA PREGISTERWORD;
+//C       typedef NPREGISTERWORDA NPREGISTERWORD;
+alias NPREGISTERWORDA NPREGISTERWORD;
+//C       typedef LPREGISTERWORDA LPREGISTERWORD;
+alias LPREGISTERWORDA LPREGISTERWORD;
+//C       typedef struct tagRECONVERTSTRING {
+//C         DWORD dwSize;
+//C         DWORD dwVersion;
+//C         DWORD dwStrLen;
+//C         DWORD dwStrOffset;
+//C         DWORD dwCompStrLen;
+//C         DWORD dwCompStrOffset;
+//C         DWORD dwTargetStrLen;
+//C         DWORD dwTargetStrOffset;
+//C       } RECONVERTSTRING,*PRECONVERTSTRING,*NPRECONVERTSTRING,*LPRECONVERTSTRING;
+struct tagRECONVERTSTRING
+{
+    DWORD dwSize;
+    DWORD dwVersion;
+    DWORD dwStrLen;
+    DWORD dwStrOffset;
+    DWORD dwCompStrLen;
+    DWORD dwCompStrOffset;
+    DWORD dwTargetStrLen;
+    DWORD dwTargetStrOffset;
+}
+alias tagRECONVERTSTRING RECONVERTSTRING;
+alias tagRECONVERTSTRING *PRECONVERTSTRING;
+alias tagRECONVERTSTRING *NPRECONVERTSTRING;
+alias tagRECONVERTSTRING *LPRECONVERTSTRING;
+//C       typedef struct tagSTYLEBUFA {
+//C         DWORD dwStyle;
+//C         CHAR szDescription[32];
+//C       } STYLEBUFA,*PSTYLEBUFA,*NPSTYLEBUFA,*LPSTYLEBUFA;
+struct tagSTYLEBUFA
+{
+    DWORD dwStyle;
+    CHAR [32]szDescription;
+}
+alias tagSTYLEBUFA STYLEBUFA;
+alias tagSTYLEBUFA *PSTYLEBUFA;
+alias tagSTYLEBUFA *NPSTYLEBUFA;
+alias tagSTYLEBUFA *LPSTYLEBUFA;
+//C       typedef struct tagSTYLEBUFW {
+//C         DWORD dwStyle;
+//C         WCHAR szDescription[32];
+//C       } STYLEBUFW,*PSTYLEBUFW,*NPSTYLEBUFW,*LPSTYLEBUFW;
+struct tagSTYLEBUFW
+{
+    DWORD dwStyle;
+    WCHAR [32]szDescription;
+}
+alias tagSTYLEBUFW STYLEBUFW;
+alias tagSTYLEBUFW *PSTYLEBUFW;
+alias tagSTYLEBUFW *NPSTYLEBUFW;
+alias tagSTYLEBUFW *LPSTYLEBUFW;
+//C       typedef STYLEBUFA STYLEBUF;
+alias STYLEBUFA STYLEBUF;
+//C       typedef PSTYLEBUFA PSTYLEBUF;
+alias PSTYLEBUFA PSTYLEBUF;
+//C       typedef NPSTYLEBUFA NPSTYLEBUF;
+alias NPSTYLEBUFA NPSTYLEBUF;
+//C       typedef LPSTYLEBUFA LPSTYLEBUF;
+alias LPSTYLEBUFA LPSTYLEBUF;
+//C       typedef struct tagIMEMENUITEMINFOA {
+//C         UINT cbSize;
+//C         UINT fType;
+//C         UINT fState;
+//C         UINT wID;
+//C         HBITMAP hbmpChecked;
+//C         HBITMAP hbmpUnchecked;
+//C         DWORD dwItemData;
+//C         CHAR szString[80];
+//C         HBITMAP hbmpItem;
+//C       } IMEMENUITEMINFOA,*PIMEMENUITEMINFOA,*NPIMEMENUITEMINFOA,*LPIMEMENUITEMINFOA;
+struct tagIMEMENUITEMINFOA
+{
+    UINT cbSize;
+    UINT fType;
+    UINT fState;
+    UINT wID;
+    HBITMAP hbmpChecked;
+    HBITMAP hbmpUnchecked;
+    DWORD dwItemData;
+    CHAR [80]szString;
+    HBITMAP hbmpItem;
+}
+alias tagIMEMENUITEMINFOA IMEMENUITEMINFOA;
+alias tagIMEMENUITEMINFOA *PIMEMENUITEMINFOA;
+alias tagIMEMENUITEMINFOA *NPIMEMENUITEMINFOA;
+alias tagIMEMENUITEMINFOA *LPIMEMENUITEMINFOA;
+//C       typedef struct tagIMEMENUITEMINFOW {
+//C         UINT cbSize;
+//C         UINT fType;
+//C         UINT fState;
+//C         UINT wID;
+//C         HBITMAP hbmpChecked;
+//C         HBITMAP hbmpUnchecked;
+//C         DWORD dwItemData;
+//C         WCHAR szString[80];
+//C         HBITMAP hbmpItem;
+//C       } IMEMENUITEMINFOW,*PIMEMENUITEMINFOW,*NPIMEMENUITEMINFOW,*LPIMEMENUITEMINFOW;
+struct tagIMEMENUITEMINFOW
+{
+    UINT cbSize;
+    UINT fType;
+    UINT fState;
+    UINT wID;
+    HBITMAP hbmpChecked;
+    HBITMAP hbmpUnchecked;
+    DWORD dwItemData;
+    WCHAR [80]szString;
+    HBITMAP hbmpItem;
+}
+alias tagIMEMENUITEMINFOW IMEMENUITEMINFOW;
+alias tagIMEMENUITEMINFOW *PIMEMENUITEMINFOW;
+alias tagIMEMENUITEMINFOW *NPIMEMENUITEMINFOW;
+alias tagIMEMENUITEMINFOW *LPIMEMENUITEMINFOW;
+//C       typedef IMEMENUITEMINFOA IMEMENUITEMINFO;
+alias IMEMENUITEMINFOA IMEMENUITEMINFO;
+//C       typedef PIMEMENUITEMINFOA PIMEMENUITEMINFO;
+alias PIMEMENUITEMINFOA PIMEMENUITEMINFO;
+//C       typedef NPIMEMENUITEMINFOA NPIMEMENUITEMINFO;
+alias NPIMEMENUITEMINFOA NPIMEMENUITEMINFO;
+//C       typedef LPIMEMENUITEMINFOA LPIMEMENUITEMINFO;
+alias LPIMEMENUITEMINFOA LPIMEMENUITEMINFO;
+//C       typedef struct tagIMECHARPOSITION {
+//C         DWORD dwSize;
+//C         DWORD dwCharPos;
+//C         POINT pt;
+//C         UINT cLineHeight;
+//C         RECT rcDocument;
+//C       } IMECHARPOSITION,*PIMECHARPOSITION,*NPIMECHARPOSITION,*LPIMECHARPOSITION;
+struct tagIMECHARPOSITION
+{
+    DWORD dwSize;
+    DWORD dwCharPos;
+    POINT pt;
+    UINT cLineHeight;
+    RECT rcDocument;
+}
+alias tagIMECHARPOSITION IMECHARPOSITION;
+alias tagIMECHARPOSITION *PIMECHARPOSITION;
+alias tagIMECHARPOSITION *NPIMECHARPOSITION;
+alias tagIMECHARPOSITION *LPIMECHARPOSITION;
+//C       typedef WINBOOL ( *IMCENUMPROC)(HIMC,LPARAM);
+alias WINBOOL  function(HIMC , LPARAM )IMCENUMPROC;
+//C       HKL ImmInstallIMEA(LPCSTR lpszIMEFileName,LPCSTR lpszLayoutText);
+HKL  ImmInstallIMEA(LPCSTR lpszIMEFileName, LPCSTR lpszLayoutText);
+//C       HKL ImmInstallIMEW(LPCWSTR lpszIMEFileName,LPCWSTR lpszLayoutText);
+HKL  ImmInstallIMEW(LPCWSTR lpszIMEFileName, LPCWSTR lpszLayoutText);
+//C       HWND ImmGetDefaultIMEWnd(HWND);
+HWND  ImmGetDefaultIMEWnd(HWND );
+//C       UINT ImmGetDescriptionA(HKL,LPSTR,UINT uBufLen);
+UINT  ImmGetDescriptionA(HKL , LPSTR , UINT uBufLen);
+//C       UINT ImmGetDescriptionW(HKL,LPWSTR,UINT uBufLen);
+UINT  ImmGetDescriptionW(HKL , LPWSTR , UINT uBufLen);
+//C       UINT ImmGetIMEFileNameA(HKL,LPSTR,UINT uBufLen);
+UINT  ImmGetIMEFileNameA(HKL , LPSTR , UINT uBufLen);
+//C       UINT ImmGetIMEFileNameW(HKL,LPWSTR,UINT uBufLen);
+UINT  ImmGetIMEFileNameW(HKL , LPWSTR , UINT uBufLen);
+//C       DWORD ImmGetProperty(HKL,DWORD);
+DWORD  ImmGetProperty(HKL , DWORD );
+//C       WINBOOL ImmIsIME();
+WINBOOL  ImmIsIME(HKL );
+//C       WINBOOL ImmSimulateHotKey(HWND,DWORD);
+WINBOOL  ImmSimulateHotKey(HWND , DWORD );
+//C       HIMC ImmCreateContext(void);
+HIMC  ImmCreateContext();
+//C       WINBOOL ImmDestroyContext(HIMC);
+WINBOOL  ImmDestroyContext(HIMC );
+//C       HIMC ImmGetContext(HWND);
+HIMC  ImmGetContext(HWND );
+//C       WINBOOL ImmReleaseContext(HWND,HIMC);
+WINBOOL  ImmReleaseContext(HWND , HIMC );
+//C       HIMC ImmAssociateContext(HWND,HIMC);
+HIMC  ImmAssociateContext(HWND , HIMC );
+//C       WINBOOL ImmAssociateContextEx(HWND,HIMC,DWORD);
+WINBOOL  ImmAssociateContextEx(HWND , HIMC , DWORD );
+//C       LONG ImmGetCompositionStringA(HIMC,DWORD,LPVOID,DWORD);
+LONG  ImmGetCompositionStringA(HIMC , DWORD , LPVOID , DWORD );
+//C       LONG ImmGetCompositionStringW(HIMC,DWORD,LPVOID,DWORD);
+LONG  ImmGetCompositionStringW(HIMC , DWORD , LPVOID , DWORD );
+//C       WINBOOL ImmSetCompositionStringA(HIMC,DWORD dwIndex,LPVOID lpComp,DWORD,LPVOID lpRead,DWORD);
+WINBOOL  ImmSetCompositionStringA(HIMC , DWORD dwIndex, LPVOID lpComp, DWORD , LPVOID lpRead, DWORD );
+//C       WINBOOL ImmSetCompositionStringW(HIMC,DWORD dwIndex,LPVOID lpComp,DWORD,LPVOID lpRead,DWORD);
+WINBOOL  ImmSetCompositionStringW(HIMC , DWORD dwIndex, LPVOID lpComp, DWORD , LPVOID lpRead, DWORD );
+//C       DWORD ImmGetCandidateListCountA(HIMC,LPDWORD lpdwListCount);
+DWORD  ImmGetCandidateListCountA(HIMC , LPDWORD lpdwListCount);
+//C       DWORD ImmGetCandidateListCountW(HIMC,LPDWORD lpdwListCount);
+DWORD  ImmGetCandidateListCountW(HIMC , LPDWORD lpdwListCount);
+//C       DWORD ImmGetCandidateListA(HIMC,DWORD deIndex,LPCANDIDATELIST,DWORD dwBufLen);
+DWORD  ImmGetCandidateListA(HIMC , DWORD deIndex, LPCANDIDATELIST , DWORD dwBufLen);
+//C       DWORD ImmGetCandidateListW(HIMC,DWORD deIndex,LPCANDIDATELIST,DWORD dwBufLen);
+DWORD  ImmGetCandidateListW(HIMC , DWORD deIndex, LPCANDIDATELIST , DWORD dwBufLen);
+//C       DWORD ImmGetGuideLineA(HIMC,DWORD dwIndex,LPSTR,DWORD dwBufLen);
+DWORD  ImmGetGuideLineA(HIMC , DWORD dwIndex, LPSTR , DWORD dwBufLen);
+//C       DWORD ImmGetGuideLineW(HIMC,DWORD dwIndex,LPWSTR,DWORD dwBufLen);
+DWORD  ImmGetGuideLineW(HIMC , DWORD dwIndex, LPWSTR , DWORD dwBufLen);
+//C       WINBOOL ImmGetConversionStatus(HIMC,LPDWORD,LPDWORD);
+WINBOOL  ImmGetConversionStatus(HIMC , LPDWORD , LPDWORD );
+//C       WINBOOL ImmSetConversionStatus(HIMC,DWORD,DWORD);
+WINBOOL  ImmSetConversionStatus(HIMC , DWORD , DWORD );
+//C       WINBOOL ImmGetOpenStatus(HIMC);
+WINBOOL  ImmGetOpenStatus(HIMC );
+//C       WINBOOL ImmSetOpenStatus(HIMC,WINBOOL);
+WINBOOL  ImmSetOpenStatus(HIMC , WINBOOL );
+//C       WINBOOL ImmGetCompositionFontA(HIMC,LPLOGFONTA);
+WINBOOL  ImmGetCompositionFontA(HIMC , LPLOGFONTA );
+//C       WINBOOL ImmGetCompositionFontW(HIMC,LPLOGFONTW);
+WINBOOL  ImmGetCompositionFontW(HIMC , LPLOGFONTW );
+//C       WINBOOL ImmSetCompositionFontA(HIMC,LPLOGFONTA);
+WINBOOL  ImmSetCompositionFontA(HIMC , LPLOGFONTA );
+//C       WINBOOL ImmSetCompositionFontW(HIMC,LPLOGFONTW);
+WINBOOL  ImmSetCompositionFontW(HIMC , LPLOGFONTW );
+//C       typedef int ( *REGISTERWORDENUMPROCA)(LPCSTR,DWORD,LPCSTR,LPVOID);
+alias int  function(LPCSTR , DWORD , LPCSTR , LPVOID )REGISTERWORDENUMPROCA;
+//C       typedef int ( *REGISTERWORDENUMPROCW)(LPCWSTR,DWORD,LPCWSTR,LPVOID);
+alias int  function(LPCWSTR , DWORD , LPCWSTR , LPVOID )REGISTERWORDENUMPROCW;
+//C       WINBOOL ImmConfigureIMEA(HKL,HWND,DWORD,LPVOID);
+WINBOOL  ImmConfigureIMEA(HKL , HWND , DWORD , LPVOID );
+//C       WINBOOL ImmConfigureIMEW(HKL,HWND,DWORD,LPVOID);
+WINBOOL  ImmConfigureIMEW(HKL , HWND , DWORD , LPVOID );
+//C       LRESULT ImmEscapeA(HKL,HIMC,UINT,LPVOID);
+LRESULT  ImmEscapeA(HKL , HIMC , UINT , LPVOID );
+//C       LRESULT ImmEscapeW(HKL,HIMC,UINT,LPVOID);
+LRESULT  ImmEscapeW(HKL , HIMC , UINT , LPVOID );
+//C       DWORD ImmGetConversionListA(HKL,HIMC,LPCSTR,LPCANDIDATELIST,DWORD dwBufLen,UINT uFlag);
+DWORD  ImmGetConversionListA(HKL , HIMC , LPCSTR , LPCANDIDATELIST , DWORD dwBufLen, UINT uFlag);
+//C       DWORD ImmGetConversionListW(HKL,HIMC,LPCWSTR,LPCANDIDATELIST,DWORD dwBufLen,UINT uFlag);
+DWORD  ImmGetConversionListW(HKL , HIMC , LPCWSTR , LPCANDIDATELIST , DWORD dwBufLen, UINT uFlag);
+//C       WINBOOL ImmNotifyIME(HIMC,DWORD dwAction,DWORD dwIndex,DWORD dwValue);
+WINBOOL  ImmNotifyIME(HIMC , DWORD dwAction, DWORD dwIndex, DWORD dwValue);
+//C       WINBOOL ImmGetStatusWindowPos(HIMC,LPPOINT);
+WINBOOL  ImmGetStatusWindowPos(HIMC , LPPOINT );
+//C       WINBOOL ImmSetStatusWindowPos(HIMC,LPPOINT);
+WINBOOL  ImmSetStatusWindowPos(HIMC , LPPOINT );
+//C       WINBOOL ImmGetCompositionWindow(HIMC,LPCOMPOSITIONFORM);
+WINBOOL  ImmGetCompositionWindow(HIMC , LPCOMPOSITIONFORM );
+//C       WINBOOL ImmSetCompositionWindow(HIMC,LPCOMPOSITIONFORM);
+WINBOOL  ImmSetCompositionWindow(HIMC , LPCOMPOSITIONFORM );
+//C       WINBOOL ImmGetCandidateWindow(HIMC,DWORD,LPCANDIDATEFORM);
+WINBOOL  ImmGetCandidateWindow(HIMC , DWORD , LPCANDIDATEFORM );
+//C       WINBOOL ImmSetCandidateWindow(HIMC,LPCANDIDATEFORM);
+WINBOOL  ImmSetCandidateWindow(HIMC , LPCANDIDATEFORM );
+//C       WINBOOL ImmIsUIMessageA(HWND,UINT,WPARAM,LPARAM);
+WINBOOL  ImmIsUIMessageA(HWND , UINT , WPARAM , LPARAM );
+//C       WINBOOL ImmIsUIMessageW(HWND,UINT,WPARAM,LPARAM);
+WINBOOL  ImmIsUIMessageW(HWND , UINT , WPARAM , LPARAM );
+//C       UINT ImmGetVirtualKey(HWND);
+UINT  ImmGetVirtualKey(HWND );
+//C       WINBOOL ImmRegisterWordA(HKL,LPCSTR lpszReading,DWORD,LPCSTR lpszRegister);
+WINBOOL  ImmRegisterWordA(HKL , LPCSTR lpszReading, DWORD , LPCSTR lpszRegister);
+//C       WINBOOL ImmRegisterWordW(HKL,LPCWSTR lpszReading,DWORD,LPCWSTR lpszRegister);
+WINBOOL  ImmRegisterWordW(HKL , LPCWSTR lpszReading, DWORD , LPCWSTR lpszRegister);
+//C       WINBOOL ImmUnregisterWordA(HKL,LPCSTR lpszReading,DWORD,LPCSTR lpszUnregister);
+WINBOOL  ImmUnregisterWordA(HKL , LPCSTR lpszReading, DWORD , LPCSTR lpszUnregister);
+//C       WINBOOL ImmUnregisterWordW(HKL,LPCWSTR lpszReading,DWORD,LPCWSTR lpszUnregister);
+WINBOOL  ImmUnregisterWordW(HKL , LPCWSTR lpszReading, DWORD , LPCWSTR lpszUnregister);
+//C       UINT ImmGetRegisterWordStyleA(HKL,UINT nItem,LPSTYLEBUFA);
+UINT  ImmGetRegisterWordStyleA(HKL , UINT nItem, LPSTYLEBUFA );
+//C       UINT ImmGetRegisterWordStyleW(HKL,UINT nItem,LPSTYLEBUFW);
+UINT  ImmGetRegisterWordStyleW(HKL , UINT nItem, LPSTYLEBUFW );
+//C       UINT ImmEnumRegisterWordA(HKL,REGISTERWORDENUMPROCA,LPCSTR lpszReading,DWORD,LPCSTR lpszRegister,LPVOID);
+UINT  ImmEnumRegisterWordA(HKL , REGISTERWORDENUMPROCA , LPCSTR lpszReading, DWORD , LPCSTR lpszRegister, LPVOID );
+//C       UINT ImmEnumRegisterWordW(HKL,REGISTERWORDENUMPROCW,LPCWSTR lpszReading,DWORD,LPCWSTR lpszRegister,LPVOID);
+UINT  ImmEnumRegisterWordW(HKL , REGISTERWORDENUMPROCW , LPCWSTR lpszReading, DWORD , LPCWSTR lpszRegister, LPVOID );
+//C       WINBOOL ImmDisableIME(DWORD);
+WINBOOL  ImmDisableIME(DWORD );
+//C       WINBOOL ImmEnumInputContext(DWORD idThread,IMCENUMPROC lpfn,LPARAM lParam);
+WINBOOL  ImmEnumInputContext(DWORD idThread, IMCENUMPROC lpfn, LPARAM lParam);
+//C       DWORD ImmGetImeMenuItemsA(HIMC,DWORD,DWORD,LPIMEMENUITEMINFOA,LPIMEMENUITEMINFOA,DWORD);
+DWORD  ImmGetImeMenuItemsA(HIMC , DWORD , DWORD , LPIMEMENUITEMINFOA , LPIMEMENUITEMINFOA , DWORD );
+//C       DWORD ImmGetImeMenuItemsW(HIMC,DWORD,DWORD,LPIMEMENUITEMINFOW,LPIMEMENUITEMINFOW,DWORD);
+DWORD  ImmGetImeMenuItemsW(HIMC , DWORD , DWORD , LPIMEMENUITEMINFOW , LPIMEMENUITEMINFOW , DWORD );
+//C       WINBOOL ImmDisableTextFrameService(DWORD idThread);
+WINBOOL  ImmDisableTextFrameService(DWORD idThread);
 alias IDispatch *LPDISPATCH;
 alias ITypeComp *LPTYPECOMP;
 alias ITypeInfo *LPTYPEINFO;
@@ -48106,7 +62692,6 @@ const CO_E_ACTIVATIONFAILED_EVENTLOGGED = 0x8004E022;
 const PAN_SERIF_ROUNDED = 15;
 const EMR_SELECTCLIPPATH = 67;
 const MDMVOL_MEDIUM = 0x00000001;
-const __MINGW64_STRINGIFY(x) = ;
 const _WIN32_IE_IE60SP1 = 0x0601;
 const _WIN32_IE_IE60SP2 = 0x0603;
 const AF_CHAOS = 5;
@@ -48725,7 +63310,6 @@ const SEC_E_ENCRYPT_FAILURE = 0x80090329;
 const ERROR_LOGIN_WKSTA_RESTRICTION = 1240;
 const VFT_VXD = 0x00000005;
 const CRYPT_GET_URL_FROM_PROPERTY = 0x1;
-const __MINGW_MSC_PREREQ(major,minor) = 0;
 const HCF_HIGHCONTRASTON = 0x00000001;
 const OSS_CANT_CLOSE_TRACE_FILE = 0x8009302E;
 const OF_SHARE_DENY_WRITE = 0x20;
@@ -48918,7 +63502,6 @@ const ERROR_DS_DRA_RPC_CANCELLED = 8455;
 const CRL_REASON_KEY_COMPROMISE = 1;
 const VK_OEM_NEC_EQUAL = 0x92;
 const MF_MOUSESELECT = 0x00008000;
-const FD_CLR(fd,set) = ;
 const EM_SCROLL = 0x00B5;
 const CBN_SELENDCANCEL = 10;
 const IMAGE_REL_ARM_SECREL = 0x000F;
@@ -49179,7 +63762,6 @@ const OBJ_DC = 3;
 const CERT_RDN_VIDEOTEX_STRING = 6;
 const SS_NOPREFIX = 0x00000080;
 const XST_ADVDATAACKRCVD = 16;
-const ARRAYSIZE(A) = ;
 const CMSG_HASHED_DATA_V2 = 2;
 const RESOURCEDISPLAYTYPE_FILE = 0x00000004;
 const CERT_ID_ISSUER_SERIAL_NUMBER = 1;
@@ -49660,7 +64242,6 @@ const IMAGE_SYM_SECTION_MAX = 0xFEFF;
 const C3_ALPHA = 0x8000;
 const IOCTL_SMARTCARD_CONFISCATE = 4;
 const BS_AUTORADIOBUTTON = 0x00000009;
-const HRESULT_FROM_WIN32(x) = ;
 const IMAGE_REL_SH3_ABSOLUTE = 0x0000;
 const MCI_SEQ_SET_MASTER = 0x00080000;
 const CERT_STORE_BACKUP_RESTORE_FLAG = 0x800;
@@ -51421,7 +66002,6 @@ const DNS_ERROR_NO_PACKET = 9503;
 const ERROR_CTX_NOT_CONSOLE = 7038;
 const IMAGE_REL_PPC_REFLO = 0x0011;
 const WS_EX_MDICHILD = 0x00000040;
-const timerclear(tvp) = (tvp)->tv_sec = (tvp)->tv_usec = 0;
 const ERROR_PRINTER_DRIVER_ALREADY_INSTALLED = 1795;
 const SETKERNTRACK = 770;
 const ERROR_SERVER_NOT_DISABLED = 1342;
@@ -51654,7 +66234,6 @@ const ERROR_CLUSTER_NODE_NOT_FOUND = 5042;
 const ERROR_NO_PROMOTION_ACTIVE = 8222;
 const MDM_ANALOG_V34 = 0x2;
 const RTL_VRF_FLG_FIRST_CHANCE_EXCEPTION_CHECKS = 0x00001000;
-const RTL_NUMBER_OF(A) = ;
 const OEM_CHARSET = 255;
 const ERROR_CANCEL_VIOLATION = 173;
 const APPLICATION_VERIFIER_COM_API_IN_DLLMAIN = 0x0401;
@@ -54963,7 +69542,6 @@ const META_SETVIEWPORTORG = 0x020D;
 const ERROR_CLUSTER_SYSTEM_CONFIG_CHANGED = 5077;
 const PRINTER_ATTRIBUTE_DEFAULT = 0x00000004;
 const COMADMIN_E_BADREGISTRYPROGID = 0x80110412;
-const RTL_NUMBER_OF_V2(A) = ;
 const ERROR_INVALID_PROFILE = 2011;
 const CTRY_NETHERLANDS = 31;
 const CTRY_SINGAPORE = 65;
@@ -56529,7 +71107,6 @@ const WINSTA_WRITEATTRIBUTES = 0x0010;
 const HIST_NO_OF_BUCKETS = 24;
 const APPCOMMAND_MEDIA_FAST_FORWARD = 49;
 const SUBLANG_NEPALI_NEPAL = 0x01;
-const _ARRAYSIZE(A) = ;
 const STGM_CONVERT = 0x00020000;
 const SEARCH_PRI_NO_SEQ = 0x5;
 const ERROR_PARTIAL_COPY = 299;
@@ -56599,7 +71176,6 @@ const DMPAPER_PENV_6 = 101;
 const ERROR_INVALID_STACKSEG = 189;
 const RPC_C_HTTP_FLAG_IGNORE_CERT_CN_INVALID = 8;
 const ODT_MENU = 1;
-const FD_SET(fd,set) = ;
 const OUT_STRING_PRECIS = 1;
 const CRYPT_MODE_CBC = 1;
 const DNS_ERROR_DP_ALREADY_EXISTS = 9902;
