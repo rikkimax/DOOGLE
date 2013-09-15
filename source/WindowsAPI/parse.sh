@@ -1,4 +1,4 @@
-gcc main.c -E -P > $1
+gcc windows.c -E -P > $1
 
 echo $1 > temp
 sed -i 's/.[a-zA-Z]$//g' temp
@@ -93,19 +93,31 @@ echo 'struct _NDR_PROC_CONTEXT;' >> $1.d
 echo 'struct _PSP;' >> $1.d
 
 cp $1.d $1.temp
-grep -v '(DWORD value) { __bitfield1 = ' $1.temp > $1.d
-cp $1.d $1.temp
-grep -v '__bitfield1 = (__bitfield1' $1.temp > $1.d
-cp $1.d $1.temp
-grep -v '(DWORD value) { ( 0x[a-fA-F0-9]*) | ' $1.temp > $1.d
+cat $1.temp |
+grep -v '(DWORD value) { __bitfield1 = ' |
+grep -v '__bitfield1 = (__bitfield1' |
+grep -v '(DWORD value) { ( 0x[a-fA-F0-9]*) | ' |
+grep -v 'extern const GUID ' |
+grep -v 'extern const IID '> $1.d
 
 gcc main.c -E -P -dM > $1.temp
 cat $1.temp | awk '
 function rindex(str,c) {
   return match(str,"\\" c "[^" c "]*$")? RSTART : 0
 }
+function ltrim(v) { 
+   gsub(/^[ \t]+/, "", v); 
+   return v; 
+} 
+function rtrim(v) { 
+   gsub(/[ \t]+$/, "", v); 
+   return v; 
+} 
+function trim(v) { 
+   return ltrim(rtrim(v)); 
+} 
 
-/^.*#define.* [xA-F><0-9]+$/{
+/^.*#define [a-zA-Z0-9_]+ [xA-F><0-9]+$/{
 $line = substr($0, index($0, "#define"));
 $n = split($line, vals, " ");
 val="";
@@ -125,6 +137,57 @@ end = index($line, ")") - start
 val = substr(line, start, end);
 if (val != "" && index(vals[2], "(") == 0)
 	print "const",vals[2],"=",val";";
-};' >> $1.d
+};
+
+/^.*#define [a-zA-Z0-9_]+ [xA-F><0-9]+L$/{
+$line = substr($0, index($0, "#define"));
+$n = split($line, vals, " ");
+val="";
+for(i=3;i<=$n;i++)
+	val=val" "vals[i];
+if (val != "" && index(vals[2], "(") == 0)
+	print "const", vals[2], "="substr(val, 0, length(val)-1)";";
+for(i in vals)
+	delete vals[i];
+};
+
+/^.* [A-Za-z_0-9]+\([xA-F><0-9]+L\)$/{
+line = substr($0, index($0, "#define"));
+n = split(line, vals, " ");
+start = rindex(line, "(") + 1;
+end = index($line, ")") - start
+val = substr(line, start, end);
+if (val != "" && index(vals[2], "(") == 0)
+	print "const",vals[2],"=",substr(val, 0, length(val)-1)";";
+};
+
+/^.*#define [a-zA-Z0-9_]+ L?".*"$/{
+$line = substr($0, index($0, "#define"));
+$n = split($line, vals, " ");
+val="";
+for(i=3;i<=$n;i++)
+	val=val" "vals[i];
+val = trim(val);
+if (match(val, "^L.*") > 0)
+	val = substr(val, 2);
+if (val != "" && index(vals[2], "(") == 0)
+	print "const", vals[2], "=", val";";
+for(i in vals)
+	delete vals[i];
+};
+
+/^.*#define [a-zA-Z0-9_]+ [a-zA-Z_]+[A-Z][a-zA-Z_0-9+]$/{
+$line = substr($0, index($0, "#define"));
+$n = split($line, vals, " ");
+val="";
+for(i=3;i<=$n;i++)
+	val=val" "vals[i];
+val = trim(val);
+if (val != "" && index(vals[2], "(") == 0)
+	print "static if (__traits(compiles, typeof("val"))) static if (!__traits(isStaticFunction, "val")) static if (__traits(isPOD, typeof("val")))","const", vals[2], "=", val";";
+for(i in vals)
+	delete vals[i];
+};' |
+grep -v "__VERSION__" | grep -v "GUID_DEVINTERFACE_STORAGEPORT" >> $1.d
 
 rm $1.temp
