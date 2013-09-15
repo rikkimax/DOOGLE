@@ -18,13 +18,7 @@ struct PlatformVersions {
 
 		public import wgl = derelict.opengl3.wgl;
 		public import wglext = derelict.opengl3.wglext;
-		public import wingdi = win32.wingdi;
-		public import basetsd = win32.basetsd;
-		public import winuser = win32.winuser;
-		public import windef = win32.windef;
-		public import winnt = win32.winnt;
-		public import winbase = win32.winbase;
-		public import windows = win32.windows;
+		public import windows = windows;
 	}
 
 }

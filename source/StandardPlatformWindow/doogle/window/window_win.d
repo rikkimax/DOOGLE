@@ -46,7 +46,7 @@ version(Windows) {
 				_wndclass.hCursor       = cast(shared)platform.windows.LoadCursorA(null, cast(char*)platform.windows.IDC_ARROW);
 				_wndclass.hbrBackground = cast(shared(platform.windows.HBRUSH))platform.windows.GetStockObject(platform.windows.BLACK_BRUSH);
 				_wndclass.lpszMenuName  = null;
-				_wndclass.lpszClassName = cast(shared)appName.ptr;
+				_wndclass.lpszClassName = cast(shared(ushort*))appName.ptr;
 
 				if(!platform.windows.RegisterClassW(cast(platform.windows.WNDCLASSW*)&_wndclass)) {
 					platform.windows.MessageBoxW(null, "This program requires Windows NT!", appName.ptr, platform.windows.MB_ICONERROR);
@@ -62,7 +62,7 @@ version(Windows) {
 				if (style & WindowStyle.Close) windowStyle |= platform.windows.WS_SYSMENU;
 				if (style & WindowStyle.Resize) windowStyle |= platform.windows.WS_SYSMENU | platform.windows.WS_THICKFRAME | platform.windows.WS_MAXIMIZEBOX;
 
-				_window = cast(shared)platform.windows.CreateWindowW(appName.ptr,      // window class name
+				_window = cast(shared)platform.windows.CreateWindowExW(appName.ptr,      // window class name
 				                     cast(wchar*)title.ptr,  // window caption
 				                     cast(uint)windowStyle,  // window style
 	                                 platform.windows.CW_USEDEFAULT,        // initial x position
@@ -101,7 +101,7 @@ version(Windows) {
 
 				platform.windows.RECT rect;
 
-				platform.windows.GetWindowRect(cast(void*)_window, &rect);
+				platform.windows.GetWindowRect(cast(platform.windows.HWND)_window, &rect);
 				this.x = cast(uint)rect.left;
 				this.y = cast(uint)rect.top;
 
@@ -119,7 +119,7 @@ version(Windows) {
 		~this() {
 			synchronized {
 				if (_isOpen) {
-					platform.windows.DestroyWindow(cast(void*)_window);
+					platform.windows.DestroyWindow(cast(platform.windows.HWND)_window);
 					//platform.windows.UnregisterClass(("DOOGLE_WINDOW" ~ cast(char)_windowId ~ "\0").ptr, platform.windows.GetModuleHandle(null));
 				}
 			}
@@ -171,9 +171,9 @@ version(Windows) {
 
 							ulong windowStyle = platform.windows.WS_POPUP | platform.windows.WS_CLIPCHILDREN | platform.windows.WS_CLIPSIBLINGS;
 
-							platform.windows.ChangeDisplaySettings(&dm, platform.windows.CDS_FULLSCREEN);
-							platform.windows.SetWindowLong(cast(void*)_window, platform.windows.GWL_STYLE, cast(uint)windowStyle);
-							platform.windows.SetWindowLong(cast(void*)_window, platform.windows.GWL_EXSTYLE, platform.windows.WS_EX_APPWINDOW);
+							platform.windows.ChangeDisplaySettingsW(&dm, platform.windows.CDS_FULLSCREEN);
+							platform.windows.SetWindowLongW(cast(void*)_window, platform.windows.GWL_STYLE, cast(uint)windowStyle);
+							platform.windows.SetWindowLongW(cast(void*)_window, platform.windows.GWL_EXSTYLE, platform.windows.WS_EX_APPWINDOW);
 							
 							platform.windows.SetWindowPos(cast(void*)_window, platform.windows.HWND_TOP, 0, 0, _width, _height, platform.windows.SWP_FRAMECHANGED);
 							visible = true;
@@ -192,8 +192,8 @@ version(Windows) {
 							dm.dmBitsPerPel = 32;
 							dm.dmFields = platform.windows.DM_PELSWIDTH | platform.windows.DM_PELSHEIGHT | platform.windows.DM_BITSPERPEL;
 							
-							platform.windows.SetWindowLong(cast(void*)_window, platform.windows.GWL_STYLE, cast(uint)windowStyle);
-							platform.windows.SetWindowPos(cast(void*)_window, platform.windows.HWND_TOP, 0, 0, _width, _height, platform.windows.SWP_FRAMECHANGED);
+							platform.windows.SetWindowLongW(cast(platform.windows.HWND)_window, platform.windows.GWL_STYLE, cast(uint)windowStyle);
+							platform.windows.SetWindowPos(cast(platform.windows.HWND)_window, platform.windows.HWND_TOP, 0, 0, _width, _height, platform.windows.SWP_FRAMECHANGED);
 
 							_style = cast(uint)windowStyle;
 							_windowStyle = style;

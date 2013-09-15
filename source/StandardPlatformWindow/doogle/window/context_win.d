@@ -23,10 +23,10 @@ version(Windows) {
 				platform.wglext.WGL_SAMPLES_ARB, antialias > 1 ? antialias : 0,
 				0
 			];
-			platform.windows.SetPixelFormat(cast(void*)hdc, platform.wingdi.PIXELFORMATDESCRIPTOR.sizeof, cast(platform.wingdi.PIXELFORMATDESCRIPTOR*)pixelAttribs.ptr);
-			_context = cast(shared(void*))platform.wgl.wglCreateContext(cast(void*)hdc);
+			platform.windows.SetPixelFormat(cast(platform.windows.HDC)hdc, platform.windows.PIXELFORMATDESCRIPTOR.sizeof, cast(platform.windows.PIXELFORMATDESCRIPTOR*)pixelAttribs.ptr);
+			_context = cast(shared(platform.windows.HGLRC))platform.wgl.wglCreateContext(cast(platform.windows.HDC)hdc);
 			platform.wgl.wglMakeCurrent(cast(void*)hdc, cast(void*)_context);
-			_hdc = hdc;
+			_hdc = cast(shared(platform.windows.HDC))hdc;
 		}
 
 		~this() {
