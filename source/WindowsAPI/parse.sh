@@ -1,4 +1,4 @@
-gcc windows.c -E -P > $1
+gcc main.c -E -P > $1
 
 echo $1 > temp
 sed -i 's/.[a-zA-Z]$//g' temp
@@ -91,6 +91,10 @@ echo 'struct NDR_ALLOC_ALL_NODES_CONTEXT;' >> $1.d
 echo 'struct NDR_POINTER_QUEUE_STATE;' >> $1.d
 echo 'struct _NDR_PROC_CONTEXT;' >> $1.d
 echo 'struct _PSP;' >> $1.d
+echo 'pure HWND HWND_TOP() {return cast(HWND)0;}' >> $1.d
+echo 'pure WORD LOWORD(T)(T l) {return cast(WORD)((cast(DWORD_PTR)l) & 0xffff);}' >> $1.d
+echo 'pure WORD HIWORD(T)(T l) {return cast(WORD)((cast(DWORD_PTR)l) >> 16);}' >> $1.d
+echo 'pure short GET_WHEEL_DELTA_WPARAM(DWORD wParam) {return cast(short)HIWORD(wParam);}' >> $1.d
 
 cp $1.d $1.temp
 cat $1.temp |
@@ -100,7 +104,8 @@ grep -v '(DWORD value) { ( 0x[a-fA-F0-9]*) | ' |
 grep -v 'extern const GUID ' |
 grep -v 'extern const IID '> $1.d
 
-gcc main.c -E -P -dM > $1.temp
+gcc main.c -E -P -dM > $1.vars
+cp $1.vars $1.temp
 cat $1.temp | awk '
 function rindex(str,c) {
   return match(str,"\\" c "[^" c "]*$")? RSTART : 0
@@ -117,7 +122,7 @@ function trim(v) {
    return ltrim(rtrim(v)); 
 } 
 
-/^.*#define [a-zA-Z0-9_]+ [xA-F><0-9]+$/{
+/^.*#define [a-zA-Z0-9_]+ +-?[xA-F><0-9]+$/{
 $line = substr($0, index($0, "#define"));
 $n = split($line, vals, " ");
 val="";
@@ -129,13 +134,35 @@ for(i in vals)
 	delete vals[i];
 };
 
-/^.* [A-Za-z_0-9]+\([xA-F><0-9]+\)$/{
+/^.* [A-Za-z_0-9]+ *\( *-?[xA-F><0-9]+ *\)$/{
 line = substr($0, index($0, "#define"));
 n = split(line, vals, " ");
 start = rindex(line, "(") + 1;
 end = index($line, ")") - start
 val = substr(line, start, end);
 if (val != "" && index(vals[2], "(") == 0)
+	print "const",vals[2],"=",val";";
+};
+
+/^.*#define [a-zA-Z0-9_]+ *\(int\) *-?[xA-F><0-9]+$/{
+$line = substr($0, index($0, "#define"));
+$n = split($line, vals, " ");
+val="";
+for(i=3;i<=$n;i++)
+	val=val" "vals[i];
+if (val != "" && index(vals[2], "(") == 0)
+	print "const", vals[2], "=" substr(val, 7)";";
+for(i in vals)
+	delete vals[i];
+};
+
+/^ *#define [A-Za-z_0-9]+ *\( *\(int\) *-?[xA-F><0-9]+ *\)$/{
+line = substr($0, index($0, "#define"));
+n = split(line, vals, " ");
+start = rindex(line, "(") + 5;
+end = rindex(line, ")") - start
+val = substr(line, start, end);
+if (val != "")
 	print "const",vals[2],"=",val";";
 };
 
@@ -177,6 +204,19 @@ for(i in vals)
 };
 
 /^.*#define [a-zA-Z0-9_]+ [a-zA-Z_]+[A-Z][a-zA-Z_0-9+]$/{
+$line = substr($0, index($0, "#define"));
+$n = split($line, vals, " ");
+val="";
+for(i=3;i<=$n;i++)
+	val=val" "vals[i];
+val = trim(val);
+if (val != "" && index(vals[2], "(") == 0)
+	print "static if (__traits(compiles, typeof("val"))) static if (!__traits(isStaticFunction, "val")) static if (__traits(isPOD, typeof("val")))","const", vals[2], "=", val";";
+for(i in vals)
+	delete vals[i];
+};
+
+/^ *#define [a-zA-Z][a-zA-Z_0-9]*  *\( *([a-zA-Z][a-zA-Z_0-9]*( *\| *)*)+\)$/{
 $line = substr($0, index($0, "#define"));
 $n = split($line, vals, " ");
 val="";
