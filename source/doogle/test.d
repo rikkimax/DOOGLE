@@ -10,8 +10,8 @@ import doogle.events.oop;
 import std.stdio;
 
 void main() {
-	shared Window window = new shared Window(800, 600, "Window", WindowStyle.Close);
-	shared Window w2 = new shared Window(800, 600, "Window2", WindowStyle.Close);
+	shared Window window = new shared Window(800, 600, "Window"w, WindowStyle.Close);
+	shared Window w2 = new shared Window(800, 600, "Window2"w, WindowStyle.Close);
 	shared Context gl = window.getContext;
 	shared Context gl2 = w2.getContext;
 

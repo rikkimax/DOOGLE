@@ -59,6 +59,13 @@ sed -i "s/module $fileDash;/module $module;/g" $1.d
 
 sed -i 's/lconv \*lconv;/struct lconv_;lconv_ \*lconv;/g' $1.d
 sed -i 's/__lc_time_data \*lc_time_curr;/struct __lc_time_data; __lc_time_data \*lc_time_curr;/g' $1.d
+sed -i 's/alias long INT_PTR;/alias ptrdiff_t INT_PTR;/g' $1.d
+sed -i 's/alias long \*PINT_PTR;/alias ptrdiff_t \*PINT_PTR;/g' $1.d
+sed -i 's/alias ulong UINT_PTR;/alias size_t UINT_PTR;/g' $1.d
+sed -i 's/alias ulong \*PUINT_PTR;/alias size_t \*PUINT_PTR;/g' $1.d
+sed -i 's/alias UINT_PTR WPARAM;/alias uint* WPARAM;/g' $1.d
+sed -i 's/alias LONG_PTR LPARAM;/alias ulong* LPARAM;/g' $1.d
+sed -i 's/alias LONG_PTR LRESULT;/alias ulong* LRESULT;/g' $1.d
 
 sed -i 's/alias IDispatch \*LPDISPATCH;//g' $1.d
 echo 'alias IDispatch *LPDISPATCH;' >> $1.d
@@ -95,6 +102,7 @@ echo 'pure HWND HWND_TOP() {return cast(HWND)0;}' >> $1.d
 echo 'pure WORD LOWORD(T)(T l) {return cast(WORD)((cast(DWORD_PTR)l) & 0xffff);}' >> $1.d
 echo 'pure WORD HIWORD(T)(T l) {return cast(WORD)((cast(DWORD_PTR)l) >> 16);}' >> $1.d
 echo 'pure short GET_WHEEL_DELTA_WPARAM(DWORD wParam) {return cast(short)HIWORD(wParam);}' >> $1.d
+echo 'alias GWLP_USERDATA GWL_USERDATA;' >> $1.d
 
 cp $1.d $1.temp
 cat $1.temp |

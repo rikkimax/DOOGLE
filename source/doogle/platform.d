@@ -13,8 +13,8 @@ struct PlatformVersions {
 		public import glxext = derelict.opengl3.glxext;
 		public import core.sys.posix.sys.time;
 	} else version(Windows) {
-		pragma(lib, "gdi32.lib");
-		pragma(lib, "user32.lib");
+		pragma(lib, "gdi32");
+		pragma(lib, "user32");
 
 		public import wgl = derelict.opengl3.wgl;
 		public import wglext = derelict.opengl3.wglext;

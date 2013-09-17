@@ -37,6 +37,7 @@
 			},
 			"sourcePaths": ["source/StandardPlatformWindow"],
 			
+			"libs-windows": ["user32"],
 			"sourcePaths-windows": ["source/WindowsAPI"],
 			"sourcePaths-posix": ["source/libX11"]
 		},

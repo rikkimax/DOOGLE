@@ -27,29 +27,29 @@ version(Windows) {
 			uint _style;
 		}
 
-		this(uint width = 800, uint height = 600, string title_ = "Window", WindowStyle style = WindowStyle.Close) {
+		this(uint width = 800, uint height = 600, wstring title_ = "Window"w, WindowStyle style = WindowStyle.Close) {
 			synchronized(rwmWindows) {
-				wchar[] title = to!(wchar[])(title_);
-			
+				wchar[] title = to!(wchar[])(title_ ~ 0);
+				
 				static size_t windowCount;
 				_windowId = windowCount;
 				windowCount++;
 				windows[_windowId] = this;
 				
-				wchar[] appName = cast(wchar[])"DOOGLE_WINDOW" ~ cast(wchar)_windowId ~ 0;
+				wchar[] appName = to!(wchar[])("DOOGLE_WINDOW"w ~ cast(wchar)windowCount ~ 0);
 				_wndclass.style         = platform.windows.CS_HREDRAW | platform.windows.CS_VREDRAW;
 				_wndclass.lpfnWndProc   = &windowEventHandler;
 				_wndclass.cbClsExtra    = 0;
 				_wndclass.cbWndExtra    = 0;
-				_wndclass.hInstance     = cast(shared)platform.windows.GetModuleHandleA(null);//hInstance;
-				_wndclass.hIcon         = cast(shared)platform.windows.LoadIconA(null, cast(char*)platform.windows.IDI_APPLICATION);
-				_wndclass.hCursor       = cast(shared)platform.windows.LoadCursorA(null, cast(char*)platform.windows.IDC_ARROW);
+				_wndclass.hInstance     = cast(shared)platform.windows.GetModuleHandleW(null);//hInstance;
+				_wndclass.hIcon         = cast(shared)platform.windows.LoadIconW(null, cast(ushort*)platform.windows.IDI_APPLICATION);
+				_wndclass.hCursor       = cast(shared)platform.windows.LoadCursorW(null, cast(ushort*)platform.windows.IDC_ARROW);
 				_wndclass.hbrBackground = cast(shared(platform.windows.HBRUSH))platform.windows.GetStockObject(platform.windows.BLACK_BRUSH);
 				_wndclass.lpszMenuName  = null;
 				_wndclass.lpszClassName = cast(shared(ushort*))appName.ptr;
 
 				if(!platform.windows.RegisterClassW(cast(platform.windows.WNDCLASSW*)&_wndclass)) {
-					platform.windows.MessageBoxW(null, "This program requires Windows NT!", appName.ptr, platform.windows.MB_ICONERROR);
+					platform.windows.MessageBoxW(cast(platform.windows.HWND)null, cast(ushort*)"This program requires Windows NT!".ptr, cast(ushort*)appName.ptr, platform.windows.MB_ICONERROR);
 					return;
 				}
 
@@ -62,20 +62,22 @@ version(Windows) {
 				if (style & WindowStyle.Close) windowStyle |= platform.windows.WS_SYSMENU;
 				if (style & WindowStyle.Resize) windowStyle |= platform.windows.WS_SYSMENU | platform.windows.WS_THICKFRAME | platform.windows.WS_MAXIMIZEBOX;
 
-				_window = cast(shared)platform.windows.CreateWindowExW(appName.ptr,      // window class name
-				                     cast(wchar*)title.ptr,  // window caption
-				                     cast(uint)windowStyle,  // window style
-	                                 platform.windows.CW_USEDEFAULT,        // initial x position
-	                         		 platform.windows.CW_USEDEFAULT,        // initial y position
-				                     width,        // initial x size
-				                     height,        // initial y size
-				                     null,                 // parent window handle
-				                     null,                 // window menu handle
-	                                 platform.windows.GetModuleHandleA(null),            // program instance handle
-				                     cast(void*)_windowId);                // creation parameters
+				_window = cast(shared)platform.windows.CreateWindowExW(
+									cast(uint)null,
+									cast(ushort*)appName.ptr,      // window class name
+									cast(ushort*)title.ptr,  // window caption
+				                    cast(uint)windowStyle,  // window style
+									cast(int)platform.windows.CW_USEDEFAULT,        // initial x position
+									cast(int)platform.windows.CW_USEDEFAULT,        // initial y position
+									cast(int)width,        // initial x size
+									cast(int)height,        // initial y size
+									cast(platform.windows.HWND)null,                 // parent window handle
+									cast(platform.windows.HMENU)null,                 // window menu handle
+									platform.windows.GetModuleHandleW(null),            // program instance handle
+									cast(void*)_windowId);                // creation parameters
 
 				if (_window is null) {
-					platform.windows.MessageBoxW(null, "Window creation failed!", appName.ptr, platform.windows.MB_ICONERROR);
+					platform.windows.MessageBoxW(cast(platform.windows.HWND)null, cast(ushort*)"Window creation failed!\0"w.ptr, cast(ushort*)appName.ptr, cast(uint)platform.windows.MB_ICONERROR);
 					return;
 				}
 			
@@ -144,7 +146,7 @@ version(Windows) {
 						if (!_isOpen) return;
 						platform.windows.RECT rect = {0, 0, _width, _height};
 						platform.windows.AdjustWindowRect(&rect, _style, false);
-						platform.windows.SetWindowPos(cast(void*)_window, null, 0, 0, cast(uint)(rect.right - rect.left), cast(uint)(rect.bottom - rect.top), platform.windows.SWP_NOMOVE | platform.windows.SWP_NOZORDER);
+						platform.windows.SetWindowPos(cast(platform.windows.HWND)_window, cast(platform.windows.HWND)null, 0, 0, cast(uint)(rect.right - rect.left), cast(uint)(rect.bottom - rect.top), cast(uint)platform.windows.SWP_NOMOVE | cast(uint)platform.windows.SWP_NOZORDER);
 					}
 				}
 
@@ -162,7 +164,7 @@ version(Windows) {
 					synchronized {
 						if (style & WindowStyle.FullScreen) {
 							// make full screen
-							platform.windows.DEVMODE dm;
+							platform.windows.DEVMODEW dm;
 							dm.dmSize = dm.sizeof;
 							dm.dmPelsWidth = _width;
 							dm.dmPelsHeight = _height;
@@ -172,10 +174,10 @@ version(Windows) {
 							ulong windowStyle = platform.windows.WS_POPUP | platform.windows.WS_CLIPCHILDREN | platform.windows.WS_CLIPSIBLINGS;
 
 							platform.windows.ChangeDisplaySettingsW(&dm, platform.windows.CDS_FULLSCREEN);
-							platform.windows.SetWindowLongW(cast(void*)_window, platform.windows.GWL_STYLE, cast(uint)windowStyle);
-							platform.windows.SetWindowLongW(cast(void*)_window, platform.windows.GWL_EXSTYLE, platform.windows.WS_EX_APPWINDOW);
+							platform.windows.SetWindowLongW(cast(platform.windows.HWND)_window, platform.windows.GWL_STYLE, cast(uint)windowStyle);
+							platform.windows.SetWindowLongW(cast(platform.windows.HWND)_window, platform.windows.GWL_EXSTYLE, platform.windows.WS_EX_APPWINDOW);
 							
-							platform.windows.SetWindowPos(cast(void*)_window, platform.windows.HWND_TOP, 0, 0, _width, _height, platform.windows.SWP_FRAMECHANGED);
+							platform.windows.SetWindowPos(cast(platform.windows.HWND)_window, platform.windows.HWND_TOP, 0, 0, _width, _height, platform.windows.SWP_FRAMECHANGED);
 							visible = true;
 
 							_style = cast(uint)windowStyle;
@@ -207,7 +209,7 @@ version(Windows) {
 					if (_context !is null) {
 						return _context;
 					} else {
-						_context = new shared Context(color, depth, stencil, antialias, cast(shared)platform.windows.GetDC(cast(void*)_window));
+						_context = new shared Context(color, depth, stencil, antialias, cast(shared)platform.windows.GetDC(cast(platform.windows.HWND)_window));
 						DerelictGL3.reload();
 						return _context;
 					}
@@ -218,8 +220,8 @@ version(Windows) {
 				synchronized {
 					if (!_context) return;
 					_context.activate();
-					platform.windows.UpdateWindow(cast(void*)_window);
-					platform.windows.SwapBuffers(platform.windows.GetDC(cast(void*)_window));
+					platform.windows.UpdateWindow(cast(platform.windows.HWND)_window);
+					platform.windows.SwapBuffers(platform.windows.GetDC(cast(platform.windows.HWND)_window));
 
 					foreach(child; _children) {
 						child.redraw(this);
@@ -229,15 +231,15 @@ version(Windows) {
 
 			override void visible(bool mode) {
 				synchronized {
-					platform.windows.ShowWindow(cast(void*)_window, mode ? platform.windows.SW_SHOW : platform.windows.SW_HIDE);
-					platform.windows.UpdateWindow(cast(void*)_window);
+					platform.windows.ShowWindow(cast(platform.windows.HWND)_window, mode ? platform.windows.SW_SHOW : platform.windows.SW_HIDE);
+					platform.windows.UpdateWindow(cast(platform.windows.HWND)_window);
 				}
 			}
 
 			override void close() {
 				synchronized {
 					if(_isOpen) {
-						platform.windows.CloseWindow(cast(void*)_window);
+						platform.windows.CloseWindow(cast(platform.windows.HWND)_window);
 						_isOpen = false;
 					}
 				}
@@ -247,9 +249,9 @@ version(Windows) {
 				synchronized {
 					platform.windows.MSG msg;
 					size_t length = _events.length;
-					while (platform.windows.PeekMessage(&msg, null, 0, 0, platform.windows.PM_REMOVE)) {
+					while (platform.windows.PeekMessageW(cast(platform.windows.LPMSG)&msg, cast(platform.windows.HWND)_window, 0, 0, platform.windows.PM_REMOVE)) {
 						platform.windows.TranslateMessage(&msg);
-						platform.windows.DispatchMessage(&msg);
+						platform.windows.DispatchMessageW(&msg);
 					}
 					return length > _events.length;
 				}
@@ -286,7 +288,7 @@ version(Windows) {
 							
 						case platform.windows.WM_MOVE:
 							platform.windows.RECT rect;
-							platform.windows.GetWindowRect(cast(void*)_window, &rect);
+							platform.windows.GetWindowRect(cast(platform.windows.HWND)_window, &rect);
 							x = cast(uint)rect.left;
 							y = cast(uint)rect.top;
 							
@@ -301,10 +303,10 @@ version(Windows) {
 							break;
 							
 						case platform.windows.WM_ACTIVATE:
-							if (wParam == platform.windows.WA_INACTIVE) {
+							if (wParam == cast(platform.windows.WPARAM)platform.windows.WA_INACTIVE) {
 								ev.type = EventTypes.Blur;
 								_hasFocus = false;
-								return 0;
+								return cast(platform.windows.LRESULT)null;
 							} else {
 								ev.type = EventTypes.Focus;
 								_hasFocus = true;
@@ -374,7 +376,7 @@ version(Windows) {
 							_mouseY = platform.windows.HIWORD(lParam);
 							
 							ev.type = EventTypes.MouseWheel;
-							ev.mouse.delta = platform.windows.GET_WHEEL_DELTA_WPARAM(wParam) > 0 ? 1 : -1;
+							ev.mouse.delta = platform.windows.GET_WHEEL_DELTA_WPARAM(cast(uint)wParam) > 0 ? 1 : -1;
 							ev.mouse.x = mouseX;
 							ev.mouse.y = mouseY;
 							break;
@@ -408,7 +410,7 @@ version(Windows) {
 						}
 					}
 					
-					return platform.windows.DefWindowProc(cast(void*)_window, msg, wParam, lParam);
+					return platform.windows.DefWindowProcW(cast(platform.windows.HWND)_window, msg, wParam, lParam);
 				}
 			}
 		}
@@ -424,22 +426,20 @@ extern(Windows) protected platform.windows.LRESULT windowEventHandler(platform.w
 				synchronized(rwmWindows)
 					window = windows[cast(size_t)((cast(platform.windows.LPCREATESTRUCTA)lParam).lpCreateParams)];
 				window.hwnd = cast(shared)hwnd;
-				platform.windows.SetWindowLong(hwnd, platform.windows.GWL_USERDATA, cast(int)window.id);
-				assert(cast(size_t)(platform.windows.GetWindowLongA(hwnd, platform.windows.GWL_USERDATA)) == window.id);
-				return 0;
+				platform.windows.SetWindowLongW(hwnd, platform.windows.GWL_USERDATA, cast(int)window.id);
+				//assert(cast(size_t)(platform.windows.GetWindowLongW(hwnd, platform.windows.GWL_USERDATA)) == window.id);
+				break;
 			case platform.windows.WM_DESTROY:
 				platform.windows.PostQuitMessage(0);
-				return 0;
+				break;
 			default:
 				synchronized(rwmWindows)
-					window = windows[cast(size_t)(platform.windows.GetWindowLong(hwnd, platform.windows.GWL_USERDATA))];
+					window = windows[cast(size_t)(platform.windows.GetWindowLongW(cast(platform.windows.HWND)hwnd, platform.windows.GWL_USERDATA))];
 				window.hwnd = cast(shared)hwnd;
-				assert(window.id == cast(size_t)(platform.windows.GetWindowLong(hwnd, platform.windows.GWL_USERDATA)));
-				return window.windowEvent(cast(uint)message, cast(uint)wParam, cast(uint)lParam);
-				break;
+				//assert(window.id == cast(size_t)(platform.windows.GetWindowLongW(cast(platform.windows.HWND)hwnd, platform.windows.GWL_USERDATA)));
+				return window.windowEvent(cast(uint)message, wParam, lParam);
 		}
-		
-		return platform.windows.DefWindowProcA(hwnd, message, wParam, lParam);
+		return platform.windows.DefWindowProcW(hwnd, message, wParam, lParam);
 	}
 }
 

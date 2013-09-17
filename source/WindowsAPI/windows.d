@@ -285,11 +285,11 @@ alias uint *PULONG32;
 alias uint DWORD32;
 alias uint *PDWORD32;
 //C        typedef long long INT_PTR,*PINT_PTR;
-alias long INT_PTR;
-alias long *PINT_PTR;
+alias ptrdiff_t INT_PTR;
+alias ptrdiff_t *PINT_PTR;
 //C        typedef unsigned long long UINT_PTR,*PUINT_PTR;
-alias ulong UINT_PTR;
-alias ulong *PUINT_PTR;
+alias size_t UINT_PTR;
+alias size_t *PUINT_PTR;
 //C        typedef long long LONG_PTR,*PLONG_PTR;
 alias long LONG_PTR;
 alias long *PLONG_PTR;
@@ -5555,11 +5555,11 @@ PVOID  GetCurrentFiber();
 //C         PVOID GetFiberData(void);
 PVOID  GetFiberData();
 //C     typedef UINT_PTR WPARAM;
-alias UINT_PTR WPARAM;
+alias uint* WPARAM;
 //C     typedef LONG_PTR LPARAM;
-alias LONG_PTR LPARAM;
+alias ulong* LPARAM;
 //C     typedef LONG_PTR LRESULT;
-alias LONG_PTR LRESULT;
+alias ulong* LRESULT;
 //C     struct HWND__ { int unused; }; typedef struct HWND__ *HWND;
 struct HWND__
 {
@@ -57991,6 +57991,7 @@ pure HWND HWND_TOP() {return cast(HWND)0;}
 pure WORD LOWORD(T)(T l) {return cast(WORD)((cast(DWORD_PTR)l) & 0xffff);}
 pure WORD HIWORD(T)(T l) {return cast(WORD)((cast(DWORD_PTR)l) >> 16);}
 pure short GET_WHEEL_DELTA_WPARAM(DWORD wParam) {return cast(short)HIWORD(wParam);}
+alias GWLP_USERDATA GWL_USERDATA;
 const IMAGE_REL_ALPHA_HINT = 0x0008;
 const COMQC_E_NO_QUEUEABLE_INTERFACES = 0x80110601;
 const DT_EXTERNALLEADING = 0x00000200;
