@@ -583,7 +583,7 @@ void glBufferSubData(BindBufferTargets target, int offset, void[] data) {
 	gl3.glBufferSubData(cast(gl3.GLenum)target, cast(gl3.GLintptr)offset, cast(gl3.GLsizeiptr)data.length, data.ptr);
 }
 
-void glGetBufferSubData(BindBufferTargets target, int offset, void[] data) {
+void glGetBufferSubData(BindBufferTargets target, int offset, ref void[] data) {
 	gl3.glGetBufferSubData(cast(gl3.GLenum)target, cast(gl3.GLintptr)offset, cast(gl3.GLsizeiptr)data.length, data.ptr);
 }
 
