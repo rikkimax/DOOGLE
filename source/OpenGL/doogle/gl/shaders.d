@@ -5,7 +5,7 @@ import std.algorithm : filter, move;
 
 shared class ShaderProgram {
 	protected {
-		ProgramObj id;
+		ProgramObj id_;
 		Shader[] shaders;
 	}
 
@@ -20,7 +20,7 @@ shared class ShaderProgram {
 
 	this(shared(Shader) vert=null, shared(Shader) frag=null, shared(Shader) geom=null) {
 		// allocate the program
-		glCreateProgram(id);
+		glCreateProgram(id_);
 		if (vert !is null)
 			attach(vert, false);
 		if (frag !is null)
@@ -33,13 +33,13 @@ shared class ShaderProgram {
 	~this() {
 		synchronized {
 			// destroy the program
-			glDeleteProgram(id);
+			glDeleteProgram(id_);
 		}
 	}
 
 	shared(ProgramObj) opCast(T : ProgramObj)() {
 		synchronized {
-			return id;
+			return id_;
 		}
 	}
 
@@ -47,7 +47,7 @@ shared class ShaderProgram {
 		synchronized {
 			shaders ~= shader;
 			// attach the shader
-			glAttachShader(id, shader.id);
+			glAttachShader(cast(uint)id_, cast(uint)shader);
 			if (linkCall)
 				link();
 		}
@@ -61,15 +61,29 @@ shared class ShaderProgram {
 					ret ~= s;
 			}
 			shaders = ret;
-			glDetachShader(id, shader.id);
+			glDetachShader(cast(uint)id_, cast(uint)shader);
 			link();
+		}
+	}
+
+	uint getAttribute(string name) {
+		return glGetAttribLocation(cast(uint)id_, name);
+	}
+
+	uint getUniform(string name) {
+		return glGetUniformLocation(cast(uint)id_, name);
+	}
+
+	uint opCast(T:uint)() {
+		synchronized {
+			return cast(uint)id_;
 		}
 	}
 
 	protected {
 		void link() {
 			synchronized {
-				glLinkProgram(id);
+				glLinkProgram(id_);
 			}
 		}
 	}
@@ -81,14 +95,14 @@ shared class ShaderProgram {
 
 shared class Shader {
 	protected {
-		ShaderObj id;
+		ShaderObj id_;
 		string source = null;
 		ShaderTypes type;
 	}
 
 	this(string source, ShaderTypes type) {
 		// create
-		glCreateShader(type, id);
+		glCreateShader(type, id_);
 		opAssign(source);
 		this.type = type;
 		compile();
@@ -96,7 +110,7 @@ shared class Shader {
 
 	~this() {
 		synchronized {
-			glDeleteShader(id);
+			glDeleteShader(id_);
 		}
 	}
 
@@ -104,14 +118,14 @@ shared class Shader {
 		synchronized {
 			this.source = source;
 			// assign
-			glShaderSource(id, source);
+			glShaderSource(id_, source);
 			compile();
 		}
 	}
 
 	shared(ShaderObj) opCast(T : ShaderObj)() {
 		synchronized {
-			return id;
+			return id_;
 		}
 	}
 
@@ -127,11 +141,17 @@ shared class Shader {
 		}
 	}
 
+	uint opCast(T:uint)() {
+		synchronized {
+			return cast(uint)id_;
+		}
+	}
+
 	protected {
 		void compile() {
 			synchronized {
 				// compile
-				glCompileShader(id);
+				glCompileShader(id_);
 			}
 		}
 	}
