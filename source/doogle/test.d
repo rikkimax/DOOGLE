@@ -20,17 +20,10 @@ void main() {
 	window.addChild(tc.component);
 	window.selectChild = tc.component;
 
-	shared(Event) ev;
 L1: while(window.isOpen && w2.isOpen) {
-		while(window.getEvent(ev) && window.isOpen) {
-			if (ev.type == EventTypes.Close)
-				break L1;
-		}
+		if(!window.whileOpenEvent()) break L1;
 		window.redraw();
-		while(w2.getEvent(ev) && w2.isOpen) {
-			if (ev.type == EventTypes.Close)
-			break L1;
-		}
+		if(!w2.whileOpenEvent()) break L1;
 		w2.redraw();
 	}
 }

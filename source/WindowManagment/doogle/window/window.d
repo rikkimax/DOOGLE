@@ -118,6 +118,15 @@ abstract shared class Window_Def : Component, ComponentChildable {
 			event();
 			return super.getEvent(ev);
 		}
+
+		bool whileOpenEvent() {
+			Event ev;
+			while(getEvent(ev) && isOpen) {
+				if (ev.type == EventTypes.Close)
+					return false;
+			}
+			return true;
+		}
 	}
 }
 
