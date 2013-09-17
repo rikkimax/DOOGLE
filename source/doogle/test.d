@@ -29,7 +29,7 @@ L1: while(window.isOpen && w2.isOpen) {
 		window.redraw();
 		while(w2.getEvent(ev) && w2.isOpen) {
 			if (ev.type == EventTypes.Close)
-				break L1;
+			break L1;
 		}
 		w2.redraw();
 	}
@@ -62,4 +62,6 @@ shared class EventClassTest : EventClass!TestChild {
 	override bool mouseUp(uint x, uint y, uint relx, uint rely, MouseButtons button){writeln("===========GOT MOUSEUP==============", button);return false;}
 	override bool mouseMove(uint x, uint y, uint relx, uint rely){writeln("===========GOT MOUSEMOVE==============");return false;}
 	override bool mouseWheel(uint x, uint y, uint relx, uint rely, int delta){writeln("===========GOT MOUSEWHEEL==============");return false;}
+	
+	override bool redraw(){return false;}
 }

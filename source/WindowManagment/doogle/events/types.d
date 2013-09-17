@@ -30,7 +30,8 @@ enum EventTypes {
 	MouseDown,
 	MouseUp,
 	MouseWheel,
-	MouseMove
+	MouseMove,
+	Draw
 }
 
 enum EventCatagories {
@@ -53,7 +54,8 @@ pure bool isEventCatagory(EventCatagories ec, EventTypes type) {
 			type == EventTypes.Resize ||
 			type == EventTypes.Move ||
 			type == EventTypes.Focus ||
-			type == EventTypes.Blur;
+			type == EventTypes.Blur ||
+			type == EventTypes.Draw;
 	}
 	return false;
 }

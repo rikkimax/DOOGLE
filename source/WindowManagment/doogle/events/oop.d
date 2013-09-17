@@ -14,6 +14,8 @@ shared interface EventInterface {
 	bool mouseUp(uint x, uint y, uint relx, uint rely, MouseButtons button);
 	bool mouseWheel(uint x, uint y, uint relx, uint rely, int delta);
 	bool mouseMove(uint x, uint y, uint relx, uint rely);
+	
+	bool redraw();
 }
 
 shared interface EventWindowInterface : EventInterface {
@@ -77,6 +79,12 @@ shared class EventClass(U : ComponentChild) : EventChildInterface {
 					} 
 					component.addEventHandler(EventTypes.MouseMove, &FUNC!mouseMove);
 					break;
+				case "redraw":
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+						return d();
+					} 
+					component.addEventHandler(EventTypes.Draw, &FUNC!redraw);
+					break;
 				default:
 					//ignore.
 					break;
@@ -93,6 +101,8 @@ shared class EventClass(U : ComponentChild) : EventChildInterface {
 	bool mouseUp(uint x, uint y, uint relx, uint rely, MouseButtons button){return false;}
 	bool mouseWheel(uint x, uint y, uint relx, uint rely, int delta){return false;}
 	bool mouseMove(uint x, uint y, uint relx, uint rely){return false;}
+	
+	bool redraw() {return false;}
 }
 
 shared class EventClass(U : Window) : EventWindowInterface {
@@ -175,6 +185,12 @@ shared class EventClass(U : Window) : EventWindowInterface {
 					} 
 					component.addEventHandler(EventTypes.WindowBlurred, &FUNC!windowBlurred);
 					break;
+				case "redraw":
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+						return d();
+					} 
+					component.addEventHandler(EventTypes.Draw, &FUNC!redraw);
+					break;
 				default:
 					//ignore.
 					break;
@@ -197,4 +213,6 @@ shared class EventClass(U : Window) : EventWindowInterface {
 	bool windowMove(uint x, uint y){return false;}
 	bool windowFocussed(){return false;}
 	bool windowBlurred(){return false;}
+	
+	bool redraw() {return false;}
 }

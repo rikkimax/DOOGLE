@@ -57,6 +57,10 @@ abstract shared class ComponentChild : Component {
 		 * Remember to super.redraw(window) call as last thing.
 		 */
 		void redraw(shared(Window) window) {
+			shared(Event) event;
+			event.type = EventTypes.Draw;
+			this.childEvent(window, event);
+		
 			static if (__traits(compiles, children.length)) {
 				foreach (child; children) {
 					child.redraw();
