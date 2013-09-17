@@ -43,8 +43,8 @@ abstract shared class Window_Def : Component, ComponentChildable {
 		 */
 		ComponentChild _selectedChild;
 	}
-
-	this(uint width = 800, uint height = 600, string title = "Window", WindowStyle style = WindowStyle.Close){}
+	
+	this(uint width = 800, uint height = 600, wstring title = "Window", WindowStyle style = WindowStyle.Close){}
 
 	public {
 		/**
