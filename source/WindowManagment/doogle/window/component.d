@@ -29,8 +29,6 @@ abstract shared class ComponentChild : Component {
 		 */
 		void childEvent(shared(Window) window, shared(Event) event) {
 			foreach(k; _eventHandlers.keys) {
-				import std.stdio;
-				writeln(k, " == ", event.type);
 				if (k == event.type) {
 					foreach(handler; _eventHandlers[k]) {
 						if (handler(event, this)) break;
