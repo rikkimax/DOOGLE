@@ -85,13 +85,11 @@ class Buffer(BufferUsages _usage, BindBufferTargets _type) {
 		return data;
 	}
 
-	public {
-		@property {
-			uint id() {
-				return id_;
-			}
-		}
+	uint opCast(T:uint)() {
+		return id_;
+	}
 
+	public {
 		void bind(BufferUsages usage = _usage) {
 			glBindBuffer(usage, id_);
 		}
