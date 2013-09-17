@@ -51,7 +51,6 @@
 		{
 			"name": "main",
 			"targetType": "library",
-			"platforms": ["windows"],
 			"excludedSourceFiles-windows" : [
 				"source/doogle/test.d"
 			]
