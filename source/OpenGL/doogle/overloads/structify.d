@@ -12,7 +12,7 @@ import doogle.util.image;
  * OpenGL 1.1
  */
 
-struct TextureObj {
+shared struct TextureObj {
 	gl3.GLuint id;
 
 	gl3.GLuint opCast(T : gl3.GLuint)() {
@@ -20,27 +20,27 @@ struct TextureObj {
 	}
 }
 
-void glBindTexture(BindTextureTarget target, TextureObj texture) {
+void glBindTexture(BindTextureTarget target, shared(TextureObj) texture) {
 	gl3.glBindTexture(cast(gl3.GLenum)target, cast(uint)texture);
 }
 
-void glDeleteTextures(TextureObj[] textures) {
+void glDeleteTextures(shared(TextureObj[]) textures) {
 	gl3.glDeleteTextures(cast(uint)textures.length, cast(gl3.GLuint*)textures.ptr);
 }
 
-void glDeleteTextures(TextureObj texture) {
+void glDeleteTextures(shared(TextureObj) texture) {
 	gl3.glDeleteTextures(1, cast(gl3.GLuint*)&texture);
 }
 
-void glGenTextures(out TextureObj texture) {
+void glGenTextures(out shared(TextureObj) texture) {
 	gl3.glGenTextures(1, cast(gl3.GLuint*)&texture);
 }
 
-void glGenTextures(gl3.GLsizei n, out TextureObj[] textures) {
+void glGenTextures(gl3.GLsizei n, out shared(TextureObj[]) textures) {
 	gl3.glGenTextures(n, cast(gl3.GLuint*)textures.ptr);
 }
 
-bool glIsTexture(TextureObj texture) {
+bool glIsTexture(shared(TextureObj) texture) {
 	return cast(bool)gl3.glIsTexture(cast(gl3.GLuint)texture);
 }
 
@@ -118,10 +118,10 @@ in {
  * Opengl 2.0
  */
 
-struct ProgramObj {
+shared struct ProgramObj {
 	gl3.GLuint id;
 
-	gl3.GLuint opCast() {
+	gl3.GLuint opCast(T:gl3.GLuint)() {
 		return id;
 	}
 }
@@ -131,10 +131,10 @@ unittest {
 	assert(cast(gl3.GLuint)po == 1);
 }
 
-struct ShaderObj {
+shared struct ShaderObj {
 	gl3.GLuint id;
 
-	gl3.GLuint opCast() {
+	gl3.GLuint opCast(T:gl3.GLuint)() {
 		return id;
 	}
 }
