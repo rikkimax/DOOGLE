@@ -20,7 +20,7 @@ private {
 	shared Texture currentTexture;
 }
 
-shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8) : Image, Texture {
+shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8, TextureTargets target_ = TextureTargets.Texture2DArray) : Image, Texture {
 	protected {
 		union {
 			Color[_width * bitdepth(_depth)][_height * bitdepth(_depth)] colors_;
@@ -71,6 +71,7 @@ shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8) : 
 	void activate() {
 		synchronized {
 			currentTexture = this;
+			glBindTexture(target_, id_);
 		}
 	}
 	
@@ -132,6 +133,7 @@ shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8) : 
 		} body {
 			synchronized {
 				colors_ = cast(shared(Color[_width][]))v;
+				update();
 			}
 		}
 		
@@ -141,6 +143,7 @@ shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8) : 
 		} body {
 			synchronized {
 				values_ = v;
+				update();
 			}
 		}
 		
@@ -150,6 +153,15 @@ shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8) : 
 		} body {
 			synchronized {
 				data_ = v;
+				update();
+			}
+		}
+	}
+
+	protected {
+		void update() {
+			synchronized {
+				glTexImage3D(target_, 0, format_, width_, height_, depth_, format_, cast(void[])data_);
 			}
 		}
 	}
