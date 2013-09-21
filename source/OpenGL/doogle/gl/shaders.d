@@ -1,26 +1,25 @@
 module doogle.gl.shaders;
-import doogle.overloads.structify;
-import doogle.overloads.wrappers;
+import doogle.platform;
 import std.algorithm : filter, move;
 
 shared class ShaderProgram {
 	protected {
-		ProgramObj id_;
+		uint id_;
 		Shader[] shaders;
 	}
 
 	this(string vert, string frag=null, string geom=null) {
 		if (frag is null)
-			this(new shared Shader(vert, ShaderTypes.FragmentShader), null, null);
+			this(new shared Shader(vert, glwrap.ShaderTypes.VertexShader), null, null);
 		else if (geom is null)
-			this(new shared Shader(vert, ShaderTypes.FragmentShader), new shared Shader(frag, ShaderTypes.FragmentShader), null);
+			this(new shared Shader(vert, glwrap.ShaderTypes.VertexShader), new shared Shader(frag, glwrap.ShaderTypes.FragmentShader), null);
 		else
-			this(new shared Shader(vert, ShaderTypes.VertexShader), new shared Shader(frag, ShaderTypes.FragmentShader), new shared Shader(geom, ShaderTypes.GeometryShader));
+			this(new shared Shader(vert, glwrap.ShaderTypes.VertexShader), new shared Shader(frag, glwrap.ShaderTypes.FragmentShader), new shared Shader(geom, glwrap.ShaderTypes.GeometryShader));
 	}
 
 	this(shared(Shader) vert=null, shared(Shader) frag=null, shared(Shader) geom=null) {
 		// allocate the program
-		glCreateProgram(id_);
+		id_ = glwrap.glCreateProgram();
 		if (vert !is null)
 			attach(vert, false);
 		if (frag !is null)
@@ -33,13 +32,7 @@ shared class ShaderProgram {
 	~this() {
 		synchronized {
 			// destroy the program
-			glDeleteProgram(id_);
-		}
-	}
-
-	shared(ProgramObj) opCast(T : ProgramObj)() {
-		synchronized {
-			return id_;
+			glwrap.glDeleteProgram(id_);
 		}
 	}
 
@@ -47,7 +40,7 @@ shared class ShaderProgram {
 		synchronized {
 			shaders ~= shader;
 			// attach the shader
-			glAttachShader(cast(uint)id_, cast(uint)shader);
+			glwrap.glAttachShader(cast(uint)id_, cast(uint)shader);
 			if (linkCall)
 				link();
 		}
@@ -61,17 +54,21 @@ shared class ShaderProgram {
 					ret ~= s;
 			}
 			shaders = ret;
-			glDetachShader(cast(uint)id_, cast(uint)shader);
+			glwrap.glDetachShader(cast(uint)id_, cast(uint)shader);
 			link();
 		}
 	}
 
 	uint getAttribute(string name) {
-		return glGetAttribLocation(cast(uint)id_, name);
+		synchronized {
+			return glwrap.glGetAttribLocation(cast(uint)id_, name);
+		}
 	}
 
 	uint getUniform(string name) {
-		return glGetUniformLocation(cast(uint)id_, name);
+		synchronized {
+			return glwrap.glGetUniformLocation(cast(uint)id_, name);
+		}
 	}
 
 	uint opCast(T:uint)() {
@@ -80,11 +77,34 @@ shared class ShaderProgram {
 		}
 	}
 
+	void use() {
+		synchronized {
+			glwrap.glUseProgram(id_);
+		}
+	}
+
 	protected {
 		void link() {
 			synchronized {
-				glLinkProgram(id_);
+				glwrap.glLinkProgram(id_);
+
+				int res;
+				gl.glGetProgramiv(id_, gl.GL_LINK_STATUS, &res);
+				if (res == gl.GL_FALSE)
+					throw new Exception(getInfoLog());
 			}
+		}
+
+		string getInfoLog() {
+			int res;
+			gl.glGetProgramiv(id_, gl.GL_INFO_LOG_LENGTH, &res);
+			
+			if (res > 0) {
+				char* infoLog;
+				gl.glGetProgramInfoLog(id_, res, &res, infoLog);
+				return *(cast(string*)infoLog);
+			}
+			return "";
 		}
 	}
 
@@ -95,14 +115,15 @@ shared class ShaderProgram {
 
 shared class Shader {
 	protected {
-		ShaderObj id_;
+		//ShaderObj id_;
+		uint id_;
 		string source = null;
-		ShaderTypes type;
+		glwrap.ShaderTypes type;
 	}
 
-	this(string source, ShaderTypes type) {
+	this(string source, glwrap.ShaderTypes type) {
 		// create
-		glCreateShader(type, id_);
+		id_ = glwrap.glCreateShader(type);
 		opAssign(source);
 		this.type = type;
 		compile();
@@ -110,7 +131,7 @@ shared class Shader {
 
 	~this() {
 		synchronized {
-			glDeleteShader(id_);
+			glwrap.glDeleteShader(id_);
 		}
 	}
 
@@ -118,14 +139,8 @@ shared class Shader {
 		synchronized {
 			this.source = source;
 			// assign
-			glShaderSource(id_, source);
+			glwrap.glShaderSource(id_, source);
 			compile();
-		}
-	}
-
-	shared(ShaderObj) opCast(T : ShaderObj)() {
-		synchronized {
-			return id_;
 		}
 	}
 
@@ -135,7 +150,7 @@ shared class Shader {
 		}
 	}
 
-	ShaderTypes opCast(T : ShaderTypes)() {
+	ShaderTypes opCast(T : glwrap.ShaderTypes)() {
 		synchronized {
 			return type;
 		}
@@ -151,8 +166,25 @@ shared class Shader {
 		void compile() {
 			synchronized {
 				// compile
-				glCompileShader(id_);
+				glwrap.glCompileShader(id_);
+
+				int res;
+				gl.glGetShaderiv(id_, gl.GL_COMPILE_STATUS, &res);
+				if (res == gl.GL_FALSE)
+					throw new Exception(getInfoLog());
 			}
+		}
+
+		string getInfoLog() {
+			int res;
+			gl.glGetShaderiv(id_, gl.GL_INFO_LOG_LENGTH, &res);
+			
+			if (res > 0) {
+				char* infoLog;
+				gl.glGetShaderInfoLog(id_, res, &res, infoLog);
+				return *(cast(string*)infoLog);
+			}
+			return "";
 		}
 	}
 }

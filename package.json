@@ -23,6 +23,9 @@
 		"git submodule update --init"
 	],
 	
+	"targetPath": "bin",
+	"workingDirectory": "obj",
+	
 	"subPackages": [
 		{
 			"name": "opengl",
@@ -67,7 +70,7 @@
 		{
 			"name": "test",
 			"targetType": "executable",
-			"platforms": ["windows"],
+			"platforms": ["windows"]
 		}
 	]
 }

@@ -1,5 +1,9 @@
 module doogle.platform;
-public import derelict.opengl3.gl3;
+public import gl = derelict.opengl3.gl3;
+public import glarb = derelict.opengl3.arb;
+public import glwrap = doogle.overloads.wrappers;
+public import glstruct = doogle.overloads.structify;
+
 import doogle.util.shaderstorage;
 
 struct PlatformVersions {
@@ -25,6 +29,6 @@ struct PlatformVersions {
 __gshared PlatformVersions platform;
 
 static this() {
-	DerelictGL3.load();
+	gl.DerelictGL3.load();
 	shaderStorage.init();
 }

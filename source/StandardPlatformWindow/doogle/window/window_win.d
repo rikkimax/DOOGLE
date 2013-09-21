@@ -115,6 +115,15 @@ version(Windows) {
 				_mouseY = 0;
 				_context = null;
 				_windowStyle = style;
+
+				Event ev;
+				while (true) {
+					while(getEvent(ev)) {
+						if (ev.type == EventTypes.Focus)
+							goto GrabContext;
+					}
+				}
+GrabContext:		getContext();
 			}
 		}
 
@@ -210,7 +219,7 @@ version(Windows) {
 						return _context;
 					} else {
 						_context = new shared Context(color, depth, stencil, antialias, cast(shared)platform.windows.GetDC(cast(platform.windows.HWND)_window));
-						DerelictGL3.reload();
+						gl.DerelictGL3.reload();
 						return _context;
 					}
 				}

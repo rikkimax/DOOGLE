@@ -23,7 +23,7 @@ version(Windows) {
 
 abstract shared class Context_Def {
 	protected {
-		GLint[4] defaultViewport;
+		int[4] defaultViewport;
 	}
 
 	public {

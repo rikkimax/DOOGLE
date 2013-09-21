@@ -1,19 +1,25 @@
 module doogle.gl.vertexarray;
 import doogle.gl.buffers;
+import doogle.gl.shaders;
 import doogle.platform;
 public import doogle.overloads.wrappers : BindBufferTargets;
 
-class VertexArray {
+shared class VertexArray {
 	protected {
 		uint id_;
 	}
 
-	this(StandardBuffer buffer) {this(cast(uint)buffer);}
+	this(shared(StandardBuffer) buffer) {this(cast(uint)buffer);}
 
 	this(uint buffer) {
-		glGenVertexArrays(1, &id_);
-		glBindVertexArray(id_);
-		glBindBuffer(BindBufferTargets.ElementArrayBuffer, buffer);
+		gl.glGenVertexArrays(1, cast(uint*)&id_);
+		gl.glBindVertexArray(id_);
+		gl.glBindBuffer(BindBufferTargets.ElementArrayBuffer, buffer);
+		gl.glEnableVertexAttribArray(0);
+	}
+
+	~this() {
+		gl.glDeleteVertexArrays(1, cast(uint*)&id_);
 	}
 
 	uint opCast(T:uint)() {
@@ -22,7 +28,14 @@ class VertexArray {
 
 	public {
 		void bind() {
-			glBindVertexArray(id_);
+			gl.glBindVertexArray(id_);
+		}
+
+		void bindAttribute(shared(ShaderProgram) program, string attribute, shared(StandardBuffer) buffer, glwrap.AttribPointerType type, uint count, uint stride=0, int* offset = null) {
+			uint attrib = program.getAttribute(attribute);
+			buffer.bind();
+			gl.glEnableVertexAttribArray(attrib);
+			gl.glVertexAttribPointer(attrib, count, type, gl.GL_FALSE, stride, offset);
 		}
 	}
 }

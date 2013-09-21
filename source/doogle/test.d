@@ -1,60 +1,59 @@
 module test;
 import doogle.platform;
 import doogle.window.window;
-import doogle.window.context;
-import doogle.window.component;
+import doogle.gl.shaders;
 import doogle.events.event;
 import doogle.events.types;
-import doogle.events.oop;
+import doogle.gl.buffers;
+import doogle.gl.vertexarray;
+import core.thread;
 
+import gl3n.linalg;
 import std.stdio;
 
 void main() {
-	shared Window window = new shared Window(800, 600, "Window"w, WindowStyle.Close);
-	shared Window w2 = new shared Window(800, 600, "Window2"w, WindowStyle.Close);
-	shared Context gl = window.getContext;
-	shared Context gl2 = w2.getContext;
+	shared Window window = new shared Window(800, 600, "OpenGL Window"w, WindowStyle.Close);
+	shared ShaderProgram program = new shared ShaderProgram("""
+#version 150
+in vec2 position;
+void main() {
+    gl_Position = vec4(position, 0.0, 1.0);
+}
+""","""
+#version 150
+out vec4 outColor;
+void main() {
+    outColor = vec4(1.0, 0.0, 0.0, 1.0);
+}
+""");
 
-	shared EventClassTest tc = new shared EventClassTest();
+	vec3[] vertices = [
+		vec3(-0.5f, -0.5f, 0.0f),
+		vec3(0.5f, -0.5f, 0.0f),
+		vec3(0.0f, 0.5f, 0.0f)
+	];
 
-	window.addChild(tc.component);
-	window.selectChild = tc.component;
+	shared StandardBuffer vbo = new shared StandardBuffer(vertices);
+	shared VertexArray vao = new shared VertexArray(vbo);
+	vao.bindAttribute(program, "position", vbo, glwrap.AttribPointerType.Float, 3);
 
-L1: while(window.isOpen && w2.isOpen) {
-		if(!window.whileOpenEvent()) break L1;
+	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
+
+	Event ev;
+	while (window.isOpen) {
+		while(window.getEvent(ev) && window.isOpen) {
+			if (ev.type == EventTypes.Close)
+				return;
+		}
+
+		glwrap.glClear(true, true);
+
+		program.use();
+		vao.bind();
+		glwrap.glDrawArrays(glwrap.Primitives.Triangles, 0, 3);
+
 		window.redraw();
-		if(!w2.whileOpenEvent()) break L1;
-		w2.redraw();
+
+		Thread.sleep(dur!"msecs"(75));
 	}
-}
-
-class TestChild : ComponentChild {
-	override void redraw(shared(Window) window) {/* writeln("redraw called"); */super.redraw(window);}
-
-	@property {
-		override void resize() {/*writeln("resize called");*/}
-		override void relocate() {/*writeln("relocated called");*/}
-	}
-}
-
-shared class EventClassTest : EventClass!TestChild {
-	this() {
-		super();
-		component.x = 100;
-		component.y = 100;
-		component.width = 700;
-		component.height = 500;
-	};
-
-	override bool unknown(Event){writeln("===========GOT UNKNOWN==============");return false;}
-
-	override bool keyDown(Keys code, bool alt, bool control, bool shift){writeln("===========GOT KEYDOWN==============", code);return false;}
-	override bool keyUp(Keys code, bool alt, bool control, bool shift){writeln("===========GOT KEYUP==============", code);return false;}
-
-	override bool mouseDown(uint x, uint y, uint relx, uint rely, MouseButtons button){writeln("===========GOT MOUSEDOWN==============", button);return false;}
-	override bool mouseUp(uint x, uint y, uint relx, uint rely, MouseButtons button){writeln("===========GOT MOUSEUP==============", button);return false;}
-	override bool mouseMove(uint x, uint y, uint relx, uint rely){writeln("===========GOT MOUSEMOVE==============");return false;}
-	override bool mouseWheel(uint x, uint y, uint relx, uint rely, int delta){writeln("===========GOT MOUSEWHEEL==============");return false;}
-	
-	override bool redraw(){return false;}
 }

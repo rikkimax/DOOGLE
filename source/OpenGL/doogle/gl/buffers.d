@@ -3,9 +3,9 @@ public import doogle.overloads.wrappers : BindBufferTargets, BufferUsages;
 import doogle.platform;
 public import gl3n.linalg : vec4, vec3, vec2, mat2, mat3, mat34, mat4;
 
-alias Buffer!(BufferUsages.DynamicDraw, BindBufferTargets.ArrayBuffer) StandardBuffer;
+alias Buffer!(BufferUsages.StaticDraw, BindBufferTargets.ArrayBuffer) StandardBuffer;
 
-class Buffer(BufferUsages _usage, BindBufferTargets _type) {
+shared class Buffer(BufferUsages _usage, BindBufferTargets _type) {
 	protected {
 		uint id_;
 	}
@@ -36,14 +36,14 @@ class Buffer(BufferUsages _usage, BindBufferTargets _type) {
 	this(float[] data...) {this(cast(void[])data);}
 
 	this(void[] data) {
-		glGenBuffers(1, &id_);
-		glBindBuffer(_type, id_);
-		glBufferData(_type, data.sizeof, data.ptr, _usage);
-		glBindBuffer(BindBufferTargets.ArrayBuffer, 0);
+		gl.glGenBuffers(1, cast(uint*)&id_);
+		gl.glBindBuffer(_type, id_);
+		gl.glBufferData(_type, data.length, data.ptr, _usage);
+		gl.glBindBuffer(_type, 0);
 	}
 
 	~this() {
-		glDeleteBuffers(1, &id_);
+		gl.glDeleteBuffers(1, cast(uint*)&id_);
 	}
 
 	void opOpAssign(string s)(vec2[] data) {
@@ -73,15 +73,15 @@ class Buffer(BufferUsages _usage, BindBufferTargets _type) {
 
 	void opOpAssign(string s)(void[] data) {
 		static if (s != "=") return;
-		glBindBuffer(_type, id_);
-		glBufferData(_type, data.length, cast(void*)data.ptr, _usage);
-		glBindBuffer(_type, 0);
+		gl.glBindBuffer(_type, id_);
+		glwrap.glBufferData(_type, data, _usage);
+		gl.glBindBuffer(_type, 0);
 	}
 
 	void[] opSlice(size_t offset, size_t length) {
 		void[] data;
 		data.length = length;
-		glGetBufferSubData(_type, offset, length, data.ptr);
+		gl.glGetBufferSubData(_type, offset, length, data.ptr);
 		return data;
 	}
 
@@ -90,8 +90,8 @@ class Buffer(BufferUsages _usage, BindBufferTargets _type) {
 	}
 
 	public {
-		void bind(BufferUsages usage = _usage) {
-			glBindBuffer(usage, id_);
+		void bind(BindBufferTargets type = _type) {
+			gl.glBindBuffer(type, id_);
 		}
 	}
 }

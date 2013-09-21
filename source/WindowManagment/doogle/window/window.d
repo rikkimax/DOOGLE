@@ -5,7 +5,6 @@ import doogle.window.context;
 import doogle.events.event;
 import doogle.events.types;
 
-
 version(Windows) {
 	static if (!__traits(compiles, {import doogle.window.window_win;})) {
 		pragma(msg, "Windows implementation of window not loaded");
