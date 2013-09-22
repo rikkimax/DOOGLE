@@ -39,17 +39,15 @@ void main() {
 
 	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
 
+	program.use();
+	vao.bind();
+
 	Event ev;
 	while (window.isOpen) {
-		while(window.getEvent(ev) && window.isOpen) {
-			if (ev.type == EventTypes.Close)
-				return;
-		}
+		if (!window.whileOpenEvent()) return;
 
 		glwrap.glClear(true, true);
 
-		program.use();
-		vao.bind();
 		glwrap.glDrawArrays(glwrap.Primitives.Triangles, 0, 3);
 
 		window.redraw();
