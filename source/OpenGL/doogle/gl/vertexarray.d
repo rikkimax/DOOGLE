@@ -32,8 +32,12 @@ shared class VertexArray {
 		}
 
 		void bindAttribute(shared(ShaderProgram) program, string attribute, shared(StandardBuffer) buffer, glwrap.AttribPointerType type, uint count, uint stride=0, int* offset = null) {
-			uint attrib = program.getAttribute(attribute);
 			buffer.bind();
+			bindAttribute(program, attribute, type, count, stride, offset);
+		}
+
+		void bindAttribute(shared(ShaderProgram) program, string attribute, glwrap.AttribPointerType type, uint count, uint stride=0, int* offset = null) {
+			uint attrib = program.getAttribute(attribute);
 			gl.glEnableVertexAttribArray(attrib);
 			gl.glVertexAttribPointer(attrib, count, type, gl.GL_FALSE, stride, offset);
 		}
