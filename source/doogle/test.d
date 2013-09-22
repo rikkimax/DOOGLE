@@ -2,8 +2,6 @@ module test;
 import doogle.platform;
 import doogle.window.window;
 import doogle.gl.shaders;
-import doogle.events.event;
-import doogle.events.types;
 import doogle.gl.buffers;
 import doogle.gl.vertexarray;
 import core.thread;
@@ -37,21 +35,17 @@ void main() {
 	shared VertexArray vao = new shared VertexArray(vbo);
 	vao.bindAttribute(program, "position", vbo, glwrap.AttribPointerType.Float, 3);
 
-	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
-
 	program.use();
 	vao.bind();
 
-	Event ev;
+	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
 	while (window.isOpen) {
 		if (!window.whileOpenEvent()) return;
 
 		glwrap.glClear(true, true);
-
 		glwrap.glDrawArrays(glwrap.Primitives.Triangles, 0, 3);
 
 		window.redraw();
-
 		Thread.sleep(dur!"msecs"(75));
 	}
 }
