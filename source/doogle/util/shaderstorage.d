@@ -88,16 +88,20 @@ private {
 			}
 		}
 	} body {
-		// once we get here we already _know_ the directory exists
 		string[string] ret;
-		try {
-			foreach(entry; dirEntries(dir, SpanMode.shallow)) {
-				ret[baseName(entry)] = cast(string)read(entry);
+		if (exists(dir)) {
+			if (isDir(dir)) {
+				// once we get here we already _know_ the directory exists
+				try {
+					foreach(string entry; dirEntries(dir, SpanMode.shallow)) {
+						ret[baseName(entry)] = cast(string)read(entry);
+					}
+				} catch (Error e) {
+					writeln("Error: Could not use directory ", dir, " for shader loading");
+				} catch (Exception e) {
+					writeln("Error: Could not use directory ", dir, " for shader loading");
+				}
 			}
-		} catch (Error e) {
-			writeln("Error: Could not use directory ", dir, " for shader loading");
-		} catch (Exception e) {
-			writeln("Error: Could not use directory ", dir, " for shader loading");
 		}
 		return ret;
 	}
