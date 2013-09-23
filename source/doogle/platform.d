@@ -5,6 +5,7 @@ public import glwrap = doogle.overloads.wrappers;
 public import glstruct = doogle.overloads.structify;
 
 import doogle.util.shaderstorage;
+import derelict.freetype.ft;
 
 struct PlatformVersions {
 
@@ -31,4 +32,7 @@ __gshared PlatformVersions platform;
 static this() {
 	gl.DerelictGL3.load();
 	shaderStorage.init();
+
+	DerelictFT.load();
+	assert(FT_Init_FreeType !is null);
 }

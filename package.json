@@ -11,6 +11,7 @@
 		"doogle:opengl" : "~master",
 		"doogle:standardplatformwindow" : "~master",
 		"doogle:windowmanagment" : "~master",
+		"doogle:standardcontrols": "~master",
 		"gl3n" : "~master"
 	},
 	"sourcePaths": [
@@ -48,6 +49,18 @@
 			"name": "windowmanagment",
 			"targetType": "library",
 			"sourcePaths": ["source/WindowManagment"]
+		},
+		{
+			"name": "standardcontrols",
+			"targetType": "library",
+			"dependencies": {
+				"doogle:windowmanagment": "~master",
+				"doogle:opengl": "~master",
+				"derelict-ft": "~master"
+			},
+			"sourcePaths": ["source/StandardControls"],
+			"copyFiles-windows-x86": ["libs/freetype-x86-win/libfreetype-6.dll"],
+			"copyFiles-windows-x86_64": ["libs/freetype-x86_64-win/libfreetype-6.dll"]
 		}
 	],
 	"configurations": [
