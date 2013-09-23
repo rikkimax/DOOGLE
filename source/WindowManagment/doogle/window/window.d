@@ -34,7 +34,7 @@ abstract shared class Window_Def : Component, ComponentChildable {
 	protected {
 		bool _isOpen, _hasFocus;
 		ComponentChild[] _children;
-		Context _context;
+		Context _context = null;
 		WindowStyle _windowStyle;
 
 		/**

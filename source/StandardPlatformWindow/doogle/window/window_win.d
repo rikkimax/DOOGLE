@@ -22,7 +22,7 @@ version(Windows) {
 		protected {
 			platform.windows.HWND _window;
 			platform.windows.MSG _msg;
-			platform.windows.WNDCLASSW _wndclass;
+			platform.windows.WNDCLASSEXW _wndclass;
 			size_t _windowId;
 			uint _style;
 		}
@@ -37,6 +37,7 @@ version(Windows) {
 				windows[_windowId] = this;
 				
 				wchar[] appName = to!(wchar[])("DOOGLE_WINDOW"w ~ cast(wchar)windowCount ~ 0);
+				_wndclass.cbSize = _wndclass.sizeof;
 				_wndclass.style         = platform.windows.CS_HREDRAW | platform.windows.CS_VREDRAW;
 				_wndclass.lpfnWndProc   = &windowEventHandler;
 				_wndclass.cbClsExtra    = 0;
@@ -48,7 +49,7 @@ version(Windows) {
 				_wndclass.lpszMenuName  = null;
 				_wndclass.lpszClassName = cast(shared(ushort*))appName.ptr;
 
-				if(!platform.windows.RegisterClassW(cast(platform.windows.WNDCLASSW*)&_wndclass)) {
+				if(!platform.windows.RegisterClassExW(cast(platform.windows.WNDCLASSEXW*)&_wndclass)) {
 					platform.windows.MessageBoxW(cast(platform.windows.HWND)null, cast(ushort*)"This program requires Windows NT!".ptr, cast(ushort*)appName.ptr, platform.windows.MB_ICONERROR);
 					return;
 				}
@@ -116,14 +117,7 @@ version(Windows) {
 				_context = null;
 				_windowStyle = style;
 
-				Event ev;
-				while (true) {
-					while(getEvent(ev)) {
-						if (ev.type == EventTypes.Focus)
-							goto GrabContext;
-					}
-				}
-GrabContext:		getContext();
+				getContext();
 			}
 		}
 
@@ -215,11 +209,12 @@ GrabContext:		getContext();
 
 			override shared(Context) getContext(ubyte color = 32, ubyte depth = 24, ubyte stencil = 8, ubyte antialias = 1) {
 				synchronized {
-					if (_context !is null) {
+					if (_context is null) {
+						_context = new shared Context(color, depth, stencil, antialias, cast(shared)platform.windows.GetDC(cast(platform.windows.HWND)_window));
+						_context.activate();
+						gl.DerelictGL3.reload();
 						return _context;
 					} else {
-						_context = new shared Context(color, depth, stencil, antialias, cast(shared)platform.windows.GetDC(cast(platform.windows.HWND)_window));
-						gl.DerelictGL3.reload();
 						return _context;
 					}
 				}
@@ -318,6 +313,7 @@ GrabContext:		getContext();
 								return cast(platform.windows.LRESULT)null;
 							} else {
 								ev.type = EventTypes.Focus;
+								getContext().activate();
 								_hasFocus = true;
 								break;
 							}
@@ -422,6 +418,12 @@ GrabContext:		getContext();
 					return platform.windows.DefWindowProcW(cast(platform.windows.HWND)_window, msg, wParam, lParam);
 				}
 			}
+
+			void addConstructEvent() {
+				Event ev;
+				ev.type = EventTypes.Creation;
+				_events ~= ev;
+			}
 		}
 	}
 }
@@ -437,6 +439,7 @@ extern(Windows) protected platform.windows.LRESULT windowEventHandler(platform.w
 				window.hwnd = cast(shared)hwnd;
 				platform.windows.SetWindowLongW(hwnd, platform.windows.GWL_USERDATA, cast(int)window.id);
 				//assert(cast(size_t)(platform.windows.GetWindowLongW(hwnd, platform.windows.GWL_USERDATA)) == window.id);
+				window.addConstructEvent();
 				break;
 			case platform.windows.WM_DESTROY:
 				platform.windows.PostQuitMessage(0);
