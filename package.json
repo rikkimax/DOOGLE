@@ -31,7 +31,8 @@
 		{
 			"name": "opengl",
 			"targetType": "library",
-			"sourcePaths": ["source/OpenGL"]
+			"sourcePaths": ["source/OpenGL"],
+			"libs-posix": ["dl"]
 		},
 		{
 			"name": "standardplatformwindow",
@@ -40,8 +41,8 @@
 				"doogle:windowmanagment" : "~master"
 			},
 			"sourcePaths": ["source/StandardPlatformWindow"],
-			
-			"libs-windows": ["user32"],
+			"libs-posix": ["X11", "Xrandr"],
+			"libs-windows": ["user32", "gdi32"],
 			"sourcePaths-windows": ["source/WindowsAPI"],
 			"sourcePaths-posix": ["source/libX11"]
 		},
