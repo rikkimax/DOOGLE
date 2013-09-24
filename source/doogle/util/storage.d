@@ -39,7 +39,7 @@ template StorageManager(T, string thing) {
 				return defaults.get(mod, "");
 			}
 
-			void init() {
+			private void init() {
 				// TODO detect the different locations
 				// load the shaders up from it
 				string dir;
