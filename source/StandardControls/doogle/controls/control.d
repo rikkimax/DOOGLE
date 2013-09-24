@@ -1,2 +1,0 @@
-module doogle.controls.control;
-
