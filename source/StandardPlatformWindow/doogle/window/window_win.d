@@ -224,12 +224,16 @@ version(Windows) {
 				synchronized {
 					if (!_context) return;
 					_context.activate();
-					platform.windows.UpdateWindow(cast(platform.windows.HWND)_window);
-					platform.windows.SwapBuffers(platform.windows.GetDC(cast(platform.windows.HWND)_window));
+
+					Event ev;
+					ev.type = EventTypes.Draw;
+					childEvent(ev);
 
 					foreach(child; _children) {
 						child.redraw(this);
 					}
+					platform.windows.UpdateWindow(cast(platform.windows.HWND)_window);
+					platform.windows.SwapBuffers(platform.windows.GetDC(cast(platform.windows.HWND)_window));
 				}
 			}
 

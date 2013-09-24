@@ -126,6 +126,16 @@ abstract shared class Window_Def : Component, ComponentChildable {
 			}
 			return true;
 		}
+
+		void childEvent(shared(Event) event) {
+			foreach(k; _eventHandlers.keys) {
+				if (k == event.type) {
+					foreach(handler; _eventHandlers[k]) {
+						if (handler(event, this)) break;
+					}
+				}
+			}
+		}
 	}
 }
 
