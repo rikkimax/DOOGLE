@@ -1,8 +1,14 @@
 module doogle.controls.font;
-import doogle.util.image;
-import doogle.gl.texture;
+public import doogle.gl.texture : RawTexture, Texture;
 
-static if (__traits(compiles, {import doogle.controls.font_freetype;})) {
+/**
+ * Loading order of different global font definitions
+ * Allows for non supported implementations to be supplied
+ */
+static if (__traits(compiles, {import doogle.controls.font_impl;})) {
+	public import doogle.controls.font_impl;
+	alias Font_Impl Font;
+} else static if (__traits(compiles, {import doogle.controls.font_freetype;})) {
 	public import doogle.controls.font_freetype;
 	alias Font_FreeType Font;
 } else {
@@ -10,28 +16,10 @@ static if (__traits(compiles, {import doogle.controls.font_freetype;})) {
 	static assert(0);
 }
 
-shared class Font_Def {
-	/*this(string name, ubyte size, float kerning) {
+abstract shared class Font_Def {
+	this(string name, ubyte size, float kerning) {
 
-	}*/
-
-	//FontImage get(wstring text);
-}
-
-/*shared class FontImage : Image {
-	@property {
-		size_t width();
-		size_t height();
-		size_t depth();
-		shared(Color[][]) colors();
-		shared(Color[]) values();
-		shared(ubyte[]) data();
-		InternalFormat format();
-		void colors(shared(Color[][]));
-		void values(shared(Color[]));
-		void data(shared(ubyte[]));
-		void format(InternalFormat);
-		RawImage opCast(T : RawImage)();
-		RawImage opCast(T : RawTexture)();
 	}
-}*/
+
+	Texture get(wstring text);
+}
