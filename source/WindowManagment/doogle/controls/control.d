@@ -47,3 +47,11 @@ abstract shared class Control_Def : ComponentChild {
 		return font_;
 	}
 }
+
+shared interface ControlChildable {
+	public {
+		void addChild(shared(Control) child);
+		void removeChild(shared(Control));
+		@property shared(Control)[] childControls();
+	}
+}
