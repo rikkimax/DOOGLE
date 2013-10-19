@@ -6,7 +6,7 @@ import std.path : buildPath, baseName;
 import std.stdio : writeln;
 
 __gshared StorageManager!(string, "shaders") shaders;
-__gshared StorageManager!(string, "fonts") fonts;
+__gshared StorageManager!(ubyte[], "fonts") fonts;
 
 template StorageManager(T, string thing) {
 	private {
@@ -14,29 +14,39 @@ template StorageManager(T, string thing) {
 		 * Once app start this should be read only ;)
 	     */
 
-		__gshared T[string] defaults;
-		__gshared T[string] apps;
-		__gshared T[string] systems;
-		__gshared T[string] users;
-
 		struct StorageManager {
-			void registerDefault(string mod, T shader) {
-				defaults[mod] = shader;
+			__gshared T[string] local;
+			__gshared T[string] defaults;
+			__gshared T[string] apps;
+			__gshared T[string] systems;
+			__gshared T[string] users;
+
+			void registerLocal(string mod, T value) {
+				local[mod] = value;
 			}
 
-			void registerApps(string mod, T shader) {
-				apps[mod] = shader;
+			void registerDefault(string mod, T value) {
+				defaults[mod] = value;
 			}
 
-			void registerSystems(string mod, T shader) {
-				systems[mod] = shader;
+			void registerApps(string mod, T value) {
+				apps[mod] = value;
+			}
+
+			void registerSystems(string mod, T value) {
+				systems[mod] = value;
+			}
+
+			void registerUsers(string mod, T value) {
+				users[mod] = value;
 			}
 
 			T get(string mod) {
+				if (local.keys.canFind(mod)) return local[mod];
 				if (apps.keys.canFind(mod)) return apps[mod];
 				if (users.keys.canFind(mod)) return users[mod];
 				if (systems.keys.canFind(mod)) return systems[mod];
-				return defaults.get(mod, "");
+				return defaults.get(mod, T.init);
 			}
 
 			private void init() {
@@ -44,6 +54,9 @@ template StorageManager(T, string thing) {
 				// load the shaders up from it
 				string dir;
 				version(Windows) {
+					// detect local dir
+					dir = buildPath(thing);
+					local = getShaderFromFileSystem(dir);
 					// detect users
 					dir = buildPath(environment["LOCALAPPDATA"], "doogle", thing);
 					users = getShaderFromFileSystem(dir);
