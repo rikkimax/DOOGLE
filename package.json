@@ -84,7 +84,8 @@
 		{
 			"name": "test",
 			"targetType": "executable",
-			"platforms": ["windows"]
+			"platforms": ["windows"],
+			"copyFiles": ["resources/AnonymousPro-1.002.001/Anonymous_Pro.ttf"]
 		}
 	]
 }
