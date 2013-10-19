@@ -40,11 +40,15 @@ abstract shared class Control_Def : ComponentChild {
 	}
 
 	@property void font(shared(Font) f) {
-		font_ = f;
+		synchronized {
+			font_ = f;
+		}
 	}
 
 	@property shared(Font) font() {
-		return font_;
+		synchronized {
+			return font_;
+		}
 	}
 }
 
