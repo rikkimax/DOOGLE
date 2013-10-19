@@ -2,13 +2,14 @@ module doogle.util.image;
 public import doogle.util.color : Color, Color3, Color4;
 import doogle.overloads.structify;
 public import doogle.gl.texture : Texture;
-public import doogle.overloads.wrappers : InternalFormat;
+public import doogle.overloads.wrappers : InternalFormat, PixelFormat;
 
 shared class Image {
 	size_t width_;
 	size_t height_;
 	size_t depth_;
 	InternalFormat format_;
+	PixelFormat pformat_;
 	union {
 		ubyte[] data_;
 		Color[] colors_;
@@ -25,6 +26,11 @@ shared class Image {
 		height_ = _height;
 		depth_ = _depth;
 		format_ = _format;
+		if (_format == InternalFormat.RGB8) {
+			pformat_ = PixelFormat.RGB;
+		} else {
+			pformat_ = cast(PixelFormat)_format;
+		}
 
 		data_ = _data;
 	}
@@ -40,7 +46,15 @@ shared class Image {
 	
 	@property shared(Texture) texture() {
 		synchronized {
-			return new shared Texture(data_, cast(uint)width_, cast(uint)height_, cast(uint)depth_, BindTextureTarget.Texture2D, cast(InternalFormat)format_);
+			return new shared Texture(data_, cast(uint)width_, cast(uint)height_, cast(uint)depth_, BindTextureTarget.Texture2D, cast(InternalFormat)format_, pformat_);
+		}
+	}
+
+	void opOpAssign(string s)(ubyte _data) {
+		synchronized {
+			static if (s =="~") {
+				data_ ~= _data;
+			}
 		}
 	}
 
@@ -111,6 +125,12 @@ shared class Image {
 			}
 		}
 
+		ref PixelFormat pformat() {
+			synchronized {
+				return pformat_;
+			}
+		}
+
 		void values(shared(Color[]) _colors) {
 			synchronized {
 				colors_ = _colors;
@@ -126,6 +146,12 @@ shared class Image {
 		void format(InternalFormat _format) {
 			synchronized {
 				format_ = _format;
+			}
+		}
+
+		void pformat(PixelFormat _pformat) {
+			synchronized {
+				pformat_ = _pformat;
 			}
 		}
 	}

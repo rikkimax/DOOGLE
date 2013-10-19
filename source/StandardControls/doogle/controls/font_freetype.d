@@ -17,7 +17,8 @@ shared class Font_FreeType : Font_Def {
 		ubyte[] fontvalue;
 	}
 
-	this(string name, float size, float kerning = float.nan) {
+	this(string name, size_t size, size_t kerning = 0) {
+		size *= 64; // FreeType pt conversion
 		super(name, size, kerning);
 
 		FT_Error error;
@@ -37,40 +38,96 @@ shared class Font_FreeType : Font_Def {
 			throw new Exception("Could not use font " ~ name ~ " with error " ~ to!string(error));
 		}
 
-		error = FT_Set_Pixel_Sizes(cast(FT_Face)ftface, 0, cast(int)size);
+		error = FT_Set_Char_Size(cast(FT_Face)ftface, 0, cast(int)size, 300, 300);
 		if (error) {
 			throw new Exception("Could not use font " ~ name ~ " with size " ~ to!string(size) ~ " error " ~ to!string(error));
+		}
+	}
+
+	~this() {
+		synchronized {
+			FT_Done_Face(cast(FT_Face)ftface);
 		}
 	}
 
 	override shared(Image) get(wstring text) {
 		synchronized {
 			shared(Image) ret = new shared Image();
-			ret.format = InternalFormat.RGB;
-			FT_Error error;
+			ret.format = InternalFormat.RGB8;
+			ret.pformat = glwrap.PixelFormat.RGB;
+			ret.depth = 0;
 
+			FT_Error error;
 			FT_GlyphSlot slot = cast(FT_GlyphSlot)ftface.glyph;
-			int pen_x, pen_y;
+
+			ubyte[][] data;
+			size_t x;
+			size_t maxWidth = 0;
+			size_t width;
+			size_t height;
 
 			foreach(wchar c; text) {
 				FT_UInt glyph_index;
 
-				glyph_index = FT_Get_Char_Index(cast(FT_Face)ftface, c);
+				//glyph_index = FT_Get_Char_Index(cast(FT_Face)ftface, c);
+				//if (glyph_index == 0)  throw new Exception("Unknown charactor code " ~ cast(char)c ~ " error " ~ to!string(error));
+
+				/*glyph_index = FT_Get_Char_Index(cast(FT_Face)ftface, c);
+				if (glyph_index == 0)  throw new Exception("Unknown charactor code " ~ cast(char)c ~ " error " ~ to!string(error));
 
 				error = FT_Load_Glyph(cast(FT_Face)ftface, glyph_index, FT_LOAD_DEFAULT);
-				if (error) continue;
+				if (error) throw new Exception("Could not create glpyh for " ~ cast(string)text ~ " error " ~ to!string(error));*/
 
-				error = FT_Render_Glyph(slot, FT_RENDER_MODE_NORMAL);
-				if (error) continue;
+				error = FT_Load_Char(cast(FT_Face)ftface, c, FT_LOAD_RENDER);
+				if (error) throw new Exception("Could not load glpyh for " ~ cast(char)c ~ " error " ~ to!string(error));
+
+				//error = FT_Render_Glyph(slot, FT_RENDER_MODE_NORMAL);
+				//if (error) throw new Exception("Could not render glyph for " ~ cast(string)text ~ " error " ~ to!string(error));
 
 				ubyte* buffer = cast(ubyte*)(*slot).bitmap.buffer;
-				ret.width = (*slot).bitmap.width;
-				ret.height = (*slot).bitmap.rows;
+				height = (*slot).bitmap.rows;
+				width = (*slot).bitmap.width;
+				if (data.length < height) {
+					data.length = height;
+				}
 
-				for (uint i = 0; i < ret.width + ret.height; i++) {
-					ret.data() ~= *(buffer + i);
+				for (size_t i = 0; i < width * height; i++) {
+					data[(i / width) % height].length = width + x;
+					data[(i / width) % height][(i % width) + x] = *(buffer + i);
+				}
+
+				ubyte[] kerningAdd;
+				for(uint i = 0; i < kerning; i++) {
+					kerningAdd ~= 0;
+				}
+
+				foreach(ub; data) {
+					ub ~= kerningAdd;
+				}
+
+				x += width + kerning;
+
+				if (maxWidth < x) {
+					maxWidth = x;
 				}
 			}
+
+			foreach(ubyte[] ub; data) {
+				size_t need = maxWidth - ub.length;
+				foreach(u; ub) {
+					ret ~= u;
+					ret ~= u;
+					ret ~= u;
+				}
+
+				for(uint i; i < need; i++) {
+					ret ~= 0;
+					ret ~= 0;
+					ret ~= 0;
+				}
+			}
+			ret.width = maxWidth;
+			ret.height = data.length;
 
 			return ret;
 		}

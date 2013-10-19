@@ -63,14 +63,14 @@ void main() {
 	vao.bindAttribute(program, "position", vbo, glwrap.AttribPointerType.Float, 2);
 	vao.bindAttribute(program, "texcoord", vbo, glwrap.AttribPointerType.Float, 2, 0, cast(int*)(vec2.sizeof * 4));
 
-	shared Font font = new shared Font("Anonymous Pro", 16);
-	auto text_hi = font.get("gfdghhghg");
+	shared Font font = new shared Font("Anonymous Pro", 50, 3);
+	auto text_hi = font.get("Hi");
 	auto whiteRed = new shared Image(3, 3, 0, InternalFormat.RGB8, [
 		255, 255, 255,/* */ 255, 255, 255,/* */ 255, 255, 255,
 		255, 255, 255,/* */ 255, 0, 0,/* */ 255, 255, 255,
 		255, 255, 255,/* */ 255, 255, 255,/* */ 255, 255, 255]);
 
-	shared Texture texture = whiteRed.texture;
+	shared Texture texture = text_hi.texture;
 	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
 	while (window.isOpen) {
 		if (!window.whileOpenEvent()) return;

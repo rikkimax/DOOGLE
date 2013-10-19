@@ -1,7 +1,7 @@
 module doogle.gl.texture;
 import doogle.platform;
 public import doogle.gl.buffers;
-public import doogle.overloads.wrappers : InternalFormat, BindTextureTarget;
+public import doogle.overloads.wrappers : InternalFormat, BindTextureTarget, PixelFormat;
 import doogle.util.color;
 
 shared class Texture {
@@ -18,16 +18,18 @@ shared class Texture {
 		
 		BindTextureTarget target_;
 		InternalFormat format_;
+		PixelFormat pformat_;
 		uint id_;
 	}
 	
 	
-	this(shared(ubyte[]) _colors, size_t _width, size_t _height = 1, size_t _depth=1, BindTextureTarget _target = BindTextureTarget.Texture2D, InternalFormat _format = InternalFormat.RGBA) {
+	this(shared(ubyte[]) _colors, size_t _width, size_t _height = 1, size_t _depth=1, BindTextureTarget _target = BindTextureTarget.Texture2D, InternalFormat _format = InternalFormat.RGBA, PixelFormat _pformat = glwrap.PixelFormat.RGBA) {
 		width_ = _width;
 		height_ = _height;
 		target_ = _target;
 		depth_ = _depth;
 		format_ = _format;
+		pformat_ = _pformat;
 		
 		if (_format == InternalFormat.RGB) {
 			ubyte i = 0;
@@ -46,24 +48,26 @@ shared class Texture {
 		setup();
 	}
 	
-	this(shared(Color[]) _colors, size_t _width, size_t _height = 1, size_t _depth=1, BindTextureTarget _target = BindTextureTarget.Texture2D, InternalFormat _format = InternalFormat.RGBA) {
+	this(shared(Color[]) _colors, size_t _width, size_t _height = 1, size_t _depth=1, BindTextureTarget _target = BindTextureTarget.Texture2D, InternalFormat _format = InternalFormat.RGBA, PixelFormat _pformat = glwrap.PixelFormat.RGBA) {
 		width_ = _width;
 		height_ = _height;
 		target_ = _target;
 		depth_ = _depth;
 		format_ = _format;
-		
+		pformat_ = _pformat;
+
 		values_ = _colors;
 		setup();
 	}
 	
-	this(shared(Color[][]) _colors, size_t _width, size_t _height = 1, size_t _depth=1, BindTextureTarget _target = BindTextureTarget.Texture2D, InternalFormat _format = InternalFormat.RGBA) {
+	this(shared(Color[][]) _colors, size_t _width, size_t _height = 1, size_t _depth=1, BindTextureTarget _target = BindTextureTarget.Texture2D, InternalFormat _format = InternalFormat.RGBA, PixelFormat _pformat = glwrap.PixelFormat.RGBA) {
 		width_ = _width;
 		height_ = _height;
 		target_ = _target;
 		depth_ = _depth;
 		format_ = _format;
-		
+		pformat_ = _pformat;
+
 		colors_ = _colors;
 		setup();
 	}
@@ -186,9 +190,9 @@ shared class Texture {
 		void update() {
 			synchronized {
 				if (target_ == BindTextureTarget.Texture3D) {
-					glwrap.glTexImage3D(target_, 0, cast(InternalFormat)format_, cast(uint)width_, cast(uint)height_, cast(uint)depth_, glwrap.PixelFormat.RGB, glwrap.PixelDataType.UByte, cast(void[])data_);
+					glwrap.glTexImage3D(target_, 0, cast(InternalFormat)format_, cast(uint)width_, cast(uint)height_, cast(uint)depth_, pformat_, glwrap.PixelDataType.UByte, cast(void[])data_);
 				} else if (target_ == BindTextureTarget.Texture2D) {
-					glwrap.glTexImage2D(target_, 0, cast(InternalFormat)format_, cast(uint)width_, cast(uint)height_, glwrap.PixelFormat.RGB, glwrap.PixelDataType.UByte, cast(void[])data_);
+					glwrap.glTexImage2D(target_, 0, cast(InternalFormat)format_, cast(uint)width_, cast(uint)height_, pformat_, glwrap.PixelDataType.UByte, cast(void[])data_);
 				}
 				gl.glGenerateMipmap(target_);
 			}

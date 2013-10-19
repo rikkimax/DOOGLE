@@ -19,11 +19,11 @@ static if (__traits(compiles, {import doogle.controls.font_impl;})) {
 abstract shared class Font_Def {
 	protected {
 		string name;
-		float size;
-		float kerning;
+		size_t size;
+		size_t kerning;
 	}
 
-	this(string name, float size, float kerning = float.nan) {
+	this(string name, size_t size, size_t kerning = 0) {
 		this.name = name;
 		this.size = size;
 		this.kerning = kerning;
