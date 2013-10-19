@@ -8,6 +8,14 @@ import doogle.util.color;
 import doogle.util.image;
 import doogle.platform;
 
+/*
+ * OpenGL 1.0
+ */
+
+void glTexImage2D(TextureTargets target, gl.GLint level, shared(Image) image) {
+	gl.glTexImage2D(cast(gl.GLenum)target, level, cast(gl.GLenum)image.format, cast(uint)image.width, cast(uint)image.height, 0, cast(gl.GLenum)image.format, cast(gl.GLenum)image.format, cast(void*)image.data.ptr);
+}
+
 /**
  * OpenGL 1.1
  */
@@ -52,11 +60,11 @@ void glBlendColor(Color c) {
 	gl.glBlendColor(c.r / 255f, c.g / 255f, c.b / 255f, c.a / 255f);
 }
 
-void glTexImage3D(TextureTargets target, gl.GLint level, RawImage image) {
+void glTexImage3D(TextureTargets target, gl.GLint level, shared(Image) image) {
 	gl.glTexImage3D(cast(gl.GLenum)target, level, cast(gl.GLenum)image.format, cast(uint)image.width, cast(uint)image.height, cast(uint)image.depth, 0, cast(gl.GLenum)image.format, cast(gl.GLenum)image.format, cast(void*)image.data.ptr);
 }
 
-void glTexSubImage3D(SubTextureTargets target, gl.GLint level, gl.GLint xoffset, gl.GLint yoffset, gl.GLint zoffset, RawImage image) {
+void glTexSubImage3D(SubTextureTargets target, gl.GLint level, gl.GLint xoffset, gl.GLint yoffset, gl.GLint zoffset, shared(Image) image) {
 	gl.glTexSubImage3D(cast(gl.GLenum)target, level, xoffset, yoffset, zoffset, cast(uint)image.width, cast(uint)image.height, cast(uint)image.depth, cast(gl.GLenum)image.format, cast(gl.GLenum)image.format, cast(void*)image.data.ptr);
 }
 
@@ -64,42 +72,42 @@ void glTexSubImage3D(SubTextureTargets target, gl.GLint level, gl.GLint xoffset,
  * OpenGL 1.3
  */
 
-void glCompressedTexImage3D(TextureTargets target, gl.GLint level, RawImage image)
+void glCompressedTexImage3D(TextureTargets target, gl.GLint level, shared(Image) image)
 in {
 	assert(level >= 0);
 } body {
 	gl.glCompressedTexImage3D(cast(gl.GLenum)target, level, cast(gl.GLenum)image.format, cast(uint)image.width, cast(uint)image.height, cast(uint)image.depth, 0, cast(uint)image.data.length, cast(void*)image.data.ptr);
 }
 
-void glCompressedTexImage2D(TextureTargets2D target, gl.GLint level, RawImage image)
+void glCompressedTexImage2D(TextureTargets2D target, gl.GLint level, shared(Image) image)
 in {
 	assert(level >= 0);
 } body {
 	gl.glCompressedTexImage2D(cast(gl.GLenum)target, level, cast(gl.GLenum)image.format, cast(uint)image.width, cast(uint)image.height, 0, cast(uint)image.data.length, cast(void*)image.data.ptr);
 }
 
-void glCompressedTexImage1D(TextureTargets1D target, gl.GLint level, RawImage image)
+void glCompressedTexImage1D(TextureTargets1D target, gl.GLint level, shared(Image) image)
 in {
 	assert(level >= 0);
 } body {
 	gl.glCompressedTexImage1D(cast(gl.GLenum)target, level, cast(gl.GLenum)image.format, cast(uint)image.width, 0, cast(uint)image.data.length, cast(void*)image.data.ptr);
 }
 
-void glCompressedTexSubImage3D(gl.GLint level, gl.GLint xoffset, gl.GLint yoffset, gl.GLint zoffset, RawImage image)
+void glCompressedTexSubImage3D(gl.GLint level, gl.GLint xoffset, gl.GLint yoffset, gl.GLint zoffset, shared(Image) image)
 in {
 	assert(level >= 0);
 } body {
 	gl.glCompressedTexSubImage3D(gl.GL_TEXTURE_3D, level, xoffset, yoffset, zoffset, cast(uint)image.width, cast(uint)image.height, cast(uint)image.depth, cast(gl.GLenum)image.format, cast(uint)image.data.length, cast(void*)image.data.ptr);
 }
 
-void glCompressedTexSubImage2D(CompressedTextureTargets2D target, gl.GLint level, gl.GLint xoffset, gl.GLint yoffset, RawImage image)
+void glCompressedTexSubImage2D(CompressedTextureTargets2D target, gl.GLint level, gl.GLint xoffset, gl.GLint yoffset, shared(Image) image)
 in {
 	assert(level >= 0);
 } body {
 	gl.glCompressedTexSubImage2D(cast(gl.GLenum)target, level, xoffset, yoffset, cast(uint)image.width, cast(uint)image.height, cast(gl.GLenum)image.format, cast(uint)image.data.length, cast(void*)image.data.ptr);
 }
 
-void glCompressedTexSubImage1D(gl.GLint level, gl.GLint xoffset, RawImage image)
+void glCompressedTexSubImage1D(gl.GLint level, gl.GLint xoffset, shared(Image) image)
 in {
 	assert(level >= 0);
 } body {

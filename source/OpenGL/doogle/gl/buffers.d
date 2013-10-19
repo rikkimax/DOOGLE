@@ -1,4 +1,5 @@
 module doogle.gl.buffers;
+import doogle.util.image;
 public import doogle.overloads.wrappers : BindBufferTargets, BufferUsages;
 import doogle.platform;
 public import gl3n.linalg : vec4, vec3, vec2, mat2, mat3, mat34, mat4;
@@ -33,7 +34,10 @@ shared class Buffer(BufferUsages _usage, BindBufferTargets _type) {
 	this(mat34 data) {this(cast(void[])data.matrix);}
 	this(mat4 data) {this(cast(void[])data.matrix);}
 
+	this(shared(Image) data) {this(cast(void[])data.data);}
+
 	this(float[] data...) {this(cast(void[])data);}
+	this(ubyte[] data...) {this(cast(void[])data);}
 
 	this(void[] data) {
 		gl.glGenBuffers(1, cast(uint*)&id_);

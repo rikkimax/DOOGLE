@@ -27,6 +27,7 @@ shared class ShaderProgram {
 		if (geom !is null)
 			attach(geom, false);
 		link();
+		bind();
 	}
 
 	~this() {
@@ -77,7 +78,7 @@ shared class ShaderProgram {
 		}
 	}
 
-	void use() {
+	void bind() {
 		synchronized {
 			glwrap.glUseProgram(id_);
 		}

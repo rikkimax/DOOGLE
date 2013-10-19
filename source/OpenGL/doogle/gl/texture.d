@@ -1,77 +1,99 @@
 module doogle.gl.texture;
-import doogle.util.image;
+import doogle.platform;
+public import doogle.gl.buffers;
+public import doogle.overloads.wrappers : InternalFormat, BindTextureTarget;
 import doogle.util.color;
-import doogle.util.misc;
-public import doogle.overloads.wrappers : InternalFormat;
-import doogle.overloads.structify;
-public import doogle.overloads.structify : TextureObj;
 
-shared interface Texture {
-	void activate();
-
-	@property {
-		TextureObj opCast(T : TextureObj)();
-	}
-}
-
-private {
-	pure size_t bitdepth(size_t depth) { return depth / 8; }
-
-	shared Texture currentTexture;
-}
-
-shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8, TextureTargets target_ = TextureTargets.Texture2DArray) : Image, Texture {
+shared class Texture {
 	protected {
+		size_t width_;
+		size_t height_;
+		size_t depth_;
+		
 		union {
-			Color[_width * bitdepth(_depth)][_height * bitdepth(_depth)] colors_;
-			Color[_height * _width * bitdepth(_depth)] values_;
-			ubyte[_height * _width * Color.sizeof * bitdepth(_depth)] data_;
+			Color[][] colors_;
+			Color[] values_;
+			ubyte[] data_;
 		}
-		size_t height_ = _height;
-		size_t width_ = _width;
-		size_t depth_ = _depth;
+		
+		BindTextureTarget target_;
 		InternalFormat format_;
-		TextureObj id_;
+		uint id_;
 	}
-
-	this(shared(ubyte[]) colors)
-	in {
-		assert(colors.length == data_.length);
-	} body {
-		this(cast(shared(Color[])) colors);
+	
+	
+	this(shared(ubyte[]) _colors, size_t _width, size_t _height = 1, size_t _depth=1, BindTextureTarget _target = BindTextureTarget.Texture2D, InternalFormat _format = InternalFormat.RGBA) {
+		width_ = _width;
+		height_ = _height;
+		target_ = _target;
+		depth_ = _depth;
+		format_ = _format;
+		
+		if (_format == InternalFormat.RGB) {
+			ubyte i = 0;
+			foreach(b; _colors) {
+				data_ ~= b;
+				if (i < 2) {
+					i++;
+				} else {
+					data_ ~= 1;
+					i = 0;
+				}
+			}
+		} else {
+			data_ = _colors;
+		}
+		setup();
 	}
-
-	this(shared(Color[]) colors)
-	in {
-		assert(colors.length == values_.length);
-	} body {
-		values_ = colors;
-		glGenTextures(id_);
+	
+	this(shared(Color[]) _colors, size_t _width, size_t _height = 1, size_t _depth=1, BindTextureTarget _target = BindTextureTarget.Texture2D, InternalFormat _format = InternalFormat.RGBA) {
+		width_ = _width;
+		height_ = _height;
+		target_ = _target;
+		depth_ = _depth;
+		format_ = _format;
+		
+		values_ = _colors;
+		setup();
 	}
-
+	
+	this(shared(Color[][]) _colors, size_t _width, size_t _height = 1, size_t _depth=1, BindTextureTarget _target = BindTextureTarget.Texture2D, InternalFormat _format = InternalFormat.RGBA) {
+		width_ = _width;
+		height_ = _height;
+		target_ = _target;
+		depth_ = _depth;
+		format_ = _format;
+		
+		colors_ = _colors;
+		setup();
+	}
+	
 	~this() {
 		synchronized {
 			// destroy obj
-			glDeleteTextures(id_);
+			gl.glDeleteTextures(1, cast(uint*)&id_);
 		}
 	}
 	
-	RawImage opCast(T : RawImage)() {
+	glstruct.TextureObj opCast(T : glstruct.TextureObj)() {
 		synchronized {
-			return RawImage(width, height, format_, values_);
+			return cast(glstruct.TextureObj)id_;
 		}
 	}
-
-	TextureObj opCast(T : TextureObj)() {
+	
+	uint opCast(T : uint)() {
 		synchronized {
-			return id_;
+			return cast(uint)id_;
 		}
 	}
-
-	void activate() {
+	
+	void bind() {
 		synchronized {
-			currentTexture = this;
-			glBindTexture(target_, id_);
+			//currentTexture = this;
+			gl.glActiveTexture(gl.GL_TEXTURE0);
+			glwrap.glBindTexture(target_, id_);
+			gl.glTexParameteri(target_, gl.GL_TEXTURE_MIN_FILTER, gl.GL_NEAREST_MIPMAP_NEAREST);
+			gl.glTexParameteri(target_, gl.GL_TEXTURE_MAG_FILTER, gl.GL_NEAREST);
 		}
 	}
 	
@@ -81,22 +103,16 @@ shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8, Te
 				return width_;
 			}
 		}
-
+		
 		size_t height() {
 			synchronized {
 				return height_;
 			}
 		}
 		
-		size_t depth() {
-			synchronized {
-				return depth_;
-			}
-		}
-		
 		shared(Color[][]) colors() {
 			synchronized {
-				return cast(shared(Color[][]))cast(shared(Color[_width][]))colors_;
+				return colors_;
 			}
 		}
 		
@@ -126,20 +142,20 @@ shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8, Te
 		
 		void colors(shared(Color[][]) v)
 		in {
-			static assert(v.length == _height * bitdepth(_depth));
+			assert(v.length == height_);
 			foreach (v2; v) {
-				static assert(v2.length == _width * bitdepth(_depth));
+				assert(v2.length == width_);
 			}
 		} body {
 			synchronized {
-				colors_ = cast(shared(Color[_width][]))v;
+				colors_ = v;
 				update();
 			}
 		}
 		
 		void values(shared(Color[]) v)
 		in {
-			static assert(v.length == _height * _width * bitdepth(_depth));
+			assert(v.length == height_ * width_);
 		} body {
 			synchronized {
 				values_ = v;
@@ -149,7 +165,7 @@ shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8, Te
 		
 		void data(shared(ubyte[]) v)
 		in {
-			static assert(v.length == _height * _width * Color.sizeof * bitdepth(_depth));
+			assert(v.length == height_ * width_ * Color.sizeof);
 		} body {
 			synchronized {
 				data_ = v;
@@ -157,28 +173,25 @@ shared class RawTexture(size_t _width, size_t _height = 1, size_t _depth = 8, Te
 			}
 		}
 	}
-
+	
 	protected {
+		void setup() {
+			gl.glPixelStorei(gl.GL_UNPACK_ALIGNMENT, 1);
+			gl.glGenTextures(1, cast(uint*)&id_);
+			bind();
+			update();
+			gl.glPixelStorei(gl.GL_UNPACK_ALIGNMENT, 4);
+		}
+	
 		void update() {
 			synchronized {
-				glTexImage3D(target_, 0, format_, width_, height_, depth_, format_, cast(void[])data_);
+				if (target_ == BindTextureTarget.Texture3D) {
+					glwrap.glTexImage3D(target_, 0, cast(InternalFormat)format_, cast(uint)width_, cast(uint)height_, cast(uint)depth_, glwrap.PixelFormat.RGB, glwrap.PixelDataType.UByte, cast(void[])data_);
+				} else if (target_ == BindTextureTarget.Texture2D) {
+					glwrap.glTexImage2D(target_, 0, cast(InternalFormat)format_, cast(uint)width_, cast(uint)height_, glwrap.PixelFormat.RGB, glwrap.PixelDataType.UByte, cast(void[])data_);
+				}
+				gl.glGenerateMipmap(target_);
 			}
 		}
 	}
-}
-
-unittest {
-	shared(Image) image = new shared RawTexture!(2, 1)([0, 0, 0, 0,
-														0, 0, 0, 0]);
-	image.values = [
-		Color(1, 2, 3, 4),
-		Color(5, 6, 7, 8)];
-	
-	assert(image.data == [1, 2, 3, 4, 5, 6, 7, 8]);
-	assertFailed({image.values = [
-			Color(1, 2, 3, 4),
-			Color(5, 6, 7, 8),
-			Color(9, 10, 11, 12)];});
-
-	pragma(msg, Color.sizeof);
 }

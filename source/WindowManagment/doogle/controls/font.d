@@ -1,5 +1,5 @@
 module doogle.controls.font;
-public import doogle.gl.texture : RawTexture, Texture;
+public import doogle.util.image : Image;
 
 /**
  * Loading order of different global font definitions
@@ -17,9 +17,17 @@ static if (__traits(compiles, {import doogle.controls.font_impl;})) {
 }
 
 abstract shared class Font_Def {
-	this(string name, ubyte size, float kerning) {
-
+	protected {
+		string name;
+		float size;
+		float kerning;
 	}
 
-	Texture get(wstring text);
+	this(string name, float size, float kerning = float.nan) {
+		this.name = name;
+		this.size = size;
+		this.kerning = kerning;
+	}
+
+	shared(Image) get(wstring text);
 }

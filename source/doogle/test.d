@@ -1,51 +1,114 @@
 module test;
+import doogle.controls.font;
 import doogle.platform;
 import doogle.window.window;
 import doogle.gl.shaders;
 import doogle.gl.buffers;
 import doogle.gl.vertexarray;
-import core.thread;
+import doogle.gl.texture;
+import doogle.util.color;
 
 import gl3n.linalg;
-import std.stdio;
+import std.stdio : writeln;
+import std.file : exists, read, isFile, write;
+
+import core.thread;
+import core.memory;
 
 void main() {
+	GC.disable();
+
+	if (exists("Anonymous_Pro.ttf"))
+		if (isFile("Anonymous_Pro.ttf"))
+			storage.fonts.registerLocal("Anonymous Pro", cast(ubyte[])read("Anonymous_Pro.ttf"));
+	assert(storage.fonts.local.length == 1);
+
+	shared Font font = new shared Font("Anonymous Pro", 16);
+
 	shared Window window = new shared Window(800, 600, "OpenGL Window"w, WindowStyle.Close);
 	shared ShaderProgram program = new shared ShaderProgram("""
 #version 150
 in vec2 position;
+in vec2 texcoord;
+
+out vec2 texloc;
 void main() {
-    gl_Position = vec4(position, 0.0, 1.0);
+	gl_Position = vec4(position, 0.0, 1.0);
+    texloc = texcoord;
 }
 ""","""
 #version 150
-out vec4 outColor;
+in vec2 texloc;
+
+uniform sampler2D tex;
+
+out vec4 color;
 void main() {
-    outColor = vec4(1.0, 0.0, 0.0, 1.0);
+    color = texture(tex, texloc);
 }
 """);
 
-	vec3[] vertices = [
-		vec3(-0.5f, -0.5f, 0.0f),
-		vec3(0.5f, -0.5f, 0.0f),
-		vec3(0.0f, 0.5f, 0.0f)
+	vec2[] vertices = [
+		vec2(-1f, 1f),
+		vec2(1f, 1f),
+		vec2(-1f, -1f),
+		vec2(1f, -1f),
+		
+		vec2(0.0f, 0.0f),
+		vec2(1.0f, 0.0f),
+		vec2(0.0f, 1.0f),
+		vec2(1.0f, 1.0f)
 	];
-
+	
 	shared StandardBuffer vbo = new shared StandardBuffer(vertices);
 	shared VertexArray vao = new shared VertexArray(vbo);
-	vao.bindAttribute(program, "position", vbo, glwrap.AttribPointerType.Float, 3);
+	vao.bindAttribute(program, "position", vbo, glwrap.AttribPointerType.Float, 2);
+	vao.bindAttribute(program, "texcoord", vbo, glwrap.AttribPointerType.Float, 2, 0, cast(int*)(vec2.sizeof * 4));
 
-	program.use();
-	vao.bind();
+	//program.bind();
+	//vao.bind();
+	//tbo.bind();
 
 	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
+
+	auto text_hi = font.get("gfdghhghg");
+	auto whiteRed = new shared Image(3, 3, 0, InternalFormat.RGB8, [
+		255, 255, 255,/* */ 255, 255, 255,/* */ 255, 255, 255,
+		255, 255, 255,/* */ 255, 0, 0,/* */ 255, 255, 255,
+		255, 255, 255,/* */ 255, 255, 255,/* */ 255, 255, 255]);
+
+	shared Texture texture = whiteRed.texture;
+
+	/*gl.glPixelStorei(gl.GL_UNPACK_ALIGNMENT, 1);
+	
+	uint texture;
+	gl.glGenTextures(1, &texture);
+
+	gl.glActiveTexture(gl.GL_TEXTURE0);
+	gl.glBindTexture(gl.GL_TEXTURE_2D, texture);
+
+	//gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_BASE_LEVEL, 0);
+	gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MIN_FILTER, gl.GL_NEAREST_MIPMAP_NEAREST);
+	gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_MAG_FILTER, gl.GL_NEAREST);
+	gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_S, gl.GL_CLAMP_TO_EDGE);
+	gl.glTexParameteri(gl.GL_TEXTURE_2D, gl.GL_TEXTURE_WRAP_T, gl.GL_CLAMP_TO_EDGE);
+
+	gl.glTexImage2D(gl.GL_TEXTURE_2D, 0, gl.GL_RGB8, width, height, 0, gl.GL_RGB, gl.GL_UNSIGNED_BYTE, cast(ubyte*)data.ptr);
+
+	gl.glGenerateMipmap(gl.GL_TEXTURE_2D);
+	gl.glPixelStorei(gl.GL_UNPACK_ALIGNMENT, 4);
+
+	gl.glUniform1i(program.getUniform("tex"), 0);
+	program.use();*/
+
 	while (window.isOpen) {
 		if (!window.whileOpenEvent()) return;
 
 		glwrap.glClear(true, true);
-		glwrap.glDrawArrays(glwrap.Primitives.Triangles, 0, 3);
-
+		glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
+		
 		window.redraw();
 		Thread.sleep(dur!"msecs"(75));
 	}
+	GC.enable();
 }

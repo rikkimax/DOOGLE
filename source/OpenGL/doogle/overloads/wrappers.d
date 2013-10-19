@@ -5,8 +5,23 @@ import doogle.platform;
  * OpenGL 1.0
  */
 
+enum InternalFormat {
+	DepthComponent = gl.GL_DEPTH_COMPONENT,
+	DepthStencil = gl.GL_DEPTH_STENCIL,
+	Red = gl.GL_RED,
+	RG = gl.GL_RG,
+	RGB = gl.GL_RGB,
+	RGBA = gl.GL_RGBA,
+	
+	RGB8 = gl.GL_RGB8
+}
+
 void glClear(bool buffer = false, bool depth = false, bool stencil = false) {
 	gl.glClear((buffer ? gl.GL_COLOR_BUFFER_BIT : 0) | (depth ? gl.GL_DEPTH_BUFFER_BIT : 0) | (stencil ? gl.GL_STENCIL_BUFFER_BIT : 0));
+}
+
+void glTexImage2D(BindTextureTarget target, gl.GLint level, InternalFormat internalFormat, gl.GLsizei width, gl.GLsizei height, PixelFormat format, PixelDataType type, void[] data) {
+	gl.glTexImage2D(cast(gl.GLenum)target, level, cast(gl.GLenum)internalFormat, width, height, 0, cast(gl.GLenum)format, cast(gl.GLenum)type, data.ptr);
 }
 
 /*bindFunc(cast(void**)&glCullFace, "glCullFace");
@@ -75,15 +90,6 @@ enum Primitives {
 	TriangleStripAdjacency = gl.GL_TRIANGLE_STRIP_ADJACENCY,
 	TrianglesAdjacency = gl.GL_TRIANGLES_ADJACENCY,
 	Patches = gl.GL_PATCHES
-}
-
-enum InternalFormat {
-	DepthComponent = gl.GL_DEPTH_COMPONENT,
-	DepthStencil = gl.GL_DEPTH_STENCIL,
-	Red = gl.GL_RED,
-	RG = gl.GL_RG,
-	RGB = gl.GL_RGB,
-	RGBA = gl.GL_RGBA
 }
 
 enum CompressedTextureTargets2D {
@@ -264,9 +270,13 @@ void glDrawRangeElements(Primitives mode, gl.GLuint start, gl.GLuint end, uint[]
 	gl.glDrawRangeElements(cast(gl.GLenum)mode, start, end, cast(uint)data.length, gl.GL_UNSIGNED_INT, data.ptr);
 }
 
-void glTexImage3D(TextureTargets target, gl.GLint level, InternalFormat internalFormat, gl.GLsizei width, gl.GLsizei height, gl.GLsizei depth, PixelFormat format, PixelDataType type, void[] data) {
+void glTexImage3D(BindTextureTarget target, gl.GLint level, InternalFormat internalFormat, gl.GLsizei width, gl.GLsizei height, gl.GLsizei depth, PixelFormat format, PixelDataType type, void[] data) {
 	gl.glTexImage3D(cast(gl.GLenum)target, level, cast(gl.GLenum)internalFormat, width, height, depth, 0, cast(gl.GLenum)format, cast(gl.GLenum)type, data.ptr);
 }
+
+/*void glTexImage3D(TextureTargets target, gl.GLint level, InternalFormat internalFormat, gl.GLsizei width, gl.GLsizei height, gl.GLsizei depth, PixelFormat format, PixelDataType type, void[] data) {
+	gl.glTexImage3D(cast(gl.GLenum)target, level, cast(gl.GLenum)internalFormat, width, height, depth, 0, cast(gl.GLenum)format, cast(gl.GLenum)type, data.ptr);
+}*/
 
 void glTexSubImage3D(SubTextureTargets target, gl.GLint level, gl.GLint xoffset, gl.GLint yoffset, gl.GLint zoffset, gl.GLsizei width, gl.GLsizei height, gl.GLsizei depth, PixelSubTextureFormat format, PixelDataType type, void[] data) {
 	gl.glTexSubImage3D(cast(gl.GLenum)target, level, xoffset, yoffset, zoffset, width, height, depth, cast(gl.GLenum)format, cast(gl.GLenum)type, data.ptr);

@@ -1,48 +1,132 @@
 module doogle.util.image;
-public import doogle.util.color : Color;
+public import doogle.util.color : Color, Color3, Color4;
 import doogle.overloads.structify;
-import doogle.gl.texture;
+public import doogle.gl.texture : Texture;
 public import doogle.overloads.wrappers : InternalFormat;
 
-struct RawImage {
-	size_t width;
-	size_t height;
-	size_t depth;
-	InternalFormat format;
+shared class Image {
+	size_t width_;
+	size_t height_;
+	size_t depth_;
+	InternalFormat format_;
 	union {
-		ubyte[] data;
-		Color[] colors;
-	}
-	private {
-		shared(Image) imageData;
+		ubyte[] data_;
+		Color[] colors_;
+
+		Color3[] colors3_;
+		Color4[] colors4_;
 	}
 
-	void opAssign(shared(Image) id) {
-		imageData = id;
+	this() {
 	}
 
-	shared(Image) opCast(T : Image)() {
-		if (imageData is null) {
-			imageData = new shared RawTexture!(width, height, depth)(colors);
+	this(size_t _width, size_t _height, size_t _depth, InternalFormat _format, shared(ubyte[]) _data) {
+		width_ = _width;
+		height_ = _height;
+		depth_ = _depth;
+		format_ = _format;
+
+		data_ = _data;
+	}
+
+	@property shared(float[]) float3A1() {
+		shared(float[]) ret;
+		foreach(c; colors3_) {
+			ret ~= c.floats;
+			ret ~= 1f;
 		}
-		imageData.data = data;
-		return imageData;
+		return ret;
 	}
-}
+	
+	@property shared(Texture) texture() {
+		synchronized {
+			return new shared Texture(data_, cast(uint)width_, cast(uint)height_, cast(uint)depth_, BindTextureTarget.Texture2D, cast(InternalFormat)format_);
+		}
+	}
 
-shared interface Image {
 	@property {
-		size_t width();
-		size_t height();
-		size_t depth();
-		shared(Color[][]) colors();
-		shared(Color[]) values();
-		shared(ubyte[]) data();
-		InternalFormat format();
-		void colors(shared(Color[][]));
-        void values(shared(Color[]));
-        void data(shared(ubyte[]));
-		void format(InternalFormat);
-		RawImage opCast(T : RawImage)();
+		size_t width() {
+			synchronized {
+				return width_;
+			}
+		}
+
+		size_t height() {
+			synchronized {
+				return height_;
+			}
+		}
+
+		size_t depth() {
+			synchronized {
+				return depth_;
+			}
+		}
+
+		void width(size_t _width) {
+			synchronized {
+				width_ = _width;
+			}
+		}
+		
+		void height(size_t _height) {
+			synchronized {
+				height_ = _height;
+			}
+		}
+		
+		void depth(size_t _depth) {
+			synchronized {
+				depth_ = _depth;
+			}
+		}
+
+		ref shared(Color3[]) colors3() {
+			synchronized {
+				return colors3_;
+			}
+		}
+
+		ref shared(Color4[]) colors4() {
+			synchronized {
+				return colors4_;
+			}
+		}
+
+		ref shared(Color[]) values() {
+			synchronized {
+				return colors_;
+			}
+		}
+
+		ref shared(ubyte[]) data() {
+			synchronized {
+				return data_;
+			}
+		}
+
+		ref InternalFormat format() {
+			synchronized {
+				return format_;
+			}
+		}
+
+		void values(shared(Color[]) _colors) {
+			synchronized {
+				colors_ = _colors;
+			}
+		}
+
+		void data(shared(ubyte[]) _data) {
+			synchronized {
+				data_ = _data;
+			}
+		}
+
+		void format(InternalFormat _format) {
+			synchronized {
+				format_ = _format;
+			}
+		}
 	}
 }
