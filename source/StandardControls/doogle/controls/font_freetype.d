@@ -17,7 +17,7 @@ shared class Font_FreeType : Font_Def {
 		ubyte[] fontvalue;
 	}
 
-	this(string name, size_t size, size_t kerning = 0) {
+	this(string name, size_t size=50, size_t kerning = 3) {
 		size *= 64; // FreeType pt conversion
 		super(name, size, kerning);
 
@@ -69,20 +69,8 @@ shared class Font_FreeType : Font_Def {
 			foreach(wchar c; text) {
 				FT_UInt glyph_index;
 
-				//glyph_index = FT_Get_Char_Index(cast(FT_Face)ftface, c);
-				//if (glyph_index == 0)  throw new Exception("Unknown charactor code " ~ cast(char)c ~ " error " ~ to!string(error));
-
-				/*glyph_index = FT_Get_Char_Index(cast(FT_Face)ftface, c);
-				if (glyph_index == 0)  throw new Exception("Unknown charactor code " ~ cast(char)c ~ " error " ~ to!string(error));
-
-				error = FT_Load_Glyph(cast(FT_Face)ftface, glyph_index, FT_LOAD_DEFAULT);
-				if (error) throw new Exception("Could not create glpyh for " ~ cast(string)text ~ " error " ~ to!string(error));*/
-
 				error = FT_Load_Char(cast(FT_Face)ftface, c, FT_LOAD_RENDER);
 				if (error) throw new Exception("Could not load glpyh for " ~ cast(char)c ~ " error " ~ to!string(error));
-
-				//error = FT_Render_Glyph(slot, FT_RENDER_MODE_NORMAL);
-				//if (error) throw new Exception("Could not render glyph for " ~ cast(string)text ~ " error " ~ to!string(error));
 
 				ubyte* buffer = cast(ubyte*)(*slot).bitmap.buffer;
 				height = (*slot).bitmap.rows;
