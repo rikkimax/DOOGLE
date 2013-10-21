@@ -7,12 +7,9 @@
 		"Richard Andrew Cattermole"
 	],
 	"dependencies": {
-		"derelict-gl3" : "~master",
-		"doogle:opengl" : "~master",
 		"doogle:standardplatformwindow" : "~master",
 		"doogle:windowmanagment" : "~master",
-		"doogle:standardcontrols": "~master",
-		"gl3n" : "~master"
+		"doogle:standardcontrols": "~master"
 	},
 	"sourcePaths": [
 		"source/doogle"
@@ -32,7 +29,11 @@
 			"name": "opengl",
 			"targetType": "library",
 			"sourcePaths": ["source/OpenGL"],
-			"libs-posix": ["dl"]
+			"libs-posix": ["dl"],
+			"dependencies": {
+				"derelict-gl3" : "~master",
+				"gl3n" : "~master"
+			}
 		},
 		{
 			"name": "standardplatformwindow",
