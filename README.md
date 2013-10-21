@@ -6,6 +6,10 @@ D gui toolkit library focussed on opengl usage.
 Capabilities
 ------------
 
+General:
+* Storage manager
+* Texture binding
+
 Building:
 * Built using dub.
 
@@ -29,6 +33,7 @@ Planned:
 * Supporting controls to be made an expanded upon the window creation and eventing system.
 * Full manipulation of a GUI using a socket connection (optional).
 * Font rasterizer wrapper.
+* Storage manager including packaging support.
 
 Aims:
 * Be able to make majority of applications with it.
@@ -42,3 +47,42 @@ Posix hasn't been added yet but should be both 32 and 64bit.
 There is three configurations main(builds as a library), libtest(builds as an executable with -main) and test(executable with test script added).
 
 Does not include a math library. gl3n is a dependency which does provide this however. Switched over because previous was not complete enough.
+
+Working with files
+-------------------
+This is less about how to work with files in general however there is a few things needed to be known.
+
+First off compiling in **will** be supported. To compile in generate a source file by [Bin2D](https://github.com/rikkimax/Bin2D).
+
+Second there is a storage manager. This manager will support the above method.
+
+Using it you can load up from predetermined locations (hard coded). However you can recall with more.
+This provides high overidability for moding.
+In future packaging *should* be possible.
+
+Package dependencies
+------------------------
+Okay I need to say this now.
+This is becoming very important for future usage and reference.
+
+Doogle:
+* Window management
+* Standard platform window
+* Standard controls
+Note Doogle is the root package.
+
+Window management:
+
+*None*
+
+OpenGL:
+* Derelict-GL3
+* Gl3n
+
+Standard platform window:
+* window management
+
+Standard controls:
+* Window management
+* OpenGL
+* Derelict-FT
