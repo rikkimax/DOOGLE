@@ -1,5 +1,6 @@
 module doogle.gl.shaders;
-import doogle.platform;
+import gl = derelict.opengl3.gl3;
+import glwrap = doogle.overloads.wrappers;
 import doogle.util.storage;
 import std.algorithm : filter, move;
 import std.string : indexOf;

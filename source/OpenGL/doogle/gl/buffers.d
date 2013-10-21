@@ -1,7 +1,8 @@
 module doogle.gl.buffers;
 import doogle.util.image;
 public import doogle.overloads.wrappers : BindBufferTargets, BufferUsages;
-import doogle.platform;
+import gl = derelict.opengl3.gl3;
+import glwrap = doogle.overloads.wrappers;
 public import gl3n.linalg : vec4, vec3, vec2, mat2, mat3, mat34, mat4;
 
 alias Buffer!(BufferUsages.StaticDraw, BindBufferTargets.ArrayBuffer) StandardBuffer;

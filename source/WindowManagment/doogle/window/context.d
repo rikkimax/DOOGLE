@@ -1,6 +1,5 @@
 module doogle.window.context;
 import doogle.window.window;
-import doogle.platform;
 
 version(Windows) {
 	static if (!__traits(compiles, {import doogle.window.context_win;})) {

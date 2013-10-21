@@ -1,5 +1,6 @@
 module doogle.overloads.wrappers;
-import doogle.platform;
+import gl = derelict.opengl3.gl3;
+import glarb = derelict.opengl3.arb;
 
 /**
  * OpenGL 1.0

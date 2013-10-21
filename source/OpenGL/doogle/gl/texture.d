@@ -1,5 +1,7 @@
 module doogle.gl.texture;
-import doogle.platform;
+import gl = derelict.opengl3.gl3;
+import glwrap = doogle.overloads.wrappers;
+import glstruct = doogle.overloads.structify;
 public import doogle.gl.buffers;
 public import doogle.overloads.wrappers : InternalFormat, BindTextureTarget, PixelFormat;
 import doogle.util.color;

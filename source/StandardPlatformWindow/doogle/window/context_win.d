@@ -1,8 +1,14 @@
 module doogle.window.context_win;
 import doogle.window.context;
-import doogle.platform;
 
 version(Windows) {
+	private struct PlatformImports {
+		import windows = windows;
+		public import wgl = derelict.opengl3.wgl;
+		public import wglext = derelict.opengl3.wglext;
+	}
+	__gshared PlatformImports platform;
+
 	shared class Context_Win : Context_Def {
 		protected {
 			platform.windows.HDC _hdc;

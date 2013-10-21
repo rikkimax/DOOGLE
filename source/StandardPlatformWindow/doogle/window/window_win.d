@@ -4,13 +4,19 @@ import doogle.window.context;
 import doogle.window.component;
 import doogle.events.event;
 import doogle.events.types;
-import doogle.platform;
+
+import gl = derelict.opengl3.gl3;
 
 import std.conv : to;
 
 import core.sync.rwmutex;
 
 version(Windows) {
+	private struct PlatformImports {
+		import windows = windows;
+	}
+	__gshared PlatformImports platform;
+
 	shared(Window)[size_t] windows;
 	ReadWriteMutex rwmWindows;
 

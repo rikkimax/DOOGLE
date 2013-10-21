@@ -1,7 +1,7 @@
 module doogle.gl.vertexarray;
 import doogle.gl.buffers;
 import doogle.gl.shaders;
-import doogle.platform;
+import gl = derelict.opengl3.gl3;
 public import doogle.overloads.wrappers : BindBufferTargets;
 
 shared class VertexArray {

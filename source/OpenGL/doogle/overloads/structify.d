@@ -6,7 +6,7 @@ public import doogle.overloads.wrappers :
 	;
 import doogle.util.color;
 import doogle.util.image;
-import doogle.platform;
+import gl = derelict.opengl3.gl3;
 
 /*
  * OpenGL 1.0

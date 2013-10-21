@@ -1,4 +1,13 @@
 module doogle.platform;
+
+/**
+ * 
+ * This file is dedicated for _users_ of this library. It is meant to make it easier to handle it.
+ * You are not required to use any part that you do not wish to.
+ * The implementations can be swapped out very easily or only the definitions parts can be used.
+ * 
+ */
+
 public import gl = derelict.opengl3.gl3;
 public import glarb = derelict.opengl3.arb;
 public import glwrap = doogle.overloads.wrappers;

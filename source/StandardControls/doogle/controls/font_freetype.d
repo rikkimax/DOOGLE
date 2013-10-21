@@ -1,7 +1,8 @@
 module doogle.controls.font_freetype;
 import doogle.controls.font;
-import doogle.platform;
 import doogle.util.image;
+import storage = doogle.util.storage;
+import glwrap = doogle.overloads.wrappers;
 
 import derelict.freetype.ft;
 
