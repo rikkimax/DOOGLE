@@ -85,7 +85,13 @@
 			"name": "test",
 			"targetType": "executable",
 			"platforms": ["windows"],
-			"copyFiles": ["resources/AnonymousPro-1.002.001/Anonymous_Pro.ttf"]
+			"copyFiles": [
+				"resources/AnonymousPro-1.002.001/Anonymous_Pro.ttf",
+				"resources/shaders/standard.frag",
+				"resources/shaders/standard.vert",
+				"resources/models/full_texture_mapping.raw",
+				"resources/models/full_vertices.raw"
+			]
 		}
 	]
 }

@@ -1,6 +1,8 @@
 module doogle.gl.shaders;
 import doogle.platform;
+import doogle.util.storage;
 import std.algorithm : filter, move;
+import std.string : indexOf;
 
 shared class ShaderProgram {
 	protected {
@@ -122,10 +124,24 @@ shared class Shader {
 		glwrap.ShaderTypes type;
 	}
 
+	/**
+	 * Given either the source or filename(asset loader).
+	 */
 	this(string source, glwrap.ShaderTypes type) {
 		// create
 		id_ = glwrap.glCreateShader(type);
-		opAssign(source);
+		if (source.indexOf('\n') == -1) {
+			// we are a file name
+			string name = source;
+			source = shaders.get(name);
+			if (source == "") {
+				throw new Exception("Could not get shader from storage " ~ name);
+			} else {
+				opAssign(source);
+			}
+		} else {
+			opAssign(source);
+		}
 		this.type = type;
 		compile();
 	}

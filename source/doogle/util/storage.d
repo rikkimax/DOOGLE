@@ -7,6 +7,7 @@ import std.stdio : writeln;
 
 __gshared StorageManager!(string, "shaders") shaders;
 __gshared StorageManager!(ubyte[], "fonts") fonts;
+__gshared StorageManager!(ubyte[], "models") models;
 
 template StorageManager(T, string thing) {
 	private {
@@ -49,7 +50,7 @@ template StorageManager(T, string thing) {
 				return defaults.get(mod, T.init);
 			}
 
-			private void init() {
+			public void init(string app = "doogle", string company = null) {
 				// TODO detect the different locations
 				// load the shaders up from it
 				string dir;
@@ -58,10 +59,16 @@ template StorageManager(T, string thing) {
 					dir = buildPath(thing);
 					local = getShaderFromFileSystem(dir);
 					// detect users
-					dir = buildPath(environment["LOCALAPPDATA"], "doogle", thing);
+					if (company is null)
+						dir = buildPath(environment["LOCALAPPDATA"], app, thing);
+					else
+						dir = buildPath(environment["LOCALAPPDATA"], company, app, thing);
 					users = getShaderFromFileSystem(dir);
 					// detect systems
-					dir = buildPath(environment["PROGRAMFILES"], "doogle", thing);
+					if (company is null)
+						dir = buildPath(environment["PROGRAMFILES"], app, thing);
+					else
+						dir = buildPath(environment["PROGRAMFILES"], company, app, thing);
 					systems = getShaderFromFileSystem(dir);
 				} else version(Posix) {
 					pragma(msg, "Have not implemented Posix " ~ thing ~ " storage locations and loading yet.");
@@ -115,4 +122,5 @@ template StorageManager(T, string thing) {
 static this() {
 	shaders.init();
 	fonts.init();
+	models.init();
 }
