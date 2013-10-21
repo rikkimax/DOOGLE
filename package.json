@@ -9,16 +9,14 @@
 	"dependencies": {
 		"doogle:standardplatformwindow" : "~master",
 		"doogle:windowmanagment" : "~master",
-		"doogle:standardcontrols": "~master"
+		"doogle:standardcontrols": "~master",
+		"doogle:util": "~master"
 	},
 	"sourcePaths": [
 		"source/doogle"
 	],
 	"buildRequirements": [
 		"allowWarnings"
-	],
-	"preBuildCommands": [
-		"git submodule update --init"
 	],
 	
 	"targetPath": "bin",
@@ -32,7 +30,8 @@
 			"libs-posix": ["dl"],
 			"dependencies": {
 				"derelict-gl3" : "~master",
-				"gl3n" : "~master"
+				"gl3n" : "~master",
+				"doogle:util": "~master"
 			}
 		},
 		{
@@ -50,7 +49,10 @@
 		{
 			"name": "windowmanagment",
 			"targetType": "library",
-			"sourcePaths": ["source/WindowManagment"]
+			"sourcePaths": ["source/WindowManagment"],
+			"dependencies": {
+				"doogle:util": "~master"
+			}
 		},
 		{
 			"name": "standardcontrols",
@@ -58,11 +60,17 @@
 			"dependencies": {
 				"doogle:windowmanagment": "~master",
 				"doogle:opengl": "~master",
-				"derelict-ft": "~master"
+				"derelict-ft": "~master",
+				"doogle:util": "~master"
 			},
 			"sourcePaths": ["source/StandardControls"],
 			"copyFiles-windows-x86": ["libs/freetype-x86-win/libfreetype-6.dll"],
 			"copyFiles-windows-x86_64": ["libs/freetype-x86_64-win/libfreetype-6.dll"]
+		},
+		{
+			"name": "util",
+			"targetType": "library",
+			"sourcePaths": ["source/util"]
 		}
 	],
 	"configurations": [
