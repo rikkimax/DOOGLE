@@ -8,7 +8,7 @@
 	],
 	"dependencies": {
 		"doogle:standardplatformwindow" : "~master",
-		"doogle:windowmanagment" : "~master",
+		"doogle:windowmanagement" : "~master",
 		"doogle:standardcontrols": "~master",
 		"doogle:util": "~master"
 	},
@@ -38,7 +38,7 @@
 			"name": "standardplatformwindow",
 			"targetType": "staticLibrary",
 			"dependencies": {
-				"doogle:windowmanagment" : "~master"
+				"doogle:windowmanagement" : "~master"
 			},
 			"sourcePaths": ["source/StandardPlatformWindow"],
 			"libs-posix": ["X11", "Xrandr"],
@@ -47,9 +47,9 @@
 			"sourcePaths-posix": ["source/libX11"]
 		},
 		{
-			"name": "windowmanagment",
+			"name": "windowmanagement",
 			"targetType": "library",
-			"sourcePaths": ["source/WindowManagment"],
+			"sourcePaths": ["source/WindowManagement"],
 			"dependencies": {
 				"doogle:util": "~master"
 			}
@@ -58,7 +58,7 @@
 			"name": "standardcontrols",
 			"targetType": "library",
 			"dependencies": {
-				"doogle:windowmanagment": "~master",
+				"doogle:windowmanagement": "~master",
 				"doogle:opengl": "~master",
 				"derelict-ft": "~master",
 				"doogle:util": "~master"
