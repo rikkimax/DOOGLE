@@ -69,15 +69,17 @@ Doogle:
 * Window management
 * Standard platform window
 * Standard controls
+* Util
+* 
 Note Doogle is the root package.
 
 Window management:
-
-*None*
+* Util
 
 OpenGL:
 * Derelict-GL3
 * Gl3n
+* Util
 
 Standard platform window:
 * window management
@@ -86,3 +88,11 @@ Standard controls:
 * Window management
 * OpenGL
 * Derelict-FT
+* Util
+
+Util:
+
+*None*
+
+In theory what this means is you are able to use doogle:opengl and doogle:util independently of the entire library.
+If you wish you can implement your own context's and controls. The standard control sub package is not required if your only wanting the OpenGL context.
