@@ -83,6 +83,8 @@ OpenGL:
 
 Standard platform window:
 * window management
+* OpenGL (for windows).
+* Windows api bindings (for windows).
 
 Standard controls:
 * Window management
