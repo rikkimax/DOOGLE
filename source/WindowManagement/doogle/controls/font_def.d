@@ -1,6 +1,6 @@
 module doogle.controls.font_def;
 import doogle.controls.font;
-public import doogle.util.image : Image;
+public import doogle.drawing.image : Image;
 
 abstract shared class Font_Def {
 	protected {

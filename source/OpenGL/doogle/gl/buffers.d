@@ -1,5 +1,5 @@
 module doogle.gl.buffers;
-import doogle.util.image;
+import doogle.drawing.image;
 public import doogle.overloads.wrappers : BindBufferTargets, BufferUsages;
 import gl = derelict.opengl3.gl3;
 import glwrap = doogle.overloads.wrappers;

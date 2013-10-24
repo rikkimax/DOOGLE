@@ -5,7 +5,7 @@ public import doogle.overloads.wrappers :
 	ShaderTypes, AttribDataTypes, ProgramObjects, ShaderObjects //2.0
 	;
 import doogle.util.color;
-import doogle.util.image;
+import doogle.drawing.image;
 import gl = derelict.opengl3.gl3;
 
 /*

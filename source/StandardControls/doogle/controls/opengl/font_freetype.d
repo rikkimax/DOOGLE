@@ -1,6 +1,6 @@
 module doogle.controls.font_freetype;
 import doogle.controls.font_def;
-import doogle.util.image;
+import doogle.drawing.image;
 import storage = doogle.util.storage;
 import glwrap = doogle.overloads.wrappers;
 
