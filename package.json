@@ -48,7 +48,7 @@
 		},
 		{
 			"name": "windowmanagement",
-			"targetType": "library",
+			"targetType": "sourceLibrary",
 			"sourcePaths": ["source/WindowManagement"],
 			"dependencies": {
 				"doogle:util": "~master"
