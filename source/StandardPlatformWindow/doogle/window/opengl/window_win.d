@@ -1,4 +1,4 @@
-module doogle.window.window_win;
+module doogle.window.opengl.window_win;
 import doogle.window.window;
 import doogle.window.context;
 import doogle.window.component;

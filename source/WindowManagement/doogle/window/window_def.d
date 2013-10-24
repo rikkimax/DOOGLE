@@ -1,37 +1,9 @@
-module doogle.window.window;
+module doogle.window.window_def;
 import doogle.window.component;
 import doogle.window.context;
 
 import doogle.events.event;
 import doogle.events.types;
-
-static if (__traits(compiles, {import doogle.window.window_impl;})) {
-	version = WindowImpl;
-}
-
-version(WindowImpl) {
-	public import doogle.window.window_impl;
-	alias Window_Impl Window;
-} else version(Windows) {
-	//static if (__traits(compiles, {import doogle.window.window_win;})) {
-		public import doogle.window.window_win;
-		alias Window_Win Window;
-	//} else {
-	//	pragma(msg, "Windows implementation of window not loaded");
-	//	static assert(0);
-	//}
-} else version(Posix) {
-	//static if (__traits(compiles, {import doogle.window.window_x11;})) {
-		public import doogle.window.window_x11;
-		alias Window_X11 Window;
-	//} else {
-	//	pragma(msg, "Posix implementation of window not loaded");
-	//	static assert(0);
-	//}
-} else {
-	pragma(msg, "Implementation of window not loaded");
-	static assert(0);
-}
 
 enum WindowStyle {
 	Base = 0,

@@ -1,5 +1,5 @@
-module doogle.window.context_win;
-import doogle.window.context;
+module doogle.window.opengl.context_win;
+import doogle.window.context_def;
 
 version(Windows) {
 	private struct PlatformImports {

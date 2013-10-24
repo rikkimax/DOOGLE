@@ -1,10 +1,11 @@
-module doogle.window.component;
+module doogle.window.component_def;
+import doogle.window.component;
 import doogle.window.window;
 
 import doogle.events.event;
 import doogle.events.types;
 
-shared interface ComponentChildable {
+shared interface ComponentChildable_Def {
 	public {
 		void addChild(shared(ComponentChild) child);
 		void removeChild(shared(ComponentChild));
@@ -15,7 +16,7 @@ shared interface ComponentChildable {
 /**
  * Use this for any components that does not extend window.
  */
-abstract shared class ComponentChild : Component {
+abstract shared class ComponentChild_Def : Component {
 	public {
 		/**
 		 * Don't worry about extending this.
