@@ -1,4 +1,5 @@
 module doogle.controls.font_def;
+import doogle.controls.font;
 public import doogle.util.image : Image;
 
 abstract shared class Font_Def {
@@ -14,5 +15,5 @@ abstract shared class Font_Def {
 		this.kerning = kerning;
 	}
 
-	shared(Image) get(wstring text);
+	shared(FontImageType) get(wstring text);
 }
