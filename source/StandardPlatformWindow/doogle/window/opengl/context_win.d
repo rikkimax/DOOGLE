@@ -1,5 +1,5 @@
 module doogle.window.opengl.context_win;
-import doogle.window.context_def;
+import doogle.window.opengl.context_def;
 
 version(Windows) {
 	private struct PlatformImports {
@@ -9,7 +9,7 @@ version(Windows) {
 	}
 	__gshared PlatformImports platform;
 
-	shared class Context_Win : Context_Def {
+	shared class Context_Win : Context_OpenGL_Def {
 		protected {
 			platform.windows.HDC _hdc;
 			platform.windows.HGLRC _context;
