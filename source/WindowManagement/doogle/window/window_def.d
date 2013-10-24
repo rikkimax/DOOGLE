@@ -1,6 +1,7 @@
 module doogle.window.window_def;
 import doogle.window.component;
 import doogle.window.context;
+import doogle.window.window;
 
 import doogle.events.event;
 import doogle.events.types;
@@ -114,6 +115,18 @@ abstract shared class Window_Def : Component, ComponentChildable {
 				if (k == event.type) {
 					foreach(handler; _eventHandlers[k]) {
 						if (handler(event, this)) break;
+					}
+				}
+			}
+
+			foreach (child; _children) {
+				if (isEventCatagory(EventCatagories.Mouse, event.type)) {
+					if (event.mouse.x >= child.x && event.mouse.y >= child.y && event.mouse.x <= child.x + child.width && event.mouse.y <= child.y + child.height) {
+						child.childEvent(cast(shared(Window))this, this, event);
+					}
+				} else if (isEventCatagory(EventCatagories.Keyboard, event.type)) {
+					if (child == _selectedChild) {
+						child.childEvent(cast(shared(Window))this, this, event);
 					}
 				}
 			}

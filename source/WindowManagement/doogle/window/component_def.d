@@ -28,23 +28,25 @@ abstract shared class ComponentChild_Def : Component {
 		 * 
 		 * Don't forget to call the apropriete event upon _eventHandlers.
 		 */
-		void childEvent(shared(Window) window, shared(Event) event) {
-			foreach(k; _eventHandlers.keys) {
-				if (k == event.type) {
-					foreach(handler; _eventHandlers[k]) {
-						if (handler(event, this)) break;
+		void childEvent(shared(Window) window, shared(Component) parent, shared(Event) event) {
+			synchronized {
+				foreach(k; _eventHandlers.keys) {
+					if (k == event.type) {
+						foreach(handler; _eventHandlers[k]) {
+							if (handler(event, this)) break;
+						}
 					}
 				}
-			}
-			static if (__traits(compiles, children.length)) {
-				foreach (child; children) {
-					if (isEventCatagory(EventCatagories.Mouse, ev.type)) {
-						if (event.mouse.x >= child.x && event.mouse.y >= child.y && event.mouse.x <= child.x + child.width && event.mouse.y <= child.y + child.height) {
-							child.childEvent(this, event);
-						}
-					} else if (isEventCatagory(EventCatagories.Keyboard, event.type)) {
-						if (child == _selectedChild) {
-							child.childEvent(this, event);
+				static if (__traits(compiles, children.length)) {
+					foreach (child; children) {
+						if (isEventCatagory(EventCatagories.Mouse, ev.type)) {
+							if (event.mouse.x >= child.x && event.mouse.y >= child.y && event.mouse.x <= child.x + child.width && event.mouse.y <= child.y + child.height) {
+								child.childEvent(window, this, event);
+							}
+						} else if (isEventCatagory(EventCatagories.Keyboard, event.type)) {
+							if (child == _selectedChild) {
+								child.childEvent(window, this, event);
+							}
 						}
 					}
 				}
@@ -56,13 +58,15 @@ abstract shared class ComponentChild_Def : Component {
 		 * Remember to super.redraw(window) call as last thing.
 		 */
 		void redraw(shared(Window) window) {
-			shared(Event) event;
-			event.type = EventTypes.Draw;
-			this.childEvent(window, event);
-		
-			static if (__traits(compiles, children.length)) {
-				foreach (child; children) {
-					child.redraw();
+			synchronized {
+				shared(Event) event;
+				event.type = EventTypes.Draw;
+				this.childEvent(window, this, event);
+			
+				static if (__traits(compiles, children.length)) {
+					foreach (child; children) {
+						child.redraw();
+					}
 				}
 			}
 		}

@@ -415,11 +415,11 @@ version(Windows) {
 						foreach (child; _children) {
 							if (isEventCatagory(EventCatagories.Mouse, ev.type)) {
 								if (ev.mouse.x >= child.x && ev.mouse.y >= child.y && ev.mouse.x <= child.x + child.width && ev.mouse.y <= child.y + child.height) {
-									child.childEvent(this, ev);
+									child.childEvent(this, this, ev);
 								}
 							} else if (isEventCatagory(EventCatagories.Keyboard, ev.type)) {
 								if (child == _selectedChild) {
-									child.childEvent(this, ev);
+									child.childEvent(this, this, ev);
 								}
 							}
 						}
