@@ -1,22 +1,8 @@
-module doogle.controls.control;
+module doogle.controls.control_def;
+import doogle.controls.control;
 import doogle.window.component;
 import doogle.controls.font;
 public import doogle.gl.texture : Texture;
-
-/**
- * Loading order of different global control definitions
- * Allows for non supported implementations to be supplied
- */
-static if (__traits(compiles, {import doogle.controls.control_impl;})) {
-	public import doogle.controls.control_impl;
-	alias Control_Impl Control;
-} else static if (__traits(compiles, {import doogle.controls.control_standard;})) {
-	public import doogle.controls.control_standard;
-	alias Control_Standard Control;
-} else {
-	pragma(msg, "Control implementation is not implemented");
-	static assert(0);
-}
 
 abstract shared class Control_Def : ComponentChild {
 	protected {
