@@ -1,13 +1,6 @@
-module doogle.controls.layout;
+module doogle.controls.layout_def;
 import doogle.controls.control;
 import doogle.window.component;
-
-static if (__traits(compiles, {import doogle.controls.layout_impl;})) {
-	public import doogle.controls.layout_impl;
-	alias Layout_Impl Layout;
-} else {
-	alias Layout_Def Layout;
-}
 
 shared abstract class Layout_Def : ComponentChild, ComponentChildable, ControlChildable {
 	protected {
@@ -92,14 +85,5 @@ shared abstract class Layout_Def : ComponentChild, ComponentChildable, ControlCh
 
 	protected {
 		void update();
-	}
-}
-
-/**
- * A very basic layout. All it does is contain a bunch of controls.
- */
-class ContainerLayout : Layout {
-	protected {
-		override void update(){}
 	}
 }
