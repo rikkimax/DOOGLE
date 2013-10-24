@@ -40,6 +40,9 @@
 			"dependencies": {
 				"doogle:windowmanagement" : "~master"
 			},
+			"dependencies-windows": {
+				"doogle:opengl" : "~master"
+			},
 			"sourcePaths": ["source/StandardPlatformWindow"],
 			"libs-posix": ["X11", "Xrandr"],
 			"libs-windows": ["user32", "gdi32"],
