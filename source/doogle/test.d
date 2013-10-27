@@ -2,16 +2,7 @@ module test;
 import doogle.controls.font;
 import doogle.platform;
 import doogle.window.window;
-import doogle.gl.shaders;
-import doogle.gl.buffers;
-import doogle.gl.vertexarray;
-import doogle.gl.texture;
-import doogle.util.color;
 import doogle.controls.opengl.defs.picture;
-
-import gl3n.linalg;
-import std.stdio : writeln;
-import std.file : exists, read, isFile, write;
 
 import core.thread;
 
