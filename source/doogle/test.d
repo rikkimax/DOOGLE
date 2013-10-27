@@ -23,23 +23,6 @@ void main() {
 
 	shared Window window = new shared Window(800, 600, "OpenGL Window"w, WindowStyle.Close);
 
-	/*
-	 * float cx = 1f / (window.width / 2f);
-	 * float cy = 1f / (window.height / 2f);
-	 * vec4 move = vec4(cx * pixelsToMoveX, cy * pixelsToMoveY, 0, 0);
-	 */
-
-	/*
-	 * mat4 scale;
-	 * float dx = 1 / (window.width / text_hi.width)
-	 * float dy = 1 / (window.height / text_hi.height)
-	 * 
-     * scale[0] = vec4(dx, 0f, 0f, 0f);
-     * scale[1] = vec4(0f, dy, 0f, 0f);
-     * scale[2] = vec4(0f, 0f, 1f, 0f);
-     * scale[3] = vec4(0f, 0f, 0f, 1f);
-	 */
-
 	shared Font font = new shared Font("Anonymous_Pro.ttf", 20, 3);
 	auto text_hi = font.get("Hi");
 
