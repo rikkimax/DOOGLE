@@ -8,6 +8,7 @@ import std.stdio : writeln;
 __gshared StorageManager!(string, "shaders") shaders;
 __gshared StorageManager!(ubyte[], "fonts") fonts;
 __gshared StorageManager!(ubyte[], "models") models;
+__gshared StorageManager!(ubyte[], "images") images;
 
 template StorageManager(T, string thing) {
 	private {
