@@ -39,7 +39,7 @@ shared class Font_FreeType : Font_Def {
 			throw new Exception("Could not use font " ~ name ~ " with error " ~ to!string(error));
 		}
 
-		error = FT_Set_Char_Size(cast(FT_Face)ftface, 0, cast(int)size, 300, 300);
+		error = FT_Set_Char_Size(cast(FT_Face)ftface, 0, cast(int)size, 72, 72);
 		if (error) {
 			throw new Exception("Could not use font " ~ name ~ " with size " ~ to!string(size) ~ " error " ~ to!string(error));
 		}
@@ -79,10 +79,16 @@ shared class Font_FreeType : Font_Def {
 				if (data.length < height) {
 					data.length = height;
 				}
+				import std.stdio;writeln(width);
+				import std.stdio;writeln(height);
 
-				for (size_t i = 0; i < width * height; i++) {
-					data[(i / width) % height].length = width + x;
-					data[(i / width) % height][(i % width) + x] = *(buffer + i);
+				ptrdiff_t mult = width * height;
+				for (ptrdiff_t i = mult - 1; i >= 0; i--) {
+					ptrdiff_t idiff = mult - i;
+					uint y = (idiff / width) % height;
+
+					data[y].length = width + x;
+					data[y][(i % width) + x] = *(buffer + i);
 				}
 
 				ubyte[] kerningAdd;
@@ -101,15 +107,17 @@ shared class Font_FreeType : Font_Def {
 				}
 			}
 
-			foreach(ubyte[] ub; data) {
+			for(ptrdiff_t i = data.length - 1; i >= 0; i--) {
+				ubyte[] ub = data[i];
 				size_t need = maxWidth - ub.length;
+
 				foreach(u; ub) {
 					ret ~= u;
 					ret ~= u;
 					ret ~= u;
 				}
 
-				for(uint i; i < need; i++) {
+				for(uint j; j < need; j++) {
 					ret ~= 0;
 					ret ~= 0;
 					ret ~= 0;
