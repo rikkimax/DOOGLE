@@ -2,7 +2,7 @@ module test;
 import doogle.controls.font;
 import doogle.platform;
 import doogle.window.window;
-import doogle.controls.opengl.defs.picture;
+import doogle.controls.all;
 
 import core.thread;
 
