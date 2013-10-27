@@ -33,8 +33,6 @@ void main() {
 		if (!window.whileOpenEvent()) return;
 
 		glwrap.glClear(true, true);
-		glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
-		
 		window.redraw();
 		Thread.sleep(dur!"msecs"(75));
 	}
