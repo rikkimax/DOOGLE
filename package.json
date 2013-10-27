@@ -64,11 +64,21 @@
 				"doogle:windowmanagement": "~master",
 				"doogle:opengl": "~master",
 				"derelict-ft": "~master",
-				"doogle:util": "~master"
+				"doogle:util": "~master",
+				"doogle:controldefs": "~master"
 			},
 			"sourcePaths": ["source/StandardControls"],
 			"copyFiles-windows-x86": ["libs/freetype-x86-win/libfreetype-6.dll"],
 			"copyFiles-windows-x86_64": ["libs/freetype-x86_64-win/libfreetype-6.dll"]
+		},
+		{
+			"name": "controldefs",
+			"targetType": "sourceLibrary",
+			"dependencies": {
+				"doogle:windowmanagement": "~master",
+				"doogle:util": "~master"
+			},
+			"sourcePaths": ["source/ControlDefs"]
 		},
 		{
 			"name": "util",
