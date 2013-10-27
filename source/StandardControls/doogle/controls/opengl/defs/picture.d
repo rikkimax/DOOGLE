@@ -7,6 +7,7 @@ import doogle.gl.shaders;
 import doogle.gl.buffers;
 import doogle.gl.vertexarray;
 import doogle.gl.texture;
+import glwrap = doogle.overloads.wrappers;
 import doogle.window.window;
 
 shared class Picture : Control, Picture_Def {
@@ -48,6 +49,8 @@ shared class Picture : Control, Picture_Def {
 	}
 
 	override void redraw(shared(Window) window) {
+		super.redraw(window);
+
 		static shared ShaderProgram program;
 		static shared StandardBuffer vertices;
 		static shared StandardBuffer texturemap;
@@ -62,8 +65,10 @@ shared class Picture : Control, Picture_Def {
 		}
 		if (texture_ !is null) {
 			texture_.bind();
-		}
+			program.bind();
 
-		super.redraw(window);
+			glwrap.glUniform4fv(program.getUniform("move"), cast(float[])move.vector);
+			glwrap.glUniformMatrix4fv(program.getUniform("scale"), false, cast(float[])scale.matrix);
+		}
 	}
 }
