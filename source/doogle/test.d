@@ -18,6 +18,7 @@ void main() {
 	auto text_hi = font.get("Hi");
 
 	shared Picture picture = new shared Picture(window, 750, 550, 50, 50, text_hi);
+	shared Label label = new shared Label(window, 400, 300, "boo", font);
 
 	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
 	while (window.isOpen) {

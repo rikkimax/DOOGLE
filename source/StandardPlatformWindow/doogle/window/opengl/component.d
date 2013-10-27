@@ -80,24 +80,31 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 		int wheight = window.height;
 		int cwidth = _width;
 		int cheight = _height;
-		int cposX = _x;
-		int cposY = _y;
-		
-		float cx = 1f / (wwidth / 2);
-		float cy = 1f / (wheight / 2);
-		vec4 move = vec4(cx * (-(wwidth / 2) + ((cwidth / 2) + cposX)), cy * ((wheight / 2) - ((cheight / 2) + cposY)), 0, 0);
-		this.move = *cast(shared(vec4*))cast(void*)&move;
+		if (wwidth > 0 && wheight > 0 && cwidth > 0 && cheight > 0) {
+			int cposX = _x;
+			int cposY = _y;
+			
+			float cx = 1f / (wwidth / 2);
+			float cy = 1f / (wheight / 2);
+			vec4 move = vec4(cx * (-(wwidth / 2) + ((cwidth / 2) + cposX)), cy * ((wheight / 2) - ((cheight / 2) + cposY)), 0, 0);
+			this.move = *cast(shared(vec4*))cast(void*)&move;
 
-		float dx = 1f / (wwidth / cwidth);
-		float dy = 1f / (wheight / cheight);
-		
-		mat4 scale = mat4(
-			dx, 0f, 0f, 0f,
-			0f, dy, 0f, 0f,
-			0f, 0f, 1f, 0f,
-			0f, 0f, 0f, 1f
-		);
-		this.scale = *cast(shared(mat4*))cast(void*)&scale;
+			float dx = 1f / (wwidth / cwidth);
+			float dy = 1f / (wheight / cheight);
+			
+			mat4 scale = mat4(
+				dx, 0f, 0f, 0f,
+				0f, dy, 0f, 0f,
+				0f, 0f, 1f, 0f,
+				0f, 0f, 0f, 1f
+			);
+			this.scale = *cast(shared(mat4*))cast(void*)&scale;
+		} else {
+			vec4 move = vec4(0f, 0f, 0f, 0f);
+			this.move = *cast(shared(vec4*))cast(void*)&move;
+			mat4 scale = mat4.identity;
+			this.scale = *cast(shared(mat4*))cast(void*)&scale;
+		}
 
 		super.redraw(window);
 	}

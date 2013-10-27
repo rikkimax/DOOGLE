@@ -5,7 +5,7 @@ enum ButtonState {
 	Down
 }
 
-interface Button_Def {
+shared interface Button_Def {
 	@property {
 		ButtonState state();
 	}
