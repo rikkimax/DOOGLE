@@ -56,7 +56,7 @@ shared class Picture : Control, Picture_Def {
 		static shared StandardBuffer texturemap;
 		static shared VertexArray vao;
 		if (program is null) {
-			program = new shared ShaderProgram("Vertex_Standard", "Fragment_Standard");
+			program = new shared ShaderProgram("picture.vert", "picture.frag");
 			vertices = new shared StandardBuffer("full_vertices.raw");
 			texturemap = new shared StandardBuffer("full_texture_mapping.raw");
 			vao = new shared VertexArray();

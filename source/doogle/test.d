@@ -21,7 +21,7 @@ void main() {
 
 	// make sure all the files were loaded.
 	assert(storage.fonts.local.length == 1);
-	assert(storage.shaders.local.length == 2);
+	assert(storage.shaders.local.length == 4);
 	assert(storage.models.local.length == 2);
 
 	shared Window window = new shared Window(800, 600, "OpenGL Window"w, WindowStyle.Close);
