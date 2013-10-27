@@ -953,15 +953,15 @@ void glUniform1fv(gl.GLint location, gl.GLfloat[] value) {
 }
 
 void glUniform2fv(gl.GLint location, gl.GLfloat[] value) {
-	gl.glUniform2fv(location, cast(gl.GLsizei)value.length, value.ptr);
+	gl.glUniform2fv(location, cast(gl.GLsizei)value.length / 2, value.ptr);
 }
 
 void glUniform3fv(gl.GLint location, gl.GLfloat[] value) {
-	gl.glUniform3fv(location, cast(gl.GLsizei)value.length, value.ptr);
+	gl.glUniform3fv(location, cast(gl.GLsizei)value.length / 3, value.ptr);
 }
 
 void glUniform4fv(gl.GLint location, gl.GLfloat[] value) {
-	gl.glUniform4fv(location, cast(gl.GLsizei)value.length, value.ptr);
+	gl.glUniform4fv(location, cast(gl.GLsizei)value.length / 4, value.ptr);
 }
 
 void glUniform1iv(gl.GLint location, gl.GLint[] value) {
@@ -969,15 +969,15 @@ void glUniform1iv(gl.GLint location, gl.GLint[] value) {
 }
 
 void glUniform2iv(gl.GLint location, gl.GLint[] value) {
-	gl.glUniform2iv(location, cast(gl.GLsizei)value.length, value.ptr);
+	gl.glUniform2iv(location, cast(gl.GLsizei)value.length / 2, value.ptr);
 }
 
 void glUniform3iv(gl.GLint location, gl.GLint[] value) {
-	gl.glUniform3iv(location, cast(gl.GLsizei)value.length, value.ptr);
+	gl.glUniform3iv(location, cast(gl.GLsizei)value.length / 3, value.ptr);
 }
 
 void glUniform4iv(gl.GLint location, gl.GLint[] value) {
-	gl.glUniform4iv(location, cast(gl.GLsizei)value.length, value.ptr);
+	gl.glUniform4iv(location, cast(gl.GLsizei)value.length / 4, value.ptr);
 }
 
 void glUniform1uiv(gl.GLint location, gl.GLuint[] value) {
@@ -985,15 +985,15 @@ void glUniform1uiv(gl.GLint location, gl.GLuint[] value) {
 }
 
 void glUniform2uiv(gl.GLint location, gl.GLuint[] value) {
-	gl.glUniform2uiv(location, cast(gl.GLsizei)value.length, value.ptr);
+	gl.glUniform2uiv(location, cast(gl.GLsizei)value.length / 2, value.ptr);
 }
 
 void glUniform3uiv(gl.GLint location, gl.GLuint[] value) {
-	gl.glUniform3uiv(location, cast(gl.GLsizei)value.length, value.ptr);
+	gl.glUniform3uiv(location, cast(gl.GLsizei)value.length / 3, value.ptr);
 }
 
 void glUniform4uiv(gl.GLint location, gl.GLuint[] value) {
-	gl.glUniform4uiv(location, cast(gl.GLsizei)value.length, value.ptr);
+	gl.glUniform4uiv(location, cast(gl.GLsizei)value.length / 4, value.ptr);
 }
 
 void glUniformMatrix2fv(gl.GLint location, bool transpose, gl.GLfloat[] value) {
