@@ -14,11 +14,8 @@ import std.stdio : writeln;
 import std.file : exists, read, isFile, write;
 
 import core.thread;
-import core.memory;
 
 void main() {
-	GC.disable();
-
 	// make sure all the files were loaded.
 	assert(storage.fonts.local.length == 1);
 	assert(storage.shaders.local.length == 4);
@@ -58,5 +55,4 @@ void main() {
 		window.redraw();
 		Thread.sleep(dur!"msecs"(75));
 	}
-	GC.enable();
 }
