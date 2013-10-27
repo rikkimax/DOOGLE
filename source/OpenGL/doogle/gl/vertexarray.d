@@ -9,13 +9,9 @@ shared class VertexArray {
 		uint id_;
 	}
 
-	this(shared(StandardBuffer) buffer) {this(cast(uint)buffer);}
-
-	this(uint buffer) {
+	this() {
 		gl.glGenVertexArrays(1, cast(uint*)&id_);
 		gl.glBindVertexArray(id_);
-		gl.glBindBuffer(BindBufferTargets.ElementArrayBuffer, buffer);
-		gl.glEnableVertexAttribArray(0);
 	}
 
 	~this() {

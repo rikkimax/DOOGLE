@@ -42,26 +42,13 @@ void main() {
      * scale[2] = vec4(0f, 0f, 1f, 0f);
      * scale[3] = vec4(0f, 0f, 0f, 1f);
 	 */
-
-	vec2[] vertices;
-	vertices ~= cast(vec2[])storage.models.get("full_vertices.raw");
-	vertices ~= cast(vec2[])storage.models.get("full_texture_mapping.raw");
-	/*[
-		vec2(-1f, 1f),
-		vec2(1f, 1f),
-		vec2(-1f, -1f),
-		vec2(1f, -1f),
-		
-		vec2(0.0f, 0.0f),
-		vec2(1.0f, 0.0f),
-		vec2(0.0f, 1.0f),
-		vec2(1.0f, 1.0f)
-	];*/
 	
-	shared StandardBuffer vbo = new shared StandardBuffer(vertices);
-	shared VertexArray vao = new shared VertexArray(vbo);
-	vao.bindAttribute(program, "position", vbo, glwrap.AttribPointerType.Float, 2);
-	vao.bindAttribute(program, "texcoord", vbo, glwrap.AttribPointerType.Float, 2, 0, cast(int*)(vec2.sizeof * 4));
+	shared StandardBuffer vertices = new shared StandardBuffer("full_vertices.raw");
+	shared StandardBuffer texturemap = new shared StandardBuffer("full_texture_mapping.raw");
+
+	shared VertexArray vao = new shared VertexArray();
+	vao.bindAttribute(program, "position", vertices, glwrap.AttribPointerType.Float, 2);
+	vao.bindAttribute(program, "texcoord", texturemap, glwrap.AttribPointerType.Float, 2);
 
 	shared Font font = new shared Font("Anonymous_Pro.ttf", 20, 3);
 	auto text_hi = font.get("Hi");

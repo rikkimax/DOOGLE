@@ -1,4 +1,5 @@
 module doogle.gl.buffers;
+import storage = doogle.util.storage;
 import doogle.drawing.image;
 public import doogle.overloads.wrappers : BindBufferTargets, BufferUsages;
 import gl = derelict.opengl3.gl3;
@@ -10,6 +11,10 @@ alias Buffer!(BufferUsages.StaticDraw, BindBufferTargets.ArrayBuffer) StandardBu
 shared class Buffer(BufferUsages _usage, BindBufferTargets _type) {
 	protected {
 		uint id_;
+	}
+
+	this(string model) {
+		this(storage.models.get(model));
 	}
 
 	this(vec2[] data...) {
