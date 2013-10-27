@@ -7,6 +7,7 @@ import doogle.gl.buffers;
 import doogle.gl.vertexarray;
 import doogle.gl.texture;
 import doogle.util.color;
+import doogle.controls.opengl.defs.picture;
 
 import gl3n.linalg;
 import std.stdio : writeln;
@@ -24,7 +25,6 @@ void main() {
 	assert(storage.models.local.length == 2);
 
 	shared Window window = new shared Window(800, 600, "OpenGL Window"w, WindowStyle.Close);
-	shared ShaderProgram program = new shared ShaderProgram("Vertex_Standard", "Fragment_Standard");
 
 	/*
 	 * float cx = 1f / (window.width / 2f);
@@ -42,17 +42,11 @@ void main() {
      * scale[2] = vec4(0f, 0f, 1f, 0f);
      * scale[3] = vec4(0f, 0f, 0f, 1f);
 	 */
-	
-	shared StandardBuffer vertices = new shared StandardBuffer("full_vertices.raw");
-	shared StandardBuffer texturemap = new shared StandardBuffer("full_texture_mapping.raw");
-
-	shared VertexArray vao = new shared VertexArray();
-	vao.bindAttribute(program, "position", vertices, glwrap.AttribPointerType.Float, 2);
-	vao.bindAttribute(program, "texcoord", texturemap, glwrap.AttribPointerType.Float, 2);
 
 	shared Font font = new shared Font("Anonymous_Pro.ttf", 20, 3);
 	auto text_hi = font.get("Hi");
-	shared Texture texture = text_hi.texture;
+
+	shared Picture picture = new shared Picture(window, 750, 550, 50, 50, text_hi);
 
 	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
 	while (window.isOpen) {
