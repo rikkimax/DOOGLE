@@ -6,21 +6,24 @@ public import doogle.gl.texture : Texture;
 
 abstract shared class Control_Def : ComponentChild {
 	protected {
-		Component parent;
+		ComponentChildable parent;
 		Font font_;
 	}
 
-	this(shared(Component) parent) {
+	this(shared(ComponentChildable) parent) {
 		this.parent = parent;
+		parent.addChild(this);
 	}
 
-	this(shared(Component) parent, uint suggestedX, uint suggestedY) {
+	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY) {
 		this.parent = parent;
+		parent.addChild(this);
 		relocate(suggestedX, suggestedY);
 	}
 
-	this(shared(Component) parent, uint suggestedX, uint suggestedY, uint suggestedWidth, uint suggestedHeight) {
+	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, uint suggestedWidth, uint suggestedHeight) {
 		this.parent = parent;
+		parent.addChild(this);
 		relocate(suggestedX, suggestedY);
 		resize(suggestedWidth, suggestedHeight);
 	}
