@@ -79,8 +79,6 @@ shared class Font_FreeType : Font_Def {
 				if (data.length < height) {
 					data.length = height;
 				}
-				import std.stdio;writeln(width);
-				import std.stdio;writeln(height);
 
 				ptrdiff_t mult = width * height;
 				for (ptrdiff_t i = mult - 1; i >= 0; i--) {
