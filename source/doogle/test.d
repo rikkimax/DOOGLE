@@ -18,6 +18,9 @@ void main() {
 	auto text_hi = font.get("Hi", Color3.fromName("Red"));
 
 	shared Picture picture = new shared Picture(window, 750, 550, 50, 50, text_hi);
+	picture.font = font;
+	picture.caption = "hi"w;
+
 	shared Label label1 = new shared Label(window, 400, 300, "boo", font, Color3.fromHex("FF3300"));
 	shared Label label2 = new shared Label(window, 400, 320, "boo", font, Color3.fromHex("FF3300"));
 	label1.background = Color4.opaque;

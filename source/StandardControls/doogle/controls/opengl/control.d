@@ -1,8 +1,13 @@
 module doogle.controls.opengl.control;
 import doogle.controls.control_def;
 import doogle.window.component;
+import doogle.window.window;
 
 shared class Control_OpenGL : Control_Def {
+	protected {
+		bool visible_ = true;
+	}
+
 	this(shared(ComponentChildable) parent) {
 		super(parent);
 	}

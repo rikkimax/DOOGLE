@@ -7,13 +7,18 @@ import doogle.gl.shaders;
 import doogle.gl.buffers;
 import doogle.gl.vertexarray;
 import doogle.gl.texture;
+import doogle.events.event;
+import doogle.events.types;
 import glwrap = doogle.overloads.wrappers;
 import doogle.window.window;
+import doogle.controls.all;
+import doogle.controls.font;
 
 shared class Picture : Control, Picture_Def {
 	protected {
 		Image image_;
 		Texture texture_;
+		Label captionLbl_;
 	}
 
 	this(shared(ComponentChildable) parent) {
@@ -46,32 +51,62 @@ shared class Picture : Control, Picture_Def {
 				texture_ = image_.texture;
 			}
 		}
+
+		shared(Label) captionLabel() { synchronized return captionLbl_;	}
+
+		wstring caption() { synchronized return captionLbl_ !is null ? captionLbl_.text : ""w; }
+
+		void caption(wstring value) {
+			synchronized {
+				if (captionLbl_ !is null)
+					captionLbl_.text = value;
+			}
+		}
+
+		override void font(shared(Font) f) {
+			synchronized {
+				if (captionLbl_ is null)
+					captionLbl_ = new shared Label(parent_, _x, _y, ""w, f);
+				else
+					captionLbl_.font = f;
+			}
+		}
 	}
 
 	override void redraw(shared(Window) window) {
-		super.redraw(window);
 		if (visible) {
+			super.redraw(window);
 
-		static shared ShaderProgram program;
-		static shared StandardBuffer vertices;
-		static shared StandardBuffer texturemap;
-		static shared VertexArray vao;
-		if (program is null) {
-			program = new shared ShaderProgram("picture.vert", "picture.frag");
-			vertices = new shared StandardBuffer("full_vertices.raw");
-			texturemap = new shared StandardBuffer("full_texture_mapping.raw");
-			vao = new shared VertexArray();
-			vao.bindAttribute(program, "position", vertices, glwrap.AttribPointerType.Float, 2);
-			vao.bindAttribute(program, "texcoord", texturemap, glwrap.AttribPointerType.Float, 2);
-		}
-		if (texture_ !is null) {
-			texture_.bind();
-			program.bind();
+			static shared ShaderProgram program;
+			static shared StandardBuffer vertices;
+			static shared StandardBuffer texturemap;
+			static shared VertexArray vao;
+			if (program is null) {
+				program = new shared ShaderProgram("picture.vert", "picture.frag");
+				vertices = new shared StandardBuffer("full_vertices.raw");
+				texturemap = new shared StandardBuffer("full_texture_mapping.raw");
+				vao = new shared VertexArray();
+				vao.bindAttribute(program, "position", vertices, glwrap.AttribPointerType.Float, 2);
+				vao.bindAttribute(program, "texcoord", texturemap, glwrap.AttribPointerType.Float, 2);
+			}
+			if (texture_ !is null) {
+				texture_.bind();
+				program.bind();
 
-			program.uniform("move", move);
-			program.uniform("scale", scale);
-			program.uniform("transform", transform_parent_);
-			glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
+				program.uniform("move", move);
+				program.uniform("scale", scale);
+				program.uniform("transform", transform_parent_);
+				glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
+			}
+
+			if (_mouseOver) {
+				// show caption
+				if (captionLbl_ !is null)
+					captionLbl_.visible = true;
+			} else {
+				// hide caption
+				if (captionLbl_ !is null)
+					captionLbl_.visible = false;
 			}
 		}
 	}

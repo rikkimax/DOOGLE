@@ -87,43 +87,43 @@ shared class Label : Control, Label_Def {
 	}
 
 	override void redraw(shared(Window) window) {
-		if (_height == 0 || _width == 0) {
-			if (texture_ !is null) {
-				_height = texture_.height;
-				_width = texture_.width;
 		if (visible) {
+			if (_height == 0 || _width == 0) {
+				if (texture_ !is null) {
+					_height = texture_.height;
+					_width = texture_.width;
+				}
 			}
-		}
 
-		super.redraw(window);
-		
-		static shared ShaderProgram program;
-		static shared StandardBuffer vertices;
-		static shared StandardBuffer texturemap;
-		static shared VertexArray vao;
-		if (program is null) {
-			program = new shared ShaderProgram("label.vert", "label.frag");
-			vertices = new shared StandardBuffer("full_vertices.raw");
-			texturemap = new shared StandardBuffer("full_texture_mapping.raw");
-			vao = new shared VertexArray();
-			vao.bindAttribute(program, "position", vertices, glwrap.AttribPointerType.Float, 2);
-			vao.bindAttribute(program, "texcoord", texturemap, glwrap.AttribPointerType.Float, 2);
-		}
-		if (texture_ !is null) {
-			texture_.bind();
-			program.bind();
+			super.redraw(window);
+			
+			static shared ShaderProgram program;
+			static shared StandardBuffer vertices;
+			static shared StandardBuffer texturemap;
+			static shared VertexArray vao;
+			if (program is null) {
+				program = new shared ShaderProgram("label.vert", "label.frag");
+				vertices = new shared StandardBuffer("full_vertices.raw");
+				texturemap = new shared StandardBuffer("full_texture_mapping.raw");
+				vao = new shared VertexArray();
+				vao.bindAttribute(program, "position", vertices, glwrap.AttribPointerType.Float, 2);
+				vao.bindAttribute(program, "texcoord", texturemap, glwrap.AttribPointerType.Float, 2);
+			}
+			if (texture_ !is null) {
+				texture_.bind();
+				program.bind();
 
-			glwrap.glEnable(glwrap.EnableFunc.Blend);
-			glwrap.glBlendFunc(glwrap.BlendFactors.SrcAlpha, glwrap.BlendFactors.OneMinusSrcAlpha);
+				glwrap.glEnable(glwrap.EnableFunc.Blend);
+				glwrap.glBlendFunc(glwrap.BlendFactors.SrcAlpha, glwrap.BlendFactors.OneMinusSrcAlpha);
 
-			program.uniform("move", move);
-			program.uniform("background", background_.floats);
-			program.uniform("scale", scale);
-			program.uniform("transform", transform_parent_);
-			glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
+				program.uniform("move", move);
+				program.uniform("background", background_.floats);
+				program.uniform("scale", scale);
+				program.uniform("transform", transform_parent_);
+				glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
 
-			glwrap.glBlendFunc(glwrap.BlendFactors.One, glwrap.BlendFactors.Zero);
-			glwrap.glDisable(glwrap.EnableFunc.Blend);
+				glwrap.glBlendFunc(glwrap.BlendFactors.One, glwrap.BlendFactors.Zero);
+				glwrap.glDisable(glwrap.EnableFunc.Blend);
 			}
 		}
 	}
