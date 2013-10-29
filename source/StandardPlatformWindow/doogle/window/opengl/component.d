@@ -8,15 +8,18 @@ import doogle.math.linalg;
 enum TransformMethod {
 	UseChild,
 	UseParent,
-	Multiply
+	Multiply,
+	Add,
+	SubtractParent,
+	SubtractChild
 }
 
 abstract class ComponentChild_OpenGL : ComponentChild_Def {
 	protected {
 		mat4 transform_ = mat4.identity;
-		mat4 transform_final_;
-		mat4 transform_parent_;
-		TransformMethod transformMethod_;
+		mat4 transform_final_ = mat4.identity;
+		mat4 transform_parent_ = mat4.identity;
+		TransformMethod transformMethod_ = TransformMethod.UseChild;
 
 		mat4 scale;
 		vec4 move;
@@ -63,6 +66,15 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 									break;
 								case TransformMethod.Multiply:
 									transform_final_ = mult(transform_, (cast(shared(ComponentChild_OpenGL))parent).finalTransform);
+									break;
+								case TransformMethod.Add:
+									transform_final_ = add((cast(shared(ComponentChild_OpenGL))parent).finalTransform, transform_);
+									break;
+								case TransformMethod.SubtractChild:
+									transform_final_ = subtract((cast(shared(ComponentChild_OpenGL))parent).finalTransform, transform_);
+									break;
+								case TransformMethod.SubtractParent:
+									transform_final_ = subtract(transform_, (cast(shared(ComponentChild_OpenGL))parent).finalTransform);
 									break;
 								default:
 									break;

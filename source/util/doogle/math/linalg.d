@@ -23,3 +23,55 @@ pure shared(mat4) mult(shared(mat4) m1, shared(mat4) m2) {
 
 	return *cast(shared(mat4*))cast(void*)&ret;
 }
+
+pure shared(mat4) add(shared(mat4) m1, shared(mat4) m2) {
+	mat4 ret = mat4.identity;
+
+	ret[0][0] = m1[0][0] + m2[0][0];
+	ret[0][1] = m1[0][1] + m2[0][1];
+	ret[0][2] = m1[0][2] + m2[0][2];
+	ret[0][3] = m1[0][3] + m2[0][3];
+
+	ret[1][0] = m1[1][0] + m2[1][0];
+	ret[1][1] = m1[1][1] + m2[1][1];
+	ret[1][2] = m1[1][2] + m2[1][2];
+	ret[1][3] = m1[1][3] + m2[1][3];
+
+	ret[2][0] = m1[2][0] + m2[2][0];
+	ret[2][1] = m1[2][1] + m2[2][1];
+	ret[2][2] = m1[2][2] + m2[2][2];
+	ret[2][3] = m1[2][3] + m2[2][3];
+
+	ret[3][0] = m1[3][0] + m2[3][0];
+	ret[3][1] = m1[3][1] + m2[3][1];
+	ret[3][2] = m1[3][2] + m2[3][2];
+	ret[3][3] = m1[3][3] + m2[3][3];
+
+	return *cast(shared(mat4*))cast(void*)&ret;
+}
+
+pure shared(mat4) subtract(shared(mat4) m1, shared(mat4) m2) {
+	mat4 ret = mat4.identity;
+	
+	ret[0][0] = m1[0][0] - m2[0][0];
+	ret[0][1] = m1[0][1] - m2[0][1];
+	ret[0][2] = m1[0][2] - m2[0][2];
+	ret[0][3] = m1[0][3] - m2[0][3];
+	
+	ret[1][0] = m1[1][0] - m2[1][0];
+	ret[1][1] = m1[1][1] - m2[1][1];
+	ret[1][2] = m1[1][2] - m2[1][2];
+	ret[1][3] = m1[1][3] - m2[1][3];
+	
+	ret[2][0] = m1[2][0] - m2[2][0];
+	ret[2][1] = m1[2][1] - m2[2][1];
+	ret[2][2] = m1[2][2] - m2[2][2];
+	ret[2][3] = m1[2][3] - m2[2][3];
+	
+	ret[3][0] = m1[3][0] - m2[3][0];
+	ret[3][1] = m1[3][1] - m2[3][1];
+	ret[3][2] = m1[3][2] - m2[3][2];
+	ret[3][3] = m1[3][3] - m2[3][3];
+	
+	return *cast(shared(mat4*))cast(void*)&ret;
+}
