@@ -51,8 +51,18 @@ shared class Label : Control, Label_Def {
 
 		void text(wstring value) {
 			synchronized {
+				static shared Texture emptyTexture;
+
 				text_ = value;
-				texture_ = font_.get(value, color_).texture;
+
+				if (text_.length > 0)
+					texture_ = font_.get(value, color_).texture;
+				else {
+					if (emptyTexture is null) {
+						emptyTexture = new shared Texture(cast(ubyte[])null, 0, 0);
+					}
+					texture_ = emptyTexture;
+				}
 			}
 		}
 
