@@ -91,6 +91,10 @@ shared struct Color4 {
 	Color3 opCast(T : Color3)() {
 		return Color3(r, g, b);
 	}
+
+	static @property pure Color4 opaque() {
+		return Color4(0, 0, 0, 0);
+	}
 }
 
 unittest {
