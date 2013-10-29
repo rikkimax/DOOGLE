@@ -8,27 +8,32 @@ import doogle.gl.buffers;
 import doogle.gl.vertexarray;
 import doogle.gl.texture;
 import doogle.controls.font;
+public import doogle.util.color : Color3, Color, Color4;
 
 shared class Label : Control, Label_Def {
 	protected {
 		wstring text_;
 		Texture texture_;
 		Color3 color_;
+		Color4 background_;
 	}
 
 	this(shared(ComponentChildable) parent) {
 		super(parent);
 		color_ = Color3(255, 255, 255);
+		background_ = Color4.opaque;
 	}
 	
 	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY) {
 		super(parent, suggestedX, suggestedY);
 		color_ = Color3(255, 255, 255);
+		background_ = Color4.opaque;
 	}
 	
 	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, uint suggestedWidth, uint suggestedHeight) {
 		super(parent, suggestedX, suggestedY, suggestedWidth, suggestedHeight);
 		color_ = Color3(255, 255, 255);
+		background_ = Color4.opaque;
 	}
 	
 	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, wstring _text, shared(Font) _font, shared(Color3) _color = Color3(255, 255, 255)) {
@@ -36,6 +41,7 @@ shared class Label : Control, Label_Def {
 		font(_font);
 		color(_color);
 		text(_text);
+		background_ = Color4.opaque;
 	}
 
 	@property {
@@ -60,6 +66,14 @@ shared class Label : Control, Label_Def {
 				text(text_);
 			}
 		}
+
+		Color background() {
+			synchronized return background_;
+		}
+
+		void background(Color value) {
+			synchronized background_ = value;
+		}
 	}
 
 	override void redraw(shared(Window) window) {
@@ -77,7 +91,7 @@ shared class Label : Control, Label_Def {
 		static shared StandardBuffer texturemap;
 		static shared VertexArray vao;
 		if (program is null) {
-			program = new shared ShaderProgram("standard.vert", "standard.frag");
+			program = new shared ShaderProgram("label.vert", "label.frag");
 			vertices = new shared StandardBuffer("full_vertices.raw");
 			texturemap = new shared StandardBuffer("full_texture_mapping.raw");
 			vao = new shared VertexArray();
@@ -87,11 +101,18 @@ shared class Label : Control, Label_Def {
 		if (texture_ !is null) {
 			texture_.bind();
 			program.bind();
-			
+
+			glwrap.glEnable(glwrap.EnableFunc.Blend);
+			glwrap.glBlendFunc(glwrap.BlendFactors.SrcAlpha, glwrap.BlendFactors.OneMinusSrcAlpha);
+
 			glwrap.glUniform4fv(program.getUniform("move"), cast(float[])move.vector);
+			glwrap.glUniform4fv(program.getUniform("background"), background_.floats);
 			glwrap.glUniformMatrix4fv(program.getUniform("scale"), false, cast(float[])scale.matrix);
 			glwrap.glUniformMatrix4fv(program.getUniform("transform"), false, cast(float[])transform_parent_.matrix);
 			glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
+
+			glwrap.glBlendFunc(glwrap.BlendFactors.One, glwrap.BlendFactors.Zero);
+			glwrap.glDisable(glwrap.EnableFunc.Blend);
 		}
 	}
 }

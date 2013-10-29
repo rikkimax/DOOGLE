@@ -9,7 +9,7 @@ import core.thread;
 void main() {
 	// make sure all the files were loaded.
 	assert(storage.fonts.local.length == 1);
-	assert(storage.shaders.local.length == 4);
+	assert(storage.shaders.local.length == 6);
 	assert(storage.models.local.length == 2);
 
 	shared Window window = new shared Window(800, 600, "OpenGL Window"w, WindowStyle.Close);
@@ -18,7 +18,10 @@ void main() {
 	auto text_hi = font.get("Hi", Color3.fromName("Red"));
 
 	shared Picture picture = new shared Picture(window, 750, 550, 50, 50, text_hi);
-	shared Label label = new shared Label(window, 400, 300, "boo", font, Color3.fromHex("FF3300"));
+	shared Label label1 = new shared Label(window, 400, 300, "boo", font, Color3.fromHex("FF3300"));
+	shared Label label2 = new shared Label(window, 400, 320, "boo", font, Color3.fromHex("FF3300"));
+	label1.background = Color4.opaque;
+	label2.background = cast(Color4)(Color3.fromName("MintCream"));
 
 	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
 	while (window.isOpen) {
