@@ -51,7 +51,7 @@ shared class Font_FreeType : Font_Def {
 		}
 	}
 
-	override shared(Image) get(wstring text) {
+	override shared(Image) get(wstring text, shared(Color3) color = Color3(255, 255, 255)) {
 		synchronized {
 			shared(Image) ret = new shared Image();
 			ret.format = InternalFormat.RGB8;
@@ -110,9 +110,9 @@ shared class Font_FreeType : Font_Def {
 				size_t need = maxWidth - ub.length;
 
 				foreach(u; ub) {
-					ret ~= u;
-					ret ~= u;
-					ret ~= u;
+					ret ~= cast(ubyte)(u * color.rf);
+					ret ~= cast(ubyte)(u * color.gf);
+					ret ~= cast(ubyte)(u * color.bf);
 				}
 
 				for(uint j; j < need; j++) {
