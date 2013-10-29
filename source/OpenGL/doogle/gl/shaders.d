@@ -4,6 +4,7 @@ import glwrap = doogle.overloads.wrappers;
 import doogle.util.storage;
 import std.algorithm : filter, move;
 import std.string : indexOf;
+import gl3n.linalg;
 
 shared class ShaderProgram {
 	protected {
@@ -84,6 +85,41 @@ shared class ShaderProgram {
 	void bind() {
 		synchronized {
 			glwrap.glUseProgram(id_);
+		}
+	}
+
+	void uniform(string name, shared(mat2) value, bool transpose = false) {
+		synchronized {
+			bind();
+			glwrap.glUniformMatrix2fv(getUniform(name), transpose, cast(float[])value.matrix);
+		}
+	}
+
+	void uniform(string name, shared(mat3) value, bool transpose = false) {
+		synchronized {
+			bind();
+			glwrap.glUniformMatrix3fv(getUniform(name), transpose, cast(float[])value.matrix);
+		}
+	}
+
+	void uniform(string name, shared(mat4) value, bool transpose = false) {
+		synchronized {
+			bind();
+			glwrap.glUniformMatrix4fv(getUniform(name), transpose, cast(float[])value.matrix);
+		}
+	}
+
+	void uniform(string name, shared(vec4) value) {
+		synchronized {
+			bind();
+			glwrap.glUniform4fv(getUniform(name), cast(float[])value.vector);
+		}
+	}
+
+	void uniform(string name, float[4] value) {
+		synchronized {
+			bind();
+			glwrap.glUniform4fv(getUniform(name), value);
 		}
 	}
 

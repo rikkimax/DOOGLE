@@ -67,9 +67,9 @@ shared class Picture : Control, Picture_Def {
 			texture_.bind();
 			program.bind();
 
-			glwrap.glUniform4fv(program.getUniform("move"), cast(float[])move.vector);
-			glwrap.glUniformMatrix4fv(program.getUniform("scale"), false, cast(float[])scale.matrix);
-			glwrap.glUniformMatrix4fv(program.getUniform("transform"), false, cast(float[])transform_parent_.matrix);
+			program.uniform("move", move);
+			program.uniform("scale", scale);
+			program.uniform("transform", transform_parent_);
 			glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
 		}
 	}

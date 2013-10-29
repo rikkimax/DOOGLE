@@ -115,10 +115,10 @@ shared class Label : Control, Label_Def {
 			glwrap.glEnable(glwrap.EnableFunc.Blend);
 			glwrap.glBlendFunc(glwrap.BlendFactors.SrcAlpha, glwrap.BlendFactors.OneMinusSrcAlpha);
 
-			glwrap.glUniform4fv(program.getUniform("move"), cast(float[])move.vector);
-			glwrap.glUniform4fv(program.getUniform("background"), background_.floats);
-			glwrap.glUniformMatrix4fv(program.getUniform("scale"), false, cast(float[])scale.matrix);
-			glwrap.glUniformMatrix4fv(program.getUniform("transform"), false, cast(float[])transform_parent_.matrix);
+			program.uniform("move", move);
+			program.uniform("background", background_.floats);
+			program.uniform("scale", scale);
+			program.uniform("transform", transform_parent_);
 			glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
 
 			glwrap.glBlendFunc(glwrap.BlendFactors.One, glwrap.BlendFactors.Zero);
