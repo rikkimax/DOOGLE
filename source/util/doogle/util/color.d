@@ -12,15 +12,15 @@ shared struct Color3 {
 	}
 
 	@property float rf() {
-		return r / 255;
+		return r / 256f;
 	}
 	
 	@property float gf() {
-		return g / 255;
+		return g / 256f;
 	}
 	
 	@property float bf() {
-		return b / 255;
+		return b / 256f;
 	}
 
 	@property float[3] floats() {
@@ -42,19 +42,19 @@ shared struct Color4 {
 	}
 
 	@property float rf() {
-		return r / 255f;
+		return r / 256f;
 	}
 
 	@property float gf() {
-		return g / 255f;
+		return g / 256f;
 	}
 
 	@property float bf() {
-		return b / 255f;
+		return b / 256f;
 	}
 
 	@property float af() {
-		return a / 255f;
+		return a / 256f;
 	}
 
 	@property float[4] floats() {
