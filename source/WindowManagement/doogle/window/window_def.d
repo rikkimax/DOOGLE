@@ -6,6 +6,8 @@ import doogle.window.window;
 import doogle.events.event;
 import doogle.events.types;
 
+import core.thread;
+
 enum WindowStyle {
 	Base = 0,
 	Resize = 1,
@@ -108,6 +110,16 @@ abstract shared class Window_Def : Component, ComponentChildable {
 					return false;
 			}
 			return true;
+		}
+
+		void simpleEventLoop() {
+			Event ev;
+			while(getEvent(ev) && isOpen) {
+				if (ev.type == EventTypes.Close)
+					return;
+				redraw();
+				Thread.sleep(dur!"msecs"(75));
+			}
 		}
 
 		void childEvent(shared(Event) event) {
