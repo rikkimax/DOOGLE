@@ -134,7 +134,26 @@ abstract shared class Window_Def : Component, ComponentChildable {
 			foreach (child; _children) {
 				if (isEventCatagory(EventCatagories.Mouse, event.type)) {
 					if (event.mouse.x >= child.x && event.mouse.y >= child.y && event.mouse.x <= child.x + child.width && event.mouse.y <= child.y + child.height) {
+						if (!child.mouseOver) {
+							Event e;
+							e.type = EventTypes.MouseEnter;
+							e.mouse.x = event.mouse.x;
+							e.mouse.y = event.mouse.y;
+							e.mouse.relx = event.mouse.x - _x;
+							e.mouse.rely = event.mouse.y - _y;
+							child.childEvent(cast(shared(Window))this, this, e);
+							child.mouseOver = true;
+						}
 						child.childEvent(cast(shared(Window))this, this, event);
+					} else {
+						if (child.mouseOver) {
+							Event e;
+							e.type = EventTypes.MouseLeave;
+							e.mouse.x = event.mouse.x;
+							e.mouse.y = event.mouse.y;
+							child.childEvent(cast(shared(Window))this, this, e);
+							child.mouseOver = false;
+						}
 					}
 				} else if (isEventCatagory(EventCatagories.Keyboard, event.type)) {
 					if (child == _selectedChild) {

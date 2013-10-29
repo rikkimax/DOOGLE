@@ -412,17 +412,7 @@ version(Windows) {
 					// Add event to internal queue
 					if (ev.type != EventTypes.Unknown) {
 						_events ~= ev;
-						foreach (child; _children) {
-							if (isEventCatagory(EventCatagories.Mouse, ev.type)) {
-								if (ev.mouse.x >= child.x && ev.mouse.y >= child.y && ev.mouse.x <= child.x + child.width && ev.mouse.y <= child.y + child.height) {
-									child.childEvent(this, this, ev);
-								}
-							} else if (isEventCatagory(EventCatagories.Keyboard, ev.type)) {
-								if (child == _selectedChild) {
-									child.childEvent(this, this, ev);
-								}
-							}
-						}
+						childEvent(ev);
 					}
 					
 					return platform.windows.DefWindowProcW(cast(platform.windows.HWND)_window, msg, wParam, lParam);

@@ -31,6 +31,8 @@ enum EventTypes {
 	MouseUp,
 	MouseWheel,
 	MouseMove,
+	MouseEnter,
+	MouseLeave,
 	Draw,
 	Creation
 }

@@ -79,6 +79,18 @@ shared class EventClass(U : ComponentChild) : EventChildInterface {
 					} 
 					component.addEventHandler(EventTypes.MouseMove, &FUNC!mouseMove);
 					break;
+				case "mouseEnter":
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely);
+					} 
+					component.addEventHandler(EventTypes.MouseEnter, &FUNC!mouseEnter);
+					break;
+				case "mouseLeave":
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+						return d(event.mouse.x, event.mouse.y);
+					} 
+					component.addEventHandler(EventTypes.MouseLeave, &FUNC!mouseLeave);
+					break;
 				case "redraw":
 					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
 						return d();

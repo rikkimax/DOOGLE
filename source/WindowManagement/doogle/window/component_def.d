@@ -34,6 +34,9 @@ abstract shared class ComponentChild_Def : Component {
 					case EventTypes.MouseMove:
 						_mouseX = event.mouse.relx;
 						_mouseY = event.mouse.rely;
+						if (!mouseOver) {
+							mouseOver = true;
+						}
 						break;
 					case EventTypes.MouseDown:
 						_mouseButtons[cast(size_t)event.mouse.button] = true;
@@ -62,10 +65,26 @@ abstract shared class ComponentChild_Def : Component {
 					foreach (child; children) {
 						if (isEventCatagory(EventCatagories.Mouse, ev.type)) {
 							if (event.mouse.x >= child.x && event.mouse.y >= child.y && event.mouse.x <= child.x + child.width && event.mouse.y <= child.y + child.height) {
-								child.mouseOver = true;
+								if (!child.mouseOver) {
+									Event e;
+									e.type = EventTypes.MouseEnter;
+									e.mouse.x = event.mouse.x;
+									e.mouse.y = event.mouse.y;
+									e.mouse.relx = event.mouse.x - _x;
+									e.mouse.rely = event.mouse.y - _y;
+									child.childEvent(window, this, e);
+									child.mouseOver = true;
+				                }
 								child.childEvent(window, this, event);
 							} else {
-								child.mouseOver = false;
+								if (child.mouseOver) {
+									Event e;
+									e.type = EventTypes.MouseLeave;
+									e.mouse.x = event.mouse.x;
+									e.mouse.y = event.mouse.y;
+									child.childEvent(window, this, e);
+									child.mouseOver = false;
+								}
 							}
 						} else if (isEventCatagory(EventCatagories.Keyboard, event.type)) {
 							if (child == _selectedChild) {
@@ -97,7 +116,7 @@ abstract shared class ComponentChild_Def : Component {
 	}
 }
 
-alias bool delegate(shared(Event) event, shared(Component) component) EventFunc;
+alias bool delegate(shared(Event) event, shared(Component) component) shared EventFunc;
 
 abstract shared class Component {
 	protected {
