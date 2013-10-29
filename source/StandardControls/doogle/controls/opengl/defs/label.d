@@ -13,23 +13,28 @@ shared class Label : Control, Label_Def {
 	protected {
 		wstring text_;
 		Texture texture_;
+		Color3 color_;
 	}
 
 	this(shared(ComponentChildable) parent) {
 		super(parent);
+		color_ = Color3(255, 255, 255);
 	}
 	
 	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY) {
 		super(parent, suggestedX, suggestedY);
+		color_ = Color3(255, 255, 255);
 	}
 	
 	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, uint suggestedWidth, uint suggestedHeight) {
 		super(parent, suggestedX, suggestedY, suggestedWidth, suggestedHeight);
+		color_ = Color3(255, 255, 255);
 	}
 	
-	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, wstring _text, shared(Font) _font) {
+	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, wstring _text, shared(Font) _font, shared(Color3) _color = Color3(255, 255, 255)) {
 		super(parent, suggestedX, suggestedY);
 		font(_font);
+		color(_color);
 		text(_text);
 	}
 
@@ -41,7 +46,18 @@ shared class Label : Control, Label_Def {
 		void text(wstring value) {
 			synchronized {
 				text_ = value;
-				texture_ = font_.get(value).texture;
+				texture_ = font_.get(value, color_).texture;
+			}
+		}
+
+		Color3 color() {
+			synchronized return color_;
+		}
+
+		void color(Color3 value) {
+			synchronized {
+				color_ = value;
+				text(text_);
 			}
 		}
 	}

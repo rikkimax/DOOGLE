@@ -15,10 +15,10 @@ void main() {
 	shared Window window = new shared Window(800, 600, "OpenGL Window"w, WindowStyle.Close);
 
 	shared Font font = new shared Font("Anonymous_Pro.ttf", 20, 3);
-	auto text_hi = font.get("Hi", Color3(255, 0, 0));
+	auto text_hi = font.get("Hi", Color3.fromName("Red"));
 
 	shared Picture picture = new shared Picture(window, 750, 550, 50, 50, text_hi);
-	shared Label label = new shared Label(window, 400, 300, "boo", font);
+	shared Label label = new shared Label(window, 400, 300, "boo", font, Color3.fromHex("FF3300"));
 
 	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
 	while (window.isOpen) {
