@@ -17,6 +17,56 @@ enum InternalFormat {
 	RGB8 = gl.GL_RGB8
 }
 
+enum EnableFunc {
+	Blend = gl.GL_BLEND,
+	ClipDistance = gl.GL_CLIP_DISTANCE0,
+	ColorLogicOp = gl.GL_COLOR_LOGIC_OP,
+	CullFace = gl.GL_CULL_FACE,
+	DebugOutput = gl.GL_DEBUG_OUTPUT,
+	DebugOutputSynchroonous = gl.GL_DEBUG_OUTPUT_SYNCHRONOUS,
+	DepthClamp = gl.GL_DEPTH_CLAMP,
+	DepthTest = gl.GL_DEPTH_TEST,
+	Dither = gl.GL_DITHER,
+	FrameBufferSRGB = gl.GL_FRAMEBUFFER_SRGB,
+	LineSmooth = gl.GL_LINE_SMOOTH,
+	MultiSample = gl.GL_MULTISAMPLE,
+	PolygonOffsetFill = gl.GL_POLYGON_OFFSET_FILL,
+	PolygonOffsetLine = gl.GL_POLYGON_OFFSET_LINE,
+	PolygonOffsetPoint = gl.GL_POLYGON_OFFSET_POINT,
+	PolygonSmooth = gl.GL_POLYGON_SMOOTH,
+	PrimitiveRestart = gl.GL_PRIMITIVE_RESTART,
+	PrimitiveRestartFixedIndex = gl.GL_PRIMITIVE_RESTART_FIXED_INDEX,
+	RasterizerDiscard = gl.GL_RASTERIZER_DISCARD,
+	SampleAlphaToCoverage = gl.GL_SAMPLE_ALPHA_TO_COVERAGE,
+	SampleAlphaToOne = gl.GL_SAMPLE_ALPHA_TO_ONE,
+	SampleCoverage = gl.GL_SAMPLE_COVERAGE,
+	SampleShading = gl.GL_SAMPLE_SHADING,
+	SampleMask = gl.GL_SAMPLE_MASK,
+	ScissorTest = gl.GL_SCISSOR_TEST,
+	StencilTest = gl.GL_STENCIL_TEST,
+	TextureCubeMapSeamless = gl.GL_TEXTURE_CUBE_MAP_SEAMLESS,
+	ProgramPointSize = gl.GL_PROGRAM_POINT_SIZE
+}
+
+enum BlendFactors {
+	Zero = gl.GL_ZERO,
+	One = gl.GL_ONE,
+	SrcColor = gl.GL_SRC_COLOR,
+	OneMinusSrcColor = gl.GL_ONE_MINUS_SRC_COLOR,
+	DstColor = gl.GL_DST_COLOR,
+	OneMinusDstColor = gl.GL_ONE_MINUS_DST_COLOR,
+	SrcAlpha = gl.GL_SRC_ALPHA,
+	OneMinusSrcAlpha = gl.GL_ONE_MINUS_SRC_ALPHA,
+	DstAlpha = gl.GL_DST_ALPHA,
+	OneMinusDstAlpha = gl.GL_ONE_MINUS_DST_ALPHA,
+	ConstantColor = gl.GL_CONSTANT_COLOR,
+	OneMinusConstantColor = gl.GL_ONE_MINUS_CONSTANT_COLOR,
+	ConstantAlpha = gl.GL_CONSTANT_ALPHA,
+	OneMinusConstantAlpha = gl.GL_ONE_MINUS_CONSTANT_ALPHA,
+	SrcAlphaSaturate = gl.GL_SRC_ALPHA_SATURATE,
+	Src2Color = gl.GL_SRC1_COLOR
+}
+
 void glClear(bool buffer = false, bool depth = false, bool stencil = false) {
 	gl.glClear((buffer ? gl.GL_COLOR_BUFFER_BIT : 0) | (depth ? gl.GL_DEPTH_BUFFER_BIT : 0) | (stencil ? gl.GL_STENCIL_BUFFER_BIT : 0));
 }
@@ -45,13 +95,28 @@ bindFunc(cast(void**)&glClearStencil, "glClearStencil");
 bindFunc(cast(void**)&glClearDepth, "glClearDepth");
 bindFunc(cast(void**)&glStencilMask, "glStencilMask");
 bindFunc(cast(void**)&glColorMask, "glColorMask");
-bindFunc(cast(void**)&glDepthMask, "glDepthMask");
-bindFunc(cast(void**)&glDisable, "glDisable");
-bindFunc(cast(void**)&glEnable, "glEnable");
-bindFunc(cast(void**)&glFinish, "glFinish");
-bindFunc(cast(void**)&glFlush, "glFlush");
-bindFunc(cast(void**)&glBlendFunc, "glBlendFunc");
-bindFunc(cast(void**)&glLogicOp, "glLogicOp");
+bindFunc(cast(void**)&glDepthMask, "glDepthMask");*/
+
+void glEnable(EnableFunc func) {
+	gl.glEnable(cast(gl.GLenum)func);
+}
+
+void glDisable(EnableFunc func) {
+	gl.glDisable(cast(gl.GLenum)func);
+}
+
+/*bindFunc(cast(void**)&glFinish, "glFinish");
+bindFunc(cast(void**)&glFlush, "glFlush");*/
+
+void glBlendFunc(BlendFactors sfactor, BlendFactors dfactor) {
+	gl.glBlendFunc(cast(gl.GLenum)sfactor, cast(gl.GLenum)dfactor);
+}
+
+void glBlendFunci(uint buf, BlendFactors sfactor, BlendFactors dfactor) {
+	gl.glBlendFunci(buf, cast(gl.GLenum)sfactor, cast(gl.GLenum)dfactor);
+}
+
+/*bindFunc(cast(void**)&glLogicOp, "glLogicOp");
 bindFunc(cast(void**)&glStencilFunc, "glStencilFunc");
 bindFunc(cast(void**)&glStencilOp, "glStencilOp");
 bindFunc(cast(void**)&glDepthFunc, "glDepthFunc");
@@ -383,25 +448,6 @@ void glGetCompressedTexImage(CompressedTextureTargets target, gl.GLint lod, out 
 /**
  * Opengl 1.4
  */
-
-enum BlendFactors {
-	Zero = gl.GL_ZERO,
-	One = gl.GL_ONE,
-	SrcColor = gl.GL_SRC_COLOR,
-	OneMinusSrcColor = gl.GL_ONE_MINUS_SRC_COLOR,
-	DstColor = gl.GL_DST_COLOR,
-	OneMinusDstColor = gl.GL_ONE_MINUS_DST_COLOR,
-	SrcAlpha = gl.GL_SRC_ALPHA,
-	OneMinusSrcAlpha = gl.GL_ONE_MINUS_SRC_ALPHA,
-	DstAlpha = gl.GL_DST_ALPHA,
-	OneMinusDstAlpha = gl.GL_ONE_MINUS_DST_ALPHA,
-	ConstantColor = gl.GL_CONSTANT_COLOR,
-	OneMinusConstantColor = gl.GL_ONE_MINUS_CONSTANT_COLOR,
-	ConstantAlpha = gl.GL_CONSTANT_ALPHA,
-	OneMinusConstantAlpha = gl.GL_ONE_MINUS_CONSTANT_ALPHA,
-	SrcAlphaSaturate = gl.GL_SRC_ALPHA_SATURATE,
-	Src2Color = gl.GL_SRC1_COLOR
-}
 
 enum PointParamaterNames {
 	FadeThresholdSize = gl.GL_POINT_FADE_THRESHOLD_SIZE,
