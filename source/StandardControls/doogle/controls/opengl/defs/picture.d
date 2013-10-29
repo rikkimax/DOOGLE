@@ -50,6 +50,7 @@ shared class Picture : Control, Picture_Def {
 
 	override void redraw(shared(Window) window) {
 		super.redraw(window);
+		if (visible) {
 
 		static shared ShaderProgram program;
 		static shared StandardBuffer vertices;
@@ -71,6 +72,7 @@ shared class Picture : Control, Picture_Def {
 			program.uniform("scale", scale);
 			program.uniform("transform", transform_parent_);
 			glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
+			}
 		}
 	}
 }

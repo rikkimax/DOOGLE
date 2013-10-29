@@ -17,4 +17,10 @@ shared class Control_OpenGL : Control_Def {
 
 	override void resize(){}
 	override void relocate(){}
+
+	@property {
+		bool visible() { synchronized return visible_; }
+
+		void visible(bool value) { synchronized visible_ = value; }
+	}
 }

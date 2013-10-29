@@ -91,6 +91,7 @@ shared class Label : Control, Label_Def {
 			if (texture_ !is null) {
 				_height = texture_.height;
 				_width = texture_.width;
+		if (visible) {
 			}
 		}
 
@@ -123,6 +124,7 @@ shared class Label : Control, Label_Def {
 
 			glwrap.glBlendFunc(glwrap.BlendFactors.One, glwrap.BlendFactors.Zero);
 			glwrap.glDisable(glwrap.EnableFunc.Blend);
+			}
 		}
 	}
 }
