@@ -14,11 +14,17 @@ import doogle.window.window;
 import doogle.controls.all;
 import doogle.controls.font;
 
+enum CaptionVisiblity {
+	MouseOver,
+	Always
+}
+
 shared class Picture : Control, Picture_Def {
 	protected {
 		Image image_;
 		Texture texture_;
 		Label captionLbl_;
+		CaptionVisiblity captionVisibility_ = CaptionVisiblity.MouseOver;
 	}
 
 	this(shared(ComponentChildable) parent) {
@@ -63,6 +69,14 @@ shared class Picture : Control, Picture_Def {
 			}
 		}
 
+		CaptionVisiblity captionVisiblity() {
+			synchronized return captionVisibility_;
+		}
+
+		void captionVisiblity(CaptionVisiblity value) {
+			synchronized captionVisibility_ = value;
+		}
+
 		override void font(shared(Font) f) {
 			synchronized {
 				if (captionLbl_ is null)
@@ -99,14 +113,19 @@ shared class Picture : Control, Picture_Def {
 				glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
 			}
 
-			if (_mouseOver) {
-				// show caption
+			if (captionVisibility_ == CaptionVisiblity.MouseOver) {
+				if (_mouseOver) {
+					// show caption
+					if (captionLbl_ !is null)
+						captionLbl_.visible = true;
+				} else {
+					// hide caption
+					if (captionLbl_ !is null)
+						captionLbl_.visible = false;
+				}
+			} else {
 				if (captionLbl_ !is null)
 					captionLbl_.visible = true;
-			} else {
-				// hide caption
-				if (captionLbl_ !is null)
-					captionLbl_.visible = false;
 			}
 		}
 	}
