@@ -30,6 +30,27 @@ abstract shared class ComponentChild_Def : Component {
 		 */
 		void childEvent(shared(Window) window, shared(Component) parent, shared(Event) event) {
 			synchronized {
+				switch(event.type) {
+					case EventTypes.MouseMove:
+						_mouseX = event.mouse.relx;
+						_mouseY = event.mouse.rely;
+						break;
+					case EventTypes.MouseDown:
+						_mouseButtons[cast(size_t)event.mouse.button] = true;
+						break;
+					case EventTypes.MouseUp:
+						_mouseButtons[cast(size_t)event.mouse.button] = false;
+						break;
+					case EventTypes.KeyDown:
+						_keys[cast(size_t)event.key.code] = true;
+						break;
+					case EventTypes.KeyUp:
+						_keys[cast(size_t)event.key.code] = false;
+						break;
+					default:
+						break;
+				}
+
 				foreach(k; _eventHandlers.keys) {
 					if (k == event.type) {
 						foreach(handler; _eventHandlers[k]) {
@@ -41,7 +62,10 @@ abstract shared class ComponentChild_Def : Component {
 					foreach (child; children) {
 						if (isEventCatagory(EventCatagories.Mouse, ev.type)) {
 							if (event.mouse.x >= child.x && event.mouse.y >= child.y && event.mouse.x <= child.x + child.width && event.mouse.y <= child.y + child.height) {
+								child.mouseOver = true;
 								child.childEvent(window, this, event);
+							} else {
+								child.mouseOver = false;
 							}
 						} else if (isEventCatagory(EventCatagories.Keyboard, event.type)) {
 							if (child == _selectedChild) {
@@ -83,6 +107,7 @@ abstract shared class Component {
 		
 		uint _mouseX, _mouseY;
 		bool[3] _mouseButtons;
+		bool _mouseOver;
 		
 		bool[] _keys = new bool[93];
 
@@ -178,6 +203,13 @@ abstract shared class Component {
 			 */
 			uint mouseX() { synchronized return _mouseX; }
 			uint mouseY() { synchronized return _mouseY; }
+
+			bool mouseOver() { synchronized return _mouseOver; }
+
+			/**
+			 * Should only be called from ComponentChildable.
+			 */
+			void mouseOver(bool value) { synchronized _mouseOver = value; }
 
 			/**
 			 * Mouse button and keys
