@@ -3,6 +3,9 @@ import doogle.controls.font;
 import doogle.platform;
 import doogle.window.window;
 import doogle.controls.all;
+import doogle.events.oop;
+import doogle.events.types;
+import doogle.events.event;
 
 import core.thread;
 
@@ -21,9 +24,11 @@ void main() {
 	picture.font = font;
 	picture.caption = "hi"w;
 
-	shared Label label1 = new shared Label(window, 400, 300, "boo", font, Color3.fromHex("FF3300"));
+	shared BooLabel1 label1 = new shared BooLabel1(window);
+
+	//shared Label label1 = new shared Label(window, 400, 300, "boo", font, Color3.fromHex("FF3300"));
 	shared Label label2 = new shared Label(window, 400, 320, "boo", font, Color3.fromHex("FF3300"));
-	label1.background = Color4.opaque;
+	//label1.background = Color4.opaque;
 	label2.background = cast(Color4)(Color3.fromName("MintCream"));
 
 	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
@@ -33,5 +38,12 @@ void main() {
 		glwrap.glClear(true, true);
 		window.redraw();
 		Thread.sleep(dur!"msecs"(75));
+	}
+}
+
+shared class BooLabel1 : EventClass!Label {
+	this(shared(Window) window) {
+		super(window, 400, 300, "boo"w, new shared Font("Anonymous_Pro.ttf", 20, 3), Color3.fromHex("FF3300"));
+		component.background = Color4.opaque;
 	}
 }

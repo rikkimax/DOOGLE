@@ -18,23 +18,23 @@ enum Keys {
 	Add, Subtract, Multiply, Divide
 }
 
-enum EventTypes {
-	Unknown,
-	Close,
-	Resize,
-	Move,
-	Focus,
-	Blur,
-	KeyDown,
-	KeyUp,
-	MouseDown,
-	MouseUp,
-	MouseWheel,
-	MouseMove,
-	MouseEnter,
-	MouseLeave,
-	Draw,
-	Creation
+enum EventTypes : string {
+	Unknown = "",
+	Close = "Close",
+	Resize = "Resize",
+	Move = "Move",
+	Focus = "Focus",
+	Blur = "Blur",
+	KeyDown = "KeyDown",
+	KeyUp = "KeyUp",
+	MouseDown = "MouseDown",
+	MouseUp = "MouseUp",
+	MouseWheel = "MouseWheel",
+	MouseMove = "MouseMove",
+	MouseEnter = "MouseEnter",
+	MouseLeave = "MouseLeave",
+	Draw = "Draw",
+	Creation = "Creation"
 }
 
 enum EventCatagories {

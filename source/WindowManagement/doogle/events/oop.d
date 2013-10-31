@@ -14,6 +14,8 @@ shared interface EventInterface {
 	bool mouseUp(uint x, uint y, uint relx, uint rely, MouseButtons button);
 	bool mouseWheel(uint x, uint y, uint relx, uint rely, int delta);
 	bool mouseMove(uint x, uint y, uint relx, uint rely);
+	bool mouseEnter(uint x, uint y, uint relx, uint rely);
+	bool mouseLeave(uint x, uint y, uint relx, uint rely);
 	
 	bool redraw();
 }
@@ -39,60 +41,60 @@ shared class EventClass(U : ComponentChild) : EventChildInterface {
 	 * So you MUST add a constructor.
 	 * By just calling super();
 	 */
-	this(this T)() {
-		component = new shared U();
+	this(this T, V ...)(V args) {
+		component = new shared U(args);
 		foreach(d; [__traits(derivedMembers, T)]) {
 			switch(d) {
 				case "unknown":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event);
 					} 
 					component.addEventHandler(EventTypes.Unknown, &FUNC!unknown);
 					break;
 				case "keyUp":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.key.code, event.key.alt, event.key.control, event.key.shift);
 					} 
 					component.addEventHandler(EventTypes.KeyUp, &FUNC!keyUp);
 					break;
 				case "mouseDown":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely, event.mouse.button);
 					} 
 					component.addEventHandler(EventTypes.MouseDown, &FUNC!mouseDown);
 					break;
 				case "mouseUp":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely, event.mouse.button);
 					} 
 					component.addEventHandler(EventTypes.MouseUp, &FUNC!mouseUp);
 					break;
 				case "mouseWheel":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely, event.mouse.delta);
 					} 
 					component.addEventHandler(EventTypes.MouseWheel, &FUNC!mouseWheel);
 					break;
 				case "mouseMove":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely);
 					} 
 					component.addEventHandler(EventTypes.MouseMove, &FUNC!mouseMove);
 					break;
 				case "mouseEnter":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely);
 					} 
 					component.addEventHandler(EventTypes.MouseEnter, &FUNC!mouseEnter);
 					break;
 				case "mouseLeave":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
-						return d(event.mouse.x, event.mouse.y);
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
+						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely);
 					} 
 					component.addEventHandler(EventTypes.MouseLeave, &FUNC!mouseLeave);
 					break;
 				case "redraw":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d();
 					} 
 					component.addEventHandler(EventTypes.Draw, &FUNC!redraw);
@@ -113,6 +115,8 @@ shared class EventClass(U : ComponentChild) : EventChildInterface {
 	bool mouseUp(uint x, uint y, uint relx, uint rely, MouseButtons button){return false;}
 	bool mouseWheel(uint x, uint y, uint relx, uint rely, int delta){return false;}
 	bool mouseMove(uint x, uint y, uint relx, uint rely){return false;}
+	bool mouseEnter(uint x, uint y, uint relx, uint rely){return false;}
+	bool mouseLeave(uint x, uint y, uint relx, uint rely){return false;}
 	
 	bool redraw() {return false;}
 }

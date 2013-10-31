@@ -30,7 +30,7 @@ abstract shared class ComponentChild_Def : Component {
 		 */
 		void childEvent(shared(Window) window, shared(Component) parent, shared(Event) event) {
 			synchronized {
-				switch(event.type) {
+				switch(cast(string)event.type) {
 					case EventTypes.MouseMove:
 						_mouseX = event.mouse.relx;
 						_mouseY = event.mouse.rely;
