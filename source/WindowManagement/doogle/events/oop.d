@@ -171,8 +171,8 @@ shared class EventClass(U : Window) : EventWindowInterface {
 	 * So you MUST add a constructor.
 	 * By just calling super();
 	 */
-	this(this T)() {
-		component = new shared U();
+	this(this T, V ...)(V args) {
+		component = new shared U(args);
 		foreach(d; [__traits(derivedMembers, T)]) {
 			switch(d) {
 				case "unknown":
