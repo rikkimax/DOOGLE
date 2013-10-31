@@ -34,6 +34,7 @@ Planned:
 * Full manipulation of a GUI using a socket connection (optional).
 * Font rasterizer wrapper.
 * Storage manager including packaging support.
+* Possibly create a glut compatible interface for easing porting.
 
 Aims:
 * Be able to make majority of applications with it.
