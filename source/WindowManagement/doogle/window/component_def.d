@@ -54,13 +54,8 @@ abstract shared class ComponentChild_Def : Component {
 						break;
 				}
 
-				foreach(k; _eventHandlers.keys) {
-					if (k == event.type) {
-						foreach(handler; _eventHandlers[k]) {
-							if (handler(event, this)) break;
-						}
-					}
-				}
+				runEvent(event);
+
 				static if (__traits(compiles, children.length)) {
 					foreach (child; children) {
 						if (isEventCatagory(EventCatagories.Mouse, ev.type)) {
@@ -109,6 +104,25 @@ abstract shared class ComponentChild_Def : Component {
 				static if (__traits(compiles, children.length)) {
 					foreach (child; children) {
 						child.redraw();
+					}
+				}
+			}
+		}
+
+		void runEvent(string event) {
+			runEvent(Event(cast(EventTypes)event));
+		}
+
+		/**
+		 * For your own custom little events.
+		 */
+		void runEvent(shared(Event) event) {
+			synchronized {
+				foreach(k; _eventHandlers.keys) {
+					if (k == event.type) {
+						foreach(handler; _eventHandlers[k]) {
+							if (handler(event, this)) break;
+						}
 					}
 				}
 			}

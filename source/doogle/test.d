@@ -45,5 +45,15 @@ shared class BooLabel1 : EventClass!Label {
 	this(shared(Window) window) {
 		super(window, 400, 300, "boo"w, new shared Font("Anonymous_Pro.ttf", 20, 3), Color3.fromHex("FF3300"));
 		component.background = Color4.opaque;
+		component.runEvent("test");
+	}
+
+	@OOPEvent("test") bool func() {
+		import std.stdio;writeln("hi from test func");
+		return false;
+	}
+
+	@OOPEvent(EventTypes.Draw) void onDraw() {
+		import std.stdio;writeln("on draw");
 	}
 }

@@ -3,6 +3,7 @@ import doogle.events.event;
 import doogle.events.types;
 import doogle.window.component;
 import doogle.window.window;
+import std.traits;
 
 shared interface EventInterface {
 	bool unknown(Event);
@@ -102,6 +103,45 @@ shared class EventClass(U : ComponentChild) : EventChildInterface {
 				default:
 					//ignore.
 					break;
+			}
+		}
+
+		foreach(name; __traits(allMembers, T)) {
+			T me = cast(T)this;
+			mixin ("alias symbol = me." ~ name ~ ";");
+			if (__traits(isVirtualFunction, symbol)) {
+				foreach (UDA; __traits(getAttributes, symbol)) {
+					static if (is(typeof(UDA) == OOPEvent)) {
+						// proceed as you wish
+						static if (__traits(compiles, { mixin("assert(me." ~ name ~ "(cast(shared(Event))Event.init));"); } )) {
+							// has an event argument
+							bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
+								mixin("return me." ~ name ~ "(cast(shared(Event))Event.init);");
+							}
+							component.addEventHandler(cast(EventTypes)UDA.type, &FUNC!symbol);
+						} else static if (__traits(compiles, { mixin("assert(me." ~ name ~ "());"); })) {
+							// has no arguments
+							bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
+								mixin("return me." ~ name ~ "();");
+							}
+							component.addEventHandler(cast(EventTypes)UDA.type, &FUNC!symbol);
+						} else static if (__traits(compiles, { mixin("me." ~ name ~ "(cast(shared(Event))Event.init);"); } )) {
+							// has an event argument
+							bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
+								mixin("me." ~ name ~ "(cast(shared(Event))Event.init);");
+								return false;
+							}
+							component.addEventHandler(cast(EventTypes)UDA.type, &FUNC!symbol);
+						} else static if (__traits(compiles, { mixin("me." ~ name ~ "();"); })) {
+							// has no arguments
+							bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
+								mixin("me." ~ name ~ "();");
+								return false;
+							}
+							component.addEventHandler(cast(EventTypes)UDA.type, &FUNC!symbol);
+						}
+					}
+				}
 			}
 		}
 	}

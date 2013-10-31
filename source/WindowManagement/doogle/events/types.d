@@ -63,3 +63,7 @@ pure bool isEventCatagory(EventCatagories ec, EventTypes type) {
 	}
 	return false;
 }
+
+struct OOPEvent {
+	string type;
+}
