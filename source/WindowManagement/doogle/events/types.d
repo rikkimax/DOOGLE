@@ -34,7 +34,11 @@ enum EventTypes : string {
 	MouseEnter = "MouseEnter",
 	MouseLeave = "MouseLeave",
 	Draw = "Draw",
-	Creation = "Creation"
+	Creation = "Creation",
+	WindowResize = "WindowResize",
+	WindowMove = "WindowMove",
+	WindowFocussed = "WindowFocussed",
+	WindowBlurred = "WindowBlurred"
 }
 
 enum EventCatagories {
@@ -59,7 +63,11 @@ pure bool isEventCatagory(EventCatagories ec, EventTypes type) {
 			type == EventTypes.Focus ||
 			type == EventTypes.Blur ||
 			type == EventTypes.Draw ||
-			type == EventTypes.Creation;
+			type == EventTypes.Creation ||
+			type == EventTypes.WindowResize ||
+			type == EventTypes.WindowMove ||
+			type == EventTypes.WindowFocussed ||
+			type == EventTypes.WindowBlurred;
 	}
 	return false;
 }

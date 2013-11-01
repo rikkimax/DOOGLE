@@ -18,7 +18,7 @@ shared interface EventInterface {
 	bool mouseEnter(uint x, uint y, uint relx, uint rely);
 	bool mouseLeave(uint x, uint y, uint relx, uint rely);
 	
-	bool redraw();
+	bool draw();
 }
 
 shared interface EventWindowInterface : EventInterface {
@@ -94,11 +94,11 @@ shared class EventClass(U : ComponentChild) : EventChildInterface {
 					} 
 					component.addEventHandler(EventTypes.MouseLeave, &FUNC!mouseLeave);
 					break;
-				case "redraw":
+				case "draw":
 					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d();
 					} 
-					component.addEventHandler(EventTypes.Draw, &FUNC!redraw);
+					component.addEventHandler(EventTypes.Draw, &FUNC!draw);
 					break;
 				default:
 					//ignore.
@@ -106,8 +106,8 @@ shared class EventClass(U : ComponentChild) : EventChildInterface {
 			}
 		}
 
+		T me = cast(T)this;
 		foreach(name; __traits(allMembers, T)) {
-			T me = cast(T)this;
 			mixin ("alias symbol = me." ~ name ~ ";");
 			if (__traits(isVirtualFunction, symbol)) {
 				foreach (UDA; __traits(getAttributes, symbol)) {
@@ -144,6 +144,18 @@ shared class EventClass(U : ComponentChild) : EventChildInterface {
 				}
 			}
 		}
+	}
+
+	T opCast(T : ComponentChild)() {
+		synchronized return cast(T)component;
+	}
+
+	T opCast(T)() if (is(T : shared(U))) {
+		synchronized return cast(T)component;
+	}
+
+	T opCast(T, this V)() if (is(T : V)) {
+		return *cast(T*)cast(void*)&this;
 	}
 
 	bool unknown(Event){return false;}
@@ -158,14 +170,14 @@ shared class EventClass(U : ComponentChild) : EventChildInterface {
 	bool mouseEnter(uint x, uint y, uint relx, uint rely){return false;}
 	bool mouseLeave(uint x, uint y, uint relx, uint rely){return false;}
 	
-	bool redraw() {return false;}
+	bool draw() {return false;}
 }
 
 shared class EventClass(U : Window) : EventWindowInterface {
 	protected {
 		U component;
 	}
-
+	
 	/**
 	 * Don't forget to call this after you created the component.
 	 * So you MUST add a constructor.
@@ -176,76 +188,76 @@ shared class EventClass(U : Window) : EventWindowInterface {
 		foreach(d; [__traits(derivedMembers, T)]) {
 			switch(d) {
 				case "unknown":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event);
 					} 
 					component.addEventHandler(EventTypes.Unknown, &FUNC!unknown);
 					break;
 				case "keyUp":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.key.code, event.key.alt, event.key.control, event.key.shift);
 					} 
 					component.addEventHandler(EventTypes.KeyUp, &FUNC!keyUp);
 					break;
 				case "mouseDown":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely, event.mouse.button);
 					} 
 					component.addEventHandler(EventTypes.MouseDown, &FUNC!mouseDown);
 					break;
 				case "mouseUp":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely, event.mouse.button);
 					} 
 					component.addEventHandler(EventTypes.MouseUp, &FUNC!mouseUp);
 					break;
 				case "mouseWheel":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely, event.mouse.delta);
 					} 
 					component.addEventHandler(EventTypes.MouseWheel, &FUNC!mouseWheel);
 					break;
 				case "mouseMove":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.mouse.x, event.mouse.y, event.mouse.relx, event.mouse.rely);
 					} 
 					component.addEventHandler(EventTypes.MouseMove, &FUNC!mouseMove);
 					break;
 				case "windowClose":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d();
 					} 
 					component.addEventHandler(EventTypes.Close, &FUNC!windowClose);
 					break;
 				case "windowResize":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.window.width, event.window.height);
 					} 
 					component.addEventHandler(EventTypes.WindowResize, &FUNC!windowResize);
 					break;
 				case "windowMove":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d(event.window.x, event.window.y);
 					} 
 					component.addEventHandler(EventTypes.WindowMove, &FUNC!windowMove);
 					break;
 				case "windowFocussed":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d();
 					} 
 					component.addEventHandler(EventTypes.WindowFocussed, &FUNC!windowFocussed);
 					break;
 				case "windowBlurred":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d();
 					} 
 					component.addEventHandler(EventTypes.WindowBlurred, &FUNC!windowBlurred);
 					break;
-				case "redraw":
-					bool FUNC(alias d)(shared(Event) event, shared(Component) component) {
+				case "draw":
+					bool FUNC(alias d)(shared(Event) event, shared(Component) component) shared {
 						return d();
 					} 
-					component.addEventHandler(EventTypes.Draw, &FUNC!redraw);
+					component.addEventHandler(EventTypes.Draw, &FUNC!draw);
 					break;
 				default:
 					//ignore.
@@ -253,9 +265,8 @@ shared class EventClass(U : Window) : EventWindowInterface {
 			}
 		}
 
-		
+		T me = cast(T)this;
 		foreach(name; __traits(allMembers, T)) {
-			T me = cast(T)this;
 			mixin ("alias symbol = me." ~ name ~ ";");
 			if (__traits(isVirtualFunction, symbol)) {
 				foreach (UDA; __traits(getAttributes, symbol)) {
@@ -294,21 +305,35 @@ shared class EventClass(U : Window) : EventWindowInterface {
 		}
 	}
 
+	T opCast(T : ComponentChildable)() {
+		synchronized return cast(T)component;
+	}
+	
+	T opCast(T)() if (is(T : shared(U))) {
+		synchronized return cast(T)component;
+	}
+	
+	T opCast(T, this V)() if (is(T : V)) {
+		return *cast(T*)cast(void*)&this;
+	}
+
 	bool unknown(Event){return false;}
 	
 	bool keyDown(Keys code, bool alt, bool control, bool shift){return false;}
 	bool keyUp(Keys code, bool alt, bool control, bool shift){return false;}
-
+	
 	bool mouseDown(uint x, uint y, uint relx, uint rely, MouseButtons button){return false;}
 	bool mouseUp(uint x, uint y, uint relx, uint rely, MouseButtons button){return false;}
 	bool mouseWheel(uint x, uint y, uint relx, uint rely, int delta){return false;}
 	bool mouseMove(uint x, uint y, uint relx, uint rely){return false;}
+	bool mouseEnter(uint x, uint y, uint relx, uint rely){return false;}
+	bool mouseLeave(uint x, uint y, uint relx, uint rely){return false;}
+	
+	bool draw() {return false;}
 
 	bool windowClose(){return false;}
 	bool windowResize(uint width, uint height){return false;}
 	bool windowMove(uint x, uint y){return false;}
 	bool windowFocussed(){return false;}
 	bool windowBlurred(){return false;}
-	
-	bool redraw() {return false;}
 }

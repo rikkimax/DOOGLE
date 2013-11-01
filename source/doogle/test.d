@@ -15,37 +15,42 @@ void main() {
 	assert(storage.shaders.local.length == 6);
 	assert(storage.models.local.length == 2);
 
-	shared Window window = new shared Window(800, 600, "OpenGL Window"w, WindowStyle.Close);
+	shared Window1 window = new shared Window1();
 
-	shared Font font = new shared Font("Anonymous_Pro.ttf", 20, 3);
-	auto text_hi = font.get("Hi", Color3.fromName("Red"));
-
-	shared Picture picture = new shared Picture(window, 750, 550, 50, 50, text_hi);
-	picture.font = font;
-	picture.caption = "hi"w;
-
-	shared BooLabel1 label1 = new shared BooLabel1(window);
-
-	//shared Label label1 = new shared Label(window, 400, 300, "boo", font, Color3.fromHex("FF3300"));
-	shared Label label2 = new shared Label(window, 400, 320, "boo", font, Color3.fromHex("FF3300"));
-	//label1.background = Color4.opaque;
-	label2.background = cast(Color4)(Color3.fromName("MintCream"));
-
-	gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
 	while (window.isOpen) {
-		if (!window.whileOpenEvent()) return;
-
-		glwrap.glClear(true, true);
 		window.redraw();
+	}
+}
+
+shared class Window1 : EventClass!Window {
+	alias component this;
+	
+	shared(Label) boo1;
+	shared(Label) boo2;
+	shared(Picture) hi;
+
+	this() {
+		super(800, 600, "OpenGL Window"w, WindowStyle.Close);
+		boo1 = new shared BooLabel1(cast(shared(Window))this);
+		boo2 = new shared BooLabel2(cast(shared(Window))this);
+		hi = new shared HiPicture(cast(shared(Window))this);
+	}
+	
+	@OOPEvent(EventTypes.Draw) void onDraw() {
+		if (!whileOpenEvent()) return;
+		gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
+		glwrap.glClear(true, true);
 		Thread.sleep(dur!"msecs"(75));
 	}
 }
 
 shared class BooLabel1 : EventClass!Label {
+	alias component this;
+
 	this(shared(Window) window) {
 		super(window, 400, 300, "boo"w, new shared Font("Anonymous_Pro.ttf", 20, 3), Color3.fromHex("FF3300"));
-		component.background = Color4.opaque;
-		component.runEvent("test");
+		background = Color4.opaque;
+		runEvent("test");
 	}
 
 	@OOPEvent("test") bool func() {
@@ -55,5 +60,37 @@ shared class BooLabel1 : EventClass!Label {
 
 	@OOPEvent(EventTypes.Draw) void onDraw() {
 		import std.stdio;writeln("on draw");
+	}
+}
+
+shared class BooLabel2 : EventClass!Label {
+	alias component this;
+
+	this(shared(Window) window) {
+		super(window, 400, 320, "boo"w, new shared Font("Anonymous_Pro.ttf", 20, 3), Color3.fromHex("FF3300"));
+		background = cast(Color4)(Color3.fromName("MintCream"));
+		runEvent("test");
+	}
+
+	@OOPEvent("test") bool func() {
+		import std.stdio;writeln("hi from test func");
+		return false;
+	}
+
+	@OOPEvent(EventTypes.Draw) void onDraw() {
+		import std.stdio;writeln("on draw");
+	}
+}
+
+shared class HiPicture : EventClass!Picture {
+	alias component this;
+	
+	this(shared(Window) window) {
+		shared Font font = new shared Font("Anonymous_Pro.ttf", 20, 3);
+		auto text_hi = font.get("Hi", Color3.fromName("Red"));
+		super(window, 750, 550, 50, 50, text_hi);
+		
+		this.font = font;
+		caption = "hi"w;
 	}
 }
