@@ -63,6 +63,9 @@ shared class Label : Control, Label_Def {
 					}
 					texture_ = emptyTexture;
 				}
+				
+				_width = texture_.width;
+				_height = texture_.height;
 			}
 		}
 
