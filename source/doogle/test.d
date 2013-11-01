@@ -57,28 +57,29 @@ shared class BooLabel1 : EventClass!Label {
 		import std.stdio;writeln("hi from test func");
 		return false;
 	}
-
-	@OOPEvent(EventTypes.Draw) void onDraw() {
-		import std.stdio;writeln("on draw");
-	}
 }
 
 shared class BooLabel2 : EventClass!Label {
 	alias component this;
 
 	this(shared(Window) window) {
-		super(window, 400, 320, "boo"w, new shared Font("Anonymous_Pro.ttf", 20, 3), Color3.fromHex("FF3300"));
+		super(window, 400, 550, "boo"w, new shared Font("Anonymous_Pro.ttf", 20, 3), Color3.fromHex("FF3300"));
 		background = cast(Color4)(Color3.fromName("MintCream"));
-		runEvent("test");
 	}
-
-	@OOPEvent("test") bool func() {
-		import std.stdio;writeln("hi from test func");
-		return false;
+	
+	protected {
+		wstring orig;
 	}
-
-	@OOPEvent(EventTypes.Draw) void onDraw() {
-		import std.stdio;writeln("on draw");
+	
+	@OOPEvent(EventTypes.MouseDown) void onMouseDown() {
+		import std.stdio;stdout.flush();
+		orig = text;
+		text = "down"w;
+	}
+	
+	@OOPEvent(EventTypes.MouseUp) void onMouseUp() {
+		import std.stdio;stdout.flush();
+		text = orig;
 	}
 }
 
