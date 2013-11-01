@@ -34,6 +34,7 @@ version(Windows) {
 		}
 
 		this(uint width = 800, uint height = 600, wstring title_ = "Window"w, WindowStyle style = WindowStyle.Close) {
+			height += 22;
 			synchronized(rwmWindows) {
 				wchar[] title = to!(wchar[])(title_ ~ 0);
 				
@@ -113,16 +114,16 @@ version(Windows) {
 				platform.windows.GetWindowRect(cast(platform.windows.HWND)_window, &rect);
 				this.x = cast(uint)rect.left;
 				this.y = cast(uint)rect.top;
-
 				this.width = cast(uint)(rect.right - rect.left);
-				this.height = cast(uint)(rect.bottom - rect.top);
+				this.height = cast(uint)(rect.bottom - rect.top) - 22;
 
 				_isOpen = true;
 				_mouseX = 0;
 				_mouseY = 0;
 				_context = null;
 				_windowStyle = style;
-
+				
+				resize();
 				getContext();
 			}
 		}
@@ -153,9 +154,11 @@ version(Windows) {
 				override void resize() {
 					synchronized {
 						if (!_isOpen) return;
-						platform.windows.RECT rect = {0, 0, _width, _height};
+						platform.windows.RECT rect = {0, 0, _width, _height + 22};
 						platform.windows.AdjustWindowRect(&rect, _style, false);
 						platform.windows.SetWindowPos(cast(platform.windows.HWND)_window, cast(platform.windows.HWND)null, 0, 0, cast(uint)(rect.right - rect.left), cast(uint)(rect.bottom - rect.top), cast(uint)platform.windows.SWP_NOMOVE | cast(uint)platform.windows.SWP_NOZORDER);
+						this.width = cast(uint)(rect.right - rect.left);
+						this.height = cast(uint)(rect.bottom - rect.top) - 22;
 					}
 				}
 
@@ -288,8 +291,8 @@ version(Windows) {
 							
 						case platform.windows.WM_SIZE:
 							width = platform.windows.LOWORD(lParam);
-							height = platform.windows.HIWORD(lParam);
-							
+							height = platform.windows.HIWORD(lParam) - 22;
+
 							if (_events.length == 0) {
 								ev.type = EventTypes.Resize;
 								ev.window.width = width;
