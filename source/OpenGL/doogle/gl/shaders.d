@@ -122,6 +122,13 @@ shared class ShaderProgram {
 			glwrap.glUniform4fv(getUniform(name), value);
 		}
 	}
+	
+	void uniform(string name, bool value) {
+		synchronized {
+			bind();
+			glwrap.glUniform1i(getUniform(name), value);
+		}
+	}
 
 	protected {
 		void link() {
