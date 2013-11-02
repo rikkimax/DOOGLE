@@ -7,7 +7,7 @@ uniform vec4 background;
 out vec4 color;
 void main() {
     color = texture(tex, texloc);
-	if (color == vec4(0, 0, 0, 1)) {
+	if (color.r <= 0.3 && color.g <= 0.3 && color.b <= 0.3) {
 		color = background;
 	}
 }
