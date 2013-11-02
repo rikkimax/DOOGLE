@@ -9,7 +9,7 @@ import doogle.gl.vertexarray;
 import doogle.gl.texture;
 public import doogle.util.color : Color3, Color, Color4;
 
-class Button : Control, Button_Def, ComponentChildable {
+class Button : Control, Button_Def {
 	protected {
 		ComponentChild[] children_;
 		shared ShaderProgram program;
