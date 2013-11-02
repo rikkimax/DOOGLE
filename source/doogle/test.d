@@ -12,11 +12,14 @@ import core.thread;
 void main() {
 	// make sure all the files were loaded.
 	assert(storage.fonts.local.length == 1);
-	assert(storage.shaders.local.length == 6);
+	assert(storage.shaders.local.length == 8);
 	assert(storage.models.local.length == 2);
 
 	shared Window1 window = new shared Window1();
-
+	shared Button button = new shared Button(window, 100, 100);
+	new shared Label(button, 0, 0, "boo"w, new shared Font("Anonymous_Pro.ttf", 20, 3), Color3.fromHex("FF3300"));
+	new shared Label(button, 0, 0, "|boo|"w, new shared Font("Anonymous_Pro.ttf", 20, 3), Color3.fromHex("FF3300"));
+	
 	while (window.isOpen) {
 		window.redraw();
 	}
