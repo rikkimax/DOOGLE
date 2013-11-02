@@ -25,6 +25,11 @@ shared class Picture : Control, Picture_Def {
 		Texture texture_;
 		Label captionLbl_;
 		CaptionVisiblity captionVisibility_ = CaptionVisiblity.MouseOver;
+		
+		ShaderProgram program;
+		StandardBuffer vertices;
+		StandardBuffer texturemap;
+		VertexArray vao;
 	}
 
 	this(shared(ComponentChildable) parent) {
@@ -90,11 +95,7 @@ shared class Picture : Control, Picture_Def {
 	override void redraw(shared(Window) window) {
 		if (visible) {
 			super.redraw(window);
-
-			static shared ShaderProgram program;
-			static shared StandardBuffer vertices;
-			static shared StandardBuffer texturemap;
-			static shared VertexArray vao;
+			
 			if (program is null) {
 				program = new shared ShaderProgram("picture.vert", "picture.frag");
 				vertices = new shared StandardBuffer("full_vertices.raw");

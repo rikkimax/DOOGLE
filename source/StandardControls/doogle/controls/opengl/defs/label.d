@@ -16,6 +16,11 @@ shared class Label : Control, Label_Def {
 		Texture texture_;
 		Color3 color_;
 		Color4 background_;
+		
+		ShaderProgram program;
+		StandardBuffer vertices;
+		StandardBuffer texturemap;
+		VertexArray vao;
 	}
 
 	this(shared(ComponentChildable) parent) {
@@ -26,12 +31,6 @@ shared class Label : Control, Label_Def {
 	
 	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY) {
 		super(parent, suggestedX, suggestedY);
-		color_ = Color3(255, 255, 255);
-		background_ = Color4.opaque;
-	}
-	
-	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, uint suggestedWidth, uint suggestedHeight) {
-		super(parent, suggestedX, suggestedY, suggestedWidth, suggestedHeight);
 		color_ = Color3(255, 255, 255);
 		background_ = Color4.opaque;
 	}
@@ -99,11 +98,6 @@ shared class Label : Control, Label_Def {
 			}
 
 			super.redraw(window);
-			
-			static shared ShaderProgram program;
-			static shared StandardBuffer vertices;
-			static shared StandardBuffer texturemap;
-			static shared VertexArray vao;
 			if (program is null) {
 				program = new shared ShaderProgram("label.vert", "label.frag");
 				vertices = new shared StandardBuffer("full_vertices.raw");
