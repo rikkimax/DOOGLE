@@ -6,8 +6,17 @@ enum ButtonState {
 	Down
 }
 
+enum ButtonBorder {
+	Flat,
+	Popup,
+	Standard
+}
+
 shared interface Button_Def : ComponentChildable {
 	@property {
 		ButtonState state();
+		
+		ButtonBorder border();
+		void border(ButtonBorder value);
 	}
 }
