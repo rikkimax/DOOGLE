@@ -99,11 +99,8 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 			float cx = 1f / (wwidth / 2);
 			float cy = 1f / (wheight / 2);
 			vec4 move = vec4(cx * (-(wwidth / 2) + ((cwidth / 2) + cposX)), cy * ((wheight / 2) - ((cheight / 2) + cposY)), 0, 0);
-			this.move = *cast(shared(vec4*))cast(void*)&move;
 			move_ = *cast(shared(vec4*))cast(void*)&move;
 
-			float dx = 1f / (wwidth / cwidth);
-			float dy = 1f / (wheight / cheight);
 			
 			float dx = cwidth / cast(float)wwidth;
 			float dy = cheight / cast(float)wheight;
@@ -114,14 +111,11 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 				0f, 0f, 1f, 0f,
 				0f, 0f, 0f, 1f
 			);
-			this.scale = *cast(shared(mat4*))cast(void*)&scale;
 			scale_ = *cast(shared(mat4*))cast(void*)&scale;
 		} else {
 			vec4 move = vec4(0f, 0f, 0f, 0f);
-			this.move = *cast(shared(vec4*))cast(void*)&move;
 			move_ = *cast(shared(vec4*))cast(void*)&move;
 			mat4 scale = mat4.identity;
-			this.scale = *cast(shared(mat4*))cast(void*)&scale;
 			scale_ = *cast(shared(mat4*))cast(void*)&scale;
 		}
 
