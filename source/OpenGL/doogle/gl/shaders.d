@@ -109,10 +109,31 @@ shared class ShaderProgram {
 		}
 	}
 
+	void uniform(string name, shared(vec2) value) {
+		synchronized {
+			bind();
+			glwrap.glUniform2fv(getUniform(name), cast(float[])value.vector);
+		}
+	}
+
+	void uniform(string name, shared(vec3) value) {
+		synchronized {
+			bind();
+			glwrap.glUniform3fv(getUniform(name), cast(float[])value.vector);
+		}
+	}
+
 	void uniform(string name, shared(vec4) value) {
 		synchronized {
 			bind();
 			glwrap.glUniform4fv(getUniform(name), cast(float[])value.vector);
+		}
+	}
+
+	void uniform(string name, float[2] value) {
+		synchronized {
+			bind();
+			glwrap.glUniform2fv(getUniform(name), value);
 		}
 	}
 
@@ -124,6 +145,27 @@ shared class ShaderProgram {
 	}
 	
 	void uniform(string name, bool value) {
+		synchronized {
+			bind();
+			glwrap.glUniform1i(getUniform(name), value);
+		}
+	}
+
+	void uniform(string name, int[2] value) {
+		synchronized {
+			bind();
+			glwrap.glUniform2iv(getUniform(name), value);
+		}
+	}
+	
+	void uniform(string name, int[4] value) {
+		synchronized {
+			bind();
+			glwrap.glUniform4iv(getUniform(name), value);
+		}
+	}
+	
+	void uniform(string name, int value) {
 		synchronized {
 			bind();
 			glwrap.glUniform1i(getUniform(name), value);
