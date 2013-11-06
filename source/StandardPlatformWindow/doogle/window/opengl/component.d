@@ -101,7 +101,6 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 			vec4 move = vec4(cx * (-(wwidth / 2) + ((cwidth / 2) + cposX)), cy * ((wheight / 2) - ((cheight / 2) + cposY)), 0, 0);
 			move_ = *cast(shared(vec4*))cast(void*)&move;
 
-			
 			float dx = cwidth / cast(float)wwidth;
 			float dy = cheight / cast(float)wheight;
 
