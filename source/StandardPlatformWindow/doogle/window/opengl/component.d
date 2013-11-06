@@ -105,6 +105,9 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 			float dx = 1f / (wwidth / cwidth);
 			float dy = 1f / (wheight / cheight);
 			
+			float dx = cwidth / cast(float)wwidth;
+			float dy = cheight / cast(float)wheight;
+
 			mat4 scale = mat4(
 				dx, 0f, 0f, 0f,
 				0f, dy, 0f, 0f,
