@@ -113,9 +113,9 @@ shared class Label : Control, Label_Def {
 				glwrap.glEnable(glwrap.EnableFunc.Blend);
 				glwrap.glBlendFunc(glwrap.BlendFactors.SrcAlpha, glwrap.BlendFactors.OneMinusSrcAlpha);
 
-				program.uniform("move", move);
+				program.uniform("move", move_);
 				program.uniform("background", background_.floats);
-				program.uniform("scale", scale);
+				program.uniform("scale", scale_);
 				program.uniform("transform", transform_parent_);
 				glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
 

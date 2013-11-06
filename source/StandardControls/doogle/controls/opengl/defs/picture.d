@@ -108,8 +108,8 @@ shared class Picture : Control, Picture_Def {
 				texture_.bind();
 				program.bind();
 
-				program.uniform("move", move);
-				program.uniform("scale", scale);
+				program.uniform("move", move_);
+				program.uniform("scale", scale_);
 				program.uniform("transform", transform_parent_);
 				glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
 			}

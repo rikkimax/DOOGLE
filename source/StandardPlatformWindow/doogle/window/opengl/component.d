@@ -21,8 +21,8 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 		mat4 transform_parent_ = mat4.identity;
 		TransformMethod transformMethod_ = TransformMethod.UseChild;
 
-		mat4 scale;
-		vec4 move;
+		mat4 scale_;
+		vec4 move_;
 	}
 	
 	@property {
@@ -100,6 +100,7 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 			float cy = 1f / (wheight / 2);
 			vec4 move = vec4(cx * (-(wwidth / 2) + ((cwidth / 2) + cposX)), cy * ((wheight / 2) - ((cheight / 2) + cposY)), 0, 0);
 			this.move = *cast(shared(vec4*))cast(void*)&move;
+			move_ = *cast(shared(vec4*))cast(void*)&move;
 
 			float dx = 1f / (wwidth / cwidth);
 			float dy = 1f / (wheight / cheight);
@@ -111,11 +112,14 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 				0f, 0f, 0f, 1f
 			);
 			this.scale = *cast(shared(mat4*))cast(void*)&scale;
+			scale_ = *cast(shared(mat4*))cast(void*)&scale;
 		} else {
 			vec4 move = vec4(0f, 0f, 0f, 0f);
 			this.move = *cast(shared(vec4*))cast(void*)&move;
+			move_ = *cast(shared(vec4*))cast(void*)&move;
 			mat4 scale = mat4.identity;
 			this.scale = *cast(shared(mat4*))cast(void*)&scale;
+			scale_ = *cast(shared(mat4*))cast(void*)&scale;
 		}
 
 		super.redraw(window);

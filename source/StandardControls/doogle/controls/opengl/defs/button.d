@@ -108,6 +108,10 @@ class Button : Control, Button_Def {
 			program.uniform("transform", transform_parent_);
 			program.uniform("mouseDown", cast(bool)state);
 			program.uniform("mouseOver", cast(bool)mouseOver);
+				program_flat.uniform("move", move_);
+				program_flat.uniform("scale", scale_);
+				program_popup.uniform("move", move_);
+				program_popup.uniform("scale", scale_);
 			glwrap.glDrawArrays(glwrap.Primitives.TriangleStrip, 0, 4);
 
 			glwrap.glBlendFunc(glwrap.BlendFactors.One, glwrap.BlendFactors.Zero);
