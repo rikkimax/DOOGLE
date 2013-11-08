@@ -23,6 +23,7 @@ void main() {
 	
 	while (window.isOpen) {
 		window.redraw();
+		Thread.sleep(dur!"msecs"(75));
 	}
 }
 
@@ -44,7 +45,6 @@ shared class Window1 : EventClass!Window {
 		if (!whileOpenEvent()) return;
 		gl.glClearColor(0.4f, 0.4f, 0.4f, 1f);
 		glwrap.glClear(true, true);
-		Thread.sleep(dur!"msecs"(75));
 	}
 }
 

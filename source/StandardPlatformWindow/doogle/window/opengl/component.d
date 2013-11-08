@@ -21,8 +21,8 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 		mat4 transform_parent_ = mat4.identity;
 		TransformMethod transformMethod_ = TransformMethod.UseChild;
 
-		mat4 scale_;
-		vec4 move_;
+		mat4 scale_ = mat4.identity;
+		vec4 move_ = vec4(0, 0, 0, 0);
 	}
 	
 	@property {
@@ -93,31 +93,17 @@ abstract class ComponentChild_OpenGL : ComponentChild_Def {
 		int cwidth = _width;
 		int cheight = _height;
 		if (wwidth > 0 && wheight > 0 && cwidth > 0 && cheight > 0) {
-			int cposX = _x;
-			int cposY = _y;
+			move_.vector[0] = (1f / (wwidth / 2f)) * (-(wwidth / 2f) + ((cwidth / 2f) + _x));
+			move_.vector[1] = (1f / (wheight / 2f)) * ((wheight / 2f) - ((cheight / 2f) + _y));
 			
-			float cx = 1f / (wwidth / 2);
-			float cy = 1f / (wheight / 2);
-			vec4 move = vec4(cx * (-(wwidth / 2) + ((cwidth / 2) + cposX)), cy * ((wheight / 2) - ((cheight / 2) + cposY)), 0, 0);
-			move_ = *cast(shared(vec4*))cast(void*)&move;
-
-			float dx = cwidth / cast(float)wwidth;
-			float dy = cheight / cast(float)wheight;
-
-			mat4 scale = mat4(
-				dx, 0f, 0f, 0f,
-				0f, dy, 0f, 0f,
-				0f, 0f, 1f, 0f,
-				0f, 0f, 0f, 1f
-			);
-			scale_ = *cast(shared(mat4*))cast(void*)&scale;
+			scale_.matrix[0][0] = (cwidth / cast(float)wwidth);
+			scale_.matrix[1][1] = (cheight / cast(float)wheight);
 		} else {
-			vec4 move = vec4(0f, 0f, 0f, 0f);
-			move_ = *cast(shared(vec4*))cast(void*)&move;
-			mat4 scale = mat4.identity;
-			scale_ = *cast(shared(mat4*))cast(void*)&scale;
+			move_.vector[0] = 0;
+			move_.vector[1] = 0;
+			scale_.matrix[0][0] = 0;
+			scale_.matrix[1][1] = 0;
 		}
-
 		super.redraw(window);
 	}
 }
