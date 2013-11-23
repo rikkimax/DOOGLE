@@ -63,8 +63,8 @@ shared class Label : Control, Label_Def {
 					texture_ = emptyTexture;
 				}
 				
-				_width = texture_.width;
-				_height = texture_.height;
+				_width = cast(uint)texture_.width;
+				_height = cast(uint)texture_.height;
 			}
 		}
 
@@ -92,8 +92,8 @@ shared class Label : Control, Label_Def {
 		if (visible) {
 			if (_height == 0 || _width == 0) {
 				if (texture_ !is null) {
-					_height = texture_.height;
-					_width = texture_.width;
+					_height = cast(uint)texture_.height;
+					_width = cast(uint)texture_.width;
 				}
 			}
 

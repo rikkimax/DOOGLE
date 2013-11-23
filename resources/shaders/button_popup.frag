@@ -10,10 +10,10 @@ uniform ivec2 wsize;
  
 out vec4 color;  
 void main() {  
-    float rlx = gl_FragCoord.x - location.x; // left x base coord 
-    float rrx = size.x - rlx - 1.5; // right x base coord 
-    float rty = (wsize.y - location.y) - gl_FragCoord.y - 1.5; // top y base coord 
-    float rby = size.y - rty; // bottom y base coord 
+    float rlx = gl_FragCoord.x - location.x - 1; // left x base coord  
+    float rrx = size.x - rlx - 3; // right x base coord  
+    float rty = (wsize.y - location.y) - gl_FragCoord.y - .5; // top y base coord  1.5 for x64
+    float rby = size.y - rty + 1; // bottom y base coord  
  
     if (rby + rlx <= 1 || rby + rrx <= 1 || rty + rlx <= 1 || rty + rrx <= 1) {
     } else if (rby + rlx <= 3 || rby + rrx <= 3 || rby <= 1) {

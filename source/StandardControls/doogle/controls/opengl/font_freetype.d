@@ -83,7 +83,7 @@ shared class Font_FreeType : Font_Def {
 				ptrdiff_t mult = width * height;
 				for (ptrdiff_t i = mult - 1; i >= 0; i--) {
 					ptrdiff_t idiff = mult - i;
-					uint y = (idiff / width) % height;
+					uint y = cast(uint)(idiff / width) % height;
 
 					data[y].length = width + x;
 					data[y][(i % width) + x] = *(buffer + i);
