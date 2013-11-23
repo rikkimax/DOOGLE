@@ -34,7 +34,7 @@ version(Windows) {
 		}
 	}
 
-	shared class Window_Win : Window_Def {
+	shared class Window_Win : Window_OpenGL_Def {
 		protected {
 			platform.windows.HWND _window;
 			platform.windows.MSG _msg;
