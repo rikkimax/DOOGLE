@@ -1,10 +1,12 @@
 module doogle.window.opengl.window_win;
+import doogle.window.opengl.window_def;
 import doogle.window.window;
 import doogle.window.context;
 import doogle.window.component;
 import doogle.events.event;
 import doogle.events.types;
 
+import gl3n.linalg : vec4;
 import gl = derelict.opengl3.gl3;
 
 import std.conv : to;
@@ -46,6 +48,12 @@ version(Windows) {
 		this(uint width = 800, uint height = 600, wstring title_ = "Window"w, WindowStyle style = WindowStyle.Close) {
 			width += widthOffset;
 			height += heightOffset;
+			version(X86_64) {
+				glslCoordFix.vector = [1, 3, .5, 1];
+			} else version(X86) {
+				glslCoordFix.vector = [1, 3, 1.5, 1];
+			}
+
 			synchronized(rwmWindows) {
 				wchar[] title = to!(wchar[])(title_ ~ 0);
 				

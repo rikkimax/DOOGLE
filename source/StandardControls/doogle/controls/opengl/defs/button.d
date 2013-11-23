@@ -130,6 +130,7 @@ class Button : Control, Button_Def {
 				}
 
 				program_popup.bind();
+				program_popup.uniform("glslCoordFix", window.glslCoordFix);
 				program_popup.uniform("size", cast(int[2])[_width, _height]);
 				program_popup.uniform("wsize", cast(int[2])[window.width, window.height]);
 				program_popup.uniform("move", move_);
