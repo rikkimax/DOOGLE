@@ -2,6 +2,14 @@ module doogle.controls.layout_def;
 import doogle.controls.control;
 import doogle.window.component;
 
+enum Alignment {
+	Top,
+	Left,
+	Right,
+	Bottom,
+	Center
+}
+
 shared abstract class Layout_Def : ComponentChild, ComponentChildable, ControlChildable {
 	protected {
 		ComponentChild[] _children;
