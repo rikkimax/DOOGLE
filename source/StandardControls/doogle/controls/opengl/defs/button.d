@@ -1,5 +1,6 @@
 module doogle.controls.opengl.defs.button;
 public import doogle.controls.defs.button;
+public import doogle.controls.layout_def : Alignment;
 import doogle.controls.control;
 import doogle.window.component;
 import doogle.window.window;
@@ -21,6 +22,7 @@ class Button : Control, Button_Def {
 		shared VertexArray vao;
 		
 		ButtonBorder border_;
+		Alignment alignment_;
 	}
 
 	this(shared(ComponentChildable) parent) {
@@ -28,14 +30,16 @@ class Button : Control, Button_Def {
 		border_ = ButtonBorder.Flat;
 	}
 	
-	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY) {
+	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, Alignment alignment = Alignment.Center) {
 		super(parent, suggestedX, suggestedY);
 		border_ = ButtonBorder.Flat;
+		alignment_ = alignment;
 	}
 	
-	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, uint suggestedWidth, uint suggestedHeight) {
+	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, uint suggestedWidth, uint suggestedHeight, Alignment alignment = Alignment.Center) {
 		super(parent, suggestedX, suggestedY, suggestedWidth, suggestedHeight);
 		border_ = ButtonBorder.Flat;
+		alignment_ = alignment;
 	}
 
 	@property {
@@ -45,6 +49,14 @@ class Button : Control, Button_Def {
 
 		void addChild(shared(ComponentChild) child) {
 			synchronized children_ ~= child;
+		}
+
+		Alignment alignment() {
+			synchronized return alignment_;
+		}
+
+		void alignment(Alignment value) {
+			synchronized alignment_ = value;
 		}
 		
 		void removeChild(shared(ComponentChild) child) {
@@ -88,23 +100,50 @@ class Button : Control, Button_Def {
 			
 			/**
 			 * Improvements that can be made:
-			 * [1] Children vertical alignment
-			 * [2] Adhere to width and height
+			 * [1] Adhere to width and height
 			 */
-			uint x = 5, y = 5, height = 0, width = 0;
-			
+			uint
+				x = 5,
+				y = 5,
+				maxWidth = 0,
+				maxHeight = 0;
+
 			foreach(child; children_) {
-				width += child.width;
-				child.x = _x + x;
-				child.y = _y + y;
-				
-				x += child.width;
-				if (height < child.height)
-					height = child.height;
+				maxWidth += child.width;
+				if (maxHeight < child.height)
+					maxHeight = child.height;
 			}
 
-			_width = width + 10;
-			_height = height + 10;
+			switch(alignment_) {
+				case Alignment.Top:
+					foreach(child; children_) {
+						child.x = _x + x;
+						child.y = _y + y;
+						
+						x += child.width;
+					}
+					break;
+				case Alignment.Bottom:
+					foreach(child; children_) {
+						child.x = _x + x;
+						child.y = _y + ((_height - child.height) - y);
+
+						x += child.width;
+					}
+					break;
+				//case Alignment.Center:
+				default:
+					foreach(child; children_) {
+						child.x = _x + x;
+						child.y = _y + (((_height - child.height) - y) / 2);
+						
+						x += child.width;
+					}
+					break;
+			}
+
+			_width = maxWidth + 10;
+			_height = maxHeight + 10;
 
 			super.redraw(window);
 
