@@ -10,10 +10,39 @@ enum Alignment {
 	Center
 }
 
-shared abstract class Layout_Def : ComponentChild, ComponentChildable, ControlChildable {
+enum VerticalAlignment {
+	Top,
+	Center,
+	Bottom
+}
+
+enum HorizontalAlignment {
+	Left,
+	Center,
+	Right
+}
+
+enum AlignmentType {
+	Vertical,
+	Horizontal
+}
+
+shared abstract class Layout_Def : Control_Def, ComponentChildable {
 	protected {
 		ComponentChild[] _children;
 		Control[] _childControls;
+	}
+
+	this(shared(ComponentChildable) parent) {
+		super(parent);
+	}
+	
+	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY) {
+		super(parent, suggestedX, suggestedY);
+	}
+
+	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, uint suggestedWidth, uint suggestedHeight) {
+		super(parent, suggestedX, suggestedY, suggestedWidth, suggestedHeight);
 	}
 
 	public {
@@ -50,40 +79,6 @@ shared abstract class Layout_Def : ComponentChild, ComponentChildable, ControlCh
 		}
 		
 		@property shared(Component)[] children() { synchronized return cast(shared(Component)[]) _children; }
-
-		/**
-		 * ControlChildable
-		 */
-		
-		void addChild(shared(Control) child) {
-			synchronized _childControls ~= child;
-		}
-		
-		void removeChild(shared(Control) child) {
-			synchronized {
-				if (_childControls.length == 0) return;
-				size_t found;
-				bool got = false;
-				for(size_t i = 0; i < _childControls.length; i++ ) {
-					if (_childControls[i] == child) {
-						found = i;
-						got = true;
-						break;
-					}
-				}
-				if (got) {
-					if (found > _childControls.length) // middle
-						_childControls = _childControls[0 .. found]  ~ _childControls[found .. $];
-					else if (found > 0) // end
-						_childControls = _childControls[0 .. found];
-					else // start
-						_childControls= _childControls[found .. $];
-					
-				}
-			}
-		}
-		
-		@property shared(Control)[] childControls() { synchronized return cast(shared(Control)[]) _childControls; }
 
 		@property {
 			override void resize() {update();}

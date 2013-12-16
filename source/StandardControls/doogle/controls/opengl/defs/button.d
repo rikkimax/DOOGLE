@@ -1,6 +1,6 @@
 module doogle.controls.opengl.defs.button;
 public import doogle.controls.defs.button;
-public import doogle.controls.layout_def : Alignment;
+public import doogle.controls.layout_def : VerticalAlignment;
 import doogle.controls.control;
 import doogle.window.component;
 import doogle.window.window;
@@ -22,7 +22,7 @@ class Button : Control, Button_Def {
 		shared VertexArray vao;
 		
 		ButtonBorder border_;
-		Alignment alignment_;
+		VerticalAlignment alignment_;
 	}
 
 	this(shared(ComponentChildable) parent) {
@@ -30,13 +30,13 @@ class Button : Control, Button_Def {
 		border_ = ButtonBorder.Flat;
 	}
 	
-	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, Alignment alignment = Alignment.Center) {
+	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, VerticalAlignment alignment = VerticalAlignment.Center) {
 		super(parent, suggestedX, suggestedY);
 		border_ = ButtonBorder.Flat;
 		alignment_ = alignment;
 	}
 	
-	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, uint suggestedWidth, uint suggestedHeight, Alignment alignment = Alignment.Center) {
+	this(shared(ComponentChildable) parent, uint suggestedX, uint suggestedY, uint suggestedWidth, uint suggestedHeight, VerticalAlignment alignment = VerticalAlignment.Center) {
 		super(parent, suggestedX, suggestedY, suggestedWidth, suggestedHeight);
 		border_ = ButtonBorder.Flat;
 		alignment_ = alignment;
@@ -51,11 +51,11 @@ class Button : Control, Button_Def {
 			synchronized children_ ~= child;
 		}
 
-		Alignment alignment() {
+		VerticalAlignment alignment() {
 			synchronized return alignment_;
 		}
 
-		void alignment(Alignment value) {
+		void alignment(VerticalAlignment value) {
 			synchronized alignment_ = value;
 		}
 		
@@ -115,29 +115,32 @@ class Button : Control, Button_Def {
 			}
 
 			switch(alignment_) {
-				case Alignment.Top:
+				case VerticalAlignment.Top:
 					foreach(child; children_) {
 						child.x = _x + x;
 						child.y = _y + y;
 						
 						x += child.width;
+						child.relocate();
 					}
 					break;
-				case Alignment.Bottom:
+				case VerticalAlignment.Bottom:
 					foreach(child; children_) {
 						child.x = _x + x;
 						child.y = _y + ((_height - child.height) - y);
 
 						x += child.width;
+						child.relocate();
 					}
 					break;
-				//case Alignment.Center:
+				//case VerticalAlignment.Center:
 				default:
 					foreach(child; children_) {
 						child.x = _x + x;
 						child.y = _y + (((_height - child.height) - y) / 2);
 						
 						x += child.width;
+						child.relocate();
 					}
 					break;
 			}
